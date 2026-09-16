@@ -26,7 +26,7 @@ config.example.json
 2. `fetch.py` 下载 Registry JSON；`registry.py` 遍历分页，并把不同来源的字段转换成统一的 `ProviderRecord`。
 3. 程序以 `discovery_endpoint` 为机构数据流的唯一入口进行去重。较新的 Registry 活动覆盖旧活动；同一入口的人工记录可补充 Registry 信息。
 4. `selector.py` 根据命令行输入的机构完整名称选择本次要处理的机构；输入 `all` 时选择全部未被标记为移除的已知机构。
-5. `store.py` 保存完整目录和选中目录。下一台机器只需逐行读取 `selected_providers.jsonl`，取出其中的 `discovery_endpoint` 进行网络可访问性检查。
+5. `store.py` 将交换数据保存到 `data/output/`，将带时间戳的运行日志单独保存到 `data/log/`。下一台机器只需逐行读取 `selected_providers.jsonl`，取出其中的 `discovery_endpoint` 进行网络可访问性检查。
 
 例如，Registry 中的一条活动说明 “Bodleian Libraries 发布了一个 Change Discovery 数据流”。模块 1 将它转换为包含机构名、机构网址和发现入口的记录，但不会在这一阶段读取该数据流中的 Manifest。
 
@@ -43,12 +43,13 @@ config.example.json
 python -m iiif_provider_census run --config config.example.json --institution all
 ```
 
-输出位于 `data/output/`：
+模块间交换数据位于 `data/output/`：
 
 - `providers.jsonl`：完整机构/发现入口目录，也是模块的规范化主存储；
 - `selected_providers.jsonl`：传给流水线机器 2 的机构子集；
 - `providers.csv`：便于人工检查的表格视图，不含完整原始记录；
-- `Module1_YYYY-MM-DD_HH-MM-SS_log.txt`：以电脑本地时间命名的本次运行日志。
+
+运行日志单独位于 `data/log/`：`Module1_YYYY-MM-DD_HH-MM-SS_log.txt`。
 
 ## 输入
 

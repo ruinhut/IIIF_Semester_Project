@@ -45,6 +45,7 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(result.selected_provider_count, 1)
             self.assertTrue(result.providers_csv.exists())
             self.assertEqual(result.log_txt.name, "Module1_2026-09-16_20-30-45_log.txt")
+            self.assertEqual(result.log_txt.parent, root / "data" / "log")
             self.assertTrue(result.log_txt.exists())
             selected = read_jsonl(result.selected_providers_jsonl)
             self.assertEqual(selected[0].name, "Beta Library")

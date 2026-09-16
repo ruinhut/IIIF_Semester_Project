@@ -10,5 +10,6 @@
     "retries": 2,
     "max_registry_pages": 100
   },
-  "output_directory": "data/output"
+  "output_directory": "data/output",
+  "log_directory": "data/log"
 }

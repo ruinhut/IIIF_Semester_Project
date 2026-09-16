@@ -81,18 +81,22 @@ def run_pipeline(
     selected_records = select_providers(all_records, criteria)
     _validate_requested_names(requested_names, all_records, selected_records)
 
-    # Step 5: Resolve the output directory and materialize the data contract
-    # consumed by people and by Module 2.
-    output_value = str(config.get("output_directory", "data/output"))
-    output_directory = Path(output_value)
-    if not output_directory.is_absolute():
-        output_directory = (base_directory / output_directory).resolve()
+    # Step 5: Keep exchange data and execution logs in separate directories.
+    # ``data/output`` is the contract consumed by people and Module 2, while
+    # ``data/log`` keeps timestamped operational records from each run.
+    output_directory = _resolve_directory(
+        str(config.get("output_directory", "data/output")), base_directory
+    )
+    log_directory = _resolve_directory(
+        str(config.get("log_directory", "data/log")), base_directory
+    )
     output_directory.mkdir(parents=True, exist_ok=True)
+    log_directory.mkdir(parents=True, exist_ok=True)
 
     all_jsonl = output_directory / "providers.jsonl"
     selected_jsonl = output_directory / "selected_providers.jsonl"
     csv_path = output_directory / "providers.csv"
-    log_path = output_directory / f"Module1_{local_run_time.strftime('%Y-%m-%d_%H-%M-%S')}_log.txt"
+    log_path = log_directory / f"Module1_{local_run_time.strftime('%Y-%m-%d_%H-%M-%S')}_log.txt"
     write_jsonl(all_jsonl, all_records)
     write_jsonl(selected_jsonl, selected_records)
     write_csv(csv_path, all_records)
@@ -252,3 +256,12 @@ def _resolve_local_source(source: str, base_directory: Path) -> str:
     if not path.is_absolute():
         path = base_directory / path
     return str(path.resolve())
+
+
+def _resolve_directory(value: str, base_directory: Path) -> Path:
+    """Resolve an output or log directory against the configuration file."""
+
+    path = Path(value)
+    if not path.is_absolute():
+        path = base_directory / path
+    return path.resolve()
