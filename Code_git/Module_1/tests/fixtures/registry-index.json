@@ -1,0 +1,13 @@
+{
+  "@context": "http://iiif.io/api/discovery/1/context.json",
+  "id": "https://registry.example/index.json",
+  "type": "OrderedCollection",
+  "first": {
+    "id": "registry-page-0.json",
+    "type": "OrderedCollectionPage"
+  },
+  "last": {
+    "id": "registry-page-1.json",
+    "type": "OrderedCollectionPage"
+  }
+}

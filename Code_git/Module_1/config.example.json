@@ -1,0 +1,25 @@
+{
+  "registry_sources": [
+    "https://registry.iiif.io/index.json"
+  ],
+  "manual_sources": [
+    "config/manual_providers.json"
+  ],
+  "selection": {
+    "include_provider_ids": [],
+    "include_name_keywords": [],
+    "include_hosts": [],
+    "exclude_name_keywords": [],
+    "exclude_hosts": [],
+    "record_statuses": [
+      "active"
+    ],
+    "limit": null
+  },
+  "network": {
+    "timeout_seconds": 20,
+    "retries": 2,
+    "max_registry_pages": 100
+  },
+  "output_directory": "data/output"
+}

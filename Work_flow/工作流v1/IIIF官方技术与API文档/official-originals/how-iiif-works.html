@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset="utf-8">
+  <title>
+     How It Works —  IIIF | International Image Interoperability Framework
+  </title>
+  <meta name="description" content="IIIF is a set of open standards for delivering high-quality, attributed digital objects online at scale. It’s also an international community developing and implementing the IIIF APIs. IIIF is backed by a consortium of leading cultural institutions.">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+ <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+ <link rel="manifest" href="/assets/site.webmanifest">
+ <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#E82334">
+ <meta name="msapplication-TileColor" content="#da532c">
+ <meta name="theme-color" content="#ffffff">
+
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="canonical" href="/get-started/how-iiif-works/" />    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW5W9QRPH6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZW5W9QRPH6');
+    </script>
+        
+
+  <link rel="preload" as="image" href="/assets/images/heroes/hero-2@3x.webp">
+  
+
+    <!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="How It Works" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="/get-started/how-iiif-works/" />
+<meta property="og:url" content="/get-started/how-iiif-works/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How It Works" />
+<meta name="twitter:site" content="@iiif_io" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"How It Works","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/favicon.ico"}},"url":"/get-started/how-iiif-works/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- add for Mastodon verification -->
+<link rel="me" href="https://glammr.us/@iiif">
+
+</head>
+<body>
+
+<section class="hero is-primary" style="background-image: linear-gradient(to bottom, rgba(0, 25, 39, 0.68), rgba(0, 25, 39, 0.68)), url('/assets/images/heroes/hero-2@3x.webp');
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed;
+  ">
+  
+  <div class="hero-head">
+    <nav id="navbar" class="navbar is-transparent is-spaced">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/assets/images/logos/logo-sm.png" alt="IIIF logo" height="28">
+        <span class="brand-title">International Image Interoperability Framework</span>
+      </a>
+      <div class="navbar-burger" data-target="navbar" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+            <a class="navbar-item" href="/">Home</a>
+          
+            <a class="navbar-item" href="/demos">Demos</a>
+          
+            <a class="navbar-item" href="/events">Events</a>
+          
+            <a class="navbar-item" href="/news">News</a>
+          
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link"  href="/get-involved">
+                Get Involved
+              </a>
+              <div class="navbar-dropdown is-boxed is-active">
+                
+                  <a class="navbar-item" href="/community/">Community</a>
+                
+                  <a class="navbar-item" href="/community/consortium">Consortium</a>
+                
+                  <a class="navbar-item" href="/newsletter">Join Newsletter</a>
+                
+                  <a class="navbar-item" href="/get-involved/outreach-materials">Outreach Materials</a>
+                
+                  <a class="navbar-item" href="/community/consortium/strategic_plan_26-28">Strategic Plan</a>
+                
+              </div>
+            </div>
+          
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link"  href="/get-started">
+                Get Started
+              </a>
+              <div class="navbar-dropdown is-boxed is-active">
+                
+                  <a class="navbar-item" href="/get-started/how-iiif-works">How IIIF Works</a>
+                
+                  <a class="navbar-item" href="/community/ambassadors/">IIIF Ambassadors</a>
+                
+                  <a class="navbar-item" href="https://iiif.io/guides">Guides</a>
+                
+                  <a class="navbar-item" href="https://iiif.io/api">APIs & Documentation</a>
+                
+                  <a class="navbar-item" href="/get-started/cookbook">Cookbooks</a>
+                
+                  <a class="navbar-item" href="/get-started/training">Training</a>
+                
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</nav>
+
+  </div>
+  
+
+  <div class="hero-body container">
+
+    
+    <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+      <ul>
+        
+          <li><a href="/get-started/">Get Started</a></li>
+        
+      </ul>
+    </nav>
+    
+
+    <div class="container has-text-centered">
+      
+      <h1 class="title is-size-2 is-size-3-mobile is-size-desktop is-size-1-widescreen">How It Works</h1>
+      
+
+      
+      <p class="subtitle is-size-5">A plain-language guide to how the APIs work.
+</p>
+      
+      
+      
+    </div>
+  </div>
+</section>
+<section id="main">
+      
+      
+      <div class="container-block is-max-widescreen"><div class="container">
+    <div class="content">
+
+      <h2 id="introduction">Introduction</h2>
+      <p>Learning about IIIF (generally pronounced “triple-eye-eff”) can be overwhelming at first, especially if you’re not a programmer, so we’ve created a plain-language guide for newcomers. We’ve also created a glossary of <a href="/get-started/how-iiif-works/#key-concepts-youll-encounter-when-working-with-iiif">“Key concepts you’ll encounter when working with IIIF”</a> which you’ll find at the end of this page.</p>
+
+      <p>As you are learning, please know that the community is here to help. Feel free to reach out on <a href="http://bit.ly/iiif-slack">Slack</a> or our email discussion list (<a href="https://groups.google.com/forum/#!forum/iiif-discuss">iiif-discuss</a>) with any questions. There’s also a <a href="https://training.iiif.io/iiif-online-workshop/">self-paced online tutorial</a> that may be a useful next step for newcomers, or check out our general set of resources for <a href="/get-started/">getting started with IIIF</a>.</p>
+
+      <div class="container mgt-medium mgb-medium">
+  
+  <a href="/assets/images/zeplin/delivery@3x.png">
+    
+  <img alt="delivery diagram" src="/assets/images/zeplin/delivery@3x.png" />
+   
+  </a>
+  
+  <span class="caption">A diagram of how the core IIIF APIs work together.</span>
+</div>
+
+      <h2 id="the-basics">The basics</h2>
+
+      <p>IIIF is a way to standardize the delivery of images and audio/visual files from servers to different environments on the Web where they can then be viewed and interacted with in many ways.</p>
+
+      <p>Modern Web browsers understand how to display formats like .jpg and .mp4 at defined sizes, but cannot do much else. The IIIF specifications align with general Web standards that define how all browsers work to enable richer functionality beyond viewing an image or audio/visual files. For images, that means enabling deep zoom, comparison, structure (i.e., for an object such as a book, structure = page order) and annotation. For audio/visual materials, that means being able to deliver complex structures (such as several reels of film that make up a single movie) along with things like captions, transcriptions/translations, annotations, and more.</p>
+
+      <p>IIIF makes these objects work in a consistent way. That enables portability across viewers, the ability to connect and unite materials across institutional boundaries, and more.</p>
+
+      <h2 id="the-image-and-presentation-apis">The Image and Presentation APIs</h2>
+
+      <p>There are two main components to IIIF: delivering digital objects to sites and viewing them.</p>
+
+      <h3 id="delivering-objects">Delivering objects</h3>
+
+      <p>The Image API defines how image servers deliver image pixels to a viewer. It allows the image to be sent as a full-sized image or as a smaller size, a zoomed portion, a rotated view, or as a black and white version. All of these settings are designated by changing portions of the URL for an Image API resource. To try it out for yourself, head over to this <a href="https://www.learniiif.org/image-api/playground">Image API Playrground</a> and adjust some of the Image API parameters to see how they work with real images.</p>
+
+      <p>The Image API can be implemented on its own (most commonly to enable fast, deep zoom of very high resolution files like TIF and JP2000), or alongside the Presentation API for additional viewing capabilities.</p>
+
+      <div class="container mgt-medium mgb-medium">
+  
+  <a href="https://iiif.io/api/image/1.0/images/iiif-order.png">
+    
+  <img alt="Image API filler" src="https://iiif.io/api/image/1.0/images/iiif-order.png" />
+   
+  </a>
+  
+  <span class="caption">The image API controls the form in which an image is delivered to a location on the Web.</span>
+</div>
+
+      <h3 id="viewing-objects">Viewing objects</h3>
+
+      <p>The Presentation API attaches basic metadata and structure to digital objects, defining how they appear in viewers. It does this via the Manifest, a JSON file which bundles up all the different elements of an IIIF object (such as a single image, or a series of images) with basic metadata (like title, description, and rights information) and structural information (such as page order). (<a href="/get-started/how-iiif-works/#key-concepts-youll-encounter-when-working-with-iiif">See the glossary below</a> for more definitions of common IIIF terms.)</p>
+
+      <figure class="image inline-image float-right">
+  
+  <a href="/assets/uploads/presentation-api-filler.png">
+    
+  
+
+
+<picture>
+  <source srcset="/assets/uploads/presentation-api-filler.webp" type="image/webp" />
+  <img src="/assets/uploads/presentation-api-filler.png" alt="API filler image" class="" />
+</picture>
+
+  
+  </a>
+  
+
+  
+  <figcaption class="caption">The presentation API delivers data and structure about an image to a viewer.</figcaption>
+  
+</figure>
+
+      <p>There are many <a href="/get-started/iiif-viewers/">IIIF viewers</a>. Some are general purpose tools while others specialize in particular kinds of content or functionality. IIIF-compatible viewers generally allow users to pan, zoom, rotate, and resize image objects, and play audio/visual files. Some allow annotation with text, audio, location, and more. Others allow comparison of objects from a single collection side-by-side (or even objects from multiple collections if the object’s Manifest is made available to users).</p>
+
+      <h2 id="advanced-use-cases">Advanced use cases</h2>
+
+      <p>IIIF also enables you to use the same standardized principles to manage other needs related to your IIIF objects.</p>
+
+      <ul>
+        <li><strong>Authentication</strong>: The Authentication API defines where or by who your objects can be viewed.</li>
+        <li><strong>Search</strong>: The Search API allows users to search within any text associated with an object (such as OCR, transcriptions, etc.)</li>
+        <li><strong>Content state</strong>: The Content State API provides a way of linking directly to a particular region and zoom level of a IIIF resource.</li>
+        <li><strong>Change discovery</strong>: The Change Discovery API is a tool to describe the new publication of and updates to digital objects, to help aid cross-institutional discovery.</li>
+      </ul>
+
+      <h2 id="putting-it-all-together">Putting it all together</h2>
+
+      <p>If you have your own images you want to put online using IIIF you’ll need high-quality assets (most people use JPEG2000 or TIF files), and metadata about structure as well as the information people will read about the image.</p>
+
+      <p>From there:</p>
+
+      <ul>
+        <li>Make images and audio/video materials available using the Image API and an <a href="/get-started/image-servers/">IIIF image server</a>, or a <a href="/get-started/vendors/">IIIF-compatible image server from a vendor or other web host</a>.</li>
+        <li>Combine your images and structural data (like pagination or ordering) from your metadata source into a IIIF Manifest using the Presentation API (there are many <a href="https://github.com/IIIF/awesome-iiif#presentation-api-libraries">open source or vendor products that help handle this</a>).</li>
+        <li>Choose a <a href="/get-started/iiif-viewers/">viewer</a> to show your images</li>
+        <li>Consider making your image <strong>manifests</strong> (definition below) available publicly on your collection site so users can work with your images across collections.</li>
+      </ul>
+
+    </div>
+  </div></div>
+
+<div class="container-block is-max-widescreen"><div class="container has-text-centered">
+
+    <h2 id="next-steps">Next steps</h2>
+
+    <p>Feel like you have a handle on the basics? Try out some of these resources as a next step, or see our “Get Started” page for the full set of ways to get started with IIIF.</p>
+
+    <div class="block columns is-multiline">
+  
+    <div class="column is-one-third same-height-column">
+      <div class="box hover-box iiif-card">
+        
+
+        <h3 class="title  has-text-left">Get started</h3>
+        <p class="has-text-left subtitle margin-unset">Take the first step to exploring the rich world of IIIF-enabled materials.</p>
+        
+        <footer>
+          <p class="has-text-left">
+            <a href="/get-started/">Learn more &gt;</a>
+          </p>
+        </footer>
+        
+      </div>
+    </div>
+  
+    <div class="column is-one-third same-height-column">
+      <div class="box hover-box iiif-card">
+        
+
+        <h3 class="title  has-text-left">Guides</h3>
+        <p class="has-text-left subtitle margin-unset">A set of resources to help you find and work with IIIF materials, built by members of the IIIF community.</p>
+        
+        <footer>
+          <p class="has-text-left">
+            <a href="https://iiif.io/guides">Learn more &gt;</a>
+          </p>
+        </footer>
+        
+      </div>
+    </div>
+  
+    <div class="column is-one-third same-height-column">
+      <div class="box hover-box iiif-card">
+        
+
+        <h3 class="title  has-text-left">Talks</h3>
+        <p class="has-text-left subtitle margin-unset">Watch selected talks from conferences and other events to learn more about IIIF directly from the community.</p>
+        
+        <footer>
+          <p class="has-text-left">
+            <a href="/get-started/talks">Learn more &gt;</a>
+          </p>
+        </footer>
+        
+      </div>
+    </div>
+  
+</div>
+
+  </div></div>
+
+<div class="container-block is-max-widescreen"><div class="container has-text-centered">
+
+    <h2 id="key-concepts-youll-encounter-when-working-with-iiif">Key concepts you’ll encounter when working with IIIF</h2>
+
+    <div class="has-text-justified">
+
+      <p><strong>Annotation:</strong> a standard way to associate different types of content to whatever is on your canvas (such as a translation of a line or the name of a person in a photograph. In the IIIF model, images and other presentation content are also technically annotations onto a canvas). For more detail, see the <a href="http://w3.org/TR/annotation-model/">Web Annotation Data Model</a>.</p>
+
+      <p><strong>Canvas:</strong> the frame of reference for the display of your content, both spatial and temporal (just like a painting canvas for two-dimensional materials, or with an added time dimension for a/v content).</p>
+
+      <p><strong>Collection:</strong> a set of manifests (or ‘child’ collections) that communicate hierarchy or gather related things (for example, a set of boxes that each have folders within them, and photographs within those folders).</p>
+
+      <p><strong>Image server:</strong> the computer or service where digital objects live (basically, where assets are stored while waiting for users to access them).</p>
+
+      <p><strong>Image viewer:</strong> software, usually web-based, that allows viewing and manipulation of images. Sometimes called a “client.” (This is almost always the tool via which end users interact with IIIF materials, and many image viewers add additional functionality like the ability to add annotations or search through transcriptions/translations, etc.)</p>
+
+      <p><strong>Manifest:</strong> the prime unit in IIIF which lists all the information that makes up a IIIF object. It communicates how to display your digital objects, and what information to display about them, including structure, to varying degrees of complexity as determined by the implementer. (For example, if the object is a book of illustrations, where each illustrated page is a canvas, and there is one specific order to the arrangement of those pages).</p>
+
+      <p><strong>Metadata source:</strong> the place where the information about objects live, and needs to be connected to your Manifest via the Presentation API (for libraries and museums, this is usually some kind of asset management system, though there are many other possibilities)</p>
+
+      <p><strong>Range:</strong> a particular order of Canvases (as a basic example, think of the order of pages in a book, or the order of tracks on a music album)</p>
+
+    </div>
+
+  </div></div>
+
+      
+    </section>
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="columns">
+
+      <div class="navbar-brand column is-half">
+        <a class="navbar-item" href="/">
+          <img src="/assets/images/logos/logo-sm.png" alt="IIIF logo" height="28">
+          <span class="brand-title blue-text">International Image Interoperability Framework</span>
+        </a>
+        <p>IIIF is a set of open standards for delivering high-quality, attributed digital objects online at scale. It’s also an international community developing and implementing the IIIF APIs. IIIF is backed by a consortium of leading cultural institutions.</p>
+      </div>
+      <div class="column"></div>
+      
+      <div class="column menu-column">
+        <h4>About</h4>
+        <ul>
+        
+          <li>
+            <a href="/get-started/how-iiif-works">How IIIF Works</a>
+          </li>
+        
+          <li>
+            <a href="https://iiif.io/api">APIs & Documentation</a>
+          </li>
+        
+          <li>
+            <a href="/demos">Demos</a>
+          </li>
+        
+          <li>
+            <a href="https://iiif.io/guides">Tutorials & Guides</a>
+          </li>
+        
+          <li>
+            <a href="/privacy">Privacy policy</a>
+          </li>
+        
+        </ul>
+      </div>
+      
+      <div class="column menu-column">
+        <h4>Stay Connected</h4>
+        <ul>
+        
+          <li>
+            <a href="/news-and-events">News & Events</a>
+          </li>
+        
+          <li>
+            <a href="/newsletter">Join Newsletter</a>
+          </li>
+        
+          <li>
+            <a href="/community/groups">Community Groups</a>
+          </li>
+        
+          <li>
+            <a href="/community/consortium">Consortium</a>
+          </li>
+        
+          <li>
+            <a href="/contact">Contact Us</a>
+          </li>
+        
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</footer><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/assets/js/carouselInit.js"></script>
+
+    
+        <!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/xbjwjlbn",
+    title: "Feedback",
+    fields: [
+      {
+        type: "radio",
+        name: "feedback_type",
+        value: "Comment",
+        label: "Comment",
+        style: {
+            display: "inline-block",
+            "padding-right": "10px"
+        }
+      },
+      {
+        type: "radio",
+        name: "feedback_type",
+        value: "Correction",
+        label: "Correction",
+        style: {
+            display: "inline-block",
+            "padding-right": "10px"
+        }
+      },
+      {
+        type: "radio",
+        name: "feedback_type",
+        value: "Bug",
+        label: "Bug",
+        style: {
+            display: "inline-block",
+            "padding-right": "10px"
+        }
+      },
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "Email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "Message",
+        placeholder: "We want to hear from you! Enter your feedback here.",
+      },
+      { 
+        type: "submit",
+        value: "Submit"
+      },
+      {
+        type: "hidden",
+        name: "Page",
+        value: window.location.pathname.replaceAll('/','|'),
+        style: {
+            display: "none"
+        }
+      }
+    ],
+    buttonImg: "<i class='fas fa-comment' style='font-size:24px'/>", 
+    styles: {
+      title: {
+        backgroundColor: "#0d232d"
+      },
+      button: {
+        backgroundColor: "#0d232d"
+      }
+    }
+  });
+</script>
+
+    
+  </body>
+</html>

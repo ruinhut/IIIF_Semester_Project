@@ -1,0 +1,34 @@
+Dear students,
+
+Attached is the complete set of project sheets for this semester, one per student, with an articulation page for each group. Please read your own sheet and the articulation page of your group.
+
+Your sheet is the reference document for the semester. It states the goal, why the subject matters, the sources, what to build on, the steps, how your work connects with the others, the key dates and a short bibliography. I designed each sheet from what I know of your background and of what the group needs. If the angle does not fit you, if you see a better question inside the same material, we can still change things. We will go through your sheet together at the first session on 22 September..
+
+Read the articulation page as well as your own sheet. Your projects are not independent topics. The articulation page shows those dependencies on one diagram.
+
+Weekly supervision starts on Tuesday 22 September, in room INN 128, also on Zoom at https://epfl.zoom.us/j/2693459226. Come to your own slot only.
+
+Time    Group
+9:15 to 10:00   Geolocating Artworks
+10:00 to 11:00  Vintage Language Models
+11:00 to 11:20  IIIF Document Information Extraction
+11:30 to 12:00  Preparing Historical Data for Apertus
+12:00 to 12:30  EPFL Digital Twin Foundation Model
+
+The Time Atlas introduction is given inside the Foundations of Digital Humanities course and is open to you, Wednesday 16 September 13:00 to 15:00 in CM1100, and Thursday 17 September 10:00 to 12:00 in BC03, with an optional lab on Thursday 17 September 13:00 to 15:00 in BC04.
+
+Starting next week, send me a short message every Friday with the week's advancement, what you did, what you found and what blocks you.
+
+Key dates
+
+Mid-term presentations, Monday 9 November 2026.
+Report due, Friday 8 January 2027.
+Final presentations, Monday 18 January 2027.
+
+Complete your registration on IS-Academia if you have not done so.
+
+I am travelling from 14 to 21 September, so my replies will be slow that week. Anything urgent goes to Alicia Foucart, alicia.foucart@epfl.ch, who knows how to reach me.
+
+I wish you an excellent start of the semester
+
+Frédéric

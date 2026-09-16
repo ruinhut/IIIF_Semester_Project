@@ -1,0 +1,4 @@
+# Microsoft Office lock files are temporary and must not be versioned.
+~$*.docx
+~$*.xlsx
+~$*.pptx

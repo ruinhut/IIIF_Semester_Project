@@ -1,0 +1,14 @@
+{
+    "@context": "http://iiif.io/api/discovery/1/context.json",
+    "id": "https://registry.iiif.io/index.json",
+    "type": "OrderedCollection",
+    "summary": "The IIIF registry of Activity Streams",
+    "first": {
+        "id": "https://registry.iiif.io/page-0.json",
+        "type": "OrderedCollectionPage"
+    },
+    "last": {
+        "id": "https://registry.iiif.io/page-0.json",
+        "type": "OrderedCollectionPage"
+    }
+}

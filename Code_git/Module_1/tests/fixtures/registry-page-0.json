@@ -1,0 +1,51 @@
+{
+  "@context": "http://iiif.io/api/discovery/1/context.json",
+  "id": "https://registry.example/page-0.json",
+  "type": "OrderedCollectionPage",
+  "next": {
+    "id": "registry-page-1.json",
+    "type": "OrderedCollectionPage"
+  },
+  "orderedItems": [
+    {
+      "type": "Add",
+      "object": {
+        "id": "https://alpha.example/iiif/activity",
+        "type": "OrderedCollection",
+        "nameMap": {
+          "en": [
+            "Museum collections"
+          ]
+        },
+        "totalItems": 42,
+        "rights": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "actor": [
+        {
+          "en": [
+            "Alpha Museum"
+          ],
+          "type": "Organization"
+        },
+        {
+          "id": "https://alpha.example/",
+          "type": "Organization"
+        }
+      ]
+    },
+    {
+      "type": "Add",
+      "object": {
+        "id": "https://removed.example/iiif/activity",
+        "type": "OrderedCollection"
+      },
+      "actor": {
+        "label": {
+          "en": [
+            "Removed Provider"
+          ]
+        }
+      }
+    }
+  ]
+}

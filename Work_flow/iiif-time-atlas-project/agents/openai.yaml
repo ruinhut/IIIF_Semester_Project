@@ -1,0 +1,4 @@
+interface:
+  display_name: "IIIF 与 Time Atlas 学期项目"
+  short_description: "辅助理解、实施和汇报 EPFL DHLAB 的 IIIF 项目"
+  default_prompt: "Use $iiif-time-atlas-project to help me plan and complete my current IIIF semester-project task."
