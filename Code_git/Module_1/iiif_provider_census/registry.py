@@ -121,8 +121,13 @@ def read_manual_records(
 
     observed_at = observed_at or utc_now()
     document = fetcher.load(source)
+    source_metadata: Mapping[str, Any] = {}
     if isinstance(document, Mapping):
         items = document.get("providers")
+        metadata_value = document.get("source") or {}
+        if not isinstance(metadata_value, Mapping):
+            raise ValueError("Manual source metadata must be a JSON object")
+        source_metadata = metadata_value
     else:
         items = document
     if not isinstance(items, Sequence) or isinstance(items, (str, bytes)):
@@ -139,6 +144,9 @@ def read_manual_records(
         rights_values = tuple(str(value) for value in item.get("rights_values", []))
         rights_status = str(item.get("rights_status") or ("declared" if rights_values else "unknown"))
         estimated = item.get("estimated_size")
+        provenance_source_type = str(source_metadata.get("source_type") or "manual")
+        provenance_source_url = str(source_metadata.get("source_url") or source)
+        source_page_url = _optional_text(item.get("source_page_url"))
         record = ProviderRecord(
             provider_id=str(item.get("provider_id") or stable_provider_id(endpoint)),
             name=name,
@@ -153,8 +161,9 @@ def read_manual_records(
             record_status=str(item.get("record_status", "active")),
             last_checked_at=_optional_text(item.get("last_checked_at")),
             source=SourceProvenance(
-                source_type="manual",
-                source_url=source,
+                source_type=provenance_source_type,
+                source_url=provenance_source_url,
+                source_page_url=source_page_url,
                 observed_at=observed_at,
             ),
             raw_source_record=dict(item),

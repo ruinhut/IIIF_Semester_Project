@@ -1,6 +1,8 @@
 """Tests for Registry traversal, normalization, and manual supplementation."""
 
 from pathlib import Path
+import json
+import tempfile
 import unittest
 
 from iiif_provider_census.fetch import JsonFetcher
@@ -73,6 +75,46 @@ class RegistryReaderTests(unittest.TestCase):
         self.assertEqual(len(records), 1)
         self.assertEqual(records[0].name, "Beta Library")
         self.assertEqual(records[0].source.source_type, "manual")
+
+    def test_manual_catalog_preserves_external_provenance(self) -> None:
+        """Generated catalogues must cite their public source and entry page."""
+
+        with tempfile.TemporaryDirectory() as directory:
+            source_path = Path(directory) / "catalog.json"
+            source_path.write_text(
+                json.dumps(
+                    {
+                        "source": {
+                            "source_type": "iiif_official_resource_guide",
+                            "source_url": "https://guides.iiif.io/finding_resources/",
+                        },
+                        "providers": [
+                            {
+                                "name": "Example Library",
+                                "institution_url": "https://example.org/",
+                                "discovery_endpoint": "https://example.org/collections",
+                                "discovery_type": "InstitutionWebsite",
+                                "source_page_url": "https://guides.iiif.io/guides/example.org/",
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            records = read_manual_records(
+                str(source_path), self.fetcher, observed_at=self.observed_at
+            )
+
+            self.assertEqual(records[0].source.source_type, "iiif_official_resource_guide")
+            self.assertEqual(
+                records[0].source.source_url,
+                "https://guides.iiif.io/finding_resources/",
+            )
+            self.assertEqual(
+                records[0].source.source_page_url,
+                "https://guides.iiif.io/guides/example.org/",
+            )
 
 
 if __name__ == "__main__":

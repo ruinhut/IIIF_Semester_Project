@@ -3,6 +3,8 @@
     "https://registry.iiif.io/index.json"
   ],
   "manual_sources": [
+    "config/awesome_iiif_providers.json",
+    "config/iiif_guides_providers.json",
     "config/manual_providers.json"
   ],
   "network": {

@@ -73,7 +73,16 @@ def run_pipeline(
         resolved = _resolve_local_source(source, base_directory)
         source_records = read_manual_records(resolved, fetcher, observed_at=observed_at)
         records.extend(source_records)
-        source_reports.append({"kind": "manual", "source": source, "records": len(source_records)})
+        source_types = sorted({record.source.source_type for record in source_records})
+        public_sources = sorted({record.source.source_url for record in source_records})
+        source_reports.append(
+            {
+                "kind": ", ".join(source_types) if source_types else "manual",
+                "source": ", ".join(public_sources) if public_sources else source,
+                "input": source,
+                "records": len(source_records),
+            }
+        )
 
     # Step 4: Create one canonical census, then apply the run-specific filters.
     all_records = deduplicate_records(records)
@@ -195,10 +204,17 @@ def _format_run_log(
 ) -> str:
     """Format a concise plain-text account of one completed Module 1 run."""
 
-    source_lines = [
-        f"- {report['kind']}: {report['source']} ({report['records']} record(s))"
-        for report in source_reports
-    ] or ["- (no sources configured)"]
+    source_lines = []
+    for report in source_reports:
+        input_note = ""
+        if report.get("input") and report["input"] != report["source"]:
+            input_note = f"; local input: {report['input']}"
+        source_lines.append(
+            f"- {report['kind']}: {report['source']} "
+            f"({report['records']} record(s){input_note})"
+        )
+    if not source_lines:
+        source_lines = ["- (no sources configured)"]
     lines = [
         "Module 1 Run Log",
         "================",
