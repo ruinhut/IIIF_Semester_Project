@@ -29,6 +29,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     run_parser = subparsers.add_parser("run", help="Run census and selection from a JSON config")
     run_parser.add_argument("--config", type=Path, required=True, help="Path to the JSON config")
+    run_parser.add_argument(
+        "--institution",
+        action="append",
+        required=True,
+        help='Exact institution name to select, or "all"; repeat to select multiple institutions',
+    )
 
     select_parser = subparsers.add_parser("select", help="Select providers from an existing JSONL census")
     select_parser.add_argument("--input", type=Path, required=True, help="providers.jsonl")
@@ -44,13 +50,14 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if args.command == "run":
             # The run command performs the complete Module 1 workflow.
-            result = run_pipeline(args.config)
+            result = run_pipeline(args.config, institution_selection=args.institution)
             print(
                 json.dumps(
                     {
                         "all_provider_count": result.all_provider_count,
                         "selected_provider_count": result.selected_provider_count,
                         "output_directory": str(result.output_directory),
+                        "log_file": str(result.log_txt),
                     },
                     ensure_ascii=False,
                 )

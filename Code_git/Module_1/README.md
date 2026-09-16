@@ -22,10 +22,10 @@ config.example.json
                                               store.py 写入四类输出
 ```
 
-1. `pipeline.py` 读取 `config.example.json`，确定从哪里获取机构以及如何筛选。
+1. `pipeline.py` 读取 `config.example.json`，确定从哪里获取机构；本次要处理的机构由运行命令中的 `--institution` 明确指定。
 2. `fetch.py` 下载 Registry JSON；`registry.py` 遍历分页，并把不同来源的字段转换成统一的 `ProviderRecord`。
 3. 程序以 `discovery_endpoint` 为机构数据流的唯一入口进行去重。较新的 Registry 活动覆盖旧活动；同一入口的人工记录可补充 Registry 信息。
-4. `selector.py` 根据名称、域名、状态或数量上限选择本次要处理的机构。默认选择所有未被标记为移除的机构。
+4. `selector.py` 根据命令行输入的机构完整名称选择本次要处理的机构；输入 `all` 时选择全部未被标记为移除的已知机构。
 5. `store.py` 保存完整目录和选中目录。下一台机器只需逐行读取 `selected_providers.jsonl`，取出其中的 `discovery_endpoint` 进行网络可访问性检查。
 
 例如，Registry 中的一条活动说明 “Bodleian Libraries 发布了一个 Change Discovery 数据流”。模块 1 将它转换为包含机构名、机构网址和发现入口的记录，但不会在这一阶段读取该数据流中的 Manifest。
@@ -40,7 +40,7 @@ config.example.json
 在本目录执行：
 
 ```powershell
-python -m iiif_provider_census run --config config.example.json
+python -m iiif_provider_census run --config config.example.json --institution all
 ```
 
 输出位于 `data/output/`：
@@ -48,11 +48,11 @@ python -m iiif_provider_census run --config config.example.json
 - `providers.jsonl`：完整机构/发现入口目录，也是模块的规范化主存储；
 - `selected_providers.jsonl`：传给流水线机器 2 的机构子集；
 - `providers.csv`：便于人工检查的表格视图，不含完整原始记录；
-- `run_summary.json`：本次运行的来源、数量、时间和输出路径。
+- `Module1_YYYY-MM-DD_HH-MM-SS_log.txt`：以电脑本地时间命名的本次运行日志。
 
 ## 输入
 
-`config.example.json` 中配置两类输入：
+`config.example.json` 中配置两类机构来源：
 
 1. `registry_sources`：IIIF Registry 的 `OrderedCollection` 或 `OrderedCollectionPage` URL/本地 JSON 文件；
 2. `manual_sources`：人工维护的提供机构 JSON 文件，用于补充 Registry 尚未收录的机构。
@@ -81,7 +81,23 @@ python -m iiif_provider_census run --config config.example.json
 
 ## 筛选规则
 
-`selection` 支持按稳定 `provider_id`、机构名称关键词和发现入口域名纳入或排除机构，也可以通过 `limit` 限制数量。空的纳入列表表示不限制。默认仅选择 `record_status = active` 的记录。结果会稳定排序，以保证同一输入产生可复现的选择。
+每次执行完整流程都必须人为指定机构。机构名称采用不区分大小写的完整名称匹配，拼写错误或已经移除的机构会触发错误，并显示当前可选名称。
+
+选择一个机构：
+
+```powershell
+python -m iiif_provider_census run `
+  --config config.example.json `
+  --institution "Bodleian Libraries, University of Oxford"
+```
+
+选择全部当前已知且未被移除的机构：
+
+```powershell
+python -m iiif_provider_census run --config config.example.json --institution all
+```
+
+选择多个机构时，重复使用 `--institution` 参数。
 
 也可以对现有目录重新筛选，而不重新访问 Registry：
 

@@ -42,6 +42,18 @@ class SelectorAndStoreTests(unittest.TestCase):
         selected = select_providers(records, criteria)
         self.assertEqual([item.name for item in selected], ["Alpha Library"])
 
+    def test_exact_name_matching_is_case_insensitive(self) -> None:
+        """CLI-style institution names must match exactly but ignore letter case."""
+
+        records = [
+            provider("Alpha Library", "https://alpha.example/activity"),
+            provider("Alpha Library Annex", "https://annex.example/activity"),
+        ]
+        criteria = SelectionCriteria(include_exact_names=("alpha library",))
+
+        selected = select_providers(records, criteria)
+        self.assertEqual([item.name for item in selected], ["Alpha Library"])
+
     def test_jsonl_round_trip_preserves_raw_record_and_csv_is_flat(self) -> None:
         """JSONL keeps provenance while CSV intentionally remains flat."""
 

@@ -5,17 +5,6 @@
   "manual_sources": [
     "config/manual_providers.json"
   ],
-  "selection": {
-    "include_provider_ids": [],
-    "include_name_keywords": [],
-    "include_hosts": [],
-    "exclude_name_keywords": [],
-    "exclude_hosts": [],
-    "record_statuses": [
-      "active"
-    ],
-    "limit": null
-  },
   "network": {
     "timeout_seconds": 20,
     "retries": 2,

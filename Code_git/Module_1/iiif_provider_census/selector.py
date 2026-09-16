@@ -22,6 +22,7 @@ class SelectionCriteria:
     """
 
     include_provider_ids: tuple[str, ...] = field(default_factory=tuple)
+    include_exact_names: tuple[str, ...] = field(default_factory=tuple)
     include_name_keywords: tuple[str, ...] = field(default_factory=tuple)
     include_hosts: tuple[str, ...] = field(default_factory=tuple)
     exclude_name_keywords: tuple[str, ...] = field(default_factory=tuple)
@@ -38,6 +39,7 @@ class SelectionCriteria:
         limit = value.get("limit")
         return cls(
             include_provider_ids=_strings(value.get("include_provider_ids", [])),
+            include_exact_names=_strings(value.get("include_exact_names", [])),
             include_name_keywords=_strings(value.get("include_name_keywords", [])),
             include_hosts=_strings(value.get("include_hosts", [])),
             exclude_name_keywords=_strings(value.get("exclude_name_keywords", [])),
@@ -65,6 +67,7 @@ def _matches(record: ProviderRecord, criteria: SelectionCriteria) -> bool:
     name = record.name.casefold()
     host = (urlsplit(record.discovery_endpoint).hostname or "").casefold()
     ids = {value.casefold() for value in criteria.include_provider_ids}
+    exact_names = {value.casefold() for value in criteria.include_exact_names}
     included_names = tuple(value.casefold() for value in criteria.include_name_keywords)
     included_hosts = tuple(value.casefold() for value in criteria.include_hosts)
     excluded_names = tuple(value.casefold() for value in criteria.exclude_name_keywords)
@@ -76,6 +79,8 @@ def _matches(record: ProviderRecord, criteria: SelectionCriteria) -> bool:
     if statuses and record.record_status.casefold() not in statuses:
         return False
     if ids and record.provider_id.casefold() not in ids:
+        return False
+    if exact_names and name not in exact_names:
         return False
     if included_names and not any(keyword in name for keyword in included_names):
         return False

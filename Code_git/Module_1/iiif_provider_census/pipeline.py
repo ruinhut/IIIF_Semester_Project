@@ -8,14 +8,16 @@ logic. This is the main file to read to understand the execution order.
 from __future__ import annotations
 
 import json
+from datetime import datetime
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any, Mapping, Sequence
 
 from .fetch import JsonFetcher
-from .registry import deduplicate_records, read_manual_records, read_registry, utc_now
+from .models import ProviderRecord
+from .registry import deduplicate_records, read_manual_records, read_registry
 from .selector import SelectionCriteria, select_providers
-from .store import write_csv, write_json, write_jsonl
+from .store import write_csv, write_jsonl, write_text
 
 
 @dataclass(frozen=True)
@@ -26,11 +28,16 @@ class PipelineResult:
     all_providers_jsonl: Path
     selected_providers_jsonl: Path
     providers_csv: Path
-    run_summary_json: Path
+    log_txt: Path
 
 
-def run_pipeline(config_path: Path) -> PipelineResult:
-    """Run census, normalization, selection, and export from one config file."""
+def run_pipeline(
+    config_path: Path,
+    *,
+    institution_selection: Sequence[str],
+    run_time: datetime | None = None,
+) -> PipelineResult:
+    """Run the workflow with an explicit human-provided institution choice."""
 
     # Step 1: Read the run configuration and resolve all relative paths from
     # the configuration file's directory, not from an arbitrary shell path.
@@ -44,7 +51,8 @@ def run_pipeline(config_path: Path) -> PipelineResult:
         retries=int(network.get("retries", 2)),
     )
     max_pages = int(network.get("max_registry_pages", 100))
-    observed_at = utc_now()
+    local_run_time = _local_run_time(run_time)
+    observed_at = local_run_time.isoformat(timespec="seconds")
 
     # Step 2: Harvest every configured IIIF Registry source. At this point the
     # records are already normalized into ProviderRecord objects.
@@ -69,8 +77,9 @@ def run_pipeline(config_path: Path) -> PipelineResult:
 
     # Step 4: Create one canonical census, then apply the run-specific filters.
     all_records = deduplicate_records(records)
-    criteria = SelectionCriteria.from_mapping(_mapping(config.get("selection", {}), "selection"))
+    criteria, selection_label, requested_names = _selection_for_run(institution_selection)
     selected_records = select_providers(all_records, criteria)
+    _validate_requested_names(requested_names, all_records, selected_records)
 
     # Step 5: Resolve the output directory and materialize the data contract
     # consumed by people and by Module 2.
@@ -83,26 +92,23 @@ def run_pipeline(config_path: Path) -> PipelineResult:
     all_jsonl = output_directory / "providers.jsonl"
     selected_jsonl = output_directory / "selected_providers.jsonl"
     csv_path = output_directory / "providers.csv"
-    summary_path = output_directory / "run_summary.json"
+    log_path = output_directory / f"Module1_{local_run_time.strftime('%Y-%m-%d_%H-%M-%S')}_log.txt"
     write_jsonl(all_jsonl, all_records)
     write_jsonl(selected_jsonl, selected_records)
     write_csv(csv_path, all_records)
-    write_json(
-        summary_path,
-        {
-            "module": "IIIF Provider Census and Selector",
-            "schema_version": "1.0",
-            "run_at": observed_at,
-            "source_reports": source_reports,
-            "provider_count_before_deduplication": len(records),
-            "all_provider_count": len(all_records),
-            "selected_provider_count": len(selected_records),
-            "outputs": {
-                "providers_jsonl": str(all_jsonl),
-                "selected_providers_jsonl": str(selected_jsonl),
-                "providers_csv": str(csv_path),
-            },
-        },
+    write_text(
+        log_path,
+        _format_run_log(
+            run_at=observed_at,
+            selection_label=selection_label,
+            source_reports=source_reports,
+            count_before_deduplication=len(records),
+            all_provider_count=len(all_records),
+            selected_provider_count=len(selected_records),
+            all_jsonl=all_jsonl,
+            selected_jsonl=selected_jsonl,
+            csv_path=csv_path,
+        ),
     )
 
     return PipelineResult(
@@ -112,8 +118,102 @@ def run_pipeline(config_path: Path) -> PipelineResult:
         all_providers_jsonl=all_jsonl,
         selected_providers_jsonl=selected_jsonl,
         providers_csv=csv_path,
-        run_summary_json=summary_path,
+        log_txt=log_path,
     )
+
+
+def _local_run_time(value: datetime | None) -> datetime:
+    """Return an aware local datetime used by both provenance and log names."""
+
+    if value is None:
+        return datetime.now().astimezone()
+    if value.tzinfo is None:
+        return value.astimezone()
+    return value
+
+
+def _selection_for_run(
+    institution_selection: Sequence[str],
+) -> tuple[SelectionCriteria, str, tuple[str, ...]]:
+    """Build criteria only from the institution names chosen for this run."""
+
+    names = tuple(dict.fromkeys(name.strip() for name in institution_selection if name.strip()))
+    if not names:
+        raise ValueError("At least one non-empty --institution value is required")
+    all_requested = [name for name in names if name.casefold() == "all"]
+    if all_requested:
+        if len(names) != 1:
+            raise ValueError("Use --institution all by itself; do not combine it with institution names")
+        return SelectionCriteria(record_statuses=("active",)), "all active institutions", ()
+
+    return (
+        SelectionCriteria(include_exact_names=names, record_statuses=("active",)),
+        ", ".join(names),
+        names,
+    )
+
+
+def _validate_requested_names(
+    requested_names: Sequence[str],
+    all_records: Sequence[ProviderRecord],
+    selected_records: Sequence[ProviderRecord],
+) -> None:
+    """Reject unknown or inactive explicit names instead of silently selecting none."""
+
+    if not requested_names:
+        return
+    selected_names = {record.name.casefold() for record in selected_records}
+    missing = [name for name in requested_names if name.casefold() not in selected_names]
+    if not missing:
+        return
+    available = sorted(
+        {record.name for record in all_records if record.record_status == "active"},
+        key=str.casefold,
+    )
+    available_text = ", ".join(available) if available else "(none)"
+    raise ValueError(
+        f"Unknown or inactive institution name(s): {', '.join(missing)}. "
+        f"Available active institutions: {available_text}"
+    )
+
+
+def _format_run_log(
+    *,
+    run_at: str,
+    selection_label: str,
+    source_reports: Sequence[Mapping[str, Any]],
+    count_before_deduplication: int,
+    all_provider_count: int,
+    selected_provider_count: int,
+    all_jsonl: Path,
+    selected_jsonl: Path,
+    csv_path: Path,
+) -> str:
+    """Format a concise plain-text account of one completed Module 1 run."""
+
+    source_lines = [
+        f"- {report['kind']}: {report['source']} ({report['records']} record(s))"
+        for report in source_reports
+    ] or ["- (no sources configured)"]
+    lines = [
+        "Module 1 Run Log",
+        "================",
+        f"Run time (computer local time): {run_at}",
+        f"Institution selection: {selection_label}",
+        "",
+        "Sources:",
+        *source_lines,
+        "",
+        f"Records before deduplication: {count_before_deduplication}",
+        f"Known providers after deduplication: {all_provider_count}",
+        f"Selected providers: {selected_provider_count}",
+        "",
+        "Outputs:",
+        f"- Full provider census: {all_jsonl}",
+        f"- Selected providers for Module 2: {selected_jsonl}",
+        f"- Human-readable table: {csv_path}",
+    ]
+    return "\n".join(lines)
 
 
 def _read_config(path: Path) -> Mapping[str, Any]:

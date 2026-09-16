@@ -1,4 +1,4 @@
-"""Persist Module 1 data contracts as UTF-8 JSONL, CSV, and JSON.
+"""Persist Module 1 data contracts as UTF-8 JSONL, CSV, and text.
 
 JSONL is the canonical machine-readable format because each provider can be
 processed independently. CSV is a smaller, flattened view for human review.
@@ -77,12 +77,12 @@ def write_csv(path: Path, records: Iterable[ProviderRecord]) -> int:
     return count
 
 
-def write_json(path: Path, value: Any) -> None:
-    """Write an indented JSON document such as the run summary."""
+def write_text(path: Path, value: str) -> None:
+    """Write a UTF-8 human-readable run log with normalized newlines."""
 
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="\n") as handle:
-        json.dump(value, handle, ensure_ascii=False, indent=2, sort_keys=True)
+        handle.write(value.rstrip())
         handle.write("\n")
 
 
