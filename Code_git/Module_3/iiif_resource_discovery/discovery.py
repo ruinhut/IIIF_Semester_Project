@@ -100,22 +100,57 @@ class ResourceDiscoverer:
             except ValueError as exc:
                 result.issues.append(DiscoveryIssue(str(url), "invalid_curated_url", str(exc)))
 
-        if provider.check_result == "reachable_json":
-            self._queue_candidate(
-                candidates,
-                provider.final_url,
-                "module_2_json",
-                provider.discovery_endpoint,
-                result,
+        processable_route_found = False
+        for route in provider.endpoint_routes:
+            candidate = route["endpoint_candidate"]
+            check = route["endpoint_check"]
+            candidate_url = str(
+                candidate.get("url", check.get("requested_url", ""))
             )
-        elif provider.check_result == "reachable_non_json" and self.html_enabled:
-            html_seeds.append(provider.final_url)
-        elif not curated_entry_points and not curated_html_seeds:
+            final_url = str(check.get("final_url") or candidate_url)
+            check_result = str(check.get("check_result", ""))
+            endpoint_role = str(
+                candidate.get("endpoint_role", "unclassified")
+            )
+            if check_result == "reachable_json":
+                self._queue_candidate(
+                    candidates,
+                    final_url,
+                    f"module_2_json:{endpoint_role}",
+                    candidate_url,
+                    result,
+                )
+                processable_route_found = True
+            elif check_result == "reachable_non_json" and self.html_enabled:
+                html_seeds.append(final_url)
+                processable_route_found = True
+            elif check_result in {"invalid_json", "response_too_large", "restricted"}:
+                result.issues.append(
+                    DiscoveryIssue(
+                        final_url,
+                        f"module_2_{check_result}",
+                        f"Endpoint role {endpoint_role!r} requires review or an adapter",
+                    )
+                )
+            elif check_result:
+                result.issues.append(
+                    DiscoveryIssue(
+                        final_url,
+                        f"module_2_{check_result}",
+                        f"Endpoint role {endpoint_role!r} was not reachable",
+                    )
+                )
+
+        if (
+            not processable_route_found
+            and not curated_entry_points
+            and not curated_html_seeds
+        ):
             result.issues.append(
                 DiscoveryIssue(
-                    provider.final_url,
+                    provider.discovery_endpoint,
                     "no_processable_entry",
-                    f"Module 2 result {provider.check_result!r} has no curated fallback",
+                    "No checked endpoint is currently processable",
                 )
             )
 
@@ -174,9 +209,30 @@ class ResourceDiscoverer:
         final_url, value = document_and_json
         resource_type = _resource_type(value)
         if resource_type not in IIIF_RESOURCE_TYPES:
-            result.issues.append(
-                DiscoveryIssue(final_url, "unsupported_json_type", f"JSON type is {resource_type or 'unknown'}")
-            )
+            linked_candidates = _json_iiif_candidates(value)
+            if linked_candidates:
+                for linked_url in linked_candidates:
+                    if (
+                        len(state.processed_machine_urls)
+                        >= self.limits.max_machine_candidates_per_provider
+                    ):
+                        result.truncated = True
+                        break
+                    self._process_machine_candidate(
+                        linked_url,
+                        "provider_api_link",
+                        final_url,
+                        result,
+                        state,
+                    )
+            else:
+                result.issues.append(
+                    DiscoveryIssue(
+                        final_url,
+                        "unsupported_json_type",
+                        f"JSON type is {resource_type or 'unknown'} and no IIIF links were found",
+                    )
+                )
             return
         if not _has_iiif_declared_type(value, resource_type):
             result.issues.append(
@@ -386,6 +442,19 @@ class ResourceDiscoverer:
                 if self._manifest_limit_reached(result, state):
                     result.truncated = True
                     return
+
+            next_url = _link_url(value.get("next"))
+            if next_url and next_url not in state.processed_collection_urls:
+                queue.append(
+                    (
+                        next_url,
+                        None,
+                        "presentation_collection_next",
+                        final_url,
+                        activity_type,
+                        activity_time,
+                    )
+                )
         if queue:
             result.truncated = True
 
@@ -596,6 +665,43 @@ def _has_collection_children(value: Optional[Mapping[str, Any]]) -> bool:
         return False
     return any(isinstance(value.get(name), list) for name in ("items", "members", "manifests", "collections"))
 
+
+
+
+def _json_iiif_candidates(value: Any) -> list[str]:
+    """Extract explicit IIIF-looking URLs from a provider-specific JSON API.
+
+    This is a conservative generic adapter: a URL is considered only when its
+    field name or value explicitly mentions IIIF, Manifest, or Collection.
+    """
+
+    output: list[str] = []
+    seen: set[str] = set()
+
+    def visit(item: Any, key_hint: str = "") -> None:
+        if isinstance(item, Mapping):
+            for key, child in item.items():
+                visit(child, str(key))
+            return
+        if isinstance(item, list):
+            for child in item:
+                visit(child, key_hint)
+            return
+        if not isinstance(item, str):
+            return
+        evidence = f"{key_hint} {item}".casefold()
+        if not any(token in evidence for token in ("iiif", "manifest", "collection")):
+            return
+        try:
+            canonical = canonicalize_url(item)
+        except ValueError:
+            return
+        if canonical not in seen:
+            output.append(canonical)
+            seen.add(canonical)
+
+    visit(value)
+    return output
 
 def _optional_string(value: Any) -> Optional[str]:
     if value is None:

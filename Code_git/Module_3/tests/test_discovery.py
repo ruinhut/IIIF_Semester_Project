@@ -121,5 +121,38 @@ class ResourceDiscovererTests(unittest.TestCase):
         self.assertEqual(result.issues[0].issue_type, "non_iiif_json_resource")
 
 
+    def test_follows_presentation_collection_next_pagination(self) -> None:
+        with LocalHttpServer() as server:
+            provider = ProviderInputRecord.from_mapping(
+                provider_value(
+                    f"{server.base_url}/paged-collection-1",
+                    json_type="Collection",
+                )
+            )
+            result = self._discoverer().discover(provider)
+
+        self.assertEqual(
+            {item.manifest_url for item in result.manifests},
+            {
+                f"{server.base_url}/manifest/1",
+                f"{server.base_url}/manifest/2",
+            },
+        )
+        self.assertEqual(result.collections_visited, 2)
+
+    def test_generic_provider_api_adapter_follows_explicit_manifest_link(self) -> None:
+        with LocalHttpServer() as server:
+            provider = ProviderInputRecord.from_mapping(
+                provider_value(f"{server.base_url}/provider-api")
+            )
+            result = self._discoverer().discover(provider)
+
+        self.assertEqual(result.status, "manifests_found")
+        self.assertEqual(
+            {item.manifest_url for item in result.manifests},
+            {f"{server.base_url}/manifest/3"},
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

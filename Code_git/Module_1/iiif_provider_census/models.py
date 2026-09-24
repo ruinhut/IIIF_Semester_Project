@@ -1,8 +1,4 @@
-"""Data models for the provider census.
-
-Only Python's standard library is used so that the module can run in a clean
-Python 3.10 installation.
-"""
+"""Data models for the provider census and its candidate endpoints."""
 
 from __future__ import annotations
 
@@ -12,41 +8,42 @@ from typing import Any, Mapping, Optional
 from urllib.parse import urlsplit, urlunsplit
 
 
-SCHEMA_VERSION = "1.0"
+SCHEMA_VERSION = "2.0"
 
 
 def canonicalize_url(value: str) -> str:
-    """Validate and normalize an HTTP(S) URL for identity and filtering.
-
-    Host names and schemes are case-insensitive, default ports are removed,
-    and fragments are discarded because they do not identify a registry feed.
-    """
+    """Validate and normalize an absolute HTTP(S) URL."""
 
     value = value.strip()
     parts = urlsplit(value)
-    if parts.scheme not in {"http", "https"} or not parts.netloc:
+    if parts.scheme.lower() not in {"http", "https"} or not parts.netloc:
         raise ValueError(f"Expected an absolute HTTP(S) URL, got: {value!r}")
-
-    host = (parts.hostname or "").lower()
-    port = parts.port
-    if port and not ((parts.scheme == "http" and port == 80) or (parts.scheme == "https" and port == 443)):
-        host = f"{host}:{port}"
     if parts.username or parts.password:
         raise ValueError("URLs containing credentials are not accepted")
-
+    host = (parts.hostname or "").lower()
+    port = parts.port
+    if port and not (
+        (parts.scheme.lower() == "http" and port == 80)
+        or (parts.scheme.lower() == "https" and port == 443)
+    ):
+        host = f"{host}:{port}"
     return urlunsplit((parts.scheme.lower(), host, parts.path or "/", parts.query, ""))
 
 
-def stable_provider_id(discovery_endpoint: str) -> str:
-    """Build a repeatable identifier from the canonical discovery endpoint."""
+def stable_provider_id(identity_url: str) -> str:
+    """Build a repeatable provider identifier from institutional evidence.
 
-    canonical = canonicalize_url(discovery_endpoint)
+    Callers should prefer the institution URL. The endpoint remains a safe
+    compatibility fallback when a source does not identify the institution.
+    """
+
+    canonical = canonicalize_url(identity_url)
     return f"provider-{sha256(canonical.encode('utf-8')).hexdigest()[:16]}"
 
 
 @dataclass(frozen=True)
 class SourceProvenance:
-    """Where and when one provider record was observed."""
+    """Where and when a provider or endpoint was observed."""
 
     source_type: str
     source_url: str
@@ -56,8 +53,6 @@ class SourceProvenance:
 
     @classmethod
     def from_mapping(cls, value: Mapping[str, Any]) -> "SourceProvenance":
-        """Reconstruct provenance from one decoded JSON object."""
-
         return cls(
             source_type=str(value.get("source_type", "unknown")),
             source_url=str(value.get("source_url", "")),
@@ -68,11 +63,63 @@ class SourceProvenance:
 
 
 @dataclass(frozen=True)
-class ProviderRecord:
-    """Canonical provider record emitted by Module 1.
+class EndpointCandidate:
+    """One candidate route supplied for an institution.
 
-    Unknown values remain explicit rather than being guessed. The raw source
-    record and provenance are retained so every normalized field is auditable.
+    endpoint_role is deliberately open text. A provider can have any number of
+    routes and new roles do not require a schema change.
+    """
+
+    url: str
+    endpoint_role: str = "unclassified"
+    discovery_type: str = "unknown"
+    label: Optional[str] = None
+    verification_status: str = "unverified"
+    source: SourceProvenance = field(
+        default_factory=lambda: SourceProvenance("unknown", "")
+    )
+
+    def __post_init__(self) -> None:
+        object.__setattr__(self, "url", canonicalize_url(self.url))
+        if not self.endpoint_role.strip():
+            raise ValueError("endpoint_role must not be empty")
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
+    @classmethod
+    def from_mapping(
+        cls,
+        value: Mapping[str, Any],
+        *,
+        default_source: SourceProvenance | None = None,
+    ) -> "EndpointCandidate":
+        source_value = value.get("source")
+        if isinstance(source_value, Mapping):
+            source = SourceProvenance.from_mapping(source_value)
+        else:
+            source = default_source or SourceProvenance("unknown", "")
+        return cls(
+            url=str(value.get("url", value.get("discovery_endpoint", ""))),
+            endpoint_role=str(value.get("endpoint_role", "unclassified")),
+            discovery_type=str(value.get("discovery_type", "unknown")),
+            label=_optional_string(value.get("label", value.get("stream_label"))),
+            verification_status=str(
+                value.get(
+                    "verification_status",
+                    value.get("endpoint_verification", "unverified"),
+                )
+            ),
+            source=source,
+        )
+
+
+@dataclass(frozen=True)
+class ProviderRecord:
+    """One institution plus every candidate route currently known for it.
+
+    Legacy single-endpoint fields remain as a projection of the first endpoint
+    so existing downstream readers can migrate without losing compatibility.
     """
 
     provider_id: str
@@ -91,16 +138,16 @@ class ProviderRecord:
         default_factory=lambda: SourceProvenance("unknown", "")
     )
     raw_source_record: Mapping[str, Any] = field(default_factory=dict)
+    endpoints: tuple[EndpointCandidate, ...] = field(default_factory=tuple)
     schema_version: str = SCHEMA_VERSION
 
     def __post_init__(self) -> None:
-        # Frozen dataclasses prevent accidental changes after validation. The
-        # normalized URLs are therefore assigned through object.__setattr__.
         canonical_endpoint = canonicalize_url(self.discovery_endpoint)
         object.__setattr__(self, "discovery_endpoint", canonical_endpoint)
-
         if self.institution_url:
-            object.__setattr__(self, "institution_url", canonicalize_url(self.institution_url))
+            object.__setattr__(
+                self, "institution_url", canonicalize_url(self.institution_url)
+            )
         if not self.name.strip():
             raise ValueError("Provider name must not be empty")
         if self.estimated_size is not None and self.estimated_size < 0:
@@ -110,32 +157,77 @@ class ProviderRecord:
         if self.rights_status not in {"unknown", "declared", "mixed"}:
             raise ValueError("rights_status must be unknown, declared, or mixed")
 
-    def to_dict(self) -> dict[str, Any]:
-        """Convert the record into a JSON-serializable dictionary."""
+        candidates = self.endpoints or (
+            EndpointCandidate(
+                url=canonical_endpoint,
+                endpoint_role=_role_from_type(self.discovery_type),
+                discovery_type=self.discovery_type,
+                label=self.stream_label,
+                verification_status="unverified",
+                source=self.source,
+            ),
+        )
+        unique: list[EndpointCandidate] = []
+        seen: set[tuple[str, str]] = set()
+        for candidate in candidates:
+            key = (candidate.url, candidate.endpoint_role.casefold())
+            if key not in seen:
+                unique.append(candidate)
+                seen.add(key)
+        object.__setattr__(self, "endpoints", tuple(unique))
+        primary = unique[0]
+        object.__setattr__(self, "discovery_endpoint", primary.url)
+        object.__setattr__(self, "discovery_type", primary.discovery_type)
+        if not self.provider_id.strip():
+            object.__setattr__(
+                self,
+                "provider_id",
+                stable_provider_id(self.institution_url or primary.url),
+            )
 
+    @property
+    def endpoint_count(self) -> int:
+        return len(self.endpoints)
+
+    def to_dict(self) -> dict[str, Any]:
         data = asdict(self)
         data["rights_values"] = list(self.rights_values)
+        data["endpoints"] = [candidate.to_dict() for candidate in self.endpoints]
         return data
 
     @classmethod
     def from_mapping(cls, value: Mapping[str, Any]) -> "ProviderRecord":
-        """Validate and reconstruct one record read from JSONL storage."""
-
-        endpoint = str(value["discovery_endpoint"])
         source_value = value.get("source") or {}
         if not isinstance(source_value, Mapping):
             raise ValueError("source must be a JSON object")
+        source = SourceProvenance.from_mapping(source_value)
+        endpoints_value = value.get("endpoints", [])
+        if endpoints_value is None:
+            endpoints_value = []
+        if not isinstance(endpoints_value, list):
+            raise ValueError("endpoints must be a JSON array")
+        endpoints = tuple(
+            EndpointCandidate.from_mapping(item, default_source=source)
+            for item in endpoints_value
+            if isinstance(item, Mapping)
+        )
+        endpoint = str(
+            value.get("discovery_endpoint")
+            or (endpoints[0].url if endpoints else "")
+        )
         raw_value = value.get("raw_source_record") or {}
         if not isinstance(raw_value, Mapping):
             raise ValueError("raw_source_record must be a JSON object")
-
         estimated = value.get("estimated_size")
+        identity = _optional_string(value.get("institution_url")) or endpoint
         return cls(
-            provider_id=str(value.get("provider_id") or stable_provider_id(endpoint)),
+            provider_id=str(
+                value.get("provider_id") or stable_provider_id(identity)
+            ),
             name=str(value["name"]),
             institution_url=_optional_string(value.get("institution_url")),
             discovery_endpoint=endpoint,
-            discovery_type=str(value.get("discovery_type", "OrderedCollection")),
+            discovery_type=str(value.get("discovery_type", "unknown")),
             stream_label=_optional_string(value.get("stream_label")),
             collection_focus=_optional_string(value.get("collection_focus")),
             estimated_size=int(estimated) if estimated is not None else None,
@@ -143,15 +235,27 @@ class ProviderRecord:
             rights_values=tuple(str(item) for item in value.get("rights_values", [])),
             record_status=str(value.get("record_status", "active")),
             last_checked_at=_optional_string(value.get("last_checked_at")),
-            source=SourceProvenance.from_mapping(source_value),
+            source=source,
             raw_source_record=dict(raw_value),
+            endpoints=endpoints,
             schema_version=str(value.get("schema_version", SCHEMA_VERSION)),
         )
 
 
-def _optional_string(value: Any) -> Optional[str]:
-    """Convert an optional value to stripped text without inventing content."""
+def _role_from_type(discovery_type: str) -> str:
+    normalized = discovery_type.casefold()
+    if "orderedcollection" in normalized or "activity" in normalized:
+        return "change_discovery"
+    if normalized == "collection" or "presentation" in normalized:
+        return "presentation_collection"
+    if normalized == "manifest":
+        return "manifest"
+    if "website" in normalized:
+        return "institution_website"
+    return "unclassified"
 
+
+def _optional_string(value: Any) -> Optional[str]:
     if value is None:
         return None
     text = str(value).strip()

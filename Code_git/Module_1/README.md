@@ -4,6 +4,19 @@ Module 1 builds a reproducible census of IIIF provider entry points and selects 
 
 This module does not harvest Manifests or determine whether every candidate entry point is a valid IIIF API. Those checks belong to Modules 2 and 3. Its responsibility is to collect provider candidates from documented sources, normalize them into one data model, deduplicate their entry points, preserve provenance, and produce an explicit run selection.
 
+## Schema 2.0: provider identity and endpoint list
+
+Each JSONL line represents one institution. The open-ended `endpoints` array
+retains every route supplied by the source, with `url`, `endpoint_role`,
+`discovery_type`, verification state, and source provenance. Its length is
+dynamic. The legacy `discovery_endpoint` field remains as the first-route
+projection for compatibility.
+
+Records merge only through evidence such as a stable provider ID, the same
+canonical institution URL, or an already shared endpoint. Equal names alone do
+not merge institutions. The CSV contains one row per endpoint, while JSONL
+keeps one complete institution object per line.
+
 ## Pipeline position
 
 ```text

@@ -105,3 +105,7 @@ python -m unittest discover -s tests -v
 ```
 
 实现依据：[IIIF Change Discovery API 1.0](https://iiif.io/api/discovery/1.0/)、[IIIF Registry](https://registry.iiif.io/)、[IIIF Guides](https://guides.iiif.io/finding_resources/) 和 [Awesome IIIF](https://github.com/IIIF/awesome-iiif/blob/main/implementations.md)。
+
+## 2.0 版多入口数据结构
+
+每个 JSONL 对象代表一个机构，`endpoints` 是长度不固定的入口数组。每个入口分别保存 URL、`endpoint_role`、资源类型、验证状态和来源。机构只在 provider ID、机构 URL 或共同入口等证据一致时合并；名称相同本身不作为合并依据。

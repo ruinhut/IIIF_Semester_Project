@@ -146,5 +146,54 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(result.unique_manifest_count, 3)
 
 
+    def test_groups_multiple_endpoint_rows_for_one_provider(self) -> None:
+        with LocalHttpServer() as server, tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            records = [
+                provider_value(
+                    f"{server.base_url}/plain",
+                    provider_id="provider-multi",
+                    name="Multi Route Provider",
+                    check_result="reachable_non_json",
+                ),
+                provider_value(
+                    f"{server.base_url}/stream",
+                    provider_id="provider-multi",
+                    name="Multi Route Provider",
+                    json_type="OrderedCollection",
+                ),
+            ]
+            input_path = root / "checked.jsonl"
+            input_path.write_text(
+                "".join(json.dumps(item) + "\n" for item in records),
+                encoding="utf-8",
+            )
+            config_path = root / "config.json"
+            config_path.write_text(
+                json.dumps(
+                    {
+                        "input_jsonl": str(input_path),
+                        "output_directory": str(root / "output"),
+                        "log_directory": str(root / "log"),
+                        "network": {"timeout_seconds": 1, "retries": 0},
+                        "limits": {"max_manifests_per_provider": 10},
+                        "html_discovery": {"delay_between_pages_seconds": 0},
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = run_pipeline(config_path)
+            reports = _jsonl_rows(result.provider_discovery_jsonl)
+
+        self.assertEqual(result.input_endpoint_count, 2)
+        self.assertEqual(result.input_provider_count, 1)
+        self.assertEqual(result.processed_provider_count, 1)
+        self.assertEqual(result.unique_manifest_count, 3)
+        self.assertEqual(
+            reports[0]["resource_discovery"]["input_endpoint_count"], 2
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

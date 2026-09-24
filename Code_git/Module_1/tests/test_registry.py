@@ -117,5 +117,57 @@ class RegistryReaderTests(unittest.TestCase):
             )
 
 
+    def test_manual_provider_keeps_dynamic_endpoint_list_without_name_only_merge(self) -> None:
+        """All routes stay on one institution; a shared name is not identity evidence."""
+
+        with tempfile.TemporaryDirectory() as directory:
+            source_path = Path(directory) / "providers.json"
+            source_path.write_text(
+                json.dumps(
+                    {
+                        "providers": [
+                            {
+                                "name": "Shared Name",
+                                "institution_url": "https://one.example/",
+                                "endpoints": [
+                                    {
+                                        "url": "https://one.example/activity",
+                                        "endpoint_role": "change_discovery",
+                                        "discovery_type": "OrderedCollection",
+                                    },
+                                    {
+                                        "url": "https://one.example/collection",
+                                        "endpoint_role": "presentation_collection",
+                                        "discovery_type": "Collection",
+                                    },
+                                ],
+                            },
+                            {
+                                "name": "Shared Name",
+                                "institution_url": "https://two.example/",
+                                "discovery_endpoint": "https://two.example/iiif",
+                            },
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            records = read_manual_records(
+                str(source_path), self.fetcher, observed_at=self.observed_at
+            )
+
+        self.assertEqual(len(records), 2)
+        first = next(
+            record
+            for record in records
+            if record.institution_url == "https://one.example/"
+        )
+        self.assertEqual(first.endpoint_count, 2)
+        self.assertEqual(
+            [item.endpoint_role for item in first.endpoints],
+            ["change_discovery", "presentation_collection"],
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

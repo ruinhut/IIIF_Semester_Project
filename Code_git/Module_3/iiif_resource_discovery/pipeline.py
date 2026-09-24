@@ -26,6 +26,7 @@ class CuratedProviderEntry:
 @dataclass(frozen=True)
 class PipelineResult:
     input_provider_count: int
+    input_endpoint_count: int
     processed_provider_count: int
     provider_status_counts: Mapping[str, int]
     unique_manifest_count: int
@@ -52,7 +53,11 @@ def run_pipeline(
     if not input_value:
         raise ValueError("input_jsonl must be configured")
     input_path = _resolve_path(input_value, base_directory)
-    providers = read_provider_jsonl(input_path)
+    checked_records = read_provider_jsonl(input_path)
+    input_endpoint_count = sum(
+        len(record.endpoint_routes) for record in checked_records
+    )
+    providers = _group_provider_records(checked_records)
     input_provider_count = len(providers)
 
     limits_config = _mapping(config.get("limits", {}), "limits")
@@ -161,6 +166,7 @@ def run_pipeline(
             run_at=run_at,
             input_path=input_path,
             input_provider_count=input_provider_count,
+            input_endpoint_count=input_endpoint_count,
             effective_limit=effective_limit,
             processed_provider_count=len(provider_results),
             status_counts=status_counts,
@@ -177,6 +183,7 @@ def run_pipeline(
 
     return PipelineResult(
         input_provider_count=input_provider_count,
+        input_endpoint_count=input_endpoint_count,
         processed_provider_count=len(provider_results),
         provider_status_counts=dict(sorted(status_counts.items())),
         unique_manifest_count=len(manifest_rows),
@@ -187,6 +194,50 @@ def run_pipeline(
         provider_summary_csv=provider_summary_csv,
         log_txt=log_txt,
     )
+
+
+def _group_provider_records(
+    records: Sequence[ProviderInputRecord],
+) -> list[ProviderInputRecord]:
+    """Combine Module 2 endpoint rows into one institution-level work item."""
+
+    grouped: dict[str, dict[str, Any]] = {}
+    route_keys: dict[str, set[tuple[str, str, str]]] = {}
+    order: list[str] = []
+    for record in records:
+        provider_id = record.provider_id
+        if provider_id not in grouped:
+            base = record.to_dict()
+            base["endpoint_checks"] = []
+            grouped[provider_id] = base
+            route_keys[provider_id] = set()
+            order.append(provider_id)
+        elif grouped[provider_id].get("name") != record.name:
+            raise ValueError(
+                f"provider_id {provider_id!r} is associated with multiple names"
+            )
+
+        for route in record.endpoint_routes:
+            candidate = route["endpoint_candidate"]
+            check = route["endpoint_check"]
+            key = (
+                str(candidate.get("url", "")),
+                str(candidate.get("endpoint_role", "unclassified")),
+                str(check.get("checked_at", "")),
+            )
+            if key not in route_keys[provider_id]:
+                grouped[provider_id]["endpoint_checks"].append(
+                    {
+                        "endpoint_candidate": dict(candidate),
+                        "endpoint_check": dict(check),
+                    }
+                )
+                route_keys[provider_id].add(key)
+
+    return [
+        ProviderInputRecord.from_mapping(grouped[provider_id])
+        for provider_id in order
+    ]
 
 
 def _deduplicated_manifest_rows(
@@ -212,7 +263,7 @@ def _resolved_endpoint_rows(
                     "provider_id": result.provider.provider_id,
                     "provider_name": result.provider.name,
                     **endpoint.to_dict(),
-                    "module_3_schema_version": "1.0",
+                    "module_3_schema_version": "2.0",
                 }
             )
     return rows
@@ -262,6 +313,7 @@ def _format_run_log(
     run_at: str,
     input_path: Path,
     input_provider_count: int,
+    input_endpoint_count: int,
     effective_limit: int | None,
     processed_provider_count: int,
     status_counts: Mapping[str, int],
@@ -283,7 +335,8 @@ def _format_run_log(
             "================",
             f"Run time (computer local time): {run_at}",
             f"Input: {input_path}",
-            f"Input providers: {input_provider_count}",
+            f"Input providers after grouping: {input_provider_count}",
+            f"Input checked endpoint records: {input_endpoint_count}",
             f"Run limit: {effective_limit if effective_limit is not None else 'none'}",
             f"Processed providers: {processed_provider_count}",
             f"Resolved machine endpoints: {resolved_endpoint_count}",

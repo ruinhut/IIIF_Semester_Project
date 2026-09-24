@@ -24,7 +24,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--limit",
         type=int,
         default=None,
-        help="Check only the first N input records for a bounded smoke run",
+        help="Check every endpoint for only the first N providers",
     )
     return parser
 
@@ -38,8 +38,12 @@ def main(argv: list[str] | None = None) -> int:
         print(
             json.dumps(
                 {
-                    "input_count": result.input_count,
+                    "input_provider_count": result.input_count,
+                    "input_endpoint_count": result.input_endpoint_count,
                     "checked_count": result.checked_count,
+                    "unique_request_count": result.unique_request_count,
+                    "providers_with_reachable_endpoint": result.providers_with_reachable_endpoint,
+                    "providers_with_json_endpoint": result.providers_with_json_endpoint,
                     "result_counts": result.result_counts,
                     "checked_jsonl": str(result.checked_jsonl),
                     "log_file": str(result.log_txt),

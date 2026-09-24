@@ -98,5 +98,49 @@ class PipelineTests(unittest.TestCase):
             self.assertIn("Run limit: 1", log_text)
 
 
+    def test_checks_every_endpoint_of_one_provider(self) -> None:
+        with LocalHttpServer() as server, tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            value = provider_value(f"{server.base_url}/json")
+            value["endpoints"] = [
+                {
+                    "url": f"{server.base_url}/json",
+                    "endpoint_role": "provider_api",
+                    "discovery_type": "ProviderAPI",
+                },
+                {
+                    "url": f"{server.base_url}/html",
+                    "endpoint_role": "institution_website",
+                    "discovery_type": "InstitutionWebsite",
+                },
+            ]
+            input_path = root / "selected.jsonl"
+            input_path.write_text(json.dumps(value) + "\n", encoding="utf-8")
+            config_path = root / "config.json"
+            config_path.write_text(
+                json.dumps(
+                    {
+                        "input_jsonl": str(input_path),
+                        "output_directory": str(root / "output"),
+                        "log_directory": str(root / "log"),
+                        "network": {"retries": 0},
+                        "run": {"delay_between_requests_seconds": 0},
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = run_pipeline(config_path)
+            checked = read_checked_jsonl(result.checked_jsonl)
+
+        self.assertEqual(result.input_count, 1)
+        self.assertEqual(result.input_endpoint_count, 2)
+        self.assertEqual(result.checked_count, 2)
+        self.assertEqual(
+            {record.endpoint_candidate.endpoint_role for record in checked},
+            {"provider_api", "institution_website"},
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

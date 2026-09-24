@@ -1,4 +1,4 @@
-"""Data contracts for Module 2 input records and endpoint-check results."""
+"""Data contracts for Module 2 provider inputs and per-endpoint checks."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from typing import Any, Mapping, Optional
 from urllib.parse import urlsplit
 
 
-MODULE_2_SCHEMA_VERSION = "1.0"
+MODULE_2_SCHEMA_VERSION = "2.0"
 
 CHECK_RESULTS = {
     "reachable_json",
@@ -22,7 +22,7 @@ CHECK_RESULTS = {
 
 
 def validate_http_url(value: str) -> str:
-    """Require an absolute HTTP(S) URL without changing Module 1's value."""
+    """Require an absolute HTTP(S) URL without changing the supplied value."""
 
     text = value.strip()
     parts = urlsplit(text)
@@ -34,17 +34,85 @@ def validate_http_url(value: str) -> str:
 
 
 @dataclass(frozen=True)
-class ProviderInputRecord:
-    """A validated Module 1 record preserved verbatim for downstream use."""
+class EndpointCandidateInput:
+    """One Module 1 endpoint retained with its open-ended role and provenance."""
 
     data: Mapping[str, Any]
 
     def __post_init__(self) -> None:
         copied = deepcopy(dict(self.data))
-        for field_name in ("provider_id", "name", "discovery_endpoint"):
+        url = str(copied.get("url", copied.get("discovery_endpoint", ""))).strip()
+        validate_http_url(url)
+        copied["url"] = url
+        copied.setdefault("endpoint_role", "unclassified")
+        copied.setdefault("discovery_type", "unknown")
+        object.__setattr__(self, "data", copied)
+
+    @property
+    def url(self) -> str:
+        return str(self.data["url"])
+
+    @property
+    def endpoint_role(self) -> str:
+        return str(self.data.get("endpoint_role", "unclassified"))
+
+    @property
+    def discovery_type(self) -> str:
+        return str(self.data.get("discovery_type", "unknown"))
+
+    def to_dict(self) -> dict[str, Any]:
+        return deepcopy(dict(self.data))
+
+
+@dataclass(frozen=True)
+class ProviderInputRecord:
+    """One Module 1 institution with a dynamic list of candidate endpoints."""
+
+    data: Mapping[str, Any]
+
+    def __post_init__(self) -> None:
+        copied = deepcopy(dict(self.data))
+        for field_name in ("provider_id", "name"):
             if field_name not in copied or not str(copied[field_name]).strip():
                 raise ValueError(f"Module 1 record requires a non-empty {field_name}")
-        validate_http_url(str(copied["discovery_endpoint"]))
+
+        values = copied.get("endpoints", [])
+        if values is None:
+            values = []
+        if not isinstance(values, list):
+            raise ValueError("Module 1 endpoints must be a JSON array")
+        endpoints = [
+            EndpointCandidateInput(item)
+            for item in values
+            if isinstance(item, Mapping)
+        ]
+        legacy = str(copied.get("discovery_endpoint", "")).strip()
+        if not endpoints:
+            if not legacy:
+                raise ValueError(
+                    "Module 1 record requires discovery_endpoint or endpoints"
+                )
+            endpoints = [
+                EndpointCandidateInput(
+                    {
+                        "url": legacy,
+                        "endpoint_role": _role_from_type(
+                            str(copied.get("discovery_type", "unknown"))
+                        ),
+                        "discovery_type": str(
+                            copied.get("discovery_type", "unknown")
+                        ),
+                        "label": copied.get("stream_label"),
+                        "verification_status": copied.get(
+                            "endpoint_verification", "unverified"
+                        ),
+                        "source": copied.get("source", {}),
+                    }
+                )
+            ]
+        copied["endpoints"] = [item.to_dict() for item in endpoints]
+        copied.setdefault("discovery_endpoint", endpoints[0].url)
+        copied.setdefault("discovery_type", endpoints[0].discovery_type)
         object.__setattr__(self, "data", copied)
 
     @property
@@ -63,15 +131,16 @@ class ProviderInputRecord:
     def discovery_type(self) -> str:
         return str(self.data.get("discovery_type", "unknown"))
 
-    def to_dict(self) -> dict[str, Any]:
-        """Return an independent JSON-compatible copy of the Module 1 record."""
+    @property
+    def endpoint_candidates(self) -> tuple[EndpointCandidateInput, ...]:
+        values = self.data["endpoints"]
+        return tuple(EndpointCandidateInput(item) for item in values)  # type: ignore[arg-type]
 
+    def to_dict(self) -> dict[str, Any]:
         return deepcopy(dict(self.data))
 
     @classmethod
     def from_mapping(cls, value: Mapping[str, Any]) -> "ProviderInputRecord":
-        """Build a Module 2 input record from one decoded JSON object."""
-
         if not isinstance(value, Mapping):
             raise ValueError("provider record must be a JSON object")
         return cls(data=value)
@@ -96,7 +165,7 @@ class RedirectHop:
 
 @dataclass(frozen=True)
 class EndpointCheck:
-    """The complete observable result of checking one candidate entry point."""
+    """The observable result of checking one candidate endpoint."""
 
     requested_url: str
     final_url: Optional[str]
@@ -134,14 +203,10 @@ class EndpointCheck:
             raise ValueError("invalid_json requires json_parseable=false")
 
     def to_dict(self) -> dict[str, Any]:
-        """Convert the check to a JSON-serializable dictionary."""
-
         return asdict(self)
 
     @classmethod
     def from_mapping(cls, value: Mapping[str, Any]) -> "EndpointCheck":
-        """Reconstruct and validate a stored endpoint check."""
-
         redirects_value = value.get("redirect_chain", [])
         if not isinstance(redirects_value, list):
             raise ValueError("redirect_chain must be a JSON array")
@@ -151,7 +216,9 @@ class EndpointCheck:
             checked_at=str(value["checked_at"]),
             check_result=str(value["check_result"]),
             status_code=_optional_int(value.get("status_code")),
-            redirect_chain=tuple(RedirectHop.from_mapping(item) for item in redirects_value),
+            redirect_chain=tuple(
+                RedirectHop.from_mapping(item) for item in redirects_value
+            ),
             content_type=_optional_string(value.get("content_type")),
             response_time_ms=int(value.get("response_time_ms", 0)),
             response_bytes=int(value.get("response_bytes", 0)),
@@ -166,37 +233,84 @@ class EndpointCheck:
 
 @dataclass(frozen=True)
 class CheckedProviderRecord:
-    """A Module 1 provider record plus the non-destructive Module 2 check."""
+    """One provider plus the check for one of its candidate endpoints."""
 
     provider: ProviderInputRecord
     endpoint_check: EndpointCheck
+    endpoint_candidate: EndpointCandidateInput | None = None
     module_2_schema_version: str = MODULE_2_SCHEMA_VERSION
 
-    def to_dict(self) -> dict[str, Any]:
-        """Preserve all Module 1 fields and append Module 2-owned fields."""
+    def __post_init__(self) -> None:
+        if self.endpoint_candidate is None:
+            candidate = next(
+                (
+                    item
+                    for item in self.provider.endpoint_candidates
+                    if item.url == self.endpoint_check.requested_url
+                ),
+                EndpointCandidateInput(
+                    {
+                        "url": self.endpoint_check.requested_url,
+                        "endpoint_role": "unclassified",
+                        "discovery_type": self.provider.discovery_type,
+                    }
+                ),
+            )
+            object.__setattr__(self, "endpoint_candidate", candidate)
 
+    def to_dict(self) -> dict[str, Any]:
+        """Preserve the full provider and identify the checked endpoint."""
+
+        candidate = self.endpoint_candidate
+        assert candidate is not None
         data = self.provider.to_dict()
+        data["discovery_endpoint"] = candidate.url
+        data["discovery_type"] = candidate.discovery_type
+        data["endpoint_candidate"] = candidate.to_dict()
         data["endpoint_check"] = self.endpoint_check.to_dict()
         data["module_2_schema_version"] = self.module_2_schema_version
         return data
 
     @classmethod
     def from_mapping(cls, value: Mapping[str, Any]) -> "CheckedProviderRecord":
-        """Reconstruct a checked provider from one stored JSON object."""
-
         if not isinstance(value, Mapping):
             raise ValueError("checked provider record must be a JSON object")
         check_value = value.get("endpoint_check")
         if not isinstance(check_value, Mapping):
             raise ValueError("endpoint_check must be a JSON object")
+        candidate_value = value.get("endpoint_candidate")
         provider_value = dict(value)
         provider_value.pop("endpoint_check", None)
-        version = str(provider_value.pop("module_2_schema_version", MODULE_2_SCHEMA_VERSION))
+        provider_value.pop("endpoint_candidate", None)
+        version = str(
+            provider_value.pop(
+                "module_2_schema_version", MODULE_2_SCHEMA_VERSION
+            )
+        )
+        candidate = (
+            EndpointCandidateInput(candidate_value)
+            if isinstance(candidate_value, Mapping)
+            else None
+        )
         return cls(
             provider=ProviderInputRecord.from_mapping(provider_value),
             endpoint_check=EndpointCheck.from_mapping(check_value),
+            endpoint_candidate=candidate,
             module_2_schema_version=version,
         )
+
+
+def _role_from_type(discovery_type: str) -> str:
+    value = discovery_type.casefold()
+    if "orderedcollection" in value or "activity" in value:
+        return "change_discovery"
+    if value == "collection":
+        return "presentation_collection"
+    if value == "manifest":
+        return "manifest"
+    if "website" in value:
+        return "institution_website"
+    return "unclassified"
 
 
 def _optional_string(value: Any) -> Optional[str]:

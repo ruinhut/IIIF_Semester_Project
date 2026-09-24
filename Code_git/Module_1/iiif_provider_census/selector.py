@@ -55,7 +55,7 @@ def select_providers(
     """Filter, stably sort, and optionally limit provider records."""
 
     selected = [record for record in records if _matches(record, criteria)]
-    selected.sort(key=lambda item: (item.name.casefold(), item.discovery_endpoint))
+    selected.sort(key=lambda item: (item.name.casefold(), item.provider_id))
     if criteria.limit is not None:
         return selected[: criteria.limit]
     return selected
@@ -65,7 +65,10 @@ def _matches(record: ProviderRecord, criteria: SelectionCriteria) -> bool:
     """Return whether one provider satisfies all inclusion/exclusion rules."""
 
     name = record.name.casefold()
-    host = (urlsplit(record.discovery_endpoint).hostname or "").casefold()
+    hosts = {
+        (urlsplit(candidate.url).hostname or "").casefold()
+        for candidate in record.endpoints
+    }
     ids = {value.casefold() for value in criteria.include_provider_ids}
     exact_names = {value.casefold() for value in criteria.include_exact_names}
     included_names = tuple(value.casefold() for value in criteria.include_name_keywords)
@@ -84,11 +87,19 @@ def _matches(record: ProviderRecord, criteria: SelectionCriteria) -> bool:
         return False
     if included_names and not any(keyword in name for keyword in included_names):
         return False
-    if included_hosts and not any(_host_matches(host, allowed) for allowed in included_hosts):
+    if included_hosts and not any(
+        _host_matches(host, allowed)
+        for allowed in included_hosts
+        for host in hosts
+    ):
         return False
     if excluded_names and any(keyword in name for keyword in excluded_names):
         return False
-    if excluded_hosts and any(_host_matches(host, blocked) for blocked in excluded_hosts):
+    if excluded_hosts and any(
+        _host_matches(host, blocked)
+        for blocked in excluded_hosts
+        for host in hosts
+    ):
         return False
     return True
 

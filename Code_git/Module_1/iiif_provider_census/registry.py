@@ -14,7 +14,7 @@ from typing import Any, Iterable, Mapping, Optional, Sequence
 from urllib.parse import urljoin, urlparse
 
 from .fetch import JsonFetcher
-from .models import ProviderRecord, SourceProvenance, stable_provider_id
+from .models import EndpointCandidate, ProviderRecord, SourceProvenance, canonicalize_url, stable_provider_id
 
 
 ACTIVE_ACTIVITY_TYPES = {"add", "create", "update"}
@@ -117,7 +117,7 @@ def read_manual_records(
     *,
     observed_at: Optional[str] = None,
 ) -> list[ProviderRecord]:
-    """Read curated providers that supplement the incomplete public Registry."""
+    """Read supplementary catalogues without discarding any listed endpoint."""
 
     observed_at = observed_at or utc_now()
     document = fetcher.load(source)
@@ -137,48 +137,197 @@ def read_manual_records(
     for index, item in enumerate(items):
         if not isinstance(item, Mapping):
             raise ValueError(f"Manual provider at index {index} must be an object")
-        endpoint = str(item.get("discovery_endpoint", "")).strip()
         name = str(item.get("name", "")).strip()
-        if not endpoint or not name:
-            raise ValueError(f"Manual provider at index {index} requires name and discovery_endpoint")
-        rights_values = tuple(str(value) for value in item.get("rights_values", []))
-        rights_status = str(item.get("rights_status") or ("declared" if rights_values else "unknown"))
-        estimated = item.get("estimated_size")
-        provenance_source_type = str(source_metadata.get("source_type") or "manual")
-        provenance_source_url = str(source_metadata.get("source_url") or source)
-        source_page_url = _optional_text(item.get("source_page_url"))
-        record = ProviderRecord(
-            provider_id=str(item.get("provider_id") or stable_provider_id(endpoint)),
-            name=name,
-            institution_url=_optional_text(item.get("institution_url")),
-            discovery_endpoint=endpoint,
-            discovery_type=str(item.get("discovery_type", "OrderedCollection")),
-            stream_label=_optional_text(item.get("stream_label")),
-            collection_focus=_optional_text(item.get("collection_focus")),
-            estimated_size=int(estimated) if estimated is not None else None,
-            rights_status=rights_status,
-            rights_values=rights_values,
-            record_status=str(item.get("record_status", "active")),
-            last_checked_at=_optional_text(item.get("last_checked_at")),
-            source=SourceProvenance(
-                source_type=provenance_source_type,
-                source_url=provenance_source_url,
-                source_page_url=source_page_url,
-                observed_at=observed_at,
-            ),
-            raw_source_record=dict(item),
+        if not name:
+            raise ValueError(f"Manual provider at index {index} requires name")
+
+        provenance = SourceProvenance(
+            source_type=str(source_metadata.get("source_type") or "manual"),
+            source_url=str(source_metadata.get("source_url") or source),
+            source_page_url=_optional_text(item.get("source_page_url")),
+            observed_at=observed_at,
         )
-        records.append(record)
+        endpoint_values = item.get("endpoints", [])
+        if endpoint_values is None:
+            endpoint_values = []
+        if not isinstance(endpoint_values, Sequence) or isinstance(
+            endpoint_values, (str, bytes)
+        ):
+            raise ValueError(f"Manual provider at index {index} endpoints must be an array")
+        endpoints = [
+            EndpointCandidate.from_mapping(value, default_source=provenance)
+            for value in endpoint_values
+            if isinstance(value, Mapping)
+        ]
+        legacy_endpoint = str(item.get("discovery_endpoint", "")).strip()
+        if legacy_endpoint and not endpoints:
+            endpoints.append(
+                EndpointCandidate(
+                    url=legacy_endpoint,
+                    endpoint_role=str(item.get("endpoint_role") or _role_from_type(str(item.get("discovery_type", "unknown")))),
+                    discovery_type=str(item.get("discovery_type", "unknown")),
+                    label=_optional_text(item.get("stream_label")),
+                    verification_status=str(item.get("endpoint_verification", "unverified")),
+                    source=provenance,
+                )
+            )
+        if not endpoints:
+            raise ValueError(
+                f"Manual provider at index {index} requires discovery_endpoint or endpoints"
+            )
+
+        institution_url = _optional_text(item.get("institution_url"))
+        rights_values = tuple(str(value) for value in item.get("rights_values", []))
+        rights_status = str(
+            item.get("rights_status") or ("declared" if rights_values else "unknown")
+        )
+        estimated = item.get("estimated_size")
+        primary = endpoints[0]
+        records.append(
+            ProviderRecord(
+                provider_id=str(
+                    item.get("provider_id")
+                    or stable_provider_id(institution_url or primary.url)
+                ),
+                name=name,
+                institution_url=institution_url,
+                discovery_endpoint=primary.url,
+                discovery_type=primary.discovery_type,
+                stream_label=_optional_text(item.get("stream_label")) or primary.label,
+                collection_focus=_optional_text(item.get("collection_focus")),
+                estimated_size=int(estimated) if estimated is not None else None,
+                rights_status=rights_status,
+                rights_values=rights_values,
+                record_status=str(item.get("record_status", "active")),
+                last_checked_at=_optional_text(item.get("last_checked_at")),
+                source=provenance,
+                raw_source_record=dict(item),
+                endpoints=tuple(endpoints),
+            )
+        )
     return deduplicate_records(records)
 
 
 def deduplicate_records(records: Iterable[ProviderRecord]) -> list[ProviderRecord]:
-    """Keep the latest observation for each canonical discovery endpoint."""
+    """Merge observations of the same evidenced institution and keep all routes.
 
-    by_endpoint: dict[str, ProviderRecord] = {}
+    A matching name by itself is never enough. Records merge through a stable
+    provider ID, a canonical institution URL, or an already-shared endpoint.
+    """
+
+    merged: dict[str, ProviderRecord] = {}
+    endpoint_owner: dict[str, str] = {}
+    provider_owner: dict[str, str] = {}
+    institution_owner: dict[str, str] = {}
+
     for record in records:
-        by_endpoint[record.discovery_endpoint] = record
-    return sorted(by_endpoint.values(), key=lambda item: (item.name.casefold(), item.discovery_endpoint))
+        institution_key = (
+            canonicalize_url(record.institution_url)
+            if record.institution_url
+            else None
+        )
+        owner = provider_owner.get(record.provider_id)
+        if owner is None and institution_key:
+            owner = institution_owner.get(institution_key)
+        if owner is None:
+            owner = next(
+                (
+                    endpoint_owner[candidate.url]
+                    for candidate in record.endpoints
+                    if candidate.url in endpoint_owner
+                ),
+                None,
+            )
+        if owner is None:
+            owner = record.provider_id
+            merged[owner] = record
+        else:
+            merged[owner] = _merge_provider_records(merged[owner], record)
+
+        current = merged[owner]
+        provider_owner[record.provider_id] = owner
+        provider_owner[current.provider_id] = owner
+        if institution_key:
+            institution_owner[institution_key] = owner
+        if current.institution_url:
+            institution_owner[canonicalize_url(current.institution_url)] = owner
+        for candidate in current.endpoints:
+            endpoint_owner[candidate.url] = owner
+
+    return sorted(
+        merged.values(),
+        key=lambda item: (item.name.casefold(), item.provider_id),
+    )
+
+
+def _merge_provider_records(
+    earlier: ProviderRecord, later: ProviderRecord
+) -> ProviderRecord:
+    """Combine two evidenced observations while preferring later metadata."""
+
+    endpoints: dict[tuple[str, str], EndpointCandidate] = {}
+    order: list[tuple[str, str]] = []
+    for candidate in (*earlier.endpoints, *later.endpoints):
+        key = (candidate.url, candidate.endpoint_role.casefold())
+        if key not in endpoints:
+            order.append(key)
+        endpoints[key] = candidate
+    merged_endpoints = tuple(endpoints[key] for key in order)
+
+    rights_values = tuple(dict.fromkeys((*earlier.rights_values, *later.rights_values)))
+    if earlier.rights_status == later.rights_status:
+        rights_status = later.rights_status
+    elif "unknown" in {earlier.rights_status, later.rights_status}:
+        rights_status = (
+            later.rights_status
+            if later.rights_status != "unknown"
+            else earlier.rights_status
+        )
+    else:
+        rights_status = "mixed"
+
+    observations: list[Mapping[str, Any]] = []
+    for raw in (earlier.raw_source_record, later.raw_source_record):
+        nested = raw.get("observations") if isinstance(raw, Mapping) else None
+        if isinstance(nested, list):
+            observations.extend(item for item in nested if isinstance(item, Mapping))
+        elif raw:
+            observations.append(raw)
+
+    return ProviderRecord(
+        provider_id=earlier.provider_id,
+        name=later.name or earlier.name,
+        institution_url=later.institution_url or earlier.institution_url,
+        discovery_endpoint=merged_endpoints[0].url,
+        discovery_type=merged_endpoints[0].discovery_type,
+        stream_label=later.stream_label or earlier.stream_label,
+        collection_focus=later.collection_focus or earlier.collection_focus,
+        estimated_size=(
+            later.estimated_size
+            if later.estimated_size is not None
+            else earlier.estimated_size
+        ),
+        rights_status=rights_status,
+        rights_values=rights_values,
+        record_status=later.record_status,
+        last_checked_at=later.last_checked_at or earlier.last_checked_at,
+        source=later.source,
+        raw_source_record={"observations": observations},
+        endpoints=merged_endpoints,
+    )
+
+
+def _role_from_type(discovery_type: str) -> str:
+    normalized = discovery_type.casefold()
+    if "orderedcollection" in normalized or "activity" in normalized:
+        return "change_discovery"
+    if normalized == "collection" or "presentation" in normalized:
+        return "presentation_collection"
+    if normalized == "manifest":
+        return "manifest"
+    if "website" in normalized:
+        return "institution_website"
+    return "unclassified"
 
 
 def _record_from_activity(
@@ -219,7 +368,7 @@ def _record_from_activity(
     estimated_size = int(total_items) if isinstance(total_items, int) and total_items >= 0 else None
     raw_copy = dict(activity)
     return ProviderRecord(
-        provider_id=stable_provider_id(endpoint),
+        provider_id=stable_provider_id(institution_url or endpoint),
         name=provider_name,
         institution_url=institution_url,
         discovery_endpoint=endpoint,
@@ -266,7 +415,7 @@ def _parse_legacy_registry_record(
         stream_label = _extract_label(stream)
         records.append(
             ProviderRecord(
-                provider_id=stable_provider_id(endpoint),
+                provider_id=stable_provider_id(institution_url or endpoint),
                 name=name,
                 institution_url=institution_url,
                 discovery_endpoint=endpoint,

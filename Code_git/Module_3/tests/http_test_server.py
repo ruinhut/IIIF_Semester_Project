@@ -71,6 +71,39 @@ class FixtureHandler(BaseHTTPRequestHandler):
                 "application/activity+json",
             )
             return
+        if path == "/paged-collection-1":
+            self._json(
+                {
+                    "id": f"{self.base_url}/paged-collection-1",
+                    "type": "Collection",
+                    "items": [
+                        {"id": f"{self.base_url}/manifest/1", "type": "Manifest"}
+                    ],
+                    "next": {"id": f"{self.base_url}/paged-collection-2", "type": "Collection"},
+                }
+            )
+            return
+        if path == "/paged-collection-2":
+            self._json(
+                {
+                    "id": f"{self.base_url}/paged-collection-2",
+                    "type": "Collection",
+                    "items": [
+                        {"id": f"{self.base_url}/manifest/2", "type": "Manifest"}
+                    ],
+                }
+            )
+            return
+        if path == "/provider-api":
+            self._json(
+                {
+                    "records": [
+                        {"iiif_manifest": f"{self.base_url}/manifest/3"}
+                    ]
+                },
+                "application/json",
+            )
+            return
         if path == "/collection":
             self._json(
                 {

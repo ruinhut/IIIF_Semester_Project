@@ -9,6 +9,15 @@ contains parseable JSON.
 It does **not** traverse Activity Stream pagination, discover Manifest URLs, or
 validate Manifest structure. Those operations belong to Modules 3 and 4.
 
+## Schema 2.0: all-endpoint validation
+
+Module 2 reads every item in a provider's `endpoints` array and writes one
+checked JSONL record per provider-endpoint pair. Each row includes the original
+provider, `endpoint_candidate`, and `endpoint_check`. The run log separately
+reports provider count, candidate-endpoint count, unique requests, and how many
+providers have at least one reachable or JSON endpoint. The `--limit` option
+limits providers; all endpoints of each selected provider are still checked.
+
 ## Input
 
 The default input is:

@@ -9,7 +9,7 @@ from typing import Any, Mapping, Optional
 from urllib.parse import urlsplit, urlunsplit
 
 
-MODULE_3_SCHEMA_VERSION = "1.0"
+MODULE_3_SCHEMA_VERSION = "2.0"
 
 
 def canonicalize_url(value: str) -> str:
@@ -32,8 +32,6 @@ def canonicalize_url(value: str) -> str:
 
 
 def stable_manifest_id(manifest_url: str) -> str:
-    """Create a repeatable identifier from a canonical Manifest URL."""
-
     canonical = canonicalize_url(manifest_url)
     digest = sha256(canonical.encode("utf-8")).hexdigest()[:16]
     return f"manifest-{digest}"
@@ -41,22 +39,91 @@ def stable_manifest_id(manifest_url: str) -> str:
 
 @dataclass(frozen=True)
 class ProviderInputRecord:
-    """One Module 2 record preserved in full for traceability."""
+    """One provider with every Module 2 endpoint check grouped together."""
 
     data: Mapping[str, Any]
+    _routes: tuple[Mapping[str, Any], ...] = field(
+        init=False, repr=False, compare=False
+    )
 
     def __post_init__(self) -> None:
         copied = deepcopy(dict(self.data))
-        for name in ("provider_id", "name", "discovery_endpoint"):
+        for name in ("provider_id", "name"):
             if name not in copied or not str(copied[name]).strip():
                 raise ValueError(f"Module 2 record requires a non-empty {name}")
-        canonicalize_url(str(copied["discovery_endpoint"]))
-        check = copied.get("endpoint_check")
-        if not isinstance(check, Mapping):
-            raise ValueError("Module 2 record requires an endpoint_check object")
-        if not str(check.get("check_result", "")).strip():
-            raise ValueError("endpoint_check requires check_result")
+
+        route_values = copied.get("endpoint_checks")
+        if route_values is None:
+            check = copied.get("endpoint_check")
+            if not isinstance(check, Mapping):
+                raise ValueError(
+                    "Module 2 record requires endpoint_check or endpoint_checks"
+                )
+            candidate = copied.get("endpoint_candidate")
+            if not isinstance(candidate, Mapping):
+                endpoint = str(copied.get("discovery_endpoint", "")).strip()
+                if not endpoint:
+                    raise ValueError(
+                        "Module 2 record requires a non-empty discovery_endpoint"
+                    )
+                candidate = {
+                    "url": endpoint,
+                    "endpoint_role": _role_from_type(
+                        str(copied.get("discovery_type", "unknown"))
+                    ),
+                    "discovery_type": str(
+                        copied.get("discovery_type", "unknown")
+                    ),
+                }
+            route_values = [
+                {
+                    "endpoint_candidate": dict(candidate),
+                    "endpoint_check": dict(check),
+                }
+            ]
+        if not isinstance(route_values, list) or not route_values:
+            raise ValueError("endpoint_checks must be a non-empty JSON array")
+
+        routes: list[dict[str, Any]] = []
+        for index, route in enumerate(route_values):
+            if not isinstance(route, Mapping):
+                raise ValueError(f"endpoint_checks[{index}] must be an object")
+            candidate = route.get("endpoint_candidate")
+            check = route.get("endpoint_check")
+            if not isinstance(candidate, Mapping) or not isinstance(check, Mapping):
+                raise ValueError(
+                    f"endpoint_checks[{index}] requires endpoint_candidate and endpoint_check"
+                )
+            url = str(
+                candidate.get(
+                    "url", check.get("requested_url", "")
+                )
+            ).strip()
+            canonicalize_url(url)
+            if not str(check.get("check_result", "")).strip():
+                raise ValueError(
+                    f"endpoint_checks[{index}].endpoint_check requires check_result"
+                )
+            candidate_copy = deepcopy(dict(candidate))
+            candidate_copy["url"] = url
+            candidate_copy.setdefault("endpoint_role", "unclassified")
+            candidate_copy.setdefault("discovery_type", "unknown")
+            routes.append(
+                {
+                    "endpoint_candidate": candidate_copy,
+                    "endpoint_check": deepcopy(dict(check)),
+                }
+            )
+
+        first = routes[0]
+        if not str(copied.get("discovery_endpoint", "")).strip():
+            copied["discovery_endpoint"] = first["endpoint_candidate"]["url"]
+        if not str(copied.get("discovery_type", "")).strip():
+            copied["discovery_type"] = first["endpoint_candidate"].get(
+                "discovery_type", "unknown"
+            )
         object.__setattr__(self, "data", copied)
+        object.__setattr__(self, "_routes", tuple(routes))
 
     @property
     def provider_id(self) -> str:
@@ -71,8 +138,12 @@ class ProviderInputRecord:
         return str(self.data["discovery_endpoint"])
 
     @property
+    def endpoint_routes(self) -> tuple[Mapping[str, Any], ...]:
+        return self._routes
+
+    @property
     def endpoint_check(self) -> Mapping[str, Any]:
-        return self.data["endpoint_check"]  # type: ignore[return-value]
+        return self.endpoint_routes[0]["endpoint_check"]  # type: ignore[return-value]
 
     @property
     def check_result(self) -> str:
@@ -110,26 +181,26 @@ class DiscoveryEvidence:
 
 @dataclass(frozen=True)
 class ManifestFinding:
-    """One Manifest URL observed through one provider and one method."""
-
     manifest_url: str
     evidence: DiscoveryEvidence
 
     def __post_init__(self) -> None:
-        object.__setattr__(self, "manifest_url", canonicalize_url(self.manifest_url))
+        object.__setattr__(
+            self, "manifest_url", canonicalize_url(self.manifest_url)
+        )
 
 
 @dataclass(frozen=True)
 class ResolvedEndpoint:
-    """A fetched URL confirmed as a machine-readable IIIF resource."""
-
     endpoint_url: str
     resource_type: str
     resolution_method: str
     source_url: str
 
     def __post_init__(self) -> None:
-        object.__setattr__(self, "endpoint_url", canonicalize_url(self.endpoint_url))
+        object.__setattr__(
+            self, "endpoint_url", canonicalize_url(self.endpoint_url)
+        )
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -137,8 +208,6 @@ class ResolvedEndpoint:
 
 @dataclass(frozen=True)
 class DiscoveryIssue:
-    """A recoverable failure retained instead of silently dropping a provider."""
-
     url: str
     issue_type: str
     message: str
@@ -149,7 +218,7 @@ class DiscoveryIssue:
 
 @dataclass
 class ProviderDiscoveryResult:
-    """All Module 3 observations for one provider."""
+    """All Module 3 observations for one institution."""
 
     provider: ProviderInputRecord
     status: str = "unresolved"
@@ -166,8 +235,13 @@ class ProviderDiscoveryResult:
         data["module_3_schema_version"] = MODULE_3_SCHEMA_VERSION
         data["resource_discovery"] = {
             "status": self.status,
-            "manifest_count": len({item.manifest_url for item in self.manifests}),
-            "resolved_endpoints": [item.to_dict() for item in self.resolved_endpoints],
+            "input_endpoint_count": len(self.provider.endpoint_routes),
+            "manifest_count": len(
+                {item.manifest_url for item in self.manifests}
+            ),
+            "resolved_endpoints": [
+                item.to_dict() for item in self.resolved_endpoints
+            ],
             "issues": [item.to_dict() for item in self.issues],
             "html_pages_visited": self.html_pages_visited,
             "stream_pages_visited": self.stream_pages_visited,
@@ -177,7 +251,9 @@ class ProviderDiscoveryResult:
         return data
 
 
-def manifest_record(manifest_url: str, evidence: list[DiscoveryEvidence]) -> dict[str, Any]:
+def manifest_record(
+    manifest_url: str, evidence: list[DiscoveryEvidence]
+) -> dict[str, Any]:
     """Build one deduplicated Module 4 handoff record."""
 
     canonical = canonicalize_url(manifest_url)
@@ -201,10 +277,25 @@ def manifest_record(manifest_url: str, evidence: list[DiscoveryEvidence]) -> dic
         "manifest_url": canonical,
         "resource_type": "Manifest",
         "providers": [
-            {"provider_id": provider_id, "provider_name": providers[provider_id]}
+            {
+                "provider_id": provider_id,
+                "provider_name": providers[provider_id],
+            }
             for provider_id in sorted(providers)
         ],
         "discovery_evidence": evidence_rows,
         "module_3_schema_version": MODULE_3_SCHEMA_VERSION,
     }
 
+
+def _role_from_type(discovery_type: str) -> str:
+    value = discovery_type.casefold()
+    if "orderedcollection" in value or "activity" in value:
+        return "change_discovery"
+    if value == "collection":
+        return "presentation_collection"
+    if value == "manifest":
+        return "manifest"
+    if "website" in value:
+        return "institution_website"
+    return "unclassified"

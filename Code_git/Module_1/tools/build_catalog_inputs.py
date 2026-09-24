@@ -1,11 +1,4 @@
-"""Build reproducible Module 1 inputs from two IIIF community catalogues.
-
-The script reads local checkouts of the official IIIF Guides repository and
-the community-maintained Awesome IIIF repository. It deliberately records the
-catalogue landing page as an unverified entry point unless a catalogue itself
-provides a confirmed machine discovery endpoint. Network and IIIF validation
-belong to Module 2.
-"""
+"""Build reproducible Module 1 inputs without discarding catalogue links."""
 
 from __future__ import annotations
 
@@ -15,22 +8,22 @@ import re
 import subprocess
 from pathlib import Path
 from typing import Iterable
+from urllib.parse import urlsplit
 
 
 GUIDES_SOURCE_URL = "https://guides.iiif.io/finding_resources/"
-AWESOME_SOURCE_URL = (
-    "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md"
-)
-MARKDOWN_LINK = re.compile(r"^- \[([^]]+)\]\(([^)]+)\)")
+AWESOME_SOURCE_URL = "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md"
+MARKDOWN_LINK = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)(?:\s+[^)]*)?\)", re.IGNORECASE)
+HTML_LINK = re.compile(r"<a\s+[^>]*href=[\"'](https?://[^\"']+)[\"'][^>]*>(.*?)</a>", re.IGNORECASE)
+RAW_URL = re.compile(r"""https?://[^\s<>\"']+""", re.IGNORECASE)
 
 
 def _front_matter(path: Path) -> dict[str, str]:
-    """Read the small scalar subset of YAML used by IIIF guide pages."""
+    """Read the scalar subset of YAML used by the guide pages."""
 
     lines = path.read_text(encoding="utf-8-sig").splitlines()
     if not lines or lines[0].strip() != "---":
         return {}
-
     values: dict[str, str] = {}
     for line in lines[1:]:
         if line.strip() == "---":
@@ -42,8 +35,31 @@ def _front_matter(path: Path) -> dict[str, str]:
     return values
 
 
+def _document_links(path: Path) -> list[tuple[str, str]]:
+    """Return every explicit absolute HTTP(S) link in source order."""
+
+    text = path.read_text(encoding="utf-8-sig")
+    matches: list[tuple[int, str, str]] = []
+    for match in MARKDOWN_LINK.finditer(text):
+        matches.append((match.start(), match.group(1).strip(), match.group(2).strip()))
+    for match in HTML_LINK.finditer(text):
+        label = re.sub(r"<[^>]+>", " ", match.group(2))
+        matches.append((match.start(), " ".join(label.split()), match.group(1).strip()))
+    for match in RAW_URL.finditer(text):
+        url = match.group(0).rstrip(").,;:]}" + chr(96))
+        matches.append((match.start(), "Literal source URL", url))
+    matches.sort(key=lambda item: item[0])
+    output: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for _, label, url in matches:
+        if url not in seen:
+            output.append((label or url, url))
+            seen.add(url)
+    return output
+
+
 def _git_revision(repository: Path) -> str | None:
-    """Return the exact source revision when the input is a Git checkout."""
+    """Return the exact source revision when input is a Git checkout."""
 
     try:
         completed = subprocess.run(
@@ -57,8 +73,67 @@ def _git_revision(repository: Path) -> str | None:
     return completed.stdout.strip() or None
 
 
+def _endpoint_role(label: str, url: str, *, is_homepage: bool = False) -> str:
+    """Classify a route conservatively while keeping the role open-ended."""
+
+    text = f"{label} {url}".casefold()
+    if "change discovery" in text or "activity stream" in text or "/activity" in text:
+        return "change_discovery"
+    if "manifest" in text and ("{" in url or "}" in url):
+        return "manifest_url_template"
+    if "manifest" in text:
+        return "manifest"
+    if "collection" in text or "/iiif/presentation" in text:
+        return "presentation_collection"
+    if "api" in text:
+        return "provider_api"
+    if is_homepage:
+        return "institution_website"
+    return "related_resource"
+
+
+def _discovery_type(role: str) -> str:
+    return {
+        "change_discovery": "OrderedCollection",
+        "presentation_collection": "Collection",
+        "manifest": "Manifest",
+        "institution_website": "InstitutionWebsite",
+        "provider_api": "ProviderAPI",
+        "manifest_url_template": "ManifestURLTemplate",
+    }.get(role, "RelatedResource")
+
+
+def _endpoint_rows(
+    links: Iterable[tuple[str, str]], *, homepage: str
+) -> list[dict[str, object]]:
+    """Create endpoint objects, retaining one row for every unique source URL."""
+
+    ordered: list[tuple[str, str]] = [("Institution homepage", homepage)]
+    ordered.extend(links)
+    output: list[dict[str, object]] = []
+    seen: set[str] = set()
+    for label, url in ordered:
+        if url in seen:
+            continue
+        parts = urlsplit(url)
+        if parts.scheme.lower() not in {"http", "https"} or not parts.netloc:
+            continue
+        role = _endpoint_role(label, url, is_homepage=(url == homepage))
+        output.append(
+            {
+                "url": url,
+                "endpoint_role": role,
+                "discovery_type": _discovery_type(role),
+                "label": label,
+                "verification_status": "pending_module_2",
+            }
+        )
+        seen.add(url)
+    return output
+
+
 def build_guides_records(repository: Path) -> list[dict[str, object]]:
-    """Extract every visible resource entry from the official IIIF Guides."""
+    """Extract visible official guide entries and every link in each entry."""
 
     guide_root = repository / "guides"
     records: list[dict[str, object]] = []
@@ -68,15 +143,16 @@ def build_guides_records(repository: Path) -> list[dict[str, object]]:
         homepage = metadata.get("homepage", "").strip()
         if not title or not homepage or metadata.get("visible", "").casefold() == "no":
             continue
-
         slug = index_path.parent.name
+        endpoints = _endpoint_rows(_document_links(index_path), homepage=homepage)
         records.append(
             {
                 "name": title,
                 "institution_url": homepage,
-                "discovery_endpoint": homepage,
-                "discovery_type": "InstitutionWebsite",
-                "stream_label": "IIIF resource entry; machine endpoint not yet verified",
+                "discovery_endpoint": endpoints[0]["url"],
+                "discovery_type": endpoints[0]["discovery_type"],
+                "endpoints": endpoints,
+                "stream_label": "Official IIIF resource-guide entry",
                 "collection_focus": None,
                 "estimated_size": None,
                 "rights_status": "unknown",
@@ -92,27 +168,29 @@ def build_guides_records(repository: Path) -> list[dict[str, object]]:
 
 
 def build_awesome_records(repository: Path) -> list[dict[str, object]]:
-    """Extract every implementation entry, including projects and tools.
-
-    Awesome IIIF describes implementations rather than a strict institution
-    registry. Keeping every entry avoids silently imposing a classification;
-    downstream validation can identify which entries expose harvestable data.
-    """
+    """Extract each Awesome IIIF entry and all links on its bullet line."""
 
     source_path = repository / "implementations.md"
     records: list[dict[str, object]] = []
     for line in source_path.read_text(encoding="utf-8-sig").splitlines():
-        match = MARKDOWN_LINK.match(line)
-        if not match:
+        if not line.lstrip().startswith("-"):
             continue
-        name, homepage = (part.strip() for part in match.groups())
+        links = [
+            (match.group(1).strip(), match.group(2).strip())
+            for match in MARKDOWN_LINK.finditer(line)
+        ]
+        if not links:
+            continue
+        name, homepage = links[0]
+        endpoints = _endpoint_rows(links[1:], homepage=homepage)
         records.append(
             {
                 "name": name,
                 "institution_url": homepage,
-                "discovery_endpoint": homepage,
-                "discovery_type": "ImplementationWebsite",
-                "stream_label": "IIIF implementation entry; machine endpoint not yet verified",
+                "discovery_endpoint": endpoints[0]["url"],
+                "discovery_type": endpoints[0]["discovery_type"],
+                "endpoints": endpoints,
+                "stream_label": "Community-maintained IIIF Catalogue entry",
                 "collection_focus": None,
                 "estimated_size": None,
                 "rights_status": "unknown",
@@ -134,8 +212,6 @@ def _write_catalog(
     source_revision: str | None,
     providers: Iterable[dict[str, object]],
 ) -> int:
-    """Write one UTF-8 catalogue snapshot and return its entry count."""
-
     provider_list = list(providers)
     document = {
         "source": {
@@ -154,8 +230,6 @@ def _write_catalog(
 
 
 def build_parser() -> argparse.ArgumentParser:
-    """Define the local snapshot-builder command line."""
-
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--guides-repository", type=Path, required=True)
     parser.add_argument("--awesome-repository", type=Path, required=True)
@@ -164,8 +238,6 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main() -> int:
-    """Generate both source snapshots and print auditable entry counts."""
-
     args = build_parser().parse_args()
     guide_records = build_guides_records(args.guides_repository)
     awesome_records = build_awesome_records(args.awesome_repository)

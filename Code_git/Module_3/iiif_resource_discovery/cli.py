@@ -39,6 +39,7 @@ def main(argv: list[str] | None = None) -> int:
             json.dumps(
                 {
                     "input_provider_count": result.input_provider_count,
+                    "input_endpoint_count": result.input_endpoint_count,
                     "processed_provider_count": result.processed_provider_count,
                     "provider_status_counts": result.provider_status_counts,
                     "unique_manifest_count": result.unique_manifest_count,

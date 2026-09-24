@@ -55,7 +55,9 @@ def main(argv: list[str] | None = None) -> int:
                 json.dumps(
                     {
                         "all_provider_count": result.all_provider_count,
+                        "all_endpoint_count": result.all_endpoint_count,
                         "selected_provider_count": result.selected_provider_count,
+                        "selected_endpoint_count": result.selected_endpoint_count,
                         "output_directory": str(result.output_directory),
                         "log_file": str(result.log_txt),
                     },

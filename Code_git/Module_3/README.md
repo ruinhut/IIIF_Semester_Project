@@ -12,6 +12,16 @@ Manifest URLs. It has two internal stages:
 This module discovers resource URLs. It does not download and structurally
 validate every Manifest; that is Module 4.
 
+## Schema 2.0: provider-level multi-route discovery
+
+Module 3 groups Module 2 rows by `provider_id` and processes every checked
+route under one institution-level result. It attempts parseable JSON routes,
+bounded HTML discovery, Change Discovery streams, Presentation Collections,
+and explicit IIIF links found in provider-specific JSON APIs. Presentation
+Collection `next` pagination is followed within the collection limit. A
+provider succeeds when at least one route yields a Manifest; other route
+outcomes remain in its audit report.
+
 ## Input
 
 The default input is Module 2's complete checked-provider file:

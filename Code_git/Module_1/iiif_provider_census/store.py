@@ -1,8 +1,4 @@
-"""Persist Module 1 data contracts as UTF-8 JSONL, CSV, and text.
-
-JSONL is the canonical machine-readable format because each provider can be
-processed independently. CSV is a smaller, flattened view for human review.
-"""
+"""Persist Module 1 provider records as UTF-8 JSONL, CSV, and text."""
 
 from __future__ import annotations
 
@@ -11,16 +7,19 @@ import json
 from pathlib import Path
 from typing import Any, Iterable
 
-from .models import ProviderRecord
+from .models import EndpointCandidate, ProviderRecord
 
 
 CSV_COLUMNS = (
     "provider_id",
     "name",
     "institution_url",
-    "discovery_endpoint",
+    "endpoint_count",
+    "endpoint_url",
+    "endpoint_role",
     "discovery_type",
-    "stream_label",
+    "endpoint_label",
+    "verification_status",
     "collection_focus",
     "estimated_size",
     "rights_status",
@@ -35,7 +34,7 @@ CSV_COLUMNS = (
 
 
 def write_jsonl(path: Path, records: Iterable[ProviderRecord]) -> int:
-    """Write one complete provider JSON object per line and return its count."""
+    """Write one complete institution object per line."""
 
     path.parent.mkdir(parents=True, exist_ok=True)
     count = 0
@@ -48,7 +47,7 @@ def write_jsonl(path: Path, records: Iterable[ProviderRecord]) -> int:
 
 
 def read_jsonl(path: Path) -> list[ProviderRecord]:
-    """Read and validate canonical provider records from a JSONL file."""
+    """Read both legacy schema 1 records and schema 2 endpoint arrays."""
 
     records: list[ProviderRecord] = []
     with path.open("r", encoding="utf-8-sig") as handle:
@@ -64,7 +63,7 @@ def read_jsonl(path: Path) -> list[ProviderRecord]:
 
 
 def write_csv(path: Path, records: Iterable[ProviderRecord]) -> int:
-    """Write a spreadsheet-friendly view without nested raw source data."""
+    """Write one review row per endpoint while repeating provider identity."""
 
     path.parent.mkdir(parents=True, exist_ok=True)
     count = 0
@@ -72,8 +71,9 @@ def write_csv(path: Path, records: Iterable[ProviderRecord]) -> int:
         writer = csv.DictWriter(handle, fieldnames=CSV_COLUMNS)
         writer.writeheader()
         for record in records:
-            writer.writerow(_csv_row(record))
-            count += 1
+            for endpoint in record.endpoints:
+                writer.writerow(_csv_row(record, endpoint))
+                count += 1
     return count
 
 
@@ -86,24 +86,29 @@ def write_text(path: Path, value: str) -> None:
         handle.write("\n")
 
 
-def _csv_row(record: ProviderRecord) -> dict[str, Any]:
-    """Flatten one nested ProviderRecord into the documented CSV columns."""
+def _csv_row(
+    record: ProviderRecord, endpoint: EndpointCandidate
+) -> dict[str, Any]:
+    """Flatten one endpoint and its provider-level context."""
 
     return {
         "provider_id": record.provider_id,
         "name": record.name,
         "institution_url": record.institution_url or "",
-        "discovery_endpoint": record.discovery_endpoint,
-        "discovery_type": record.discovery_type,
-        "stream_label": record.stream_label or "",
+        "endpoint_count": record.endpoint_count,
+        "endpoint_url": endpoint.url,
+        "endpoint_role": endpoint.endpoint_role,
+        "discovery_type": endpoint.discovery_type,
+        "endpoint_label": endpoint.label or "",
+        "verification_status": endpoint.verification_status,
         "collection_focus": record.collection_focus or "",
         "estimated_size": "" if record.estimated_size is None else record.estimated_size,
         "rights_status": record.rights_status,
         "rights_values": " | ".join(record.rights_values),
         "record_status": record.record_status,
         "last_checked_at": record.last_checked_at or "",
-        "source_type": record.source.source_type,
-        "source_url": record.source.source_url,
-        "source_page_url": record.source.source_page_url or "",
-        "observed_at": record.source.observed_at or "",
+        "source_type": endpoint.source.source_type,
+        "source_url": endpoint.source.source_url,
+        "source_page_url": endpoint.source.source_page_url or "",
+        "observed_at": endpoint.source.observed_at or "",
     }

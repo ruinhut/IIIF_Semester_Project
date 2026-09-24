@@ -23,7 +23,9 @@ from .store import write_csv, write_jsonl, write_text
 @dataclass(frozen=True)
 class PipelineResult:
     all_provider_count: int
+    all_endpoint_count: int
     selected_provider_count: int
+    selected_endpoint_count: int
     output_directory: Path
     all_providers_jsonl: Path
     selected_providers_jsonl: Path
@@ -89,6 +91,8 @@ def run_pipeline(
     criteria, selection_label, requested_names = _selection_for_run(institution_selection)
     selected_records = select_providers(all_records, criteria)
     _validate_requested_names(requested_names, all_records, selected_records)
+    all_endpoint_count = sum(record.endpoint_count for record in all_records)
+    selected_endpoint_count = sum(record.endpoint_count for record in selected_records)
 
     # Step 5: Keep exchange data and execution logs in separate directories.
     # ``data/output`` is the contract consumed by people and Module 2, while
@@ -117,7 +121,9 @@ def run_pipeline(
             source_reports=source_reports,
             count_before_deduplication=len(records),
             all_provider_count=len(all_records),
+            all_endpoint_count=all_endpoint_count,
             selected_provider_count=len(selected_records),
+            selected_endpoint_count=selected_endpoint_count,
             all_jsonl=all_jsonl,
             selected_jsonl=selected_jsonl,
             csv_path=csv_path,
@@ -126,7 +132,9 @@ def run_pipeline(
 
     return PipelineResult(
         all_provider_count=len(all_records),
+        all_endpoint_count=all_endpoint_count,
         selected_provider_count=len(selected_records),
+        selected_endpoint_count=selected_endpoint_count,
         output_directory=output_directory,
         all_providers_jsonl=all_jsonl,
         selected_providers_jsonl=selected_jsonl,
@@ -197,7 +205,9 @@ def _format_run_log(
     source_reports: Sequence[Mapping[str, Any]],
     count_before_deduplication: int,
     all_provider_count: int,
+    all_endpoint_count: int,
     selected_provider_count: int,
+    selected_endpoint_count: int,
     all_jsonl: Path,
     selected_jsonl: Path,
     csv_path: Path,
@@ -225,8 +235,10 @@ def _format_run_log(
         *source_lines,
         "",
         f"Records before deduplication: {count_before_deduplication}",
-        f"Known providers after deduplication: {all_provider_count}",
+        f"Known providers after evidence-based merging: {all_provider_count}",
+        f"Candidate endpoints retained: {all_endpoint_count}",
         f"Selected providers: {selected_provider_count}",
+        f"Selected candidate endpoints: {selected_endpoint_count}",
         "",
         "Outputs:",
         f"- Full provider census: {all_jsonl}",

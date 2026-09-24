@@ -88,3 +88,6 @@ python -m unittest discover -s tests -v
 
 自动测试使用本地 HTTP 站点，不依赖外部机构当时是否在线。
 
+## 2.0 版多路线发现
+
+Module 3 先按 `provider_id` 合并 Module 2 的多条入口结果，再依次处理 JSON、HTML、Change Discovery、IIIF Collection 及 API 中明确暴露的 IIIF 链接。Collection 的 `next` 分页会在上限内继续遍历。只要至少一条路线发现 Manifest，该机构即视为发现成功。

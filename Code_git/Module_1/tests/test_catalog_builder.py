@@ -19,7 +19,9 @@ class CatalogBuilderTests(unittest.TestCase):
             for path in (visible, hidden, internal):
                 path.mkdir(parents=True)
             (visible / "index.md").write_text(
-                "---\ntitle: Example Library\nhomepage: https://example.org/\n---\n",
+                "---\ntitle: Example Library\nhomepage: https://example.org/\n---\n"
+                "API documentation: https://example.org/api/docs\n"
+                "Manifest template: https://example.org/iiif/{id}/manifest\n",
                 encoding="utf-8",
             )
             (hidden / "index.md").write_text(
@@ -35,6 +37,11 @@ class CatalogBuilderTests(unittest.TestCase):
 
             self.assertEqual([item["name"] for item in records], ["Example Library"])
             self.assertEqual(records[0]["endpoint_verification"], "pending_module_2")
+            self.assertEqual(len(records[0]["endpoints"]), 3)
+            self.assertEqual(
+                {item["endpoint_role"] for item in records[0]["endpoints"]},
+                {"institution_website", "provider_api", "manifest_url_template"},
+            )
 
     def test_awesome_keeps_every_list_entry(self) -> None:
         """Do not silently drop tools or projects from the implementation list."""
