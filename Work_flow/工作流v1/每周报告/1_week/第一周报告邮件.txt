@@ -1,0 +1,8 @@
+Subject: Weekly progress — IIIF Document Information Extraction — 18 September
+Dear Frédéric,
+This week, I studied the IIIF concepts and discovery mechanisms relevant to the project, particularly manifests, provider registries and Change Discovery activity streams.
+I designed the seven-module structure of the harvesting pipeline and implemented and tested its first module, Provider Census and Selection. This module combines provider entries from the IIIF Registry, the official IIIF resource guide, the Awesome IIIF list and project-maintained entries. It then normalises and deduplicates the entries, selects either one provider or all providers, and exports the results in JSONL and CSV formats with a run log. I also prepared diagrams of the overall pipeline and Module 1.
+I found that the IIIF Registry alone currently provides very limited coverage. The census therefore needs to combine several sources. The current combined run produces 95 unique candidate provider entries, whose accessibility and discovery endpoints still need to be validated in Module 2.
+I am not currently blocked. My next step is to implement Module 2 for entry-URL accessibility and validity checking.
+Best regards,
+Boheng Shang

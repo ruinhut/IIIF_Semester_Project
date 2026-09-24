@@ -1,0 +1,142 @@
+第一周程序理解（校正版）
+
+一、模块 1 的整体职责
+
+模块 1 是“IIIF 机构及入口目录生成器和选择器”。
+
+输入：
+1. IIIF Registry；
+2. IIIF 官方资源指南的本地 JSON 快照；
+3. Awesome IIIF 实现清单的本地 JSON 快照；
+4. 项目人工维护的机构清单；
+5. 命令行给出的机构名称或 all。
+
+输出：
+1. providers.jsonl：去重后的完整候选入口目录；
+2. selected_providers.jsonl：本次选择并交给模块 2 的入口；
+3. providers.csv：便于人工查看的表格；
+4. Module1_电脑时间_log.txt：本次运行日志。
+
+模块 1 不负责验证每个机构入口是否可访问，不负责下载 Manifest，也不负责版权筛选。入口有效性检查属于模块 2，资源发现属于模块 3。
+
+
+二、各程序文件的作用
+
+1. models.py
+
+定义整个模块统一使用的数据结构和 URL 规则。
+
+- canonicalize_url：检查 URL 是否为合法的 HTTP(S) 绝对地址，并统一协议、主机名、默认端口和 fragment 的表达。
+- stable_provider_id：对规范化后的 discovery_endpoint 计算 SHA-256 摘要，生成稳定的 provider_id。
+- SourceProvenance：保存一条机构记录来自哪里、来自哪个页面、对应什么活动及何时观察到。
+- SourceProvenance.from_mapping：从普通字典重建 SourceProvenance 对象；它是 SourceProvenance 的类方法，不是单独的类。
+- ProviderRecord：保存一条规范化的机构或入口记录。
+- ProviderRecord.__post_init__：对象创建后自动规范化 URL，并检查名称、规模、状态和版权状态是否合法。
+- ProviderRecord.to_dict：把 ProviderRecord 转换成可写入 JSON 的字典。
+- ProviderRecord.from_mapping：从 JSONL 中的一条字典记录重建 ProviderRecord。
+- _optional_string：把可选值转换成去除首尾空白的字符串；空值返回 None。
+
+2. store.py
+
+负责模块 1 的持久化，不只是“把 JSONL 转成 CSV”。
+
+- CSV_COLUMNS：规定 CSV 文件的列名和顺序。
+- write_jsonl：每行写入一个完整 ProviderRecord，并返回写入数量。
+- read_jsonl：逐行读取 JSONL，校验并重建 ProviderRecord 列表。
+- write_csv：把 ProviderRecord 列表写成便于人工查看的 CSV，并返回写入数量。
+- write_text：写入 UTF-8 纯文本日志。
+- _csv_row：把嵌套的 ProviderRecord 压平为一行 CSV 字典。
+
+3. selector.py
+
+负责从完整机构目录中确定本次交给模块 2 的记录。
+
+- SelectionCriteria：集中保存按 ID、完整名称、名称关键词、域名、状态和数量限制等筛选条件。
+- SelectionCriteria.__post_init__：检查 limit；只要 limit 不为 None，就必须大于 0。
+- SelectionCriteria.from_mapping：把配置字典转换成 SelectionCriteria；它负责构造筛选条件，不直接执行筛选。
+- select_providers：应用筛选条件、稳定排序，并在需要时限制结果数量。
+- _matches：判断一条 ProviderRecord 是否同时满足包含、排除和状态规则。
+- _host_matches：判断域名是指定域名本身还是其子域名。
+- _strings：校验配置值是否为 JSON 数组，并把非空元素转换成字符串元组。
+
+4. fetch.py
+
+负责从网络或本地文件读取并解析 JSON。它不是模块 2 的入口有效性检查器。
+
+- FetchError：JSON 无法获取或解析时使用的专用异常。
+- JsonFetcher：统一管理超时、重试、本地读取和网络读取。
+- JsonFetcher.__init__：设置超时秒数和重试次数，并检查参数是否合法。
+- JsonFetcher.load：根据地址类型选择 HTTP(S)、file URI 或本地路径读取 JSON。
+- JsonFetcher._load_http：发送 HTTP GET，设置 Accept 和 User-Agent，有限重试后返回解析后的 JSON；失败则抛出 FetchError。
+
+5. registry.py
+
+文件名是 registry.py，不是 register.py。它负责把 IIIF Registry 和人工/目录 JSON 转换成统一 ProviderRecord。
+
+- utc_now：生成当前 UTC 时间字符串。
+- read_registry：读取 Registry 的 OrderedCollection 或 OrderedCollectionPage，遍历分页，解析活动并去重。
+- read_manual_records：读取人工清单或目录快照，保留外部来源信息并转换成 ProviderRecord。
+- deduplicate_records：按规范化后的 discovery_endpoint 去重；后出现的记录覆盖同一入口的早期记录。
+- _record_from_activity：把一条 Registry Activity 转换成 ProviderRecord。
+- _parse_legacy_registry_record：兼容旧版包含 streams 数组的 Registry 格式。
+- _extract_label：从常见 IIIF 标签结构中提取可读名称。
+- _language_value：递归读取字符串、数组或语言映射中的第一个可用文本。
+- _rights_values：把版权值统一成字符串元组。
+- _as_mapping_list：把一个字典或字典数组统一转换成字典列表。
+- _link_id：从字符串或带 id/@id 的对象中读取链接。
+- _resolve_reference：根据当前页面解析绝对或相对链接。
+- _host_name：无法取得机构名称时，从 URL 中提取主机名作为保守的后备名称。
+- _optional_text：把可选值转换成非空文本，空值返回 None。
+
+6. pipeline.py
+
+负责协调其他程序，形成一次完整的模块 1 执行。
+
+- PipelineResult：保存运行完成后的统计数量和所有输出文件路径。
+- run_pipeline：读取配置；加载 Registry 和本地目录；统一并去重；按命令行选择机构；分别写入输出和日志；最后返回 PipelineResult。
+- _local_run_time：取得带时区的本机时间，供日志文件名和观察时间使用。
+- _selection_for_run：把 --institution 参数转换成 SelectionCriteria、日志标签和待核对名称；all 表示所有 active 记录。
+- _validate_requested_names：发现未知或非 active 名称时明确报错，并列出当前可用名称。
+- _format_run_log：生成完整的纯文本运行日志内容。
+- _read_config：打开 JSON 配置文件，解析并确认顶层内容是对象。
+- _mapping：确认一个值是 Mapping/JSON 对象，不是执行字段映射。
+- _source_list：确认来源配置是 JSON 数组，再转换成字符串列表。
+- _resolve_local_source：远程 URL 保持不变；相对本地路径按照配置文件所在目录解析。
+- _resolve_directory：把相对输出目录或日志目录按照配置文件所在目录转换成绝对路径。
+
+7. cli.py
+
+负责命令行界面，把用户输入转换成对流水线函数的调用。
+
+- build_parser：定义 run 和 select 两个子命令及其参数。
+- main：解析命令行；run 调用完整流水线，select 对已有 JSONL 重新筛选；成功返回退出码 0，已处理错误返回 1。
+
+8. __init__.py 和 __main__.py
+
+- __init__.py：定义包的公共接口和版本号，让其他程序可以直接导入主要类和函数；没有自定义函数。
+- __main__.py：使 python -m iiif_provider_census 能够调用 cli.main；没有自定义函数。
+
+9. tools/build_catalog_inputs.py
+
+这是更新外部清单快照的辅助程序，不是每次运行模块 1 都必须执行的核心流水线。
+
+- _front_matter：读取 IIIF Guides 页面开头的简单 YAML 元数据。
+- _git_revision：读取本地 Git 仓库当前提交哈希。
+- build_guides_records：把可见且有 homepage 的官方 Guides 条目转换成候选入口字典。
+- build_awesome_records：把 Awesome IIIF 中每个 Markdown 清单条目转换成候选入口字典。
+- _write_catalog：把来源信息和候选入口写入 UTF-8 JSON 文件。
+- build_parser：定义这个辅助程序的三个路径参数。
+- main：生成两份 JSON 快照并打印各自记录数量。
+
+10. tests 文件夹
+
+测试程序使用本地样例验证：Registry 分页和活动解析、来源追踪、筛选、去重、JSONL/CSV 存储、日志生成，以及外部清单转换。测试不会修改正式输出，也不依赖真实网络。
+
+
+三、最重要的理解
+
+1. Module 1 保存的是“候选机构及入口目录”，不是已经全部验证成功的 API 清单。
+2. Registry 中只有一条登记记录，不代表只有一家机构使用 IIIF。
+3. 官方 Guides 和 Awesome IIIF 中许多地址是网页入口，必须由模块 2 继续确认其可访问性和内容类型。
+4. ProviderRecord 是所有来源进入模块 1 后的统一数据结构。
+5. pipeline.py 负责组织顺序，各专门文件分别负责读取、解析、筛选和保存。

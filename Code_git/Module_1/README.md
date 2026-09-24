@@ -1,71 +1,78 @@
-# 流水线机器 1：IIIF Provider Census and Selector
+# Module 1: IIIF Provider Census and Selector
 
-模块 1 建立 IIIF 机构及入口目录，并按照命令行参数选择本次需要处理的机构。它不下载 Manifest，也不判断入口是否有效；网络访问检查由模块 2 负责。
+Module 1 builds a reproducible census of IIIF provider entry points and selects the institutions to process in a given pipeline run. It is the first stage of the modular IIIF harvesting pipeline developed for the EPFL DHLAB semester project *IIIF Document Information Extraction*.
 
-## 工作方式
+This module does not harvest Manifests or determine whether every candidate entry point is a valid IIIF API. Those checks belong to Modules 2 and 3. Its responsibility is to collect provider candidates from documented sources, normalize them into one data model, deduplicate their entry points, preserve provenance, and produce an explicit run selection.
+
+## Pipeline position
 
 ```text
 IIIF Registry ───────────────┐
-IIIF 官方资源指南 ────────────┤
-Awesome IIIF 实现清单 ────────┼─> 统一 ProviderRecord ─> 按入口去重 ─> 人工选择
-项目人工补充清单 ──────────────┘                                  │
-                                                                 ├─> providers.jsonl
-                                                                 ├─> selected_providers.jsonl
-                                                                 ├─> providers.csv
-                                                                 └─> 秒级 TXT 日志
+Official IIIF resource guide ┤
+Awesome IIIF list ───────────┼─> normalized census ─> deduplication ─> run selection
+Project-maintained entries ──┘                                      │
+                                                                   ├─> providers.jsonl
+                                                                   ├─> selected_providers.jsonl
+                                                                   ├─> providers.csv
+                                                                   └─> timestamped TXT log
 ```
 
-必须区分两类入口：
+The resulting `selected_providers.jsonl` is the handoff to Module 2, which checks network accessibility, redirects, response types, JSON parsing, and basic IIIF validity. Module 3 can then discover Manifest URLs from validated Change Discovery streams or IIIF Collections.
 
-- `OrderedCollection` 等值表示已经登记的机器可读 IIIF 发现入口。
-- `InstitutionWebsite` 或 `ImplementationWebsite` 表示可信目录提供的候选网页，尚未证明是机器可读 API，必须交给模块 2 检查。
+## Source catalogues
 
-因此，Registry 当前只有一条记录，只表示它目前只有一个自愿登记的活动流，并不表示世界上只有一家机构使用 IIIF。
+The default configuration combines four inputs:
 
-## 输入
+1. **IIIF Registry** — the machine-readable registry of voluntarily registered Change Discovery streams: `https://registry.iiif.io/index.json`.
+2. **Official IIIF resource guide** — a generated local snapshot of the resource entries published at `https://guides.iiif.io/finding_resources/`.
+3. **Awesome IIIF implementations** — a generated local snapshot of the community-maintained list at `https://github.com/IIIF/awesome-iiif/blob/main/implementations.md`.
+4. **Project-maintained entries** — additional records in `config/manual_providers.json`.
 
-`config.example.json` 配置以下来源：
+Registry registration is voluntary and therefore cannot be treated as a complete census of IIIF adoption. The official guide and Awesome IIIF provide broader candidate coverage, but most of their links are human-facing collection or implementation pages rather than confirmed Change Discovery endpoints. Module 1 preserves that distinction:
 
-- `https://registry.iiif.io/index.json`：IIIF Registry 的机器入口；
-- `config/iiif_guides_providers.json`：IIIF 官方资源指南快照；
-- `config/awesome_iiif_providers.json`：IIIF GitHub 社区实现清单快照；
-- `config/manual_providers.json`：项目自行维护的补充记录。
+- `OrderedCollection` identifies a registered machine-readable discovery stream.
+- `InstitutionWebsite` identifies an entry from the official resource guide that still requires validation.
+- `ImplementationWebsite` identifies an Awesome IIIF entry that still requires validation.
 
-官方指南和 Awesome IIIF 的生成文件保留公开来源 URL、来源 Git 提交版本及每条记录的来源页面。Awesome IIIF 是“实现清单”，其中包含机构、项目、演示和工具；这些条目均作为候选入口保存，不能在模块 2 验证前统称为有效机构 API。
+Awesome IIIF contains institutions, content projects, demonstrations, and software tools. All entries are retained as candidates so that the import remains faithful to the source; downstream validation must determine which entries expose harvestable cultural-heritage resources.
 
-人工记录格式：
+## Provider record
 
-```json
-{
-  "providers": [
-    {
-      "name": "Institution name",
-      "institution_url": "https://institution.example/",
-      "discovery_endpoint": "https://institution.example/iiif/activity/all-changes",
-      "discovery_type": "OrderedCollection",
-      "stream_label": "All changes",
-      "collection_focus": null,
-      "estimated_size": null,
-      "rights_status": "unknown",
-      "rights_values": []
-    }
-  ]
-}
-```
+Every input is normalized to a `ProviderRecord`. Its principal fields are:
 
-未知信息使用 JSON `null` 或明确的 `"unknown"`，不能猜测。`raw_source_record` 保存输入原文，`source` 保存来源类型、公开来源 URL、单条记录来源页和观察时间。
+| Field | Meaning |
+|---|---|
+| `provider_id` | Stable identifier derived from the canonical entry-point URL |
+| `name` | Provider or implementation name reported by the source |
+| `institution_url` | Human-facing institution or collection page |
+| `discovery_endpoint` | Entry point to be examined by the next module |
+| `discovery_type` | Registered stream type or unverified catalogue-entry type |
+| `stream_label` | Human-readable description of the entry point |
+| `collection_focus` | Collection scope when the source provides it |
+| `estimated_size` | Reported resource count when available |
+| `rights_status` / `rights_values` | Source-level rights observations, without making a harvesting decision |
+| `record_status` | Whether the source currently presents the record as active or removed |
+| `source` | Catalogue type, public source URL, entry page, activity type, and observation time |
+| `raw_source_record` | Original input record retained for auditability |
 
-## 运行
+Unknown values remain `null` or explicitly `unknown`; the program does not infer missing rights, scale, or endpoint capabilities.
 
-环境要求：Python 3.10 或更高版本；无第三方运行依赖。
+## Requirements
 
-在本目录中选择全部已知活动入口：
+- Python 3.10 or later
+- No third-party runtime dependencies
+
+## Running the census
+
+Run these commands from the `Module_1` directory.
+
+Select every active candidate currently known to the module:
 
 ```powershell
 python -m iiif_provider_census run --config config.example.json --institution all
 ```
 
-选择一个机构：
+Select one institution by its exact name:
 
 ```powershell
 python -m iiif_provider_census run `
@@ -73,35 +80,77 @@ python -m iiif_provider_census run `
   --institution "Bodleian Libraries, University of Oxford"
 ```
 
-选择多个机构时重复使用 `--institution`。名称采用不区分大小写的完整匹配；未知名称会报错并列出可用名称。
+Select several institutions by repeating the option:
 
-## 输出
+```powershell
+python -m iiif_provider_census run `
+  --config config.example.json `
+  --institution "Biblissima" `
+  --institution "Internet Archive"
+```
 
-交换数据位于 `data/output/`：
+Name matching is exact but case-insensitive. An unknown or inactive name causes a clear error and prints the available active names. The special value `all` must be used alone.
 
-- `providers.jsonl`：去重后的完整入口目录；
-- `selected_providers.jsonl`：传给模块 2 的本次选择；
-- `providers.csv`：便于人工检查的扁平表格。
+## Outputs
 
-运行日志位于 `data/log/Module1_YYYY-MM-DD_HH-MM-SS_log.txt`。日志记录本机时间、选择参数、各来源记录数、去重前后数量及输出路径。
+Exchange data is written to `data/output/`:
 
-## 更新两份公开清单
+- `providers.jsonl` — complete normalized census after entry-point deduplication;
+- `selected_providers.jsonl` — records selected for the current run and passed to Module 2;
+- `providers.csv` — flattened table for human inspection.
 
-先取得 `IIIF/guides` 和 `IIIF/awesome-iiif` 的本地仓库，再执行：
+Each JSONL line contains one complete provider record. JSONL is the canonical exchange format because records can be streamed and processed independently while retaining nested provenance and raw source data.
+
+Operational logs are written separately to:
+
+```text
+data/log/Module1_YYYY-MM-DD_HH-MM-SS_log.txt
+```
+
+Each log records the computer-local run time, the institution selection, every configured source and its record count, counts before and after deduplication, and the output paths.
+
+## Refreshing the catalogue snapshots
+
+The two generated JSON files record the exact Git revision from which they were produced:
+
+- `config/iiif_guides_providers.json`
+- `config/awesome_iiif_providers.json`
+
+After obtaining current local checkouts of `IIIF/guides` and `IIIF/awesome-iiif`, regenerate both inputs with:
 
 ```powershell
 python tools/build_catalog_inputs.py `
-  --guides-repository <IIIF-guides目录> `
-  --awesome-repository <awesome-iiif目录> `
+  --guides-repository <path-to-IIIF-guides> `
+  --awesome-repository <path-to-awesome-iiif> `
   --output-directory config
 ```
 
-该脚本只转换公开清单，不验证网站或 API。生成后应运行测试和完整目录构建。
+The builder converts the published catalogues into the Module 1 input schema. It does not perform network or IIIF conformance checks.
 
-## 测试
+## Tests
 
 ```powershell
 python -m unittest discover -s tests -v
 ```
 
-实现依据：[IIIF Change Discovery API 1.0](https://iiif.io/api/discovery/1.0/)、[IIIF Registry](https://registry.iiif.io/)、[IIIF Guides](https://guides.iiif.io/finding_resources/) 和 [Awesome IIIF](https://github.com/IIIF/awesome-iiif/blob/main/implementations.md)。
+The test suite covers Registry pagination, current Registry actor structures, removal and update activities, manual and catalogue provenance, URL normalization, deduplication, exact-name selection, JSONL/CSV storage, timestamped logs, and catalogue conversion.
+
+## Implementation structure
+
+| Path | Responsibility |
+|---|---|
+| `iiif_provider_census/fetch.py` | Retrieve JSON from HTTP(S), file URLs, or local paths |
+| `iiif_provider_census/registry.py` | Traverse Registry pages and normalize Registry/manual records |
+| `iiif_provider_census/models.py` | Define the normalized provider data model and URL identity rules |
+| `iiif_provider_census/selector.py` | Apply deterministic provider-selection criteria |
+| `iiif_provider_census/store.py` | Read and write JSONL, CSV, and plain-text logs |
+| `iiif_provider_census/pipeline.py` | Coordinate source loading, deduplication, selection, and output |
+| `iiif_provider_census/cli.py` | Expose the `run` and `select` command-line interfaces |
+| `tools/build_catalog_inputs.py` | Convert the two upstream catalogue repositories into local JSON inputs |
+
+## Technical references
+
+- [IIIF Change Discovery API 1.0](https://iiif.io/api/discovery/1.0/)
+- [IIIF Registry](https://registry.iiif.io/)
+- [IIIF Guides to finding resources](https://guides.iiif.io/finding_resources/)
+- [Awesome IIIF implementations](https://github.com/IIIF/awesome-iiif/blob/main/implementations.md)
