@@ -18,7 +18,17 @@ RIGHTS_CATEGORIES = (
     "unknown",
     "conflicting",
 )
-POLICY_DECISIONS = ("allow", "review", "deny")
+POLICY_DECISIONS = ("allow", "exclude")
+RIGHTS_DISPLAY_LABELS = {
+    "public_domain": {"en": "Public domain", "zh": "公共领域"},
+    "open_license": {"en": "Open license", "zh": "开放许可"},
+    "noncommercial_or_limited": {"en": "Restricted reuse", "zh": "限制性使用"},
+    "in_copyright": {"en": "In copyright", "zh": "版权保护中"},
+    "no_known_copyright": {"en": "No known copyright", "zh": "无已知版权限制"},
+    "institutional_terms": {"en": "Institutional terms", "zh": "机构使用条款"},
+    "unknown": {"en": "Unknown rights", "zh": "未知版权"},
+    "conflicting": {"en": "Conflicting rights information", "zh": "版权信息冲突"},
+}
 
 
 @dataclass(frozen=True)
@@ -161,6 +171,7 @@ class RightsAssessment:
         return {
             "category": self.category,
             "decision": self.decision,
+            "display_label": dict(RIGHTS_DISPLAY_LABELS[self.category]),
             "policy_version": self.policy_version,
             "policy_rule": self.policy_rule,
             "assessed_at": self.assessed_at,

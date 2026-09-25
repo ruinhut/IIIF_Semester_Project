@@ -51,15 +51,15 @@ def assessment_error(
     assessed_at: str,
     reason_code: str,
 ) -> RightsAssessment:
-    """Create a review result when raw Manifest evidence cannot be trusted."""
+    """Automatically exclude a record when raw evidence cannot be trusted."""
 
     return RightsAssessment(
         category="unknown",
-        decision="review",
+        decision="exclude",
         policy_version=policy.policy_version,
-        policy_rule="operational_guard.review",
+        policy_rule="operational_guard.exclude",
         assessed_at=assessed_at,
         evidence=[],
         effective_categories=[],
-        reason_codes=[reason_code, "operational_guard_review"],
+        reason_codes=[reason_code, "operational_guard_exclude"],
     )

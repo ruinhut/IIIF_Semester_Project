@@ -14,18 +14,18 @@ from iiif_rights_filter.normalizer import (
 from iiif_rights_filter.policy import assess_rights
 
 
-def baseline_policy() -> RightsPolicy:
+def automatic_policy() -> RightsPolicy:
     return RightsPolicy(
         policy_version="test-v1",
         category_decisions={
             "public_domain": "allow",
             "open_license": "allow",
-            "noncommercial_or_limited": "review",
-            "in_copyright": "deny",
-            "no_known_copyright": "review",
-            "institutional_terms": "review",
-            "unknown": "review",
-            "conflicting": "review",
+            "noncommercial_or_limited": "exclude",
+            "in_copyright": "exclude",
+            "no_known_copyright": "exclude",
+            "institutional_terms": "exclude",
+            "unknown": "exclude",
+            "conflicting": "exclude",
         },
     )
 
@@ -65,40 +65,41 @@ class PolicyTests(unittest.TestCase):
     def test_open_license_is_allowed(self) -> None:
         assessment = assess_rights(
             [self.evidence("http://creativecommons.org/licenses/by/4.0/")],
-            baseline_policy(),
+            automatic_policy(),
             "2026-09-25T12:00:00+02:00",
         )
         self.assertEqual("open_license", assessment.category)
         self.assertEqual("allow", assessment.decision)
 
-    def test_in_copyright_is_denied(self) -> None:
+    def test_in_copyright_is_excluded(self) -> None:
         assessment = assess_rights(
             [self.evidence("https://rightsstatements.org/vocab/InC/1.0/")],
-            baseline_policy(),
+            automatic_policy(),
             "2026-09-25T12:00:00+02:00",
         )
-        self.assertEqual("deny", assessment.decision)
+        self.assertEqual("exclude", assessment.decision)
 
-    def test_conflicting_decisive_evidence_requires_review(self) -> None:
+    def test_conflicting_decisive_evidence_is_excluded(self) -> None:
         assessment = assess_rights(
             [
                 self.evidence("https://creativecommons.org/licenses/by/4.0/"),
                 self.evidence("All rights reserved"),
             ],
-            baseline_policy(),
+            automatic_policy(),
             "2026-09-25T12:00:00+02:00",
         )
         self.assertEqual("conflicting", assessment.category)
-        self.assertEqual("review", assessment.decision)
+        self.assertEqual("exclude", assessment.decision)
 
     def test_attribution_alone_does_not_imply_permission(self) -> None:
         assessment = assess_rights(
             [self.evidence("Credit Example Library", decisive=False)],
-            baseline_policy(),
+            automatic_policy(),
             "2026-09-25T12:00:00+02:00",
         )
         self.assertEqual("unknown", assessment.category)
-        self.assertEqual("review", assessment.decision)
+        self.assertEqual("exclude", assessment.decision)
+        self.assertEqual("未知版权", assessment.to_dict()["display_label"]["zh"])
 
     def test_policy_rejects_missing_categories(self) -> None:
         with self.assertRaises(ValueError):

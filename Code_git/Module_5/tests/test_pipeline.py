@@ -18,12 +18,12 @@ POLICY = {
     "category_decisions": {
         "public_domain": "allow",
         "open_license": "allow",
-        "noncommercial_or_limited": "review",
-        "in_copyright": "deny",
-        "no_known_copyright": "review",
-        "institutional_terms": "review",
-        "unknown": "review",
-        "conflicting": "review"
+        "noncommercial_or_limited": "exclude",
+        "in_copyright": "exclude",
+        "no_known_copyright": "exclude",
+        "institutional_terms": "exclude",
+        "unknown": "exclude",
+        "conflicting": "exclude"
     }
 }
 
@@ -42,12 +42,12 @@ class PipelineTests(unittest.TestCase):
                     "type": "Manifest",
                     "rights": "http://creativecommons.org/licenses/by/4.0/",
                 },
-                "manifest-deny": {
+                "manifest-excluded": {
                     "id": "https://example.org/b",
                     "type": "Manifest",
                     "rights": "https://rightsstatements.org/vocab/InC/1.0/",
                 },
-                "manifest-review": {
+                "manifest-unknown": {
                     "id": "https://example.org/c",
                     "type": "Manifest",
                 },
@@ -89,11 +89,10 @@ class PipelineTests(unittest.TestCase):
             )
 
             self.assertEqual(3, result.processed_manifest_count)
-            self.assertEqual({"allow": 1, "deny": 1, "review": 1}, result.decision_counts)
+            self.assertEqual({"allow": 1, "exclude": 2}, result.decision_counts)
             self.assertEqual(1, result.allowed_resource_count)
             self.assertEqual(1, _line_count(result.allowed_manifests_jsonl))
-            self.assertEqual(1, _line_count(result.denied_manifests_jsonl))
-            self.assertEqual(1, _line_count(result.manual_review_jsonl))
+            self.assertEqual(2, _line_count(result.excluded_manifests_jsonl))
             allowed_resource = json.loads(
                 result.allowed_resource_inventory_jsonl.read_text(encoding="utf-8")
             )
@@ -101,7 +100,7 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual("allow", allowed_resource["rights_decision"])
             self.assertIn("Policy version: test-v1", result.log_txt.read_text(encoding="utf-8"))
 
-    def test_checksum_mismatch_routes_to_review(self) -> None:
+    def test_checksum_mismatch_is_excluded(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             module4 = root / "Module_4"
@@ -131,14 +130,14 @@ class PipelineTests(unittest.TestCase):
                 },
             )
             result = run_pipeline(module5 / "config.json")
-            row = json.loads(result.manual_review_jsonl.read_text(encoding="utf-8"))
+            row = json.loads(result.excluded_manifests_jsonl.read_text(encoding="utf-8"))
             self.assertIn(
                 "raw_manifest_checksum_mismatch",
                 row["rights_assessment"]["reason_codes"],
             )
-            self.assertEqual("review", row["rights_assessment"]["decision"])
+            self.assertEqual("exclude", row["rights_assessment"]["decision"])
             self.assertEqual(
-                "operational_guard.review",
+                "operational_guard.exclude",
                 row["rights_assessment"]["policy_rule"],
             )
 

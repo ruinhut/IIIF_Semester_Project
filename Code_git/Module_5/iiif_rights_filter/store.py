@@ -16,6 +16,8 @@ SUMMARY_COLUMNS = (
     "provider_names",
     "category",
     "decision",
+    "rights_label_en",
+    "rights_label_zh",
     "evidence_count",
     "decisive_evidence_count",
     "effective_categories",
@@ -112,6 +114,16 @@ def write_summary_csv(path: Path, records: Iterable[Mapping[str, Any]]) -> int:
                 "provider_names": " | ".join(_provider_names(record)),
                 "category": assessment.get("category", ""),
                 "decision": assessment.get("decision", ""),
+                "rights_label_en": (
+                    assessment.get("display_label", {}).get("en", "")
+                    if isinstance(assessment.get("display_label"), Mapping)
+                    else ""
+                ),
+                "rights_label_zh": (
+                    assessment.get("display_label", {}).get("zh", "")
+                    if isinstance(assessment.get("display_label"), Mapping)
+                    else ""
+                ),
                 "evidence_count": assessment.get("evidence_count", 0),
                 "decisive_evidence_count": assessment.get(
                     "decisive_evidence_count", 0

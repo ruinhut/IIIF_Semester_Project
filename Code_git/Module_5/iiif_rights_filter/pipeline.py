@@ -37,8 +37,7 @@ class PipelineResult:
     allowed_resource_count: int
     rights_assessed_jsonl: Path
     allowed_manifests_jsonl: Path
-    denied_manifests_jsonl: Path
-    manual_review_jsonl: Path
+    excluded_manifests_jsonl: Path
     allowed_resource_inventory_jsonl: Path
     allowed_resource_inventory_csv: Path
     rights_summary_csv: Path
@@ -68,7 +67,7 @@ def run_pipeline(
         str(config.get("module_4_directory", "../Module_4")), base_directory
     )
     policy_path = _resolve_path(
-        str(config.get("policy_file", "policies/baseline-2026-09-25.json")),
+        str(config.get("policy_file", "policies/automatic-2026-09-25.json")),
         base_directory,
     )
     output_directory = _resolve_path(
@@ -99,8 +98,7 @@ def run_pipeline(
     assessed_rows: list[dict[str, Any]] = []
     by_decision: dict[str, list[dict[str, Any]]] = {
         "allow": [],
-        "review": [],
-        "deny": [],
+        "exclude": [],
     }
     decision_counts: Counter[str] = Counter()
     category_counts: Counter[str] = Counter()
@@ -140,17 +138,22 @@ def run_pipeline(
 
     rights_assessed_jsonl = output_directory / "rights_assessed_manifests.jsonl"
     allowed_manifests_jsonl = output_directory / "allowed_manifests.jsonl"
-    denied_manifests_jsonl = output_directory / "denied_manifests.jsonl"
-    manual_review_jsonl = output_directory / "manual_review.jsonl"
+    excluded_manifests_jsonl = output_directory / "excluded_manifests.jsonl"
     allowed_resource_inventory_jsonl = output_directory / "allowed_resource_inventory.jsonl"
     allowed_resource_inventory_csv = output_directory / "allowed_resource_inventory.csv"
     rights_summary_csv = output_directory / "rights_summary.csv"
     log_txt = log_directory / f"Module5_{local_run_time.strftime('%Y-%m-%d_%H-%M-%S')}_log.txt"
 
+    # Remove outputs from the earlier manual-review prototype so stale files
+    # cannot be mistaken for current pipeline products.
+    for legacy_name in ("denied_manifests.jsonl", "manual_review.jsonl"):
+        legacy_path = output_directory / legacy_name
+        if legacy_path.exists():
+            legacy_path.unlink()
+
     write_jsonl(rights_assessed_jsonl, assessed_rows)
     write_jsonl(allowed_manifests_jsonl, by_decision["allow"])
-    write_jsonl(denied_manifests_jsonl, by_decision["deny"])
-    write_jsonl(manual_review_jsonl, by_decision["review"])
+    write_jsonl(excluded_manifests_jsonl, by_decision["exclude"])
     write_jsonl(allowed_resource_inventory_jsonl, allowed_resources)
     write_resource_csv(allowed_resource_inventory_csv, allowed_resources)
     write_summary_csv(rights_summary_csv, assessed_rows)
@@ -172,8 +175,7 @@ def run_pipeline(
             allowed_resource_count=len(allowed_resources),
             rights_assessed_jsonl=rights_assessed_jsonl,
             allowed_manifests_jsonl=allowed_manifests_jsonl,
-            denied_manifests_jsonl=denied_manifests_jsonl,
-            manual_review_jsonl=manual_review_jsonl,
+            excluded_manifests_jsonl=excluded_manifests_jsonl,
             allowed_resource_inventory_jsonl=allowed_resource_inventory_jsonl,
             allowed_resource_inventory_csv=allowed_resource_inventory_csv,
             rights_summary_csv=rights_summary_csv,
@@ -188,8 +190,7 @@ def run_pipeline(
         allowed_resource_count=len(allowed_resources),
         rights_assessed_jsonl=rights_assessed_jsonl,
         allowed_manifests_jsonl=allowed_manifests_jsonl,
-        denied_manifests_jsonl=denied_manifests_jsonl,
-        manual_review_jsonl=manual_review_jsonl,
+        excluded_manifests_jsonl=excluded_manifests_jsonl,
         allowed_resource_inventory_jsonl=allowed_resource_inventory_jsonl,
         allowed_resource_inventory_csv=allowed_resource_inventory_csv,
         rights_summary_csv=rights_summary_csv,
@@ -258,8 +259,7 @@ def _format_log(
     allowed_resource_count: int,
     rights_assessed_jsonl: Path,
     allowed_manifests_jsonl: Path,
-    denied_manifests_jsonl: Path,
-    manual_review_jsonl: Path,
+    excluded_manifests_jsonl: Path,
     allowed_resource_inventory_jsonl: Path,
     allowed_resource_inventory_csv: Path,
     rights_summary_csv: Path,
@@ -291,8 +291,7 @@ def _format_log(
             "Outputs:",
             f"- All assessments: {rights_assessed_jsonl}",
             f"- Allowed Manifests: {allowed_manifests_jsonl}",
-            f"- Denied Manifests: {denied_manifests_jsonl}",
-            f"- Manual review: {manual_review_jsonl}",
+            f"- Automatically excluded Manifests: {excluded_manifests_jsonl}",
             f"- Allowed resources JSONL: {allowed_resource_inventory_jsonl}",
             f"- Allowed resources CSV: {allowed_resource_inventory_csv}",
             f"- Rights summary CSV: {rights_summary_csv}",

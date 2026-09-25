@@ -42,7 +42,7 @@ def main(argv: list[str] | None = None) -> int:
                     "allowed_resource_count": result.allowed_resource_count,
                     "rights_assessed_jsonl": str(result.rights_assessed_jsonl),
                     "allowed_manifests_jsonl": str(result.allowed_manifests_jsonl),
-                    "manual_review_jsonl": str(result.manual_review_jsonl),
+                    "excluded_manifests_jsonl": str(result.excluded_manifests_jsonl),
                     "log_file": str(result.log_txt),
                 },
                 ensure_ascii=False,
