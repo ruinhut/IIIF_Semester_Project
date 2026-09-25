@@ -1,0 +1,18 @@
+{
+  "input_jsonl": "data/samples/smoke_manifests.jsonl",
+  "raw_manifest_directory": "data/raw_manifests",
+  "output_directory": "data/output",
+  "log_directory": "data/log",
+  "network": {
+    "timeout_seconds": 20,
+    "retries": 1,
+    "backoff_seconds": 0.5,
+    "max_response_bytes": 16777216,
+    "user_agent": "iiif-manifest-validator/0.1 (+EPFL DHLAB academic research)"
+  },
+  "run": {
+    "max_records": null,
+    "delay_between_requests_seconds": 0.2,
+    "force_refresh": false
+  }
+}
