@@ -65,3 +65,17 @@ python evaluation\2026-09-25\analyze_results.py
 See results/generalisation_evaluation.md for interpretation,
 results/held_out_provider_results.csv for every held-out institution, and the
 two PNG/PDF charts for the requested visual summaries.
+## Manifest media inventory
+
+The discovered development and held-out Manifest URLs were re-fetched on
+25 September 2026 with:
+
+~~~powershell
+python inventory_manifest_media.py
+~~~
+
+Of 325 discovered URLs, 324 returned a JSON object declaring IIIF Manifest.
+They expose 52,606 Canvases, 52,618 image bodies and 52,619 IIIF Image Service
+links. Only 120 Manifests carry a top-level rights or license value; 204 require
+later rights extraction or manual review. These counts describe declared
+resources, not downloaded image files or a rights-approved final handoff.
