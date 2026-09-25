@@ -1,0 +1,28 @@
+{
+  "input_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-09-25\\runs\\development\\module2\\output\\checked_entry_points.jsonl",
+  "curated_endpoints": "",
+  "output_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-09-25\\runs\\development\\module3\\output",
+  "log_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-09-25\\runs\\development\\module3\\log",
+  "network": {
+    "timeout_seconds": 10,
+    "retries": 0,
+    "backoff_seconds": 0.25,
+    "max_response_bytes": 4194304,
+    "user_agent": "iiif-resource-discovery/0.2 (+EPFL DHLAB academic research)"
+  },
+  "limits": {
+    "max_providers": null,
+    "max_stream_pages_per_provider": 5,
+    "max_collections_per_provider": 20,
+    "max_html_pages_per_provider": 2,
+    "max_html_depth": 1,
+    "max_candidates_per_html_page": 25,
+    "max_machine_candidates_per_provider": 20,
+    "max_manifests_per_provider": 100
+  },
+  "html_discovery": {
+    "enabled": true,
+    "same_host_only": true,
+    "delay_between_pages_seconds": 0.1
+  }
+}

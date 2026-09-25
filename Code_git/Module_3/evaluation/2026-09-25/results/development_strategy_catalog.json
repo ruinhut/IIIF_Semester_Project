@@ -1,0 +1,134 @@
+{
+  "created_at": "2026-09-25",
+  "purpose": "Frozen generic strategy catalogue derived from the 75-provider development run",
+  "important_note": "This is rule-based strategy evidence, not trained model weights.",
+  "providers": 75,
+  "checked_endpoints": 121,
+  "endpoint_roles": {
+    "change_discovery": {
+      "handler": "Validate IIIF/ActivityStreams type, then traverse OrderedCollection pages.",
+      "development_provider_count": 1,
+      "successful_provider_count": 1,
+      "endpoint_check_results": {
+        "reachable_json": 1
+      }
+    },
+    "institution_website": {
+      "handler": "Run bounded HTML discovery for declared IIIF links and JSON-LD.",
+      "development_provider_count": 56,
+      "successful_provider_count": 9,
+      "endpoint_check_results": {
+        "reachable_non_json": 41,
+        "response_too_large": 1,
+        "restricted": 8,
+        "temporary_failure": 4,
+        "unreachable": 2
+      }
+    },
+    "manifest": {
+      "handler": "Validate as a Manifest and emit the canonical URL directly.",
+      "development_provider_count": 6,
+      "successful_provider_count": 5,
+      "endpoint_check_results": {
+        "reachable_json": 4,
+        "reachable_non_json": 5,
+        "restricted": 2,
+        "temporary_failure": 1,
+        "unreachable": 1
+      }
+    },
+    "presentation_collection": {
+      "handler": "Validate IIIF Presentation type, traverse children and next pagination.",
+      "development_provider_count": 24,
+      "successful_provider_count": 2,
+      "endpoint_check_results": {
+        "reachable_json": 1,
+        "reachable_non_json": 13,
+        "restricted": 7,
+        "temporary_failure": 2,
+        "unreachable": 3
+      }
+    },
+    "provider_api": {
+      "handler": "Inspect JSON recursively for explicit IIIF, Manifest, or Collection URLs.",
+      "development_provider_count": 1,
+      "successful_provider_count": 1,
+      "endpoint_check_results": {
+        "reachable_non_json": 1
+      }
+    },
+    "related_resource": {
+      "handler": "Classify the response by content and apply the matching generic strategy.",
+      "development_provider_count": 14,
+      "successful_provider_count": 7,
+      "endpoint_check_results": {
+        "reachable_non_json": 15,
+        "restricted": 1,
+        "temporary_failure": 1,
+        "unreachable": 7
+      }
+    }
+  },
+  "resolved_endpoint_methods": {
+    "change_discovery_page": 2,
+    "html_declared_link": 3,
+    "module_2_json:change_discovery": 1,
+    "module_2_json:manifest": 3,
+    "module_2_json:presentation_collection": 1,
+    "provider_api_link": 1
+  },
+  "manifest_discovery_methods": {
+    "change_discovery": 100,
+    "html_declared_link": 3,
+    "module_2_json:manifest": 2,
+    "presentation_collection": 200,
+    "provider_api_link": 1
+  },
+  "successful_development_providers": [
+    {
+      "provider_id": "provider-9639004395c2739d",
+      "name": "Bavarian State Library (BSB) / Munich Digitization Centre (MDZ)",
+      "manifest_count": 100
+    },
+    {
+      "provider_id": "provider-a2d020e1ff7f28ef",
+      "name": "Biblissima reconstituted manuscript demo",
+      "manifest_count": 1
+    },
+    {
+      "provider_id": "provider-6a0186046b49634f",
+      "name": "Carnegie Museum of Art",
+      "manifest_count": 100
+    },
+    {
+      "provider_id": "provider-02221348697554a3",
+      "name": "DigiPress - The newspaper portal of the Bayerische Staatsbibliothek (Bavarian State Library)",
+      "manifest_count": 1
+    },
+    {
+      "provider_id": "provider-9fd4bc767a462cd4",
+      "name": "Gallica",
+      "manifest_count": 1
+    },
+    {
+      "provider_id": "provider-f63c0c9fa9fd0139",
+      "name": "Harvard Art Museums",
+      "manifest_count": 1
+    },
+    {
+      "provider_id": "provider-c321c7f2be84b70b",
+      "name": "Internet Archive",
+      "manifest_count": 1
+    },
+    {
+      "provider_id": "provider-992059478d1af0a4",
+      "name": "University of Oxford (Digital Bodleian)",
+      "manifest_count": 100
+    },
+    {
+      "provider_id": "provider-d5e7b7675f084f36",
+      "name": "Wikidata",
+      "manifest_count": 1
+    }
+  ]
+}

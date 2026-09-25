@@ -1,0 +1,94 @@
+{
+  "evaluation_date": "2026-09-25",
+  "module_3_code": "frozen before held-out evaluation",
+  "development": {
+    "provider_count": 75,
+    "endpoint_count": 121,
+    "reachable_provider_count": 53,
+    "json_provider_count": 5,
+    "successful_provider_count": 9,
+    "success_rate": 0.12,
+    "reachable_success_rate": 0.16981132075471697,
+    "unique_manifest_count": 306,
+    "check_results": {
+      "reachable_json": 6,
+      "reachable_non_json": 75,
+      "response_too_large": 1,
+      "restricted": 18,
+      "temporary_failure": 8,
+      "unreachable": 13
+    },
+    "successful_providers": [
+      {
+        "name": "Bavarian State Library (BSB) / Munich Digitization Centre (MDZ)",
+        "manifest_count": 100
+      },
+      {
+        "name": "Biblissima reconstituted manuscript demo",
+        "manifest_count": 1
+      },
+      {
+        "name": "Carnegie Museum of Art",
+        "manifest_count": 100
+      },
+      {
+        "name": "DigiPress - The newspaper portal of the Bayerische Staatsbibliothek (Bavarian State Library)",
+        "manifest_count": 1
+      },
+      {
+        "name": "Gallica",
+        "manifest_count": 1
+      },
+      {
+        "name": "Harvard Art Museums",
+        "manifest_count": 1
+      },
+      {
+        "name": "Internet Archive",
+        "manifest_count": 1
+      },
+      {
+        "name": "University of Oxford (Digital Bodleian)",
+        "manifest_count": 100
+      },
+      {
+        "name": "Wikidata",
+        "manifest_count": 1
+      }
+    ]
+  },
+  "held_out_test": {
+    "provider_count": 19,
+    "endpoint_count": 37,
+    "reachable_provider_count": 16,
+    "json_provider_count": 1,
+    "successful_provider_count": 2,
+    "success_rate": 0.10526315789473684,
+    "reachable_success_rate": 0.125,
+    "unique_manifest_count": 19,
+    "check_results": {
+      "reachable_json": 1,
+      "reachable_non_json": 20,
+      "restricted": 11,
+      "temporary_failure": 1,
+      "unreachable": 4
+    },
+    "successful_providers": [
+      {
+        "name": "Digital Commonwealth",
+        "manifest_count": 1
+      },
+      {
+        "name": "Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments",
+        "manifest_count": 18
+      }
+    ]
+  },
+  "held_out_provider_outcomes": {
+    "candidate_not_confirmed_as_manifest": 10,
+    "no_reachable_endpoint": 3,
+    "reachable_but_no_iiif_candidate": 4,
+    "resolved": 2
+  },
+  "interpretation": "Negative means no Manifest was found under shared limits, not that the provider lacks IIIF."
+}

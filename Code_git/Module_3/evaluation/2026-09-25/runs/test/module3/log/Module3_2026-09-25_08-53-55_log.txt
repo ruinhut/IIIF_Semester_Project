@@ -1,0 +1,22 @@
+Module 3 Run Log
+================
+Run time (computer local time): 2026-09-25T08:53:55+02:00
+Input: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\test\module2\output\checked_entry_points.jsonl
+Input providers after grouping: 19
+Input checked endpoint records: 37
+Run limit: none
+Processed providers: 19
+Resolved machine endpoints: 19
+Unique Manifest URLs: 19
+Providers stopped by a configured limit: 8
+
+Provider results:
+- manifests_found: 2
+- unresolved: 17
+
+Outputs:
+- Provider discovery reports: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\test\module3\output\provider_discovery.jsonl
+- Resolved machine endpoints: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\test\module3\output\resolved_endpoints.jsonl
+- Manifest URLs for Module 4: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\test\module3\output\manifest_urls.jsonl
+- Providers without discovered Manifests: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\test\module3\output\unresolved_providers.jsonl
+- Human-readable provider summary: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\test\module3\output\provider_discovery.csv

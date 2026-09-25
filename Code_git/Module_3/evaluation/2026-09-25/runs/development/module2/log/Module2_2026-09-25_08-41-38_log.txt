@@ -1,0 +1,30 @@
+Module 2 Run Log
+================
+Run time (computer local time): 2026-09-25T08:41:38+02:00
+Input: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\split\development_providers.jsonl
+Input providers: 75
+Input candidate endpoints: 121
+Run provider limit: none
+Run limit: none
+Selected providers: 75
+Checked endpoint records: 121
+Checked records: 121
+Unique URL requests: 121
+Providers with at least one reachable endpoint: 53
+Providers with at least one parseable JSON endpoint: 5
+
+Endpoint results:
+- invalid_json: 0
+- reachable_json: 6
+- reachable_non_json: 75
+- response_too_large: 1
+- restricted: 18
+- temporary_failure: 8
+- unreachable: 13
+
+Outputs:
+- All checked entry points for Module 3: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\development\module2\output\checked_entry_points.jsonl
+- Parseable JSON endpoints: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\development\module2\output\discovery_ready.jsonl
+- HTML/restricted/manual-review endpoints: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\development\module2\output\manual_review.jsonl
+- Unavailable endpoints: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\development\module2\output\unavailable_entry_points.jsonl
+- Human-readable endpoint table: E:\exchange-epfl\Semester_Project\Code_git\Module_3\evaluation\2026-09-25\runs\development\module2\output\checked_entry_points.csv

@@ -1,0 +1,76 @@
+﻿provider_id,name,input_endpoint,module_2_result,module_3_status,manifest_count,resolved_endpoint_count,html_pages_visited,stream_pages_visited,collections_visited,issue_count,truncated
+provider-015ee4ecd4a6fd91,Universitaet Jena,https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277,reachable_non_json,unresolved,0,0,1,0,0,0,False
+provider-02221348697554a3,DigiPress - The newspaper portal of the Bayerische Staatsbibliothek (Bavarian State Library),https://digipress.digitale-sammlungen.de/,reachable_non_json,manifests_found,1,1,4,0,0,2,True
+provider-028fd9292205c39c,Bodmer Lab,https://bodmerlab.unige.ch/fr/search?keywords=,reachable_non_json,unresolved,0,0,2,0,0,0,True
+provider-10b9080040d0cc13,hocrviewer,https://github.com/jbaiter/hocrviewer-mirador,reachable_non_json,unresolved,0,0,3,0,0,9,True
+provider-116ce327597310c6,Yale University Art Gallery,https://artgallery.yale.edu/,restricted,unresolved,0,0,0,0,0,2,False
+provider-1aa346b109dd7584,University of Cambridge,https://cudl.lib.cam.ac.uk/,restricted,unresolved,0,0,0,0,0,3,False
+provider-2254ed59cf35068a,University of Toronto,https://collections.library.utoronto.ca/,reachable_non_json,unresolved,0,0,2,0,0,22,True
+provider-296564297962fb5e,Library of Congress,https://www.loc.gov/collections/,restricted,unresolved,0,0,0,0,0,2,False
+provider-2b0e0fbd04a5a32c,Historical State Search,http://historicalstate.lib.ncsu.edu/search,reachable_non_json,unresolved,0,0,1,0,0,6,False
+provider-31c6cd47abf916e0,Cuban Digital Collections,http://iiif.sld.cu/,temporary_failure,unresolved,0,0,0,0,0,2,False
+provider-33ef699d79fc12aa,World Digitial Library,https://www.wdl.org/,restricted,unresolved,0,0,0,0,0,2,False
+provider-370a429900074b10,University College Dublin Libraries,https://digital.ucd.ie/,unreachable,unresolved,0,0,0,0,0,2,False
+provider-38aa7bce2f3b0361,Parliamentary Archives - UK,https://archives.parliament.uk/,restricted,unresolved,0,0,1,0,0,2,False
+provider-3e6e726f68de3eaa,e-rara (digitized rare books from Swiss institutions),https://www.e-rara.ch/,reachable_non_json,unresolved,0,0,1,0,0,0,False
+provider-47cf886a2e6017f1,Ghent University,https://lib.ugent.be/en,reachable_non_json,unresolved,0,0,1,0,0,0,False
+provider-47e8bc7785793a60,Göttingen University Collections,https://gdz.sub.uni-goettingen.de/,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-47ee4f79e1a60cac,University of St. Andrews,https://www.st-andrews.ac.uk/collections,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-4853865a686721d7,Princeton University Art Museum,https://artmuseum.princeton.edu/search/collections,restricted,unresolved,0,0,0,0,0,2,False
+provider-4e06374e85489c6e,Princeton University Libraries,https://dpul.princeton.edu/,temporary_failure,unresolved,0,0,0,0,0,2,False
+provider-4ef10065e633729c,Blavatnik Archive,https://www.blavatnikarchive.org/collections,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-521d522730b9f10b,Qatar National Library,https://www.qdl.qa/en/search/site/?f[0]=document_source:archive_source,restricted,unresolved,0,0,0,0,0,2,False
+provider-53220deba7b0d3eb,Durham University,https://discover.durham.ac.uk/discovery/search?tab=MUSECOLL&search_scope=IIIF&vid=44DUR_INST:VU1&offset=0,reachable_non_json,unresolved,0,0,3,0,0,13,False
+provider-5bb54fcb57aa7da9,University of North Texas Libraries,https://digital.library.unt.edu/,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-5c37bd59a5085c75,National Library of Scotland,https://digital.nls.uk/gallery/,unreachable,unresolved,0,0,0,0,0,2,False
+provider-5e1c10e9ec094e2b,Lancaster University Library,https://digitalcollections.lancaster.ac.uk/,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-637a751532e5f5a3,Harvard Art Museum,https://harvardartmuseums.org/collections,reachable_non_json,unresolved,0,0,2,0,0,4,True
+provider-6425a20ec00665e3,Smithsonian National Zoo,https://nationalzoo.si.edu/openaccess/search?edan_fq%5B%5D=online_visual_material%3Atrue,reachable_non_json,unresolved,0,0,2,0,0,1,True
+provider-648f0743acabd9c2,Stanford University,https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available,reachable_non_json,unresolved,0,0,1,0,0,0,False
+provider-665981fb2cfa68fa,Yale Peabody Museum,https://peabody.yale.edu/explore/collections,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-691126b502b5821e,Art Institute of Chicago,https://www.artic.edu/,reachable_non_json,unresolved,0,0,2,0,0,12,True
+provider-6a0186046b49634f,Carnegie Museum of Art,http://cmoa.org/about/,reachable_non_json,manifests_found,100,1,4,0,1,0,True
+provider-7781a87376497b5c,UCLA Library Digital Collections,https://digital.library.ucla.edu/,reachable_non_json,unresolved,0,0,2,0,0,6,True
+provider-7caa47e568a1951d,e-manuscripta (Manuscript material from Swiss libraries and archives),https://www.e-manuscripta.ch/,reachable_non_json,unresolved,0,0,1,0,0,0,False
+provider-7ec00147ef5efa4a,University of Washington Libraries,https://content.lib.washington.edu/,reachable_non_json,unresolved,0,0,1,0,0,13,False
+provider-818f5f2d2b5bea33,Folger Shakespeare Library,https://collections.folger.edu/,unreachable,unresolved,0,0,0,0,0,2,False
+provider-83eb25cc392724da,Beyond Words: Illuminating Manuscripts in Boston Collections,http://beyondwords2016.org/,temporary_failure,unresolved,0,0,0,0,0,3,False
+provider-858c23aa6223857c,e-codices,http://www.e-codices.unifr.ch/,reachable_non_json,unresolved,0,0,3,0,0,21,True
+provider-870ce1c300376029,Villanova University,https://digital.library.villanova.edu/,restricted,unresolved,0,0,0,0,0,2,False
+provider-8763d3efa30c6554,Yale Center for British Art,http://britishart.yale.edu/,reachable_non_json,unresolved,0,0,2,0,0,11,True
+provider-8798d72493175a05,Yale Center for British Art,https://collections.britishart.yale.edu/,restricted,unresolved,0,0,0,0,0,2,False
+provider-9087fc100047c3b2,Vatican Library,https://digi.vatlib.it/,reachable_non_json,unresolved,0,0,1,0,0,1,False
+provider-9639004395c2739d,Bavarian State Library (BSB) / Munich Digitization Centre (MDZ),https://www.digitale-sammlungen.de/en/,reachable_non_json,manifests_found,100,1,4,0,1,0,True
+provider-992059478d1af0a4,University of Oxford (Digital Bodleian),https://iiif.bodleian.ox.ac.uk/iiif/activity/all-changes,reachable_json,manifests_found,100,3,4,2,0,0,True
+provider-9a9d50ec8631eafd,Wikipedia,https://www.wikipedia.org/,reachable_non_json,unresolved,0,0,1,0,0,6,False
+provider-9c46415198317886,Europeana,https://www.europeana.eu/portal/en/search?q=provider_aggregation_edm_isShownBy%3A*iiif*&view=grid,reachable_non_json,unresolved,0,0,3,0,0,21,True
+provider-9dd288533f853f26,Digital Collections iiif of the Bavarian State Library,https://app.digitale-sammlungen.de/bookshelf/?language=en,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-9fd4bc767a462cd4,Gallica,http://gallica.bnf.fr/,reachable_non_json,manifests_found,1,1,5,0,0,19,True
+provider-a1544ec8d50c2696,The SCTA Reading Room,http://scta.lombardpress.org/,reachable_non_json,unresolved,0,0,1,0,0,1,False
+provider-a2d020e1ff7f28ef,Biblissima reconstituted manuscript demo,http://demos.biblissima-condorcet.fr/chateauroux/osd-demo/,reachable_non_json,manifests_found,1,1,2,0,0,8,True
+provider-a360845c2b46d1bc,The Wolsey Manuscripts,http://www.wolseymanuscripts.ac.uk/manuscripts,temporary_failure,unresolved,0,0,0,0,0,2,False
+provider-a668e1096468c352,Bibliothèque nationale de France (BnF),https://gallica.bnf.fr/,reachable_non_json,unresolved,0,0,2,0,0,6,False
+provider-b49c571f8e0c0ba0,Wellcome Collection,https://wellcomecollection.org/collections,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-c321c7f2be84b70b,Internet Archive,https://archive.org/,reachable_non_json,manifests_found,1,1,11,0,0,21,True
+provider-c4aa50f2571a99e9,Cultural Japan,https://cultural.jp/,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-c94006b2714289d6,Smithsonian Institution,https://collections.si.edu/search/results.htm?q=&iiif.enabled=true,restricted,unresolved,0,0,0,0,0,2,False
+provider-cabfcd6f3de8ca7d,North Carolina State University Libraries,https://d.lib.ncsu.edu/collections/,restricted,unresolved,0,0,0,0,0,2,False
+provider-d14fb88cde24ff49,Harvard University Digital Collections,https://library.harvard.edu/digital-collections,unreachable,unresolved,0,0,0,0,0,2,False
+provider-d305e1aa116fabbc,Northwestern University,https://digitalcollections.library.northwestern.edu/collections/,restricted,unresolved,0,0,0,0,0,2,False
+provider-d5e7b7675f084f36,Wikidata,https://www.wikidata.org/,reachable_non_json,manifests_found,1,1,5,0,0,17,True
+provider-d98fe11ebfc34f6d,J. Paul Getty Trust,https://search.getty.edu/gateway/search?q=&cat=highlight&f=%22Open+Content+Images%22&rows=10&srt=a&dir=s&pg=1,reachable_non_json,unresolved,0,0,2,0,0,18,True
+provider-e048f92222cd2e49,Leiden University,https://digitalcollections.universiteitleiden.nl/,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-e1782e53439deb7b,DigiVatLib,http://digi.vatlib.it/,reachable_non_json,unresolved,0,0,1,0,0,1,False
+provider-e1d421d66c6ea5a2,Radboud University Library,https://bijzonderecollecties.ubn.ru.nl/,reachable_non_json,unresolved,0,0,1,0,0,0,False
+provider-e883d0f637379155,University of Illinois at Urbana-Champaign Library,https://digital.library.illinois.edu/items?fq%5B%5D=primary_media_category%3A0,restricted,unresolved,0,0,0,0,0,2,False
+provider-e8f0640dd782bf74,University of Leeds Libraries' Cultural Collections,https://library.leeds.ac.uk/info/1500/special_collections,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-ef2f1cc06db37bc3,KU Leuven,https://kuleuven.limo.libis.be/discovery,reachable_non_json,unresolved,0,0,1,0,0,0,False
+provider-ef8c581d8869b1b6,e-codices - Virtual Manuscript Library of Switzerland,https://e-codices.ch/en,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-f034696f3b1f1c1f,Digital Repository of Ireland,https://dri.ie/,restricted,unresolved,0,0,0,0,0,2,False
+provider-f1308a5306328276,FromThePage,http://www.fromthepage.com/,reachable_non_json,unresolved,0,0,0,0,0,1,False
+provider-f2683615336e129a,Ecole Polytechnique Fédérale de Lausanne (EPFL),https://plume.epfl.ch/,reachable_non_json,unresolved,0,0,2,0,0,0,True
+provider-f2fa8935cf790b44,vHMML,https://www.vhmml.org/,reachable_non_json,unresolved,0,0,3,0,0,16,True
+provider-f63c0c9fa9fd0139,Harvard Art Museums,http://www.harvardartmuseums.org/,reachable_non_json,manifests_found,1,1,3,0,0,5,True
+provider-fa146b049ccac158,Utrecht University Library,https://objects.library.uu.nl/reader/object_list.php?lan=en,response_too_large,unresolved,0,0,0,0,0,2,False
+provider-fe4c0f49dea727df,DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library,https://ostasien.digitale-sammlungen.de/?locale=en,reachable_non_json,unresolved,0,0,2,0,0,4,True
+provider-feedf2702c521119,Yale University Library,https://collections.library.yale.edu/,reachable_non_json,unresolved,0,0,2,0,0,20,True

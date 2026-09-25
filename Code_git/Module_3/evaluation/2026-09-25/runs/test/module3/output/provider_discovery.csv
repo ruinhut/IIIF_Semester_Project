@@ -1,0 +1,20 @@
+﻿provider_id,name,input_endpoint,module_2_result,module_3_status,manifest_count,resolved_endpoint_count,html_pages_visited,stream_pages_visited,collections_visited,issue_count,truncated
+provider-09ef3155e4838a64,University of Leicester Library,https://specialcollections.le.ac.uk/,reachable_non_json,unresolved,0,0,2,0,0,1,False
+provider-0a19a8e5992b5a87,David Rumsey Map Collection,https://www.davidrumsey.com/,reachable_non_json,unresolved,0,0,2,0,0,11,True
+provider-0aeecd6836053c69,The Frick Collection,http://digitalcollections.frick.org/digico/,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-0af71df3c01cdd4e,National Library of Wales,https://www.library.wales/,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-32c223e0cddf015c,Brown University Digital Repository,https://repository.library.brown.edu/studio/,reachable_non_json,unresolved,0,0,1,0,0,0,False
+provider-3acece25cdf777e4,Indigenous Digital Archive,https://omeka.dlcs-ida.org/s/ida/page/home,reachable_non_json,unresolved,0,0,1,0,0,1,False
+provider-617127ddd5e1eb45,DigitalGeorgetown's Integration of Universal Viewer into DSpace,https://repository.library.georgetown.edu/handle/10822/1044538,reachable_non_json,unresolved,0,0,1,0,0,0,False
+provider-6fb76c5e6a229a82,Austrian National Library,https://iiif.onb.ac.at/,reachable_non_json,unresolved,0,0,2,0,0,10,True
+provider-7354f1a7e6bbf41f,National Library of Finland (Finna.fi),https://www.finna.fi/,restricted,unresolved,0,0,0,0,0,5,False
+provider-760200a911a3f30f,National Palace Museum (Taiwan),https://digitalarchive.npm.gov.tw/,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-8d5551c46daf6536,Digital Commonwealth,https://digitalcommonwealth.org/,restricted,manifests_found,1,1,4,0,0,27,True
+provider-9c24703f7d539465,Cardiff University,https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1,reachable_non_json,unresolved,0,0,2,0,0,0,False
+provider-acb86cbbcb639914,British Library,https://www.bl.uk/collection-guides/iiif,unreachable,unresolved,0,0,0,0,0,4,False
+provider-c4bca842117bf9f7,National Gallery of Art Library,https://library.nga.gov/discovery/collectionDiscovery?vid=01NGA_INST:NGA&collectionId=8157583990004896,reachable_non_json,unresolved,0,0,2,0,0,2,False
+provider-d987c625d6365082,Georeferencer,http://www.georeferencer.com/,reachable_non_json,unresolved,0,0,1,0,0,13,False
+provider-dc8b65c17e7d0e22,SAT Taishōzō Image DB,http://dzkimgs.l.u-tokyo.ac.jp/SATi/images.php?alang=en,unreachable,unresolved,0,0,0,0,0,2,False
+provider-ef02e7415eb96a3e,Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments,https://fragmentarium.ms/search,reachable_non_json,manifests_found,18,18,2,0,0,2,True
+provider-f10ea7c297cd81a8,Biblissima,https://portail.biblissima.fr/en/,reachable_non_json,unresolved,0,0,2,0,0,20,True
+provider-f761dd27f50f2d55,Huntington Digital Library,https://hdl.huntington.org/digital/,reachable_non_json,unresolved,0,0,1,0,0,0,False

@@ -1,0 +1,20 @@
+﻿provider_id,name,endpoint_count,endpoint_roles,module_2_results,reachable_endpoint_count,module_3_status,manifest_found,manifest_count,resolved_methods,issue_count,issue_types,truncated,failure_category
+provider-09ef3155e4838a64,University of Leicester Library,2,presentation_collection,reachable_non_json,2,unresolved,False,0,,1,not_json:1,False,candidate_not_confirmed_as_manifest
+provider-0a19a8e5992b5a87,David Rumsey Map Collection,1,institution_website,reachable_non_json,1,unresolved,False,0,,11,not_json:11,True,candidate_not_confirmed_as_manifest
+provider-0aeecd6836053c69,The Frick Collection,1,presentation_collection,reachable_non_json,1,unresolved,False,0,,20,not_json:20,True,candidate_not_confirmed_as_manifest
+provider-0af71df3c01cdd4e,National Library of Wales,1,institution_website,reachable_non_json,1,unresolved,False,0,,20,not_json:18 | unsupported_json_type:2,True,candidate_not_confirmed_as_manifest
+provider-32c223e0cddf015c,Brown University Digital Repository,1,institution_website,reachable_non_json,1,unresolved,False,0,,0,,False,reachable_but_no_iiif_candidate
+provider-3acece25cdf777e4,Indigenous Digital Archive,1,institution_website,reachable_non_json,1,unresolved,False,0,,1,not_json:1,False,candidate_not_confirmed_as_manifest
+provider-617127ddd5e1eb45,DigitalGeorgetown's Integration of Universal Viewer into DSpace,1,institution_website,reachable_non_json,1,unresolved,False,0,,0,,False,reachable_but_no_iiif_candidate
+provider-6fb76c5e6a229a82,Austrian National Library,1,institution_website,reachable_non_json,1,unresolved,False,0,,10,http_400:1 | not_json:9,True,candidate_not_confirmed_as_manifest
+provider-7354f1a7e6bbf41f,National Library of Finland (Finna.fi),4,institution_website | related_resource,restricted,0,unresolved,False,0,,5,module_2_restricted:4 | no_processable_entry:1,False,no_reachable_endpoint
+provider-760200a911a3f30f,National Palace Museum (Taiwan),1,institution_website,reachable_non_json,1,unresolved,False,0,,20,http_500:1 | not_json:19,True,candidate_not_confirmed_as_manifest
+provider-8d5551c46daf6536,Digital Commonwealth,11,institution_website | manifest | presentation_collection | provider_api | related_resource,reachable_json | reachable_non_json | restricted | unreachable,3,manifests_found,True,1,module_2_json:manifest,27,module_2_restricted:6 | module_2_unreachable:2 | not_json:19,True,resolved
+provider-9c24703f7d539465,Cardiff University,2,presentation_collection | related_resource,reachable_non_json,2,unresolved,False,0,,0,,False,reachable_but_no_iiif_candidate
+provider-acb86cbbcb639914,British Library,3,presentation_collection | related_resource,restricted | temporary_failure | unreachable,0,unresolved,False,0,,4,module_2_restricted:1 | module_2_temporary_failure:1 | module_2_unreachable:1 | no_processable_entry:1,False,no_reachable_endpoint
+provider-c4bca842117bf9f7,National Gallery of Art Library,2,manifest | presentation_collection,reachable_non_json,2,unresolved,False,0,,2,not_json:2,False,candidate_not_confirmed_as_manifest
+provider-d987c625d6365082,Georeferencer,1,institution_website,reachable_non_json,1,unresolved,False,0,,13,not_json:12 | unsupported_json_type:1,False,candidate_not_confirmed_as_manifest
+provider-dc8b65c17e7d0e22,SAT Taishōzō Image DB,1,institution_website,unreachable,0,unresolved,False,0,,2,module_2_unreachable:1 | no_processable_entry:1,False,no_reachable_endpoint
+provider-ef02e7415eb96a3e,Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments,1,institution_website,reachable_non_json,1,manifests_found,True,18,html_declared_link,2,not_json:1 | unsupported_json_type:1,True,resolved
+provider-f10ea7c297cd81a8,Biblissima,1,institution_website,reachable_non_json,1,unresolved,False,0,,20,not_json:20,True,candidate_not_confirmed_as_manifest
+provider-f761dd27f50f2d55,Huntington Digital Library,1,institution_website,reachable_non_json,1,unresolved,False,0,,0,,False,reachable_but_no_iiif_candidate
