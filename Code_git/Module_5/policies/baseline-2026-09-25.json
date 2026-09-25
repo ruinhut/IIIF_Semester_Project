@@ -1,0 +1,14 @@
+{
+  "policy_version": "baseline-2026-09-25",
+  "description": "Conservative baseline pending supervisor confirmation of the project allowlist.",
+  "category_decisions": {
+    "public_domain": "allow",
+    "open_license": "allow",
+    "noncommercial_or_limited": "review",
+    "in_copyright": "deny",
+    "no_known_copyright": "review",
+    "institutional_terms": "review",
+    "unknown": "review",
+    "conflicting": "review"
+  }
+}
