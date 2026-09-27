@@ -8,6 +8,8 @@ import json
 from pathlib import Path
 from typing import Any, Mapping
 
+from jsonschema import Draft202012Validator
+
 from .mapper import map_media, map_record
 from .models import MEDIA_SCHEMA_VERSION, RECORD_SCHEMA_VERSION
 from .store import file_descriptor, read_jsonl, write_json, write_jsonl, write_media_csv, write_record_csv
@@ -26,8 +28,12 @@ def run_pipeline(config_path: Path) -> dict[str, Any]:
     output_dir = _resolve(base, config["output_directory"])
     log_dir = _resolve(base, config["log_directory"])
     profile = json.loads(profile_path.read_text(encoding="utf-8-sig"))
-    json.loads(record_schema_path.read_text(encoding="utf-8-sig"))
-    json.loads(media_schema_path.read_text(encoding="utf-8-sig"))
+    record_schema = json.loads(record_schema_path.read_text(encoding="utf-8-sig"))
+    media_schema = json.loads(media_schema_path.read_text(encoding="utf-8-sig"))
+    Draft202012Validator.check_schema(record_schema)
+    Draft202012Validator.check_schema(media_schema)
+    record_schema_validator = Draft202012Validator(record_schema)
+    media_schema_validator = Draft202012Validator(media_schema)
     _validate_profile(profile)
     now = datetime.now().astimezone()
     exported_at = now.isoformat(timespec="seconds")
@@ -40,7 +46,7 @@ def run_pipeline(config_path: Path) -> dict[str, Any]:
     for source in source_records:
         try:
             mapped = map_record(source, media_count=resource_counts[str(source.get("manifest_id", ""))], exported_at=exported_at)
-            issues = validate_record(mapped)
+            issues = _schema_issues(record_schema_validator, mapped) + validate_record(mapped)
         except Exception as exc:
             mapped = None
             issues = [{"code": "mapping", "path": "$", "message": str(exc)}]
@@ -65,7 +71,7 @@ def run_pipeline(config_path: Path) -> dict[str, Any]:
     rejected_media: list[dict[str, Any]] = []
     for source in source_resources:
         mapped = map_media(source)
-        issues = validate_media(mapped)
+        issues = _schema_issues(media_schema_validator, mapped) + validate_media(mapped)
         if mapped.get("record_id") not in valid_record_ids:
             issues.append({"code": "foreign_key", "path": "$.record_id", "message": "does not reference a valid object record"})
         if issues:
@@ -123,6 +129,15 @@ def run_pipeline(config_path: Path) -> dict[str, Any]:
     }
     _write_log(log_dir, now, summary)
     return summary
+
+
+def _schema_issues(validator: Draft202012Validator, value: Mapping[str, Any]) -> list[dict[str, str]]:
+    """Convert JSON Schema errors into the module's stable issue format."""
+
+    return [
+        {"code": "json_schema", "path": error.json_path, "message": error.message}
+        for error in sorted(validator.iter_errors(value), key=lambda item: item.json_path)
+    ]
 
 
 def _validate_profile(profile: Mapping[str, Any]) -> None:

@@ -54,3 +54,18 @@ def test_media_requires_image_reference():
 def test_media_rejects_negative_sequence():
     row = _media(); row["sequence"] = -1
     assert any(item["path"] == "$.sequence" for item in validate_media(row))
+
+def test_record_schema_is_valid_json_schema():
+    import json
+    from pathlib import Path
+    from jsonschema import Draft202012Validator
+    schema = json.loads((Path(__file__).parents[1] / "schemas" / "record-0.1.schema.json").read_text())
+    Draft202012Validator.check_schema(schema)
+
+
+def test_media_schema_is_valid_json_schema():
+    import json
+    from pathlib import Path
+    from jsonschema import Draft202012Validator
+    schema = json.loads((Path(__file__).parents[1] / "schemas" / "media-0.1.schema.json").read_text())
+    Draft202012Validator.check_schema(schema)
