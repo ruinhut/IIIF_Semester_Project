@@ -16,3 +16,5 @@ iiif-entry-validator = "iiif_entry_validator.cli:main"
 [tool.setuptools.packages.find]
 include = ["iiif_entry_validator*"]
 
+[tool.pytest.ini_options]
+pythonpath = ["tests"]

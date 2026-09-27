@@ -16,3 +16,5 @@ iiif-resource-discovery = "iiif_resource_discovery.cli:main"
 [tool.setuptools.packages.find]
 include = ["iiif_resource_discovery*"]
 
+[tool.pytest.ini_options]
+pythonpath = ["tests"]
