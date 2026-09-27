@@ -23,3 +23,10 @@ python -m iiif_pipeline_runner --config pipeline.smoke.json
 ```
 
 总日志保存在 `data/log/Pipeline_<本机时间>_log.json`。测试命令为 `python -m pytest -q`。
+受限的真实模块 1–7 联调使用：
+
+```powershell
+python -m iiif_pipeline_runner --config pipeline.fragmentarium-smoke.json
+```
+
+该配置只选择一个已知机构，最多发现两个 Manifest，并把结果隔离保存在 `data/e2e_validation/`，不会启动大规模抓取。

@@ -1,0 +1,11 @@
+﻿{
+  "registry_sources": ["https://registry.iiif.io/index.json"],
+  "manual_sources": [
+    "../../../Module_1/config/awesome_iiif_providers.json",
+    "../../../Module_1/config/iiif_guides_providers.json",
+    "../../../Module_1/config/manual_providers.json"
+  ],
+  "network": {"timeout_seconds": 20, "retries": 1, "max_registry_pages": 100},
+  "output_directory": "../../data/e2e_validation/module_1/output",
+  "log_directory": "../../data/e2e_validation/module_1/log"
+}

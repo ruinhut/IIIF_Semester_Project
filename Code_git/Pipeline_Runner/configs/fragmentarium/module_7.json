@@ -1,0 +1,9 @@
+﻿{
+  "normalized_records_jsonl": "../../data/e2e_validation/module_6/output/normalized_records.jsonl",
+  "normalized_resources_jsonl": "../../data/e2e_validation/module_6/output/normalized_resources.jsonl",
+  "profile_json": "../../../Module_7/profiles/provisional-0.1.json",
+  "record_schema_json": "../../../Module_7/schemas/record-0.1.schema.json",
+  "media_schema_json": "../../../Module_7/schemas/media-0.1.schema.json",
+  "output_directory": "../../data/e2e_validation/module_7/output",
+  "log_directory": "../../data/e2e_validation/module_7/log"
+}

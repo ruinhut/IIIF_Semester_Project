@@ -27,3 +27,10 @@ python -m iiif_pipeline_runner --config pipeline.smoke.json
 ```
 
 This runs Modules 4–7 against the checked local sample and normally uses Module 4's raw cache. Run unit tests with `python -m pytest -q`.
+## Bounded live Module 1–7 validation
+
+```powershell
+python -m iiif_pipeline_runner --config pipeline.fragmentarium-smoke.json
+```
+
+This selects one known provider, caps discovery at two Manifests, and writes isolated results under `data/e2e_validation/`. It checks every module boundary without starting a large harvest.
