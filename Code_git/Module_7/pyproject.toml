@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iiif-common-exporter"
+version = "0.1.0"
+description = "Module 7: validate and export normalized IIIF records in a provisional common schema"
+requires-python = ">=3.10"
+
+[project.scripts]
+iiif-common-exporter = "iiif_common_exporter.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["iiif_common_exporter*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

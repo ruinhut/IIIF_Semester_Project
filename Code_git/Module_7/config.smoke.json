@@ -1,0 +1,9 @@
+{
+  "normalized_records_jsonl": "../Module_6/data/output/normalized_records.jsonl",
+  "normalized_resources_jsonl": "../Module_6/data/output/normalized_resources.jsonl",
+  "profile_json": "profiles/provisional-0.1.json",
+  "record_schema_json": "schemas/record-0.1.schema.json",
+  "media_schema_json": "schemas/media-0.1.schema.json",
+  "output_directory": "data/output",
+  "log_directory": "data/log"
+}

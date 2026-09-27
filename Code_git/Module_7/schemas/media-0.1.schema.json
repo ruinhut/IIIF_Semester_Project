@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/iiif-time-atlas/media-0.1.schema.json",
+  "title": "IIIF Time Atlas media record",
+  "type": "object",
+  "required": ["schema_version", "resource_id", "record_id", "sequence", "canvas", "image", "rights", "source_manifest_url"],
+  "properties": {
+    "schema_version": {"const": "iiif-time-atlas-media-0.1"},
+    "resource_id": {"type": "string", "minLength": 1},
+    "record_id": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 0},
+    "canvas": {"type": "object", "required": ["id", "label"]},
+    "image": {"type": "object", "required": ["id", "type", "format", "service_urls"]},
+    "rights": {"type": "object", "required": ["category", "decision", "policy_version"]},
+    "source_manifest_url": {"type": "string", "pattern": "^https?://"}
+  }
+}
