@@ -1,0 +1,9 @@
+{
+  "profile_version": "provisional-0.1",
+  "status": "provisional",
+  "record_schema_version": "iiif-time-atlas-record-0.1",
+  "media_schema_version": "iiif-time-atlas-media-0.1",
+  "ocr_profile_schema_version": "iiif-ocr-profile-0.1",
+  "description": "Two linked common-data tables plus an OCR-oriented document profile, dataset summary and representative page candidates. Replaceable when the team common schema is finalized.",
+  "required_project_fields": ["identifier", "date", "place", "rights", "source"]
+}

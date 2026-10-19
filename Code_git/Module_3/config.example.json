@@ -1,0 +1,32 @@
+{
+  "input_jsonl": "../Module_2/data/output/checked_entry_points.jsonl",
+  "curated_endpoints": "config/provider_endpoints.json",
+  "knowledge_base": "config/discovery_knowledge.json",
+  "output_directory": "data/output",
+  "log_directory": "data/log",
+  "network": {
+    "timeout_seconds": 15,
+    "retries": 1,
+    "backoff_seconds": 0.5,
+    "max_response_bytes": 4194304,
+    "user_agent": "iiif-resource-discovery/0.3 (+EPFL DHLAB academic research)"
+  },
+  "limits": {
+    "max_providers": null,
+    "max_stream_pages_per_provider": 5,
+    "max_collections_per_provider": 20,
+    "max_html_pages_per_provider": 3,
+    "max_html_depth": 1,
+    "max_candidates_per_html_page": 50,
+    "max_machine_candidates_per_provider": 20,
+    "max_manifests_per_provider": 100
+  },
+  "html_discovery": {
+    "enabled": true,
+    "same_host_only": true,
+    "delay_between_pages_seconds": 0.1
+  },
+  "platform_discovery": {
+    "omeka_s_probe_enabled": true
+  }
+}

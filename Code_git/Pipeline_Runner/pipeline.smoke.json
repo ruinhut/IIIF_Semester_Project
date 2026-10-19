@@ -1,0 +1,10 @@
+{
+  "log_directory": "data/log",
+  "modules": [
+    {"number": 4, "name": "Manifest Fetcher and Structural Validator", "directory": "../Module_4", "package": "iiif_manifest_validator", "config": "config.smoke.json", "arguments": []},
+    {"number": 5, "name": "Rights Identification and Filtering", "directory": "../Module_5", "package": "iiif_rights_filter", "config": "config.smoke.json", "arguments": []},
+    {"number": 6, "name": "Metadata Extraction and Normalization", "directory": "../Module_6", "package": "iiif_metadata_normalizer", "config": "config.smoke.json", "arguments": []},
+    {"number": 7, "name": "Common-Schema Validation and Export", "directory": "../Module_7", "package": "iiif_common_exporter", "config": "config.smoke.json", "arguments": []},
+    {"number": 8, "name": "Linked Image Downloader", "directory": "../Module_8", "package": "iiif_image_downloader", "command": "download-example", "config": "config.smoke.json", "arguments": []}
+  ]
+}

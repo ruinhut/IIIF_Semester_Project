@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iiif-entry-validator"
+version = "0.2.0"
+description = "Module 2: accessibility and response validation for IIIF candidate entry points"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+iiif-entry-validator = "iiif_entry_validator.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["iiif_entry_validator*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["tests"]

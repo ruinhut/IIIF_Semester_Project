@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/iiif-time-atlas/ocr-profile-0.1.schema.json",
+  "title": "IIIF OCR-oriented document profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_id",
+    "manifest_url",
+    "provider_names",
+    "languages",
+    "date_profile",
+    "scripts",
+    "document_types",
+    "production_method",
+    "historical_typography",
+    "scan_quality",
+    "media_count",
+    "metadata_coverage",
+    "rights"
+  ],
+  "properties": {
+    "schema_version": {"const": "iiif-ocr-profile-0.1"},
+    "record_id": {"type": "string", "minLength": 1},
+    "manifest_url": {"type": "string", "pattern": "^https?://"},
+    "provider_names": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "title": {"type": ["string", "null"]},
+    "languages": {"type": "array", "items": {"type": "object"}},
+    "date_profile": {
+      "type": "object",
+      "required": [
+        "raw_values", "start_year", "end_year", "centuries",
+        "century_labels", "primary_century", "primary_century_label"
+      ],
+      "properties": {
+        "start_year": {"type": ["integer", "null"]},
+        "end_year": {"type": ["integer", "null"]},
+        "primary_century": {"type": ["integer", "null"]},
+        "primary_century_label": {"type": ["string", "null"]}
+      }
+    },
+    "scripts": {"type": "array", "items": {"type": "object"}},
+    "document_types": {"type": "array", "items": {"type": "object"}},
+    "production_method": {
+      "type": "object",
+      "required": ["category", "confidence", "evidence", "note"],
+      "properties": {
+        "category": {
+          "enum": [
+            "printed", "handwritten", "mixed",
+            "visual_or_non_textual", "unknown"
+          ]
+        },
+        "confidence": {"enum": ["metadata_inferred", "unknown"]},
+        "evidence": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "historical_typography": {
+      "type": "object",
+      "required": ["assessment_status", "reported_features", "note"]
+    },
+    "scan_quality": {
+      "type": "object",
+      "required": ["assessment_status", "flags", "note"],
+      "properties": {
+        "assessment_status": {"const": "not_assessed_no_image_pixels"},
+        "flags": {
+          "type": "object",
+          "required": [
+            "microfilm", "bleed_through", "damaged_pages", "blur",
+            "skew", "low_contrast"
+          ],
+          "additionalProperties": {"const": "unknown"}
+        }
+      }
+    },
+    "media_count": {"type": "integer", "minimum": 0},
+    "metadata_coverage": {"type": "object"},
+    "rights": {
+      "type": "object",
+      "required": [
+        "research_status", "academic_analysis_allowed",
+        "public_reuse_eligible"
+      ],
+      "properties": {
+        "research_status": {"const": "retained"},
+        "academic_analysis_allowed": {"const": true},
+        "public_reuse_eligible": {"type": "boolean"}
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "policy_version": "automatic-2026-09-29",
+  "description": "All records are retained for URL/metadata preservation and academic analysis. Category decisions apply only to public distribution and commercial reuse.",
+  "category_decisions": {
+    "public_domain": "allow",
+    "open_license": "allow",
+    "noncommercial_or_limited": "exclude",
+    "in_copyright": "exclude",
+    "no_known_copyright": "exclude",
+    "institutional_terms": "exclude",
+    "unknown": "exclude",
+    "conflicting": "exclude"
+  }
+}

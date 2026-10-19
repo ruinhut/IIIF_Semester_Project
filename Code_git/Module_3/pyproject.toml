@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iiif-resource-discovery"
+version = "0.3.0"
+description = "Module 3: resolve IIIF entry points and discover Manifest URLs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+iiif-resource-discovery = "iiif_resource_discovery.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["iiif_resource_discovery*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["tests"]

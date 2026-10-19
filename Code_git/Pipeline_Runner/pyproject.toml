@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iiif-pipeline-runner"
+version = "0.1.0"
+description = "Sequential runner for the eight-module IIIF harvesting pipeline"
+requires-python = ">=3.10"
+
+[project.scripts]
+iiif-pipeline = "iiif_pipeline_runner.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["iiif_pipeline_runner*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

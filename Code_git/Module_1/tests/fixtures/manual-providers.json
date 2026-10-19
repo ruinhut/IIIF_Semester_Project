@@ -1,0 +1,14 @@
+{
+  "providers": [
+    {
+      "name": "Beta Library",
+      "institution_url": "https://beta.example/",
+      "discovery_endpoint": "https://beta.example/iiif/activity",
+      "stream_label": "Digitised books",
+      "collection_focus": "books",
+      "estimated_size": 100,
+      "rights_status": "unknown",
+      "rights_values": []
+    }
+  ]
+}

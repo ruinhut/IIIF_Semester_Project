@@ -1,0 +1,776 @@
+{
+  "source": {
+    "source_type": "iiif_community_implementation_list",
+    "source_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+    "source_revision": null
+  },
+  "providers": [
+    {
+      "name": "Art Institute of Chicago",
+      "institution_url": "https://www.artic.edu/",
+      "discovery_endpoint": "https://www.artic.edu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.artic.edu/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Austrian National Library",
+      "institution_url": "https://iiif.onb.ac.at",
+      "discovery_endpoint": "https://iiif.onb.ac.at",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://iiif.onb.ac.at",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Beyond Words: Illuminating Manuscripts in Boston Collections",
+      "institution_url": "http://beyondwords2016.org/",
+      "discovery_endpoint": "http://beyondwords2016.org/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://beyondwords2016.org/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://beyondwords2016.org/objects/leaves-from-an-antiphonal-and-a-gradual",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "example",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Biblissima reconstituted manuscript demo",
+      "institution_url": "http://demos.biblissima-condorcet.fr/chateauroux/osd-demo/",
+      "discovery_endpoint": "http://demos.biblissima-condorcet.fr/chateauroux/osd-demo/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://demos.biblissima-condorcet.fr/chateauroux/osd-demo/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Carnegie Museum of Art",
+      "institution_url": "http://cmoa.org/about/",
+      "discovery_endpoint": "http://cmoa.org/about/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://cmoa.org/about/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://cmoa-records-images.s3.amazonaws.com/collection/top.json",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "collection manifest",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://cmoa-records-images.s3.amazonaws.com/fv001_001_003_001_B014_F05_002/manifest.json",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "object manifest",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://github.com/cmoa/iiif_s3",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "implementation code documentation",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Cuban Digital Collections",
+      "institution_url": "http://iiif.sld.cu/",
+      "discovery_endpoint": "http://iiif.sld.cu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://iiif.sld.cu/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "DigiPress - The newspaper portal of the Bayerische Staatsbibliothek (Bavarian State Library)",
+      "institution_url": "https://digipress.digitale-sammlungen.de/",
+      "discovery_endpoint": "https://digipress.digitale-sammlungen.de/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digipress.digitale-sammlungen.de/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://digipress.digitale-sammlungen.de/view/bsb00012484_00382_u001/1",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "sample issue",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://api.digitale-sammlungen.de/iiif/presentation/bsb00012484/view.html",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "sample collection",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00012484/manifest",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "collection manifest",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Digital Bodleian",
+      "institution_url": "https://digital.bodleian.ox.ac.uk",
+      "discovery_endpoint": "https://digital.bodleian.ox.ac.uk",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digital.bodleian.ox.ac.uk",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Digital Collections iiif of the Bavarian State Library",
+      "institution_url": "https://app.digitale-sammlungen.de/bookshelf/?language=en",
+      "discovery_endpoint": "https://app.digitale-sammlungen.de/bookshelf/?language=en",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://app.digitale-sammlungen.de/bookshelf/?language=en",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library",
+      "institution_url": "https://ostasien.digitale-sammlungen.de/?locale=en",
+      "discovery_endpoint": "https://ostasien.digitale-sammlungen.de/?locale=en",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://ostasien.digitale-sammlungen.de/?locale=en",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "DigitalGeorgetown's Integration of Universal Viewer into DSpace",
+      "institution_url": "https://repository.library.georgetown.edu/handle/10822/1044538#?m=7",
+      "discovery_endpoint": "https://repository.library.georgetown.edu/handle/10822/1044538#?m=7",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://repository.library.georgetown.edu/handle/10822/1044538#?m=7",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "DigiVatLib",
+      "institution_url": "http://digi.vatlib.it/",
+      "discovery_endpoint": "http://digi.vatlib.it/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://digi.vatlib.it/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "e-codices",
+      "institution_url": "http://www.e-codices.unifr.ch",
+      "discovery_endpoint": "http://www.e-codices.unifr.ch",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://www.e-codices.unifr.ch",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://www.e-codices.unifr.ch/en/searchresult/list/one/csg/0857",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "example",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "FromThePage",
+      "institution_url": "http://www.fromthepage.com",
+      "discovery_endpoint": "http://www.fromthepage.com",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://www.fromthepage.com",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Gallica",
+      "institution_url": "http://gallica.bnf.fr/",
+      "discovery_endpoint": "http://gallica.bnf.fr/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://gallica.bnf.fr/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://api.bnf.fr/fr/api-iiif-de-recuperation-des-images-de-gallica",
+          "endpoint_role": "provider_api",
+          "discovery_type": "ProviderAPI",
+          "label": "More technical details",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://github.com/altomator/IIIF",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "some end user demos",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Georeferencer",
+      "institution_url": "http://www.georeferencer.com/",
+      "discovery_endpoint": "http://www.georeferencer.com/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://www.georeferencer.com/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Harvard Art Museums",
+      "institution_url": "http://www.harvardartmuseums.org/",
+      "discovery_endpoint": "http://www.harvardartmuseums.org/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://www.harvardartmuseums.org/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://www.harvardartmuseums.org/tour/drawing-the-invention-of-a-modern-medium/slide/8568",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "example item",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://iiif.harvardartmuseums.org/manifests/object/299843",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "example manifest",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Historical State Search",
+      "institution_url": "http://historicalstate.lib.ncsu.edu/search",
+      "discovery_endpoint": "http://historicalstate.lib.ncsu.edu/search",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://historicalstate.lib.ncsu.edu/search",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "hocrviewer",
+      "institution_url": "https://github.com/jbaiter/hocrviewer-mirador",
+      "discovery_endpoint": "https://github.com/jbaiter/hocrviewer-mirador",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://github.com/jbaiter/hocrviewer-mirador",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://kba.github.io/hocr-spec/1.2/",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "hOCR format",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "NCSU Libraries Rare and Unique Digital Collections",
+      "institution_url": "https://d.lib.ncsu.edu/collections/",
+      "discovery_endpoint": "https://d.lib.ncsu.edu/collections/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://d.lib.ncsu.edu/collections/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "SAT Taishōzō Image DB",
+      "institution_url": "http://dzkimgs.l.u-tokyo.ac.jp/SATi/images.php?alang=en",
+      "discovery_endpoint": "http://dzkimgs.l.u-tokyo.ac.jp/SATi/images.php?alang=en",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://dzkimgs.l.u-tokyo.ac.jp/SATi/images.php?alang=en",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "The Frick Collection",
+      "institution_url": "http://digitalcollections.frick.org/digico/#/",
+      "discovery_endpoint": "http://digitalcollections.frick.org/digico/#/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "http://digitalcollections.frick.org/digico/#/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "The SCTA Reading Room",
+      "institution_url": "http://scta.lombardpress.org/",
+      "discovery_endpoint": "http://scta.lombardpress.org/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://scta.lombardpress.org/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "The Wolsey Manuscripts",
+      "institution_url": "http://www.wolseymanuscripts.ac.uk/manuscripts",
+      "discovery_endpoint": "http://www.wolseymanuscripts.ac.uk/manuscripts",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://www.wolseymanuscripts.ac.uk/manuscripts",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "University of Illinois at Urbana-Champaign Library",
+      "institution_url": "https://digital.library.illinois.edu/items?fq%5B%5D=primary_media_category%3A0",
+      "discovery_endpoint": "https://digital.library.illinois.edu/items?fq%5B%5D=primary_media_category%3A0",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digital.library.illinois.edu/items?fq%5B%5D=primary_media_category%3A0",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "vHMML",
+      "institution_url": "https://www.vhmml.org",
+      "discovery_endpoint": "https://www.vhmml.org",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.vhmml.org",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://hmml.org/",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "The Hill Museum & Manuscript Library's",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    },
+    {
+      "name": "Yale Center for British Art",
+      "institution_url": "http://britishart.yale.edu/",
+      "discovery_endpoint": "http://britishart.yale.edu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "http://britishart.yale.edu/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://collections.britishart.yale.edu/vufind/Record/1669236",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "item record",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://manifests.britishart.yale.edu/collection/top",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "top-level collection manifest",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://manifests.britishart.yale.edu/manifest/5005",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "example IIIF Presentation API manifest",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Community-maintained IIIF Catalogue entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "catalog_entry_kind": "awesome_iiif_implementation",
+      "endpoint_verification": "pending_module_2"
+    }
+  ]
+}

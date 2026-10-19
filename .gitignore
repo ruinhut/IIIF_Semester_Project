@@ -1,0 +1,37 @@
+# Local Python environments and build artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Credentials and editor-local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
+
+# Runtime datasets, generated documents, logs and download caches
+Code_git/Module_*/data/**
+!Code_git/Module_4/data/samples/
+!Code_git/Module_4/data/samples/smoke_manifests.jsonl
+Code_git/Module_3/evaluation/**
+!Code_git/Module_3/evaluation/**/
+!Code_git/Module_3/evaluation/**/*.py
+Code_git/Pipeline_Runner/data/
+Code_git/Pipeline_Runner/output/
+*.log
+*.part
+
+# OS and Office temporary files
+Thumbs.db
+.DS_Store
+~$*

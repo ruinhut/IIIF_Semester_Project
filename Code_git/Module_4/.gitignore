@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.coverage
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+data/raw_manifests/*
+!data/raw_manifests/.gitkeep
+data/output/*
+!data/output/.gitkeep
+data/log/*
+!data/log/.gitkeep

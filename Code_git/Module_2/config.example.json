@@ -1,0 +1,17 @@
+{
+  "input_jsonl": "../Module_1/data/output/selected_providers.jsonl",
+  "output_directory": "data/output",
+  "log_directory": "data/log",
+  "network": {
+    "timeout_seconds": 10,
+    "retries": 1,
+    "backoff_seconds": 0.5,
+    "max_redirects": 10,
+    "max_response_bytes": 2097152,
+    "user_agent": "iiif-entry-validator/0.2 (+EPFL DHLAB academic research)"
+  },
+  "run": {
+    "delay_between_requests_seconds": 0.1,
+    "max_records": null
+  }
+}

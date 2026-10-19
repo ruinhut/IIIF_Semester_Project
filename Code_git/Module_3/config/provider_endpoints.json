@@ -1,0 +1,195 @@
+{
+  "providers": [
+    {
+      "provider_id": "provider-1aa346b109dd7584",
+      "provider_name": "University of Cambridge",
+      "entry_points": [
+        "https://cudl.lib.cam.ac.uk/iiif/collection/all"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-provider-route-audit",
+      "evidence_directory": "evaluation/2026-10-15_provider_investigation"
+    },
+    {
+      "provider_id": "provider-5e1c10e9ec094e2b",
+      "provider_name": "Lancaster University Library",
+      "entry_points": [
+        "https://digitalcollections.lancaster.ac.uk/iiif/collection/all"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-provider-route-audit",
+      "evidence_directory": "evaluation/2026-10-15_provider_investigation"
+    },
+    {
+      "provider_id": "provider-f761dd27f50f2d55",
+      "provider_name": "Huntington Digital Library",
+      "entry_points": [
+        "https://hdl.huntington.org/iiif/2/manifest.json"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-provider-route-audit",
+      "evidence_directory": "evaluation/2026-10-15_provider_investigation"
+    },
+    {
+      "provider_id": "provider-09ef3155e4838a64",
+      "provider_name": "University of Leicester Library",
+      "entry_points": [
+        "https://specialcollections.le.ac.uk/iiif/2/manifest.json"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-provider-route-audit",
+      "evidence_directory": "evaluation/2026-10-15_provider_investigation"
+    },
+    {
+      "provider_id": "provider-e1d421d66c6ea5a2",
+      "provider_name": "Radboud University Library",
+      "entry_points": [
+        "https://bijzonderecollecties.ubn.ru.nl/iiif/2/manifest.json"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-provider-route-audit",
+      "evidence_directory": "evaluation/2026-10-15_provider_investigation"
+    },
+    {
+      "provider_id": "provider-7ec00147ef5efa4a",
+      "provider_name": "University of Washington Libraries",
+      "entry_points": [
+        "https://cdm16786.contentdm.oclc.org/iiif/2/manifest.json",
+        "https://cdm16786.contentdm.oclc.org/iiif/2/alaskawcanada/manifest.json"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-provider-route-audit",
+      "evidence_directory": "evaluation/2026-10-15_provider_investigation",
+      "coverage_note": "Top index may time out; fallback covers one collection only."
+    },
+    {
+      "provider_id": "provider-53220deba7b0d3eb",
+      "provider_name": "Durham University",
+      "entry_points": [
+        "https://iiif.durham.ac.uk/manifests/trifle/collection/index"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-provider-route-audit",
+      "evidence_directory": "evaluation/2026-10-15_provider_investigation"
+    },
+    {
+      "provider_id": "provider-d305e1aa116fabbc",
+      "provider_name": "Northwestern University",
+      "entry_points": [
+        "https://api.dc.library.northwestern.edu/api/v2/collections?as=iiif"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-provider-route-audit",
+      "evidence_directory": "evaluation/2026-10-15_provider_investigation"
+    },
+    {
+      "provider_id": "provider-5c37bd59a5085c75",
+      "provider_name": "National Library of Scotland",
+      "entry_points": [
+        "https://view.nls.uk/collections/top.json"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-provider-route-audit",
+      "evidence_directory": "evaluation/2026-10-15_provider_investigation"
+    },
+    {
+      "provider_id": "provider-2254ed59cf35068a",
+      "provider_name": "University of Toronto",
+      "entry_points": [
+        "https://iiif.library.utoronto.ca/presentation/collections"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-provider-route-audit",
+      "evidence_directory": "evaluation/2026-10-15_provider_investigation"
+    },
+    {
+      "provider_id": "provider-9dd288533f853f26",
+      "provider_name": "Digital Collections iiif of the Bavarian State Library",
+      "entry_points": [
+        "https://api.digitale-sammlungen.de/iiif/presentation/v2/collection/top"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-15-three-provider-completion",
+      "evidence_directory": "evaluation/2026-10-15_three_provider_completion",
+      "guide_url": "https://iiif.io/guides/guides/digitale-sammlungen.de/"
+    },
+    {
+      "provider_id": "provider-3e6e726f68de3eaa",
+      "provider_name": "e-rara (digitized rare books from Swiss institutions)",
+      "entry_points": [
+        "https://www.e-rara.ch/i3f/v21/collection/all",
+        "https://www.e-rara.ch/i3f/v21/collection/top"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-19-five-provider-completion",
+      "evidence_directory": "evaluation/2026-10-19_five_provider_completion"
+    },
+    {
+      "provider_id": "provider-7caa47e568a1951d",
+      "provider_name": "e-manuscripta (Manuscript material from Swiss libraries and archives)",
+      "entry_points": [
+        "https://www.e-manuscripta.ch/i3f/v21/collection/all",
+        "https://www.e-manuscripta.ch/i3f/v21/collection/top"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-19-five-provider-completion",
+      "evidence_directory": "evaluation/2026-10-19_five_provider_completion"
+    },
+    {
+      "provider_id": "provider-f1308a5306328276",
+      "provider_name": "FromThePage",
+      "entry_points": [
+        "https://fromthepage.com/iiif/collection/jeremiah-white-graves-diaries"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-19-five-provider-completion",
+      "evidence_directory": "evaluation/2026-10-19_five_provider_completion"
+    },
+    {
+      "provider_id": "provider-6fb76c5e6a229a82",
+      "provider_name": "Austrian National Library",
+      "entry_points": [
+        "https://iiif.onb.ac.at/presentation/collection/wrz_1703",
+        "https://iiif.onb.ac.at/presentation/collection/wrz_1704",
+        "https://iiif.onb.ac.at/presentation/collection/jerusalem"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-19-five-provider-completion",
+      "evidence_directory": "evaluation/2026-10-19_five_provider_completion"
+    },
+    {
+      "provider_id": "provider-5bb54fcb57aa7da9",
+      "provider_name": "University of North Texas Libraries",
+      "entry_points": [
+        "https://digital.library.unt.edu/explore/collections/UNTPC/top",
+        "https://digital.library.unt.edu/explore/collections/UNTSW/top"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-19-unt-documented-collection-api",
+      "evidence_directory": "evaluation/2026-10-19_resumed_five_provider_completion"
+    },
+    {
+      "provider_id": "provider-f034696f3b1f1c1f",
+      "provider_name": "Digital Repository of Ireland",
+      "entry_points": [
+        "https://repository.dri.ie/iiif/collection/b564jg065.json"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-19-dri-hingston-collection",
+      "evidence_directory": "evaluation/2026-10-19_third_five_provider_completion",
+      "coverage_note": "Hingston nested collection: public scholarly access; no claim of DRI-wide enumeration or publication permission."
+    },
+    {
+      "provider_id": "provider-a1544ec8d50c2696",
+      "provider_name": "The SCTA Reading Room",
+      "entry_points": [
+        "https://scta.info/iiif/plaoulcommentary/collection",
+        "https://scta.info/iiif/PetrusGracilis/collection"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-19-scta-text-collections",
+      "evidence_directory": "evaluation/2026-10-19_third_five_provider_completion",
+      "coverage_note": "Public SCTA text collections, with source image-service availability checked separately. Not all SCTA texts."
+    }
+  ]
+}

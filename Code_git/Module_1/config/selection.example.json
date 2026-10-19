@@ -1,0 +1,12 @@
+{
+  "include_provider_ids": [],
+  "include_exact_names": [],
+  "include_name_keywords": [],
+  "include_hosts": [],
+  "exclude_name_keywords": [],
+  "exclude_hosts": [],
+  "record_statuses": [
+    "active"
+  ],
+  "limit": null
+}

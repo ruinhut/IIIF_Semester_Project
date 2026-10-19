@@ -1,0 +1,2056 @@
+{
+  "source": {
+    "source_type": "iiif_official_resource_guide",
+    "source_url": "https://guides.iiif.io/finding_resources/",
+    "source_revision": null
+  },
+  "providers": [
+    {
+      "name": "Bavarian State Library (BSB) / Munich Digitization Centre (MDZ)",
+      "institution_url": "https://www.digitale-sammlungen.de/en/",
+      "discovery_endpoint": "https://www.digitale-sammlungen.de/en/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.digitale-sammlungen.de/en/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.digitale-sammlungen.de/en/search?filter=features%3A%22iiif%22",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/collection/top",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digitale-sammlungen.de/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Bibliothèque nationale de France (BnF)",
+      "institution_url": "https://gallica.bnf.fr",
+      "discovery_endpoint": "https://gallica.bnf.fr",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://gallica.bnf.fr",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/gallica.bnf.fr/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Biblissima",
+      "institution_url": "https://portail.biblissima.fr/en/",
+      "discovery_endpoint": "https://portail.biblissima.fr/en/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://portail.biblissima.fr/en/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/biblissima.fr/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Blavatnik Archive",
+      "institution_url": "https://www.blavatnikarchive.org/collections",
+      "discovery_endpoint": "https://www.blavatnikarchive.org/collections",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://www.blavatnikarchive.org/collections",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/blavatnikarchive.org/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Bodmer Lab",
+      "institution_url": "https://bodmerlab.unige.ch/fr/search?keywords=",
+      "discovery_endpoint": "https://bodmerlab.unige.ch/fr/search?keywords=",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://bodmerlab.unige.ch/fr/search?keywords=",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/bodmerlab.unige.ch/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "British Library",
+      "institution_url": "https://www.bl.uk/collection-guides/iiif",
+      "discovery_endpoint": "https://www.bl.uk/collection-guides/iiif",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://www.bl.uk/collection-guides/iiif",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100056663076.0x000001",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://player.vimeo.com/video/623316424?h=09d21d7477",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/bl.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Brown University Digital Repository",
+      "institution_url": "https://repository.library.brown.edu/studio/",
+      "discovery_endpoint": "https://repository.library.brown.edu/studio/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://repository.library.brown.edu/studio/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/repository.library.brown.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "Cardiff University",
+      "institution_url": "https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1",
+      "discovery_endpoint": "https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://librarysearch.cardiff.ac.uk/permalink/44WHELF_CAR/1ucm8iq/alma9911991475402420",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Ellor-gāst",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/librarysearch.cardiff.ac.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Cultural Japan",
+      "institution_url": "https://cultural.jp/",
+      "discovery_endpoint": "https://cultural.jp/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://cultural.jp/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/cultural.jp/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "David Rumsey Map Collection",
+      "institution_url": "https://www.davidrumsey.com/",
+      "discovery_endpoint": "https://www.davidrumsey.com/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.davidrumsey.com/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/davidrumsey.com/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Digital Commonwealth",
+      "institution_url": "https://digitalcommonwealth.org",
+      "discovery_endpoint": "https://digitalcommonwealth.org",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digitalcommonwealth.org",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.digitalcommonwealth.org/search/commonwealth:668305767",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "https://www.digitalcommonwealth.org/search/commonwealth:668305767",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.digitalcommonwealth.org/search/commonwealth:668305767](https://www.digitalcommonwealth.org/search/commonwealth:668305767",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.digitalcommonwealth.org/search/commonwealth:668305767/manifest",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "https://www.digitalcommonwealth.org/search/commonwealth:668305767/manifest",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.digitalcommonwealth.org/search/commonwealth:668305767/manifest](https://www.digitalcommonwealth.org/search/commonwealth:668305767/manifest",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://collections.leventhalmap.org",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Digital Collections portal",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://collections.leventhalmap.org/search/commonwealth:x059cb10w",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "https://collections.leventhalmap.org/search/commonwealth:x059cb10w",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://collections.leventhalmap.org/search/commonwealth:x059cb10w](https://collections.leventhalmap.org/search/commonwealth:x059cb10w",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://collections.leventhalmap.org/search/commonwealth:x059cb10w/manifest",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "https://collections.leventhalmap.org/search/commonwealth:x059cb10w/manifest",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://collections.leventhalmap.org/search/commonwealth:x059cb10w/manifest](https://collections.leventhalmap.org/search/commonwealth:x059cb10w/manifest",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.digitalcommonwealth.org/api",
+          "endpoint_role": "provider_api",
+          "discovery_type": "ProviderAPI",
+          "label": "Digital Commonwealth API documentation",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digitalcommonwealth.org/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "yes"
+    },
+    {
+      "name": "Digital Repository of Ireland",
+      "institution_url": "https://dri.ie/",
+      "discovery_endpoint": "https://dri.ie/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://dri.ie/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/repository.dri.ie/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Durham University",
+      "institution_url": "https://discover.durham.ac.uk/discovery/search?tab=MUSECOLL&search_scope=IIIF&vid=44DUR_INST:VU1&offset=0",
+      "discovery_endpoint": "https://discover.durham.ac.uk/discovery/search?tab=MUSECOLL&search_scope=IIIF&vid=44DUR_INST:VU1&offset=0",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://discover.durham.ac.uk/discovery/search?tab=MUSECOLL&search_scope=IIIF&vid=44DUR_INST:VU1&offset=0",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://libguides.durham.ac.uk/asc-digitised-collections-online/iiif",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "library guide",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/discover.durham.ac.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "e-codices - Virtual Manuscript Library of Switzerland",
+      "institution_url": "https://e-codices.ch/en",
+      "discovery_endpoint": "https://e-codices.ch/en",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://e-codices.ch/en",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/e-codices.ch/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "e-manuscripta (Manuscript material from Swiss libraries and archives)",
+      "institution_url": "https://www.e-manuscripta.ch/",
+      "discovery_endpoint": "https://www.e-manuscripta.ch/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.e-manuscripta.ch/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/e-manuscripta.ch/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "e-rara (digitized rare books from Swiss institutions)",
+      "institution_url": "https://www.e-rara.ch/",
+      "discovery_endpoint": "https://www.e-rara.ch/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.e-rara.ch/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/e-rara.ch/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Ecole Polytechnique Fédérale de Lausanne (EPFL)",
+      "institution_url": "https://plume.epfl.ch/",
+      "discovery_endpoint": "https://plume.epfl.ch/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://plume.epfl.ch/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/plume.epfl.ch/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Europeana",
+      "institution_url": "https://www.europeana.eu/portal/en/search?q=provider_aggregation_edm_isShownBy%3A*iiif*&view=grid",
+      "discovery_endpoint": "https://www.europeana.eu/portal/en/search?q=provider_aggregation_edm_isShownBy%3A*iiif*&view=grid",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.europeana.eu/portal/en/search?q=provider_aggregation_edm_isShownBy%3A*iiif*&view=grid",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.europeana.eu/en/item/1223/item_227XM75SDXCJCZT3YLAS5FNHV2U7CM5W",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/europeana.eu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Folger Shakespeare Library",
+      "institution_url": "https://collections.folger.edu/",
+      "discovery_endpoint": "https://collections.folger.edu/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://collections.folger.edu/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/collections.folger.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments",
+      "institution_url": "https://fragmentarium.ms/search",
+      "discovery_endpoint": "https://fragmentarium.ms/search",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://fragmentarium.ms/search",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/fragmentarium.ms/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Ghent University",
+      "institution_url": "https://lib.ugent.be/en",
+      "discovery_endpoint": "https://lib.ugent.be/en",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://lib.ugent.be/en",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/lib.ugent.be/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Göttingen University Collections",
+      "institution_url": "https://gdz.sub.uni-goettingen.de/",
+      "discovery_endpoint": "https://gdz.sub.uni-goettingen.de/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://gdz.sub.uni-goettingen.de/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/gdz.sub.uni-goettingen.de/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Harvard Art Museum",
+      "institution_url": "https://harvardartmuseums.org/collections",
+      "discovery_endpoint": "https://harvardartmuseums.org/collections",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://harvardartmuseums.org/collections",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/harvardartmuseums.org/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "Harvard University Digital Collections",
+      "institution_url": "https://library.harvard.edu/digital-collections",
+      "discovery_endpoint": "https://library.harvard.edu/digital-collections",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://library.harvard.edu/digital-collections",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/library.harvard.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Huntington Digital Library",
+      "institution_url": "https://hdl.huntington.org/digital/",
+      "discovery_endpoint": "https://hdl.huntington.org/digital/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://hdl.huntington.org/digital/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/hdl.huntington.org/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Indigenous Digital Archive",
+      "institution_url": "https://omeka.dlcs-ida.org/s/ida/page/home",
+      "discovery_endpoint": "https://omeka.dlcs-ida.org/s/ida/page/home",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://omeka.dlcs-ida.org/s/ida/page/home",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/omeka.dlcs-ida.org/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Internet Archive",
+      "institution_url": "https://archive.org/",
+      "discovery_endpoint": "https://archive.org/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://archive.org/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://archive.org/details/b29000427_0001/page/n13/mode/2up",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://iiif.archive.org/iiif/:id/manifest.json",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://iiif.archive.org/iiif/b29000427_0001/manifest.json",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://iiif.archive.org/iiif/helper/:id/",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://iiif.archive.org/iiif/helper/b29000427_0001",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://help.archive.org/help/books-and-texts-a-basic-guide/",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://archive.org/details/tx-burnet-123835-1909-125000-geo",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "An example.",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://help.archive.org/help/category/archive-org/uploading/",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Internet Archive Documentation on uploading",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/archive.org/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "J. Paul Getty Trust",
+      "institution_url": "https://search.getty.edu/gateway/search?q=&cat=highlight&f=%22Open+Content+Images%22&rows=10&srt=a&dir=s&pg=1",
+      "discovery_endpoint": "https://search.getty.edu/gateway/search?q=&cat=highlight&f=%22Open+Content+Images%22&rows=10&srt=a&dir=s&pg=1",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://search.getty.edu/gateway/search?q=&cat=highlight&f=%22Open+Content+Images%22&rows=10&srt=a&dir=s&pg=1",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/search.getty.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "KU Leuven",
+      "institution_url": "https://kuleuven.limo.libis.be/discovery",
+      "discovery_endpoint": "https://kuleuven.limo.libis.be/discovery",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://kuleuven.limo.libis.be/discovery",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/kuleuven.limo.libis.be/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Lancaster University Library",
+      "institution_url": "https://digitalcollections.lancaster.ac.uk/",
+      "discovery_endpoint": "https://digitalcollections.lancaster.ac.uk/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://digitalcollections.lancaster.ac.uk/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digitalcollections.lancaster.ac.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Leiden University",
+      "institution_url": "https://digitalcollections.universiteitleiden.nl/",
+      "discovery_endpoint": "https://digitalcollections.universiteitleiden.nl/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://digitalcollections.universiteitleiden.nl/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/universiteitleiden.nl/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Library of Congress",
+      "institution_url": "https://www.loc.gov/collections/",
+      "discovery_endpoint": "https://www.loc.gov/collections/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://www.loc.gov/collections/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/loc.gov/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "National Gallery of Art Library",
+      "institution_url": "https://library.nga.gov/discovery/collectionDiscovery?vid=01NGA_INST:NGA&collectionId=8157583990004896",
+      "discovery_endpoint": "https://library.nga.gov/discovery/collectionDiscovery?vid=01NGA_INST:NGA&collectionId=8157583990004896",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://library.nga.gov/discovery/collectionDiscovery?vid=01NGA_INST:NGA&collectionId=8157583990004896",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://libraryimage.nga.gov/uv/?manifest=https://libraryimage.nga.gov/manifest/mms/99682033504896.json#?c=0&m=0&s=0&cv=0&xywh=-2835%2C-267%2C9101%2C5333",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "Grandezze della città di Roma antiche e moderne come al presente si ritrovano, di nuovo ristampato in quattro linguaggi: latino, volgare, francese...",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/library.nga.gov/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "National Library of Finland (Finna.fi)",
+      "institution_url": "https://www.finna.fi",
+      "discovery_endpoint": "https://www.finna.fi",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.finna.fi",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.finna.fi/Record/jykdok.2222144?sid=5352321459&lng=en-gb",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.finna.fi/Search/Results?sort=relevance&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&lookfor0%5B%5D=&type0%5B%5D=AllFields&join=AND&filter%5B%5D=%7Emedia_type_str_mv%3A%220%2Fx-iiif%2F%22&limit=20",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "direct link",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.finna.fi/Search/Advanced",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "advanced search",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/finna.fi/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "National Library of Scotland",
+      "institution_url": "https://digital.nls.uk/gallery/",
+      "discovery_endpoint": "https://digital.nls.uk/gallery/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digital.nls.uk/gallery/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digital.nls.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "National Library of Wales",
+      "institution_url": "https://www.library.wales/",
+      "discovery_endpoint": "https://www.library.wales/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.library.wales/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/discover.library.wales/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "National Palace Museum (Taiwan)",
+      "institution_url": "https://digitalarchive.npm.gov.tw/",
+      "discovery_endpoint": "https://digitalarchive.npm.gov.tw/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digitalarchive.npm.gov.tw/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digitalarchive.npm.gov.tw/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "North Carolina State University Libraries",
+      "institution_url": "https://d.lib.ncsu.edu/collections/",
+      "discovery_endpoint": "https://d.lib.ncsu.edu/collections/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://d.lib.ncsu.edu/collections/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/d.lib.ncsu.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Northwestern University",
+      "institution_url": "https://digitalcollections.library.northwestern.edu/collections/",
+      "discovery_endpoint": "https://digitalcollections.library.northwestern.edu/collections/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://digitalcollections.library.northwestern.edu/collections/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digitalcollections.library.northwestern.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Parliamentary Archives - UK",
+      "institution_url": "https://archives.parliament.uk/",
+      "discovery_endpoint": "https://archives.parliament.uk/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://archives.parliament.uk/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://iiif.collectionsbase.org.uk/GB61/GB61_BAD_1/e5tD3",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "GB61_BAD_1",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/archives.parliament.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Princeton University Art Museum",
+      "institution_url": "https://artmuseum.princeton.edu/search/collections",
+      "discovery_endpoint": "https://artmuseum.princeton.edu/search/collections",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://artmuseum.princeton.edu/search/collections",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/artmuseum.princeton.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "Princeton University Libraries",
+      "institution_url": "https://dpul.princeton.edu/",
+      "discovery_endpoint": "https://dpul.princeton.edu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://dpul.princeton.edu/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/dpul.princeton.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "Qatar National Library",
+      "institution_url": "https://www.qdl.qa/en/search/site/?f[0]=document_source:archive_source",
+      "discovery_endpoint": "https://www.qdl.qa/en/search/site/?f[0]=document_source:archive_source",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.qdl.qa/en/search/site/?f[0]=document_source:archive_source",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/qdl.qa/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Radboud University Library",
+      "institution_url": "https://bijzonderecollecties.ubn.ru.nl/",
+      "discovery_endpoint": "https://bijzonderecollecties.ubn.ru.nl/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://bijzonderecollecties.ubn.ru.nl/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/bijzonderecollecties.ubn.ru.nl/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Smithsonian Institution",
+      "institution_url": "https://collections.si.edu/search/results.htm?q=&iiif.enabled=true",
+      "discovery_endpoint": "https://collections.si.edu/search/results.htm?q=&iiif.enabled=true",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://collections.si.edu/search/results.htm?q=&iiif.enabled=true",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/collections.si.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Smithsonian National Zoo",
+      "institution_url": "https://nationalzoo.si.edu/openaccess/search?edan_fq%5B%5D=online_visual_material%3Atrue",
+      "discovery_endpoint": "https://nationalzoo.si.edu/openaccess/search?edan_fq%5B%5D=online_visual_material%3Atrue",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://nationalzoo.si.edu/openaccess/search?edan_fq%5B%5D=online_visual_material%3Atrue",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/nationalzoo.si.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Stanford University",
+      "institution_url": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+      "discovery_endpoint": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/searchworks.stanford.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "UCLA Library Digital Collections",
+      "institution_url": "https://digital.library.ucla.edu/",
+      "discovery_endpoint": "https://digital.library.ucla.edu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digital.library.ucla.edu/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digital.library.ucla.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Universitaet Jena",
+      "institution_url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+      "discovery_endpoint": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/collections.thulb.uni-jena.de/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "University College Dublin Libraries",
+      "institution_url": "https://digital.ucd.ie/",
+      "discovery_endpoint": "https://digital.ucd.ie/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digital.ucd.ie/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digital.ucd.ie/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "University of Cambridge",
+      "institution_url": "https://cudl.lib.cam.ac.uk/",
+      "discovery_endpoint": "https://cudl.lib.cam.ac.uk/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://cudl.lib.cam.ac.uk/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://cudl.lib.cam.ac.uk/view/MS-ADD-00269/1",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/cudl.lib.cam.ac.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "University of Leeds Libraries' Cultural Collections",
+      "institution_url": "https://library.leeds.ac.uk/info/1500/special_collections",
+      "discovery_endpoint": "https://library.leeds.ac.uk/info/1500/special_collections",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://library.leeds.ac.uk/info/1500/special_collections",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/library.leeds.ac.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "University of Leicester Library",
+      "institution_url": "https://specialcollections.le.ac.uk/",
+      "discovery_endpoint": "https://specialcollections.le.ac.uk/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://specialcollections.le.ac.uk/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://specialcollections.le.ac.uk/digital/collection/p16445coll16/id/2217/rec/16",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "A view from Durdham Down near Bristol",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/specialcollections.le.ac.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "University of North Texas Libraries",
+      "institution_url": "https://digital.library.unt.edu/",
+      "discovery_endpoint": "https://digital.library.unt.edu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digital.library.unt.edu/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digital.library.unt.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "University of Oxford (Digital Bodleian)",
+      "institution_url": "https://digital.bodleian.ox.ac.uk/",
+      "discovery_endpoint": "https://digital.bodleian.ox.ac.uk/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digital.bodleian.ox.ac.uk/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://digital.bodleian.ox.ac.uk/objects/faeff7fb-f8a7-44b5-95ed-cff9a9ffd198/",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digital.bodleian.ox.ac.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "University of St. Andrews",
+      "institution_url": "https://www.st-andrews.ac.uk/collections",
+      "discovery_endpoint": "https://www.st-andrews.ac.uk/collections",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://www.st-andrews.ac.uk/collections",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/st-andrews.ac.uk/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "University of Toronto",
+      "institution_url": "https://collections.library.utoronto.ca/",
+      "discovery_endpoint": "https://collections.library.utoronto.ca/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://collections.library.utoronto.ca/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://collections.library.utoronto.ca/explore/faq/getting_started",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "https://collections.library.utoronto.ca/explore/faq/getting_started",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://collections.library.utoronto.ca/explore/faq/getting_started](https://collections.library.utoronto.ca/explore/faq/getting_started",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/library.utoronto.ca/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "University of Washington Libraries",
+      "institution_url": "https://content.lib.washington.edu/",
+      "discovery_endpoint": "https://content.lib.washington.edu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://content.lib.washington.edu/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/content.lib.washington.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Utrecht University Library",
+      "institution_url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+      "discovery_endpoint": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/objects.library.uu.nl/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Vatican Library",
+      "institution_url": "https://digi.vatlib.it/",
+      "discovery_endpoint": "https://digi.vatlib.it/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digi.vatlib.it/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/vatlib.it/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Villanova University",
+      "institution_url": "https://digital.library.villanova.edu/",
+      "discovery_endpoint": "https://digital.library.villanova.edu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://digital.library.villanova.edu/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/digital.library.villanova.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "Wellcome Collection",
+      "institution_url": "https://wellcomecollection.org/collections",
+      "discovery_endpoint": "https://wellcomecollection.org/collections",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://wellcomecollection.org/collections",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/wellcomelibrary.org/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Wikidata",
+      "institution_url": "https://www.wikidata.org",
+      "discovery_endpoint": "https://www.wikidata.org",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.wikidata.org",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Property:P6108",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "IIIF Manifest (P6108)",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://w.wiki/37hQ",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "List of all IIIF Manifests on Wikidata by Collection",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://w.wiki/37hF",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "IIIF manifests of works by Turner",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://w.wiki/37hH",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "IIIF manifests for self-portrait paintings",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://w.wiki/37hJ",
+          "endpoint_role": "manifest",
+          "discovery_type": "Manifest",
+          "label": "IIIF manifests of illuminated manuscripts",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/www.wikidata.org/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "Wikipedia",
+      "institution_url": "https://www.wikipedia.org/",
+      "discovery_endpoint": "https://www.wikipedia.org/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.wikipedia.org/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=[file_name]/info.json](https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=[file_name]/info.json",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Annunciation_(Leonardo",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Annunciation",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Annunciation_(Leonardo",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "https://commons.wikimedia.org/wiki/File:Annunciation_(Leonardo).jpg",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Annunciation_(Leonardo).jpg](https://commons.wikimedia.org/wiki/File:Annunciation_(Leonardo).jpg",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=Annunciation_(Leonardo",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=Annunciation_(Leonardo).jpg/info.json",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "url": "https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=Annunciation_(Leonardo).jpg/info.json](https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=Annunciation_(Leonardo).jpg/info.json",
+          "endpoint_role": "related_resource",
+          "discovery_type": "RelatedResource",
+          "label": "Literal source URL",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/wikipedia.org/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "no"
+    },
+    {
+      "name": "World Digitial Library",
+      "institution_url": "https://www.wdl.org/",
+      "discovery_endpoint": "https://www.wdl.org/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://www.wdl.org/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/wdl.org/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "associate"
+    },
+    {
+      "name": "Yale Center for British Art",
+      "institution_url": "https://collections.britishart.yale.edu/",
+      "discovery_endpoint": "https://collections.britishart.yale.edu/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://collections.britishart.yale.edu/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/collections.britishart.yale.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Yale Peabody Museum",
+      "institution_url": "https://peabody.yale.edu/explore/collections",
+      "discovery_endpoint": "https://peabody.yale.edu/explore/collections",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://peabody.yale.edu/explore/collections",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/collections.peabody.yale.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Yale University Art Gallery",
+      "institution_url": "https://artgallery.yale.edu/",
+      "discovery_endpoint": "https://artgallery.yale.edu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoints": [
+        {
+          "url": "https://artgallery.yale.edu/",
+          "endpoint_role": "institution_website",
+          "discovery_type": "InstitutionWebsite",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/artgallery.yale.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    },
+    {
+      "name": "Yale University Library",
+      "institution_url": "https://collections.library.yale.edu/",
+      "discovery_endpoint": "https://collections.library.yale.edu/",
+      "discovery_type": "Collection",
+      "endpoints": [
+        {
+          "url": "https://collections.library.yale.edu/",
+          "endpoint_role": "presentation_collection",
+          "discovery_type": "Collection",
+          "label": "Institution homepage",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "stream_label": "Official IIIF resource-guide entry",
+      "collection_focus": null,
+      "estimated_size": null,
+      "rights_status": "unknown",
+      "rights_values": [],
+      "record_status": "active",
+      "source_page_url": "https://guides.iiif.io/guides/collections.library.yale.edu/",
+      "catalog_entry_kind": "iiif_resource_guide",
+      "endpoint_verification": "pending_module_2",
+      "iiif_consortium_status": "full"
+    }
+  ]
+}

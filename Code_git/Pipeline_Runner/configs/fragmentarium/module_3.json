@@ -1,0 +1,10 @@
+﻿{
+  "input_jsonl": "../../data/e2e_validation/module_2/output/checked_entry_points.jsonl",
+  "curated_endpoints": "../../../Module_3/config/provider_endpoints.json",
+  "knowledge_base": "../../../Module_3/config/discovery_knowledge.json",
+  "output_directory": "../../data/e2e_validation/module_3/output",
+  "log_directory": "../../data/e2e_validation/module_3/log",
+  "network": {"timeout_seconds": 15, "retries": 1, "backoff_seconds": 0.2, "max_response_bytes": 4194304, "user_agent": "iiif-resource-discovery/0.3 (+EPFL DHLAB academic research)"},
+  "limits": {"max_providers": null, "max_stream_pages_per_provider": 1, "max_collections_per_provider": 2, "max_html_pages_per_provider": 1, "max_html_depth": 1, "max_candidates_per_html_page": 10, "max_machine_candidates_per_provider": 10, "max_manifests_per_provider": 2},
+  "html_discovery": {"enabled": true, "same_host_only": true, "delay_between_pages_seconds": 0.05}
+}

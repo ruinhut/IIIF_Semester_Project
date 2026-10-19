@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iiif-image-downloader"
+version = "0.2.0"
+description = "Module 8: download linked IIIF images, metadata, and provider reference text"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+iiif-image-downloader = "iiif_image_downloader.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["iiif_image_downloader*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

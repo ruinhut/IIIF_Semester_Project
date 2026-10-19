@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iiif-manifest-validator"
+version = "0.1.0"
+description = "Module 4: fetch, cache, and structurally validate IIIF Presentation Manifests"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+iiif-manifest-validator = "iiif_manifest_validator.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["iiif_manifest_validator*"]

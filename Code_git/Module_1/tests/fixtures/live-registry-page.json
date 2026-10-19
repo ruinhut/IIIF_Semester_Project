@@ -1,0 +1,42 @@
+{
+  "@context": "http://iiif.io/api/discovery/1/context.json",
+  "id": "https://registry.iiif.io/page-0.json",
+  "type": "OrderedCollectionPage",
+  "partOf": {
+    "id": "https://registry.iiif.io/index.json",
+    "type": "OrderedCollection"
+  },
+  "orderedItems": [
+    {
+      "type": "Update",
+      "object": {
+        "id": "https://alpha.example/iiif/activity",
+        "type": "OrderedCollection",
+        "nameMap": {
+          "en": [
+            "Museum collections"
+          ]
+        },
+        "totalItems": 42,
+        "rights": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "actor": [
+        {
+          "en": [
+            "Alpha Museum"
+          ],
+          "type": "Organization"
+        },
+        {
+          "id": "https://alpha.example/",
+          "label": {
+            "en": [
+              "Alpha digital collections"
+            ]
+          },
+          "type": "Organization"
+        }
+      ]
+    }
+  ]
+}

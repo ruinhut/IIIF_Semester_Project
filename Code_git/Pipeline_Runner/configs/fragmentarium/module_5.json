@@ -1,0 +1,9 @@
+{
+  "validated_manifests_jsonl": "../../data/e2e_validation/module_4/output/validated_manifests.jsonl",
+  "resource_inventory_jsonl": "../../data/e2e_validation/module_4/output/manifest_resource_inventory.jsonl",
+  "module_4_directory": "../../data/e2e_validation/module_4",
+  "policy_file": "../../../Module_5/policies/automatic-2026-09-29.json",
+  "output_directory": "../../data/e2e_validation/module_5/output",
+  "log_directory": "../../data/e2e_validation/module_5/log",
+  "run": {"max_records": 2}
+}

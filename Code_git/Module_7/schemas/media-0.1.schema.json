@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/iiif-time-atlas/media-0.1.schema.json",
+  "title": "IIIF Time Atlas media record",
+  "type": "object",
+  "required": ["schema_version", "resource_id", "record_id", "sequence", "canvas", "image", "rights", "source_manifest_url"],
+  "properties": {
+    "schema_version": {"const": "iiif-time-atlas-media-0.1"},
+    "resource_id": {"type": "string", "minLength": 1},
+    "record_id": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 0},
+    "canvas": {"type": "object", "required": ["id", "label"]},
+    "image": {
+      "type": "object",
+      "required": ["id", "source_id", "download_url", "info_json_url", "type", "format", "service_urls"],
+      "properties": {
+        "id": {"type": ["string", "null"]},
+        "source_id": {"type": ["string", "null"]},
+        "download_url": {"type": ["string", "null"]},
+        "info_json_url": {"type": ["string", "null"]},
+        "service_urls": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": ["category", "decision", "decision_scope", "research_status", "academic_analysis_allowed", "public_reuse_eligible", "public_distribution_allowed", "commercial_use_allowed", "policy_version"],
+      "properties": {
+        "decision": {"enum": ["allow", "exclude"]},
+        "decision_scope": {"const": "public_reuse"},
+        "research_status": {"const": "retained"},
+        "academic_analysis_allowed": {"const": true},
+        "public_reuse_eligible": {"type": "boolean"},
+        "public_distribution_allowed": {"type": "boolean"},
+        "commercial_use_allowed": {"type": "boolean"}
+      }
+    },
+    "source_manifest_url": {"type": "string", "pattern": "^https?://"}
+  }
+}

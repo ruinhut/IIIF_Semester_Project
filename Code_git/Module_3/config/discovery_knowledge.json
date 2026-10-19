@@ -1,0 +1,3529 @@
+{
+  "knowledge_base_version": "1.0",
+  "providers": [
+    {
+      "provider_id": "provider-f2683615336e129a",
+      "provider_name": "Ecole Polytechnique Fédérale de Lausanne (EPFL)",
+      "investigation_id": "2026-10-01-epfl-plume-omeka-s",
+      "investigation_document": "knowledge/institutions/2026-10-01_epfl_plume.md",
+      "skills": [
+        {
+          "skill_id": "omeka-s-items-to-iiif-manifests",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://plume.epfl.ch/api/items",
+          "records_path": "$",
+          "identifier_path": "o:id",
+          "required_nonempty_paths": [
+            "o:media"
+          ],
+          "filters": [],
+          "query_parameters": {},
+          "pagination": {
+            "page_parameter": "page",
+            "page_size_parameter": "per_page",
+            "page_size": 10,
+            "start_page": 1,
+            "max_pages": 2
+          },
+          "max_identifiers": 10,
+          "manifest_url_templates": [
+            "https://plume.epfl.ch/iiif/3/{identifier}/manifest",
+            "https://plume.epfl.ch/iiif-presentation/3/item/{identifier}/manifest"
+          ],
+          "request_delay_seconds": 0.1
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-691126b502b5821e",
+      "provider_name": "Art Institute of Chicago",
+      "investigation_id": "2026-10-01-artic-held-out-transfer",
+      "investigation_document": "knowledge/institutions/2026-10-01_artic_transfer_test.md",
+      "skills": [
+        {
+          "skill_id": "artwork-api-identifiers-to-iiif-manifests",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://api.artic.edu/api/v1/artworks",
+          "records_path": "data",
+          "identifier_path": "id",
+          "required_nonempty_paths": [],
+          "filters": [
+            {
+              "path": "is_public_domain",
+              "equals": true
+            }
+          ],
+          "query_parameters": {
+            "fields": "id,is_public_domain"
+          },
+          "pagination": {
+            "page_parameter": "page",
+            "page_size_parameter": "limit",
+            "page_size": 10,
+            "start_page": 1,
+            "max_pages": 2
+          },
+          "max_identifiers": 10,
+          "manifest_url_templates": [
+            "https://api.artic.edu/api/v1/artworks/{identifier}/manifest.json"
+          ],
+          "request_delay_seconds": 1.0
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-b49c571f8e0c0ba0",
+      "provider_name": "Wellcome Collection",
+      "investigation_id": "2026-10-15-wellcome-catalogue-links",
+      "investigation_document": "knowledge/institutions/2026-10-15_provider_routes.md",
+      "skills": [
+        {
+          "skill_id": "wellcome-paginated-declared-manifests",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://api.wellcomecollection.org/catalogue/v2/works",
+          "records_path": "results",
+          "manifest_url_path": "items.*.locations.*.url",
+          "query_parameters": {
+            "items.locations.locationType": "iiif-presentation",
+            "include": "items"
+          },
+          "pagination": {
+            "page_parameter": "page",
+            "page_size_parameter": "pageSize",
+            "page_size": 5,
+            "max_pages": 3
+          },
+          "request_delay_seconds": 0.25
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-ef8c581d8869b1b6",
+      "provider_name": "e-codices - Virtual Manuscript Library of Switzerland",
+      "investigation_id": "2026-10-15-ecodices-targeted-catalogue",
+      "investigation_document": "knowledge/institutions/2026-10-15_provider_routes.md",
+      "skills": [
+        {
+          "skill_id": "ecodices-catalogue-record-identifiers",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://www.e-codices.ch/en/list/all",
+          "record_url_pattern": "/en/list/one/(?P<library>[^/]+)/(?P<shelfmark>[^/?#]+)",
+          "identifier_template": "{library}-{shelfmark}",
+          "manifest_url_templates": [
+            "https://www.e-codices.ch/metadata/iiif/{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_size": 100,
+            "max_pages": 1
+          },
+          "max_identifiers": 5,
+          "request_delay_seconds": 0.3,
+          "coverage_note": "One listing response only; catalogue pagination is not yet established."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-858c23aa6223857c",
+      "provider_name": "e-codices",
+      "investigation_id": "2026-10-15-ecodices-targeted-catalogue",
+      "investigation_document": "knowledge/institutions/2026-10-15_provider_routes.md",
+      "skills": [
+        {
+          "skill_id": "ecodices-catalogue-record-identifiers",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://www.e-codices.ch/en/list/all",
+          "record_url_pattern": "/en/list/one/(?P<library>[^/]+)/(?P<shelfmark>[^/?#]+)",
+          "identifier_template": "{library}-{shelfmark}",
+          "manifest_url_templates": [
+            "https://www.e-codices.ch/metadata/iiif/{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_size": 100,
+            "max_pages": 1
+          },
+          "max_identifiers": 5,
+          "request_delay_seconds": 0.3,
+          "coverage_note": "One listing response only; catalogue pagination is not yet established."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-d305e1aa116fabbc",
+      "provider_name": "Northwestern University",
+      "investigation_id": "2026-10-15-northwestern-api-transfer",
+      "investigation_document": "knowledge/institutions/2026-10-15_provider_routes.md",
+      "skills": [
+        {
+          "skill_id": "northwestern-paginated-declared-manifests",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://api.dc.library.northwestern.edu/api/v2/search",
+          "records_path": "data",
+          "manifest_url_path": "iiif_manifest",
+          "query_parameters": {
+            "query": "*"
+          },
+          "pagination": {
+            "page_parameter": "page",
+            "page_size_parameter": "size",
+            "page_size": 5,
+            "max_pages": 3
+          },
+          "request_delay_seconds": 0.25
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-32c223e0cddf015c",
+      "provider_name": "Brown University Digital Repository",
+      "investigation_id": "2026-10-15-brown-search",
+      "investigation_document": "knowledge/institutions/2026-10-15_provider_routes.md",
+      "skills": [
+        {
+          "skill_id": "brown-image-search-to-manifests",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://repository.library.brown.edu/api/search/",
+          "records_path": "response.docs",
+          "identifier_path": "pid",
+          "query_parameters": {
+            "q": "object_type:image"
+          },
+          "pagination": {
+            "page_parameter": "start",
+            "page_size_parameter": "rows",
+            "start_page": 0,
+            "page_step": 5,
+            "page_size": 5,
+            "max_pages": 2
+          },
+          "max_identifiers": 10,
+          "manifest_url_templates": [
+            "https://repository.library.brown.edu/iiif/presentation/{identifier}/manifest.json"
+          ],
+          "request_delay_seconds": 0.25
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-47e8bc7785793a60",
+      "provider_name": "Göttingen University Collections",
+      "investigation_id": "2026-10-15-five-provider-completion",
+      "investigation_document": "knowledge/institutions/2026-10-15_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "gdz-paginated-search-records",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://gdz.sub.uni-goettingen.de/suche",
+          "record_url_pattern": "/id/(?P<identifier>[^/?#]+)",
+          "manifest_url_templates": [
+            "https://manifests.sub.uni-goettingen.de/iiif/presentation/{identifier}/manifest"
+          ],
+          "pagination": {
+            "page_parameter": "page",
+            "page_size_parameter": "",
+            "page_size": 15,
+            "start_page": 1,
+            "max_pages": 10000,
+            "detect_next_page": true
+          },
+          "max_identifiers": 150000,
+          "request_delay_seconds": 0.15
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-e048f92222cd2e49",
+      "provider_name": "Leiden University",
+      "investigation_id": "2026-10-15-five-provider-completion",
+      "investigation_document": "knowledge/institutions/2026-10-15_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "leiden-islandora-books-to-current-manifests",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://digitalcollections.universiteitleiden.nl/islandora/search?type=dismax&f%5B0%5D=RELS_EXT_hasModel_uri_ms%3A%22info%5C%3Afedora%5C%2Fislandora%5C%3AbookCModel%22",
+          "record_url_pattern": "/view/item/(?P<identifier>\\d+)",
+          "manifest_url_templates": [
+            "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item:{identifier}/manifest"
+          ],
+          "pagination": {
+            "page_parameter": "page",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "start_page": 0,
+            "max_pages": 10000,
+            "detect_next_page": true
+          },
+          "max_identifiers": 150000,
+          "request_delay_seconds": 0.15,
+          "coverage_note": "Book content-model query; individual child records may lack a Manifest. Redirects to migrated Alma Manifests are followed. Not all Leiden content models are inventoried."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-0af71df3c01cdd4e",
+      "provider_name": "National Library of Wales",
+      "investigation_id": "2026-10-15-five-provider-completion",
+      "investigation_document": "knowledge/institutions/2026-10-15_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "primo-viewer-identifiers-to-iiif-resources",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://discover.library.wales/primaws/rest/pub/pnxs",
+          "records_path": "docs",
+          "identifier_path": "delivery.availabilityLinksUrl.*",
+          "identifier_pattern": "https?://viewer\\.library\\.wales/(?P<identifier>\\d+)",
+          "query_parameters": {
+            "vid": "44WHELF_NLW:44WHELF_NLW_NUI",
+            "scope": "MyInstitution",
+            "tab": "tab1",
+            "q": "any,contains,viewer.library.wales",
+            "lang": "en"
+          },
+          "manifest_url_templates": [
+            "https://iiif.llyfrgell.cymru/manifests/2.0/{identifier}/manifest.json"
+          ],
+          "allow_collections": true,
+          "pagination": {
+            "page_parameter": "offset",
+            "page_size_parameter": "limit",
+            "page_size": 20,
+            "page_step": 20,
+            "start_page": 0,
+            "max_pages": 25
+          },
+          "max_identifiers": 500,
+          "request_delay_seconds": 0.15,
+          "coverage_note": "Primo query returns catalogue records matching viewer.library.wales; this query is not proof of all NLW digitized holdings. Collection responses are traversed by the native IIIF engine."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-015ee4ecd4a6fd91",
+      "provider_name": "Universitaet Jena",
+      "investigation_id": "2026-10-15-five-provider-completion",
+      "investigation_document": "knowledge/institutions/2026-10-15_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "mycore-objects-to-derivatives-to-manifests",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://collections.thulb.uni-jena.de/api/v2/objects",
+          "records_path": "$",
+          "identifier_path": "id",
+          "identifier_followup": {
+            "url_template": "https://collections.thulb.uni-jena.de/api/v2/objects/{identifier}/derivates",
+            "records_path": "$",
+            "identifier_path": "href"
+          },
+          "manifest_url_templates": [
+            "https://collections.thulb.uni-jena.de/api/iiif/presentation/v2/{identifier}/manifest"
+          ],
+          "pagination": {
+            "page_parameter": "offset",
+            "page_size_parameter": "limit",
+            "page_size": 20,
+            "page_step": 20,
+            "start_page": 0,
+            "max_pages": 10000
+          },
+          "max_identifiers": 200000,
+          "request_delay_seconds": 0.15
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-fa146b049ccac158",
+      "provider_name": "Utrecht University Library",
+      "investigation_id": "2026-10-15-five-provider-completion",
+      "investigation_document": "knowledge/institutions/2026-10-15_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "utrecht-public-object-list-to-manifests",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://objects.library.uu.nl/reader/object-list?lan=en",
+          "record_url_pattern": "/reader/(?P<identifier>20\\.500\\.14918-\\d+)(?:$|[?#])",
+          "required_ancestor_class": "object-openaccess",
+          "manifest_url_templates": [
+            "https://objects.library.uu.nl/manifest/iiif/v3/{identifier}"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 30000,
+            "max_pages": 1
+          },
+          "max_identifiers": 30000,
+          "request_delay_seconds": 0.15,
+          "coverage_note": "Complete listing response; only entries labelled object-openaccess are selected. A public metadata row does not guarantee downloadable image content."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-0a19a8e5992b5a87",
+      "provider_name": "David Rumsey Map Collection",
+      "investigation_id": "2026-10-15-three-provider-completion",
+      "investigation_document": "knowledge/institutions/2026-10-15_three_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "luna-paginated-explicit-manifest-links",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.davidrumsey.com/luna/servlet/as/search",
+          "query_parameters": {
+            "q": ""
+          },
+          "records_path": "results",
+          "manifest_url_path": "iiifManifest",
+          "pagination": {
+            "page_parameter": "os",
+            "page_size_parameter": "bs",
+            "page_size": 10,
+            "start_page": 0,
+            "page_step": 10,
+            "max_pages": 100000
+          },
+          "request_delay_seconds": 0.2,
+          "coverage_note": "Live anonymous LUNA search; query total is catalogue records, not a verified count of downloadable images."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-9087fc100047c3b2",
+      "provider_name": "Vatican Library",
+      "investigation_id": "2026-10-15-three-provider-completion",
+      "investigation_document": "knowledge/institutions/2026-10-15_three_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "amlad-manuscript-category-Capp.Giulia",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Capp.Giulia",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Arch.Cap.S.Pietro",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Arch.Cap.S.Pietro",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Autogr.Paolo.VI",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Autogr.Paolo.VI",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Barb.gr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Barb.gr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Barb.lat",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Barb.lat",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Barb.or",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Barb.or",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Bonc",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Bonc",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.Carte.naut",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.Carte.naut",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.ar",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.ar",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.arm",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.arm",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.cin",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.cin",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.copt",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.copt",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.ebr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.ebr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.eg",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.eg",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.et",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.et",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.gr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.gr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.ill",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.ill",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.ind",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.ind",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.isl",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.isl",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.lat",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.lat",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.mess",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.mess",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.pers",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.pers",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.siam",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.siam",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.sir",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.sir",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.tonch",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.tonch",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borg.turc",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borg.turc",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Borgh",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Borgh",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Capp.Sist",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Capp.Sist",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Capp.Sist.Diari",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Capp.Sist.Diari",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Cappon",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Cappon",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Carte.Stefani",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Carte.Stefani",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Carte.d&#39;Abbadie",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Carte.d&#39;Abbadie",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Cerulli.et",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Cerulli.et",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Cerulli.pers",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Cerulli.pers",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Chig",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Chig",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Comb",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Comb",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-De.Marinis",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/De.Marinis",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Ferr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Ferr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Kirkendale.Mss",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Kirkendale.Mss",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Legat",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Legat",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Neofiti",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Neofiti",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Ott.gr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Ott.gr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Ott.lat",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Ott.lat",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-P.I.O",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/P.I.O",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Pagès",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Pagès",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Pal.gr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Pal.gr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Pal.lat",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Pal.lat",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Pap.Bodmer",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Pap.Bodmer",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Pap.Hanna",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Pap.Hanna",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Pap.Vat.copt",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Pap.Vat.copt",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Pap.Vat.gr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Pap.Vat.gr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Pap.Vat.lat",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Pap.Vat.lat",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Patetta",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Patetta",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Raineri",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Raineri",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Reg.gr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Reg.gr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Reg.gr.Pio.II",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Reg.gr.Pio.II",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Reg.lat",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Reg.lat",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Ross",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Ross",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Ruoli",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Ruoli",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-S.Maria.Magg",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/S.Maria.Magg",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-S.Maria.in.Via.Lata",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/S.Maria.in.Via.Lata",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Sbath",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Sbath",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Sire",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Sire",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Urb.ebr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Urb.ebr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Urb.gr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Urb.gr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Urb.lat",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Urb.lat",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.ar",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.ar",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.arm",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.arm",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.copt",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.copt",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.ebr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.ebr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.estr.or",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.estr.or",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.et",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.et",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.gr",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.gr",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.iber",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.iber",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.ind",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.ind",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.indocin",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.indocin",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.lat",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.lat",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.mus",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.mus",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.pers",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.pers",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.sam",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.sam",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.sir",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.sir",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.slav",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.slav",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        },
+        {
+          "skill_id": "amlad-manuscript-category-Vat.turc",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digi.vatlib.it/mss/ajax/category/Vat.turc",
+          "records_path": "fond",
+          "identifier_path": "shelfmark",
+          "manifest_url_templates": [
+            "https://digi.vatlib.it/iiif/MSS_{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.2,
+          "coverage_note": "One server-declared manuscript category; all category routes retained. Other material classes are not yet inventoried."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-4ef10065e633729c",
+      "provider_name": "Blavatnik Archive",
+      "investigation_id": "2026-10-16-blavatnik",
+      "investigation_document": "knowledge/institutions/2026-10-16_blavatnik.md",
+      "skills": [
+        {
+          "skill_id": "public-post-search-entire-catalogue",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=60",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": []
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 60,
+            "page_step": 60,
+            "start_page": 0,
+            "max_pages": 2000,
+            "total_path": "es_hits.total"
+          },
+          "max_identifiers": 100000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Entire public catalogue",
+          "source_declared_total": 20199
+        }
+      ],
+      "alternative_skills": [
+        {
+          "skill_id": "public-post-search-collection-48",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "48"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Kantsedikas Family Letters",
+          "source_declared_total": 686
+        },
+        {
+          "skill_id": "public-post-search-collection-35",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "35"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "World War II Ephemera",
+          "source_declared_total": 4600
+        },
+        {
+          "skill_id": "public-post-search-collection-16",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "16"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Veteran Testimonies & Ephemera",
+          "source_declared_total": 4315
+        },
+        {
+          "skill_id": "public-post-search-collection-30",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "30"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Judaica Postcards",
+          "source_declared_total": 2926
+        },
+        {
+          "skill_id": "public-post-search-collection-42",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "42"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "World War I Postcards",
+          "source_declared_total": 1614
+        },
+        {
+          "skill_id": "public-post-search-collection-36",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "36"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Leningrad-Published Postcards",
+          "source_declared_total": 1327
+        },
+        {
+          "skill_id": "public-post-search-collection-51",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "51"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Evgenii Kogan Illustrations",
+          "source_declared_total": 652
+        },
+        {
+          "skill_id": "public-post-search-collection-15",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "15"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Anti-Semitism Postcards",
+          "source_declared_total": 591
+        },
+        {
+          "skill_id": "public-post-search-collection-2",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "2"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Moscow State Yiddish Theater",
+          "source_declared_total": 578
+        },
+        {
+          "skill_id": "public-post-search-collection-33",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "33"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Jews in the Military",
+          "source_declared_total": 476
+        },
+        {
+          "skill_id": "public-post-search-collection-58",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "58"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Rowley Soviet Ephemera",
+          "source_declared_total": 473
+        },
+        {
+          "skill_id": "public-post-search-collection-70",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "70"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Solomon Mikhoels",
+          "source_declared_total": 383
+        },
+        {
+          "skill_id": "public-post-search-collection-81",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "81"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Moisei Nappel'baum Portraits",
+          "source_declared_total": 333
+        },
+        {
+          "skill_id": "public-post-search-collection-76",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "76"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Rosa Kurtz",
+          "source_declared_total": 208
+        },
+        {
+          "skill_id": "public-post-search-collection-49",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "49"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "World War II Postcards",
+          "source_declared_total": 179
+        },
+        {
+          "skill_id": "public-post-search-collection-74",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "74"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Altneu-Kokush Auschwitz Photographs",
+          "source_declared_total": 126
+        },
+        {
+          "skill_id": "public-post-search-collection-46",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "46"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Boris Efimov Illustrations",
+          "source_declared_total": 124
+        },
+        {
+          "skill_id": "public-post-search-collection-55",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "55"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Kantsedikas Judaica Ephemera",
+          "source_declared_total": 89
+        },
+        {
+          "skill_id": "public-post-search-collection-65",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "65"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "PSST...! Illustrated Journal",
+          "source_declared_total": 84
+        },
+        {
+          "skill_id": "public-post-search-collection-52",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "52"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Judaica Posters",
+          "source_declared_total": 74
+        },
+        {
+          "skill_id": "public-post-search-collection-77",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "77"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Nekhama Sirotina",
+          "source_declared_total": 73
+        },
+        {
+          "skill_id": "public-post-search-collection-37",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "37"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "\"Front-Illustrierte\" Leaflets",
+          "source_declared_total": 59
+        },
+        {
+          "skill_id": "public-post-search-collection-31",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "31"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Judaica Ephemera",
+          "source_declared_total": 57
+        },
+        {
+          "skill_id": "public-post-search-collection-53",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "53"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Boris Kudoyarov Photography",
+          "source_declared_total": 54
+        },
+        {
+          "skill_id": "public-post-search-collection-54",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "54"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Periodicals & Newspapers",
+          "source_declared_total": 50
+        },
+        {
+          "skill_id": "public-post-search-collection-68",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "68"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Mikhail Zoshchenko's Story Drafts",
+          "source_declared_total": 44
+        },
+        {
+          "skill_id": "public-post-search-collection-103",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "103"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Holocaust and Judaica",
+          "source_declared_total": 43
+        },
+        {
+          "skill_id": "public-post-search-collection-50",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "50"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Peretz Markish Ephemera",
+          "source_declared_total": 35
+        },
+        {
+          "skill_id": "public-post-search-collection-47",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "47"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "Tartakovskii Collection of Jewish Art",
+          "source_declared_total": 2
+        },
+        {
+          "skill_id": "public-post-search-collection-106",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://www.blavatnikarchive.org/api/data/es/search?size=25",
+          "request": {
+            "method": "POST",
+            "read_only": true,
+            "headers": {
+              "N-Belonging-To": "BAF"
+            },
+            "json_body": {
+              "query": "",
+              "filters": [
+                {
+                  "type": "collections",
+                  "values": [
+                    "106"
+                  ]
+                }
+              ]
+            }
+          },
+          "records_path": "es_hits.data",
+          "identifier_path": "generalInfo.itemId",
+          "manifest_url_templates": [
+            "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/{identifier}?type=mirador&site=BAF"
+          ],
+          "pagination": {
+            "location": "json_body",
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 25,
+            "page_step": 25,
+            "start_page": 0,
+            "max_pages": 400
+          },
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.2,
+          "collection_name": "R&A Oral History Project",
+          "source_declared_total": 1
+        }
+      ],
+      "alternative_skills_note": "Collection-specific queries retained for targeted runs; the verified whole-catalogue query avoids facet omissions."
+    },
+    {
+      "provider_id": "provider-028fd9292205c39c",
+      "provider_name": "Bodmer Lab",
+      "investigation_id": "2026-10-19-five-provider-completion",
+      "investigation_document": "knowledge/institutions/2026-10-19_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "constellation-catalogue-to-declared-manifest-route",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://bodmerlab.unige.ch/fr/search",
+          "query_parameters": {
+            "keywords": ""
+          },
+          "record_url_pattern": "/constellations/autographes/barcode/(?P<identifier>\\d+)(?:$|[?#])",
+          "manifest_url_templates": [
+            "https://bodmerlab.unige.ch/fr/constellations/autographes/manifest/{identifier}"
+          ],
+          "pagination": {
+            "page_parameter": "Page",
+            "page_size_parameter": "",
+            "page_size": 21,
+            "start_page": 1,
+            "max_pages": 1000,
+            "detect_next_page": true
+          },
+          "max_identifiers": 50000,
+          "request_delay_seconds": 0.35,
+          "coverage_note": "Current executable scope is the autographes constellation. Other constellations are retained as investigation candidates, not asserted resolved."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-4e06374e85489c6e",
+      "provider_name": "Princeton University Libraries",
+      "investigation_id": "2026-10-19-princeton-blacklight-detail",
+      "investigation_document": "knowledge/institutions/2026-10-19_resumed_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "blacklight-results-to-declared-figgy-manifests",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://dpul.princeton.edu/papyri/catalog.json",
+          "records_path": "data",
+          "identifier_path": "links.self",
+          "identifier_pattern": "/catalog/(?P<identifier>[^/?#]+)$",
+          "query_parameters": {
+            "q": "papyrus",
+            "search_field": "all_fields"
+          },
+          "pagination": {
+            "page_parameter": "page",
+            "page_size_parameter": "per_page",
+            "page_size": 3,
+            "max_pages": 1000,
+            "has_next_path": "links.next"
+          },
+          "max_identifiers": 10000,
+          "identifier_followup": {
+            "url_template": "https://dpul.princeton.edu/papyri/catalog/{identifier}.json",
+            "records_path": "response.document",
+            "identifier_path": "content_metadata_iiif_manifest_field_ssi",
+            "identifier_pattern": "/concern/scanned_resources/(?P<identifier>[0-9a-f-]+)/manifest$"
+          },
+          "manifest_url_templates": [
+            "https://figgy.princeton.edu/concern/scanned_resources/{identifier}/manifest"
+          ],
+          "request_delay_seconds": 0.5,
+          "coverage_note": "Validated scope: public papyri search, not every Princeton digital collection."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-d14fb88cde24ff49",
+      "provider_name": "Harvard University Digital Collections",
+      "investigation_id": "2026-10-19-harvard-librarycloud",
+      "investigation_document": "knowledge/institutions/2026-10-19_resumed_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "librarycloud-mods-declared-manifest-links",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://api.lib.harvard.edu/v2/items.json",
+          "records_path": "items.mods",
+          "manifest_url_path": "location.*.url.#text",
+          "manifest_url_pattern": "^https://iiif\\.lib\\.harvard\\.edu/manifests/(?:drs|ids):[0-9]+$",
+          "query_parameters": {
+            "q": "iiif.lib.harvard.edu"
+          },
+          "pagination": {
+            "page_parameter": "start",
+            "page_size_parameter": "limit",
+            "page_size": 3,
+            "start_page": 0,
+            "page_step": 3,
+            "max_pages": 100
+          },
+          "request_delay_seconds": 1.0,
+          "coverage_note": "MODS location URLs; object-shaped url values. Array-shaped url values use the second recipe.",
+          "html_migration": {
+            "max_hops": 2,
+            "url_pattern": "^https://(?:nrs|iiif)\\.lib\\.harvard\\.edu/"
+          }
+        },
+        {
+          "skill_id": "librarycloud-mods-array-manifest-links",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://api.lib.harvard.edu/v2/items.json",
+          "records_path": "items.mods",
+          "manifest_url_path": "location.*.url.*.#text",
+          "manifest_url_pattern": "^https://iiif\\.lib\\.harvard\\.edu/manifests/(?:drs|ids):[0-9]+$",
+          "query_parameters": {
+            "q": "iiif.lib.harvard.edu"
+          },
+          "pagination": {
+            "page_parameter": "start",
+            "page_size_parameter": "limit",
+            "page_size": 3,
+            "start_page": 0,
+            "page_step": 3,
+            "max_pages": 100
+          },
+          "request_delay_seconds": 1.0,
+          "html_migration": {
+            "max_hops": 2,
+            "url_pattern": "^https://(?:nrs|iiif)\\.lib\\.harvard\\.edu/"
+          }
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-648f0743acabd9c2",
+      "provider_name": "Stanford University",
+      "investigation_id": "2026-10-19-stanford-declared-original-manifests",
+      "investigation_document": "knowledge/institutions/2026-10-19_resumed_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "contribution-index-to-original-provider-manifests",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://fromthepage.com/iiif/contributions/stanford.edu",
+          "records_path": "manifests",
+          "manifest_url_path": "metadata.*.value",
+          "manifest_url_pattern": "^https://purl\\.stanford\\.edu/[a-z0-9]+/iiif/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 10000,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Enumerates only Stanford originals declared in the public FromThePage contribution index. Not the whole Stanford catalogue. Original PURL Manifests, not synthetic manifests, are fetched."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-f10ea7c297cd81a8",
+      "provider_name": "Biblissima",
+      "investigation_id": "2026-10-19-biblissima-manifest-catalogue",
+      "investigation_document": "knowledge/institutions/2026-10-19_resumed_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "aggregated-catalogue-to-declared-irht-manifests",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://iiif.biblissima.fr/collections/search",
+          "record_url_pattern": "https://api\\.irht\\.cnrs\\.fr/ark:/63955/(?P<identifier>[^/?#]+)/manifest\\.json(?:$|[?#])",
+          "manifest_url_templates": [
+            "https://api.irht.cnrs.fr/ark:/63955/{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "from",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "start_page": 0,
+            "max_pages": 1000,
+            "detect_next_page": true,
+            "page_step": 20
+          },
+          "max_identifiers": 20000,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Biblissima is an aggregator. Current executable recipe covers the explicitly linked IRHT Manifest namespace; other repositories are not yet asserted resolved."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-4853865a686721d7",
+      "provider_name": "Princeton University Art Museum",
+      "investigation_id": "2026-10-19-puam-documented-object-api",
+      "investigation_document": "knowledge/institutions/2026-10-19_third_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "documented-object-api-to-object-manifest",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://data.artmuseum.princeton.edu/objects",
+          "records_path": "hits.hits",
+          "identifier_path": "_source.objectid",
+          "required_nonempty_paths": [
+            "_source.primaryimage"
+          ],
+          "query_parameters": {
+            "maker": 5560
+          },
+          "pagination": {
+            "page_parameter": "from",
+            "page_size_parameter": "size",
+            "page_size": 3,
+            "start_page": 0,
+            "page_step": 3,
+            "max_pages": 1000
+          },
+          "manifest_url_templates": [
+            "https://data.artmuseum.princeton.edu/iiif/objects/{identifier}"
+          ],
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Official API requires a supported filter. Validated scope is maker 5560 (Edgar Degas), not the entire museum. Other documented maker/department filters remain configuration."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-7781a87376497b5c",
+      "provider_name": "UCLA Library Digital Collections",
+      "investigation_id": "2026-10-19-ucla-blacklight-ark",
+      "investigation_document": "knowledge/institutions/2026-10-19_third_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "blacklight-work-arks-to-native-manifests",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://digital.library.ucla.edu/catalog.json",
+          "records_path": "data",
+          "identifier_path": "id",
+          "filters": [
+            {
+              "path": "type",
+              "equals": "Work"
+            }
+          ],
+          "query_parameters": {
+            "q": "map"
+          },
+          "pagination": {
+            "page_parameter": "page",
+            "page_size_parameter": "per_page",
+            "page_size": 3,
+            "start_page": 1,
+            "max_pages": 1000,
+            "has_next_path": "links.next"
+          },
+          "manifest_url_templates": [
+            "https://iiif.library.ucla.edu/{identifier}/manifest"
+          ],
+          "max_identifiers": 10000,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "URL-encode the complete ARK, including colon and slashes. Scope is the public map query; non-Work catalogue records are skipped."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-c94006b2714289d6",
+      "provider_name": "Smithsonian Institution",
+      "investigation_id": "2026-10-19-smithsonian-official-features",
+      "investigation_document": "knowledge/institutions/2026-10-19_third_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "official-feature-page-to-declared-manifest-links",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://iiif.si.edu/featured/index.html",
+          "allow_legacy_shared_canvas": true,
+          "record_url_pattern": "^https://iiif\\.si\\.edu/manifests/(?P<identifier>[^/?#]+\\.json)$",
+          "manifest_url_templates": [
+            "https://iiif.si.edu/manifests/{identifier}"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 100,
+            "max_pages": 1
+          },
+          "max_identifiers": 100,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Official curated featured manifests, not Smithsonian-wide catalogue enumeration or all individual objects."
+        }
+      ]
+    }
+  ]
+}

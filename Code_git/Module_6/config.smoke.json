@@ -1,0 +1,11 @@
+{
+  "research_manifests_jsonl": "../Module_5/data/output/research_manifests.jsonl",
+  "research_resource_inventory_jsonl": "../Module_5/data/output/research_resource_inventory.jsonl",
+  "module_4_directory": "../Module_4",
+  "output_directory": "data/output",
+  "log_directory": "data/log",
+  "language_priority": ["en", "fr", "de", "it", "la", "und"],
+  "run": {
+    "max_records": 5
+  }
+}

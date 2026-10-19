@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "source_id": "public-catalogue-original-transcription-single-page",
+      "provider_id": "provider-4ef10065e633729c",
+      "manifest_identifier_pattern": "/iiif-manifest/(?P<identifier>\\d+)\\?",
+      "record_url_template": "https://www.blavatnikarchive.org/api/data/es/item/{identifier}",
+      "record_path": "data",
+      "original_text_path": "originalTranscript",
+      "language_path": "originalTranscriptLanguages",
+      "page_records_path": "pages",
+      "page_identifier_path": "iIIFID",
+      "request_delay_seconds": 0.2,
+      "timeout_seconds": 25,
+      "knowledge_document": "../../Module_3/knowledge/institutions/2026-10-16_blavatnik.md"
+    }
+  ]
+}

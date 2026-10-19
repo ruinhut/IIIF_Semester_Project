@@ -1,0 +1,16 @@
+{
+  "normalized_records_jsonl": "../Module_6/data/output/normalized_records.jsonl",
+  "normalized_resources_jsonl": "../Module_6/data/output/normalized_resources.jsonl",
+  "normalized_reference_texts_jsonl": "../Module_6/data/output/normalized_reference_texts.jsonl",
+  "profile_json": "profiles/provisional-0.1.json",
+  "record_schema_json": "schemas/record-0.1.schema.json",
+  "media_schema_json": "schemas/media-0.1.schema.json",
+  "ocr_profile_schema_json": "schemas/ocr-profile-0.1.schema.json",
+  "output_directory": "data/output",
+  "log_directory": "data/log",
+  "ocr_profile": {
+    "max_ground_truth_records": 5,
+    "pages_per_record": 3,
+    "max_records_per_provider": 2
+  }
+}

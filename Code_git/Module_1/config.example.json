@@ -1,0 +1,17 @@
+{
+  "registry_sources": [
+    "https://registry.iiif.io/index.json"
+  ],
+  "manual_sources": [
+    "config/awesome_iiif_providers.json",
+    "config/iiif_guides_providers.json",
+    "config/manual_providers.json"
+  ],
+  "network": {
+    "timeout_seconds": 20,
+    "retries": 2,
+    "max_registry_pages": 100
+  },
+  "output_directory": "data/output",
+  "log_directory": "data/log"
+}
