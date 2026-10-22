@@ -1,0 +1,75 @@
+{
+  "verified_bundles": 5,
+  "schema_validated_json_files": 15,
+  "provider_ids": [
+    "provider-028fd9292205c39c",
+    "provider-3e6e726f68de3eaa",
+    "provider-6fb76c5e6a229a82",
+    "provider-7caa47e568a1951d",
+    "provider-f1308a5306328276"
+  ],
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-ad48a0a61a563296",
+      "resource_id": "resource-e5b16647202a3ad7fb03",
+      "providers": [
+        {
+          "provider_id": "provider-7caa47e568a1951d",
+          "provider_name": "e-manuscripta (Manuscript material from Swiss libraries and archives)"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-ad48a0a61a563296\\000001_resource-e5b16647202a3ad7fb03\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-7e1c9fd1c3ab7adb",
+      "resource_id": "resource-2a121316ebb07570ba4b",
+      "providers": [
+        {
+          "provider_id": "provider-028fd9292205c39c",
+          "provider_name": "Bodmer Lab"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-7e1c9fd1c3ab7adb\\000006_resource-2a121316ebb07570ba4b\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-b3c979f46c367af6",
+      "resource_id": "resource-28d56e890f267f2f875d",
+      "providers": [
+        {
+          "provider_id": "provider-3e6e726f68de3eaa",
+          "provider_name": "e-rara (digitized rare books from Swiss institutions)"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-b3c979f46c367af6\\000000_resource-28d56e890f267f2f875d\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-e594f20b5be9c29d",
+      "resource_id": "resource-fce9ad034dcac25845fd",
+      "providers": [
+        {
+          "provider_id": "provider-f1308a5306328276",
+          "provider_name": "FromThePage"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_five_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-e594f20b5be9c29d\\000000_resource-fce9ad034dcac25845fd\\image.jpg",
+      "reference_files": 4
+    },
+    {
+      "record_id": "manifest-7a704e8f690d4a77",
+      "resource_id": "resource-1e2a1db0578e3dd8d3fc",
+      "providers": [
+        {
+          "provider_id": "provider-6fb76c5e6a229a82",
+          "provider_name": "Austrian National Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-7a704e8f690d4a77\\000000_resource-1e2a1db0578e3dd8d3fc\\image.jpg",
+      "reference_files": 0
+    }
+  ],
+  "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+}

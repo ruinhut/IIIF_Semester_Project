@@ -1,0 +1,27 @@
+[
+  {
+    "provider_name": "Folger Shakespeare Library",
+    "observed_status": "Browser verification HTML / legacy-host network failure",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "University of Illinois",
+    "observed_status": "HTTP 403 on probed catalogue/API routes",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "J. Paul Getty Trust",
+    "observed_status": "Migration HTML followed by documentation HTTP 404",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Parliamentary Archives - UK",
+    "observed_status": "One public Manifest HTTP 200, bulk catalogue unresolved",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Cultural Japan",
+    "observed_status": "Old example Manifest HTTP 404",
+    "counted_as_new_success": false
+  }
+]

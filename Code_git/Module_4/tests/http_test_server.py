@@ -41,6 +41,11 @@ class ManifestTestServer(AbstractContextManager["ManifestTestServer"]):
                 if self.path == "/v2/manifest":
                     self._json(owner.v2_manifest())
                     return
+                if self.path == "/missing-id":
+                    value = owner.v2_manifest()
+                    value.pop("@id")
+                    self._json(value)
+                    return
                 if self.path == "/missing-context":
                     value = owner.v3_manifest()
                     value.pop("@context")

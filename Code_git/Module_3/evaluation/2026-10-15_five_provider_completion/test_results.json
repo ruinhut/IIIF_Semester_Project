@@ -1,0 +1,13 @@
+{
+  "module3": {
+    "passed": 44,
+    "result": "passed",
+    "observed_run": "pytest: 44 passed in 10.49s"
+  },
+  "module8": {
+    "passed": 16,
+    "result": "passed",
+    "observed_run": "pytest: 16 passed in 6.17s"
+  },
+  "note": "Observed successful test results from this investigation, not a newly executed test run."
+}

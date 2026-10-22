@@ -7,7 +7,7 @@ from dataclasses import asdict, dataclass, field
 from typing import Any, Mapping, Optional
 
 
-MODULE_5_SCHEMA_VERSION = "1.0"
+MODULE_5_SCHEMA_VERSION = "2.0"
 RIGHTS_CATEGORIES = (
     "public_domain",
     "open_license",
@@ -70,11 +70,6 @@ class Module4ManifestRecord:
     def raw_manifest_path(self) -> str:
         return str(self.data["raw_manifest"]["raw_manifest_path"])
 
-    @property
-    def expected_sha256(self) -> Optional[str]:
-        value = self.data["raw_manifest"].get("sha256")
-        return str(value).strip().lower() if value else None
-
     def provider_names(self) -> list[str]:
         return [
             str(item.get("provider_name", "")).strip()
@@ -113,7 +108,7 @@ class RightsEvidence:
 
 @dataclass(frozen=True)
 class RightsPolicy:
-    """A versioned mapping from evidence categories to pipeline decisions."""
+    """A versioned mapping from evidence categories to public-reuse decisions."""
 
     policy_version: str
     category_decisions: Mapping[str, str]
@@ -156,7 +151,7 @@ class RightsPolicy:
 
 @dataclass
 class RightsAssessment:
-    """Policy result for one Manifest, including all retained evidence."""
+    """Rights result for one Manifest, including all retained evidence."""
 
     category: str
     decision: str
@@ -168,9 +163,19 @@ class RightsAssessment:
     reason_codes: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
+        public_reuse_eligible = self.decision == "allow"
         return {
             "category": self.category,
             "decision": self.decision,
+            "decision_scope": "public_reuse",
+            "research_status": "retained",
+            "usage_permissions": {
+                "retain_url_and_metadata": True,
+                "academic_analysis": True,
+                "public_distribution": public_reuse_eligible,
+                "commercial_use": public_reuse_eligible,
+            },
+            "public_reuse_eligible": public_reuse_eligible,
             "display_label": dict(RIGHTS_DISPLAY_LABELS[self.category]),
             "policy_version": self.policy_version,
             "policy_rule": self.policy_rule,

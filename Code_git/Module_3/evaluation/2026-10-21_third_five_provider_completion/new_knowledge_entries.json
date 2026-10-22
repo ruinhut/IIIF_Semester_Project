@@ -1,0 +1,169 @@
+[
+  {
+    "provider_id": "provider-acb86cbbcb639914",
+    "provider_name": "British Library",
+    "investigation_id": "2026-10-21-third-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_third_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "british-library-public-highlight-manifest-links",
+        "type": "paginated_html_identifiers_to_manifest_templates",
+        "api_url": "https://www.bl.uk/collection/digitised-manuscripts-archives",
+        "record_url_pattern": "https://bl\\.digirati\\.io/(?:iiif|manifests)/ark:/81055/(?P<identifier>[^/?#]+)",
+        "manifest_url_templates": [
+          "https://bl.digirati.io/iiif/ark:/81055/{identifier}",
+          "https://bl.digirati.io/manifests/ark:/81055/{identifier}"
+        ],
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 100,
+          "max_pages": 1
+        },
+        "max_identifiers": 100,
+        "coverage_note": "Nine public digitised highlights on the official BL page; not the whole BL catalogue. Viewer fragments contain explicitly declared native Manifest URLs.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-3acece25cdf777e4",
+    "provider_name": "Indigenous Digital Archive",
+    "investigation_id": "2026-10-21-third-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_third_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "ida-digitreaties-public-catalogue-manifests",
+        "type": "paginated_html_identifiers_to_manifest_templates",
+        "api_url": "https://digitreaties.org/treaties/treaties/",
+        "record_url_pattern": "^https://digitreaties\\.org/treaties/treaty/(?P<identifier>\\d+)/$",
+        "manifest_url_templates": [
+          "https://digitreaties.org/treaties/treaty/{identifier}/manifest/"
+        ],
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 1000,
+          "max_pages": 1
+        },
+        "max_identifiers": 100,
+        "coverage_note": "Public DigiTreaties project of the Indigenous Digital Archive, using National Archives images. This does not restore all content of the old boarding-school archive. Project continuity is documented in the Museum of Indian Arts and Culture press release.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-877592e2f2c8d531",
+    "provider_name": "Heidelberg University Library",
+    "investigation_id": "2026-10-21-third-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_third_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "heidelberg-oai-explicit-manifest-links",
+        "type": "paginated_xml_identifiers_to_manifest_templates",
+        "api_url": "https://digi.ub.uni-heidelberg.de/cgi-bin/digioai.cgi",
+        "query_parameters": {
+          "verb": "ListRecords",
+          "metadataPrefix": "oai_dc",
+          "from": "2026-10-20"
+        },
+        "xml_namespaces": {
+          "oai": "http://www.openarchives.org/OAI/2.0/",
+          "dc": "http://purl.org/dc/elements/1.1/"
+        },
+        "xml_record_path": ".//oai:record",
+        "xml_identifier_path": ".//dc:hasFormat",
+        "identifier_pattern": "^https://digi\\.ub\\.uni-heidelberg\\.de/diglit/iiif/(?P<identifier>[^/]+)/manifest\\.json$",
+        "manifest_url_templates": [
+          "https://digi.ub.uni-heidelberg.de/diglit/iiif/{identifier}/manifest.json"
+        ],
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 50,
+          "max_pages": 100,
+          "next_token_path": ".//oai:resumptionToken",
+          "token_keep_parameters": [
+            "verb"
+          ]
+        },
+        "max_identifiers": 5000,
+        "coverage_note": "DWork records updated since 2026-10-20. Explicit dc:hasFormat links, with opaque OAI continuation tokens; public documented machine endpoint, without bypassing protected HTML pages.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-2433bd8d5611ff84",
+    "provider_name": "National Diet Library of Japan",
+    "investigation_id": "2026-10-21-third-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_third_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "ndl-opensearch-rss-pids-to-iiif-manifests",
+        "type": "paginated_xml_identifiers_to_manifest_templates",
+        "api_url": "https://ndlsearch.ndl.go.jp/api/opensearch",
+        "query_parameters": {
+          "dpid": "ndl-dl",
+          "title": "源氏物語",
+          "until": "1900"
+        },
+        "xml_namespaces": {
+          "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+          "os": "http://a9.com/-/spec/opensearchrss/1.0/"
+        },
+        "xml_record_path": ".//item",
+        "xml_identifier_path": "rdfs:seeAlso",
+        "xml_identifier_attribute": "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}resource",
+        "identifier_pattern": "^https://dl\\.ndl\\.go\\.jp/pid/(?P<identifier>\\d+)$",
+        "manifest_url_templates": [
+          "https://dl.ndl.go.jp/api/iiif/{identifier}/manifest.json"
+        ],
+        "pagination": {
+          "page_parameter": "idx",
+          "page_size_parameter": "cnt",
+          "page_size": 6,
+          "start_page": 1,
+          "page_step": 6,
+          "max_pages": 20,
+          "xml_total_path": ".//os:totalResults"
+        },
+        "max_identifiers": 120,
+        "coverage_note": "Historical Genji title query until 1900. Catalogue metadata availability does not guarantee public image delivery; rejected Manifest and image requests remain failures.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-68a08bd449531996",
+    "provider_name": "Victoria and Albert Museum",
+    "investigation_id": "2026-10-21-third-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_third_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "vam-public-object-ids-to-iiif-manifests",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://api.vam.ac.uk/v2/objects/search",
+        "query_parameters": {
+          "q": "manuscript",
+          "images_exist": "true"
+        },
+        "records_path": "records",
+        "identifier_path": "systemNumber",
+        "identifier_pattern": "^(?P<identifier>O\\d+)$",
+        "manifest_url_templates": [
+          "https://iiif.vam.ac.uk/collections/{identifier}/manifest.json"
+        ],
+        "pagination": {
+          "page_parameter": "page",
+          "page_size_parameter": "page_size",
+          "page_size": 6,
+          "max_pages": 100
+        },
+        "max_identifiers": 600,
+        "coverage_note": "Image-bearing manuscript search subset. The documented systemNumber template works even when _iiif_presentation_url is null; each candidate is validated.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  }
+]

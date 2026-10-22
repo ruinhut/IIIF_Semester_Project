@@ -1,0 +1,2338 @@
+{
+  "knowledge_base_version": "1.0",
+  "knowledge_kind": "official_iiif_resource_guide_workflows",
+  "checked_date": "2026-10-08",
+  "source": {
+    "index_url": "https://iiif.io/guides/finding_resources/",
+    "repository_url": "https://github.com/IIIF/guides",
+    "repository_revision": "c94b51bc335c6050667a536f2ba737807b92f8dc"
+  },
+  "generic_skills": [
+    {
+      "skill_id": "filtered-search-result-enumeration",
+      "description": "Traverse a provider's IIIF-filtered result pages and retain item-record URLs.",
+      "implementation_status": "candidate"
+    },
+    {
+      "skill_id": "record-page-manifest-link-extraction",
+      "description": "Extract declared Manifest URLs from item-page links, data attributes, JSON-LD, metadata fields, and inline configuration.",
+      "implementation_status": "partial"
+    },
+    {
+      "skill_id": "viewer-configuration-manifest-extraction",
+      "description": "Read Mirador, Universal Viewer, or custom-viewer configuration and request parameters to recover Manifest URLs.",
+      "implementation_status": "candidate"
+    },
+    {
+      "skill_id": "record-identifier-to-manifest-template",
+      "description": "Transform a documented item identifier into one or more Manifest URL templates and validate every result.",
+      "implementation_status": "implemented_as_part_of_paginated_json_identifiers_to_manifest_templates"
+    },
+    {
+      "skill_id": "catalogue-api-identifier-enumeration",
+      "description": "Page through a structured catalogue API, extract item identifiers, and hand them to a validated Manifest template.",
+      "implementation_status": "implemented_as_paginated_json_identifiers_to_manifest_templates"
+    },
+    {
+      "skill_id": "iiif-collection-traversal",
+      "description": "Traverse Presentation 2/3 Collections and their pagination or child collections.",
+      "implementation_status": "implemented"
+    },
+    {
+      "skill_id": "wikidata-p6108-query",
+      "description": "Query Wikidata property P6108 and validate returned Manifest URLs.",
+      "implementation_status": "candidate"
+    },
+    {
+      "skill_id": "image-api-filename-resolution",
+      "description": "Resolve documented filename or identifier templates to IIIF Image API info.json resources without misclassifying them as Presentation Manifests.",
+      "implementation_status": "candidate"
+    },
+    {
+      "skill_id": "legacy-platform-route-review",
+      "description": "Recheck redirects, replacement catalogues, archived documentation, and current APIs before encoding a route for a migrated site.",
+      "implementation_status": "investigation_only"
+    }
+  ],
+  "providers": [
+    {
+      "provider_id": "provider-c321c7f2be84b70b",
+      "provider_name": "Internet Archive",
+      "guide_slug": "archive.org",
+      "guide_url": "https://iiif.io/guides/archive.org/",
+      "homepage": "https://archive.org/",
+      "consortium_status": "associate",
+      "official_actions": [
+        "Internet Archive Presentation API Audio Helper",
+        "Middlebury College Special Collections",
+        "Sign Up For an Account",
+        "Upload Items",
+        "Provide Metadata",
+        "Upload and Create",
+        "Wait",
+        "Derive",
+        "Introduction This guide covers both using IIIF to interact with Internet Archive items and using the Internet Archive as a IIIF enabled digital asset management system for your own items.",
+        "IIIF for existing Internet Archive Items",
+        "Finding the IIIF manifest for an item 1. Search for the item and visit the record page, i.e. https://archive.org/details/b29000427_0001/page/n13/mode/2up. 2. Copy the identifier for record. It's always right after \"details\". In the above example it's b29000427_0001 3. Place that identifier into the following URL structure: https://iiif.archive.org/iiif/:id/manifest.json. Our example becomes: https://iiif.archive.org/iiif/b29000427_0001/manifest.json",
+        "Using the IIIF Helpers on Internet Archive",
+        "There are also IIIF helper tools available on the Internet Archive that make it much easier to work with different types of items from the Internet Archive. The URL structure for the helper tool looks like:",
+        "https://iiif.archive.org/iiif/helper/:id/ Our example becomes https://iiif.archive.org/iiif/helper/b29000427_0001",
+        "Replace the :id with the identifier for the record.",
+        "IIIF helpers are available for images, books, and A/V items.",
+        "Creating IIIF Items in the Internet Archive",
+        "You can upload material to the Internet Archive and organize it there to create a free, IIIF compatible digital asset management system like the above example from Middlebury College Special Collections.",
+        "Item Creation Steps **1. Sign Up For an Account** **2. Upload Items** Upload Items by clicking the \"Upload\" link next to your name",
+        "4. Click \"Upload and Create\"",
+        "You will need to choose a language for the item so the appropriate derivative processes can be run.",
+        "Special Considerations for Images Although most image formats are supported by the Internet Archive, image formats that support tiling, like JPEG2000 and Pyramidal TIFF are the best types of images for the deep zoom provided by IIIF image viewers. In our experience PTIFFs are served most efficiently by the underlying Cantaloupe image server, however, the Internet Archive does not display images on the Internet Archive item page for uploaded PTIFFs. The item page will display a message like \"THERE IS NO PREVIEW AVAILABLE FOR THIS ITEM This item does not appear to have any files that can be experienced on Archive.org. Please download files in this item to interact with them on your computer.\" An example. (https://archive.org/details/tx-burnet-123835-1909-125000-geo) That may be fine if you o"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Internet Archive Presentation API Audio Helper",
+            "path": "ia_audio_helper.png"
+          },
+          {
+            "alt": "Middlebury College Special Collections",
+            "path": "middlebury.png"
+          },
+          {
+            "alt": "Sign Up For an Account",
+            "path": "IA_signup.png"
+          },
+          {
+            "alt": "Upload Items",
+            "path": "IA_upload2.png"
+          },
+          {
+            "alt": "Provide Metadata",
+            "path": "ia_image_upload.png"
+          },
+          {
+            "alt": "Upload and Create",
+            "path": "ia_upload_create.png"
+          },
+          {
+            "alt": "Wait",
+            "path": "ia_please_wait.png"
+          },
+          {
+            "alt": "Derive",
+            "path": "ia_derive.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "An example.",
+            "url": "https://archive.org/details/tx-burnet-123835-1909-125000-geo"
+          },
+          {
+            "label": "Internet Archive Documentation on uploading",
+            "url": "https://help.archive.org/help/category/archive-org/uploading/"
+          },
+          {
+            "label": "literal URL",
+            "url": "https://archive.org/details/b29000427_0001/page/n13/mode/2up"
+          },
+          {
+            "label": "literal URL",
+            "url": "https://iiif.archive.org/iiif/:id/manifest.json"
+          },
+          {
+            "label": "literal URL",
+            "url": "https://iiif.archive.org/iiif/b29000427_0001/manifest.json"
+          },
+          {
+            "label": "literal URL",
+            "url": "https://iiif.archive.org/iiif/helper/:id/"
+          },
+          {
+            "label": "literal URL",
+            "url": "https://iiif.archive.org/iiif/helper/b29000427_0001"
+          },
+          {
+            "label": "literal URL",
+            "url": "https://help.archive.org/help/books-and-texts-a-basic-guide/"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-identifier-to-manifest-template",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "previous_baseline_found_manifests",
+      "previous_module3_status": "manifests_found",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-38aa7bce2f3b0361",
+      "provider_name": "Parliamentary Archives - UK",
+      "guide_slug": "archives.parliament.uk",
+      "guide_url": "https://iiif.io/guides/archives.parliament.uk/",
+      "homepage": "https://archives.parliament.uk/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Screenshot showing how to access a digital representation of the item",
+        "Screenshot showing the UV share button",
+        "Searching through the catalogue you are able to filter results to only ones with images. Clicking through to the item on the right hand side there is an option to 'View digital reproduction of:' which shows you the images using the Universal Viewer. To view the manifest you can can click the share button.",
+        "Example item: GB61_BAD_1 (https://iiif.collectionsbase.org.uk/GB61/GB61_BAD_1/e5tD3)"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Screenshot showing how to access a digital representation of the item",
+            "path": "catalogue.png"
+          },
+          {
+            "alt": "Screenshot showing the UV share button",
+            "path": "uv.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "GB61_BAD_1",
+            "url": "https://iiif.collectionsbase.org.uk/GB61/GB61_BAD_1/e5tD3"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "filtered-search-result-enumeration",
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-116ce327597310c6",
+      "provider_name": "Yale University Art Gallery",
+      "guide_slug": "artgallery.yale.edu",
+      "guide_url": "https://iiif.io/guides/artgallery.yale.edu/",
+      "homepage": "https://artgallery.yale.edu/",
+      "consortium_status": "full",
+      "official_actions": [
+        "A screenshot showing to click the IIIF link",
+        "A screenshot showing to click the menu icon in Mirador",
+        "A screenshot showing to scroll down in the info panel",
+        "A screenshot showing to copy the Manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "A screenshot showing to click the IIIF link",
+            "path": "yuag_1.png"
+          },
+          {
+            "alt": "A screenshot showing to click the menu icon in Mirador",
+            "path": "yuag_2.png"
+          },
+          {
+            "alt": "A screenshot showing to scroll down in the info panel",
+            "path": "yuag_3.png"
+          },
+          {
+            "alt": "A screenshot showing to copy the Manifest link",
+            "path": "yuag_4.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-4853865a686721d7",
+      "provider_name": "Princeton University Art Museum",
+      "guide_slug": "artmuseum.princeton.edu",
+      "guide_url": "https://iiif.io/guides/artmuseum.princeton.edu/",
+      "homepage": "https://artmuseum.princeton.edu/search/collections",
+      "consortium_status": "associate",
+      "official_actions": [
+        "Click the IIIF button",
+        "Then click the i button, and copy the IIIF manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click the IIIF button",
+            "path": "princeton-1.png"
+          },
+          {
+            "alt": "Then click the i button, and copy the IIIF manifest link",
+            "path": "princeton-2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-f10ea7c297cd81a8",
+      "provider_name": "Biblissima",
+      "guide_slug": "biblissima.fr",
+      "guide_url": "https://iiif.io/guides/biblissima.fr/",
+      "homepage": "https://portail.biblissima.fr/en/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Screenshot of the Biblissima site showing how to download or drag and drop a manifest from an item page.",
+        "Screenshot of the Biblissima site showing how to filter IIIF items from search results.",
+        "IIIF indicators on an item page (manuscript, printed book, illumination etc.):",
+        "Filter IIIF items from search results:"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Screenshot of the Biblissima site showing how to download or drag and drop a manifest from an item page.",
+            "path": "biblissima-1.png"
+          },
+          {
+            "alt": "Screenshot of the Biblissima site showing how to filter IIIF items from search results.",
+            "path": "biblissima-2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "filtered-search-result-enumeration",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-e1d421d66c6ea5a2",
+      "provider_name": "Radboud University Library",
+      "guide_slug": "bijzonderecollecties.ubn.ru.nl",
+      "guide_url": "https://iiif.io/guides/bijzonderecollecties.ubn.ru.nl/",
+      "homepage": "https://bijzonderecollecties.ubn.ru.nl/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Screenshot showing the IIIF manifest highlighted",
+        "Find an item and scroll to the bottom of the page to find links to the IIIF Manifest and the current IIIF image."
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Screenshot showing the IIIF manifest highlighted",
+            "path": "screenshot.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-acb86cbbcb639914",
+      "provider_name": "British Library",
+      "guide_slug": "bl.uk",
+      "guide_url": "https://iiif.io/guides/bl.uk/",
+      "homepage": "https://www.bl.uk/collection-guides/iiif",
+      "consortium_status": "full",
+      "official_actions": [
+        "There are a few different ways as described in the link above. Here is a video showing how to get access to items in the BL Catalogue."
+      ],
+      "official_evidence": {
+        "screenshots": [],
+        "links": [
+          {
+            "label": "front-matter direct example",
+            "url": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100056663076.0x000001"
+          },
+          {
+            "label": "literal URL",
+            "url": "https://player.vimeo.com/video/623316424?h=09d21d7477"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "legacy-platform-route-review",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-4ef10065e633729c",
+      "provider_name": "Blavatnik Archive",
+      "guide_slug": "blavatnikarchive.org",
+      "guide_url": "https://iiif.io/guides/blavatnikarchive.org/",
+      "homepage": "https://www.blavatnikarchive.org/collections",
+      "consortium_status": "full",
+      "official_actions": [
+        "Click on the IIIF button",
+        "Copy everything after manifest within the address bar="
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click on the IIIF button",
+            "path": "blavatnikarchive-1.png"
+          },
+          {
+            "alt": "Copy everything after manifest within the address bar=",
+            "path": "blavatnikarchive-2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-028fd9292205c39c",
+      "provider_name": "Bodmer Lab",
+      "guide_slug": "bodmerlab.unige.ch",
+      "guide_url": "https://iiif.io/guides/bodmerlab.unige.ch/",
+      "homepage": "https://bodmerlab.unige.ch/fr/search?keywords=",
+      "consortium_status": "no",
+      "official_actions": [
+        "Click on the mirador button",
+        "Click on the i icon, then copy the manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click on the mirador button",
+            "path": "bodmer-1.png"
+          },
+          {
+            "alt": "Click on the i icon, then copy the manifest link",
+            "path": "bodmer-2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-8798d72493175a05",
+      "provider_name": "Yale Center for British Art",
+      "guide_slug": "collections.britishart.yale.edu",
+      "guide_url": "https://iiif.io/guides/collections.britishart.yale.edu/",
+      "homepage": "https://collections.britishart.yale.edu/",
+      "consortium_status": "full",
+      "official_actions": [
+        "A screenshot showing to scroll down the YCBA catalog page",
+        "A screenshot showing to click the Manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "A screenshot showing to scroll down the YCBA catalog page",
+            "path": "ycba_1.png"
+          },
+          {
+            "alt": "A screenshot showing to click the Manifest link",
+            "path": "ycba_2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-818f5f2d2b5bea33",
+      "provider_name": "Folger Shakespeare Library",
+      "guide_slug": "collections.folger.edu",
+      "guide_url": "https://iiif.io/guides/collections.folger.edu/",
+      "homepage": "https://collections.folger.edu/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Copy the IIIF manifest url"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the IIIF manifest url",
+            "path": "folger.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-feedf2702c521119",
+      "provider_name": "Yale University Library",
+      "guide_slug": "collections.library.yale.edu",
+      "guide_url": "https://iiif.io/guides/collections.library.yale.edu/",
+      "homepage": "https://collections.library.yale.edu/",
+      "consortium_status": "full",
+      "official_actions": [
+        "A screenshot showing to scroll down in the Library catalog",
+        "A screenshot showing to copy the Manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "A screenshot showing to scroll down in the Library catalog",
+            "path": "yul_1.png"
+          },
+          {
+            "alt": "A screenshot showing to copy the Manifest link",
+            "path": "yul_2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-665981fb2cfa68fa",
+      "provider_name": "Yale Peabody Museum",
+      "guide_slug": "collections.peabody.yale.edu",
+      "guide_url": "https://iiif.io/guides/collections.peabody.yale.edu/",
+      "homepage": "https://peabody.yale.edu/explore/collections",
+      "consortium_status": "full",
+      "official_actions": [
+        "A screenshot showing to scroll down in the Peabody catalog",
+        "A screenshot showing to click the IIIF icon",
+        "A screenshot showing to click the info button in Mirador",
+        "A screenshot showing to copy the Manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "A screenshot showing to scroll down in the Peabody catalog",
+            "path": "ypm_1.png"
+          },
+          {
+            "alt": "A screenshot showing to click the IIIF icon",
+            "path": "ypm_2.png"
+          },
+          {
+            "alt": "A screenshot showing to click the info button in Mirador",
+            "path": "ypm_3.png"
+          },
+          {
+            "alt": "A screenshot showing to copy the Manifest link",
+            "path": "ypm_4.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-c94006b2714289d6",
+      "provider_name": "Smithsonian Institution",
+      "guide_slug": "collections.si.edu",
+      "guide_url": "https://iiif.io/guides/collections.si.edu/",
+      "homepage": "https://collections.si.edu/search/results.htm?q=&iiif.enabled=true",
+      "consortium_status": "full",
+      "official_actions": [
+        "Press the IIIF button then copy the view manifest button"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Press the IIIF button then copy the view manifest button",
+            "path": "smithsonian.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-015ee4ecd4a6fd91",
+      "provider_name": "Universitaet Jena",
+      "guide_slug": "collections.thulb.uni-jena.de",
+      "guide_url": "https://iiif.io/guides/collections.thulb.uni-jena.de/",
+      "homepage": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+      "consortium_status": "no",
+      "official_actions": [
+        "screenshot",
+        "Click on the IIIF button"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "screenshot",
+            "path": "screenshot.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-7ec00147ef5efa4a",
+      "provider_name": "University of Washington Libraries",
+      "guide_slug": "content.lib.washington.edu",
+      "guide_url": "https://iiif.io/guides/content.lib.washington.edu/",
+      "homepage": "https://content.lib.washington.edu/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Scroll down and copy the IIIF manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Scroll down and copy the IIIF manifest link",
+            "path": "wash.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-1aa346b109dd7584",
+      "provider_name": "University of Cambridge",
+      "guide_slug": "cudl.lib.cam.ac.uk",
+      "guide_url": "https://iiif.io/guides/cudl.lib.cam.ac.uk/",
+      "homepage": "https://cudl.lib.cam.ac.uk/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Click on the IIIF Manifest button",
+        "At the bottom of the right hand side panel there is a list of buttons. One is for the IIIF Manifest. Click the button to open manifest in new tab or the button can also be drag/dropped. When copying&pasting the Manifest URL, manually add the \".json\" file extension before pasting into desired use location."
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click on the IIIF Manifest button",
+            "path": "cam.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "front-matter direct example",
+            "url": "https://cudl.lib.cam.ac.uk/view/MS-ADD-00269/1"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-c4aa50f2571a99e9",
+      "provider_name": "Cultural Japan",
+      "guide_slug": "cultural.jp",
+      "guide_url": "https://iiif.io/guides/cultural.jp/",
+      "homepage": "https://cultural.jp/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Copy the link from the IIIF button"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the link from the IIIF button",
+            "path": "cultural-japan-1.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-cabfcd6f3de8ca7d",
+      "provider_name": "North Carolina State University Libraries",
+      "guide_slug": "d.lib.ncsu.edu",
+      "guide_url": "https://iiif.io/guides/d.lib.ncsu.edu/",
+      "homepage": "https://d.lib.ncsu.edu/collections/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Press the share button",
+        "Copy the link attached to the IIIF icon"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Press the share button",
+            "path": "nc-1.png"
+          },
+          {
+            "alt": "Copy the link attached to the IIIF icon",
+            "path": "nc-2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-0a19a8e5992b5a87",
+      "provider_name": "David Rumsey Map Collection",
+      "guide_slug": "davidrumsey.com",
+      "guide_url": "https://iiif.io/guides/davidrumsey.com/",
+      "homepage": "https://www.davidrumsey.com/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Click the share button, then copy the IIIF manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click the share button, then copy the IIIF manifest link",
+            "path": "david-rumsey-1.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-992059478d1af0a4",
+      "provider_name": "University of Oxford (Digital Bodleian)",
+      "guide_slug": "digital.bodleian.ox.ac.uk",
+      "guide_url": "https://iiif.io/guides/digital.bodleian.ox.ac.uk/",
+      "homepage": "https://digital.bodleian.ox.ac.uk/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Click on IIIF and other viewers, then copy the view iif manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click on IIIF and other viewers, then copy the view iif manifest link",
+            "path": "bod.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "front-matter direct example",
+            "url": "https://digital.bodleian.ox.ac.uk/objects/faeff7fb-f8a7-44b5-95ed-cff9a9ffd198/"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "previous_baseline_found_manifests",
+      "previous_module3_status": "manifests_found",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-7781a87376497b5c",
+      "provider_name": "UCLA Library Digital Collections",
+      "guide_slug": "digital.library.ucla.edu",
+      "guide_url": "https://iiif.io/guides/digital.library.ucla.edu/",
+      "homepage": "https://digital.library.ucla.edu/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Copy the IIIF manifest from the logo or click to open the manifest in a new window"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the IIIF manifest from the logo or click to open the manifest in a new window",
+            "path": "ucla.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-5bb54fcb57aa7da9",
+      "provider_name": "University of North Texas Libraries",
+      "guide_slug": "digital.library.unt.edu",
+      "guide_url": "https://iiif.io/guides/digital.library.unt.edu/",
+      "homepage": "https://digital.library.unt.edu/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Scroll down and press the copy button next to the iiif logo"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Scroll down and press the copy button next to the iiif logo",
+            "path": "unt.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-870ce1c300376029",
+      "provider_name": "Villanova University",
+      "guide_slug": "digital.library.villanova.edu",
+      "guide_url": "https://iiif.io/guides/digital.library.villanova.edu/",
+      "homepage": "https://digital.library.villanova.edu/",
+      "consortium_status": "associate",
+      "official_actions": [
+        "Click the share button",
+        "copy the link attached to the IIIF logo"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click the share button",
+            "path": "villanova-1.png"
+          },
+          {
+            "alt": "copy the link attached to the IIIF logo",
+            "path": "villanova-2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-5c37bd59a5085c75",
+      "provider_name": "National Library of Scotland",
+      "guide_slug": "digital.nls.uk",
+      "guide_url": "https://iiif.io/guides/digital.nls.uk/",
+      "homepage": "https://digital.nls.uk/gallery/",
+      "consortium_status": "associate",
+      "official_actions": [
+        "Copy the IIIF manifest URL"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the IIIF manifest URL",
+            "path": "nls.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-370a429900074b10",
+      "provider_name": "University College Dublin Libraries",
+      "guide_slug": "digital.ucd.ie",
+      "guide_url": "https://iiif.io/guides/digital.ucd.ie/",
+      "homepage": "https://digital.ucd.ie/",
+      "consortium_status": "associate",
+      "official_actions": [
+        "Click the IIIF icon",
+        "Click the share button",
+        "Copy the IIIF manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click the IIIF icon",
+            "path": "ucd-1.png"
+          },
+          {
+            "alt": "Click the share button",
+            "path": "ucd-2.png"
+          },
+          {
+            "alt": "Copy the IIIF manifest link",
+            "path": "ucd-3.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-760200a911a3f30f",
+      "provider_name": "National Palace Museum (Taiwan)",
+      "guide_slug": "digitalarchive.npm.gov.tw",
+      "guide_url": "https://iiif.io/guides/digitalarchive.npm.gov.tw/",
+      "homepage": "https://digitalarchive.npm.gov.tw/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Click on the left-hand IIIF icon to copy the Manifest link or click on the right-hand IIIF icon to view the Manifest in a viewer",
+        "Once you are on a specific page of a digital object, you can either copy the Manifest link or display it in a viewer by clicking on one of the IIIF icons."
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click on the left-hand IIIF icon to copy the Manifest link or click on the right-hand IIIF icon to view the Manifest in a viewer",
+            "path": "digitalarchive.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-5e1c10e9ec094e2b",
+      "provider_name": "Lancaster University Library",
+      "guide_slug": "digitalcollections.lancaster.ac.uk",
+      "guide_url": "https://iiif.io/guides/digitalcollections.lancaster.ac.uk/",
+      "homepage": "https://digitalcollections.lancaster.ac.uk/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Open an item, and select the IIIF icon on the \"About\" pane."
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Open an item, and select the IIIF icon on the \"About\" pane.",
+            "path": "Lancaster.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-d305e1aa116fabbc",
+      "provider_name": "Northwestern University",
+      "guide_slug": "digitalcollections.library.northwestern.edu",
+      "guide_url": "https://iiif.io/guides/digitalcollections.library.northwestern.edu/",
+      "homepage": "https://digitalcollections.library.northwestern.edu/collections/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Copy the IIIF manifest from the button in the catalogue"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the IIIF manifest from the button in the catalogue",
+            "path": "nwu.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-8d5551c46daf6536",
+      "provider_name": "Digital Commonwealth",
+      "guide_slug": "digitalcommonwealth.org",
+      "guide_url": "https://iiif.io/guides/digitalcommonwealth.org/",
+      "homepage": "https://digitalcommonwealth.org",
+      "consortium_status": "yes",
+      "official_actions": [
+        "Add the suffix /manifest to the end of a digitalcommonwealth.org record URL to retrieve the Presentation 2.0 Manifest",
+        "Digital Commonwealth URL: https://www.digitalcommonwealth.org/search/commonwealth:668305767 (https://www.digitalcommonwealth.org/search/commonwealth:668305767) * Manifest: https://www.digitalcommonwealth.org/search/commonwealth:668305767/manifest (https://www.digitalcommonwealth.org/search/commonwealth:668305767/manifest)",
+        "The Leventhal Map & Education Center Digital Collections portal (https://collections.leventhalmap.org) is a custom view of Digital Commonwealth, and follows the same syntax for Manifest URLs.",
+        "LMEC Digital Collections URL: https://collections.leventhalmap.org/search/commonwealth:x059cb10w (https://collections.leventhalmap.org/search/commonwealth:x059cb10w) * Manifest: https://collections.leventhalmap.org/search/commonwealth:x059cb10w/manifest (https://collections.leventhalmap.org/search/commonwealth:x059cb10w/manifest)",
+        "Digital Commonwealth API documentation (https://www.digitalcommonwealth.org/api)"
+      ],
+      "official_evidence": {
+        "screenshots": [],
+        "links": [
+          {
+            "label": "https://www.digitalcommonwealth.org/search/commonwealth:668305767",
+            "url": "https://www.digitalcommonwealth.org/search/commonwealth:668305767"
+          },
+          {
+            "label": "https://www.digitalcommonwealth.org/search/commonwealth:668305767/manifest",
+            "url": "https://www.digitalcommonwealth.org/search/commonwealth:668305767/manifest"
+          },
+          {
+            "label": "Digital Collections portal",
+            "url": "https://collections.leventhalmap.org"
+          },
+          {
+            "label": "https://collections.leventhalmap.org/search/commonwealth:x059cb10w",
+            "url": "https://collections.leventhalmap.org/search/commonwealth:x059cb10w"
+          },
+          {
+            "label": "https://collections.leventhalmap.org/search/commonwealth:x059cb10w/manifest",
+            "url": "https://collections.leventhalmap.org/search/commonwealth:x059cb10w/manifest"
+          },
+          {
+            "label": "Digital Commonwealth API documentation",
+            "url": "https://www.digitalcommonwealth.org/api"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "record-identifier-to-manifest-template",
+        "catalogue-api-identifier-enumeration",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-9639004395c2739d",
+      "provider_name": "Bavarian State Library (BSB) / Munich Digitization Centre (MDZ)",
+      "guide_slug": "digitale-sammlungen.de",
+      "guide_url": "https://iiif.io/guides/digitale-sammlungen.de/",
+      "homepage": "https://www.digitale-sammlungen.de/en/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Screenshot of the MDZ site showing how to filter IIIF items from search results.",
+        "Screenshot of the MDZ site showing how to download a manifest from an item.",
+        "Screenshot of the MDZ site showing how to download a manifest in viewer.",
+        "Filter IIIF items from search results:",
+        "After issuing an empty search request, click on filter \"Supported features\".",
+        "Select \"+\"-sign right of \"IIIF\"-filter to filter result list.",
+        "The filtered list is also available under URL <https://www.digitale-sammlungen.de/en/search?filter=features%3A%22iiif%22>",
+        "Link to IIIF manifest in an item section of IIIF search results, after opening section \"Complete information\":",
+        "Link to IIIF manifest in info-sidebar of Mirador 3:",
+        "Link to IIIF manifest in download plugin of Mirador 3: Open item in viewer and click on download icon:",
+        "IIIF Collection of all IIIF items of BSB:",
+        "<https://api.digitale-sammlungen.de/iiif/presentation/v2/collection/top>"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Screenshot of the MDZ site showing how to filter IIIF items from search results.",
+            "path": "mdz-4.jpg"
+          },
+          {
+            "alt": "Screenshot of the MDZ site showing how to filter IIIF items from search results.",
+            "path": "mdz-5.jpg"
+          },
+          {
+            "alt": "Screenshot of the MDZ site showing how to download a manifest from an item.",
+            "path": "mdz-1.jpg"
+          },
+          {
+            "alt": "Screenshot of the MDZ site showing how to download a manifest in viewer.",
+            "path": "mdz-6.jpg"
+          },
+          {
+            "alt": "Screenshot of the MDZ site showing how to download a manifest in viewer.",
+            "path": "mdz-2.jpg"
+          },
+          {
+            "alt": "Screenshot of the MDZ site showing how to download a manifest in viewer.",
+            "path": "mdz-3.jpg"
+          }
+        ],
+        "links": [
+          {
+            "label": "literal URL",
+            "url": "https://www.digitale-sammlungen.de/en/search?filter=features%3A%22iiif%22"
+          },
+          {
+            "label": "literal URL",
+            "url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/collection/top"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "filtered-search-result-enumeration",
+        "viewer-configuration-manifest-extraction",
+        "iiif-collection-traversal",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "previous_baseline_found_manifests",
+      "previous_module3_status": "manifests_found",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-53220deba7b0d3eb",
+      "provider_name": "Durham University",
+      "guide_slug": "discover.durham.ac.uk",
+      "guide_url": "https://iiif.io/guides/discover.durham.ac.uk/",
+      "homepage": "https://discover.durham.ac.uk/discovery/search?tab=MUSECOLL&search_scope=IIIF&vid=44DUR_INST:VU1&offset=0",
+      "consortium_status": "no",
+      "official_actions": [
+        "Image of Durham discovery portal",
+        "Full instructions in the Durham University library guide (https://libguides.durham.ac.uk/asc-digitised-collections-online/iiif).",
+        "Once you find an item scroll down to the bottom of the page and you will see the IIIF icon. Right click and choose Copy Link."
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Image of Durham discovery portal",
+            "path": "discover-resultsfull1.jpg"
+          }
+        ],
+        "links": [
+          {
+            "label": "library guide",
+            "url": "https://libguides.durham.ac.uk/asc-digitised-collections-online/iiif"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-0af71df3c01cdd4e",
+      "provider_name": "National Library of Wales",
+      "guide_slug": "discover.library.wales",
+      "guide_url": "https://iiif.io/guides/discover.library.wales/",
+      "homepage": "https://www.library.wales/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Click View this item",
+        "Click Embed, then copy the link attached to the IIIF icon"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click View this item",
+            "path": "nlw-1.png"
+          },
+          {
+            "alt": "Click Embed, then copy the link attached to the IIIF icon",
+            "path": "nlw-2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-4e06374e85489c6e",
+      "provider_name": "Princeton University Libraries",
+      "guide_slug": "dpul.princeton.edu",
+      "guide_url": "https://iiif.io/guides/dpul.princeton.edu/",
+      "homepage": "https://dpul.princeton.edu/",
+      "consortium_status": "associate",
+      "official_actions": [
+        "Copy the link attached to the IIIF button"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the link attached to the IIIF button",
+            "path": "princeton-lib-1.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-ef8c581d8869b1b6",
+      "provider_name": "e-codices - Virtual Manuscript Library of Switzerland",
+      "guide_slug": "e-codices.ch",
+      "guide_url": "https://iiif.io/guides/e-codices.ch/",
+      "homepage": "https://e-codices.ch/en",
+      "consortium_status": "associate",
+      "official_actions": [
+        "Copy the IIIF manifest link on the record page"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the IIIF manifest link on the record page",
+            "path": "e-codices-1.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-7caa47e568a1951d",
+      "provider_name": "e-manuscripta (Manuscript material from Swiss libraries and archives)",
+      "guide_slug": "e-manuscripta.ch",
+      "guide_url": "https://iiif.io/guides/e-manuscripta.ch/",
+      "homepage": "https://www.e-manuscripta.ch/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Copy the IIIF manifest link on the record page"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the IIIF manifest link on the record page",
+            "path": "e-manuscripta-1.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-3e6e726f68de3eaa",
+      "provider_name": "e-rara (digitized rare books from Swiss institutions)",
+      "guide_slug": "e-rara.ch",
+      "guide_url": "https://iiif.io/guides/e-rara.ch/",
+      "homepage": "https://www.e-rara.ch/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Scroll down, then copy the IIIF manifest link towards the bottom of a record page"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Scroll down, then copy the IIIF manifest link towards the bottom of a record page",
+            "path": "e-rara.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-9c46415198317886",
+      "provider_name": "Europeana",
+      "guide_slug": "europeana.eu",
+      "guide_url": "https://iiif.io/guides/europeana.eu/",
+      "homepage": "https://www.europeana.eu/portal/en/search?q=provider_aggregation_edm_isShownBy%3A*iiif*&view=grid",
+      "consortium_status": "full",
+      "official_actions": [
+        "Europeana viewer highlighting the button to open the manifest link",
+        "Europeana Viewer with Manifest link panel open.",
+        "The above link takes you to all of the IIIF items in Europeana. Note some only have IIIF Images and others have Manifests.",
+        "You can now get access to a Manifest by clicking the three vertical dots highlighted in red on the left side of the image below:",
+        "Once the three dots are clicked you will see the Manifest link on the left hand side of the viewer:"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Europeana viewer highlighting the button to open the manifest link",
+            "path": "viewer.png"
+          },
+          {
+            "alt": "Europeana Viewer with Manifest link panel open.",
+            "path": "manifest-link.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "front-matter direct example",
+            "url": "https://www.europeana.eu/en/item/1223/item_227XM75SDXCJCZT3YLAS5FNHV2U7CM5W"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-7354f1a7e6bbf41f",
+      "provider_name": "National Library of Finland (Finna.fi)",
+      "guide_slug": "finna.fi",
+      "guide_url": "https://iiif.io/guides/finna.fi/",
+      "homepage": "https://www.finna.fi",
+      "consortium_status": "full",
+      "official_actions": [
+        "Finna viewer highlighting the button to open the manifest link",
+        "There is a direct link (https://www.finna.fi/Search/Results?sort=relevance&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&lookfor0%5B%5D=&type0%5B%5D=AllFields&join=AND&filter%5B%5D=%7Emedia_type_str_mv%3A%220%2Fx-iiif%2F%22&limit=20) that will take you to a search which filters for items with IIIF manifests. To get to this search go to the advanced search (https://www.finna.fi/Search/Advanced) page and scroll down to the \"Media type\" filter and select \"IIIF\".",
+        "Once you have found an item that has a IIIF manifest, you can should see a IIIF icon on the botttom right with a clickable menu called IIIF Tools. Clicking open in a new window will open the Manifest in a new window and copy to clipboard will copy the Manifest URL."
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Finna viewer highlighting the button to open the manifest link",
+            "path": "finna_iiif_item.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "front-matter direct example",
+            "url": "https://www.finna.fi/Record/jykdok.2222144?sid=5352321459&lng=en-gb"
+          },
+          {
+            "label": "direct link",
+            "url": "https://www.finna.fi/Search/Results?sort=relevance&bool0%5B%5D=AND&lookfor0%5B%5D=&type0%5B%5D=AllFields&lookfor0%5B%5D=&type0%5B%5D=AllFields&join=AND&filter%5B%5D=%7Emedia_type_str_mv%3A%220%2Fx-iiif%2F%22&limit=20"
+          },
+          {
+            "label": "advanced search",
+            "url": "https://www.finna.fi/Search/Advanced"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "filtered-search-result-enumeration",
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-ef02e7415eb96a3e",
+      "provider_name": "Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments",
+      "guide_slug": "fragmentarium.ms",
+      "guide_url": "https://iiif.io/guides/fragmentarium.ms/",
+      "homepage": "https://fragmentarium.ms/search",
+      "consortium_status": "no",
+      "official_actions": [
+        "Copy the IIIF manifest link on the record"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the IIIF manifest link on the record",
+            "path": "fragmentarium.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "previous_baseline_found_manifests",
+      "previous_module3_status": "manifests_found",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-a668e1096468c352",
+      "provider_name": "Bibliothèque nationale de France (BnF)",
+      "guide_slug": "gallica.bnf.fr",
+      "guide_url": "https://iiif.io/guides/gallica.bnf.fr/",
+      "homepage": "https://gallica.bnf.fr",
+      "consortium_status": "full",
+      "official_actions": [
+        "Click the IIIF icon",
+        "Then in Mirador click the information icon and scroll down to the bottom of the window.",
+        "Click the IIIF icon on a item page:",
+        "This will open Mirador. Now click the i in the top right to open up the Manifest Information panel. Scroll to the bottom of the panel and you should see the manifest:"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click the IIIF icon",
+            "path": "gallica-1.png"
+          },
+          {
+            "alt": "Then in Mirador click the information icon and scroll down to the bottom of the window.",
+            "path": "gallica-2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-47e8bc7785793a60",
+      "provider_name": "Göttingen University Collections",
+      "guide_slug": "gdz.sub.uni-goettingen.de",
+      "guide_url": "https://iiif.io/guides/gdz.sub.uni-goettingen.de/",
+      "homepage": "https://gdz.sub.uni-goettingen.de/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Press Export, then copy the iiif manifest URL"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Press Export, then copy the iiif manifest URL",
+            "path": "gottingen.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-637a751532e5f5a3",
+      "provider_name": "Harvard Art Museum",
+      "guide_slug": "harvardartmuseums.org",
+      "guide_url": "https://iiif.io/guides/harvardartmuseums.org/",
+      "homepage": "https://harvardartmuseums.org/collections",
+      "consortium_status": "associate",
+      "official_actions": [
+        "Click the share button",
+        "Click reuse via iiif",
+        "Click the i icon then copy the iiif manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click the share button",
+            "path": "harvard-art-museum-1.png"
+          },
+          {
+            "alt": "Click reuse via iiif",
+            "path": "harvard-art-museum-2.png"
+          },
+          {
+            "alt": "Click the i icon then copy the iiif manifest link",
+            "path": "harvard-art-museum-3.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-f761dd27f50f2d55",
+      "provider_name": "Huntington Digital Library",
+      "guide_slug": "hdl.huntington.org",
+      "guide_url": "https://iiif.io/guides/hdl.huntington.org/",
+      "homepage": "https://hdl.huntington.org/digital/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Scroll down and copy the IIIF manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Scroll down and copy the IIIF manifest link",
+            "path": "huntington.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-ef2f1cc06db37bc3",
+      "provider_name": "KU Leuven",
+      "guide_slug": "kuleuven.limo.libis.be",
+      "guide_url": "https://iiif.io/guides/kuleuven.limo.libis.be/",
+      "homepage": "https://kuleuven.limo.libis.be/discovery",
+      "consortium_status": "no",
+      "official_actions": [
+        "In the information pane, in the share button or manifest link on pages",
+        "In the information pane, in the share button or manifest link on pages."
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "In the information pane, in the share button or manifest link on pages",
+            "path": "KUL.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-47cf886a2e6017f1",
+      "provider_name": "Ghent University",
+      "guide_slug": "lib.ugent.be",
+      "guide_url": "https://iiif.io/guides/lib.ugent.be/",
+      "homepage": "https://lib.ugent.be/en",
+      "consortium_status": "full",
+      "official_actions": [
+        "You find the IIIF manifest link on the bottom left",
+        "You find the IIIF manifest link on the bottom left of the viewer"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "You find the IIIF manifest link on the bottom left",
+            "path": "BookTowerGhent.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-d14fb88cde24ff49",
+      "provider_name": "Harvard University Digital Collections",
+      "guide_slug": "library.harvard.edu",
+      "guide_url": "https://iiif.io/guides/library.harvard.edu/",
+      "homepage": "https://library.harvard.edu/digital-collections",
+      "consortium_status": "full",
+      "official_actions": [
+        "click the copy manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "click the copy manifest link",
+            "path": "harvard-1.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-e8f0640dd782bf74",
+      "provider_name": "University of Leeds Libraries' Cultural Collections",
+      "guide_slug": "library.leeds.ac.uk",
+      "guide_url": "https://iiif.io/guides/library.leeds.ac.uk/",
+      "homepage": "https://library.leeds.ac.uk/info/1500/special_collections",
+      "consortium_status": "full",
+      "official_actions": [
+        "Open the burger menu top left of the image at the top of the catalogue record",
+        "and then scroll to the bottom to see the IIIF manifest",
+        "Scroll down to the ‘Details’ area of the catalogue record where you’ll see the IIIF logo next to the manifest:",
+        "Please remember to check any access usage stipulations in the Access and Usage section of the catalogue record…",
+        "...and to request re-use if you plan to publish elsewhere, for example, in a digital exhibition (this is only necessary if you see the re-use button on the record).",
+        "Tens of thousands of University of Leeds Libraries’ Cultural Collections (https://library.leeds.ac.uk/info/1500/special_collections) are now IIIF enabled (and more are coming!). For those images that have been converted to the IIIF standard, you will see a large version of the image at the top of the catalogue record. To find the IIIF Manifest URLs, either …"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Open the burger menu top left of the image at the top of the catalogue record",
+            "path": "leeds1.png"
+          },
+          {
+            "alt": "and then scroll to the bottom to see the IIIF manifest",
+            "path": "leeds2.png"
+          },
+          {
+            "alt": "Scroll down to the ‘Details’ area of the catalogue record where you’ll see the IIIF logo next to the manifest:",
+            "path": "leeds3.png"
+          },
+          {
+            "alt": "Please remember to check any access usage stipulations in the Access and Usage section of the catalogue record…",
+            "path": "leeds4.png"
+          },
+          {
+            "alt": "...and to request re-use if you plan to publish elsewhere, for example, in a digital exhibition (this is only necessary if you see the re-use button on the record).",
+            "path": "leeds5.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "Leeds Libraries’ Cultural Collections",
+            "url": "https://library.leeds.ac.uk/info/1500/special_collections"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-c4bca842117bf9f7",
+      "provider_name": "National Gallery of Art Library",
+      "guide_slug": "library.nga.gov",
+      "guide_url": "https://iiif.io/guides/library.nga.gov/",
+      "homepage": "https://library.nga.gov/discovery/collectionDiscovery?vid=01NGA_INST:NGA&collectionId=8157583990004896",
+      "consortium_status": "full",
+      "official_actions": [
+        "Screenshot showing embedded UV",
+        "Browse or search titles from Digital Collections and its sub collections, such as Image Collections or Special Collections. Library Catalog main page default search also returns IIIF-enabled digital titles as well as physical and electronic records. 2. IIIF viewer is embedded and displayed at each record level interface. Universal viewer is adopted for book titles, while mirador3 viewer displays images collection resources. 3. Direct link to IIIF resource is displayed at record level under View Online section as: Full-screen view at: National Gallery of Art Library - Digital Collections",
+        "Example record: Grandezze della città di Roma antiche e moderne come al presente si ritrovano, di nuovo ristampato in quattro linguaggi: latino, volgare, francese... (https://libraryimage.nga.gov/uv/?manifest=https://libraryimage.nga.gov/manifest/mms/99682033504896.json#?c=0&m=0&s=0&cv=0&xywh=-2835%2C-267%2C9101%2C5333)"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Screenshot showing embedded UV",
+            "path": "screenshot.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "Grandezze della città di Roma antiche e moderne come al presente si ritrovano, di nuovo ristampato in quattro linguaggi: latino, volgare, francese...",
+            "url": "https://libraryimage.nga.gov/uv/?manifest=https://libraryimage.nga.gov/manifest/mms/99682033504896.json#?c=0&m=0&s=0&cv=0&xywh=-2835%2C-267%2C9101%2C5333"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-identifier-to-manifest-template",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-2254ed59cf35068a",
+      "provider_name": "University of Toronto",
+      "guide_slug": "library.utoronto.ca",
+      "guide_url": "https://iiif.io/guides/library.utoronto.ca/",
+      "homepage": "https://collections.library.utoronto.ca/",
+      "consortium_status": "full",
+      "official_actions": [
+        "On the bottom of an object's page, click on the Share and Reuse tab and you will see the Copy IIIF manifest button for the object.",
+        "On an object's page, click on the Share and Reuse tab and you will see the Copy IIIF manifest button for the object.",
+        "Also see this dedicated page for how to access IIIF resources, check copyright and reuse regulations, and see what you can do with IIIF:"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "On the bottom of an object's page, click on the Share and Reuse tab and you will see the Copy IIIF manifest button for the object.",
+            "path": "toronto.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "front-matter direct example",
+            "url": "https://collections.library.utoronto.ca/"
+          },
+          {
+            "label": "https://collections.library.utoronto.ca/explore/faq/getting_started",
+            "url": "https://collections.library.utoronto.ca/explore/faq/getting_started"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-9c24703f7d539465",
+      "provider_name": "Cardiff University",
+      "guide_slug": "librarysearch.cardiff.ac.uk",
+      "guide_url": "https://iiif.io/guides/librarysearch.cardiff.ac.uk/",
+      "homepage": "https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1",
+      "consortium_status": "no",
+      "official_actions": [
+        "Screenshot showing the Cardiff Catalogue",
+        "Screenshot of the UV showing the IIIF logo",
+        "Click on 'View in high resolution' to open the Universal Viewer. Click the Share link, then copy link from IIIF logo.",
+        "Example item Ellor-gāst (https://librarysearch.cardiff.ac.uk/permalink/44WHELF_CAR/1ucm8iq/alma9911991475402420)",
+        "Share button on the Universal Viewer:"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Screenshot showing the Cardiff Catalogue",
+            "path": "catalogue.png"
+          },
+          {
+            "alt": "Screenshot of the UV showing the IIIF logo",
+            "path": "uv.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "Ellor-gāst",
+            "url": "https://librarysearch.cardiff.ac.uk/permalink/44WHELF_CAR/1ucm8iq/alma9911991475402420"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-296564297962fb5e",
+      "provider_name": "Library of Congress",
+      "guide_slug": "loc.gov",
+      "guide_url": "https://iiif.io/guides/loc.gov/",
+      "homepage": "https://www.loc.gov/collections/",
+      "consortium_status": "associate",
+      "official_actions": [
+        "CScroll down and copy the Manifest(JSON/LD) link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "CScroll down and copy the Manifest(JSON/LD) link",
+            "path": "loc.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-6425a20ec00665e3",
+      "provider_name": "Smithsonian National Zoo",
+      "guide_slug": "nationalzoo.si.edu",
+      "guide_url": "https://iiif.io/guides/nationalzoo.si.edu/",
+      "homepage": "https://nationalzoo.si.edu/openaccess/search?edan_fq%5B%5D=online_visual_material%3Atrue",
+      "consortium_status": "full",
+      "official_actions": [
+        "Press the IIIF button, then copy the view manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Press the IIIF button, then copy the view manifest link",
+            "path": "smithsonian-zoo.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-fa146b049ccac158",
+      "provider_name": "Utrecht University Library",
+      "guide_slug": "objects.library.uu.nl",
+      "guide_url": "https://iiif.io/guides/objects.library.uu.nl/",
+      "homepage": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+      "consortium_status": "no",
+      "official_actions": [
+        "Click on a digitized object and subsequently on 'IIIF' in the left menu",
+        "Click on a digitized object and subsequently on 'IIIF' in the left menu."
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click on a digitized object and subsequently on 'IIIF' in the left menu",
+            "path": "Utrecht.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-3acece25cdf777e4",
+      "provider_name": "Indigenous Digital Archive",
+      "guide_slug": "omeka.dlcs-ida.org",
+      "guide_url": "https://iiif.io/guides/omeka.dlcs-ida.org/",
+      "homepage": "https://omeka.dlcs-ida.org/s/ida/page/home",
+      "consortium_status": "no",
+      "official_actions": [
+        "Copy the link from the IIIF button"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the link from the IIIF button",
+            "path": "ida.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-f2683615336e129a",
+      "provider_name": "Ecole Polytechnique Fédérale de Lausanne (EPFL)",
+      "guide_slug": "plume.epfl.ch",
+      "guide_url": "https://iiif.io/guides/plume.epfl.ch/",
+      "homepage": "https://plume.epfl.ch/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Copy the IIIF link towards the bottom of the page"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the IIIF link towards the bottom of the page",
+            "path": "epfl-1.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "validated_executable_knowledge",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-521d522730b9f10b",
+      "provider_name": "Qatar National Library",
+      "guide_slug": "qdl.qa",
+      "guide_url": "https://iiif.io/guides/qdl.qa/",
+      "homepage": "https://www.qdl.qa/en/search/site/?f[0]=document_source:archive_source",
+      "consortium_status": "full",
+      "official_actions": [
+        "press the use and share this record link, then copy the manifest link next to the iiif icon"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "press the use and share this record link, then copy the manifest link next to the iiif icon",
+            "path": "qatar.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-f034696f3b1f1c1f",
+      "provider_name": "Digital Repository of Ireland",
+      "guide_slug": "repository.dri.ie",
+      "guide_url": "https://iiif.io/guides/repository.dri.ie/",
+      "homepage": "https://dri.ie/",
+      "consortium_status": "no",
+      "official_actions": [
+        "In the 'Object Tools' section the right of the image click on the IIIF icon/logo"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "In the 'Object Tools' section the right of the image click on the IIIF icon/logo",
+            "path": "DRI.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-32c223e0cddf015c",
+      "provider_name": "Brown University Digital Repository",
+      "guide_slug": "repository.library.brown.edu",
+      "guide_url": "https://iiif.io/guides/repository.library.brown.edu/",
+      "homepage": "https://repository.library.brown.edu/studio/",
+      "consortium_status": "associate",
+      "official_actions": [
+        "Click \"Views\" then copy the IIIF Manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click \"Views\" then copy the IIIF Manifest link",
+            "path": "brown-1.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-d98fe11ebfc34f6d",
+      "provider_name": "J. Paul Getty Trust",
+      "guide_slug": "search.getty.edu",
+      "guide_url": "https://iiif.io/guides/search.getty.edu/",
+      "homepage": "https://search.getty.edu/gateway/search?q=&cat=highlight&f=%22Open+Content+Images%22&rows=10&srt=a&dir=s&pg=1",
+      "consortium_status": "full",
+      "official_actions": [
+        "Copy the IIIF manifest from the button in the catalogue"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the IIIF manifest from the button in the catalogue",
+            "path": "getty.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-648f0743acabd9c2",
+      "provider_name": "Stanford University",
+      "guide_slug": "searchworks.stanford.edu",
+      "guide_url": "https://iiif.io/guides/searchworks.stanford.edu/",
+      "homepage": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+      "consortium_status": "full",
+      "official_actions": [
+        "Click on the top menu icon, then copy the URL underneath IIIF manifest header"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click on the top menu icon, then copy the URL underneath IIIF manifest header",
+            "path": "stanford.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-09ef3155e4838a64",
+      "provider_name": "University of Leicester Library",
+      "guide_slug": "specialcollections.le.ac.uk",
+      "guide_url": "https://iiif.io/guides/specialcollections.le.ac.uk/",
+      "homepage": "https://specialcollections.le.ac.uk/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Screenshot of Leicester library catalogue",
+        "On an item page, scroll down past the media file to the section Item Description. Use the field IIIF Manifest (second from bottom). Right click on the url displayed to copy and add to Mirador etc"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Screenshot of Leicester library catalogue",
+            "path": "screenshot.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "A view from Durdham Down near Bristol",
+            "url": "https://specialcollections.le.ac.uk/digital/collection/p16445coll16/id/2217/rec/16"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-47ee4f79e1a60cac",
+      "provider_name": "University of St. Andrews",
+      "guide_slug": "st-andrews.ac.uk",
+      "guide_url": "https://iiif.io/guides/st-andrews.ac.uk/",
+      "homepage": "https://www.st-andrews.ac.uk/collections",
+      "consortium_status": "no",
+      "official_actions": [
+        "Copy the IIIF manifest from the button in the catalogue"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Copy the IIIF manifest from the button in the catalogue",
+            "path": "catalogue.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-e048f92222cd2e49",
+      "provider_name": "Leiden University",
+      "guide_slug": "universiteitleiden.nl",
+      "guide_url": "https://iiif.io/guides/universiteitleiden.nl/",
+      "homepage": "https://digitalcollections.universiteitleiden.nl/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Click on the IIIF advanced viewer button",
+        "Click the I button, scroll down, copy the IIIF manifest link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Click on the IIIF advanced viewer button",
+            "path": "leiden-1.png"
+          },
+          {
+            "alt": "Click the I button, scroll down, copy the IIIF manifest link",
+            "path": "leiden-2.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-9087fc100047c3b2",
+      "provider_name": "Vatican Library",
+      "guide_slug": "vatlib.it",
+      "guide_url": "https://iiif.io/guides/vatlib.it/",
+      "homepage": "https://digi.vatlib.it/",
+      "consortium_status": "full",
+      "official_actions": [
+        "Catalogue link",
+        "Viewer link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Catalogue link",
+            "path": "catalogue.png"
+          },
+          {
+            "alt": "Viewer link",
+            "path": "viewer.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "viewer-configuration-manifest-extraction",
+        "legacy-platform-route-review"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-33ef699d79fc12aa",
+      "provider_name": "World Digitial Library",
+      "guide_slug": "wdl.org",
+      "guide_url": "https://iiif.io/guides/wdl.org/",
+      "homepage": "https://www.wdl.org/",
+      "consortium_status": "associate",
+      "official_actions": [
+        "Scroll down to bottom of page and copy the link"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Scroll down to bottom of page and copy the link",
+            "path": "wdl.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "legacy-platform-route-review",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-b49c571f8e0c0ba0",
+      "provider_name": "Wellcome Collection",
+      "guide_slug": "wellcomelibrary.org",
+      "guide_url": "https://iiif.io/guides/wellcomelibrary.org/",
+      "homepage": "https://wellcomecollection.org/collections",
+      "consortium_status": "full",
+      "official_actions": [
+        "Scroll to developers",
+        "API reference",
+        "IIIF APIs"
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Scroll to developers",
+            "path": "wellcome-3.png"
+          },
+          {
+            "alt": "API reference",
+            "path": "wellcome-4.png"
+          },
+          {
+            "alt": "IIIF APIs",
+            "path": "wellcome-5.png"
+          }
+        ],
+        "links": []
+      },
+      "candidate_skill_ids": [
+        "catalogue-api-identifier-enumeration",
+        "legacy-platform-route-review"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-9a9d50ec8631eafd",
+      "provider_name": "Wikipedia",
+      "guide_slug": "wikipedia.org",
+      "guide_url": "https://iiif.io/guides/wikipedia.org/",
+      "homepage": "https://www.wikipedia.org/",
+      "consortium_status": "no",
+      "official_actions": [
+        "Screenshot of Annunciation Wikipedia page",
+        "Screenshot of Wikimedia Commons page",
+        "It is possible to get access to any image on Wikipedia using a hidden beta IIIF image service. To access this service you need to find the filename of the image you are interested in then feed it into the following URL:",
+        "https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=[file_name]/info.json (https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=[file_name]/info.json)",
+        "In this example we are trying to find the filename for the Annunciation (https://en.wikipedia.org/wiki/Annunciation_(Leonardo)) by Leonardo da Vinci. First click on the image in the Wikipedia page to get to the image in Wikimedia Commons.",
+        "This will take you to a preview of the full image on Wikimedia Commons. You now need to click the \"More details\" button to get to the full Wikimedia Commons page.",
+        "Now look at the URL in the address bar and you will see something like the following:",
+        "This gives the filename you need at the end of the URL after the File: part. You can then take the filename to create the following URL to the info.json:",
+        "https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=Annunciation_(Leonardo).jpg/info.json (https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=Annunciation_(Leonardo).jpg/info.json)",
+        "Note the URL above will forward you on to a cached version of the image."
+      ],
+      "official_evidence": {
+        "screenshots": [
+          {
+            "alt": "Screenshot of Annunciation Wikipedia page",
+            "path": "wikipedia_screenshot.png"
+          },
+          {
+            "alt": "Screenshot of Wikimedia Commons page",
+            "path": "wikicommons.png"
+          }
+        ],
+        "links": [
+          {
+            "label": "https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=[file_name]/info.json",
+            "url": "https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=[file_name]/info.json"
+          },
+          {
+            "label": "Annunciation",
+            "url": "https://en.wikipedia.org/wiki/Annunciation_(Leonardo)"
+          },
+          {
+            "label": "https://commons.wikimedia.org/wiki/File:Annunciation_(Leonardo).jpg",
+            "url": "https://commons.wikimedia.org/wiki/File:Annunciation_(Leonardo).jpg"
+          },
+          {
+            "label": "https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=Annunciation_(Leonardo).jpg/info.json",
+            "url": "https://tools.wmflabs.org/zoomviewer/proxy.php?iiif=Annunciation_(Leonardo).jpg/info.json"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "image-api-filename-resolution",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "official_documented_candidate",
+      "previous_module3_status": "unresolved",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    },
+    {
+      "provider_id": "provider-d5e7b7675f084f36",
+      "provider_name": "Wikidata",
+      "guide_slug": "www.wikidata.org",
+      "guide_url": "https://iiif.io/guides/www.wikidata.org/",
+      "homepage": "https://www.wikidata.org",
+      "consortium_status": "no",
+      "official_actions": [
+        "Wikidata has a property for IIIF Manifests called IIIF Manifest (P6108) (https://www.wikidata.org/wiki/Property:P6108). This allows queries to be written that will retrieve manifests if they match other Wikidata properties. Example queries are below:",
+        "List of all IIIF Manifests on Wikidata by Collection (https://w.wiki/37hQ) * IIIF manifests of works by Turner (https://w.wiki/37hF) * IIIF manifests for self-portrait paintings (https://w.wiki/37hH) * IIIF manifests of illuminated manuscripts (https://w.wiki/37hJ)"
+      ],
+      "official_evidence": {
+        "screenshots": [],
+        "links": [
+          {
+            "label": "IIIF Manifest (P6108)",
+            "url": "https://www.wikidata.org/wiki/Property:P6108"
+          },
+          {
+            "label": "List of all IIIF Manifests on Wikidata by Collection",
+            "url": "https://w.wiki/37hQ"
+          },
+          {
+            "label": "IIIF manifests of works by Turner",
+            "url": "https://w.wiki/37hF"
+          },
+          {
+            "label": "IIIF manifests for self-portrait paintings",
+            "url": "https://w.wiki/37hH"
+          },
+          {
+            "label": "IIIF manifests of illuminated manuscripts",
+            "url": "https://w.wiki/37hJ"
+          }
+        ]
+      },
+      "candidate_skill_ids": [
+        "wikidata-p6108-query",
+        "record-page-manifest-link-extraction"
+      ],
+      "validation_state": "previous_baseline_found_manifests",
+      "previous_module3_status": "manifests_found",
+      "knowledge_rule": "Official instructions are documentary evidence. Candidate skills must pass live HTTP, JSON, and IIIF validation before execution."
+    }
+  ]
+}

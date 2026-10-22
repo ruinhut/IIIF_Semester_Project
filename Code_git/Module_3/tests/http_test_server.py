@@ -6,16 +6,83 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 from threading import Thread
 from typing import Any, ClassVar
-from urllib.parse import urlsplit
+from urllib.parse import parse_qs, urlsplit
 
 
 class FixtureHandler(BaseHTTPRequestHandler):
     request_counts: ClassVar[dict[str, int]] = {}
     base_url: ClassVar[str] = ""
 
+    def do_POST(self) -> None:  # noqa: N802 - required by BaseHTTPRequestHandler
+        """Model a read-only catalogue that requires JSON-body offsets."""
+        parts = urlsplit(self.path)
+        if parts.path != "/catalogue-search":
+            self._send(404, b"not found", "text/plain")
+            return
+        if self.headers.get("X-Catalogue-Site") != "public":
+            self._send(403, b"missing catalogue scope", "text/plain")
+            return
+        body = json.loads(self.rfile.read(int(self.headers.get("Content-Length", "0"))))
+        offset = body.get("offset", 0)
+        self.request_counts[f"POST:{offset}"] = self.request_counts.get(f"POST:{offset}", 0) + 1
+        values = [{"id": 11}, {"id": 13}][offset:offset + 1]
+        self._json({"hits": values, "total": 2})
+
     def do_GET(self) -> None:  # noqa: N802 - required by BaseHTTPRequestHandler
-        path = urlsplit(self.path).path
+        parts = urlsplit(self.path)
+        path = parts.path
+        query = parse_qs(parts.query)
         self.request_counts[path] = self.request_counts.get(path, 0) + 1
+        if path == "/api-items":
+            page = int(query.get("page", ["1"])[0])
+            values = {
+                1: [
+                    {"o:id": 11, "o:media": [{"o:id": 101}]},
+                    {"o:id": 12, "o:media": []},
+                ],
+                2: [{"o:id": 13, "o:media": [{"o:id": 102}]}],
+            }.get(page, [])
+            self._json(values, "application/ld+json")
+            return
+        if path == "/api-artworks":
+            self._json(
+                {
+                    "data": [
+                        {"id": 21, "is_public_domain": True},
+                        {"id": 22, "is_public_domain": False},
+                    ]
+                },
+                "application/json",
+            )
+            return
+        if path == "/omeka/api/items":
+            page = int(query.get("page", ["1"])[0])
+            values = (
+                [{"o:id": 31, "o:media": [{"o:id": 301}]}]
+                if page == 1
+                else []
+            )
+            self._json(values, "application/ld+json")
+            return
+        if path == "/omeka/s/demo/page/home":
+            self._html(
+                """<!doctype html><html><head>
+                <script src="/omeka/application/asset/js/omeka.js"></script>
+                </head><body>Omeka S test site</body></html>"""
+            )
+            return
+        if path.startswith("/omeka/iiif/3/") and path.endswith("/manifest"):
+            identifier = path.split("/")[4]
+            self._json(
+                {
+                    "@context": "http://iiif.io/api/presentation/3/context.json",
+                    "id": f"{self.base_url}{path}",
+                    "type": "Manifest",
+                    "label": {"en": [f"Omeka item {identifier}"]},
+                    "items": [],
+                }
+            )
+            return
         if path == "/stream":
             self._json(
                 {
@@ -136,6 +203,18 @@ class FixtureHandler(BaseHTTPRequestHandler):
                     "type": "Manifest",
                     "label": {"en": [f"Manifest {identifier}"]},
                     "items": [],
+                }
+            )
+            return
+        if path.startswith("/templated/") and path.endswith("/manifest"):
+            identifier = path.split("/")[2]
+            self._json(
+                {
+                    "@context": "http://iiif.io/api/presentation/2/context.json",
+                    "@id": f"{self.base_url}{path}",
+                    "@type": "sc:Manifest",
+                    "label": f"Templated manifest {identifier}",
+                    "sequences": [],
                 }
             )
             return

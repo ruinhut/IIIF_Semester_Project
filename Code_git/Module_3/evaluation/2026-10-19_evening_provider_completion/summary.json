@@ -1,0 +1,87 @@
+{
+  "completed_at": "2026-10-19T16:03:55.923729+00:00",
+  "deadline_utc": "2026-10-19T16:05:00+00:00",
+  "requested_providers": 5,
+  "new_end_to_end_resolved": 0,
+  "global_configs_modified": false,
+  "checks": [
+    {
+      "provider_name": "Harvard University Digital Collections",
+      "url": "https://library.harvard.edu/digital-collections",
+      "checked_at": "2026-10-19T16:03:54.983296+00:00",
+      "promoted": false,
+      "http_status": 404,
+      "final_url": "https://library.harvard.edu/digital-collections",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 6683,
+      "truncated": false,
+      "result": "endpoint_checked_only",
+      "json_parseable": false,
+      "elapsed_seconds": 0.344
+    },
+    {
+      "provider_name": "Princeton University Libraries",
+      "url": "https://figgy.princeton.edu/concern/scanned_resources/3880841a-aaa8-418f-a6cb-dac6b77c9422/manifest",
+      "checked_at": "2026-10-19T16:03:54.981067+00:00",
+      "promoted": false,
+      "http_status": 200,
+      "final_url": "https://figgy.princeton.edu/concern/scanned_resources/3880841a-aaa8-418f-a6cb-dac6b77c9422/manifest",
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 6814,
+      "truncated": false,
+      "result": "manifest_candidate_fetched_not_end_to_end_validated",
+      "json_parseable": true,
+      "declared_type": "sc:Manifest",
+      "context": "http://iiif.io/api/presentation/2/context.json",
+      "evidence_file": "princeton_candidate_manifest.json",
+      "elapsed_seconds": 0.391
+    },
+    {
+      "provider_name": "Villanova University",
+      "url": "https://digital.library.villanova.edu/",
+      "checked_at": "2026-10-19T16:03:54.982085+00:00",
+      "promoted": false,
+      "http_status": 403,
+      "final_url": "https://digital.library.villanova.edu/",
+      "content_type": "text/html",
+      "bytes": 110,
+      "truncated": false,
+      "result": "endpoint_checked_only",
+      "json_parseable": false,
+      "elapsed_seconds": 0.422
+    },
+    {
+      "provider_name": "Stanford University",
+      "url": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+      "checked_at": "2026-10-19T16:03:54.983296+00:00",
+      "promoted": false,
+      "http_status": 200,
+      "final_url": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+      "content_type": "text/html",
+      "bytes": 7023,
+      "truncated": false,
+      "result": "endpoint_checked_only",
+      "json_parseable": false,
+      "elapsed_seconds": 0.532
+    },
+    {
+      "provider_name": "University of North Texas Libraries",
+      "url": "https://digital.library.unt.edu/",
+      "checked_at": "2026-10-19T16:03:54.982085+00:00",
+      "promoted": false,
+      "http_status": 200,
+      "final_url": "https://digital.library.unt.edu/",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 100515,
+      "truncated": false,
+      "result": "endpoint_checked_only",
+      "json_parseable": false,
+      "elapsed_seconds": 0.938
+    }
+  ],
+  "cleanup": {
+    "temporary_bodies_written": 0,
+    "deleted_files": [],
+    "note": "HTML bodies were inspected in memory and discarded. Retained JSON is final audit evidence, not temporary data."
+  }
+}

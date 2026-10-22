@@ -1,0 +1,8 @@
+{
+  "validated_manifests_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\download_examples\\selected_manifests.jsonl",
+  "resource_inventory_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\download_examples\\selected_images.jsonl",
+  "module_4_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation",
+  "policy_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_5\\policies\\automatic-2026-09-29.json",
+  "output_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\download_examples\\module5\\output",
+  "log_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\download_examples\\module5\\log"
+}

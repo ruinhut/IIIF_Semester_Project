@@ -1,0 +1,53 @@
+[
+  {
+    "provider_name": "Europeana",
+    "observed_status": "Six native Manifests passed M4 in the initial batch, but selected MNHN image returned 403. Further declared image samples were HTML/non-image, TLS failures or 403. Alternative indexed records often returned Manifest 404. No completed image bundle; excluded from the five promoted source recipes.",
+    "counted_as_new_success": false,
+    "evidence": "first_attempt/initial_europeana_batch/"
+  },
+  {
+    "provider_name": "Folger Shakespeare Library",
+    "observed_status": "One native Manifest works; homepage and public catalogue display a human-verification challenge. No verified batch enumerator in this investigation.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "University of Illinois at Urbana-Champaign Library",
+    "observed_status": "Public catalogue candidate routes returned HTTP 403.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "University of Leeds Libraries Cultural Collections",
+    "observed_status": "Native example Manifest works, but catalogue HTTP 403; bulk enumeration remains unverified.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "The Frick Collection",
+    "observed_status": "Old digital API-shaped routes redirect to the Orange Logic homepage, not catalogue JSON; museum candidate routes returned HTML.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Indigenous Digital Archive",
+    "observed_status": "Old domain redirects to a parked page; API-shaped response is HTML rather than item JSON.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "SAT Taishozo Image DB",
+    "observed_status": "Public catalogue and Omeka routes returned HTTP 403.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "The Wolsey Manuscripts",
+    "observed_status": "Homepage requests failed with URLError; no accepted recipe.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Qatar National Library",
+    "observed_status": "Public search and candidate Collection route returned HTTP 403.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Digital East Asia Collections of BSB",
+    "observed_status": "Current website returns searchable title HTML, but record-to-Manifest enumeration was not completed.",
+    "counted_as_new_success": false
+  }
+]

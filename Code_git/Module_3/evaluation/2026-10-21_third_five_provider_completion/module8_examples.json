@@ -1,0 +1,15 @@
+{
+  "common_records_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\common_records.jsonl",
+  "common_media_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\common_media.jsonl",
+  "ocr_document_profiles_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\ocr_document_profiles.jsonl",
+  "institution_reference_texts_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\institution_reference_texts.jsonl",
+  "output_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\module8\\output",
+  "log_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\module8\\log",
+  "request": {
+    "timeout_seconds": 40,
+    "retries": 1,
+    "request_delay_seconds": 0.7,
+    "max_image_bytes": 104857600,
+    "max_reference_text_bytes": 10485760
+  }
+}

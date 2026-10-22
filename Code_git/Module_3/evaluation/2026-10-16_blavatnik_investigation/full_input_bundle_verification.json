@@ -1,0 +1,15 @@
+{
+  "verified_bundles": 1,
+  "schema_validated_json_files": 3,
+  "exact_original_text_and_image_matches": 0,
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-05fca54cb5e40400",
+      "resource_id": "resource-7a22796788ddd05b11ab",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\final\\module8\\output\\example\\without_reference\\manifest-05fca54cb5e40400\\000000_resource-7a22796788ddd05b11ab",
+      "references": 0
+    }
+  ],
+  "scope": "JSON schemas, IDs, Canvas/image hashes and exact source text; image decoding is checked separately."
+}

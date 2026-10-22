@@ -1,0 +1,155 @@
+[
+  {
+    "provider_id": "provider-4c8b793ca123a00e",
+    "provider_name": "Berlin State Library",
+    "investigation_id": "2026-10-21-fourth-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_fourth_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "berlin-oai-ppn-identifiers-to-native-manifests",
+        "type": "paginated_xml_identifiers_to_manifest_templates",
+        "api_url": "https://oai.sbb.berlin/",
+        "query_parameters": {
+          "verb": "ListRecords",
+          "metadataPrefix": "oai_dc"
+        },
+        "xml_namespaces": {
+          "oai": "http://www.openarchives.org/OAI/2.0/"
+        },
+        "xml_record_path": ".//oai:record",
+        "xml_identifier_path": "oai:header/oai:identifier",
+        "identifier_pattern": "^oai:digital\\.staatsbibliothek-berlin\\.de:(?P<identifier>PPN[0-9X]+)$",
+        "manifest_url_templates": [
+          "https://content.staatsbibliothek-berlin.de/dc/{identifier}/manifest"
+        ],
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 50,
+          "max_pages": 100,
+          "next_token_path": ".//oai:resumptionToken",
+          "token_keep_parameters": [
+            "verb"
+          ]
+        },
+        "max_identifiers": 5000,
+        "coverage_note": "Public digitised-collections OAI identifier stream. OAI PPN strings can end in X; do not force numeric IDs. Resumption tokens are opaque even if their text already contains percent escapes.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-95f1c3c6418c9eb9",
+    "provider_name": "National Library of Norway",
+    "investigation_id": "2026-10-21-fourth-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_fourth_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "norway-public-digital-books-hal-presentation-links",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://api.nb.no/catalog/v1/items",
+        "query_parameters": {
+          "q": "mediatype:bøker AND digital:Ja",
+          "filter": "date:[15000101 TO 19001231]",
+          "digitalAccessibleOnly": "true"
+        },
+        "records_path": "_embedded.items",
+        "manifest_url_path": "_links.presentation.href",
+        "manifest_url_pattern": "^https://api\\.nb\\.no(?::443)?/catalog/v1/iiif/[^/]+/manifest$",
+        "pagination": {
+          "page_parameter": "page",
+          "page_size_parameter": "size",
+          "page_size": 6,
+          "start_page": 0,
+          "max_pages": 100
+        },
+        "coverage_note": "Digitally available books, publication date 1500–1900, digitalAccessibleOnly=true. Follow explicit HAL presentation links; public metadata alone does not prove an image is accessible. No login, geography or rights restriction is bypassed.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-ea2fe6808cb57161",
+    "provider_name": "Pennsylvania State University Libraries",
+    "investigation_id": "2026-10-21-fourth-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_fourth_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "penn-state-contentdm-public-diary-collection",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://digital.libraries.psu.edu/iiif/2/ejb/manifest.json",
+        "records_path": "manifests",
+        "manifest_url_path": "@id",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 1000,
+          "max_pages": 1
+        },
+        "coverage_note": "One public Elisha J. Bracken Civil War Diary compound object, discovered through CONTENTdm's declared collection Manifest. This is not the whole university catalogue. The public collection-list API supplies other collection aliases for later expansion.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-a7f2a27b95b31ac2",
+    "provider_name": "University Library of Bern",
+    "investigation_id": "2026-10-21-fourth-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_fourth_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "bern-public-haller-gga-iiif-collection",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://iiif.ub.unibe.ch/presentation/v2.1/collection/691e6e0c-afc2-4f17-aee5-d9f88be15865/",
+        "records_path": "manifests",
+        "manifest_url_path": "@id",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 1000,
+          "max_pages": 1
+        },
+        "coverage_note": "Haller GGA Collection explicitly linked from the institution's IIIF server manual. The run samples six volumes; it does not enumerate all Bern projects.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-9a42b37ef5cedd2f",
+    "provider_name": "University of Manchester Library",
+    "investigation_id": "2026-10-21-fourth-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_fourth_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "manchester-xtf-json-range-search-to-manifests",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://www.digitalcollections.manchester.ac.uk/search/JSONAdvanced",
+        "query_parameters": {
+          "keyword": "manuscript"
+        },
+        "query_parameter_templates": {
+          "start": "{page_number}",
+          "end": "{page_end}"
+        },
+        "records_path": "items",
+        "identifier_path": "item.id.0",
+        "identifier_pattern": "^(?P<identifier>[A-Za-z0-9_-]+)$",
+        "manifest_url_templates": [
+          "https://www.digitalcollections.manchester.ac.uk/iiif/{identifier}"
+        ],
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 20,
+          "start_page": 0,
+          "page_step": 20,
+          "max_pages": 100,
+          "total_path": "info.hits"
+        },
+        "max_identifiers": 2000,
+        "coverage_note": "Manuscript keyword subset. The site's own search JavaScript calls JSONAdvanced with start/end ranges, in 20-result pages. Object IDs are item.id[0]. Some image bodies are Image service roots; existing M8 service fallback supplies actual JPEG requests.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "provider_id": "provider-f034696f3b1f1c1f",
+    "provider_name": "Digital Repository of Ireland",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 113,
+    "distinct_image_urls": 113,
+    "actual_sample_images": 1,
+    "actual_width": 6132,
+    "actual_height": 8476,
+    "canvas_width": 6132,
+    "canvas_height": 8476,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-4853865a686721d7",
+    "provider_name": "Princeton University Art Museum",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 15,
+    "distinct_image_urls": 15,
+    "actual_sample_images": 1,
+    "actual_width": 4429,
+    "actual_height": 3454,
+    "canvas_width": 4429,
+    "canvas_height": 3454,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-7781a87376497b5c",
+    "provider_name": "UCLA Library Digital Collections",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 11,
+    "distinct_image_urls": 11,
+    "actual_sample_images": 1,
+    "actual_width": 601,
+    "actual_height": 930,
+    "canvas_width": 9699,
+    "canvas_height": 15028,
+    "matches_declared_dimensions": false
+  },
+  {
+    "provider_id": "provider-a1544ec8d50c2696",
+    "provider_name": "The SCTA Reading Room",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 2120,
+    "distinct_image_urls": 2120,
+    "actual_sample_images": 1,
+    "actual_width": 2212,
+    "actual_height": 2884,
+    "canvas_width": 2212,
+    "canvas_height": 2884,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-c94006b2714289d6",
+    "provider_name": "Smithsonian Institution",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 1434,
+    "distinct_image_urls": 1426,
+    "actual_sample_images": 1,
+    "actual_width": 4800,
+    "actual_height": 3520,
+    "canvas_width": 4938,
+    "canvas_height": 3621,
+    "matches_declared_dimensions": false
+  }
+]

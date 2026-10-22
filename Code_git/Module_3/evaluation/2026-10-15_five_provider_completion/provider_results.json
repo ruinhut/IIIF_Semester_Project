@@ -1,0 +1,52 @@
+[
+  {
+    "provider_id": "provider-47e8bc7785793a60",
+    "provider_name": "Göttingen University Collections",
+    "discovered_manifests": 20,
+    "validated_manifests": 20,
+    "declared_canvas_count": 9540,
+    "declared_image_bodies": 9540,
+    "downloaded_examples": 1,
+    "discovery_skill": "gdz-paginated-search-records"
+  },
+  {
+    "provider_id": "provider-e048f92222cd2e49",
+    "provider_name": "Leiden University",
+    "discovered_manifests": 20,
+    "validated_manifests": 20,
+    "declared_canvas_count": 2020,
+    "declared_image_bodies": 2020,
+    "downloaded_examples": 1,
+    "discovery_skill": "leiden-islandora-books-to-current-manifests"
+  },
+  {
+    "provider_id": "provider-0af71df3c01cdd4e",
+    "provider_name": "National Library of Wales",
+    "discovered_manifests": 20,
+    "validated_manifests": 20,
+    "declared_canvas_count": 104,
+    "declared_image_bodies": 104,
+    "downloaded_examples": 1,
+    "discovery_skill": "primo-viewer-identifiers-to-iiif-resources"
+  },
+  {
+    "provider_id": "provider-015ee4ecd4a6fd91",
+    "provider_name": "Universitaet Jena",
+    "discovered_manifests": 20,
+    "validated_manifests": 20,
+    "declared_canvas_count": 12625,
+    "declared_image_bodies": 12625,
+    "downloaded_examples": 1,
+    "discovery_skill": "mycore-objects-to-derivatives-to-manifests"
+  },
+  {
+    "provider_id": "provider-fa146b049ccac158",
+    "provider_name": "Utrecht University Library",
+    "discovered_manifests": 20,
+    "validated_manifests": 20,
+    "declared_canvas_count": 2543,
+    "declared_image_bodies": 2543,
+    "downloaded_examples": 1,
+    "discovery_skill": "utrecht-public-object-list-to-manifests"
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "verified_bundles": 5,
+  "schema_validated_json_files": 15,
+  "provider_ids": [
+    "provider-4e06374e85489c6e",
+    "provider-5bb54fcb57aa7da9",
+    "provider-648f0743acabd9c2",
+    "provider-d14fb88cde24ff49",
+    "provider-f10ea7c297cd81a8"
+  ],
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-f54b9421277b6d6a",
+      "resource_id": "resource-16b6ce93a92c879c32a6",
+      "providers": [
+        {
+          "provider_id": "provider-4e06374e85489c6e",
+          "provider_name": "Princeton University Libraries"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-f54b9421277b6d6a\\000000_resource-16b6ce93a92c879c32a6\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-61cea296905a2b93",
+      "resource_id": "resource-d67885b4ec7d243ebd7c",
+      "providers": [
+        {
+          "provider_id": "provider-5bb54fcb57aa7da9",
+          "provider_name": "University of North Texas Libraries"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-61cea296905a2b93\\000000_resource-d67885b4ec7d243ebd7c\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-bb5d7bd9619e2f25",
+      "resource_id": "resource-7e76486d4ebaffc4c5e1",
+      "providers": [
+        {
+          "provider_id": "provider-d14fb88cde24ff49",
+          "provider_name": "Harvard University Digital Collections"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-bb5d7bd9619e2f25\\000009_resource-7e76486d4ebaffc4c5e1\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-a42f577759b166fd",
+      "resource_id": "resource-928f4fb6fb736d68f341",
+      "providers": [
+        {
+          "provider_id": "provider-648f0743acabd9c2",
+          "provider_name": "Stanford University"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-a42f577759b166fd\\000009_resource-928f4fb6fb736d68f341\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-6a91af5d309b38d7",
+      "resource_id": "resource-bf2141629eaac767bd79",
+      "providers": [
+        {
+          "provider_id": "provider-f10ea7c297cd81a8",
+          "provider_name": "Biblissima"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-6a91af5d309b38d7\\000009_resource-bf2141629eaac767bd79\\image.jpg",
+      "reference_files": 0
+    }
+  ],
+  "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+}

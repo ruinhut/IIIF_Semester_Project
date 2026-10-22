@@ -1,0 +1,37 @@
+﻿# PowerShell. All punctuation in command lines is ASCII.
+Set-Location -LiteralPath 'E:\exchange-epfl\Semester_Project'
+$PipelinePython = 'E:\exchange-epfl\Semester_Project\Code_git\.venv\Scripts\python.exe'
+$env:PYTHONIOENCODING = 'utf-8'
+$env:PYTHONUTF8 = '1'
+if (-not (Test-Path -LiteralPath $PipelinePython)) { throw 'Python not found' }
+
+# Module 1 registration already ran; output: Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/registration/module1/output
+# Its source additions are retained in Module_1/config/manual_providers.json.
+# The commands below reuse this batch's selected_providers.jsonl.
+
+# Module 2 output: Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/validation/module2/output
+& $PipelinePython -m iiif_entry_validator run --config 'Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/module2_validation.json'
+if ($LASTEXITCODE -ne 0) { throw 'Module 2 failed' }
+
+# Module 3 output: Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/validation/module3/output
+& $PipelinePython Code_git/Module_3/tools/run_discovery_with_evidence.py --config 'Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/module3_validation.json' --network-delay 0.6
+if ($LASTEXITCODE -ne 0) { throw 'Module 3 failed' }
+
+# Module 4 output: Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/validation/module4/output
+& $PipelinePython -m iiif_manifest_validator run --config 'Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/module4_validation.json'
+if ($LASTEXITCODE -ne 0) { throw 'Module 4 failed' }
+
+# Modules 5, 6, 7, 8; M8 downloads one selected image per provider.
+# M5-7 output: Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/downstream/module5/output (and module6, module7)
+# M8 output: Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/download_examples/module8/output/all
+# Reference text pairs: with_reference; other examples: without_reference
+& $PipelinePython Code_git/Module_3/tools/complete_oct19_provider_completion.py --evaluation-root 'Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion'
+if ($LASTEXITCODE -ne 0) { throw 'Downstream run failed' }
+
+& $PipelinePython Code_git/Module_3/tools/verify_linked_download_bundles.py --output-root 'Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/download_examples/module8/output' --mode all --report 'Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/bundle_verification.json'
+if ($LASTEXITCODE -ne 0) { throw 'Bundle check failed' }
+& $PipelinePython Code_git/Module_3/tools/run_completion_test_suites.py --evaluation-root 'Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion'
+if ($LASTEXITCODE -ne 0) { throw 'Tests failed' }
+
+Invoke-Item -LiteralPath 'Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/sample_downloads.csv'
+Invoke-Item -LiteralPath 'Code_git/Module_3/evaluation/2026-10-21_fourth_five_provider_completion/download_examples/module8/output/all/with_reference'

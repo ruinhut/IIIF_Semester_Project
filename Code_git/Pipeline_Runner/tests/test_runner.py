@@ -7,7 +7,7 @@ from iiif_pipeline_runner.runner import PipelineRunError, _validate_modules, run
 
 
 def test_select_modules_respects_inclusive_range():
-    modules = [{"number": n} for n in range(1, 8)]
+    modules = [{"number": n} for n in range(1, 9)]
     assert [item["number"] for item in select_modules(modules, first=3, last=5)] == [3, 4, 5]
 
 
@@ -20,6 +20,14 @@ def test_configuration_rejects_duplicate_module_number():
     row = {"number": 1, "name": "x", "directory": ".", "package": "x", "config": "c", "arguments": []}
     with pytest.raises(ValueError, match="unique"):
         _validate_modules([row, row])
+
+
+def test_configuration_defaults_to_run_and_accepts_custom_command():
+    standard = {"number": 7, "name": "x", "directory": ".", "package": "x", "config": "c"}
+    downloader = {**standard, "number": 8, "command": "download-example"}
+    validated = _validate_modules([standard, downloader])
+    assert validated[0]["command"] == "run"
+    assert validated[1]["command"] == "download-example"
 
 
 def _package(root: Path, name: str, exit_code: int = 0):
@@ -50,6 +58,15 @@ def test_runner_executes_modules_in_order_and_writes_log(tmp_path):
     assert summary["status"] == "completed"
     assert summary["modules_run"] == [1, 2]
     assert Path(summary["log_file"]).is_file()
+
+
+def test_runner_uses_configured_subcommand(tmp_path):
+    config = _config(tmp_path, [(8, "downloader", 0)])
+    value = json.loads(config.read_text())
+    value["modules"][0]["command"] = "download-example"
+    config.write_text(json.dumps(value), encoding="utf-8")
+    summary = run_pipeline(config)
+    assert "download-example" in summary["module_results"][0]["command"]
 
 
 def test_runner_fails_fast(tmp_path):

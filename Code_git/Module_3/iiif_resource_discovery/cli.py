@@ -43,6 +43,8 @@ def main(argv: list[str] | None = None) -> int:
                     "processed_provider_count": result.processed_provider_count,
                     "provider_status_counts": result.provider_status_counts,
                     "unique_manifest_count": result.unique_manifest_count,
+                    "knowledge_skill_run_count": result.knowledge_skill_run_count,
+                    "knowledge_resolved_provider_count": result.knowledge_resolved_provider_count,
                     "manifest_urls_jsonl": str(result.manifest_urls_jsonl),
                     "log_file": str(result.log_txt),
                 },

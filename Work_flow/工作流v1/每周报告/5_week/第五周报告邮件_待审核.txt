@@ -1,0 +1,14 @@
+Subject: Weekly progress — IIIF Document Information Extraction — 16 October
+
+Dear Professor Kaplan,
+
+This week, I improved the OCR data handoff and expanded Manifest discovery.
+
+Following Arsha's request, the pipeline now exports institutional reference text linked to the corresponding page images, with samples stored separately depending on whether reference text is available. I verified a BSB example by downloading both the page image and its institutional hOCR, and checking their page association and coordinate dimensions.
+
+With AI assistance, I also investigated additional institutions using the official IIIF guides and saved their access methods as reusable discovery recipes. In the latest eight-institution validation, all 160 sampled Manifests passed validation, and one image per institution was successfully downloaded through Modules 5–8, together with its linked JSON files.
+
+Manifest discovery remains the main limitation. Next, I will continue resolving additional institutions and collecting image–reference pairs for Arsha. I am not currently blocked.
+
+Best regards,
+Boheng Shang

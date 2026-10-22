@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-10-15T18:18:26.636983+00:00",
+  "baseline_unresolved_entries": 83,
+  "newly_resolved_entries": 14,
+  "still_unresolved_entries": 69,
+  "unique_discovered_manifest_urls": 65,
+  "overlap_with_production_manifest_urls": 0,
+  "module4_outcomes": {
+    "image_structure_valid": 62,
+    "no_image_or_review": 2,
+    "fetch_failed": 1
+  },
+  "validated_canvas_count": 8985,
+  "validated_image_body_count": 8985,
+  "http_checks_recorded": 291,
+  "limit_note": "At most five Manifest URLs per candidate provider entry. e-codices occurs twice in the census. No full-catalogue or image-download claim."
+}

@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-10-16T18:55:30.483249+00:00",
+  "provider": "Blavatnik Archive",
+  "report_status": "full_handoff_generated",
+  "public_catalogue_ids": 20199,
+  "public_catalogue_source_declared_total": 20199,
+  "catalogue_complete_against_declared_total": true,
+  "module3_manifest_urls": 20199,
+  "module4_usable_after_explicit_normalization": 19625,
+  "module4_invalid_after_normalization": 0,
+  "module4_without_usable_structure": 574,
+  "module4_unavailable": 0,
+  "strict_source_statuses": {
+    "invalid": 20199
+  },
+  "strict_source_issue_counts": {
+    "missing_id": 20199,
+    "no_canvases": 574,
+    "no_image_bodies": 574
+  },
+  "declared_image_inventory_rows": 50600,
+  "per_manifest_distinct_image_urls_sum": 50599,
+  "globally_distinct_image_urls": 50188,
+  "source_identity_audit": {
+    "checked": 20199,
+    "title_match": 20199,
+    "asset_code_match": 20199,
+    "source_missing_id": 20199,
+    "source_missing_label": 20199
+  },
+  "non_image_records": {
+    "catalogue_types": {
+      "Video": 574
+    },
+    "structural_issue_counts": {
+      "no_canvases": 574,
+      "no_image_bodies": 574
+    }
+  },
+  "exported_documents": 19625,
+  "exported_media_records": 50600,
+  "exported_aligned_original_references": 174,
+  "catalogue_text_snapshot": {
+    "at": "2026-10-16T18:55:01.975045+00:00",
+    "catalogue_ids": 20199,
+    "counts": {
+      "received": 13400,
+      "original_transcript": 3066,
+      "single_page_original_transcript": 195,
+      "processed": 13400
+    },
+    "reference_languages": {
+      "Russian": 2618,
+      "English": 43,
+      "Russian;Yiddish": 24,
+      "unknown": 19,
+      "Yiddish": 23,
+      "Polish;Russian;Yiddish": 1,
+      "French;Yiddish": 1,
+      "English;Russian": 1,
+      "German": 207,
+      "Ukrainian": 3,
+      "English;Polish;Yiddish": 1,
+      "French": 107,
+      "Finnish": 1,
+      "Russian Pre-Revolution": 7,
+      "English;Russian;Yiddish": 1,
+      "Russian;Russian Pre-Revolution": 1,
+      "Hebrew": 1,
+      "German;Russian;Yiddish": 1,
+      "English;French;Polish;Russian Pre-Revolution": 1,
+      "Polish": 1,
+      "English;Hebrew;Russian Pre-Revolution;Yiddish": 1,
+      "English;German;Hebrew": 1,
+      "German;Hebrew;Hungarian": 1,
+      "German;Russian": 1
+    },
+    "reference_item_types": {
+      "Letter": 1242,
+      "Document": 109,
+      "Diary": 12,
+      "Notebook": 23,
+      "Book": 5,
+      "Booklets": 1,
+      "Periodical": 87,
+      "Newspaper": 2,
+      "Pamphlet": 6,
+      "Article": 12,
+      "Leaflet": 86,
+      "Clipping": 9,
+      "Ephemera": 5,
+      "Identification": 38,
+      "Postcard": 1429
+    },
+    "stop_reason": null,
+    "note": "Original-transcription availability only; per-image alignment requires Module 6."
+  },
+  "download_batches": {
+    "download_examples": {
+      "existing_image_files": 10,
+      "reference_texts_in_bundles": 0,
+      "downloaded_this_last_run": 10,
+      "cached_this_last_run": 0,
+      "unique_record_ids": 10
+    },
+    "reference_examples": {
+      "existing_image_files": 0,
+      "reference_texts_in_bundles": 0,
+      "downloaded_this_last_run": 0,
+      "cached_this_last_run": 1,
+      "unique_record_ids": 0
+    },
+    "reference_batch": {
+      "existing_image_files": 98,
+      "reference_texts_in_bundles": 98,
+      "downloaded_this_last_run": 98,
+      "cached_this_last_run": 0,
+      "unique_record_ids": 98
+    },
+    "diverse_downloads": {
+      "existing_image_files": 100,
+      "reference_texts_in_bundles": 1,
+      "downloaded_this_last_run": 100,
+      "cached_this_last_run": 0,
+      "unique_record_ids": 100
+    },
+    "additional_references": {
+      "existing_image_files": 74,
+      "reference_texts_in_bundles": 74,
+      "downloaded_this_last_run": 74,
+      "cached_this_last_run": 0,
+      "unique_record_ids": 74
+    }
+  },
+  "unit_tests_passed": 149,
+  "unit_test_failures": 0,
+  "old_provider_knowledge": {
+    "old_entries": 14,
+    "current_entries": 15,
+    "missing_old_provider_ids": [],
+    "changed_existing_provider_ids": [],
+    "provider_endpoint_config_preserved": true,
+    "old_endpoint_entries": 11
+  },
+  "scope": "One provider public-catalogue snapshot; source defects preserved; image downloads are bounded separate samples."
+}

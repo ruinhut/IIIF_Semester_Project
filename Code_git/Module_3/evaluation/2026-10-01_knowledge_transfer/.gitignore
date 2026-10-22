@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+log/
+output/
+module4_log/
+module4_output/
+module4_raw_manifests/

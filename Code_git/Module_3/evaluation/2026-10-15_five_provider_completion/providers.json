@@ -1,0 +1,1149 @@
+[
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://gdz.sub.uni-goettingen.de/",
+    "discovery_type": "InstitutionWebsite",
+    "endpoint_candidate": {
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_role": "institution_website",
+      "label": "Institution homepage",
+      "source": {
+        "activity_type": null,
+        "observed_at": "2026-10-12T22:09:30+02:00",
+        "source_page_url": "https://guides.iiif.io/guides/gdz.sub.uni-goettingen.de/",
+        "source_type": "iiif_official_resource_guide",
+        "source_url": "https://guides.iiif.io/finding_resources/"
+      },
+      "url": "https://gdz.sub.uni-goettingen.de/",
+      "verification_status": "pending_module_2"
+    },
+    "endpoint_check": {
+      "attempt_count": 1,
+      "body_truncated": false,
+      "check_result": "reachable_non_json",
+      "checked_at": "2026-10-12T22:09:31+02:00",
+      "content_type": "text/html",
+      "error_message": null,
+      "error_type": null,
+      "final_url": "https://gdz.sub.uni-goettingen.de/",
+      "json_parseable": null,
+      "json_resource_type": null,
+      "redirect_chain": [],
+      "requested_url": "https://gdz.sub.uni-goettingen.de/",
+      "response_bytes": 20156,
+      "response_time_ms": 156,
+      "status_code": 200
+    },
+    "endpoint_checks": [
+      {
+        "endpoint_candidate": {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "source": {
+            "activity_type": null,
+            "observed_at": "2026-10-12T22:09:30+02:00",
+            "source_page_url": "https://guides.iiif.io/guides/gdz.sub.uni-goettingen.de/",
+            "source_type": "iiif_official_resource_guide",
+            "source_url": "https://guides.iiif.io/finding_resources/"
+          },
+          "url": "https://gdz.sub.uni-goettingen.de/",
+          "verification_status": "pending_module_2"
+        },
+        "endpoint_check": {
+          "attempt_count": 1,
+          "body_truncated": false,
+          "check_result": "reachable_non_json",
+          "checked_at": "2026-10-12T22:09:31+02:00",
+          "content_type": "text/html",
+          "error_message": null,
+          "error_type": null,
+          "final_url": "https://gdz.sub.uni-goettingen.de/",
+          "json_parseable": null,
+          "json_resource_type": null,
+          "redirect_chain": [],
+          "requested_url": "https://gdz.sub.uni-goettingen.de/",
+          "response_bytes": 20156,
+          "response_time_ms": 156,
+          "status_code": 200
+        }
+      }
+    ],
+    "endpoints": [
+      {
+        "discovery_type": "InstitutionWebsite",
+        "endpoint_role": "institution_website",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/gdz.sub.uni-goettingen.de/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://gdz.sub.uni-goettingen.de/",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://gdz.sub.uni-goettingen.de/",
+    "last_checked_at": null,
+    "module_2_schema_version": "2.0",
+    "module_3_schema_version": "2.1",
+    "name": "Göttingen University Collections",
+    "provider_id": "provider-47e8bc7785793a60",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://gdz.sub.uni-goettingen.de/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "url": "https://gdz.sub.uni-goettingen.de/",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "full",
+      "institution_url": "https://gdz.sub.uni-goettingen.de/",
+      "name": "Göttingen University Collections",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/gdz.sub.uni-goettingen.de/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "resource_discovery": {
+      "collections_visited": 0,
+      "html_pages_visited": 3,
+      "input_endpoint_count": 1,
+      "issues": [
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/feed/atom"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/feed/rss"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/collection/thaer-bibliothek"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN166700252X:00000007/square/209,/0/default.jpg"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/collection/nordamericana"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN30065197X:00000002/square/209,/0/default.jpg"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/collection/antiquitates.und.archaeologia"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN655177310:00000005/square/209,/0/default.jpg"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/collection/aschiana"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE_611_BF_5619_1801_1806:Cod_Ms_Asch_1_2_1801-1806_bl_051r/square/209,/0/default.jpg"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/collection/Bibliotheksarchiv"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3702202:00000017/square/209,/0/default.jpg"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/collection/blumenbachiana"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN578154684:00000009/square/209,/0/default.jpg"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/collection/bucherhaltung"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN873149939:00000007/square/209,/0/default.jpg"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/collection/digiwunschbuch"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN608447005:00000005/square/209,/0/default.jpg"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://gdz.sub.uni-goettingen.de/collection/fid.mathematica"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN857449303:00000003/square/209,/0/default.jpg"
+        }
+      ],
+      "knowledge_application": [],
+      "manifest_count": 0,
+      "resolved_endpoints": [],
+      "status": "unresolved",
+      "stream_pages_visited": 0,
+      "truncated": true
+    },
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/gdz.sub.uni-goettingen.de/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry"
+  },
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://digitalcollections.universiteitleiden.nl/",
+    "discovery_type": "Collection",
+    "endpoint_candidate": {
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "label": "Institution homepage",
+      "source": {
+        "activity_type": null,
+        "observed_at": "2026-10-12T22:09:30+02:00",
+        "source_page_url": "https://guides.iiif.io/guides/universiteitleiden.nl/",
+        "source_type": "iiif_official_resource_guide",
+        "source_url": "https://guides.iiif.io/finding_resources/"
+      },
+      "url": "https://digitalcollections.universiteitleiden.nl/",
+      "verification_status": "pending_module_2"
+    },
+    "endpoint_check": {
+      "attempt_count": 1,
+      "body_truncated": false,
+      "check_result": "reachable_non_json",
+      "checked_at": "2026-10-12T22:09:31+02:00",
+      "content_type": "text/html",
+      "error_message": null,
+      "error_type": null,
+      "final_url": "https://digitalcollections.universiteitleiden.nl/",
+      "json_parseable": null,
+      "json_resource_type": null,
+      "redirect_chain": [],
+      "requested_url": "https://digitalcollections.universiteitleiden.nl/",
+      "response_bytes": 32255,
+      "response_time_ms": 171,
+      "status_code": 200
+    },
+    "endpoint_checks": [
+      {
+        "endpoint_candidate": {
+          "discovery_type": "Collection",
+          "endpoint_role": "presentation_collection",
+          "label": "Institution homepage",
+          "source": {
+            "activity_type": null,
+            "observed_at": "2026-10-12T22:09:30+02:00",
+            "source_page_url": "https://guides.iiif.io/guides/universiteitleiden.nl/",
+            "source_type": "iiif_official_resource_guide",
+            "source_url": "https://guides.iiif.io/finding_resources/"
+          },
+          "url": "https://digitalcollections.universiteitleiden.nl/",
+          "verification_status": "pending_module_2"
+        },
+        "endpoint_check": {
+          "attempt_count": 1,
+          "body_truncated": false,
+          "check_result": "reachable_non_json",
+          "checked_at": "2026-10-12T22:09:31+02:00",
+          "content_type": "text/html",
+          "error_message": null,
+          "error_type": null,
+          "final_url": "https://digitalcollections.universiteitleiden.nl/",
+          "json_parseable": null,
+          "json_resource_type": null,
+          "redirect_chain": [],
+          "requested_url": "https://digitalcollections.universiteitleiden.nl/",
+          "response_bytes": 32255,
+          "response_time_ms": 171,
+          "status_code": 200
+        }
+      }
+    ],
+    "endpoints": [
+      {
+        "discovery_type": "Collection",
+        "endpoint_role": "presentation_collection",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/universiteitleiden.nl/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://digitalcollections.universiteitleiden.nl/",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://digitalcollections.universiteitleiden.nl/",
+    "last_checked_at": null,
+    "module_2_schema_version": "2.0",
+    "module_3_schema_version": "2.1",
+    "name": "Leiden University",
+    "provider_id": "provider-e048f92222cd2e49",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://digitalcollections.universiteitleiden.nl/",
+      "discovery_type": "Collection",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "Collection",
+          "endpoint_role": "presentation_collection",
+          "label": "Institution homepage",
+          "url": "https://digitalcollections.universiteitleiden.nl/",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "full",
+      "institution_url": "https://digitalcollections.universiteitleiden.nl/",
+      "name": "Leiden University",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/universiteitleiden.nl/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "resource_discovery": {
+      "collections_visited": 0,
+      "html_pages_visited": 2,
+      "input_endpoint_count": 1,
+      "issues": [
+        {
+          "issue_type": "network_error",
+          "message": "Remote end closed connection without response",
+          "url": "https://digitalcollections.universiteitleiden.nl/search?type=dismax&islandora_solr_search_navigation=0&f%5B0%5D=RELS_EXT_hasModel_uri_ms%3A%22info%5C%3Afedora%5C/islandora%5C%3AcollectionCModel%22&f%5B1%5D=%20mods_relatedItem_host_titleInfo_title_ms%3A%22Faculty%20Collections%22&display=grid&sort=mods_titleInfo_sortingTitle_custom_ss%20asc"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/index.ico"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/css/css_xc6q1w7a8_Eknn8KnOvsZbQF0DxiVFfeDzBSZnt0ybc.css"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/css/css_eI2gNq7XX8fu7GtA3_uvv0squXYOQ3-gJMhUhHEb7GI.css"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/css/css_z45F3lbfOYOaFZQNvSyENUGywMwXetqh595Y2UthHOQ.css"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/js/js_SDJPVyFPyj8sftk7tQVTMxGpTG0BxW38I6s6oE_ZqLE.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/js/js_6UR8aB1w5-y_vdUUdWDWlX2QhWu_qIXlEGEV48YgV-c.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/js/js_n0j97XEUHTynUjb1ttHd_rdJxxj2OoFLyAS2RwM-rjo.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/js/js_Wl-ISWXFz_rhYAPsmqLJLNjHjpagKrltfJIEl-aj4Z0.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/js/js_fxzlSQ41lTFyt1Jprur4bokxw1xUcdAPVJ7aUiVTUjI.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/js/js_6u-yycDYS9KcBRgbHytG9YsQqIge7qLVVMB4dSwqcsw.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.universiteitleiden.nl/special-collections/relocation-digital-collections"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/all/themes/uvl/logo.png"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://login.microsoftonline.com/ca2a7f76-dbd7-4ec0-9108-6b3d524fb7c8/saml2?SAMLRequest=lZJNj9owEIb%2FSuR7cOJCEixAonAo0rYgyPbQm7EnYMmxU4%2FTbv99TcJqkdqu1Ot8vPPMO7NA0ZqOr%2FtwtUf43gOG5KU1FvmQWJLeW%2B4EauRWtIA8SH5af37ibJLxzrvgpDPkoeX9DoEIPmhnSbLbLslmf6z3RaFU0WSSFZVUeTUX2TxnCmZTkLJiOYNpA9ksz0nyFTzG3iWJUlEAsYedxSBsiKGMFWmepTmrWcbzks%2BybyTZxn20FWHouobQIafUuIu2k1ZL79A1wVmjLUyka6kUTJRNWaTqrMo0AmTpPM%2BqtDh%2FUDM2bc6lrOhtS0aS9esqG2exb8GfwP%2FQEp6PT2%2BjwF5u2tj7RjoLL2FiDRXRbLBBy4GLYkflKJE%2B2HO4e%2FtRW6Xt5X1bz2MR8k91fUgP%2B1NNVosbJx9M8qv%2F5GkhCCWCWNBHkcX4K1%2Fi%2BN324IyWv5K1Me7nxoMIsCTB90Doa939nUANzxVdCnHeHesxtDFx7SM0A2RkRHmFVuDbgcbTGKFbpG1vgu4M3JjtHe%2BvYmPunxT0z79f%2FQY%3D"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.universiteitleiden.nl/subject-guides/how-to-use-digital-collections"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/westernmedievalmanuscripts"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/DEF_klein__Afb_42_Aratea_Britt_VLQ%2079_f.93v-94r%20copy.jpg"
+        },
+        {
+          "issue_type": "network_error",
+          "message": "Remote end closed connection without response",
+          "url": "https://digitalcollections.universiteitleiden.nl/search?type=dismax&islandora_solr_search_navigation=0&f%5B0%5D=RELS_EXT_hasModel_uri_ms%3A%22info%5C%3Afedora%5C/islandora%5C%3AcollectionCModel%22&f%5B1%5D=%20mods_relatedItem_host_titleInfo_title_ms%3A%22Image%20Collections%22&display=grid&sort=mods_titleInfo_sortingTitle_custom_ss%20asc"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://digitalcollections.universiteitleiden.nl/sites/default/files/01_PK-P-103_156_TN.jpg"
+        }
+      ],
+      "knowledge_application": [],
+      "manifest_count": 0,
+      "resolved_endpoints": [],
+      "status": "unresolved",
+      "stream_pages_visited": 0,
+      "truncated": true
+    },
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/universiteitleiden.nl/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry"
+  },
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://www.library.wales/",
+    "discovery_type": "InstitutionWebsite",
+    "endpoint_candidate": {
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_role": "institution_website",
+      "label": "Institution homepage",
+      "source": {
+        "activity_type": null,
+        "observed_at": "2026-10-12T22:09:30+02:00",
+        "source_page_url": "https://guides.iiif.io/guides/discover.library.wales/",
+        "source_type": "iiif_official_resource_guide",
+        "source_url": "https://guides.iiif.io/finding_resources/"
+      },
+      "url": "https://www.library.wales/",
+      "verification_status": "pending_module_2"
+    },
+    "endpoint_check": {
+      "attempt_count": 1,
+      "body_truncated": false,
+      "check_result": "reachable_non_json",
+      "checked_at": "2026-10-12T22:09:31+02:00",
+      "content_type": "text/html",
+      "error_message": null,
+      "error_type": null,
+      "final_url": "https://www.library.wales/",
+      "json_parseable": null,
+      "json_resource_type": null,
+      "redirect_chain": [],
+      "requested_url": "https://www.library.wales/",
+      "response_bytes": 72023,
+      "response_time_ms": 406,
+      "status_code": 200
+    },
+    "endpoint_checks": [
+      {
+        "endpoint_candidate": {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "source": {
+            "activity_type": null,
+            "observed_at": "2026-10-12T22:09:30+02:00",
+            "source_page_url": "https://guides.iiif.io/guides/discover.library.wales/",
+            "source_type": "iiif_official_resource_guide",
+            "source_url": "https://guides.iiif.io/finding_resources/"
+          },
+          "url": "https://www.library.wales/",
+          "verification_status": "pending_module_2"
+        },
+        "endpoint_check": {
+          "attempt_count": 1,
+          "body_truncated": false,
+          "check_result": "reachable_non_json",
+          "checked_at": "2026-10-12T22:09:31+02:00",
+          "content_type": "text/html",
+          "error_message": null,
+          "error_type": null,
+          "final_url": "https://www.library.wales/",
+          "json_parseable": null,
+          "json_resource_type": null,
+          "redirect_chain": [],
+          "requested_url": "https://www.library.wales/",
+          "response_bytes": 72023,
+          "response_time_ms": 406,
+          "status_code": 200
+        }
+      }
+    ],
+    "endpoints": [
+      {
+        "discovery_type": "InstitutionWebsite",
+        "endpoint_role": "institution_website",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/discover.library.wales/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://www.library.wales/",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://www.library.wales/",
+    "last_checked_at": null,
+    "module_2_schema_version": "2.0",
+    "module_3_schema_version": "2.1",
+    "name": "National Library of Wales",
+    "provider_id": "provider-0af71df3c01cdd4e",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://www.library.wales/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "url": "https://www.library.wales/",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "full",
+      "institution_url": "https://www.library.wales/",
+      "name": "National Library of Wales",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/discover.library.wales/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "resource_discovery": {
+      "collections_visited": 0,
+      "html_pages_visited": 3,
+      "input_endpoint_count": 1,
+      "issues": [
+        {
+          "issue_type": "unsupported_json_type",
+          "message": "JSON type is unknown and no IIIF links were found",
+          "url": "https://www.library.wales/typo3temp/assets/branded-frame/wwwlibrary/manifest.json"
+        },
+        {
+          "issue_type": "unsupported_json_type",
+          "message": "JSON type is unknown and no IIIF links were found",
+          "url": "https://www.library.wales/manifest.webmanifest"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.llyfrgell.cymru/"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/manuscripts"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/archives"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/printed-materials"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/pictures"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/maps"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/music"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/photographs"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/screen-sound-archive"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/legal-deposit"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/specific-collections"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/conservation"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/about-nlw/partnerships/peoples-collection-wales"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.llyfrgell.cymru/catalogau-chwilio/am-ein-casgliadau/archifau"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/catalogues/specialist-catalogues/estate-collections"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://www.library.wales/catalogues-searching/about-our-collections/archives/annual-reports"
+        }
+      ],
+      "knowledge_application": [],
+      "manifest_count": 0,
+      "resolved_endpoints": [],
+      "status": "unresolved",
+      "stream_pages_visited": 0,
+      "truncated": true
+    },
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/discover.library.wales/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry"
+  },
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+    "discovery_type": "Collection",
+    "endpoint_candidate": {
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "label": "Institution homepage",
+      "source": {
+        "activity_type": null,
+        "observed_at": "2026-10-12T22:09:30+02:00",
+        "source_page_url": "https://guides.iiif.io/guides/collections.thulb.uni-jena.de/",
+        "source_type": "iiif_official_resource_guide",
+        "source_url": "https://guides.iiif.io/finding_resources/"
+      },
+      "url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+      "verification_status": "pending_module_2"
+    },
+    "endpoint_check": {
+      "attempt_count": 1,
+      "body_truncated": false,
+      "check_result": "reachable_non_json",
+      "checked_at": "2026-10-12T22:09:31+02:00",
+      "content_type": "text/html",
+      "error_message": null,
+      "error_type": null,
+      "final_url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+      "json_parseable": null,
+      "json_resource_type": null,
+      "redirect_chain": [],
+      "requested_url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+      "response_bytes": 76793,
+      "response_time_ms": 719,
+      "status_code": 200
+    },
+    "endpoint_checks": [
+      {
+        "endpoint_candidate": {
+          "discovery_type": "Collection",
+          "endpoint_role": "presentation_collection",
+          "label": "Institution homepage",
+          "source": {
+            "activity_type": null,
+            "observed_at": "2026-10-12T22:09:30+02:00",
+            "source_page_url": "https://guides.iiif.io/guides/collections.thulb.uni-jena.de/",
+            "source_type": "iiif_official_resource_guide",
+            "source_url": "https://guides.iiif.io/finding_resources/"
+          },
+          "url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+          "verification_status": "pending_module_2"
+        },
+        "endpoint_check": {
+          "attempt_count": 1,
+          "body_truncated": false,
+          "check_result": "reachable_non_json",
+          "checked_at": "2026-10-12T22:09:31+02:00",
+          "content_type": "text/html",
+          "error_message": null,
+          "error_type": null,
+          "final_url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+          "json_parseable": null,
+          "json_resource_type": null,
+          "redirect_chain": [],
+          "requested_url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+          "response_bytes": 76793,
+          "response_time_ms": 719,
+          "status_code": 200
+        }
+      }
+    ],
+    "endpoints": [
+      {
+        "discovery_type": "Collection",
+        "endpoint_role": "presentation_collection",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/collections.thulb.uni-jena.de/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+    "last_checked_at": null,
+    "module_2_schema_version": "2.0",
+    "module_3_schema_version": "2.1",
+    "name": "Universitaet Jena",
+    "provider_id": "provider-015ee4ecd4a6fd91",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+      "discovery_type": "Collection",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "Collection",
+          "endpoint_role": "presentation_collection",
+          "label": "Institution homepage",
+          "url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "no",
+      "institution_url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+      "name": "Universitaet Jena",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/collections.thulb.uni-jena.de/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "resource_discovery": {
+      "collections_visited": 0,
+      "html_pages_visited": 3,
+      "input_endpoint_count": 1,
+      "issues": [
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/images/favicon.ico"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/templates/master/template_collections/index.xml"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/javascript/common/GoogleSupport.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/javascript/qrcode/qrcode.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/javascript/addMCRServiceWorker.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/font-awesome/5.13.0/css/all.min.css"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/css/bootstrap4-all-apps.css"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/templates/master/template_collections/css/collections.css"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/bootstrap/4.6.1/css/bootstrap.min.css"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/jquery/3.5.1/jquery.min.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/bootstrap/4.6.1/js/bootstrap.bundle.min.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/jquery-ui/1.12.1/jquery-ui.css"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/jquery-ui/1.12.1/jquery-ui.min.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/jquery-ui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/select2/4.0.13/css/select2.min.css"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/select2/4.0.13/js/select2.min.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/select2/4.0.13/js/i18n/de.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/webjars/select2/4.0.13/js/i18n/en.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/javascript/common/on-document-ready.js"
+        },
+        {
+          "issue_type": "not_json",
+          "message": "Candidate did not return JSON",
+          "url": "https://collections.thulb.uni-jena.de/javascript/messages/messages.js"
+        }
+      ],
+      "knowledge_application": [],
+      "manifest_count": 0,
+      "resolved_endpoints": [],
+      "status": "unresolved",
+      "stream_pages_visited": 0,
+      "truncated": true
+    },
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/collections.thulb.uni-jena.de/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry"
+  },
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+    "discovery_type": "InstitutionWebsite",
+    "endpoint_candidate": {
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_role": "institution_website",
+      "label": "Institution homepage",
+      "source": {
+        "activity_type": null,
+        "observed_at": "2026-10-12T22:09:30+02:00",
+        "source_page_url": "https://guides.iiif.io/guides/objects.library.uu.nl/",
+        "source_type": "iiif_official_resource_guide",
+        "source_url": "https://guides.iiif.io/finding_resources/"
+      },
+      "url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+      "verification_status": "pending_module_2"
+    },
+    "endpoint_check": {
+      "attempt_count": 1,
+      "body_truncated": true,
+      "check_result": "response_too_large",
+      "checked_at": "2026-10-12T22:09:31+02:00",
+      "content_type": "text/html",
+      "error_message": "Response exceeded the configured 2097152-byte limit",
+      "error_type": "response_too_large",
+      "final_url": "https://objects.library.uu.nl/reader/object-list?lan=en",
+      "json_parseable": null,
+      "json_resource_type": null,
+      "redirect_chain": [
+        {
+          "from_url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+          "status_code": 301,
+          "to_url": "https://objects.library.uu.nl/reader/object-list?lan=en"
+        }
+      ],
+      "requested_url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+      "response_bytes": 2097152,
+      "response_time_ms": 1047,
+      "status_code": 200
+    },
+    "endpoint_checks": [
+      {
+        "endpoint_candidate": {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "source": {
+            "activity_type": null,
+            "observed_at": "2026-10-12T22:09:30+02:00",
+            "source_page_url": "https://guides.iiif.io/guides/objects.library.uu.nl/",
+            "source_type": "iiif_official_resource_guide",
+            "source_url": "https://guides.iiif.io/finding_resources/"
+          },
+          "url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+          "verification_status": "pending_module_2"
+        },
+        "endpoint_check": {
+          "attempt_count": 1,
+          "body_truncated": true,
+          "check_result": "response_too_large",
+          "checked_at": "2026-10-12T22:09:31+02:00",
+          "content_type": "text/html",
+          "error_message": "Response exceeded the configured 2097152-byte limit",
+          "error_type": "response_too_large",
+          "final_url": "https://objects.library.uu.nl/reader/object-list?lan=en",
+          "json_parseable": null,
+          "json_resource_type": null,
+          "redirect_chain": [
+            {
+              "from_url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+              "status_code": 301,
+              "to_url": "https://objects.library.uu.nl/reader/object-list?lan=en"
+            }
+          ],
+          "requested_url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+          "response_bytes": 2097152,
+          "response_time_ms": 1047,
+          "status_code": 200
+        }
+      }
+    ],
+    "endpoints": [
+      {
+        "discovery_type": "InstitutionWebsite",
+        "endpoint_role": "institution_website",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/objects.library.uu.nl/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+    "last_checked_at": null,
+    "module_2_schema_version": "2.0",
+    "module_3_schema_version": "2.1",
+    "name": "Utrecht University Library",
+    "provider_id": "provider-fa146b049ccac158",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "no",
+      "institution_url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+      "name": "Utrecht University Library",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/objects.library.uu.nl/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "resource_discovery": {
+      "collections_visited": 0,
+      "html_pages_visited": 0,
+      "input_endpoint_count": 1,
+      "issues": [
+        {
+          "issue_type": "module_2_response_too_large",
+          "message": "Endpoint role 'institution_website' requires review or an adapter",
+          "url": "https://objects.library.uu.nl/reader/object-list?lan=en"
+        },
+        {
+          "issue_type": "no_processable_entry",
+          "message": "No checked endpoint is currently processable",
+          "url": "https://objects.library.uu.nl/reader/object_list.php?lan=en"
+        }
+      ],
+      "knowledge_application": [],
+      "manifest_count": 0,
+      "resolved_endpoints": [],
+      "status": "unresolved",
+      "stream_pages_visited": 0,
+      "truncated": false
+    },
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/objects.library.uu.nl/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry"
+  }
+]

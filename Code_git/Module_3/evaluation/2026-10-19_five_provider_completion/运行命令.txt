@@ -1,0 +1,51 @@
+# PowerShell. Execute variable definitions in each new terminal session.
+$ErrorActionPreference = "Stop"
+$CodeRoot = "E:\exchange-epfl\Semester_Project\Code_git"
+$Python = Join-Path $CodeRoot ".venv\Scripts\python.exe"
+$Evaluation = Join-Path $CodeRoot "Module_3\evaluation\2026-10-19_five_provider_completion"
+$PixelPython = "C:\Users\43057\AppData\Local\Programs\Python\Python310\python.exe"
+if (-not (Test-Path -LiteralPath $Python)) { throw "Check CodeRoot and the project Python path." }
+Set-Location -LiteralPath $CodeRoot
+
+# Frozen Module 2 input; this preparation does not pretend to rerun Module 2.
+& $Python "Module_3\tools\prepare_oct19_provider_completion.py" --sample-limit 20
+if ($LASTEXITCODE -ne 0) { throw "Preparation failed." }
+& $Python "Module_3\tools\run_discovery_with_evidence.py" --config "$Evaluation\module3_validation.json"
+if ($LASTEXITCODE -ne 0) { throw "Module 3 failed." }
+& $Python -m iiif_manifest_validator run --config "$Evaluation\module4_validation.json"
+if ($LASTEXITCODE -ne 0) { throw "Module 4 failed." }
+
+# Separate follow-up on another officially published Austrian collection.
+& $Python "Module_3\tools\run_discovery_with_evidence.py" --config "$Evaluation\module3_akon.json"
+if ($LASTEXITCODE -ne 0) { throw "AKON discovery failed." }
+& $Python -m iiif_manifest_validator run --config "$Evaluation\module4_akon.json"
+if ($LASTEXITCODE -ne 0) { throw "AKON validation failed." }
+
+# Re-validate saved raw bytes after the Canvas fragment correction.
+# This reuses the current raw cache; it is not another independent live fetch.
+& $Python -m iiif_manifest_validator run --config "$Evaluation\module4_revalidate.json"
+if ($LASTEXITCODE -ne 0) { throw "Cached structure recheck failed." }
+
+# Full Module 5-7 handoff, then one actual image example per provider in Module 8.
+& $Python "Module_3\tools\complete_oct19_provider_completion.py"
+if ($LASTEXITCODE -ne 0) { throw "Downstream validation failed." }
+
+# The second Bodmer page is an independent pagination check, outside the main count.
+& $Python "Module_3\tools\run_discovery_with_evidence.py" --config "$Evaluation\module3_page2_check.json"
+if ($LASTEXITCODE -ne 0) { throw "Second-page discovery failed." }
+& $Python "Module_3\tools\verify_linked_download_bundles.py" --output-root "$Evaluation\download_examples\module8\output" --report "$Evaluation\bundle_verification.json"
+if ($LASTEXITCODE -ne 0) { throw "JSON and image linkage verification failed." }
+
+# Optional image decoding QA needs Pillow in PixelPython.
+& $PixelPython "Module_3\tools\verify_downloaded_pixels.py" --module8-output "$Evaluation\download_examples\module8\output" --raw-manifest-directory "$Evaluation\validation\module4\raw_manifests" --additional-raw-manifest-directory "$Evaluation\akon_check\module4\raw_manifests" --report "$Evaluation\image_decode_verification.json"
+if ($LASTEXITCODE -ne 0) { throw "Pixel verification failed." }
+
+# Promote validated routes and regenerate counts; old routes must remain identical.
+& $Python "Module_3\tools\summarize_oct19_provider_completion.py" --promote
+if ($LASTEXITCODE -ne 0) { throw "Summary or preservation check failed." }
+
+# Main output locations.
+Invoke-Item -LiteralPath "$Evaluation\provider_results.csv"
+Invoke-Item -LiteralPath "$Evaluation\cumulative_provider_status.csv"
+Invoke-Item -LiteralPath "$Evaluation\downstream\module7\output"
+Invoke-Item -LiteralPath "$Evaluation\download_examples\module8\output\all"

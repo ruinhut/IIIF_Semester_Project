@@ -11,37 +11,21 @@ from .models import Module4ManifestRecord
 
 
 SUMMARY_COLUMNS = (
-    "manifest_id",
-    "manifest_url",
-    "provider_names",
-    "category",
-    "decision",
-    "rights_label_en",
-    "rights_label_zh",
-    "evidence_count",
-    "decisive_evidence_count",
-    "effective_categories",
-    "normalized_rights_values",
-    "reason_codes",
-    "policy_version",
-    "assessed_at",
+    "manifest_id", "manifest_url", "provider_names", "category", "decision",
+    "decision_scope", "research_status", "public_reuse_eligible",
+    "retain_url_and_metadata", "academic_analysis", "public_distribution",
+    "commercial_use", "rights_label_en", "rights_label_zh", "evidence_count",
+    "decisive_evidence_count", "effective_categories", "normalized_rights_values",
+    "reason_codes", "policy_version", "assessed_at",
 )
 
 RESOURCE_COLUMNS = (
-    "manifest_id",
-    "manifest_url",
-    "provider_names",
-    "presentation_version",
-    "canvas_index",
-    "canvas_id",
-    "canvas_label",
-    "body_id",
-    "body_type",
-    "body_format",
-    "image_service_urls",
-    "rights_category",
-    "rights_decision",
-    "rights_policy_version",
+    "manifest_id", "manifest_url", "provider_names", "presentation_version",
+    "canvas_index", "canvas_id", "canvas_label", "body_id", "body_type",
+    "body_format", "image_service_urls", "rights_category", "rights_decision",
+    "rights_decision_scope", "research_status", "retain_url_and_metadata",
+    "academic_analysis_allowed", "public_distribution_allowed",
+    "commercial_use_allowed", "public_reuse_eligible", "rights_policy_version",
 )
 
 
@@ -108,40 +92,40 @@ def write_summary_csv(path: Path, records: Iterable[Mapping[str, Any]]) -> int:
         for record in records:
             assessment = record.get("rights_assessment", {})
             evidence = assessment.get("evidence", []) if isinstance(assessment, Mapping) else []
+            usage = assessment.get("usage_permissions", {}) if isinstance(assessment, Mapping) else {}
             row = {
                 "manifest_id": record.get("manifest_id", ""),
                 "manifest_url": record.get("manifest_url", ""),
                 "provider_names": " | ".join(_provider_names(record)),
                 "category": assessment.get("category", ""),
                 "decision": assessment.get("decision", ""),
+                "decision_scope": assessment.get("decision_scope", ""),
+                "research_status": assessment.get("research_status", ""),
+                "public_reuse_eligible": assessment.get("public_reuse_eligible", False),
+                "retain_url_and_metadata": usage.get("retain_url_and_metadata", False),
+                "academic_analysis": usage.get("academic_analysis", False),
+                "public_distribution": usage.get("public_distribution", False),
+                "commercial_use": usage.get("commercial_use", False),
                 "rights_label_en": (
                     assessment.get("display_label", {}).get("en", "")
-                    if isinstance(assessment.get("display_label"), Mapping)
-                    else ""
+                    if isinstance(assessment.get("display_label"), Mapping) else ""
                 ),
                 "rights_label_zh": (
                     assessment.get("display_label", {}).get("zh", "")
-                    if isinstance(assessment.get("display_label"), Mapping)
-                    else ""
+                    if isinstance(assessment.get("display_label"), Mapping) else ""
                 ),
                 "evidence_count": assessment.get("evidence_count", 0),
-                "decisive_evidence_count": assessment.get(
-                    "decisive_evidence_count", 0
-                ),
+                "decisive_evidence_count": assessment.get("decisive_evidence_count", 0),
                 "effective_categories": " | ".join(
                     str(item) for item in assessment.get("effective_categories", [])
                 ),
-                "normalized_rights_values": " | ".join(
-                    sorted(
-                        {
-                            str(item.get("normalized_value", ""))
-                            for item in evidence
-                            if isinstance(item, Mapping)
-                            and item.get("decisive")
-                            and item.get("normalized_value")
-                        }
-                    )
-                ),
+                "normalized_rights_values": " | ".join(sorted({
+                    str(item.get("normalized_value", ""))
+                    for item in evidence
+                    if isinstance(item, Mapping)
+                    and item.get("decisive")
+                    and item.get("normalized_value")
+                })),
                 "reason_codes": " | ".join(
                     str(item) for item in assessment.get("reason_codes", [])
                 ),

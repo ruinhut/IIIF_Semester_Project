@@ -25,6 +25,7 @@ from .store import (
     write_text,
 )
 from .validator import validate_manifest
+from .normalization import infer_missing_manifest_id
 
 
 @dataclass(frozen=True)
@@ -37,6 +38,7 @@ class PipelineResult:
     image_body_count: int
     image_service_count: int
     cache_hit_count: int
+    normalized_manifest_count: int
     validated_manifests_jsonl: Path
     resource_inventory_jsonl: Path
     resource_inventory_csv: Path
@@ -78,6 +80,10 @@ def run_pipeline(
     )
 
     run_config = _mapping(config.get("run", {}), "run")
+    normalization = _mapping(config.get("normalization", {}), "normalization")
+    infer_transport_id = normalization.get("infer_missing_manifest_id", True)
+    if not isinstance(infer_transport_id, bool):
+        raise ValueError("normalization.infer_missing_manifest_id must be boolean")
     configured_limit = _optional_positive_int(
         run_config.get("max_records"), "run.max_records"
     )
@@ -121,6 +127,8 @@ def run_pipeline(
     status_counts: Counter[str] = Counter()
     cache_hit_count = 0
     network_fetch_count = 0
+    normalized_manifest_count = 0
+    source_status_counts: Counter[str] = Counter()
 
     for index, record in enumerate(records):
         raw_path = raw_directory / f"{record.manifest_id}.json"
@@ -183,10 +191,28 @@ def run_pipeline(
             raw_path, base_directory
         )
 
-        validation = validate_manifest(document)
+        source_validation = validate_manifest(document)
+        source_status_counts[source_validation.status] += 1
+        patches = []
+        effective_document = document
+        if infer_transport_id:
+            effective_document, patches = infer_missing_manifest_id(
+                document, str(fetch_metadata.get("final_url") or record.manifest_url)
+            )
+        validation = validate_manifest(effective_document) if patches else source_validation
         output_record = _validated_record(
             record, fetch_metadata, validation, run_at
         )
+        if patches:
+            normalized_manifest_count += 1
+            normalized_path = raw_directory / f"{record.manifest_id}.normalized.json"
+            write_raw_response(normalized_path, (json.dumps(effective_document, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
+            output_record["source_structural_validation"] = source_validation.summary_dict()
+            output_record["structural_normalization"] = {
+                "policy": "transport-id-inference-1.0", "patches": patches,
+                "normalized_manifest_path": _display_path(normalized_path, base_directory),
+                "raw_source_preserved": True,
+            }
         status_counts[validation.status] += 1
 
         if validation.status == "valid":
@@ -235,6 +261,8 @@ def run_pipeline(
             force_refresh=effective_force,
             network_fetch_count=network_fetch_count,
             cache_hit_count=cache_hit_count,
+            normalized_manifest_count=normalized_manifest_count,
+            source_status_counts=source_status_counts,
             status_counts=status_counts,
             canvas_count=canvas_count,
             image_body_count=image_body_count,
@@ -257,6 +285,7 @@ def run_pipeline(
         image_body_count=image_body_count,
         image_service_count=image_service_count,
         cache_hit_count=cache_hit_count,
+        normalized_manifest_count=normalized_manifest_count,
         validated_manifests_jsonl=validated_manifests_jsonl,
         resource_inventory_jsonl=resource_inventory_jsonl,
         resource_inventory_csv=resource_inventory_csv,
@@ -394,6 +423,8 @@ def _format_log(
     force_refresh: bool,
     network_fetch_count: int,
     cache_hit_count: int,
+    normalized_manifest_count: int,
+    source_status_counts: Mapping[str, int],
     status_counts: Mapping[str, int],
     canvas_count: int,
     image_body_count: int,
@@ -420,6 +451,8 @@ def _format_log(
             f"Force refresh: {force_refresh}",
             f"Network fetches: {network_fetch_count}",
             f"Cache hits: {cache_hit_count}",
+            f"Strict source structural statuses: {json.dumps(dict(source_status_counts), sort_keys=True)}",
+            f"Manifests normalized with explicit ID-inference patches: {normalized_manifest_count}",
             f"Validated Canvas count: {canvas_count}",
             f"Validated image-body count: {image_body_count}",
             f"Validated Image Service count: {image_service_count}",

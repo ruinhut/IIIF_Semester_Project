@@ -1,0 +1,244 @@
+{
+  "collection_focus": null,
+  "discovery_endpoint": "https://www.blavatnikarchive.org/collections",
+  "discovery_type": "Collection",
+  "endpoint_candidate": {
+    "discovery_type": "Collection",
+    "endpoint_role": "presentation_collection",
+    "label": "Institution homepage",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/blavatnikarchive.org/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "url": "https://www.blavatnikarchive.org/collections",
+    "verification_status": "pending_module_2"
+  },
+  "endpoint_check": {
+    "attempt_count": 1,
+    "body_truncated": false,
+    "check_result": "reachable_non_json",
+    "checked_at": "2026-10-12T22:09:31+02:00",
+    "content_type": "text/html",
+    "error_message": null,
+    "error_type": null,
+    "final_url": "https://www.blavatnikarchive.org/collections",
+    "json_parseable": null,
+    "json_resource_type": null,
+    "redirect_chain": [],
+    "requested_url": "https://www.blavatnikarchive.org/collections",
+    "response_bytes": 108745,
+    "response_time_ms": 1328,
+    "status_code": 200
+  },
+  "endpoint_checks": [
+    {
+      "endpoint_candidate": {
+        "discovery_type": "Collection",
+        "endpoint_role": "presentation_collection",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/blavatnikarchive.org/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://www.blavatnikarchive.org/collections",
+        "verification_status": "pending_module_2"
+      },
+      "endpoint_check": {
+        "attempt_count": 1,
+        "body_truncated": false,
+        "check_result": "reachable_non_json",
+        "checked_at": "2026-10-12T22:09:31+02:00",
+        "content_type": "text/html",
+        "error_message": null,
+        "error_type": null,
+        "final_url": "https://www.blavatnikarchive.org/collections",
+        "json_parseable": null,
+        "json_resource_type": null,
+        "redirect_chain": [],
+        "requested_url": "https://www.blavatnikarchive.org/collections",
+        "response_bytes": 108745,
+        "response_time_ms": 1328,
+        "status_code": 200
+      }
+    }
+  ],
+  "endpoints": [
+    {
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "label": "Institution homepage",
+      "source": {
+        "activity_type": null,
+        "observed_at": "2026-10-12T22:09:30+02:00",
+        "source_page_url": "https://guides.iiif.io/guides/blavatnikarchive.org/",
+        "source_type": "iiif_official_resource_guide",
+        "source_url": "https://guides.iiif.io/finding_resources/"
+      },
+      "url": "https://www.blavatnikarchive.org/collections",
+      "verification_status": "pending_module_2"
+    }
+  ],
+  "estimated_size": null,
+  "institution_url": "https://www.blavatnikarchive.org/collections",
+  "last_checked_at": null,
+  "module_2_schema_version": "2.0",
+  "module_3_schema_version": "2.1",
+  "name": "Blavatnik Archive",
+  "provider_id": "provider-4ef10065e633729c",
+  "raw_source_record": {
+    "catalog_entry_kind": "iiif_resource_guide",
+    "collection_focus": null,
+    "discovery_endpoint": "https://www.blavatnikarchive.org/collections",
+    "discovery_type": "Collection",
+    "endpoint_verification": "pending_module_2",
+    "endpoints": [
+      {
+        "discovery_type": "Collection",
+        "endpoint_role": "presentation_collection",
+        "label": "Institution homepage",
+        "url": "https://www.blavatnikarchive.org/collections",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "iiif_consortium_status": "full",
+    "institution_url": "https://www.blavatnikarchive.org/collections",
+    "name": "Blavatnik Archive",
+    "record_status": "active",
+    "rights_status": "unknown",
+    "rights_values": [],
+    "source_page_url": "https://guides.iiif.io/guides/blavatnikarchive.org/",
+    "stream_label": "Official IIIF resource-guide entry"
+  },
+  "record_status": "active",
+  "resource_discovery": {
+    "collections_visited": 0,
+    "html_pages_visited": 3,
+    "input_endpoint_count": 1,
+    "issues": [
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://www.blavatnikarchive.org/collections"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__0e71d04a98655bd9520f5f58825a521da9fae756dae3f2085bbacb0ecc399d42/279,179,3053,2290/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__5b17d9455424773fa325f0bd628a10244cc55e6514dd5b520b595491089cfa3b/220,524,10245.150955414,7703.12101910828/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__067910b5420b809cffc1c201d07e9f9feb6c46e0367cfb58aad4f18aefc224e3/0,82,3000,2250/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__df2770d535417415c32d5d33af031349ca02ac67297769b7c704ec3453bb93ce/1289,688,3736,2802/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__13a16869f46cbe2460e8379bba9ed6d204e14904e0356071d107f412ef1eb9ec/160,804,3757,2817/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__4268fbd636d22851f88aee2580593f4b26ba5c4ff2d5e7af5528b8f406a50f4a/602,266,5018,3763/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__d90fc7fa1b386c4b9a08d4ab44e1ce2d0a3c0bef47a94ad19bb691d9b3f43e42/381,129,3408,2556/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__bc1a7bca05ca027a1c0343919731e718ee701386c0f8afefc2eb742e1d8c873b/86,543,2357,1768/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__0f3000597ed6cd5cfbc66c485f528cf6f05f356240ad2e104cf80cea443e40d2/137,413,6750,5062/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__ff07ec366ee190948846d3d480d6deefbf6d97ff55431c63928b07c72b3dfe02/458,381,4722,3541/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__e98ebf8ba211c521d649a9532c8651e1c238fd3c4953abbafcfc3dda0a3c6fc1/218,197,3004,2253/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__8acb1a7b09ec8d57d0c6b8145d101528040b17a9ec67f35714c3cf5d51ea734f/187,144,2145,1608/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__78a68b8953930b4a6b7b8f825eff92a47426836cc44b08144f312fdecdbd4b5c/327,123,2843.23180592992,2137.76827513528/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__2d6b2159d9c299e3fbf13b2787337101a2ebc4a01193a576fbff321f2e01d4fb/113,87,2681,2011/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__e4ba9c9dec280c1adc0872d51ae833b3155de345630243d70536fe17ce1fdcc1/301,682,2175.88235294118,1636.0017691287/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__4843e25e63584425574085778a16b05686834cf9befd3634830af6144af67956/729,85,3276,2457/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__8ae65a94a7804cfa71def66ed4ebbad5253788bc679e32f7f08b7ff819bd1a21/244,277,3594.31366906475,2702.49148049981/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__6c0b52dc11a665f9f0e40dac720864b9f675c864d459981288d909fb2f0fa189/324,284,1491,1118/^!1000,1000/0/default.jpg"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://iiiflb.blavatnikarchive.org/iiif/3/baf__93bfddecedbd98a1c68880756f74b72e9b7ffead07a306d6226aa36efd23c920/846,244,2122,1591/^!1000,1000/0/default.jpg"
+      }
+    ],
+    "knowledge_application": [],
+    "manifest_count": 0,
+    "resolved_endpoints": [],
+    "status": "unresolved",
+    "stream_pages_visited": 0,
+    "truncated": true
+  },
+  "rights_status": "unknown",
+  "rights_values": [],
+  "schema_version": "2.0",
+  "source": {
+    "activity_type": null,
+    "observed_at": "2026-10-12T22:09:30+02:00",
+    "source_page_url": "https://guides.iiif.io/guides/blavatnikarchive.org/",
+    "source_type": "iiif_official_resource_guide",
+    "source_url": "https://guides.iiif.io/finding_resources/"
+  },
+  "stream_label": "Official IIIF resource-guide entry"
+}

@@ -1,0 +1,16 @@
+# Keep source, recipes, compact summaries and reports; keep bulk runtime data local.
+**/request_bodies/
+**/raw_manifests/
+**/catalogue_reference_cache/
+**/cache/
+**/pages/
+**/module*/output/
+**/module*/log/
+**/requests.jsonl
+**/catalogue_records.jsonl
+live/responses/
+single_canvas_candidates.json
+catalogue_document_transcripts.jsonl
+*.jpg
+*.jpeg
+*.png

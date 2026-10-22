@@ -1,0 +1,55 @@
+# Run in PowerShell. All command hyphens below are ASCII.
+# Existing Module 2 checked_entry_points.jsonl is the input.
+$ProjectRoot = 'E:\exchange-epfl\Semester_Project'
+Set-Location -LiteralPath $ProjectRoot
+$PipelinePython = Join-Path $ProjectRoot 'Code_git\.venv\Scripts\python.exe'
+$Investigation = Join-Path $ProjectRoot 'Code_git\Module_3\evaluation\2026-10-15_five_provider_completion'
+
+# 1. Prepare five provider recipes and a 20-Manifest-per-provider validation.
+& $PipelinePython .\Code_git\Module_3\tools\prepare_five_provider_completion.py --sample-limit 20 --batch final_validation
+
+# 2. Run the real Module 3; HTTP traces and provider checkpoints are saved.
+& $PipelinePython .\Code_git\Module_3\tools\run_discovery_with_evidence.py --config "$Investigation\module3_final_validation.json"
+# View: final_validation\module3\output and final_validation\module3\requests.jsonl
+
+# 3. Require success from all five providers and build the combined handoff.
+& $PipelinePython .\Code_git\Module_3\tools\merge_five_provider_results.py
+# If this fails, inspect the failed provider checkpoint and rerun its discovery.
+# An explicitly selected successful recovery directory can be supplied with --recovery.
+# View: combined\module3\output\manifest_urls.jsonl
+
+# 4. Fetch and validate all 100 Manifest samples over the network.
+$env:PYTHONPATH = Join-Path $ProjectRoot 'Code_git\Module_4'
+& $PipelinePython -m iiif_manifest_validator run --config "$Investigation\module4_final_validation.json" --force-refresh
+# View: final_validation\module4\output and final_validation\module4\raw_manifests
+
+# 5. Select one validated document and an interior page from each provider.
+& $PipelinePython .\Code_git\Module_3\tools\prepare_five_provider_download_examples.py
+
+# 6. Run the existing downstream modules on the five linked examples.
+$env:PYTHONPATH = Join-Path $ProjectRoot 'Code_git\Module_5'
+& $PipelinePython -m iiif_rights_filter run --config "$Investigation\module5_examples.json"
+# View: download_examples\module5\output
+
+$env:PYTHONPATH = Join-Path $ProjectRoot 'Code_git\Module_6'
+& $PipelinePython -m iiif_metadata_normalizer run --config "$Investigation\module6_examples.json"
+# View: download_examples\module6\output
+
+$env:PYTHONPATH = Join-Path $ProjectRoot 'Code_git\Module_7'
+& $PipelinePython -m iiif_common_exporter run --config "$Investigation\module7_examples.json"
+# View: download_examples\module7\output
+
+$env:PYTHONPATH = Join-Path $ProjectRoot 'Code_git\Module_8'
+& $PipelinePython -m iiif_image_downloader download-all --config "$Investigation\module8_examples.json"
+# View: download_examples\module8\output\all\without_reference
+# Every image directory contains the image and its three linked JSON files.
+
+# 7. Rebuild the result table and local sample-file index.
+& $PipelinePython .\Code_git\Module_3\tools\summarize_five_provider_completion.py
+# View: provider_results.csv, summary.json, sample_downloads.json
+
+# Optional code regression checks, run independently from the network validation.
+$env:PYTHONPATH = Join-Path $ProjectRoot 'Code_git\Module_3'
+& $PipelinePython -m pytest .\Code_git\Module_3\tests -q
+$env:PYTHONPATH = Join-Path $ProjectRoot 'Code_git\Module_8'
+& $PipelinePython -m pytest .\Code_git\Module_8\tests -q

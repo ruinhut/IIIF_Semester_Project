@@ -1,0 +1,1288 @@
+{
+  "decoded_images": 98,
+  "decode_failures": [],
+  "dimension_mismatches": [],
+  "example_images_by_reported_language": {
+    "Russian": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-dc6a483307c2b2cf\\000000_resource-23d3f26272e230815e5e\\image.jpg",
+    "Russian;Yiddish": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-dffa1092d37bd911\\000000_resource-03ebf3141829ed1d9796\\image.jpg",
+    "unknown": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-ce9891c741cbc3dd\\000000_resource-4129e8de42d6f5621400\\image.jpg",
+    "Yiddish": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-915193520d0d0804\\000000_resource-123df90494a657a64bbf\\image.jpg",
+    "English;Russian": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-c575cf96a79c71b0\\000000_resource-67ed02aafac528ce1885\\image.jpg"
+  },
+  "images": [
+    {
+      "record_id": "manifest-dc6a483307c2b2cf",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-dc6a483307c2b2cf\\000000_resource-23d3f26272e230815e5e\\image.jpg",
+      "width": 4056,
+      "height": 4944,
+      "format": "JPEG",
+      "bytes": 3298737,
+      "catalogue_dimensions": [
+        4056,
+        4944
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-dffa1092d37bd911",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-dffa1092d37bd911\\000000_resource-03ebf3141829ed1d9796\\image.jpg",
+      "width": 6314,
+      "height": 7933,
+      "format": "JPEG",
+      "bytes": 3822059,
+      "catalogue_dimensions": [
+        6314,
+        7933
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-ce9891c741cbc3dd",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-ce9891c741cbc3dd\\000000_resource-4129e8de42d6f5621400\\image.jpg",
+      "width": 4786,
+      "height": 7244,
+      "format": "JPEG",
+      "bytes": 2991623,
+      "catalogue_dimensions": [
+        4786,
+        7244
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-915193520d0d0804",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-915193520d0d0804\\000000_resource-123df90494a657a64bbf\\image.jpg",
+      "width": 5636,
+      "height": 7898,
+      "format": "JPEG",
+      "bytes": 4461965,
+      "catalogue_dimensions": [
+        5636,
+        7898
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-c575cf96a79c71b0",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-c575cf96a79c71b0\\000000_resource-67ed02aafac528ce1885\\image.jpg",
+      "width": 6121,
+      "height": 4521,
+      "format": "JPEG",
+      "bytes": 3781300,
+      "catalogue_dimensions": [
+        6121,
+        4521
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-8a74e8baf387d72a",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-8a74e8baf387d72a\\000000_resource-be1d54fc0f416f18ef17\\image.jpg",
+      "width": 4040,
+      "height": 4904,
+      "format": "JPEG",
+      "bytes": 3092330,
+      "catalogue_dimensions": [
+        4040,
+        4904
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-af51b1aeeb96a0ea",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-af51b1aeeb96a0ea\\000000_resource-e0910e09c15ed945898b\\image.jpg",
+      "width": 3968,
+      "height": 4880,
+      "format": "JPEG",
+      "bytes": 2894106,
+      "catalogue_dimensions": [
+        3968,
+        4880
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-da6793d004e6cf63",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-da6793d004e6cf63\\000000_resource-b34466b2e91cda9fc6a5\\image.jpg",
+      "width": 3880,
+      "height": 5480,
+      "format": "JPEG",
+      "bytes": 2583309,
+      "catalogue_dimensions": [
+        3880,
+        5480
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-f251e705d62189ef",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-f251e705d62189ef\\000000_resource-4738e73aed6077988179\\image.jpg",
+      "width": 3816,
+      "height": 4784,
+      "format": "JPEG",
+      "bytes": 2261818,
+      "catalogue_dimensions": [
+        3816,
+        4784
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-28c651c6e0ad5b09",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-28c651c6e0ad5b09\\000000_resource-beaa4016b407807aec86\\image.jpg",
+      "width": 3480,
+      "height": 5000,
+      "format": "JPEG",
+      "bytes": 2938762,
+      "catalogue_dimensions": [
+        3480,
+        5000
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-4880fedd648ff364",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-4880fedd648ff364\\000000_resource-432a02a23cf71ffec610\\image.jpg",
+      "width": 3592,
+      "height": 3976,
+      "format": "JPEG",
+      "bytes": 2369933,
+      "catalogue_dimensions": [
+        3592,
+        3976
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-520f4fd56acac90e",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-520f4fd56acac90e\\000000_resource-ec3ab98a747410991d46\\image.jpg",
+      "width": 3744,
+      "height": 4000,
+      "format": "JPEG",
+      "bytes": 2369696,
+      "catalogue_dimensions": [
+        3744,
+        4000
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-ab2ab08b956d3fee",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-ab2ab08b956d3fee\\000000_resource-1130dba357ea8e84cf90\\image.jpg",
+      "width": 3200,
+      "height": 2208,
+      "format": "JPEG",
+      "bytes": 1126896,
+      "catalogue_dimensions": [
+        3200,
+        2208
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-f4a34b8d3f227548",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-f4a34b8d3f227548\\000000_resource-5572c0891b25fc7d2c1c\\image.jpg",
+      "width": 5063,
+      "height": 6968,
+      "format": "JPEG",
+      "bytes": 3819236,
+      "catalogue_dimensions": [
+        5063,
+        6968
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-f58cf66a05813dd0",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-f58cf66a05813dd0\\000000_resource-67b9af4a55b9c3a49630\\image.jpg",
+      "width": 3038,
+      "height": 3818,
+      "format": "JPEG",
+      "bytes": 782006,
+      "catalogue_dimensions": [
+        3038,
+        3818
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-7b63d8a7c3ab1eb4",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-7b63d8a7c3ab1eb4\\000000_resource-2e782454c5fce99a1256\\image.jpg",
+      "width": 9184,
+      "height": 7428,
+      "format": "JPEG",
+      "bytes": 7066824,
+      "catalogue_dimensions": [
+        9184,
+        7428
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-b104c637e98f0e3a",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-b104c637e98f0e3a\\000000_resource-7518e4be8903444df038\\image.jpg",
+      "width": 4794,
+      "height": 6849,
+      "format": "JPEG",
+      "bytes": 3746823,
+      "catalogue_dimensions": [
+        4794,
+        6849
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-d449c34a6765381e",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-d449c34a6765381e\\000000_resource-d6011e6825c44c6e8dd3\\image.jpg",
+      "width": 1656,
+      "height": 2339,
+      "format": "JPEG",
+      "bytes": 590771,
+      "catalogue_dimensions": [
+        1656,
+        2339
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-305f9d55f72e0f4b",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-305f9d55f72e0f4b\\000000_resource-e95aec8c7ab2cf1c0d71\\image.jpg",
+      "width": 3535,
+      "height": 4920,
+      "format": "JPEG",
+      "bytes": 2577212,
+      "catalogue_dimensions": [
+        3535,
+        4920
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-1a1858930ef570f8",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-1a1858930ef570f8\\000000_resource-1e567fc4eef3d06a3b4a\\image.jpg",
+      "width": 3535,
+      "height": 4973,
+      "format": "JPEG",
+      "bytes": 2785387,
+      "catalogue_dimensions": [
+        3535,
+        4973
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-268b70cb3d3fb0c5",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-268b70cb3d3fb0c5\\000000_resource-47e1f2c043fb2d8919e5\\image.jpg",
+      "width": 3801,
+      "height": 5517,
+      "format": "JPEG",
+      "bytes": 3715049,
+      "catalogue_dimensions": [
+        3801,
+        5517
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-8a2af0856b7e2c0b",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-8a2af0856b7e2c0b\\000000_resource-5f0ed425e115c402187b\\image.jpg",
+      "width": 4017,
+      "height": 3127,
+      "format": "JPEG",
+      "bytes": 1598893,
+      "catalogue_dimensions": [
+        4017,
+        3127
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-1dacc0d354868639",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-1dacc0d354868639\\000000_resource-f9ea84095cd9c1fa42fa\\image.jpg",
+      "width": 5024,
+      "height": 3108,
+      "format": "JPEG",
+      "bytes": 2477010,
+      "catalogue_dimensions": [
+        5024,
+        3108
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-3ed491f53aea0d32",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-3ed491f53aea0d32\\000000_resource-d4d4b328cf6eea9f38fa\\image.jpg",
+      "width": 5104,
+      "height": 7006,
+      "format": "JPEG",
+      "bytes": 5238260,
+      "catalogue_dimensions": [
+        5104,
+        7006
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-bd35ea1f6cae0a35",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-bd35ea1f6cae0a35\\000000_resource-fa7899faba7cc1702c1f\\image.jpg",
+      "width": 5059,
+      "height": 7019,
+      "format": "JPEG",
+      "bytes": 4880229,
+      "catalogue_dimensions": [
+        5059,
+        7019
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-bd6c0b9605feae57",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-bd6c0b9605feae57\\000000_resource-0d17ac38a844e3bdf3a2\\image.jpg",
+      "width": 3789,
+      "height": 5688,
+      "format": "JPEG",
+      "bytes": 3140533,
+      "catalogue_dimensions": [
+        3789,
+        5688
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-73a04f45d00abfb2",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-73a04f45d00abfb2\\000000_resource-b49b840ea2c31e07043e\\image.jpg",
+      "width": 4047,
+      "height": 4892,
+      "format": "JPEG",
+      "bytes": 2743158,
+      "catalogue_dimensions": [
+        4047,
+        4892
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-7221dd7b70387942",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-7221dd7b70387942\\000000_resource-f0b2fbc8ab493902a412\\image.jpg",
+      "width": 3699,
+      "height": 5154,
+      "format": "JPEG",
+      "bytes": 1491802,
+      "catalogue_dimensions": [
+        3699,
+        5154
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-f87340b820f3e6e0",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-f87340b820f3e6e0\\000000_resource-30fa6e691b71ca560005\\image.jpg",
+      "width": 3716,
+      "height": 5146,
+      "format": "JPEG",
+      "bytes": 1913987,
+      "catalogue_dimensions": [
+        3716,
+        5146
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-a57772e871d896f6",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-a57772e871d896f6\\000000_resource-7e7586f06b925d48ba19\\image.jpg",
+      "width": 3623,
+      "height": 3204,
+      "format": "JPEG",
+      "bytes": 1154472,
+      "catalogue_dimensions": [
+        3623,
+        3204
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-854b60c4e8177005",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-854b60c4e8177005\\000000_resource-2e37ae8c5a0564053027\\image.jpg",
+      "width": 3708,
+      "height": 2636,
+      "format": "JPEG",
+      "bytes": 1087244,
+      "catalogue_dimensions": [
+        3708,
+        2636
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-142e91c5f5d7f744",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-142e91c5f5d7f744\\000000_resource-5d02aa5601696b8d6725\\image.jpg",
+      "width": 3733,
+      "height": 2729,
+      "format": "JPEG",
+      "bytes": 1116940,
+      "catalogue_dimensions": [
+        3733,
+        2729
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-b3a32fdbaf6d6dde",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-b3a32fdbaf6d6dde\\000000_resource-f2f48d1bd2af35cefb20\\image.jpg",
+      "width": 3725,
+      "height": 5180,
+      "format": "JPEG",
+      "bytes": 1817839,
+      "catalogue_dimensions": [
+        3725,
+        5180
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-43561bd961eb7d6a",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-43561bd961eb7d6a\\000000_resource-671644418d5708d7c591\\image.jpg",
+      "width": 3693,
+      "height": 2743,
+      "format": "JPEG",
+      "bytes": 1291650,
+      "catalogue_dimensions": [
+        3693,
+        2743
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-e1273d08fab07461",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-e1273d08fab07461\\000000_resource-add3e8fcb3d24ff20a0a\\image.jpg",
+      "width": 3719,
+      "height": 5535,
+      "format": "JPEG",
+      "bytes": 2439678,
+      "catalogue_dimensions": [
+        3719,
+        5535
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-e23133d626bed661",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-e23133d626bed661\\000000_resource-fce0cf659a598fe6576a\\image.jpg",
+      "width": 3626,
+      "height": 4724,
+      "format": "JPEG",
+      "bytes": 2062345,
+      "catalogue_dimensions": [
+        3626,
+        4724
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-cfc97c7e3a6ff74f",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-cfc97c7e3a6ff74f\\000000_resource-8652ce113bde5c3d801c\\image.jpg",
+      "width": 3088,
+      "height": 5397,
+      "format": "JPEG",
+      "bytes": 2268023,
+      "catalogue_dimensions": [
+        3088,
+        5397
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-0ad419d49d36d1d0",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-0ad419d49d36d1d0\\000000_resource-50c354120cbf62a72102\\image.jpg",
+      "width": 3686,
+      "height": 6272,
+      "format": "JPEG",
+      "bytes": 4191900,
+      "catalogue_dimensions": [
+        3686,
+        6272
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-402d1ce904e7926f",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-402d1ce904e7926f\\000000_resource-fe84514285d784138a8f\\image.jpg",
+      "width": 2721,
+      "height": 4141,
+      "format": "JPEG",
+      "bytes": 1698360,
+      "catalogue_dimensions": [
+        2721,
+        4141
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-3672e2a51b87ecfa",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-3672e2a51b87ecfa\\000000_resource-958778aa7833a0a58e38\\image.jpg",
+      "width": 3806,
+      "height": 5435,
+      "format": "JPEG",
+      "bytes": 3945069,
+      "catalogue_dimensions": [
+        3806,
+        5435
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-7b53c981b5d9edec",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-7b53c981b5d9edec\\000000_resource-10ca7e52992f3a2614a3\\image.jpg",
+      "width": 3753,
+      "height": 3027,
+      "format": "JPEG",
+      "bytes": 1990820,
+      "catalogue_dimensions": [
+        3753,
+        3027
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-d5e805bd7a879943",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-d5e805bd7a879943\\000000_resource-fc09c32a435b15f01015\\image.jpg",
+      "width": 2826,
+      "height": 3648,
+      "format": "JPEG",
+      "bytes": 1738415,
+      "catalogue_dimensions": [
+        2826,
+        3648
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-04c9e83891de0243",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-04c9e83891de0243\\000000_resource-36177c1f2d94bd8caee3\\image.jpg",
+      "width": 3656,
+      "height": 2444,
+      "format": "JPEG",
+      "bytes": 1519412,
+      "catalogue_dimensions": [
+        3656,
+        2444
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-77ea139bcfa54bcb",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-77ea139bcfa54bcb\\000000_resource-28eb4b84586d1a3b2aed\\image.jpg",
+      "width": 5017,
+      "height": 6691,
+      "format": "JPEG",
+      "bytes": 5070287,
+      "catalogue_dimensions": [
+        5017,
+        6691
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-09e779e454b4dcc0",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-09e779e454b4dcc0\\000000_resource-4b35deeb5314dbcff801\\image.jpg",
+      "width": 3655,
+      "height": 5928,
+      "format": "JPEG",
+      "bytes": 2331382,
+      "catalogue_dimensions": [
+        3655,
+        5928
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-22f060ca22dc7646",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-22f060ca22dc7646\\000000_resource-fc14c7ceb009f237a6bf\\image.jpg",
+      "width": 7047,
+      "height": 5082,
+      "format": "JPEG",
+      "bytes": 4209046,
+      "catalogue_dimensions": [
+        7047,
+        5082
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-cc66b331b8a5f068",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-cc66b331b8a5f068\\000000_resource-fb324412c776e0266786\\image.jpg",
+      "width": 5884,
+      "height": 6847,
+      "format": "JPEG",
+      "bytes": 3453072,
+      "catalogue_dimensions": [
+        5884,
+        6847
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-d4cd8b280a44b5b1",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-d4cd8b280a44b5b1\\000000_resource-829774a30de61d788360\\image.jpg",
+      "width": 7507,
+      "height": 4644,
+      "format": "JPEG",
+      "bytes": 3982351,
+      "catalogue_dimensions": [
+        7507,
+        4644
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-97a577c7c3634fb6",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-97a577c7c3634fb6\\000000_resource-73eb9dde5b4ec89edea6\\image.jpg",
+      "width": 5792,
+      "height": 6720,
+      "format": "JPEG",
+      "bytes": 3268327,
+      "catalogue_dimensions": [
+        5792,
+        6720
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-0cdf7fadd272abed",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-0cdf7fadd272abed\\000000_resource-20d6edfdfc83198adaaa\\image.jpg",
+      "width": 3597,
+      "height": 5438,
+      "format": "JPEG",
+      "bytes": 1943467,
+      "catalogue_dimensions": [
+        3597,
+        5438
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-b47a66459e59ee8b",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-b47a66459e59ee8b\\000000_resource-1fe39cf97de9b69c90b2\\image.jpg",
+      "width": 7475,
+      "height": 9436,
+      "format": "JPEG",
+      "bytes": 5102610,
+      "catalogue_dimensions": [
+        7475,
+        9436
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-981d2b72480bce27",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-981d2b72480bce27\\000000_resource-cadac49f9eaf130e1fa7\\image.jpg",
+      "width": 7123,
+      "height": 4968,
+      "format": "JPEG",
+      "bytes": 4050101,
+      "catalogue_dimensions": [
+        7123,
+        4968
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-8745a3b3372e1778",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-8745a3b3372e1778\\000000_resource-272452e1dd46bfda582e\\image.jpg",
+      "width": 6937,
+      "height": 7368,
+      "format": "JPEG",
+      "bytes": 4319480,
+      "catalogue_dimensions": [
+        6937,
+        7368
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-12d34375cdbb52ed",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-12d34375cdbb52ed\\000000_resource-2db9b8554455a59bbc98\\image.jpg",
+      "width": 4944,
+      "height": 3592,
+      "format": "JPEG",
+      "bytes": 2420085,
+      "catalogue_dimensions": [
+        4944,
+        3592
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-c6056df6efddc0a9",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-c6056df6efddc0a9\\000000_resource-0e3263c7499cb0954151\\image.jpg",
+      "width": 3355,
+      "height": 5529,
+      "format": "JPEG",
+      "bytes": 3115552,
+      "catalogue_dimensions": [
+        3355,
+        5529
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-3a128cf1eda706a7",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-3a128cf1eda706a7\\000000_resource-41038a932dcf83576845\\image.jpg",
+      "width": 8562,
+      "height": 5784,
+      "format": "JPEG",
+      "bytes": 7292133,
+      "catalogue_dimensions": [
+        8562,
+        5784
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-16754a6ad346fad4",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-16754a6ad346fad4\\000000_resource-1c603f016301158d5f17\\image.jpg",
+      "width": 4320,
+      "height": 6180,
+      "format": "JPEG",
+      "bytes": 3894109,
+      "catalogue_dimensions": [
+        4320,
+        6180
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-364de6be88a29098",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-364de6be88a29098\\000000_resource-72bf77b8f6f0a5cec4f6\\image.jpg",
+      "width": 4462,
+      "height": 6877,
+      "format": "JPEG",
+      "bytes": 3399810,
+      "catalogue_dimensions": [
+        4462,
+        6877
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-2faf23aebda921a4",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-2faf23aebda921a4\\000000_resource-784b5713085370b3ace8\\image.jpg",
+      "width": 4758,
+      "height": 5308,
+      "format": "JPEG",
+      "bytes": 2860883,
+      "catalogue_dimensions": [
+        4758,
+        5308
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-221eb19ab8ff0e6f",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-221eb19ab8ff0e6f\\000000_resource-a587b62f0c203d307118\\image.jpg",
+      "width": 3832,
+      "height": 5321,
+      "format": "JPEG",
+      "bytes": 2461936,
+      "catalogue_dimensions": [
+        3832,
+        5321
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-d88bd9ec522230da",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-d88bd9ec522230da\\000000_resource-30097e5e6e4b42dc4999\\image.jpg",
+      "width": 4729,
+      "height": 6249,
+      "format": "JPEG",
+      "bytes": 3635933,
+      "catalogue_dimensions": [
+        4729,
+        6249
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-891116499a6ec23f",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-891116499a6ec23f\\000000_resource-f7852a86de331da9d37f\\image.jpg",
+      "width": 5439,
+      "height": 4279,
+      "format": "JPEG",
+      "bytes": 2640800,
+      "catalogue_dimensions": [
+        5439,
+        4279
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-19b36febb2519694",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-19b36febb2519694\\000000_resource-7940e70fd27c1374756d\\image.jpg",
+      "width": 4870,
+      "height": 6646,
+      "format": "JPEG",
+      "bytes": 5057477,
+      "catalogue_dimensions": [
+        4870,
+        6646
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-982ab7903de5174d",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-982ab7903de5174d\\000000_resource-7e7911011e087d512059\\image.jpg",
+      "width": 4918,
+      "height": 6817,
+      "format": "JPEG",
+      "bytes": 4721119,
+      "catalogue_dimensions": [
+        4918,
+        6817
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-ba1c548ee8561dcc",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-ba1c548ee8561dcc\\000000_resource-7f07f5f5d943bc990a11\\image.jpg",
+      "width": 5509,
+      "height": 6739,
+      "format": "JPEG",
+      "bytes": 5324967,
+      "catalogue_dimensions": [
+        5509,
+        6739
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-ced228193de106ab",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-ced228193de106ab\\000000_resource-d3373d21d2c3d7445fa3\\image.jpg",
+      "width": 5525,
+      "height": 6702,
+      "format": "JPEG",
+      "bytes": 5362181,
+      "catalogue_dimensions": [
+        5525,
+        6702
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-7459aff11152dc55",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-7459aff11152dc55\\000000_resource-d24bcf0f209c4aecada7\\image.jpg",
+      "width": 4204,
+      "height": 3479,
+      "format": "JPEG",
+      "bytes": 2009000,
+      "catalogue_dimensions": [
+        4204,
+        3479
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-b433a637a460a189",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-b433a637a460a189\\000000_resource-40ff89529b4f1fc3a83e\\image.jpg",
+      "width": 6768,
+      "height": 9489,
+      "format": "JPEG",
+      "bytes": 6646947,
+      "catalogue_dimensions": [
+        6768,
+        9489
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-67d0f87068d6300e",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-67d0f87068d6300e\\000000_resource-5ed8c8cc96fed22ba9bc\\image.jpg",
+      "width": 5590,
+      "height": 6718,
+      "format": "JPEG",
+      "bytes": 5186629,
+      "catalogue_dimensions": [
+        5590,
+        6718
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-c0ae7274095f7876",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-c0ae7274095f7876\\000000_resource-82899df82041263466d4\\image.jpg",
+      "width": 4411,
+      "height": 6081,
+      "format": "JPEG",
+      "bytes": 3453482,
+      "catalogue_dimensions": [
+        4411,
+        6081
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-9b8f4331862988b4",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-9b8f4331862988b4\\000000_resource-259a8f42b2f6c3db8259\\image.jpg",
+      "width": 4760,
+      "height": 5563,
+      "format": "JPEG",
+      "bytes": 2906817,
+      "catalogue_dimensions": [
+        4760,
+        5563
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-8d1ba599ea7c883c",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-8d1ba599ea7c883c\\000000_resource-ecd8b3e711cdb6afa6c3\\image.jpg",
+      "width": 4434,
+      "height": 6081,
+      "format": "JPEG",
+      "bytes": 3351334,
+      "catalogue_dimensions": [
+        4434,
+        6081
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-65a825a31dfa0302",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-65a825a31dfa0302\\000000_resource-3d2265b1e4d0395489f8\\image.jpg",
+      "width": 4291,
+      "height": 6626,
+      "format": "JPEG",
+      "bytes": 3605992,
+      "catalogue_dimensions": [
+        4291,
+        6626
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-6e14bc09dc7ddc9c",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-6e14bc09dc7ddc9c\\000000_resource-42b9d79794cdb784dd34\\image.jpg",
+      "width": 6680,
+      "height": 2930,
+      "format": "JPEG",
+      "bytes": 2270260,
+      "catalogue_dimensions": [
+        6680,
+        2930
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-f498cef8e5d06cd8",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-f498cef8e5d06cd8\\000000_resource-ee80ebd4ccd97a2204e6\\image.jpg",
+      "width": 4828,
+      "height": 4967,
+      "format": "JPEG",
+      "bytes": 3297168,
+      "catalogue_dimensions": [
+        4828,
+        4967
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-1b11105595064dbc",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-1b11105595064dbc\\000000_resource-4cc664e2c7f8df1e8b17\\image.jpg",
+      "width": 4408,
+      "height": 6826,
+      "format": "JPEG",
+      "bytes": 3169528,
+      "catalogue_dimensions": [
+        4408,
+        6826
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-a80763970c930ddb",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-a80763970c930ddb\\000000_resource-12b8a519b725054bf38b\\image.jpg",
+      "width": 6079,
+      "height": 4290,
+      "format": "JPEG",
+      "bytes": 3597040,
+      "catalogue_dimensions": [
+        6079,
+        4290
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-879e90c8ac6290c2",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-879e90c8ac6290c2\\000000_resource-d1d4ec17d7bd08b874f4\\image.jpg",
+      "width": 5983,
+      "height": 4254,
+      "format": "JPEG",
+      "bytes": 3398573,
+      "catalogue_dimensions": [
+        5983,
+        4254
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-ca92d36854dda9a5",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-ca92d36854dda9a5\\000000_resource-7c04b4d16ad9b8a79624\\image.jpg",
+      "width": 6530,
+      "height": 4610,
+      "format": "JPEG",
+      "bytes": 4692800,
+      "catalogue_dimensions": [
+        6530,
+        4610
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-edc2a5b0ceb6a016",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-edc2a5b0ceb6a016\\000000_resource-7a3a92a39e433a9cb5be\\image.jpg",
+      "width": 6525,
+      "height": 4392,
+      "format": "JPEG",
+      "bytes": 4058263,
+      "catalogue_dimensions": [
+        6525,
+        4392
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-61342bda96c62930",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-61342bda96c62930\\000000_resource-0a5399f7ac6fc4e2b4b7\\image.jpg",
+      "width": 6230,
+      "height": 4251,
+      "format": "JPEG",
+      "bytes": 3408592,
+      "catalogue_dimensions": [
+        6230,
+        4251
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-3c1113a77c527a4d",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-3c1113a77c527a4d\\000000_resource-a792191c99ace48d10fc\\image.jpg",
+      "width": 6344,
+      "height": 4243,
+      "format": "JPEG",
+      "bytes": 3709444,
+      "catalogue_dimensions": [
+        6344,
+        4243
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-95cebf9220f95ad3",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-95cebf9220f95ad3\\000000_resource-cf26b787f0cac8241f93\\image.jpg",
+      "width": 6130,
+      "height": 4304,
+      "format": "JPEG",
+      "bytes": 3609662,
+      "catalogue_dimensions": [
+        6130,
+        4304
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-5cb4523963633473",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-5cb4523963633473\\000000_resource-e7257ff7762b5fc08129\\image.jpg",
+      "width": 6058,
+      "height": 4313,
+      "format": "JPEG",
+      "bytes": 3640136,
+      "catalogue_dimensions": [
+        6058,
+        4313
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-a54bcb570d6979c3",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-a54bcb570d6979c3\\000000_resource-173c08babf4b2934e94a\\image.jpg",
+      "width": 6240,
+      "height": 4250,
+      "format": "JPEG",
+      "bytes": 3938815,
+      "catalogue_dimensions": [
+        6240,
+        4250
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-e4bc7ae53d2f4ed3",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-e4bc7ae53d2f4ed3\\000000_resource-c4bdbf5105db052a507a\\image.jpg",
+      "width": 4577,
+      "height": 1823,
+      "format": "JPEG",
+      "bytes": 1054718,
+      "catalogue_dimensions": [
+        4577,
+        1823
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-f8024fba08625585",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-f8024fba08625585\\000000_resource-f77b80cbb4d59f495e1f\\image.jpg",
+      "width": 5994,
+      "height": 4238,
+      "format": "JPEG",
+      "bytes": 3571542,
+      "catalogue_dimensions": [
+        5994,
+        4238
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-1a0cc0b600249cef",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-1a0cc0b600249cef\\000000_resource-5f21ce3af7c1d5dd490f\\image.jpg",
+      "width": 5999,
+      "height": 4009,
+      "format": "JPEG",
+      "bytes": 3245869,
+      "catalogue_dimensions": [
+        5999,
+        4009
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-a644a98de20b0bf0",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-a644a98de20b0bf0\\000000_resource-945bb52a88d01acfc2c8\\image.jpg",
+      "width": 6223,
+      "height": 4416,
+      "format": "JPEG",
+      "bytes": 4264001,
+      "catalogue_dimensions": [
+        6223,
+        4416
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-66448fffba65b1b3",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-66448fffba65b1b3\\000000_resource-1e531e8b1c83bc87332d\\image.jpg",
+      "width": 6000,
+      "height": 4050,
+      "format": "JPEG",
+      "bytes": 3376690,
+      "catalogue_dimensions": [
+        6000,
+        4050
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-19dc948b3d4cbfaf",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-19dc948b3d4cbfaf\\000000_resource-8659fd9e99415447bc1e\\image.jpg",
+      "width": 6713,
+      "height": 4575,
+      "format": "JPEG",
+      "bytes": 4742189,
+      "catalogue_dimensions": [
+        6713,
+        4575
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-905bb9df113a2aa7",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-905bb9df113a2aa7\\000000_resource-a5faeca43eca0b2883fc\\image.jpg",
+      "width": 6251,
+      "height": 5348,
+      "format": "JPEG",
+      "bytes": 5008410,
+      "catalogue_dimensions": [
+        6251,
+        5348
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-fc57e1b0a0831db7",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-fc57e1b0a0831db7\\000000_resource-56a47ad13bf2bed27561\\image.jpg",
+      "width": 6838,
+      "height": 5587,
+      "format": "JPEG",
+      "bytes": 5591636,
+      "catalogue_dimensions": [
+        6838,
+        5587
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-16eac12f9c8f8b18",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-16eac12f9c8f8b18\\000000_resource-610c657799ff055b1162\\image.jpg",
+      "width": 3704,
+      "height": 4960,
+      "format": "JPEG",
+      "bytes": 2989348,
+      "catalogue_dimensions": [
+        3704,
+        4960
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-92d4c7b5286a629f",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-92d4c7b5286a629f\\000000_resource-418d197c3bae1e84ddb5\\image.jpg",
+      "width": 4152,
+      "height": 5080,
+      "format": "JPEG",
+      "bytes": 2918243,
+      "catalogue_dimensions": [
+        4152,
+        5080
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-f65fe61c52868e0f",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-f65fe61c52868e0f\\000000_resource-6bbd144ddcefd4a95d3a\\image.jpg",
+      "width": 2721,
+      "height": 3678,
+      "format": "JPEG",
+      "bytes": 1687506,
+      "catalogue_dimensions": [
+        2721,
+        3678
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-0be1d66a6ec2c790",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-0be1d66a6ec2c790\\000000_resource-3b68f48c2cbdbe4499d4\\image.jpg",
+      "width": 3512,
+      "height": 5344,
+      "format": "JPEG",
+      "bytes": 2646237,
+      "catalogue_dimensions": [
+        3512,
+        5344
+      ],
+      "dimensions_match": true
+    },
+    {
+      "record_id": "manifest-69c2bc5aa31bf8fa",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\reference_batch\\module8\\output\\all\\with_reference\\manifest-69c2bc5aa31bf8fa\\000000_resource-ec705d059ccc25ffd2db\\image.jpg",
+      "width": 5104,
+      "height": 7016,
+      "format": "JPEG",
+      "bytes": 4883830,
+      "catalogue_dimensions": [
+        5104,
+        7016
+      ],
+      "dimensions_match": true
+    }
+  ]
+}

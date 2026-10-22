@@ -1,0 +1,62 @@
+﻿provider_id,provider_name,institution_url
+provider-6fb76c5e6a229a82,Austrian National Library,https://iiif.onb.ac.at/
+provider-83eb25cc392724da,Beyond Words: Illuminating Manuscripts in Boston Collections,http://beyondwords2016.org/
+provider-a668e1096468c352,Bibliothèque nationale de France (BnF),https://gallica.bnf.fr/
+provider-f10ea7c297cd81a8,Biblissima,https://portail.biblissima.fr/en/
+provider-4ef10065e633729c,Blavatnik Archive,https://www.blavatnikarchive.org/collections
+provider-028fd9292205c39c,Bodmer Lab,https://bodmerlab.unige.ch/fr/search?keywords=
+provider-acb86cbbcb639914,British Library,https://www.bl.uk/collection-guides/iiif
+provider-9c24703f7d539465,Cardiff University,https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1
+provider-31c6cd47abf916e0,Cuban Digital Collections,http://iiif.sld.cu/
+provider-c4aa50f2571a99e9,Cultural Japan,https://cultural.jp/
+provider-8d5551c46daf6536,Digital Commonwealth,https://digitalcommonwealth.org/
+provider-fe4c0f49dea727df,DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library,https://ostasien.digitale-sammlungen.de/?locale=en
+provider-f034696f3b1f1c1f,Digital Repository of Ireland,https://dri.ie/
+provider-617127ddd5e1eb45,DigitalGeorgetown's Integration of Universal Viewer into DSpace,https://repository.library.georgetown.edu/handle/10822/1044538
+provider-e1782e53439deb7b,DigiVatLib,http://digi.vatlib.it/
+provider-7caa47e568a1951d,e-manuscripta (Manuscript material from Swiss libraries and archives),https://www.e-manuscripta.ch/
+provider-3e6e726f68de3eaa,e-rara (digitized rare books from Swiss institutions),https://www.e-rara.ch/
+provider-9c46415198317886,Europeana,https://www.europeana.eu/portal/en/search?q=provider_aggregation_edm_isShownBy%3A*iiif*&view=grid
+provider-818f5f2d2b5bea33,Folger Shakespeare Library,https://collections.folger.edu/
+provider-f1308a5306328276,FromThePage,http://www.fromthepage.com/
+provider-9fd4bc767a462cd4,Gallica,http://gallica.bnf.fr/
+provider-d987c625d6365082,Georeferencer,http://www.georeferencer.com/
+provider-47cf886a2e6017f1,Ghent University,https://lib.ugent.be/en
+provider-637a751532e5f5a3,Harvard Art Museum,https://harvardartmuseums.org/collections
+provider-d14fb88cde24ff49,Harvard University Digital Collections,https://library.harvard.edu/digital-collections
+provider-2b0e0fbd04a5a32c,Historical State Search,http://historicalstate.lib.ncsu.edu/search
+provider-10b9080040d0cc13,hocrviewer,https://github.com/jbaiter/hocrviewer-mirador
+provider-3acece25cdf777e4,Indigenous Digital Archive,https://omeka.dlcs-ida.org/s/ida/page/home
+provider-d98fe11ebfc34f6d,J. Paul Getty Trust,https://search.getty.edu/gateway/search?q=&cat=highlight&f=%22Open+Content+Images%22&rows=10&srt=a&dir=s&pg=1
+provider-ef2f1cc06db37bc3,KU Leuven,https://kuleuven.limo.libis.be/discovery
+provider-296564297962fb5e,Library of Congress,https://www.loc.gov/collections/
+provider-c4bca842117bf9f7,National Gallery of Art Library,https://library.nga.gov/discovery/collectionDiscovery?vid=01NGA_INST:NGA&collectionId=8157583990004896
+provider-7354f1a7e6bbf41f,National Library of Finland (Finna.fi),https://www.finna.fi/
+provider-760200a911a3f30f,National Palace Museum (Taiwan),https://digitalarchive.npm.gov.tw/
+provider-cabfcd6f3de8ca7d,North Carolina State University Libraries,https://d.lib.ncsu.edu/collections/
+provider-38aa7bce2f3b0361,Parliamentary Archives - UK,https://archives.parliament.uk/
+provider-4853865a686721d7,Princeton University Art Museum,https://artmuseum.princeton.edu/search/collections
+provider-4e06374e85489c6e,Princeton University Libraries,https://dpul.princeton.edu/
+provider-521d522730b9f10b,Qatar National Library,https://www.qdl.qa/en/search/site/?f[0]=document_source:archive_source
+provider-dc8b65c17e7d0e22,SAT Taishōzō Image DB,http://dzkimgs.l.u-tokyo.ac.jp/SATi/images.php?alang=en
+provider-c94006b2714289d6,Smithsonian Institution,https://collections.si.edu/search/results.htm?q=&iiif.enabled=true
+provider-6425a20ec00665e3,Smithsonian National Zoo,https://nationalzoo.si.edu/openaccess/search?edan_fq%5B%5D=online_visual_material%3Atrue
+provider-648f0743acabd9c2,Stanford University,https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available
+provider-0aeecd6836053c69,The Frick Collection,http://digitalcollections.frick.org/digico/
+provider-a1544ec8d50c2696,The SCTA Reading Room,http://scta.lombardpress.org/
+provider-a360845c2b46d1bc,The Wolsey Manuscripts,http://www.wolseymanuscripts.ac.uk/manuscripts
+provider-7781a87376497b5c,UCLA Library Digital Collections,https://digital.library.ucla.edu/
+provider-370a429900074b10,University College Dublin Libraries,https://digital.ucd.ie/
+provider-e883d0f637379155,University of Illinois at Urbana-Champaign Library,https://digital.library.illinois.edu/items?fq%5B%5D=primary_media_category%3A0
+provider-e8f0640dd782bf74,University of Leeds Libraries' Cultural Collections,https://library.leeds.ac.uk/info/1500/special_collections
+provider-5bb54fcb57aa7da9,University of North Texas Libraries,https://digital.library.unt.edu/
+provider-47ee4f79e1a60cac,University of St. Andrews,https://www.st-andrews.ac.uk/collections
+provider-f2fa8935cf790b44,vHMML,https://www.vhmml.org/
+provider-870ce1c300376029,Villanova University,https://digital.library.villanova.edu/
+provider-9a9d50ec8631eafd,Wikipedia,https://www.wikipedia.org/
+provider-33ef699d79fc12aa,World Digitial Library,https://www.wdl.org/
+provider-8763d3efa30c6554,Yale Center for British Art,http://britishart.yale.edu/
+provider-8798d72493175a05,Yale Center for British Art,https://collections.britishart.yale.edu/
+provider-665981fb2cfa68fa,Yale Peabody Museum,https://peabody.yale.edu/explore/collections
+provider-116ce327597310c6,Yale University Art Gallery,https://artgallery.yale.edu/
+provider-feedf2702c521119,Yale University Library,https://collections.library.yale.edu/

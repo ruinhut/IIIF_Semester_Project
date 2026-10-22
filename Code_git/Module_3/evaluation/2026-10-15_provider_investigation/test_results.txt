@@ -1,0 +1,4 @@
+2026-10-15, local environment Code_git/.venv
+Command: python -m pytest -q, cwd Code_git/Module_3
+Result: 38 passed in 10.46s
+HTTP evidence, Module 3 and Module 4 logs remain separate from fixture tests.

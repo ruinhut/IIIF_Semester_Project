@@ -1,0 +1,75 @@
+{
+  "verified_bundles": 5,
+  "schema_validated_json_files": 15,
+  "provider_ids": [
+    "provider-637a751532e5f5a3",
+    "provider-c4aa50f2571a99e9",
+    "provider-c4bca842117bf9f7",
+    "provider-d98fe11ebfc34f6d",
+    "provider-e1782e53439deb7b"
+  ],
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-bea43924d896122c",
+      "resource_id": "resource-cfc8c646a22443919307",
+      "providers": [
+        {
+          "provider_id": "provider-e1782e53439deb7b",
+          "provider_name": "DigiVatLib"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-bea43924d896122c\\000009_resource-cfc8c646a22443919307\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-a9eafcf800c1564c",
+      "resource_id": "resource-7f3afd9e7ee9502e1743",
+      "providers": [
+        {
+          "provider_id": "provider-d98fe11ebfc34f6d",
+          "provider_name": "J. Paul Getty Trust"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-a9eafcf800c1564c\\000000_resource-7f3afd9e7ee9502e1743\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-910e2bb2a7a19c82",
+      "resource_id": "resource-4f5f9b5a0a0165749c3a",
+      "providers": [
+        {
+          "provider_id": "provider-c4aa50f2571a99e9",
+          "provider_name": "Cultural Japan"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-910e2bb2a7a19c82\\000000_resource-4f5f9b5a0a0165749c3a\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-d5d5dd911476bdab",
+      "resource_id": "resource-cd1173913672c99fa9ed",
+      "providers": [
+        {
+          "provider_id": "provider-637a751532e5f5a3",
+          "provider_name": "Harvard Art Museum"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-d5d5dd911476bdab\\000001_resource-cd1173913672c99fa9ed\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-ce4f5731cbd2a4d5",
+      "resource_id": "resource-e1cd2d0bad31c988a881",
+      "providers": [
+        {
+          "provider_id": "provider-c4bca842117bf9f7",
+          "provider_name": "National Gallery of Art Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-ce4f5731cbd2a4d5\\000009_resource-e1cd2d0bad31c988a881\\image.jpg",
+      "reference_files": 0
+    }
+  ],
+  "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+}

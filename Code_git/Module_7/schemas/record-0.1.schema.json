@@ -12,7 +12,26 @@
       "required": ["identifier", "title", "titles", "description", "creators", "dates", "places", "subjects", "types", "languages"],
       "properties": {"identifier": {"type": "string", "minLength": 1}}
     },
-    "rights": {"type": "object", "required": ["category", "decision", "policy_version", "statements"]},
+    "rights": {
+      "type": "object",
+      "required": ["category", "decision", "decision_scope", "research_status", "usage_permissions", "public_reuse_eligible", "policy_version", "statements"],
+      "properties": {
+        "decision": {"enum": ["allow", "exclude"]},
+        "decision_scope": {"const": "public_reuse"},
+        "research_status": {"const": "retained"},
+        "public_reuse_eligible": {"type": "boolean"},
+        "usage_permissions": {
+          "type": "object",
+          "required": ["retain_url_and_metadata", "academic_analysis", "public_distribution", "commercial_use"],
+          "properties": {
+            "retain_url_and_metadata": {"const": true},
+            "academic_analysis": {"const": true},
+            "public_distribution": {"type": "boolean"},
+            "commercial_use": {"type": "boolean"}
+          }
+        }
+      }
+    },
     "source": {"type": "object", "required": ["manifest_id", "manifest_url", "providers"]},
     "media_count": {"type": "integer", "minimum": 0},
     "quality": {"type": "object"},

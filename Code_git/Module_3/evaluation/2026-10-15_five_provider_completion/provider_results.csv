@@ -1,0 +1,6 @@
+﻿provider_id,provider_name,discovered_manifests,validated_manifests,declared_canvas_count,declared_image_bodies,downloaded_examples,discovery_skill
+provider-47e8bc7785793a60,Göttingen University Collections,20,20,9540,9540,1,gdz-paginated-search-records
+provider-e048f92222cd2e49,Leiden University,20,20,2020,2020,1,leiden-islandora-books-to-current-manifests
+provider-0af71df3c01cdd4e,National Library of Wales,20,20,104,104,1,primo-viewer-identifiers-to-iiif-resources
+provider-015ee4ecd4a6fd91,Universitaet Jena,20,20,12625,12625,1,mycore-objects-to-derivatives-to-manifests
+provider-fa146b049ccac158,Utrecht University Library,20,20,2543,2543,1,utrecht-public-object-list-to-manifests

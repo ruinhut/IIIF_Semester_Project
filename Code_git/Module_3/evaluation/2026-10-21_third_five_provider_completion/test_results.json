@@ -1,0 +1,44 @@
+[
+  {
+    "module": 3,
+    "exit_code": 0,
+    "passed": 68,
+    "subtests": 0,
+    "output": "....................................................................     [100%]\n68 passed in 23.64s\n"
+  },
+  {
+    "module": 4,
+    "exit_code": 0,
+    "passed": 20,
+    "subtests": 0,
+    "output": "....................                                                     [100%]\n20 passed in 6.08s\n"
+  },
+  {
+    "module": 5,
+    "exit_code": 0,
+    "passed": 14,
+    "subtests": 7,
+    "output": "..............                                                    [100%]\n14 passed, 7 subtests passed in 0.13s\n"
+  },
+  {
+    "module": 6,
+    "exit_code": 0,
+    "passed": 30,
+    "subtests": 0,
+    "output": "..............................                                           [100%]\n30 passed in 0.16s\n"
+  },
+  {
+    "module": 7,
+    "exit_code": 0,
+    "passed": 29,
+    "subtests": 0,
+    "output": ".............................                                            [100%]\n29 passed in 0.34s\n"
+  },
+  {
+    "module": 8,
+    "exit_code": 0,
+    "passed": 21,
+    "subtests": 0,
+    "output": ".....................                                                    [100%]\n21 passed in 7.80s\n"
+  }
+]

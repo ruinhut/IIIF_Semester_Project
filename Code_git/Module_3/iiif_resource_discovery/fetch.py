@@ -90,14 +90,24 @@ class HttpFetcher:
         self.user_agent = user_agent.strip()
         self.sleeper = sleeper
 
-    def fetch(self, url: str, *, accept: str = "application/ld+json, application/json, text/html;q=0.5") -> FetchedDocument:
+    def fetch(
+        self, url: str, *,
+        accept: str = "application/ld+json, application/json, text/html;q=0.5",
+        method: str = "GET", json_body: Mapping[str, Any] | None = None,
+        headers: Mapping[str, str] | None = None,
+    ) -> FetchedDocument:
         """Fetch one URL and raise a structured error after bounded retries."""
 
         canonicalize_url(url)
+        method = method.upper()
+        if method not in {"GET", "POST"}:
+            raise ValueError("Discovery retrieval supports GET and read-only POST search only")
+        if method == "GET" and json_body is not None:
+            raise ValueError("GET retrieval cannot carry a JSON request body")
         last_error: FetchError | None = None
         for attempt in range(self.retries + 1):
             try:
-                return self._fetch_once(url, accept=accept)
+                return self._fetch_once(url, accept=accept, method=method, json_body=json_body, headers=headers)
             except FetchError as exc:
                 last_error = exc
                 retryable = exc.status_code in RETRYABLE_STATUS_CODES or exc.error_type in {
@@ -111,11 +121,18 @@ class HttpFetcher:
         assert last_error is not None
         raise last_error
 
-    def _fetch_once(self, url: str, *, accept: str) -> FetchedDocument:
+    def _fetch_once(
+        self, url: str, *, accept: str, method: str = "GET",
+        json_body: Mapping[str, Any] | None = None, headers: Mapping[str, str] | None = None,
+    ) -> FetchedDocument:
+        request_headers = {"Accept": accept, "User-Agent": self.user_agent, **dict(headers or {})}
+        body = None
+        if json_body is not None:
+            body = json.dumps(json_body, ensure_ascii=False).encode("utf-8")
+            request_headers["Content-Type"] = "application/json"
         request = Request(
             url,
-            headers={"Accept": accept, "User-Agent": self.user_agent},
-            method="GET",
+            headers=request_headers, data=body, method=method,
         )
         try:
             with urlopen(request, timeout=self.timeout_seconds) as response:

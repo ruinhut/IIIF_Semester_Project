@@ -1,0 +1,8 @@
+{
+  "validated_manifests_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\combined_validated_manifests.jsonl",
+  "resource_inventory_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\combined_resource_inventory.jsonl",
+  "module_4_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion",
+  "policy_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_5\\policies\\automatic-2026-09-29.json",
+  "output_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\downstream\\module5\\output",
+  "log_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\downstream\\module5\\log"
+}

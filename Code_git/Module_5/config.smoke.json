@@ -2,11 +2,10 @@
   "validated_manifests_jsonl": "../Module_4/data/output/validated_manifests.jsonl",
   "resource_inventory_jsonl": "../Module_4/data/output/manifest_resource_inventory.jsonl",
   "module_4_directory": "../Module_4",
-  "policy_file": "policies/automatic-2026-09-25.json",
+  "policy_file": "policies/automatic-2026-09-29.json",
   "output_directory": "data/output",
   "log_directory": "data/log",
   "run": {
-    "max_records": 5,
-    "verify_raw_sha256": true
+    "max_records": 5
   }
 }

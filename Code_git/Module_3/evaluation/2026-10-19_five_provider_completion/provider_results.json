@@ -1,0 +1,42 @@
+[
+  {
+    "provider_id": "provider-3e6e726f68de3eaa",
+    "provider_name": "e-rara (digitized rare books from Swiss institutions)",
+    "discovered_manifest_urls": 20,
+    "validated_manifests": 20,
+    "exported_media_associations": 6230,
+    "downloaded_sample_images": 1
+  },
+  {
+    "provider_id": "provider-7caa47e568a1951d",
+    "provider_name": "e-manuscripta (Manuscript material from Swiss libraries and archives)",
+    "discovered_manifest_urls": 20,
+    "validated_manifests": 20,
+    "exported_media_associations": 171,
+    "downloaded_sample_images": 1
+  },
+  {
+    "provider_id": "provider-f1308a5306328276",
+    "provider_name": "FromThePage",
+    "discovered_manifest_urls": 20,
+    "validated_manifests": 20,
+    "exported_media_associations": 844,
+    "downloaded_sample_images": 1
+  },
+  {
+    "provider_id": "provider-028fd9292205c39c",
+    "provider_name": "Bodmer Lab",
+    "discovered_manifest_urls": 20,
+    "validated_manifests": 20,
+    "exported_media_associations": 259,
+    "downloaded_sample_images": 1
+  },
+  {
+    "provider_id": "provider-6fb76c5e6a229a82",
+    "provider_name": "Austrian National Library",
+    "discovered_manifest_urls": 25,
+    "validated_manifests": 24,
+    "exported_media_associations": 262,
+    "downloaded_sample_images": 1
+  }
+]

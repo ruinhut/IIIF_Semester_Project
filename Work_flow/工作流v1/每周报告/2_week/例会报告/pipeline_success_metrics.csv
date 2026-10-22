@@ -1,0 +1,12 @@
+﻿metric,numerator,denominator,rate_percent,definition
+Endpoint HTTP success,99,158,62.66,reachable JSON or non-JSON endpoints / checked endpoints
+Provider reachability,67,94,71.28,providers with >=1 reachable endpoint / selected providers
+Provider JSON availability,6,94,6.38,providers with >=1 parseable JSON endpoint / selected providers
+Provider discovery success,10,94,10.64,providers yielding >=1 Manifest / processed providers
+Manifest structural validity,324,324,100.0,valid Manifests / discovered Manifest URLs
+Rights retention,18,324,5.56,allowed Manifests / rights-assessed Manifests
+Normalization success,18,18,100.0,normalized records / allowed Manifests
+Complete normalized records,18,18,100.0,complete normalized records / normalized records
+Final record acceptance,18,18,100.0,schema-valid final records / normalized records
+Final media acceptance,106,106,100.0,schema-valid final media / normalized media
+End-to-end object yield,18,324,5.56,final records / discovered Manifest URLs

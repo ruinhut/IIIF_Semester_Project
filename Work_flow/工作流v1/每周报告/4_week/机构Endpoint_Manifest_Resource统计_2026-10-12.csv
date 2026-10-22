@@ -1,0 +1,95 @@
+﻿provider_id,institution_name,endpoint_count,reachable_endpoint_count,reachable_json_endpoint_count,reachable_non_json_endpoint_count,restricted_endpoint_count,temporary_failure_endpoint_count,unreachable_endpoint_count,response_too_large_endpoint_count,discovery_status,manifest_selection_limit,discovered_manifest_count,manifest_limit_reached,validated_manifest_count,canvas_count,image_resource_count,endpoint_checked_at
+provider-691126b502b5821e,Art Institute of Chicago,1,1,0,1,0,0,0,0,manifests_found,100,3,False,3,3,3,2026-10-12T22:09:31+02:00
+provider-6fb76c5e6a229a82,Austrian National Library,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-9639004395c2739d,Bavarian State Library (BSB) / Munich Digitization Centre (MDZ),3,3,1,2,0,0,0,0,manifests_found,100,100,True,100,12478,12478,2026-10-12T22:09:31+02:00
+provider-83eb25cc392724da,Beyond Words: Illuminating Manuscripts in Boston Collections,2,0,0,0,0,2,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-a668e1096468c352,Bibliothèque nationale de France (BnF),1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-f10ea7c297cd81a8,Biblissima,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-a2d020e1ff7f28ef,Biblissima reconstituted manuscript demo,1,1,0,1,0,0,0,0,manifests_found,100,1,False,1,22,44,2026-10-12T22:09:31+02:00
+provider-4ef10065e633729c,Blavatnik Archive,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-028fd9292205c39c,Bodmer Lab,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-acb86cbbcb639914,British Library,3,0,0,0,1,1,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-32c223e0cddf015c,Brown University Digital Repository,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-9c24703f7d539465,Cardiff University,2,2,0,2,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-6a0186046b49634f,Carnegie Museum of Art,4,4,2,2,0,0,0,0,manifests_found,100,100,True,100,206,205,2026-10-12T22:09:31+02:00
+provider-31c6cd47abf916e0,Cuban Digital Collections,1,0,0,0,0,1,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-c4aa50f2571a99e9,Cultural Japan,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-0a19a8e5992b5a87,David Rumsey Map Collection,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-02221348697554a3,DigiPress - The newspaper portal of the Bayerische Staatsbibliothek (Bavarian State Library),4,3,1,2,0,0,1,0,manifests_found,100,1,False,1,615,615,2026-10-12T22:09:31+02:00
+provider-9dd288533f853f26,Digital Collections iiif of the Bavarian State Library,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-8d5551c46daf6536,Digital Commonwealth,11,0,0,0,11,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-fe4c0f49dea727df,DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-f034696f3b1f1c1f,Digital Repository of Ireland,1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-617127ddd5e1eb45,DigitalGeorgetown's Integration of Universal Viewer into DSpace,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-e1782e53439deb7b,DigiVatLib,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-53220deba7b0d3eb,Durham University,2,2,0,2,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-858c23aa6223857c,e-codices,2,2,0,2,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-ef8c581d8869b1b6,e-codices - Virtual Manuscript Library of Switzerland,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-7caa47e568a1951d,e-manuscripta (Manuscript material from Swiss libraries and archives),1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-3e6e726f68de3eaa,e-rara (digitized rare books from Swiss institutions),1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-f2683615336e129a,Ecole Polytechnique Fédérale de Lausanne (EPFL),1,1,0,1,0,0,0,0,manifests_found,100,10,False,10,5560,5560,2026-10-12T22:09:31+02:00
+provider-9c46415198317886,Europeana,2,2,0,2,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-818f5f2d2b5bea33,Folger Shakespeare Library,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-ef02e7415eb96a3e,Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments,1,1,0,1,0,0,0,0,manifests_found,100,18,False,18,73,73,2026-10-12T22:09:31+02:00
+provider-f1308a5306328276,FromThePage,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-9fd4bc767a462cd4,Gallica,3,2,0,2,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-d987c625d6365082,Georeferencer,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-47cf886a2e6017f1,Ghent University,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-47e8bc7785793a60,Göttingen University Collections,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-637a751532e5f5a3,Harvard Art Museum,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-f63c0c9fa9fd0139,Harvard Art Museums,3,3,1,2,0,0,0,0,manifests_found,100,1,False,1,7,7,2026-10-12T22:09:31+02:00
+provider-d14fb88cde24ff49,Harvard University Digital Collections,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-2b0e0fbd04a5a32c,Historical State Search,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-10b9080040d0cc13,hocrviewer,2,2,0,2,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-f761dd27f50f2d55,Huntington Digital Library,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-3acece25cdf777e4,Indigenous Digital Archive,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-c321c7f2be84b70b,Internet Archive,9,6,1,5,0,0,3,0,manifests_found,100,1,False,1,1294,1294,2026-10-12T22:09:31+02:00
+provider-d98fe11ebfc34f6d,J. Paul Getty Trust,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-ef2f1cc06db37bc3,KU Leuven,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-5e1c10e9ec094e2b,Lancaster University Library,1,0,0,0,0,1,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-e048f92222cd2e49,Leiden University,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-296564297962fb5e,Library of Congress,1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-c4bca842117bf9f7,National Gallery of Art Library,2,2,0,2,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-7354f1a7e6bbf41f,National Library of Finland (Finna.fi),4,0,0,0,4,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-5c37bd59a5085c75,National Library of Scotland,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-0af71df3c01cdd4e,National Library of Wales,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-760200a911a3f30f,National Palace Museum (Taiwan),1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-cabfcd6f3de8ca7d,North Carolina State University Libraries,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-d305e1aa116fabbc,Northwestern University,1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-38aa7bce2f3b0361,Parliamentary Archives - UK,2,1,0,1,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-4853865a686721d7,Princeton University Art Museum,1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-4e06374e85489c6e,Princeton University Libraries,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-521d522730b9f10b,Qatar National Library,1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-e1d421d66c6ea5a2,Radboud University Library,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-dc8b65c17e7d0e22,SAT Taishōzō Image DB,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-c94006b2714289d6,Smithsonian Institution,1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-6425a20ec00665e3,Smithsonian National Zoo,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-648f0743acabd9c2,Stanford University,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-0aeecd6836053c69,The Frick Collection,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-a1544ec8d50c2696,The SCTA Reading Room,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-a360845c2b46d1bc,The Wolsey Manuscripts,1,0,0,0,0,1,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-7781a87376497b5c,UCLA Library Digital Collections,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-015ee4ecd4a6fd91,Universitaet Jena,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-370a429900074b10,University College Dublin Libraries,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-1aa346b109dd7584,University of Cambridge,2,0,0,0,2,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-e883d0f637379155,University of Illinois at Urbana-Champaign Library,1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-e8f0640dd782bf74,University of Leeds Libraries' Cultural Collections,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-09ef3155e4838a64,University of Leicester Library,2,2,0,2,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-5bb54fcb57aa7da9,University of North Texas Libraries,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-992059478d1af0a4,University of Oxford (Digital Bodleian),3,3,1,2,0,0,0,0,manifests_found,100,100,True,100,34354,34354,2026-10-12T22:09:31+02:00
+provider-47ee4f79e1a60cac,University of St. Andrews,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-2254ed59cf35068a,University of Toronto,3,1,0,1,2,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-7ec00147ef5efa4a,University of Washington Libraries,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-fa146b049ccac158,Utrecht University Library,1,0,0,0,0,0,0,1,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-9087fc100047c3b2,Vatican Library,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-f2fa8935cf790b44,vHMML,2,2,0,2,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-870ce1c300376029,Villanova University,1,0,0,0,0,0,1,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-b49c571f8e0c0ba0,Wellcome Collection,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-d5e7b7675f084f36,Wikidata,6,6,0,6,0,0,0,0,manifests_found,100,1,False,1,1,1,2026-10-12T22:09:31+02:00
+provider-9a9d50ec8631eafd,Wikipedia,7,1,0,1,0,0,6,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-33ef699d79fc12aa,World Digitial Library,1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-8763d3efa30c6554,Yale Center for British Art,4,1,0,1,3,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-8798d72493175a05,Yale Center for British Art,1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-665981fb2cfa68fa,Yale Peabody Museum,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-116ce327597310c6,Yale University Art Gallery,1,0,0,0,1,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00
+provider-feedf2702c521119,Yale University Library,1,1,0,1,0,0,0,0,unresolved,100,0,False,0,0,0,2026-10-12T22:09:31+02:00

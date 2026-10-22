@@ -1,0 +1,158 @@
+{
+  "knowledge_base_version": "1.0",
+  "providers": [
+    {
+      "provider_id": "provider-fe4c0f49dea727df",
+      "provider_name": "DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library",
+      "investigation_id": "2026-10-21-second-five-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-21_second_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "bsb-east-asia-result-data-manifests",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://ostasien.digitale-sammlungen.de/search",
+          "query_parameters": {
+            "q": "China",
+            "searchType": "free"
+          },
+          "record_url_attributes": [
+            "data-manifest"
+          ],
+          "record_url_pattern": "^https://api\\.digitale-sammlungen\\.de/iiif/presentation/v2/(?P<identifier>bsb\\d+)/manifest$",
+          "manifest_url_templates": [
+            "https://api.digitale-sammlungen.de/iiif/presentation/v2/{identifier}/manifest"
+          ],
+          "pagination": {
+            "page_parameter": "start",
+            "page_size_parameter": "rows",
+            "page_size": 10,
+            "start_page": 0,
+            "max_pages": 100,
+            "detect_next_page": true
+          },
+          "max_identifiers": 1000,
+          "request_delay_seconds": 0.5,
+          "coverage_note": "Keyword China in the BSB East Asian catalogue (108 search hits observed). start is a zero-based page number, not a row offset. This is a collection subset of BSB, not a new independent institution or a full-catalogue total."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-9c24703f7d539465",
+      "provider_name": "Cardiff University",
+      "investigation_id": "2026-10-21-second-five-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-21_second_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "cardiff-public-primo-mms-to-alma-manifests",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://librarysearch.cardiff.ac.uk/primaws/rest/pub/pnxs",
+          "query_parameters": {
+            "vid": "44WHELF_CAR:44WHELF_CAR_VU1",
+            "tab": "LibraryCatalog",
+            "scope": "MyInstitution",
+            "q": "any,contains,Ellor",
+            "lang": "en"
+          },
+          "records_path": "docs",
+          "identifier_path": "pnx.control.sourcerecordid.0",
+          "filters": [
+            {
+              "path": "delivery.hasD",
+              "equals": true
+            }
+          ],
+          "identifier_pattern": "^(?P<identifier>\\d+)$",
+          "manifest_url_templates": [
+            "https://librarysearch.cardiff.ac.uk/view/iiif/presentation/44WHELF_CAR/{identifier}/manifest"
+          ],
+          "pagination": {
+            "page_parameter": "offset",
+            "page_size_parameter": "limit",
+            "page_size": 6,
+            "start_page": 0,
+            "page_step": 6,
+            "max_pages": 10,
+            "total_path": "info.total"
+          },
+          "max_identifiers": 60,
+          "request_delay_seconds": 0.5,
+          "coverage_note": "Ellor keyword subset: 9 catalogue hits, only records explicitly declaring digital delivery are selected. Ex Libris documents MMS-to-representation redirects, so guessing representation IDs is unnecessary."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-f2fa8935cf790b44",
+      "provider_name": "vHMML",
+      "investigation_id": "2026-10-21-second-five-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-21_second_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "hmml-dreamsea-public-catalogue-detail-manifests",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://hmmlcloud.org/dreamsea/manuscripts.php",
+          "query_parameters": {
+            "country": "Laos",
+            "searchType": "1"
+          },
+          "record_url_pattern": "^https://hmmlcloud\\.org/dreamsea/detail\\.php\\?msid=(?P<identifier>\\d+)$",
+          "identifier_followup": {
+            "url_template": "https://hmmlcloud.org/dreamsea/detail.php?msid={identifier}",
+            "format": "html",
+            "include_visible_url_text": true,
+            "identifier_pattern": "^https://www\\.vhmml\\.org/image/manifest/(?P<identifier>\\d+)$"
+          },
+          "manifest_url_templates": [
+            "https://www.vhmml.org/image/manifest/{identifier}"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 5000,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "DREAMSEA public Laos subset; native vHMML Manifest numbers are read from visible detail-page URL text, not inferred from DREAMSEA IDs. Restricted Reading Room search is not bypassed; public partner catalogue and images are used."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-feedf2702c521119",
+      "provider_name": "Yale University Library",
+      "investigation_id": "2026-10-21-second-five-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-21_second_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "yale-lux-linked-art-library-manifests",
+          "type": "paginated_json_identifiers_to_manifest_templates",
+          "api_url": "https://lux.collections.yale.edu/api/search/item",
+          "query_parameters": {
+            "q": "{\"AND\":[{\"hasDigitalImage\":1},{\"text\":\"manuscript\"}]}"
+          },
+          "records_path": "orderedItems",
+          "identifier_path": "id",
+          "identifier_pattern": "^https://lux\\.collections\\.yale\\.edu/data/object/(?P<identifier>[a-f0-9-]+)$",
+          "identifier_followup": {
+            "url_template": "https://lux.collections.yale.edu/data/object/{identifier}",
+            "identifier_path": "subject_of.*.digitally_carried_by.*.access_point.*.id",
+            "identifier_pattern": "^https://collections\\.library\\.yale\\.edu/manifests/(?P<identifier>\\d+)$"
+          },
+          "manifest_url_templates": [
+            "https://collections.library.yale.edu/manifests/{identifier}"
+          ],
+          "pagination": {
+            "page_parameter": "page",
+            "page_size_parameter": "pageLength",
+            "page_size": 6,
+            "start_page": 1,
+            "max_pages": 100,
+            "has_next_path": "next.id"
+          },
+          "max_identifiers": 600,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public Yale LUX manuscript-with-digital-image search; only explicitly declared Yale Library Manifest URLs are accepted. LUX estimate 5234 is a search estimate, not a validated Manifest total; one LUX object can declare several volume Manifests."
+        }
+      ]
+    }
+  ]
+}

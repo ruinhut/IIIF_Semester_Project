@@ -1,0 +1,15 @@
+{
+  "providers": [
+    {
+      "provider_id": "provider-e8f0640dd782bf74",
+      "provider_name": "University of Leeds Libraries' Cultural Collections",
+      "entry_points": [
+        "https://presentation-api.dlcs-trial.digirati.io/176/leeds-imc/university-of-leeds-medieval-manuscripts"
+      ],
+      "html_seeds": [],
+      "investigation_id": "2026-10-21-second-five-provider-discovery",
+      "evidence_directory": "evaluation/2026-10-21_second_five_provider_completion",
+      "coverage_note": "Public IMC workshop Collection declares native Leeds Manifests; this is a selected medieval-manuscripts set, not the entire Leeds catalogue. The main catalogue search returned HTTP 403."
+    }
+  ]
+}

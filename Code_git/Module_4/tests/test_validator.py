@@ -7,6 +7,32 @@ from tests.http_test_server import ManifestTestServer
 
 
 class ValidatorTests(unittest.TestCase):
+    def test_legacy_shared_canvas_preserves_source_format_and_inventory(self) -> None:
+        with ManifestTestServer() as server:
+            value = server.v2_manifest()
+        value['@context'] = 'http://www.shared-canvas.org/ns/context.json'
+        result = validate_manifest(value)
+        self.assertEqual(result.status, 'valid')
+        self.assertEqual(result.image_body_count, 1)
+        self.assertEqual(result.source_format, 'legacy_shared_canvas')
+        self.assertEqual(result.summary_dict()['source_format'], 'legacy_shared_canvas')
+        self.assertEqual(value['@context'], 'http://www.shared-canvas.org/ns/context.json')
+        self.assertIn('legacy_shared_canvas_context', {issue.code for issue in result.issues})
+
+    def test_canvas_fragment_is_part_of_its_identity(self) -> None:
+        """Distinct logical Canvases may share a document URL but use fragments."""
+        value = {"@context": "http://iiif.io/api/presentation/2/context.json",
+                 "@id": "https://example.org/manifest", "@type": "sc:Manifest",
+                 "sequences": [{"canvases": [
+                     {"@id": "https://example.org/page#front", "@type": "sc:Canvas",
+                      "images": [{"resource": {"@id": "https://example.org/front.jpg", "@type": "dctypes:Image"}}]},
+                     {"@id": "https://example.org/page#back", "@type": "sc:Canvas",
+                      "images": [{"resource": {"@id": "https://example.org/back.jpg", "@type": "dctypes:Image"}}]}
+                 ]}]}
+        result = validate_manifest(value)
+        self.assertEqual([r.canvas_id for r in result.canvas_resources],
+                         ["https://example.org/page#front", "https://example.org/page#back"])
+
     def test_validates_presentation_3_and_choice_bodies(self) -> None:
         with ManifestTestServer() as server:
             result = validate_manifest(server.v3_manifest())

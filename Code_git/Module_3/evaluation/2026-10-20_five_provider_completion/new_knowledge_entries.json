@@ -1,0 +1,201 @@
+[
+  {
+    "provider_id": "provider-47cf886a2e6017f1",
+    "provider_name": "Ghent University",
+    "investigation_id": "2026-10-20-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-20_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "aggregator-data-manifest-to-ghent-originals",
+        "type": "paginated_html_identifiers_to_manifest_templates",
+        "api_url": "https://iiif.biblissima.fr/collections/search",
+        "query_parameters": {
+          "collection": "Ghent University Library"
+        },
+        "record_url_attributes": [
+          "href",
+          "data-manifest"
+        ],
+        "record_url_pattern": "^https://adore\\.ugent\\.be/IIIF/manifests/archive\\.ugent\\.be(?:%3A|:)(?P<identifier>[A-Fa-f0-9-]+)$",
+        "manifest_url_templates": [
+          "https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A{identifier}"
+        ],
+        "pagination": {
+          "page_parameter": "from",
+          "page_size_parameter": "",
+          "page_size": 20,
+          "start_page": 0,
+          "page_step": 20,
+          "max_pages": 1000,
+          "detect_next_page": true
+        },
+        "max_identifiers": 20000,
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Biblissima-indexed Ghent manuscripts only; delivery remains at the Ghent source host."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-47ee4f79e1a60cac",
+    "provider_name": "University of St. Andrews",
+    "investigation_id": "2026-10-20-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-20_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "funnelback-index-to-standrews-manifests",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://standrews-search.funnelback.squiz.cloud/s/search.json",
+        "query_parameters": {
+          "collection": "standrews~sp-web-sc-photo",
+          "profile": "_default",
+          "form": "grid",
+          "query": "photograph"
+        },
+        "records_path": "response.resultPacket.results",
+        "identifier_path": "listMetadata.IRN.0",
+        "required_nonempty_paths": [
+          "listMetadata.MultimediaIdentifier.0"
+        ],
+        "filters": [
+          {
+            "path": "listMetadata.MultimediaPublish.0",
+            "equals": "Yes"
+          },
+          {
+            "path": "listMetadata.MultimediaType.0",
+            "equals": "image"
+          }
+        ],
+        "manifest_url_templates": [
+          "https://collections.st-andrews.ac.uk/{identifier}/manifest"
+        ],
+        "pagination": {
+          "page_parameter": "start_rank",
+          "page_size_parameter": "num_ranks",
+          "page_size": 10,
+          "start_page": 1,
+          "page_step": 10,
+          "max_pages": 10000,
+          "total_path": "response.resultPacket.resultsSummary.totalMatching"
+        },
+        "max_identifiers": 50000,
+        "request_delay_seconds": 2.0,
+        "coverage_note": "Public photographic search results with published image metadata; catalogue text is not assumed OCR."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-8798d72493175a05",
+    "provider_name": "Yale Center for British Art",
+    "investigation_id": "2026-10-20-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-20_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "linked-art-search-detail-to-ycba-manifests",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://lux.collections.yale.edu/api/search/item",
+        "query_parameters": {
+          "q": "{\"AND\":[{\"hasDigitalImage\":1},{\"memberOf\":{\"name\":\"Yale Center for British Art\"}}]}"
+        },
+        "records_path": "orderedItems",
+        "identifier_path": "id",
+        "identifier_pattern": "/data/object/(?P<identifier>[a-f0-9-]+)$",
+        "identifier_followup": {
+          "url_template": "https://lux.collections.yale.edu/data/object/{identifier}",
+          "records_path": "$",
+          "identifier_path": "subject_of.*.digitally_carried_by.*.access_point.*.id",
+          "identifier_pattern": "^https://manifests\\.collections\\.yale\\.edu/ycba/obj/(?P<identifier>\\d+)$"
+        },
+        "manifest_url_templates": [
+          "https://manifests.collections.yale.edu/ycba/obj/{identifier}"
+        ],
+        "pagination": {
+          "page_parameter": "page",
+          "page_size_parameter": "pageLength",
+          "page_size": 3,
+          "max_pages": 10000,
+          "total_path": "partOf.0.totalItems"
+        },
+        "max_identifiers": 100000,
+        "request_delay_seconds": 0.6,
+        "coverage_note": "LUX memberOf institutional search with digital images; only explicit native Manifest links in the institution-specific namespace are accepted."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-665981fb2cfa68fa",
+    "provider_name": "Yale Peabody Museum",
+    "investigation_id": "2026-10-20-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-20_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "linked-art-search-detail-to-ypm-manifests",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://lux.collections.yale.edu/api/search/item",
+        "query_parameters": {
+          "q": "{\"AND\":[{\"hasDigitalImage\":1},{\"memberOf\":{\"name\":\"Yale Peabody Museum\"}}]}"
+        },
+        "records_path": "orderedItems",
+        "identifier_path": "id",
+        "identifier_pattern": "/data/object/(?P<identifier>[a-f0-9-]+)$",
+        "identifier_followup": {
+          "url_template": "https://lux.collections.yale.edu/data/object/{identifier}",
+          "records_path": "$",
+          "identifier_path": "subject_of.*.digitally_carried_by.*.access_point.*.id",
+          "identifier_pattern": "^https://manifests\\.collections\\.yale\\.edu/ypm/nat/(?P<identifier>\\d+)$"
+        },
+        "manifest_url_templates": [
+          "https://manifests.collections.yale.edu/ypm/nat/{identifier}"
+        ],
+        "pagination": {
+          "page_parameter": "page",
+          "page_size_parameter": "pageLength",
+          "page_size": 3,
+          "max_pages": 10000,
+          "total_path": "partOf.0.totalItems"
+        },
+        "max_identifiers": 100000,
+        "request_delay_seconds": 0.6,
+        "coverage_note": "LUX memberOf institutional search with digital images; only explicit native Manifest links in the institution-specific namespace are accepted."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-116ce327597310c6",
+    "provider_name": "Yale University Art Gallery",
+    "investigation_id": "2026-10-20-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-20_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "linked-art-search-detail-to-yuag-manifests",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://lux.collections.yale.edu/api/search/item",
+        "query_parameters": {
+          "q": "{\"AND\":[{\"hasDigitalImage\":1},{\"memberOf\":{\"name\":\"Yale University Art Gallery\"}}]}"
+        },
+        "records_path": "orderedItems",
+        "identifier_path": "id",
+        "identifier_pattern": "/data/object/(?P<identifier>[a-f0-9-]+)$",
+        "identifier_followup": {
+          "url_template": "https://lux.collections.yale.edu/data/object/{identifier}",
+          "records_path": "$",
+          "identifier_path": "subject_of.*.digitally_carried_by.*.access_point.*.id",
+          "identifier_pattern": "^https://manifests\\.collections\\.yale\\.edu/yuag/obj/(?P<identifier>\\d+)$"
+        },
+        "manifest_url_templates": [
+          "https://manifests.collections.yale.edu/yuag/obj/{identifier}"
+        ],
+        "pagination": {
+          "page_parameter": "page",
+          "page_size_parameter": "pageLength",
+          "page_size": 3,
+          "max_pages": 10000,
+          "total_path": "partOf.0.totalItems"
+        },
+        "max_identifiers": 100000,
+        "request_delay_seconds": 0.6,
+        "coverage_note": "LUX memberOf institutional search with digital images; only explicit native Manifest links in the institution-specific namespace are accepted."
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-10-15T19:51:39.525540+00:00",
+  "new_institutions": 3,
+  "manifest_urls": 60,
+  "valid_manifests": 60,
+  "declared_image_bodies": 12783,
+  "actual_downloaded_images": 3,
+  "downloaded_reference_texts": 1,
+  "schema_validated_bundle_json_files": 9,
+  "module3_tests_passed": 44,
+  "module8_tests_passed": 16,
+  "old_recipes_preserved": {
+    "discovery_knowledge.json": true,
+    "provider_endpoints.json": true
+  },
+  "remaining_unresolved_census_entries": 61,
+  "scope": "20 Manifests per institution; one actual image download per institution. Not a full harvest."
+}

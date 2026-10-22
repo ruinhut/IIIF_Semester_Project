@@ -1,0 +1,104 @@
+{
+  "verified_at": "2026-10-19T19:15:33+02:00",
+  "scope": "Isolated upload copy; fixed Manifest seeds; fresh Module 1-8 live runs; one image per case. Not exhaustive institution discovery or reference-format coverage.",
+  "unit_tests_passed": 194,
+  "subtests_passed": 12,
+  "test_suites": [
+    {
+      "suite": "Module_1",
+      "passed": 14,
+      "subtests_passed": 0
+    },
+    {
+      "suite": "Module_2",
+      "passed": 12,
+      "subtests_passed": 5
+    },
+    {
+      "suite": "Module_3",
+      "passed": 54,
+      "subtests_passed": 0
+    },
+    {
+      "suite": "Module_4",
+      "passed": 20,
+      "subtests_passed": 0
+    },
+    {
+      "suite": "Module_5",
+      "passed": 14,
+      "subtests_passed": 7
+    },
+    {
+      "suite": "Module_6",
+      "passed": 26,
+      "subtests_passed": 0
+    },
+    {
+      "suite": "Module_7",
+      "passed": 28,
+      "subtests_passed": 0
+    },
+    {
+      "suite": "Module_8",
+      "passed": 18,
+      "subtests_passed": 0
+    },
+    {
+      "suite": "Pipeline_Runner",
+      "passed": 8,
+      "subtests_passed": 0
+    }
+  ],
+  "live_cases": [
+    {
+      "case": "bsb_hocr",
+      "modules_completed": 8,
+      "schema_validated_export_rows": 36,
+      "common_records": 1,
+      "common_media": 34,
+      "ocr_profiles": 1,
+      "declared_reference_rows": 34,
+      "page_linked_reference_rows": 34,
+      "downloaded_images": 1,
+      "downloaded_reference_variants": 1,
+      "category": "with_reference",
+      "passed": true
+    },
+    {
+      "case": "fromthepage_transcription",
+      "modules_completed": 8,
+      "schema_validated_export_rows": 32,
+      "common_records": 1,
+      "common_media": 30,
+      "ocr_profiles": 1,
+      "declared_reference_rows": 123,
+      "page_linked_reference_rows": 120,
+      "downloaded_images": 1,
+      "downloaded_reference_variants": 4,
+      "category": "with_reference",
+      "passed": true
+    },
+    {
+      "case": "epfl_without_reference",
+      "modules_completed": 8,
+      "schema_validated_export_rows": 417,
+      "common_records": 1,
+      "common_media": 415,
+      "ocr_profiles": 1,
+      "declared_reference_rows": 0,
+      "page_linked_reference_rows": 0,
+      "downloaded_images": 1,
+      "downloaded_reference_variants": 0,
+      "category": "without_reference",
+      "passed": true
+    }
+  ],
+  "actual_images_downloaded": 3,
+  "actual_reference_variants_downloaded": 5,
+  "known_limits": [
+    "Bounded discovery budgets",
+    "External AnnotationList/AnnotationPage text enrichment incomplete",
+    "Provider OCR is not certified manually corrected ground truth"
+  ]
+}

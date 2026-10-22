@@ -1,0 +1,214 @@
+﻿{
+    "media_count":  3,
+    "object":  {
+                   "creators":  [
+
+                                ],
+                   "dates":  [
+                                 {
+                                     "approximate":  false,
+                                     "end_year":  1325,
+                                     "normalized":  "1275/1325",
+                                     "precision":  "year_range",
+                                     "raw":  "1275 – 1325 CE",
+                                     "source_label":  "Date of origin",
+                                     "start_year":  1275
+                                 },
+                                 {
+                                     "approximate":  true,
+                                     "end_year":  1400,
+                                     "normalized":  "1301/1400",
+                                     "precision":  "century",
+                                     "raw":  "14th century",
+                                     "source_label":  "Century",
+                                     "start_year":  1301
+                                 }
+                             ],
+                   "description":  "Leaf I: Sermons on the Kingdom of Heaven and the fourfold birth (Schweizer Predigten nos. 24 and 25) Leaf II: Sermon on the expectation of Christ (St. Georgen Sermon no. 2). The original order of the leaves cannot be determined with certainty.",
+                   "descriptions":  [
+                                        {
+                                            "json_path":  "$.description[0]",
+                                            "language":  "en",
+                                            "value":  "Leaf I: Sermons on the Kingdom of Heaven and the fourfold birth (Schweizer Predigten nos. 24 and 25) Leaf II: Sermon on the expectation of Christ (St. Georgen Sermon no. 2). The original order of the leaves cannot be determined with certainty."
+                                        },
+                                        {
+                                            "json_path":  "$.metadata[12].value",
+                                            "language":  null,
+                                            "source_label":  "Reconstruction Summary",
+                                            "value":  "Leaf I: Sermons on the Kingdom of Heaven and the fourfold birth (Schweizer Predigten nos. 24 and 25) Leaf II: Sermon on the expectation of Christ (St. Georgen Sermon no. 2). The original order of the leaves cannot be determined with certainty."
+                                        },
+                                        {
+                                            "json_path":  "$.metadata[13].value",
+                                            "language":  null,
+                                            "source_label":  "Reconstruction Summary Author",
+                                            "value":  "Michael Braunger, Tübingen"
+                                        }
+                                    ],
+                   "identifier":  "https://fragmentarium.ms/metadata/iiif/F-u3vo/manifest.json",
+                   "identifiers":  [
+                                       {
+                                           "json_path":  "$.id/@id",
+                                           "language":  null,
+                                           "scheme":  "uri",
+                                           "source_label":  "Manifest identifier",
+                                           "value":  "https://fragmentarium.ms/metadata/iiif/F-u3vo/manifest.json"
+                                       },
+                                       {
+                                           "json_path":  "$.metadata[2].value",
+                                           "language":  null,
+                                           "scheme":  "metadata",
+                                           "source_label":  "Shelfmark",
+                                           "value":  "KH 5184"
+                                       },
+                                       {
+                                           "json_path":  "$.metadata[5].value",
+                                           "language":  null,
+                                           "scheme":  "metadata",
+                                           "source_label":  "Fragmentarium ID",
+                                           "value":  "F-u3vo"
+                                       }
+                                   ],
+                   "languages":  [
+                                     {
+                                         "code":  "de",
+                                         "raw":  "German"
+                                     }
+                                 ],
+                   "places":  [
+                                  {
+                                      "normalized":  "Tübingen",
+                                      "raw":  "Tübingen",
+                                      "source_label":  "Location"
+                                  },
+                                  {
+                                      "normalized":  "Southern Germany (?)",
+                                      "raw":  "Southern Germany (?)",
+                                      "source_label":  "Place of origin"
+                                  }
+                              ],
+                   "subjects":  [
+
+                                ],
+                   "title":  "Tübingen, Konviktsbibliothek Wilhelmsstift, KH 5184",
+                   "titles":  [
+                                  {
+                                      "json_path":  "$.label",
+                                      "language":  null,
+                                      "value":  "Tübingen, Konviktsbibliothek Wilhelmsstift, KH 5184"
+                                  },
+                                  {
+                                      "json_path":  "$.metadata[1].value",
+                                      "language":  null,
+                                      "source_label":  "Collection Name",
+                                      "value":  "Konviktsbibliothek Wilhelmsstift"
+                                  },
+                                  {
+                                      "json_path":  "$.metadata[3].value",
+                                      "language":  null,
+                                      "source_label":  "Title",
+                                      "value":  "Middle High German Collection of Sermons"
+                                  },
+                                  {
+                                      "json_path":  "$.metadata[4].value",
+                                      "language":  null,
+                                      "source_label":  "Subtitle",
+                                      "value":  "Schweizer und St. Georgener Predigten"
+                                  }
+                              ],
+                   "types":  [
+                                 {
+                                     "json_path":  "$.metadata[6].value",
+                                     "language":  null,
+                                     "source_label":  "Material",
+                                     "value":  "Parchment"
+                                 },
+                                 {
+                                     "json_path":  "$.metadata[8].value",
+                                     "language":  null,
+                                     "source_label":  "Document Type",
+                                     "value":  "Fragment"
+                                 },
+                                 {
+                                     "json_path":  "$.metadata[17].value",
+                                     "language":  null,
+                                     "source_label":  "Script Type",
+                                     "value":  "Gothic Script (generic)"
+                                 }
+                             ]
+               },
+    "provenance":  {
+                       "exported_at":  "2026-10-01T20:19:29+02:00",
+                       "module_6_schema_version":  "1.0",
+                       "normalized_at":  "2026-10-01T20:03:25+02:00",
+                       "pipeline_versions":  {
+                                                 "module_3":  "2.0",
+                                                 "module_4":  "1.0",
+                                                 "module_5":  "2.0"
+                                             }
+                   },
+    "quality":  {
+                    "missing_fields":  [
+
+                                       ],
+                    "status":  "complete",
+                    "warnings":  [
+
+                                 ]
+                },
+    "record_id":  "manifest-5c57a6b89f846c5f",
+    "rights":  {
+                   "category":  "open_license",
+                   "decision":  "allow",
+                   "decision_scope":  "public_reuse",
+                   "label":  {
+                                 "en":  "Open license",
+                                 "zh":  "开放许可"
+                             },
+                   "policy_version":  "automatic-2026-09-29",
+                   "public_reuse_eligible":  true,
+                   "research_status":  "retained",
+                   "statements":  [
+                                      {
+                                          "category":  "open_license",
+                                          "decisive":  true,
+                                          "evidence_type":  "license",
+                                          "json_path":  "$.license",
+                                          "matched_rule":  "cc_by",
+                                          "normalized_value":  "https://creativecommons.org/licenses/by/4.0/",
+                                          "raw_value":  "http://creativecommons.org/licenses/by/4.0/",
+                                          "resource_id":  "https://fragmentarium.ms/metadata/iiif/F-u3vo/manifest.json",
+                                          "resource_type":  "Manifest",
+                                          "source_label":  null
+                                      }
+                                  ],
+                   "usage_permissions":  {
+                                             "academic_analysis":  true,
+                                             "commercial_use":  true,
+                                             "public_distribution":  true,
+                                             "retain_url_and_metadata":  true
+                                         }
+               },
+    "schema_version":  "iiif-time-atlas-record-0.1",
+    "source":  {
+                   "declared_manifest_id":  "https://fragmentarium.ms/metadata/iiif/F-u3vo/manifest.json",
+                   "discovery_evidence":  [
+                                              {
+                                                  "activity_time":  null,
+                                                  "activity_type":  null,
+                                                  "discovery_method":  "html_declared_link",
+                                                  "provider_id":  "provider-ef02e7415eb96a3e",
+                                                  "provider_name":  "Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments",
+                                                  "source_url":  "https://fragmentarium.ms/search"
+                                              }
+                                          ],
+                   "manifest_id":  "manifest-5c57a6b89f846c5f",
+                   "manifest_url":  "https://fragmentarium.ms/metadata/iiif/F-u3vo/manifest.json",
+                   "presentation_version":  "2",
+                   "providers":  [
+                                     {
+                                         "provider_id":  "provider-ef02e7415eb96a3e",
+                                         "provider_name":  "Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments"
+                                     }
+                                 ]
+               }
+}

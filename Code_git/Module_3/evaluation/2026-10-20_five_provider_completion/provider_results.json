@@ -1,0 +1,72 @@
+[
+  {
+    "provider_id": "provider-47cf886a2e6017f1",
+    "provider_name": "Ghent University",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 1206,
+    "distinct_image_urls": 1206,
+    "actual_sample_images": 1,
+    "actual_width": 6246,
+    "actual_height": 4174,
+    "canvas_width": 6246,
+    "canvas_height": 4174,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-47ee4f79e1a60cac",
+    "provider_name": "University of St. Andrews",
+    "discovered_manifest_urls": 4,
+    "validated_manifests": 4,
+    "exported_image_associations": 7,
+    "distinct_image_urls": 7,
+    "actual_sample_images": 1,
+    "actual_width": 825,
+    "actual_height": 617,
+    "canvas_width": 825,
+    "canvas_height": 617,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-8798d72493175a05",
+    "provider_name": "Yale Center for British Art",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 15,
+    "distinct_image_urls": 15,
+    "actual_sample_images": 1,
+    "actual_width": 7051,
+    "actual_height": 5142,
+    "canvas_width": 7051,
+    "canvas_height": 5142,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-665981fb2cfa68fa",
+    "provider_name": "Yale Peabody Museum",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 6,
+    "distinct_image_urls": 6,
+    "actual_sample_images": 1,
+    "actual_width": 805,
+    "actual_height": 978,
+    "canvas_width": 805,
+    "canvas_height": 978,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-116ce327597310c6",
+    "provider_name": "Yale University Art Gallery",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 11,
+    "distinct_image_urls": 11,
+    "actual_sample_images": 1,
+    "actual_width": 3488,
+    "actual_height": 2616,
+    "canvas_width": 3488,
+    "canvas_height": 2616,
+    "matches_declared_dimensions": true
+  }
+]

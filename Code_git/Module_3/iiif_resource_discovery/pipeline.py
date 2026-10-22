@@ -11,6 +11,7 @@ from typing import Any, Mapping, Optional, Sequence
 
 from .discovery import DiscoveryLimits, ResourceDiscoverer
 from .fetch import HttpFetcher
+from .knowledge import knowledge_for_provider, read_knowledge_base
 from .models import DiscoveryEvidence, ProviderDiscoveryResult, ProviderInputRecord, manifest_record
 from .store import read_provider_jsonl, write_jsonl, write_provider_csv, write_text
 
@@ -30,6 +31,8 @@ class PipelineResult:
     processed_provider_count: int
     provider_status_counts: Mapping[str, int]
     unique_manifest_count: int
+    knowledge_skill_run_count: int
+    knowledge_resolved_provider_count: int
     provider_discovery_jsonl: Path
     resolved_endpoints_jsonl: Path
     manifest_urls_jsonl: Path
@@ -105,12 +108,18 @@ def run_pipeline(
         ),
     )
     html_config = _mapping(config.get("html_discovery", {}), "html_discovery")
+    platform_config = _mapping(
+        config.get("platform_discovery", {}), "platform_discovery"
+    )
     discoverer = ResourceDiscoverer(
         fetcher,
         limits=discovery_limits,
         html_enabled=bool(html_config.get("enabled", True)),
         same_host_only=bool(html_config.get("same_host_only", True)),
         html_delay_seconds=float(html_config.get("delay_between_pages_seconds", 0.1)),
+        omeka_s_probe_enabled=bool(
+            platform_config.get("omeka_s_probe_enabled", True)
+        ),
     )
 
     curated_path_value = str(config.get("curated_endpoints", "")).strip()
@@ -119,13 +128,24 @@ def run_pipeline(
         if curated_path_value
         else []
     )
+    knowledge_path_value = str(config.get("knowledge_base", "")).strip()
+    knowledge_entries = (
+        read_knowledge_base(_resolve_path(knowledge_path_value, base_directory))
+        if knowledge_path_value
+        else []
+    )
     provider_results: list[ProviderDiscoveryResult] = []
     for provider in providers:
         curated = _curated_for_provider(provider, curated_entries)
+        knowledge = knowledge_for_provider(
+            provider.provider_id, provider.name, knowledge_entries
+        )
         result = discoverer.discover(
             provider,
             curated_entry_points=curated.entry_points if curated else (),
             curated_html_seeds=curated.html_seeds if curated else (),
+            knowledge_skills=knowledge.skills if knowledge else (),
+            investigation_id=knowledge.investigation_id if knowledge else None,
         )
         provider_results.append(result)
 
@@ -138,6 +158,20 @@ def run_pipeline(
     resolved_rows = _resolved_endpoint_rows(provider_results)
     manifest_rows = _deduplicated_manifest_rows(provider_results)
     status_counts = Counter(result.status for result in provider_results)
+    knowledge_skill_run_count = sum(
+        1
+        for result in provider_results
+        for audit in result.knowledge_application
+        if audit.get("status") != "skipped_existing_manifests"
+    )
+    knowledge_resolved_provider_count = sum(
+        1
+        for result in provider_results
+        if any(
+            audit.get("status") == "manifests_found"
+            for audit in result.knowledge_application
+        )
+    )
 
     output_directory = _resolve_path(
         str(config.get("output_directory", "data/output")), base_directory
@@ -172,6 +206,8 @@ def run_pipeline(
             status_counts=status_counts,
             unique_manifest_count=len(manifest_rows),
             resolved_endpoint_count=len(resolved_rows),
+            knowledge_skill_run_count=knowledge_skill_run_count,
+            knowledge_resolved_provider_count=knowledge_resolved_provider_count,
             truncated_provider_count=sum(1 for result in provider_results if result.truncated),
             provider_discovery_jsonl=provider_discovery_jsonl,
             resolved_endpoints_jsonl=resolved_endpoints_jsonl,
@@ -187,6 +223,8 @@ def run_pipeline(
         processed_provider_count=len(provider_results),
         provider_status_counts=dict(sorted(status_counts.items())),
         unique_manifest_count=len(manifest_rows),
+        knowledge_skill_run_count=knowledge_skill_run_count,
+        knowledge_resolved_provider_count=knowledge_resolved_provider_count,
         provider_discovery_jsonl=provider_discovery_jsonl,
         resolved_endpoints_jsonl=resolved_endpoints_jsonl,
         manifest_urls_jsonl=manifest_urls_jsonl,
@@ -319,6 +357,8 @@ def _format_run_log(
     status_counts: Mapping[str, int],
     unique_manifest_count: int,
     resolved_endpoint_count: int,
+    knowledge_skill_run_count: int,
+    knowledge_resolved_provider_count: int,
     truncated_provider_count: int,
     provider_discovery_jsonl: Path,
     resolved_endpoints_jsonl: Path,
@@ -341,6 +381,8 @@ def _format_run_log(
             f"Processed providers: {processed_provider_count}",
             f"Resolved machine endpoints: {resolved_endpoint_count}",
             f"Unique Manifest URLs: {unique_manifest_count}",
+            f"Knowledge skill runs: {knowledge_skill_run_count}",
+            f"Providers resolved by knowledge skills: {knowledge_resolved_provider_count}",
             f"Providers stopped by a configured limit: {truncated_provider_count}",
             "",
             "Provider results:",

@@ -1,0 +1,102 @@
+[
+  {
+    "provider_id": "provider-4853865a686721d7",
+    "provider_name": "Princeton University Art Museum",
+    "investigation_id": "2026-10-19-puam-documented-object-api",
+    "investigation_document": "knowledge/institutions/2026-10-19_third_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "documented-object-api-to-object-manifest",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://data.artmuseum.princeton.edu/objects",
+        "records_path": "hits.hits",
+        "identifier_path": "_source.objectid",
+        "required_nonempty_paths": [
+          "_source.primaryimage"
+        ],
+        "query_parameters": {
+          "maker": 5560
+        },
+        "pagination": {
+          "page_parameter": "from",
+          "page_size_parameter": "size",
+          "page_size": 3,
+          "start_page": 0,
+          "page_step": 3,
+          "max_pages": 1000
+        },
+        "manifest_url_templates": [
+          "https://data.artmuseum.princeton.edu/iiif/objects/{identifier}"
+        ],
+        "max_identifiers": 10000,
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Official API requires a supported filter. Validated scope is maker 5560 (Edgar Degas), not the entire museum. Other documented maker/department filters remain configuration."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-7781a87376497b5c",
+    "provider_name": "UCLA Library Digital Collections",
+    "investigation_id": "2026-10-19-ucla-blacklight-ark",
+    "investigation_document": "knowledge/institutions/2026-10-19_third_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "blacklight-work-arks-to-native-manifests",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://digital.library.ucla.edu/catalog.json",
+        "records_path": "data",
+        "identifier_path": "id",
+        "filters": [
+          {
+            "path": "type",
+            "equals": "Work"
+          }
+        ],
+        "query_parameters": {
+          "q": "map"
+        },
+        "pagination": {
+          "page_parameter": "page",
+          "page_size_parameter": "per_page",
+          "page_size": 3,
+          "start_page": 1,
+          "max_pages": 1000,
+          "has_next_path": "links.next"
+        },
+        "manifest_url_templates": [
+          "https://iiif.library.ucla.edu/{identifier}/manifest"
+        ],
+        "max_identifiers": 10000,
+        "request_delay_seconds": 0.6,
+        "coverage_note": "URL-encode the complete ARK, including colon and slashes. Scope is the public map query; non-Work catalogue records are skipped."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-c94006b2714289d6",
+    "provider_name": "Smithsonian Institution",
+    "investigation_id": "2026-10-19-smithsonian-official-features",
+    "investigation_document": "knowledge/institutions/2026-10-19_third_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "official-feature-page-to-declared-manifest-links",
+        "type": "paginated_html_identifiers_to_manifest_templates",
+        "api_url": "https://iiif.si.edu/featured/index.html",
+        "allow_legacy_shared_canvas": true,
+        "record_url_pattern": "^https://iiif\\.si\\.edu/manifests/(?P<identifier>[^/?#]+\\.json)$",
+        "manifest_url_templates": [
+          "https://iiif.si.edu/manifests/{identifier}"
+        ],
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 100,
+          "max_pages": 1
+        },
+        "max_identifiers": 100,
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Official curated featured manifests, not Smithsonian-wide catalogue enumeration or all individual objects."
+      }
+    ]
+  }
+]

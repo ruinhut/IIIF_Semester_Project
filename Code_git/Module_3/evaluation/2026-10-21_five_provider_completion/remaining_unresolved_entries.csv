@@ -1,0 +1,36 @@
+﻿provider_id,provider_name,institution_url,status
+provider-83eb25cc392724da,Beyond Words: Illuminating Manuscripts in Boston Collections,http://beyondwords2016.org/,unresolved_in_cumulative_evidence
+provider-a668e1096468c352,Bibliothèque nationale de France (BnF),https://gallica.bnf.fr/,unresolved_in_cumulative_evidence
+provider-acb86cbbcb639914,British Library,https://www.bl.uk/collection-guides/iiif,unresolved_in_cumulative_evidence
+provider-9c24703f7d539465,Cardiff University,https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1,unresolved_in_cumulative_evidence
+provider-31c6cd47abf916e0,Cuban Digital Collections,http://iiif.sld.cu/,unresolved_in_cumulative_evidence
+provider-8d5551c46daf6536,Digital Commonwealth,https://digitalcommonwealth.org/,unresolved_in_cumulative_evidence
+provider-fe4c0f49dea727df,DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library,https://ostasien.digitale-sammlungen.de/?locale=en,unresolved_in_cumulative_evidence
+provider-617127ddd5e1eb45,DigitalGeorgetown's Integration of Universal Viewer into DSpace,https://repository.library.georgetown.edu/handle/10822/1044538,unresolved_in_cumulative_evidence
+provider-9c46415198317886,Europeana,https://www.europeana.eu/portal/en/search?q=provider_aggregation_edm_isShownBy%3A*iiif*&view=grid,unresolved_in_cumulative_evidence
+provider-818f5f2d2b5bea33,Folger Shakespeare Library,https://collections.folger.edu/,unresolved_in_cumulative_evidence
+provider-9fd4bc767a462cd4,Gallica,http://gallica.bnf.fr/,unresolved_in_cumulative_evidence
+provider-d987c625d6365082,Georeferencer,http://www.georeferencer.com/,unresolved_in_cumulative_evidence
+provider-2b0e0fbd04a5a32c,Historical State Search,http://historicalstate.lib.ncsu.edu/search,unresolved_in_cumulative_evidence
+provider-10b9080040d0cc13,hocrviewer,https://github.com/jbaiter/hocrviewer-mirador,unresolved_in_cumulative_evidence
+provider-3acece25cdf777e4,Indigenous Digital Archive,https://omeka.dlcs-ida.org/s/ida/page/home,unresolved_in_cumulative_evidence
+provider-ef2f1cc06db37bc3,KU Leuven,https://kuleuven.limo.libis.be/discovery,unresolved_in_cumulative_evidence
+provider-296564297962fb5e,Library of Congress,https://www.loc.gov/collections/,unresolved_in_cumulative_evidence
+provider-7354f1a7e6bbf41f,National Library of Finland (Finna.fi),https://www.finna.fi/,unresolved_in_cumulative_evidence
+provider-760200a911a3f30f,National Palace Museum (Taiwan),https://digitalarchive.npm.gov.tw/,unresolved_in_cumulative_evidence
+provider-cabfcd6f3de8ca7d,North Carolina State University Libraries,https://d.lib.ncsu.edu/collections/,unresolved_in_cumulative_evidence
+provider-38aa7bce2f3b0361,Parliamentary Archives - UK,https://archives.parliament.uk/,unresolved_in_cumulative_evidence
+provider-521d522730b9f10b,Qatar National Library,https://www.qdl.qa/en/search/site/?f[0]=document_source:archive_source,unresolved_in_cumulative_evidence
+provider-dc8b65c17e7d0e22,SAT Taishōzō Image DB,http://dzkimgs.l.u-tokyo.ac.jp/SATi/images.php?alang=en,unresolved_in_cumulative_evidence
+provider-6425a20ec00665e3,Smithsonian National Zoo,https://nationalzoo.si.edu/openaccess/search?edan_fq%5B%5D=online_visual_material%3Atrue,unresolved_in_cumulative_evidence
+provider-0aeecd6836053c69,The Frick Collection,http://digitalcollections.frick.org/digico/,unresolved_in_cumulative_evidence
+provider-a360845c2b46d1bc,The Wolsey Manuscripts,http://www.wolseymanuscripts.ac.uk/manuscripts,unresolved_in_cumulative_evidence
+provider-370a429900074b10,University College Dublin Libraries,https://digital.ucd.ie/,unresolved_in_cumulative_evidence
+provider-e883d0f637379155,University of Illinois at Urbana-Champaign Library,https://digital.library.illinois.edu/items?fq%5B%5D=primary_media_category%3A0,unresolved_in_cumulative_evidence
+provider-e8f0640dd782bf74,University of Leeds Libraries' Cultural Collections,https://library.leeds.ac.uk/info/1500/special_collections,unresolved_in_cumulative_evidence
+provider-f2fa8935cf790b44,vHMML,https://www.vhmml.org/,unresolved_in_cumulative_evidence
+provider-870ce1c300376029,Villanova University,https://digital.library.villanova.edu/,unresolved_in_cumulative_evidence
+provider-9a9d50ec8631eafd,Wikipedia,https://www.wikipedia.org/,unresolved_in_cumulative_evidence
+provider-33ef699d79fc12aa,World Digitial Library,https://www.wdl.org/,unresolved_in_cumulative_evidence
+provider-8763d3efa30c6554,Yale Center for British Art,http://britishart.yale.edu/,unresolved_in_cumulative_evidence
+provider-feedf2702c521119,Yale University Library,https://collections.library.yale.edu/,unresolved_in_cumulative_evidence

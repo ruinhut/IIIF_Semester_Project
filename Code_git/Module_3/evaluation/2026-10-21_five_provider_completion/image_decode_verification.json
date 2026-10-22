@@ -1,0 +1,92 @@
+{
+  "decoded_images": 5,
+  "decode_errors": [],
+  "dimension_mismatches": [
+    {
+      "record_id": "manifest-ce4f5731cbd2a4d5",
+      "resource_id": "resource-e1cd2d0bad31c988a881",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-ce4f5731cbd2a4d5\\000009_resource-e1cd2d0bad31c988a881\\image.jpg",
+      "format": "JPEG",
+      "width": 2818,
+      "height": 4096,
+      "declared_dimensions": [
+        3302,
+        4800
+      ],
+      "dimensions_match": false,
+      "bytes": 3464887
+    }
+  ],
+  "images": [
+    {
+      "record_id": "manifest-bea43924d896122c",
+      "resource_id": "resource-cfc8c646a22443919307",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-bea43924d896122c\\000009_resource-cfc8c646a22443919307\\image.jpg",
+      "format": "JPEG",
+      "width": 1416,
+      "height": 1965,
+      "declared_dimensions": [
+        1416,
+        1965
+      ],
+      "dimensions_match": true,
+      "bytes": 399165
+    },
+    {
+      "record_id": "manifest-a9eafcf800c1564c",
+      "resource_id": "resource-7f3afd9e7ee9502e1743",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-a9eafcf800c1564c\\000000_resource-7f3afd9e7ee9502e1743\\image.jpg",
+      "format": "JPEG",
+      "width": 483,
+      "height": 600,
+      "declared_dimensions": [
+        483,
+        600
+      ],
+      "dimensions_match": true,
+      "bytes": 97429
+    },
+    {
+      "record_id": "manifest-910e2bb2a7a19c82",
+      "resource_id": "resource-4f5f9b5a0a0165749c3a",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-910e2bb2a7a19c82\\000000_resource-4f5f9b5a0a0165749c3a\\image.jpg",
+      "format": "JPEG",
+      "width": 4576,
+      "height": 3510,
+      "declared_dimensions": [
+        4576,
+        3510
+      ],
+      "dimensions_match": true,
+      "bytes": 1708970
+    },
+    {
+      "record_id": "manifest-d5d5dd911476bdab",
+      "resource_id": "resource-cd1173913672c99fa9ed",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-d5d5dd911476bdab\\000001_resource-cd1173913672c99fa9ed\\image.jpg",
+      "format": "JPEG",
+      "width": 299,
+      "height": 1024,
+      "declared_dimensions": [
+        299,
+        1024
+      ],
+      "dimensions_match": true,
+      "bytes": 49704
+    },
+    {
+      "record_id": "manifest-ce4f5731cbd2a4d5",
+      "resource_id": "resource-e1cd2d0bad31c988a881",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-ce4f5731cbd2a4d5\\000009_resource-e1cd2d0bad31c988a881\\image.jpg",
+      "format": "JPEG",
+      "width": 2818,
+      "height": 4096,
+      "declared_dimensions": [
+        3302,
+        4800
+      ],
+      "dimensions_match": false,
+      "bytes": 3464887
+    }
+  ]
+}

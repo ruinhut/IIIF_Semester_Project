@@ -1,0 +1,72 @@
+[
+  {
+    "provider_id": "provider-acb86cbbcb639914",
+    "provider_name": "British Library",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 2365,
+    "distinct_image_urls": 2365,
+    "actual_sample_images": 1,
+    "actual_width": 818,
+    "actual_height": 1024,
+    "canvas_width": 818,
+    "canvas_height": 1024,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-3acece25cdf777e4",
+    "provider_name": "Indigenous Digital Archive",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 130,
+    "distinct_image_urls": 130,
+    "actual_sample_images": 1,
+    "actual_width": 3798,
+    "actual_height": 5859,
+    "canvas_width": 3798,
+    "canvas_height": 5859,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-877592e2f2c8d531",
+    "provider_name": "Heidelberg University Library",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 762,
+    "distinct_image_urls": 762,
+    "actual_sample_images": 1,
+    "actual_width": 1623,
+    "actual_height": 2356,
+    "canvas_width": 1623,
+    "canvas_height": 2356,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-2433bd8d5611ff84",
+    "provider_name": "National Diet Library of Japan",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 288,
+    "distinct_image_urls": 288,
+    "actual_sample_images": 1,
+    "actual_width": 3340,
+    "actual_height": 2203,
+    "canvas_width": 6680,
+    "canvas_height": 4406,
+    "matches_declared_dimensions": false
+  },
+  {
+    "provider_id": "provider-68a08bd449531996",
+    "provider_name": "Victoria and Albert Museum",
+    "discovered_manifest_urls": 1,
+    "validated_manifests": 1,
+    "exported_image_associations": 90,
+    "distinct_image_urls": 90,
+    "actual_sample_images": 1,
+    "actual_width": 1875,
+    "actual_height": 2500,
+    "canvas_width": 1875,
+    "canvas_height": 2500,
+    "matches_declared_dimensions": true
+  }
+]

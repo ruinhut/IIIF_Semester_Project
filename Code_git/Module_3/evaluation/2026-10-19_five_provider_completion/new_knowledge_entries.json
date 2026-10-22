@@ -1,0 +1,33 @@
+[
+  {
+    "provider_id": "provider-028fd9292205c39c",
+    "provider_name": "Bodmer Lab",
+    "investigation_id": "2026-10-19-five-provider-completion",
+    "investigation_document": "knowledge/institutions/2026-10-19_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "constellation-catalogue-to-declared-manifest-route",
+        "type": "paginated_html_identifiers_to_manifest_templates",
+        "api_url": "https://bodmerlab.unige.ch/fr/search",
+        "query_parameters": {
+          "keywords": ""
+        },
+        "record_url_pattern": "/constellations/autographes/barcode/(?P<identifier>\\d+)(?:$|[?#])",
+        "manifest_url_templates": [
+          "https://bodmerlab.unige.ch/fr/constellations/autographes/manifest/{identifier}"
+        ],
+        "pagination": {
+          "page_parameter": "Page",
+          "page_size_parameter": "",
+          "page_size": 21,
+          "start_page": 1,
+          "max_pages": 1000,
+          "detect_next_page": true
+        },
+        "max_identifiers": 50000,
+        "request_delay_seconds": 0.35,
+        "coverage_note": "Current executable scope is the autographes constellation. Other constellations are retained as investigation candidates, not asserted resolved."
+      }
+    ]
+  }
+]

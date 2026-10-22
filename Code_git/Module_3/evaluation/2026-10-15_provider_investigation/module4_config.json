@@ -1,0 +1,18 @@
+{
+  "input_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_provider_investigation\\module3\\output\\manifest_urls.jsonl",
+  "raw_manifest_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_provider_investigation\\module4\\raw_manifests",
+  "output_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_provider_investigation\\module4\\output",
+  "log_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_provider_investigation\\module4\\log",
+  "network": {
+    "timeout_seconds": 20,
+    "retries": 0,
+    "backoff_seconds": 0.5,
+    "max_response_bytes": 33554432,
+    "user_agent": "iiif-manifest-validator/0.1 (+EPFL DHLAB academic research)"
+  },
+  "run": {
+    "max_records": null,
+    "delay_between_requests_seconds": 0.1,
+    "force_refresh": false
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "provider_id": "provider-4e06374e85489c6e",
+    "provider_name": "Princeton University Libraries",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 10,
+    "distinct_image_urls": 10,
+    "actual_sample_images": 1,
+    "actual_width": 1000,
+    "actual_height": 1430,
+    "canvas_width": 5976,
+    "canvas_height": 8546,
+    "matches_declared_dimensions": false
+  },
+  {
+    "provider_id": "provider-5bb54fcb57aa7da9",
+    "provider_name": "University of North Texas Libraries",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 6,
+    "distinct_image_urls": 6,
+    "actual_sample_images": 1,
+    "actual_width": 1500,
+    "actual_height": 1154,
+    "canvas_width": 1500,
+    "canvas_height": 1154,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-d14fb88cde24ff49",
+    "provider_name": "Harvard University Digital Collections",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 1946,
+    "distinct_image_urls": 1946,
+    "actual_sample_images": 1,
+    "actual_width": 3837,
+    "actual_height": 5000,
+    "canvas_width": 6522,
+    "canvas_height": 8500,
+    "matches_declared_dimensions": false
+  },
+  {
+    "provider_id": "provider-648f0743acabd9c2",
+    "provider_name": "Stanford University",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 71,
+    "distinct_image_urls": 71,
+    "actual_sample_images": 1,
+    "actual_width": 2599,
+    "actual_height": 4094,
+    "canvas_width": 2599,
+    "canvas_height": 4094,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-f10ea7c297cd81a8",
+    "provider_name": "Biblissima",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 70,
+    "distinct_image_urls": 70,
+    "actual_sample_images": 1,
+    "actual_width": 3000,
+    "actual_height": 2250,
+    "canvas_width": 5440,
+    "canvas_height": 4080,
+    "matches_declared_dimensions": false
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "manifests": [
+    {
+      "manifest_url": "https://iiif.vam.ac.uk/collections/O1428127/manifest.json",
+      "source_url": "https://api.vam.ac.uk/v2/objects/search",
+      "skill_id": "vam-public-object-ids-to-iiif-manifests"
+    },
+    {
+      "manifest_url": "https://iiif.vam.ac.uk/collections/O1709047/manifest.json",
+      "source_url": "https://api.vam.ac.uk/v2/objects/search",
+      "skill_id": "vam-public-object-ids-to-iiif-manifests"
+    },
+    {
+      "manifest_url": "https://iiif.vam.ac.uk/collections/O1709045/manifest.json",
+      "source_url": "https://api.vam.ac.uk/v2/objects/search",
+      "skill_id": "vam-public-object-ids-to-iiif-manifests"
+    },
+    {
+      "manifest_url": "https://iiif.vam.ac.uk/collections/O1760846/manifest.json",
+      "source_url": "https://api.vam.ac.uk/v2/objects/search",
+      "skill_id": "vam-public-object-ids-to-iiif-manifests"
+    },
+    {
+      "manifest_url": "https://iiif.vam.ac.uk/collections/O1709044/manifest.json",
+      "source_url": "https://api.vam.ac.uk/v2/objects/search",
+      "skill_id": "vam-public-object-ids-to-iiif-manifests"
+    },
+    {
+      "manifest_url": "https://iiif.vam.ac.uk/collections/O1709046/manifest.json",
+      "source_url": "https://api.vam.ac.uk/v2/objects/search",
+      "skill_id": "vam-public-object-ids-to-iiif-manifests"
+    }
+  ],
+  "entry_points": [],
+  "issues": [],
+  "audit": {
+    "investigation_id": "2026-10-21-third-five-provider-discovery",
+    "skill_id": "vam-public-object-ids-to-iiif-manifests",
+    "skill_type": "paginated_json_identifiers_to_manifest_templates",
+    "status": "manifests_found",
+    "api_url": "https://api.vam.ac.uk/v2/objects/search",
+    "catalogue_method": "GET",
+    "pagination_location": "query",
+    "pages_fetched": 2,
+    "records_examined": 12,
+    "source_declared_total": null,
+    "identifiers_selected": 8,
+    "manifest_requests": 8,
+    "followup_requests": 0,
+    "manifests_validated": 6,
+    "collection_roots_validated": 0,
+    "template_success_counts": {
+      "https://iiif.vam.ac.uk/collections/{identifier}/manifest.json": 6
+    },
+    "failure_counts": {
+      "not_iiif_manifest": 1,
+      "not_json": 1
+    },
+    "truncated": true
+  },
+  "truncated": true
+}

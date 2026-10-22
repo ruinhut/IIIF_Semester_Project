@@ -2,3 +2,40 @@
 ~$*.docx
 ~$*.xlsx
 ~$*.pptx
+
+# Python environments, caches and build products. Python source stays tracked.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Local credentials and editor/system state.
+.env
+.env.*
+!.env.example
+/.aws/
+/.codex/
+.DS_Store
+Thumbs.db
+
+# Scratch downloads, exported bundles and PDF rendering intermediates.
+/tmp/
+/Code_git/Pipeline_Runner/output/
+
+# Reports retain editable text/JSON; rendered reports and downloaded images stay local.
+/Work_flow/**/output/
+/Work_flow/工作流v1/每周报告/**/*.pdf
+/Work_flow/工作流v1/每周报告/**/*.png
+/Work_flow/工作流v1/每周报告/**/*.jpg
+/Work_flow/工作流v1/每周报告/**/*.jpeg
+
+# Personal administrative documents are unrelated to the program snapshot.
+/学籍注册证明.pdf

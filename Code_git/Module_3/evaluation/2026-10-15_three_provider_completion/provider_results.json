@@ -1,0 +1,32 @@
+[
+  {
+    "provider_id": "provider-9dd288533f853f26",
+    "provider_name": "Digital Collections iiif of the Bavarian State Library",
+    "discovered_manifests": 20,
+    "validated_manifests": 20,
+    "declared_canvases": 2668,
+    "declared_image_bodies": 2668,
+    "downloaded_example_images": 1,
+    "method": "native-paginated-IIIF-Collection"
+  },
+  {
+    "provider_id": "provider-0a19a8e5992b5a87",
+    "provider_name": "David Rumsey Map Collection",
+    "discovered_manifests": 20,
+    "validated_manifests": 20,
+    "declared_canvases": 20,
+    "declared_image_bodies": 20,
+    "downloaded_example_images": 1,
+    "method": "luna-paginated-explicit-manifest-links"
+  },
+  {
+    "provider_id": "provider-9087fc100047c3b2",
+    "provider_name": "Vatican Library",
+    "discovered_manifests": 20,
+    "validated_manifests": 20,
+    "declared_canvases": 10095,
+    "declared_image_bodies": 10095,
+    "downloaded_example_images": 1,
+    "method": "amlad-manuscript-category-Capp.Giulia"
+  }
+]

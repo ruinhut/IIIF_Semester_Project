@@ -1,11 +1,10 @@
-"""Configuration-driven Module 5 rights assessment and resource filtering."""
+"""Configuration-driven Module 5 rights assessment and research handoff."""
 
 from __future__ import annotations
 
 from collections import Counter
 from dataclasses import dataclass
 from datetime import datetime
-from hashlib import sha256
 import json
 from pathlib import Path
 from typing import Any, Mapping, Optional
@@ -34,12 +33,15 @@ class PipelineResult:
     processed_manifest_count: int
     decision_counts: Mapping[str, int]
     category_counts: Mapping[str, int]
-    allowed_resource_count: int
-    rights_assessed_jsonl: Path
-    allowed_manifests_jsonl: Path
-    excluded_manifests_jsonl: Path
-    allowed_resource_inventory_jsonl: Path
-    allowed_resource_inventory_csv: Path
+    research_resource_count: int
+    reuse_eligible_resource_count: int
+    research_manifests_jsonl: Path
+    reuse_eligible_manifests_jsonl: Path
+    research_only_manifests_jsonl: Path
+    research_resource_inventory_jsonl: Path
+    research_resource_inventory_csv: Path
+    reuse_eligible_resource_inventory_jsonl: Path
+    reuse_eligible_resource_inventory_csv: Path
     rights_summary_csv: Path
     log_txt: Path
 
@@ -50,7 +52,7 @@ def run_pipeline(
     limit: int | None = None,
     run_time: datetime | None = None,
 ) -> PipelineResult:
-    """Assess Manifest rights, apply policy, and filter downstream resources."""
+    """Assess rights and retain every processed record for research downstream."""
 
     config_path = config_path.resolve()
     config = _read_json_mapping(config_path, "configuration")
@@ -67,7 +69,7 @@ def run_pipeline(
         str(config.get("module_4_directory", "../Module_4")), base_directory
     )
     policy_path = _resolve_path(
-        str(config.get("policy_file", "policies/automatic-2026-09-25.json")),
+        str(config.get("policy_file", "policies/automatic-2026-09-29.json")),
         base_directory,
     )
     output_directory = _resolve_path(
@@ -82,7 +84,6 @@ def run_pipeline(
     effective_limit = (
         _optional_positive_int(limit, "limit") if limit is not None else configured_limit
     )
-    verify_sha256 = bool(run_config.get("verify_raw_sha256", True))
     policy = RightsPolicy.from_mapping(_read_json_mapping(policy_path, "policy"))
 
     records = read_validated_manifests(validated_path)
@@ -95,7 +96,7 @@ def run_pipeline(
     local_run_time = _local_run_time(run_time)
     assessed_at = local_run_time.isoformat(timespec="seconds")
 
-    assessed_rows: list[dict[str, Any]] = []
+    research_manifests: list[dict[str, Any]] = []
     by_decision: dict[str, list[dict[str, Any]]] = {
         "allow": [],
         "exclude": [],
@@ -107,56 +108,76 @@ def run_pipeline(
         assessment = _assess_record(
             record,
             module_4_directory=module_4_directory,
-            verify_sha256=verify_sha256,
             policy=policy,
             assessed_at=assessed_at,
         )
         output = record.to_dict()
         output["module_5_schema_version"] = MODULE_5_SCHEMA_VERSION
         output["rights_assessment"] = assessment.to_dict()
-        assessed_rows.append(output)
+        research_manifests.append(output)
         by_decision[assessment.decision].append(output)
         decision_counts[assessment.decision] += 1
         category_counts[assessment.category] += 1
 
     selected_ids = {record.manifest_id for record in records}
-    allowed_ids = {
+    reuse_eligible_ids = {
         str(row["manifest_id"]) for row in by_decision["allow"]
     }
     assessment_by_id = {
-        str(row["manifest_id"]): row["rights_assessment"] for row in assessed_rows
+        str(row["manifest_id"]): row["rights_assessment"]
+        for row in research_manifests
     }
     inventory = read_jsonl_objects(inventory_path)
     relevant_inventory = [
         row for row in inventory if str(row.get("manifest_id", "")) in selected_ids
     ]
-    allowed_resources = [
+    research_resources = [
         _enrich_resource(row, assessment_by_id[str(row["manifest_id"])])
         for row in relevant_inventory
-        if str(row.get("manifest_id", "")) in allowed_ids
+    ]
+    reuse_eligible_resources = [
+        row
+        for row in research_resources
+        if str(row.get("manifest_id", "")) in reuse_eligible_ids
     ]
 
-    rights_assessed_jsonl = output_directory / "rights_assessed_manifests.jsonl"
-    allowed_manifests_jsonl = output_directory / "allowed_manifests.jsonl"
-    excluded_manifests_jsonl = output_directory / "excluded_manifests.jsonl"
-    allowed_resource_inventory_jsonl = output_directory / "allowed_resource_inventory.jsonl"
-    allowed_resource_inventory_csv = output_directory / "allowed_resource_inventory.csv"
+    research_manifests_jsonl = output_directory / "research_manifests.jsonl"
+    reuse_eligible_manifests_jsonl = output_directory / "reuse_eligible_manifests.jsonl"
+    research_only_manifests_jsonl = output_directory / "research_only_manifests.jsonl"
+    research_resource_inventory_jsonl = output_directory / "research_resource_inventory.jsonl"
+    research_resource_inventory_csv = output_directory / "research_resource_inventory.csv"
+    reuse_eligible_resource_inventory_jsonl = (
+        output_directory / "reuse_eligible_resource_inventory.jsonl"
+    )
+    reuse_eligible_resource_inventory_csv = (
+        output_directory / "reuse_eligible_resource_inventory.csv"
+    )
     rights_summary_csv = output_directory / "rights_summary.csv"
     log_txt = log_directory / f"Module5_{local_run_time.strftime('%Y-%m-%d_%H-%M-%S')}_log.txt"
 
-    # Remove outputs from the earlier manual-review prototype so stale files
-    # cannot be mistaken for current pipeline products.
-    for legacy_name in ("denied_manifests.jsonl", "manual_review.jsonl"):
+    # Remove obsolete outputs so old binary-filter files are not mistaken for
+    # the current research-retention handoff.
+    for legacy_name in (
+        "rights_assessed_manifests.jsonl",
+        "allowed_manifests.jsonl",
+        "excluded_manifests.jsonl",
+        "allowed_resource_inventory.jsonl",
+        "allowed_resource_inventory.csv",
+        "denied_manifests.jsonl",
+        "manual_review.jsonl",
+    ):
         legacy_path = output_directory / legacy_name
         if legacy_path.exists():
             legacy_path.unlink()
 
-    write_jsonl(rights_assessed_jsonl, assessed_rows)
-    write_jsonl(allowed_manifests_jsonl, by_decision["allow"])
-    write_jsonl(excluded_manifests_jsonl, by_decision["exclude"])
-    write_jsonl(allowed_resource_inventory_jsonl, allowed_resources)
-    write_resource_csv(allowed_resource_inventory_csv, allowed_resources)
-    write_summary_csv(rights_summary_csv, assessed_rows)
+    write_jsonl(research_manifests_jsonl, research_manifests)
+    write_jsonl(reuse_eligible_manifests_jsonl, by_decision["allow"])
+    write_jsonl(research_only_manifests_jsonl, by_decision["exclude"])
+    write_jsonl(research_resource_inventory_jsonl, research_resources)
+    write_resource_csv(research_resource_inventory_csv, research_resources)
+    write_jsonl(reuse_eligible_resource_inventory_jsonl, reuse_eligible_resources)
+    write_resource_csv(reuse_eligible_resource_inventory_csv, reuse_eligible_resources)
+    write_summary_csv(rights_summary_csv, research_manifests)
     write_text(
         log_txt,
         _format_log(
@@ -168,16 +189,17 @@ def run_pipeline(
             input_manifest_count=input_manifest_count,
             processed_manifest_count=len(records),
             effective_limit=effective_limit,
-            verify_sha256=verify_sha256,
             decision_counts=decision_counts,
             category_counts=category_counts,
-            relevant_resource_count=len(relevant_inventory),
-            allowed_resource_count=len(allowed_resources),
-            rights_assessed_jsonl=rights_assessed_jsonl,
-            allowed_manifests_jsonl=allowed_manifests_jsonl,
-            excluded_manifests_jsonl=excluded_manifests_jsonl,
-            allowed_resource_inventory_jsonl=allowed_resource_inventory_jsonl,
-            allowed_resource_inventory_csv=allowed_resource_inventory_csv,
+            research_resource_count=len(research_resources),
+            reuse_eligible_resource_count=len(reuse_eligible_resources),
+            research_manifests_jsonl=research_manifests_jsonl,
+            reuse_eligible_manifests_jsonl=reuse_eligible_manifests_jsonl,
+            research_only_manifests_jsonl=research_only_manifests_jsonl,
+            research_resource_inventory_jsonl=research_resource_inventory_jsonl,
+            research_resource_inventory_csv=research_resource_inventory_csv,
+            reuse_eligible_resource_inventory_jsonl=reuse_eligible_resource_inventory_jsonl,
+            reuse_eligible_resource_inventory_csv=reuse_eligible_resource_inventory_csv,
             rights_summary_csv=rights_summary_csv,
         ),
     )
@@ -187,12 +209,15 @@ def run_pipeline(
         processed_manifest_count=len(records),
         decision_counts=dict(sorted(decision_counts.items())),
         category_counts=dict(sorted(category_counts.items())),
-        allowed_resource_count=len(allowed_resources),
-        rights_assessed_jsonl=rights_assessed_jsonl,
-        allowed_manifests_jsonl=allowed_manifests_jsonl,
-        excluded_manifests_jsonl=excluded_manifests_jsonl,
-        allowed_resource_inventory_jsonl=allowed_resource_inventory_jsonl,
-        allowed_resource_inventory_csv=allowed_resource_inventory_csv,
+        research_resource_count=len(research_resources),
+        reuse_eligible_resource_count=len(reuse_eligible_resources),
+        research_manifests_jsonl=research_manifests_jsonl,
+        reuse_eligible_manifests_jsonl=reuse_eligible_manifests_jsonl,
+        research_only_manifests_jsonl=research_only_manifests_jsonl,
+        research_resource_inventory_jsonl=research_resource_inventory_jsonl,
+        research_resource_inventory_csv=research_resource_inventory_csv,
+        reuse_eligible_resource_inventory_jsonl=reuse_eligible_resource_inventory_jsonl,
+        reuse_eligible_resource_inventory_csv=reuse_eligible_resource_inventory_csv,
         rights_summary_csv=rights_summary_csv,
         log_txt=log_txt,
     )
@@ -202,7 +227,6 @@ def _assess_record(
     record: Module4ManifestRecord,
     *,
     module_4_directory: Path,
-    verify_sha256: bool,
     policy: RightsPolicy,
     assessed_at: str,
 ) -> RightsAssessment:
@@ -214,11 +238,6 @@ def _assess_record(
     except OSError:
         return assessment_error(policy, assessed_at, "raw_manifest_unavailable")
 
-    if verify_sha256:
-        if not record.expected_sha256:
-            return assessment_error(policy, assessed_at, "raw_manifest_checksum_missing")
-        if sha256(body).hexdigest().lower() != record.expected_sha256:
-            return assessment_error(policy, assessed_at, "raw_manifest_checksum_mismatch")
     try:
         document = json.loads(body)
     except (json.JSONDecodeError, UnicodeDecodeError):
@@ -233,11 +252,19 @@ def _assess_record(
 def _enrich_resource(
     resource: Mapping[str, Any], assessment: Mapping[str, Any]
 ) -> dict[str, Any]:
+    usage = assessment.get("usage_permissions", {})
     output = dict(resource)
     output.pop("rights_values", None)
     output["rights_category"] = assessment["category"]
     output["rights_decision"] = assessment["decision"]
+    output["rights_decision_scope"] = assessment["decision_scope"]
     output["rights_policy_version"] = assessment["policy_version"]
+    output["research_status"] = assessment["research_status"]
+    output["retain_url_and_metadata"] = bool(usage.get("retain_url_and_metadata"))
+    output["academic_analysis_allowed"] = bool(usage.get("academic_analysis"))
+    output["public_distribution_allowed"] = bool(usage.get("public_distribution"))
+    output["commercial_use_allowed"] = bool(usage.get("commercial_use"))
+    output["public_reuse_eligible"] = bool(assessment["public_reuse_eligible"])
     output["module_5_schema_version"] = MODULE_5_SCHEMA_VERSION
     return output
 
@@ -252,16 +279,17 @@ def _format_log(
     input_manifest_count: int,
     processed_manifest_count: int,
     effective_limit: int | None,
-    verify_sha256: bool,
     decision_counts: Mapping[str, int],
     category_counts: Mapping[str, int],
-    relevant_resource_count: int,
-    allowed_resource_count: int,
-    rights_assessed_jsonl: Path,
-    allowed_manifests_jsonl: Path,
-    excluded_manifests_jsonl: Path,
-    allowed_resource_inventory_jsonl: Path,
-    allowed_resource_inventory_csv: Path,
+    research_resource_count: int,
+    reuse_eligible_resource_count: int,
+    research_manifests_jsonl: Path,
+    reuse_eligible_manifests_jsonl: Path,
+    research_only_manifests_jsonl: Path,
+    research_resource_inventory_jsonl: Path,
+    research_resource_inventory_csv: Path,
+    reuse_eligible_resource_inventory_jsonl: Path,
+    reuse_eligible_resource_inventory_csv: Path,
     rights_summary_csv: Path,
 ) -> str:
     decision_lines = [f"- {key}: {value}" for key, value in sorted(decision_counts.items())] or ["- (none)"]
@@ -275,25 +303,31 @@ def _format_log(
             f"Resource inventory input: {inventory_path}",
             f"Policy file: {policy_path}",
             f"Policy version: {policy.policy_version}",
+            "Decision scope: public reuse only",
+            "Research retention: all processed records",
             f"Input valid Manifests: {input_manifest_count}",
             f"Run limit: {effective_limit if effective_limit is not None else 'none'}",
             f"Processed Manifests: {processed_manifest_count}",
-            f"Raw SHA-256 verification: {verify_sha256}",
-            f"Relevant input resource rows: {relevant_resource_count}",
-            f"Allowed output resource rows: {allowed_resource_count}",
+            f"Research-retained Manifests: {processed_manifest_count}",
+            f"Public-reuse-eligible Manifests: {decision_counts.get('allow', 0)}",
+            f"Research-only Manifests: {decision_counts.get('exclude', 0)}",
+            f"Research resource rows: {research_resource_count}",
+            f"Public-reuse-eligible resource rows: {reuse_eligible_resource_count}",
             "",
-            "Policy decisions:",
+            "Public-reuse decisions:",
             *decision_lines,
             "",
             "Rights categories:",
             *category_lines,
             "",
             "Outputs:",
-            f"- All assessments: {rights_assessed_jsonl}",
-            f"- Allowed Manifests: {allowed_manifests_jsonl}",
-            f"- Automatically excluded Manifests: {excluded_manifests_jsonl}",
-            f"- Allowed resources JSONL: {allowed_resource_inventory_jsonl}",
-            f"- Allowed resources CSV: {allowed_resource_inventory_csv}",
+            f"- Research Manifests: {research_manifests_jsonl}",
+            f"- Public-reuse-eligible Manifests: {reuse_eligible_manifests_jsonl}",
+            f"- Research-only Manifests: {research_only_manifests_jsonl}",
+            f"- Research resources JSONL: {research_resource_inventory_jsonl}",
+            f"- Research resources CSV: {research_resource_inventory_csv}",
+            f"- Public-reuse resources JSONL: {reuse_eligible_resource_inventory_jsonl}",
+            f"- Public-reuse resources CSV: {reuse_eligible_resource_inventory_csv}",
             f"- Rights summary CSV: {rights_summary_csv}",
         ]
     )

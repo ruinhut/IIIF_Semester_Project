@@ -1,0 +1,336 @@
+[
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://www.bl.uk/collection-guides/iiif",
+    "discovery_type": "Collection",
+    "endpoints": [
+      {
+        "discovery_type": "Collection",
+        "endpoint_role": "presentation_collection",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/bl.uk/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://www.bl.uk/collection-guides/iiif",
+        "verification_status": "pending_module_2"
+      },
+      {
+        "discovery_type": "RelatedResource",
+        "endpoint_role": "related_resource",
+        "label": "Literal source URL",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/bl.uk/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100056663076.0x000001",
+        "verification_status": "pending_module_2"
+      },
+      {
+        "discovery_type": "RelatedResource",
+        "endpoint_role": "related_resource",
+        "label": "Literal source URL",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/bl.uk/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://player.vimeo.com/video/623316424?h=09d21d7477",
+        "verification_status": "pending_module_2"
+      },
+      {
+        "url": "https://www.bl.uk/collection/digitised-manuscripts-archives",
+        "endpoint_role": "catalogue_listing",
+        "discovery_type": "HTML",
+        "label": "Public catalogue discovered 2026-10-21",
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "institution_documentation",
+          "source_url": "https://www.bl.uk/collection/digitised-manuscripts-archives",
+          "source_page_url": "https://www.bl.uk/collection/digitised-manuscripts-archives",
+          "observed_at": "2026-10-21T18:48:00Z"
+        }
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://www.bl.uk/collection-guides/iiif",
+    "last_checked_at": null,
+    "name": "British Library",
+    "provider_id": "provider-acb86cbbcb639914",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://www.bl.uk/collection-guides/iiif",
+      "discovery_type": "Collection",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "Collection",
+          "endpoint_role": "presentation_collection",
+          "label": "Institution homepage",
+          "url": "https://www.bl.uk/collection-guides/iiif",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "discovery_type": "RelatedResource",
+          "endpoint_role": "related_resource",
+          "label": "Literal source URL",
+          "url": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100056663076.0x000001",
+          "verification_status": "pending_module_2"
+        },
+        {
+          "discovery_type": "RelatedResource",
+          "endpoint_role": "related_resource",
+          "label": "Literal source URL",
+          "url": "https://player.vimeo.com/video/623316424?h=09d21d7477",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "full",
+      "institution_url": "https://www.bl.uk/collection-guides/iiif",
+      "name": "British Library",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/bl.uk/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/bl.uk/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry",
+    "endpoint_count": 4
+  },
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://omeka.dlcs-ida.org/s/ida/page/home",
+    "discovery_type": "InstitutionWebsite",
+    "endpoints": [
+      {
+        "discovery_type": "InstitutionWebsite",
+        "endpoint_role": "institution_website",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/omeka.dlcs-ida.org/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://omeka.dlcs-ida.org/s/ida/page/home",
+        "verification_status": "pending_module_2"
+      },
+      {
+        "url": "https://digitreaties.org/treaties/treaties/",
+        "endpoint_role": "catalogue_listing",
+        "discovery_type": "HTML",
+        "label": "Public catalogue discovered 2026-10-21",
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "institution_documentation",
+          "source_url": "https://media.newmexicoculture.org/press_releases.php/1195/?action=detail&releaseID=1195",
+          "source_page_url": "https://media.newmexicoculture.org/press_releases.php/1195/?action=detail&releaseID=1195",
+          "observed_at": "2026-10-21T18:48:00Z"
+        }
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://omeka.dlcs-ida.org/s/ida/page/home",
+    "last_checked_at": null,
+    "name": "Indigenous Digital Archive",
+    "provider_id": "provider-3acece25cdf777e4",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://omeka.dlcs-ida.org/s/ida/page/home",
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "url": "https://omeka.dlcs-ida.org/s/ida/page/home",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "no",
+      "institution_url": "https://omeka.dlcs-ida.org/s/ida/page/home",
+      "name": "Indigenous Digital Archive",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/omeka.dlcs-ida.org/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/omeka.dlcs-ida.org/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry",
+    "endpoint_count": 2
+  },
+  {
+    "provider_id": "provider-877592e2f2c8d531",
+    "name": "Heidelberg University Library",
+    "institution_url": "https://www.ub.uni-heidelberg.de/",
+    "discovery_endpoint": "https://digi.ub.uni-heidelberg.de/cgi-bin/digioai.cgi?verb=ListRecords&metadataPrefix=oai_dc&from=2026-10-20",
+    "discovery_type": "OAI-PMH",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://www.ub.uni-heidelberg.de/helios/kataloge/datenschnittstellen.html",
+      "activity_type": null,
+      "observed_at": "2026-10-21T20:55:49+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digi.ub.uni-heidelberg.de/cgi-bin/digioai.cgi?verb=ListRecords&metadataPrefix=oai_dc&from=2026-10-20",
+      "discovery_type": "OAI-PMH",
+      "endpoint_role": "catalogue_api",
+      "institution_url": "https://www.ub.uni-heidelberg.de/",
+      "name": "Heidelberg University Library",
+      "source_page_url": "https://www.ub.uni-heidelberg.de/helios/kataloge/datenschnittstellen.html"
+    },
+    "endpoints": [
+      {
+        "url": "https://digi.ub.uni-heidelberg.de/cgi-bin/digioai.cgi?verb=ListRecords&metadataPrefix=oai_dc&from=2026-10-20",
+        "endpoint_role": "catalogue_api",
+        "discovery_type": "OAI-PMH",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://www.ub.uni-heidelberg.de/helios/kataloge/datenschnittstellen.html",
+          "activity_type": null,
+          "observed_at": "2026-10-21T20:55:49+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-2433bd8d5611ff84",
+    "name": "National Diet Library of Japan",
+    "institution_url": "https://www.ndl.go.jp/",
+    "discovery_endpoint": "https://ndlsearch.ndl.go.jp/api/opensearch?dpid=ndl-dl&title=%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E&until=1900&cnt=6",
+    "discovery_type": "OpenSearch RSS",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://ndlsearch.ndl.go.jp/help/api/specifications",
+      "activity_type": null,
+      "observed_at": "2026-10-21T20:55:49+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://ndlsearch.ndl.go.jp/api/opensearch?dpid=ndl-dl&title=%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E&until=1900&cnt=6",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api",
+      "institution_url": "https://www.ndl.go.jp/",
+      "name": "National Diet Library of Japan",
+      "source_page_url": "https://ndlsearch.ndl.go.jp/help/api/specifications"
+    },
+    "endpoints": [
+      {
+        "url": "https://ndlsearch.ndl.go.jp/api/opensearch?dpid=ndl-dl&title=%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E&until=1900&cnt=6",
+        "endpoint_role": "catalogue_api",
+        "discovery_type": "OpenSearch RSS",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://ndlsearch.ndl.go.jp/help/api/specifications",
+          "activity_type": null,
+          "observed_at": "2026-10-21T20:55:49+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-68a08bd449531996",
+    "name": "Victoria and Albert Museum",
+    "institution_url": "https://www.vam.ac.uk/",
+    "discovery_endpoint": "https://api.vam.ac.uk/v2/objects/search?q=manuscript&images_exist=true&page_size=6",
+    "discovery_type": "JSON API",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://developers.vam.ac.uk/guide/v2/images/iiif.html",
+      "activity_type": null,
+      "observed_at": "2026-10-21T20:55:49+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://api.vam.ac.uk/v2/objects/search?q=manuscript&images_exist=true&page_size=6",
+      "discovery_type": "JSON API",
+      "endpoint_role": "catalogue_api",
+      "institution_url": "https://www.vam.ac.uk/",
+      "name": "Victoria and Albert Museum",
+      "source_page_url": "https://developers.vam.ac.uk/guide/v2/images/iiif.html"
+    },
+    "endpoints": [
+      {
+        "url": "https://api.vam.ac.uk/v2/objects/search?q=manuscript&images_exist=true&page_size=6",
+        "endpoint_role": "catalogue_api",
+        "discovery_type": "JSON API",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://developers.vam.ac.uk/guide/v2/images/iiif.html",
+          "activity_type": null,
+          "observed_at": "2026-10-21T20:55:49+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  }
+]

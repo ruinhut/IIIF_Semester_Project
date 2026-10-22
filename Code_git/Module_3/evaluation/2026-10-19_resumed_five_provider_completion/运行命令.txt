@@ -1,0 +1,19 @@
+$CodeRoot = 'E:\exchange-epfl\Semester_Project\Code_git'
+$PipelinePython = Join-Path $CodeRoot '.venv\Scripts\python.exe'
+$EvaluationRoot = Join-Path $CodeRoot 'Module_3\evaluation\2026-10-19_resumed_five_provider_completion'
+$env:PYTHONIOENCODING = 'utf-8'
+# This computer's valid CA bundle; use an installed valid CA file if moving to another machine.
+$env:SSL_CERT_FILE = 'C:\Users\43057\AppData\Local\Programs\Python\Python310\lib\site-packages\certifi\cacert.pem'
+Set-Location -LiteralPath $CodeRoot
+
+& $PipelinePython Module_3\tools\run_discovery_with_evidence.py --config "$EvaluationRoot\module3_validation.json"
+if ($LASTEXITCODE -ne 0) { throw "Module 3 failed" }
+& $PipelinePython -m iiif_manifest_validator run --config "$EvaluationRoot\module4_validation.json"
+if ($LASTEXITCODE -ne 0) { throw "Module 4 failed" }
+& $PipelinePython Module_3\tools\complete_oct19_provider_completion.py --evaluation-root $EvaluationRoot
+if ($LASTEXITCODE -ne 0) { throw "Module 5-8 failed" }
+& $PipelinePython Module_3\tools\verify_linked_download_bundles.py --output-root "$EvaluationRoot\download_examples\module8\output" --report "$EvaluationRoot\bundle_verification.json"
+
+# Open image/JSON paths in sample_downloads.csv; full Module 7 JSONL files are in downstream/module7/output.
+Import-Csv -LiteralPath "$EvaluationRoot\provider_results.csv" | Format-Table -AutoSize
+Import-Csv -LiteralPath "$EvaluationRoot\sample_downloads.csv" | Format-List

@@ -1,0 +1,20 @@
+{
+  "common_records_jsonl": "../Module_7/data/output/common_records.jsonl",
+  "common_media_jsonl": "../Module_7/data/output/common_media.jsonl",
+  "ocr_document_profiles_jsonl": "../Module_7/data/output/ocr_document_profiles.jsonl",
+  "institution_reference_texts_jsonl": "../Module_7/data/output/institution_reference_texts.jsonl",
+  "output_directory": "data/output",
+  "log_directory": "data/log",
+  "require_academic_analysis_allowed": true,
+  "require_reference_text": false,
+  "overwrite_existing": false,
+  "request": {
+    "timeout_seconds": 30.0,
+    "retries": 1,
+    "backoff_seconds": 0.5,
+    "request_delay_seconds": 0.25,
+    "max_image_bytes": 104857600,
+    "max_reference_text_bytes": 20971520,
+    "user_agent": "iiif-image-downloader/0.1 (academic research)"
+  }
+}

@@ -1,0 +1,45 @@
+# Each investigation retains source/configuration and compact verification evidence.
+# Raw responses, native Manifest caches, downloads and large stage inventories
+# remain on disk and can be regenerated using the saved recipes and tools.
+/*/*
+!/*/.gitignore
+!/*/*.md
+!/*/*.py
+!/*/运行命令.txt
+!/*/reproduce_commands.txt
+!/*/test_results.txt
+!/*/verification.txt
+!/*/summary.json
+!/*/provider.json
+!/*/providers.json
+!/*/selected_providers.jsonl
+!/*/sample_selection.json
+!/*/sample_downloads.csv
+!/*/sample_downloads.json
+!/*/provider_results.csv
+!/*/provider_results.json
+!/*/cumulative_provider_status.csv
+!/*/cumulative_provider_status.json
+!/*/remaining_unresolved_entries.csv
+!/*/remaining_unresolved_entries.json
+!/*/unresolved_investigations.json
+!/*/test_results.json
+!/*/unit_test_results.json
+!/*/*_verification.json
+!/*/*_preservation_check.json
+!/*/reference_sample_validation.json
+!/*/reference_content_spot_checks.json
+!/*/fallback_recipe_validation.json
+!/*/vam_recipe_validation.json
+!/*/module*_validation.json
+!/*/module*_config.json
+!/*/module*_examples.json
+!/*/module1_registration.json
+!/*/additional_provider_source.json
+!/*/candidate_discovery_knowledge.json
+!/*/candidate_provider_endpoints.json
+!/*/new_knowledge_entries.json
+!/*/new_endpoint_entries.json
+!/*/before_discovery_knowledge.json
+!/*/before_provider_endpoints.json
+!/*/cleanup_manifest.json

@@ -1,0 +1,75 @@
+{
+  "verified_bundles": 5,
+  "schema_validated_json_files": 15,
+  "provider_ids": [
+    "provider-9c24703f7d539465",
+    "provider-e8f0640dd782bf74",
+    "provider-f2fa8935cf790b44",
+    "provider-fe4c0f49dea727df",
+    "provider-feedf2702c521119"
+  ],
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-2627f9d5cd81d8f4",
+      "resource_id": "resource-fb666c71b819fba55014",
+      "providers": [
+        {
+          "provider_id": "provider-fe4c0f49dea727df",
+          "provider_name": "DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-2627f9d5cd81d8f4\\000009_resource-fb666c71b819fba55014\\image.jpg",
+      "reference_files": 1
+    },
+    {
+      "record_id": "manifest-523dc31a606ad455",
+      "resource_id": "resource-e3a24ab47145fa174250",
+      "providers": [
+        {
+          "provider_id": "provider-9c24703f7d539465",
+          "provider_name": "Cardiff University"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-523dc31a606ad455\\000009_resource-e3a24ab47145fa174250\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-221d1c0148040983",
+      "resource_id": "resource-6d72d3458d27e20a67c9",
+      "providers": [
+        {
+          "provider_id": "provider-e8f0640dd782bf74",
+          "provider_name": "University of Leeds Libraries' Cultural Collections"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-221d1c0148040983\\000009_resource-6d72d3458d27e20a67c9\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-ca918e91ac0b9942",
+      "resource_id": "resource-8a10930bcd9ec9e5734e",
+      "providers": [
+        {
+          "provider_id": "provider-f2fa8935cf790b44",
+          "provider_name": "vHMML"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-ca918e91ac0b9942\\000003_resource-8a10930bcd9ec9e5734e\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-1434803d9ab0f2e4",
+      "resource_id": "resource-46fc4d0489fba036519e",
+      "providers": [
+        {
+          "provider_id": "provider-feedf2702c521119",
+          "provider_name": "Yale University Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-1434803d9ab0f2e4\\000009_resource-46fc4d0489fba036519e\\image.jpg",
+      "reference_files": 0
+    }
+  ],
+  "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+}

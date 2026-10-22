@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-10-19T16:45:49.429045+00:00",
+  "new_resolved_source_entries": 5,
+  "discovered_manifest_urls": 30,
+  "validated_manifests": 30,
+  "exported_documents": 30,
+  "exported_image_associations": 3693,
+  "distinct_image_urls": 3685,
+  "actual_downloaded_sample_images": 5,
+  "actual_sample_image_bytes": 15818006,
+  "ocr_reference_descriptors": 0,
+  "schema_validated_sample_json_files": 15,
+  "decoded_images": 5,
+  "smaller_than_canvas_declaration": 2,
+  "tests_passed": 160,
+  "previous_resolved_census_entries": 44,
+  "cumulative_resolved_census_entries": 49,
+  "census_entries": 94,
+  "remaining_unresolved_census_entries": 45,
+  "configuration_promoted": true,
+  "scope": "Bounded source samples, including the SCTA text platform and Smithsonian featured selections; no full-catalogue or independent-original-institution count claim.",
+  "unresolved_investigation": [
+    {
+      "provider_name": "Folger Shakespeare Library",
+      "observed_status": "Browser verification HTML / legacy-host network failure",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "University of Illinois",
+      "observed_status": "HTTP 403 on probed catalogue/API routes",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "J. Paul Getty Trust",
+      "observed_status": "Migration HTML followed by documentation HTTP 404",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Parliamentary Archives - UK",
+      "observed_status": "One public Manifest HTTP 200, bulk catalogue unresolved",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Cultural Japan",
+      "observed_status": "Old example Manifest HTTP 404",
+      "counted_as_new_success": false
+    }
+  ],
+  "legacy_shared_canvas_manifests": 6,
+  "summed_per_manifest_distinct_image_body_count": 3685,
+  "cleanup": {
+    "deleted_files": 37,
+    "deleted_bytes": 5333757,
+    "manifest": "cleanup_manifest.json"
+  }
+}

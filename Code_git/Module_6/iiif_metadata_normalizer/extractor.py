@@ -50,6 +50,11 @@ LANGUAGE_CODES = {
     "greek": "el",
     "arabic": "ar",
     "chinese": "zh",
+    "russian": "ru",
+    "ukrainian": "uk",
+    "yiddish": "yi",
+    "hebrew": "he",
+    "polish": "pl",
 }
 
 
@@ -160,6 +165,12 @@ def extract_and_normalize(
         "rights": {
             "category": rights.get("category"),
             "decision": rights.get("decision"),
+            "decision_scope": rights.get("decision_scope"),
+            "research_status": rights.get("research_status"),
+            "usage_permissions": dict(rights.get("usage_permissions", {})),
+            "public_reuse_eligible": bool(
+                rights.get("public_reuse_eligible", False)
+            ),
             "display_label": dict(rights.get("display_label", {})),
             "policy_version": rights.get("policy_version"),
             "evidence": list(rights.get("evidence", [])),

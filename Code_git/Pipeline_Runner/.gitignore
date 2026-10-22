@@ -6,3 +6,12 @@ __pycache__/
 data/log/*
 !data/log/.gitkeep
 data/e2e_validation/
+
+# Keep acceptance summaries, not the downloaded images, raw Manifests or logs.
+data/*/
+!data/log/
+!data/full_acceptance_2026-10-19/
+data/full_acceptance_2026-10-19/*
+!data/full_acceptance_2026-10-19/acceptance_results.csv
+!data/full_acceptance_2026-10-19/acceptance_results.json
+!data/full_acceptance_2026-10-19/module_input_output_inventory.csv

@@ -1,0 +1,6 @@
+﻿provider_id,provider_name,discovered_manifest_urls,validated_manifests,exported_image_associations,distinct_image_urls,actual_sample_images,actual_width,actual_height,canvas_width,canvas_height,matches_declared_dimensions
+provider-f034696f3b1f1c1f,Digital Repository of Ireland,6,6,113,113,1,6132,8476,6132,8476,True
+provider-4853865a686721d7,Princeton University Art Museum,6,6,15,15,1,4429,3454,4429,3454,True
+provider-7781a87376497b5c,UCLA Library Digital Collections,6,6,11,11,1,601,930,9699,15028,False
+provider-a1544ec8d50c2696,The SCTA Reading Room,6,6,2120,2120,1,2212,2884,2212,2884,True
+provider-c94006b2714289d6,Smithsonian Institution,6,6,1434,1426,1,4800,3520,4938,3621,False

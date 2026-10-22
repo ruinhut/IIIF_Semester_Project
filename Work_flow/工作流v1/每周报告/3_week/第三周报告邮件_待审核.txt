@@ -1,0 +1,14 @@
+Subject: Weekly progress — IIIF Document Information Extraction — 2 October
+
+Dear Professor Kaplan,
+
+This week, I revised the downstream handling of rights and started adapting the Module 7 output for Arsha.
+
+First, I further refined Module 5 this week. Previously, Module 5 excluded resources when the providing institution did not specify rights information, and I corrected this behaviour. The main limitation now lies in Module 3, which has discovered Manifests for only 10 institutions. I tested Module 5 on material from these institutions, whose potential resources are on the order of hundreds of thousands. In the current bounded evaluation, I processed 324 of the discovered Manifests and identified 54,642 associated media records.
+
+Second, following Arsha's request, I am adapting the Module 7 output to support OCR-engine selection and ground-truth preparation.
+
+I am not currently blocked. Next week, I will focus on Module 3 by resolving one currently unsupported institution, documenting the investigation process, and turning the result into reusable discovery knowledge, generic skills and institution configuration. I will also continue the Module 7 OCR handoff changes.
+
+Best regards,
+Boheng Shang

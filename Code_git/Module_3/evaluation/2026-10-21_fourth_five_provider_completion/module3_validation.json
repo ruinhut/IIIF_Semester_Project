@@ -1,0 +1,27 @@
+{
+  "input_jsonl": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_fourth_five_provider_completion\\validation\\module2\\output\\checked_entry_points.jsonl",
+  "knowledge_base": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_fourth_five_provider_completion\\candidate_discovery_knowledge.json",
+  "curated_endpoints": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_fourth_five_provider_completion\\candidate_provider_endpoints.json",
+  "output_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_fourth_five_provider_completion\\validation\\module3\\output",
+  "log_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_fourth_five_provider_completion\\validation\\module3\\log",
+  "network": {
+    "timeout_seconds": 35,
+    "retries": 1,
+    "backoff_seconds": 0.5,
+    "max_response_bytes": 67108864
+  },
+  "limits": {
+    "max_stream_pages_per_provider": 3,
+    "max_collections_per_provider": 6,
+    "max_html_pages_per_provider": 1,
+    "max_html_depth": 1,
+    "max_machine_candidates_per_provider": 6,
+    "max_manifests_per_provider": 6
+  },
+  "html_discovery": {
+    "enabled": false
+  },
+  "platform_discovery": {
+    "omeka_s_probe_enabled": false
+  }
+}

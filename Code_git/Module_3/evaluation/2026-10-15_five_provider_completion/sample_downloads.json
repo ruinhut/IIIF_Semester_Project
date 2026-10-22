@@ -1,0 +1,135 @@
+[
+  {
+    "provider_name": "Göttingen University Collections",
+    "record_id": "manifest-98e59fef541832dc",
+    "resource_id": "resource-1f0d4724041cd0b62146",
+    "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-98e59fef541832dc\\000009_resource-1f0d4724041cd0b62146\\image.jpg",
+    "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-98e59fef541832dc\\000009_resource-1f0d4724041cd0b62146",
+    "verified_image_url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN235181684_0006:00000010/full/full/0/default.jpg",
+    "resolution": {
+      "attempts": [
+        {
+          "error_type": "not_found",
+          "status": "failed",
+          "status_code": 404,
+          "url": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:PPN235181684_0006:00000010"
+        },
+        {
+          "status": "image_service_validated",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN235181684_0006:00000010/info.json"
+        },
+        {
+          "status": "downloaded",
+          "url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN235181684_0006:00000010/full/full/0/default.jpg"
+        }
+      ],
+      "info_json_url": "https://images.sub.uni-goettingen.de/iiif/image/gdz:PPN235181684_0006:00000010/info.json",
+      "method": "declared_iiif_image_service",
+      "original_url": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:PPN235181684_0006:00000010"
+    },
+    "width": 1949,
+    "height": 3160
+  },
+  {
+    "provider_name": "Leiden University",
+    "record_id": "manifest-f02455354fa4a3a8",
+    "resource_id": "resource-030cac7e055342cedbcc",
+    "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-f02455354fa4a3a8\\000009_resource-030cac7e055342cedbcc\\image.jpg",
+    "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-f02455354fa4a3a8\\000009_resource-030cac7e055342cedbcc",
+    "verified_image_url": "https://eu-img02.ext.exlibrisgroup.com/iiif/2/eyJyZWdpb24iOiJldS1jZW50cmFsLTEiLCJidWNrZXQiOiJldS1zdDAxLmV4dC5leGxpYnJpc2dyb3VwLmNvbSIsImtleSI6IjMxVUtCX0xFVS9zdG9yYWdlL2FsbWEvODkvNEQvNjYvNkEvRjgvNDgvRjUvNTYvMjcvRDMvRTAvQkMvNTcvNjQvMTMvODcvMTg4N18xX2l0ZW1fNDI3MDUzMF8xMC5qcDIiLCJyZXBfaWQiOiIxMjUxMDc2MjI0MDAwMjcxMSIsImluc3RhbmNlIjoiZXUiLCJpbnN0aXR1dGlvbiI6IjMxVUtCX0xFVSIsIndpZHRoIjoiMzcwMCIsImhlaWdodCI6IjI0NTMiLCJ3bUtleSI6bnVsbCwid21XaWR0aCI6bnVsbCwid21IZWlnaHQiOm51bGwsIndtUG9zaXRpb24iOm51bGwsIndtUmVwZWF0IjpmYWxzZSwibmE5MSI6bnVsbH0%3D/full/full/0/default.jpg",
+    "resolution": {
+      "attempts": [
+        {
+          "error_type": "http_error",
+          "status": "failed",
+          "status_code": 400,
+          "url": "https://eu-img02.ext.exlibrisgroup.com/iiif/2/eyJyZWdpb24iOiJldS1jZW50cmFsLTEiLCJidWNrZXQiOiJldS1zdDAxLmV4dC5leGxpYnJpc2dyb3VwLmNvbSIsImtleSI6IjMxVUtCX0xFVS9zdG9yYWdlL2FsbWEvODkvNEQvNjYvNkEvRjgvNDgvRjUvNTYvMjcvRDMvRTAvQkMvNTcvNjQvMTMvODcvMTg4N18xX2l0ZW1fNDI3MDUzMF8xMC5qcDIiLCJyZXBfaWQiOiIxMjUxMDc2MjI0MDAwMjcxMSIsImluc3RhbmNlIjoiZXUiLCJpbnN0aXR1dGlvbiI6IjMxVUtCX0xFVSIsIndpZHRoIjoiMzcwMCIsImhlaWdodCI6IjI0NTMiLCJ3bUtleSI6bnVsbCwid21XaWR0aCI6bnVsbCwid21IZWlnaHQiOm51bGwsIndtUG9zaXRpb24iOm51bGwsIndtUmVwZWF0IjpmYWxzZSwibmE5MSI6bnVsbH0%3D/full/full/0/default.jp2"
+        },
+        {
+          "status": "image_service_validated",
+          "url": "https://eu-img02.ext.exlibrisgroup.com/iiif/2/eyJyZWdpb24iOiJldS1jZW50cmFsLTEiLCJidWNrZXQiOiJldS1zdDAxLmV4dC5leGxpYnJpc2dyb3VwLmNvbSIsImtleSI6IjMxVUtCX0xFVS9zdG9yYWdlL2FsbWEvODkvNEQvNjYvNkEvRjgvNDgvRjUvNTYvMjcvRDMvRTAvQkMvNTcvNjQvMTMvODcvMTg4N18xX2l0ZW1fNDI3MDUzMF8xMC5qcDIiLCJyZXBfaWQiOiIxMjUxMDc2MjI0MDAwMjcxMSIsImluc3RhbmNlIjoiZXUiLCJpbnN0aXR1dGlvbiI6IjMxVUtCX0xFVSIsIndpZHRoIjoiMzcwMCIsImhlaWdodCI6IjI0NTMiLCJ3bUtleSI6bnVsbCwid21XaWR0aCI6bnVsbCwid21IZWlnaHQiOm51bGwsIndtUG9zaXRpb24iOm51bGwsIndtUmVwZWF0IjpmYWxzZSwibmE5MSI6bnVsbH0%3D/info.json"
+        },
+        {
+          "status": "downloaded",
+          "url": "https://eu-img02.ext.exlibrisgroup.com/iiif/2/eyJyZWdpb24iOiJldS1jZW50cmFsLTEiLCJidWNrZXQiOiJldS1zdDAxLmV4dC5leGxpYnJpc2dyb3VwLmNvbSIsImtleSI6IjMxVUtCX0xFVS9zdG9yYWdlL2FsbWEvODkvNEQvNjYvNkEvRjgvNDgvRjUvNTYvMjcvRDMvRTAvQkMvNTcvNjQvMTMvODcvMTg4N18xX2l0ZW1fNDI3MDUzMF8xMC5qcDIiLCJyZXBfaWQiOiIxMjUxMDc2MjI0MDAwMjcxMSIsImluc3RhbmNlIjoiZXUiLCJpbnN0aXR1dGlvbiI6IjMxVUtCX0xFVSIsIndpZHRoIjoiMzcwMCIsImhlaWdodCI6IjI0NTMiLCJ3bUtleSI6bnVsbCwid21XaWR0aCI6bnVsbCwid21IZWlnaHQiOm51bGwsIndtUG9zaXRpb24iOm51bGwsIndtUmVwZWF0IjpmYWxzZSwibmE5MSI6bnVsbH0%3D/full/full/0/default.jpg"
+        }
+      ],
+      "info_json_url": "https://eu-img02.ext.exlibrisgroup.com/iiif/2/eyJyZWdpb24iOiJldS1jZW50cmFsLTEiLCJidWNrZXQiOiJldS1zdDAxLmV4dC5leGxpYnJpc2dyb3VwLmNvbSIsImtleSI6IjMxVUtCX0xFVS9zdG9yYWdlL2FsbWEvODkvNEQvNjYvNkEvRjgvNDgvRjUvNTYvMjcvRDMvRTAvQkMvNTcvNjQvMTMvODcvMTg4N18xX2l0ZW1fNDI3MDUzMF8xMC5qcDIiLCJyZXBfaWQiOiIxMjUxMDc2MjI0MDAwMjcxMSIsImluc3RhbmNlIjoiZXUiLCJpbnN0aXR1dGlvbiI6IjMxVUtCX0xFVSIsIndpZHRoIjoiMzcwMCIsImhlaWdodCI6IjI0NTMiLCJ3bUtleSI6bnVsbCwid21XaWR0aCI6bnVsbCwid21IZWlnaHQiOm51bGwsIndtUG9zaXRpb24iOm51bGwsIndtUmVwZWF0IjpmYWxzZSwibmE5MSI6bnVsbH0%3D/info.json",
+      "method": "declared_iiif_image_service",
+      "original_url": "https://eu-img02.ext.exlibrisgroup.com/iiif/2/eyJyZWdpb24iOiJldS1jZW50cmFsLTEiLCJidWNrZXQiOiJldS1zdDAxLmV4dC5leGxpYnJpc2dyb3VwLmNvbSIsImtleSI6IjMxVUtCX0xFVS9zdG9yYWdlL2FsbWEvODkvNEQvNjYvNkEvRjgvNDgvRjUvNTYvMjcvRDMvRTAvQkMvNTcvNjQvMTMvODcvMTg4N18xX2l0ZW1fNDI3MDUzMF8xMC5qcDIiLCJyZXBfaWQiOiIxMjUxMDc2MjI0MDAwMjcxMSIsImluc3RhbmNlIjoiZXUiLCJpbnN0aXR1dGlvbiI6IjMxVUtCX0xFVSIsIndpZHRoIjoiMzcwMCIsImhlaWdodCI6IjI0NTMiLCJ3bUtleSI6bnVsbCwid21XaWR0aCI6bnVsbCwid21IZWlnaHQiOm51bGwsIndtUG9zaXRpb24iOm51bGwsIndtUmVwZWF0IjpmYWxzZSwibmE5MSI6bnVsbH0%3D/full/full/0/default.jp2"
+    },
+    "width": 3700,
+    "height": 2453
+  },
+  {
+    "provider_name": "National Library of Wales",
+    "record_id": "manifest-d50c3334781fc9d5",
+    "resource_id": "resource-7fc27b0626e0c5ba4449",
+    "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-d50c3334781fc9d5\\000003_resource-7fc27b0626e0c5ba4449\\image.jpg",
+    "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-d50c3334781fc9d5\\000003_resource-7fc27b0626e0c5ba4449",
+    "verified_image_url": "https://iiif.llyfrgell.cymru/iiif/05/090/05090945.jp2/full/full/0/default.jpg",
+    "resolution": {
+      "attempts": [
+        {
+          "error_type": "not_found",
+          "status": "failed",
+          "status_code": 404,
+          "url": "https://dams.llgc.org.uk/iiif/2.0/5090941/res/5090945.jpg"
+        },
+        {
+          "status": "image_service_validated",
+          "url": "https://iiif.llyfrgell.cymru/iiif/5090945/info.json"
+        },
+        {
+          "status": "downloaded",
+          "url": "https://iiif.llyfrgell.cymru/iiif/05/090/05090945.jp2/full/full/0/default.jpg"
+        }
+      ],
+      "info_json_url": "https://iiif.llyfrgell.cymru/iiif/5090945/info.json",
+      "method": "declared_iiif_image_service",
+      "original_url": "https://dams.llgc.org.uk/iiif/2.0/5090941/res/5090945.jpg"
+    },
+    "width": 789,
+    "height": 1200
+  },
+  {
+    "provider_name": "Universitaet Jena",
+    "record_id": "manifest-9cf7a97515887401",
+    "resource_id": "resource-2c2e04a3f4c87063036f",
+    "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-9cf7a97515887401\\000009_resource-2c2e04a3f4c87063036f\\image.jpg",
+    "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-9cf7a97515887401\\000009_resource-2c2e04a3f4c87063036f",
+    "verified_image_url": "https://collections.thulb.uni-jena.de/api/iiif/image/v2/HisBest_derivate_00000064%2FBE_0177_0002.tif/full/full/0/default.jpg",
+    "resolution": {
+      "attempts": [
+        {
+          "status": "downloaded",
+          "url": "https://collections.thulb.uni-jena.de/api/iiif/image/v2/HisBest_derivate_00000064%2FBE_0177_0002.tif/full/full/0/default.jpg"
+        }
+      ],
+      "method": "direct",
+      "original_url": "https://collections.thulb.uni-jena.de/api/iiif/image/v2/HisBest_derivate_00000064%2FBE_0177_0002.tif/full/full/0/default.jpg"
+    },
+    "width": 2401,
+    "height": 3683
+  },
+  {
+    "provider_name": "Utrecht University Library",
+    "record_id": "manifest-4d70f58fc158ff30",
+    "resource_id": "resource-23aac7b481b7cbdde322",
+    "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-4d70f58fc158ff30\\000003_resource-23aac7b481b7cbdde322\\image.jpg",
+    "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-4d70f58fc158ff30\\000003_resource-23aac7b481b7cbdde322",
+    "verified_image_url": "https://objects.library.uu.nl/fcgi-bin/iipsrv.fcgi?IIIF=/manifestation/viewer/29/17/79/29177922662877508704265773727951043269.jp2/full/full/0/default.jpg",
+    "resolution": {
+      "attempts": [
+        {
+          "status": "downloaded",
+          "url": "https://objects.library.uu.nl/fcgi-bin/iipsrv.fcgi?IIIF=/manifestation/viewer/29/17/79/29177922662877508704265773727951043269.jp2/full/full/0/default.jpg"
+        }
+      ],
+      "method": "direct",
+      "original_url": "https://objects.library.uu.nl/fcgi-bin/iipsrv.fcgi?IIIF=/manifestation/viewer/29/17/79/29177922662877508704265773727951043269.jp2/full/full/0/default.jpg"
+    },
+    "width": 1936,
+    "height": 2504
+  }
+]

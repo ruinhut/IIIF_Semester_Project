@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-10-21T13:25:55.148075+00:00",
+  "new_resolved_source_entries": 5,
+  "discovered_manifest_urls": 26,
+  "validated_manifests": 26,
+  "exported_documents": 26,
+  "exported_image_associations": 2991,
+  "distinct_image_urls": 2991,
+  "actual_downloaded_sample_images": 5,
+  "actual_sample_image_bytes": 5720155,
+  "ocr_reference_descriptors": 0,
+  "schema_validated_sample_json_files": 15,
+  "decoded_images": 5,
+  "smaller_than_canvas_declaration": 1,
+  "tests_passed": 173,
+  "previous_resolved_census_entries": 54,
+  "cumulative_resolved_census_entries": 59,
+  "census_entries": 94,
+  "remaining_unresolved_census_entries": 35,
+  "configuration_promoted": true,
+  "scope": "Bounded samples; source entries include an aggregator. Historical successes were not all re-fetched today.",
+  "unresolved_investigation": [
+    {
+      "provider_name": "Europeana",
+      "observed_status": "Six native Manifests passed M4 in the initial batch, but selected MNHN image returned 403. Further declared image samples were HTML/non-image, TLS failures or 403. Alternative indexed records often returned Manifest 404. No completed image bundle; excluded from the five promoted source recipes.",
+      "counted_as_new_success": false,
+      "evidence": "first_attempt/initial_europeana_batch/"
+    },
+    {
+      "provider_name": "Folger Shakespeare Library",
+      "observed_status": "One native Manifest works; homepage and public catalogue display a human-verification challenge. No verified batch enumerator in this investigation.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "University of Illinois at Urbana-Champaign Library",
+      "observed_status": "Public catalogue candidate routes returned HTTP 403.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "University of Leeds Libraries Cultural Collections",
+      "observed_status": "Native example Manifest works, but catalogue HTTP 403; bulk enumeration remains unverified.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "The Frick Collection",
+      "observed_status": "Old digital API-shaped routes redirect to the Orange Logic homepage, not catalogue JSON; museum candidate routes returned HTML.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Indigenous Digital Archive",
+      "observed_status": "Old domain redirects to a parked page; API-shaped response is HTML rather than item JSON.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "SAT Taishozo Image DB",
+      "observed_status": "Public catalogue and Omeka routes returned HTTP 403.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "The Wolsey Manuscripts",
+      "observed_status": "Homepage requests failed with URLError; no accepted recipe.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Qatar National Library",
+      "observed_status": "Public search and candidate Collection route returned HTTP 403.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Digital East Asia Collections of BSB",
+      "observed_status": "Current website returns searchable title HTML, but record-to-Manifest enumeration was not completed.",
+      "counted_as_new_success": false
+    }
+  ],
+  "legacy_shared_canvas_manifests": 0,
+  "summed_per_manifest_distinct_image_body_count": 2991,
+  "shared_manifest_count_between_sources": 1,
+  "summed_provider_manifest_associations": 27,
+  "summed_provider_image_associations": 2992,
+  "cumulative_count_definition": "Existing census entries with saved completed-source evidence; Europeana has M4-valid partial discovery but failed image chain and is not added to this success set."
+}

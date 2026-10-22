@@ -1,0 +1,173 @@
+[
+  {
+    "provider_id": "provider-e1782e53439deb7b",
+    "provider_name": "DigiVatLib",
+    "investigation_id": "2026-10-21-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "vatican-public-gallery-keyed-records",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://digi.vatlib.it/pickup/digital_gallery",
+        "query_parameters": {
+          "format": "ajax"
+        },
+        "records_path": "result",
+        "records_format": "mapping_values",
+        "identifier_path": "id",
+        "identifier_pattern": "^(?P<identifier>MSS_[A-Za-z0-9_.-]+)$",
+        "manifest_url_templates": [
+          "https://digi.vatlib.it/iiif/{identifier}/manifest.json"
+        ],
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 100,
+          "max_pages": 1
+        },
+        "max_identifiers": 100,
+        "request_delay_seconds": 0.8,
+        "coverage_note": "Public selected-manuscripts gallery only (14 records observed), not the complete Vatican catalogue. Gallery API and native Manifest routes were verified separately."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-d98fe11ebfc34f6d",
+    "provider_name": "J. Paul Getty Trust",
+    "investigation_id": "2026-10-21-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "getty-sparql-objects-linked-art-manifests",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://data.getty.edu/museum/collection/sparql",
+        "query_parameters": {
+          "format": "json"
+        },
+        "query_parameter_templates": {
+          "query": "SELECT ?s WHERE { ?s a <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> } ORDER BY ?s LIMIT {page_size} OFFSET {page_number}"
+        },
+        "records_path": "results.bindings",
+        "identifier_path": "s.value",
+        "identifier_pattern": "^https://data\\.getty\\.edu/museum/collection/object/(?P<identifier>[a-f0-9-]+)$",
+        "identifier_followup": {
+          "url_template": "https://data.getty.edu/museum/collection/object/{identifier}",
+          "identifier_path": "subject_of.*.id",
+          "identifier_pattern": "^https://media\\.getty\\.edu/iiif/manifest/3/(?P<identifier>[a-f0-9-]+)$"
+        },
+        "manifest_url_templates": [
+          "https://media.getty.edu/iiif/manifest/3/{identifier}"
+        ],
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 8,
+          "start_page": 0,
+          "page_step": 8,
+          "max_pages": 1000
+        },
+        "max_identifiers": 8000,
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Getty Museum objects in the public SPARQL/Linked Art dataset with explicitly declared Presentation 3 links; not all Getty Research Institute holdings. Stable ordering is used for OFFSET pagination."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-c4aa50f2571a99e9",
+    "provider_name": "Cultural Japan",
+    "investigation_id": "2026-10-21-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "cultural-japan-public-native-manifest-index",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://api.cultural.jp/search",
+        "query_parameters": {
+          "fc-_media": "IIIF"
+        },
+        "records_path": "hits.hits",
+        "manifest_url_path": "manifest.*",
+        "manifest_url_pattern": "^https://(?!api\\.cultural\\.jp/).+",
+        "pagination": {
+          "page_parameter": "page",
+          "page_size_parameter": "size",
+          "page_size": 6,
+          "start_page": 1,
+          "max_pages": 5
+        },
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Cultural Japan's indexed IIIF subset; follows explicitly declared native Manifests. The search total is capped at 10000 and is not a validated Manifest count. Some indexed URLs are stale; failures are retained. No API key was supplied or bypassed."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-637a751532e5f5a3",
+    "provider_name": "Harvard Art Museum",
+    "investigation_id": "2026-10-21-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "cultural-japan-harvard-native-manifests",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://api.cultural.jp/search",
+        "query_parameters": {
+          "fc-_media": "IIIF",
+          "fc-source": "ハーバード美術館API"
+        },
+        "records_path": "hits.hits",
+        "manifest_url_path": "manifest.*",
+        "manifest_url_pattern": "^https://iiif\\.harvardartmuseums\\.org/manifests/object/\\d+$",
+        "pagination": {
+          "page_parameter": "page",
+          "page_size_parameter": "size",
+          "page_size": 6,
+          "start_page": 1,
+          "max_pages": 5
+        },
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Cultural Japan's indexed IIIF subset; follows explicitly declared native Manifests. The search total is capped at 10000 and is not a validated Manifest count. Some indexed URLs are stale; failures are retained. No API key was supplied or bypassed."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-c4bca842117bf9f7",
+    "provider_name": "National Gallery of Art Library",
+    "investigation_id": "2026-10-21-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-21_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "nga-library-primo-mms-to-native-manifests",
+        "type": "paginated_json_identifiers_to_manifest_templates",
+        "api_url": "https://library.nga.gov/primaws/rest/pub/pnxs",
+        "query_parameters": {
+          "vid": "01NGA_INST:NGA",
+          "tab": "LibraryCatalog",
+          "scope": "MyInstitution",
+          "lang": "en",
+          "q": "any,contains,grandezze"
+        },
+        "records_path": "docs",
+        "identifier_path": "pnx.control.sourcerecordid.0",
+        "required_nonempty_paths": [
+          "delivery.link.0.linkURL"
+        ],
+        "identifier_pattern": "^(?P<identifier>\\d+)$",
+        "manifest_url_templates": [
+          "https://libraryimage.nga.gov/manifest/mms/{identifier}.json"
+        ],
+        "pagination": {
+          "page_parameter": "offset",
+          "page_size_parameter": "limit",
+          "page_size": 6,
+          "start_page": 0,
+          "page_step": 6,
+          "max_pages": 3,
+          "total_path": "info.total"
+        },
+        "max_identifiers": 100,
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Public Primo catalogue query for grandezze (18 observed records), including physical titles and digital books. Only live native library Manifests are accepted. This validates a keyword subset, not the whole NGA catalogue or the separate NGA museum collection."
+      }
+    ]
+  }
+]

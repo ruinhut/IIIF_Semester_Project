@@ -1,0 +1,72 @@
+[
+  {
+    "provider_id": "provider-fe4c0f49dea727df",
+    "provider_name": "DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 5256,
+    "distinct_image_urls": 5256,
+    "actual_sample_images": 1,
+    "actual_width": 1731,
+    "actual_height": 2996,
+    "canvas_width": 1731,
+    "canvas_height": 2996,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-9c24703f7d539465",
+    "provider_name": "Cardiff University",
+    "discovered_manifest_urls": 2,
+    "validated_manifests": 2,
+    "exported_image_associations": 95,
+    "distinct_image_urls": 95,
+    "actual_sample_images": 1,
+    "actual_width": 4032,
+    "actual_height": 6048,
+    "canvas_width": 4032,
+    "canvas_height": 6048,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-e8f0640dd782bf74",
+    "provider_name": "University of Leeds Libraries' Cultural Collections",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 1867,
+    "distinct_image_urls": 1867,
+    "actual_sample_images": 1,
+    "actual_width": 762,
+    "actual_height": 1024,
+    "canvas_width": 762,
+    "canvas_height": 1024,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-f2fa8935cf790b44",
+    "provider_name": "vHMML",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 118,
+    "distinct_image_urls": 118,
+    "actual_sample_images": 1,
+    "actual_width": 6000,
+    "actual_height": 4000,
+    "canvas_width": 6000,
+    "canvas_height": 4000,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-feedf2702c521119",
+    "provider_name": "Yale University Library",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 582,
+    "distinct_image_urls": 582,
+    "actual_sample_images": 1,
+    "actual_width": 3686,
+    "actual_height": 5571,
+    "canvas_width": 3686,
+    "canvas_height": 5571,
+    "matches_declared_dimensions": true
+  }
+]

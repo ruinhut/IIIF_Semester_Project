@@ -48,6 +48,13 @@ def validate_manifest(value: Any) -> ValidationResult:
             )
 
     result.presentation_version = _presentation_version(result.context_values, value)
+    legacy_contexts = {"http://www.shared-canvas.org/ns/context.json", "https://www.shared-canvas.org/ns/context.json"}
+    if any(context in legacy_contexts for context in result.context_values):
+        result.source_format = "legacy_shared_canvas"
+        result.issues.append(ValidationIssue(
+            "legacy_shared_canvas_context",
+            "Legacy Shared Canvas source retained unchanged; sequences use the Presentation-2-compatible parser, not a claim of modern Presentation 2 conformance",
+            severity="warning", path="@context"))
     if not result.context_values:
         result.issues.append(
             ValidationIssue(
@@ -245,7 +252,7 @@ def _inventory_manifest(
         canvas_id = _resource_id(canvas)
         if canvas_id:
             try:
-                canvas_id = canonicalize_url(canvas_id)
+                canvas_id = canonicalize_url(canvas_id, preserve_fragment=True)
             except ValueError:
                 result.issues.append(
                     ValidationIssue(

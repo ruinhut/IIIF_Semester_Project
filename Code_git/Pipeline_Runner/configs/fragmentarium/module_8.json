@@ -1,0 +1,20 @@
+{
+  "common_records_jsonl": "../../data/e2e_validation/module_7/output/common_records.jsonl",
+  "common_media_jsonl": "../../data/e2e_validation/module_7/output/common_media.jsonl",
+  "ocr_document_profiles_jsonl": "../../data/e2e_validation/module_7/output/ocr_document_profiles.jsonl",
+  "institution_reference_texts_jsonl": "../../data/e2e_validation/module_7/output/institution_reference_texts.jsonl",
+  "output_directory": "../../data/e2e_validation/module_8/output",
+  "log_directory": "../../data/e2e_validation/module_8/log",
+  "require_academic_analysis_allowed": true,
+  "require_reference_text": false,
+  "overwrite_existing": true,
+  "request": {
+    "timeout_seconds": 30.0,
+    "retries": 1,
+    "backoff_seconds": 0.5,
+    "request_delay_seconds": 0.25,
+    "max_image_bytes": 104857600,
+    "max_reference_text_bytes": 20971520,
+    "user_agent": "iiif-image-downloader/0.1 (academic research)"
+  }
+}

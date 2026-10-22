@@ -1,0 +1,8 @@
+﻿module,entity_basis,primary_input_count,secondary_input_count,primary_usable_output_count,secondary_usable_output_count,main_outputs
+1,Providers / endpoints,94,158,94,158,providers.jsonl; selected_providers.jsonl
+2,Endpoints,158,158,99,67,checked_entry_points.jsonl; discovery_ready.jsonl
+3,Providers / Manifests,94,158,324,10,manifest_urls.jsonl; provider_discovery.jsonl
+4,Manifests / media inventory,324,324,324,54654,validated_manifests.jsonl; manifest_resource_inventory.jsonl
+5,Valid Manifests / allowed media,324,54654,18,106,allowed_manifests.jsonl; allowed_resource_inventory.jsonl
+6,Allowed Manifests / media,18,106,18,106,normalized_records.jsonl; normalized_resources.jsonl
+7,Normalized records / media,18,106,18,106,common_records.jsonl; common_media.jsonl; CSV; schemas

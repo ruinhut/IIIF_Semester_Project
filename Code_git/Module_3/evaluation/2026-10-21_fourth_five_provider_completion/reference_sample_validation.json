@@ -1,0 +1,23 @@
+{
+  "provider": "Berlin State Library",
+  "canvas_id": "https://content.staatsbibliothek-berlin.de/dc/1000056597-0001/canvas",
+  "image_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_fourth_five_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-5c24009d6db3c363\\000000_resource-f42d1791ce42f606f84a\\image.png",
+  "alto_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_fourth_five_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-5c24009d6db3c363\\000000_resource-f42d1791ce42f606f84a\\institution_reference_001.xml",
+  "text_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_fourth_five_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-5c24009d6db3c363\\000000_resource-f42d1791ce42f606f84a\\institution_reference_001.txt",
+  "alto_namespace": "http://www.loc.gov/standards/alto/ns-v4#",
+  "alto_dimensions": [
+    2221,
+    3540
+  ],
+  "decoded_image_dimensions": [
+    2221,
+    3540
+  ],
+  "image_alto_dimensions_match": true,
+  "measurement_unit": "pixel",
+  "word_elements": 47,
+  "words_with_declared_confidence": 0,
+  "plain_text_characters": 351,
+  "institution_ocr_not_manually_corrected_gold": true,
+  "processing_metadata_excluded_from_plain_text": true
+}

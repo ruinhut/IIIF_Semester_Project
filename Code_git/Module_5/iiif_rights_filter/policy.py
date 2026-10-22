@@ -5,7 +5,7 @@ from __future__ import annotations
 from typing import Iterable
 
 from .extractor import ExtractedEvidence
-from .models import RightsAssessment, RightsEvidence, RightsPolicy
+from .models import RightsAssessment, RightsPolicy
 from .normalizer import classify_evidence
 
 
@@ -14,7 +14,7 @@ def assess_rights(
     policy: RightsPolicy,
     assessed_at: str,
 ) -> RightsAssessment:
-    """Classify all evidence and produce one conservative Manifest decision."""
+    """Classify evidence and decide whether public reuse is eligible."""
 
     evidence = [classify_evidence(item) for item in extracted]
     effective_categories = sorted(
@@ -33,7 +33,7 @@ def assess_rights(
         reason_codes.append("multiple_effective_categories")
 
     decision = policy.category_decisions[category]
-    reason_codes.append(f"policy_decision_{decision}")
+    reason_codes.append(f"public_reuse_decision_{decision}")
     return RightsAssessment(
         category=category,
         decision=decision,
@@ -51,15 +51,15 @@ def assessment_error(
     assessed_at: str,
     reason_code: str,
 ) -> RightsAssessment:
-    """Automatically exclude a record when raw evidence cannot be trusted."""
+    """Retain a record for research but exclude it from public reuse on error."""
 
     return RightsAssessment(
         category="unknown",
         decision="exclude",
         policy_version=policy.policy_version,
-        policy_rule="operational_guard.exclude",
+        policy_rule="operational_guard.public_reuse_exclude",
         assessed_at=assessed_at,
         evidence=[],
         effective_categories=[],
-        reason_codes=[reason_code, "operational_guard_exclude"],
+        reason_codes=[reason_code, "operational_guard_public_reuse_exclude"],
     )

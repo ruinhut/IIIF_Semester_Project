@@ -1,0 +1,4 @@
+﻿provider_id,provider_name,discovered_manifests,validated_manifests,declared_canvases,declared_image_bodies,downloaded_example_images,method
+provider-9dd288533f853f26,Digital Collections iiif of the Bavarian State Library,20,20,2668,2668,1,native-paginated-IIIF-Collection
+provider-0a19a8e5992b5a87,David Rumsey Map Collection,20,20,20,20,1,luna-paginated-explicit-manifest-links
+provider-9087fc100047c3b2,Vatican Library,20,20,10095,10095,1,amlad-manuscript-category-Capp.Giulia

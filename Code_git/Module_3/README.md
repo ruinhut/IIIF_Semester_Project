@@ -12,7 +12,7 @@ Manifest URLs. It has two internal stages:
 This module discovers resource URLs. It does not download and structurally
 validate every Manifest; that is Module 4.
 
-## Schema 2.0: provider-level multi-route discovery
+## Schema 2.1: provider-level discovery with reusable knowledge
 
 Module 3 groups Module 2 rows by `provider_id` and processes every checked
 route under one institution-level result. It attempts parseable JSON routes,
@@ -21,6 +21,15 @@ and explicit IIIF links found in provider-specific JSON APIs. Presentation
 Collection `next` pagination is followed within the collection limit. A
 provider succeeds when at least one route yields a Manifest; other route
 outcomes remain in its audit report.
+
+Schema 2.1 adds a persistent knowledge layer for providers whose public entry
+points do not directly expose a Manifest, Collection, or Change Discovery
+stream. A provider recipe supplies verified site facts, while a reusable skill
+implements the discovery algorithm. The current generic skill paginates a JSON
+API, extracts stable record identifiers, applies optional record filters, builds
+candidate Manifest URLs from templates, and validates each candidate as IIIF
+Presentation JSON. Skill attempts and outcomes are preserved in each provider's
+audit record.
 
 ## Input
 
@@ -36,6 +45,32 @@ curated mapping is:
 ```text
 config/provider_endpoints.json
 ```
+
+The optional discovery knowledge base is:
+
+```text
+config/discovery_knowledge.json
+```
+
+The official-guide evidence library is stored separately:
+
+```text
+config/official_guide_knowledge.json
+```
+
+It contains the documented resource-finding operations for all 69 visible
+provider/resource entries in the official IIIF guide index at source revision
+`c94b51bc335c6050667a536f2ba737807b92f8dc`. These records are investigation
+evidence and candidate skills. They are not executed automatically. A provider
+recipe moves to `discovery_knowledge.json` only after its HTTP, JSON and IIIF
+chain has been validated. The readable provider-by-provider index is
+`knowledge/official_guides/provider_skill_inventory.md`.
+
+Each knowledge entry links an institution to one or more generic skills. A
+recipe may declare an item-list API, the JSON path containing its records, the
+identifier field, an availability filter, and one or more Manifest URL
+templates. Provider-specific URLs stay in configuration rather than Python
+branches.
 
 One curated entry has this shape:
 
@@ -85,6 +120,30 @@ Every candidate is fetched and must decode to a recognized `Manifest`,
 `Collection`, `OrderedCollection`, or `OrderedCollectionPage`. The crawler is
 bounded by page depth, pages, candidate URLs, response size, and Manifest count.
 It does not treat arbitrary HTML metadata as IIIF.
+
+### Knowledge-assisted discovery
+
+Knowledge skills run after direct machine-readable routes and before the noisy
+HTML fallback. The first reusable skill is
+`paginated_json_identifiers_to_manifest_templates`:
+
+1. request a bounded institutional list API;
+2. traverse the configured JSON record path and pagination convention;
+3. select usable records from declarative filters;
+4. extract stable identifiers;
+5. render one or more Manifest URL templates;
+6. fetch and validate candidates as Presentation 2 or 3 Manifests.
+
+The investigation method is documented in `knowledge/discovery_playbook.md`.
+Institution case reports record the evidence used to create each recipe, while
+`knowledge/skills/` documents the reusable algorithm separately. This lets a
+new institution with the same structural pattern use configuration alone.
+
+Official IIIF guide operations are imported with
+`tools/import_official_guide_knowledge.py`. The importer preserves the official
+text, screenshots, links, checked date and source Git revision, then maps each
+provider to candidate skills without claiming that those candidates already
+work at catalogue scale.
 
 ## Outputs
 
@@ -144,13 +203,66 @@ deleted activities, malformed JSON, and pages without IIIF evidence.
 | `fetch.py` | Bounded HTTP and JSON retrieval |
 | `html_discovery.py` | Declared-link extraction and bounded HTML crawl |
 | `discovery.py` | Activity Stream and Collection traversal |
+| `knowledge.py` | Load and match versioned provider knowledge |
+| `skills.py` | Execute reusable, configuration-driven discovery skills |
+| `official_guide_knowledge.py` | Import and validate official guide evidence and candidate skills |
 | `store.py` | JSONL, CSV, and text persistence |
 | `pipeline.py` | Configuration, orchestration, deduplication, and logging |
 | `cli.py` | Command-line interface |
 
+## Bounded live knowledge-transfer evaluation
+
+The 2026-10-01 evaluation in
+`evaluation/2026-10-01_knowledge_transfer/` used two previously unresolved
+providers:
+
+- **EPFL Plume** was the investigation case. Its Omeka S item API and two
+  documented IIIF Manifest route patterns were encoded as a provider recipe.
+- **Art Institute of Chicago** was a transfer case. The same generic skill was
+  reused with a different API shape, pagination keys, filter, and URL template;
+  no provider-specific Python code was added.
+
+Module 3 resolved both providers and validated 20 Manifest URLs in total under
+an intentional limit of ten per provider. A Module 4 handoff then validated all
+20 Manifests and inventoried 5,570 Canvases, image bodies, and Image Services.
+These counts demonstrate bounded transfer of the method; they are not complete
+institutional harvest totals.
+
 ## Technical references
+
+The 2026-10-15 provider investigation is recorded in
+`knowledge/institutions/2026-10-15_provider_routes.md`. New reusable catalogue
+skills extract declared Manifest URLs from paginated JSON or identifiers from
+targeted HTML listings; Collection traversal supports `first` as well as `next`.
+Executable recipes retain the existing EPFL and Chicago knowledge. Live results
+and per-provider failures are kept in the isolated evaluation directory, not
+mixed into the production outputs. These are bounded samples, not full harvests.
+
+The subsequent five-provider completion is documented in
+`knowledge/institutions/2026-10-15_five_provider_completion.md`. Its isolated
+evaluation validates 100 Manifests and completes five real linked-image
+downloads through Modules 5-8. Exact source batches and failures are retained
+under `evaluation/2026-10-15_five_provider_completion/`; no production output
+directory is replaced by these samples.
 
 - [IIIF Change Discovery API 1.0](https://iiif.io/api/discovery/1.0/)
 - [IIIF Presentation API 3.0](https://iiif.io/api/presentation/3.0/)
 - [IIIF Presentation API 2.1](https://iiif.io/api/presentation/2.1/)
+- [Omeka S REST API](https://omeka.org/s/docs/developer/api/rest_api/)
+- [Omeka S IIIF Presentation module](https://omeka.org/s/docs/developer/module_docs/IiifPresentation/)
+- [Omeka S IIIF Server module](https://omeka.org/s/modules/IiifServer/)
+- [Art Institute of Chicago API](https://api.artic.edu/docs/)
+
+## Reviewed POST search and larger catalogues
+
+Catalogue recipes also support explicitly reviewed read-only POST requests,
+JSON-body pagination and catalogue-only headers. A configured `total_path`
+detects a short page before the source's declared total instead of silently
+claiming complete enumeration. See
+[`knowledge/skills/public_post_search_and_pagination.md`](knowledge/skills/public_post_search_and_pagination.md).
+
+Discovery evidence uses a set index rather than repeatedly scanning all earlier
+findings. Distinct sources are preserved while Manifest counts remain unique
+by URL. The Blavatnik investigation and current source limitations are recorded
+in [`knowledge/institutions/2026-10-16_blavatnik.md`](knowledge/institutions/2026-10-16_blavatnik.md).
 

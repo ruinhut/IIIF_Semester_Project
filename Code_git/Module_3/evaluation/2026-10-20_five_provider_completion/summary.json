@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-10-20T14:48:29.646557+00:00",
+  "new_resolved_source_entries": 5,
+  "discovered_manifest_urls": 28,
+  "validated_manifests": 28,
+  "exported_documents": 28,
+  "exported_image_associations": 1245,
+  "distinct_image_urls": 1245,
+  "actual_downloaded_sample_images": 5,
+  "actual_sample_image_bytes": 9851647,
+  "ocr_reference_descriptors": 0,
+  "schema_validated_sample_json_files": 15,
+  "decoded_images": 5,
+  "smaller_than_canvas_declaration": 0,
+  "tests_passed": 166,
+  "previous_resolved_census_entries": 49,
+  "cumulative_resolved_census_entries": 54,
+  "census_entries": 94,
+  "remaining_unresolved_census_entries": 40,
+  "configuration_promoted": true,
+  "scope": "Bounded samples; source entries include an aggregator. Historical successes were not all re-fetched today.",
+  "unresolved_investigation": [
+    {
+      "provider_name": "Yale University Library",
+      "observed_status": "HTTP 202 empty search response; distinct from the successful Yale museum routes",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Digital Commonwealth",
+      "observed_status": "HTTP 403 on documented search API and custom portal",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "National Library of Finland (Finna.fi)",
+      "observed_status": "HTTP 403 on documented public search routes",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "North Carolina State University Libraries",
+      "observed_status": "HTTP 401 on catalogue routes",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "University College Dublin Libraries",
+      "observed_status": "TLS issuer-chain validation failure; verification was not disabled",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Library of Congress",
+      "observed_status": "HTTP 403 on public JSON search",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "University of Leeds Libraries Cultural Collections",
+      "observed_status": "A native Manifest works, but bulk enumeration is not established; HTML catalogue returned 403",
+      "counted_as_new_success": false
+    }
+  ],
+  "legacy_shared_canvas_manifests": 0,
+  "summed_per_manifest_distinct_image_body_count": 1245
+}

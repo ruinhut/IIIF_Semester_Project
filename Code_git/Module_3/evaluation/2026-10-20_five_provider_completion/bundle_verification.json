@@ -1,0 +1,75 @@
+{
+  "verified_bundles": 5,
+  "schema_validated_json_files": 15,
+  "provider_ids": [
+    "provider-116ce327597310c6",
+    "provider-47cf886a2e6017f1",
+    "provider-47ee4f79e1a60cac",
+    "provider-665981fb2cfa68fa",
+    "provider-8798d72493175a05"
+  ],
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-202e8aeec8b7418c",
+      "resource_id": "resource-b83e5093a198bf079a2e",
+      "providers": [
+        {
+          "provider_id": "provider-47cf886a2e6017f1",
+          "provider_name": "Ghent University"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-20_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-202e8aeec8b7418c\\000009_resource-b83e5093a198bf079a2e\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-a5c5be7c5e8560e9",
+      "resource_id": "resource-fcfee4361d62bfe75602",
+      "providers": [
+        {
+          "provider_id": "provider-47ee4f79e1a60cac",
+          "provider_name": "University of St. Andrews"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-20_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-a5c5be7c5e8560e9\\000001_resource-fcfee4361d62bfe75602\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-450f7a77df93fa06",
+      "resource_id": "resource-e8ad7a2448eb03984de5",
+      "providers": [
+        {
+          "provider_id": "provider-8798d72493175a05",
+          "provider_name": "Yale Center for British Art"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-20_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-450f7a77df93fa06\\000001_resource-e8ad7a2448eb03984de5\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-37bccec43f5e0fb3",
+      "resource_id": "resource-196d90bd481a0a824cc8",
+      "providers": [
+        {
+          "provider_id": "provider-665981fb2cfa68fa",
+          "provider_name": "Yale Peabody Museum"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-20_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-37bccec43f5e0fb3\\000000_resource-196d90bd481a0a824cc8\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-7bb05a29bf2aeb6a",
+      "resource_id": "resource-b4eb3a4aad7172cd8a9f",
+      "providers": [
+        {
+          "provider_id": "provider-116ce327597310c6",
+          "provider_name": "Yale University Art Gallery"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-20_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-7bb05a29bf2aeb6a\\000000_resource-b4eb3a4aad7172cd8a9f\\image.jpg",
+      "reference_files": 0
+    }
+  ],
+  "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+}

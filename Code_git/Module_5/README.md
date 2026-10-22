@@ -1,57 +1,60 @@
-# Module 5 — IIIF Rights Identification and Filtering
+# Module 5 — Rights Identification and Research-Retention Policy
 
-Module 5 is a fully automatic stage. It reads structurally valid IIIF Manifests from Module 4, preserves and classifies their rights evidence, applies a versioned allow/exclude policy, and exports only rights-cleared resources downstream. It creates no manual-review queue.
+Module 5 reads structurally valid IIIF Manifests from Module 4, extracts rights evidence, normalizes it, and applies a versioned policy.
 
-A missing rights statement means **unknown rights**, not public domain. The output therefore labels missing evidence as `unknown` / “Unknown rights” and automatically excludes it from the rights-cleared dataset. Only explicit public-domain or accepted open-license evidence is allowed.
+The schema 2.0 contract separates two questions:
 
-## Scope
+1. May the project retain the URL and metadata and use them for academic analysis?
+2. Is the resource eligible for public distribution or commercial reuse?
 
-The module:
+Every processed record is retained for research and sent downstream. The policy decision `allow` or `exclude` applies only to public reuse.
 
-- reads Module 4's validated Manifest JSONL, resource inventory, and cached raw JSON;
-- verifies cached JSON against Module 4's SHA-256 when enabled;
-- extracts `rights` and `license` at Manifest, Canvas, Annotation, and Body levels;
-- retains rights-labelled metadata, `requiredStatement`, and legacy `attribution`;
-- records original and normalized values, JSON path, resource scope, category, and matched rule;
-- distinguishes decisive rights evidence from attribution-only notices;
-- assigns English and Chinese display labels;
-- automatically assigns `allow` or `exclude`;
-- exports page/image rows only for allowed Manifests.
+## Rights states
 
-It does not discover resources, fetch Manifests, validate Presentation structure, download images, run OCR, or normalize descriptive metadata.
+| Category | Public-reuse decision | Research downstream |
+|---|---|---|
+| `public_domain` | `allow` | retained |
+| `open_license` | `allow` | retained |
+| `noncommercial_or_limited` | `exclude` | retained |
+| `in_copyright` | `exclude` | retained |
+| `no_known_copyright` | `exclude` | retained |
+| `institutional_terms` | `exclude` | retained |
+| `unknown` | `exclude` | retained |
+| `conflicting` | `exclude` | retained |
+
+An `exclude` decision therefore means “excluded from the public-reuse subset,” not “deleted from the pipeline.”
+
+Each assessment records:
+
+- the original and normalized rights evidence;
+- the JSON path and resource scope of each value;
+- `decision_scope: public_reuse`;
+- `research_status: retained`;
+- URL/metadata retention and academic-analysis permissions;
+- public-distribution and commercial-use eligibility;
+- policy version, rule, reason codes, provider and Manifest provenance.
 
 ## Inputs
 
-The default configuration consumes:
-
 - `../Module_4/data/output/validated_manifests.jsonl`
 - `../Module_4/data/output/manifest_resource_inventory.jsonl`
-- cached raw JSON paths recorded by Module 4
+- raw Manifest JSON files cached by Module 4
 
-Only Module 4 schema 1.0 records with `structural_validation.status: "valid"` are accepted.
+Only structurally valid Module 4 schema 1.0 records are processed.
 
-## Automatic policy
+## Outputs
 
-The tracked policy is `policies/automatic-2026-09-25.json`.
+- `research_manifests.jsonl`: every processed Manifest and its full rights assessment; canonical Module 6 input.
+- `research_only_manifests.jsonl`: records retained for research but excluded from public reuse.
+- `reuse_eligible_manifests.jsonl`: records eligible for public reuse.
+- `research_resource_inventory.jsonl/csv`: all resource rows retained for research; canonical Module 6 input.
+- `reuse_eligible_resource_inventory.jsonl/csv`: the public-reuse-eligible resource subset.
+- `rights_summary.csv`: one audit row per Manifest.
+- `data/log/Module5_<local-time>_log.txt`: counts, policy and output paths.
 
-| Category | Display meaning | Decision |
-|---|---|---|
-| `public_domain` | Public domain | allow |
-| `open_license` | CC BY or CC BY-SA | allow |
-| `noncommercial_or_limited` | Restricted reuse | exclude |
-| `in_copyright` | In copyright | exclude |
-| `no_known_copyright` | No known copyright | exclude |
-| `institutional_terms` | Institution-specific terms | exclude |
-| `unknown` | No decisive rights information supplied | exclude |
-| `conflicting` | Conflicting rights information | exclude |
-
-Operational evidence failures, including missing raw JSON or checksum mismatch, are also automatically excluded. They can never be changed into `allow` by a category policy.
-
-RightsStatements.org entries are descriptive statements rather than licenses and use the canonical `/vocab/` URI. See the [RightsStatements FAQ](https://rightsstatements.org/en/documentation/faq) and [Creative Commons license guide](https://creativecommons.org/share-your-work/use-remix/cc-licenses/).
+Operational evidence failures remain in `research_manifests.jsonl` with their URL, metadata and failure reason. They are not public-reuse eligible.
 
 ## Run
-
-From `Code_git/Module_5`:
 
 ```powershell
 python -m iiif_rights_filter run --config config.example.json
@@ -59,23 +62,8 @@ python -m iiif_rights_filter run --config config.smoke.json
 python -m iiif_rights_filter run --config config.example.json --limit 20
 ```
 
-## Outputs
-
-Generated data under `data/output` and logs under `data/log` are ignored by Git.
-
-- `rights_assessed_manifests.jsonl`: every processed Manifest, including excluded records and complete evidence;
-- `allowed_manifests.jsonl`: Manifests accepted by the active policy;
-- `excluded_manifests.jsonl`: every automatically excluded Manifest and its reason;
-- `allowed_resource_inventory.jsonl/csv`: Module 4 resources belonging to allowed Manifests;
-- `rights_summary.csv`: one compact row per Manifest, including English and Chinese labels;
-- `Module5_YYYY-MM-DD_HH-MM-SS_log.txt`: configuration, policy, counts, and paths.
-
-Each `rights_assessment` retains `category`, `decision`, bilingual `display_label`, `policy_version`, `policy_rule`, `effective_categories`, `reason_codes`, and every evidence item's exact source information.
-
-## Validation
+## Test
 
 ```powershell
 python -W error::ResourceWarning -m unittest discover -s tests -v
 ```
-
-The five-Manifest integration sample is expected to produce 1 allowed and 4 automatically excluded Manifests. Fragmentarium is allowed by CC BY and supplies 3 downstream page/image rows. BSB NoC-NC, Digital Commonwealth no-known-copyright wording, Gallica institutional terms, and Harvard unknown rights remain fully recorded but are excluded.

@@ -1,0 +1,6 @@
+{
+  "provider-6fb76c5e6a229a82": {
+    "manifest_url_pattern": "/presentation/AKON/",
+    "reason": "Keep the recorded ANNO image HTTP 400 failure; independently demonstrate image delivery on a documented AKON postcard."
+  }
+}

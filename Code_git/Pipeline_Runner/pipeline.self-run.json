@@ -1,0 +1,70 @@
+{
+  "log_directory": "data/log",
+  "modules": [
+    {
+      "number": 1,
+      "name": "Provider Census and Selection",
+      "directory": "../Module_1",
+      "package": "iiif_provider_census",
+      "config": "config.example.json",
+      "arguments": ["--institution", "all"]
+    },
+    {
+      "number": 2,
+      "name": "Entry URL Accessibility and Validity Check",
+      "directory": "../Module_2",
+      "package": "iiif_entry_validator",
+      "config": "config.example.json",
+      "arguments": []
+    },
+    {
+      "number": 3,
+      "name": "IIIF Resource Discovery",
+      "directory": "../Module_3",
+      "package": "iiif_resource_discovery",
+      "config": "config.example.json",
+      "arguments": []
+    },
+    {
+      "number": 4,
+      "name": "Manifest Fetcher and Structural Validator",
+      "directory": "../Module_4",
+      "package": "iiif_manifest_validator",
+      "config": "config.example.json",
+      "arguments": ["--force-refresh"]
+    },
+    {
+      "number": 5,
+      "name": "Rights Identification and Filtering",
+      "directory": "../Module_5",
+      "package": "iiif_rights_filter",
+      "config": "config.example.json",
+      "arguments": []
+    },
+    {
+      "number": 6,
+      "name": "Metadata Extraction and Normalization",
+      "directory": "../Module_6",
+      "package": "iiif_metadata_normalizer",
+      "config": "config.example.json",
+      "arguments": []
+    },
+    {
+      "number": 7,
+      "name": "Common-Schema Validation and Export",
+      "directory": "../Module_7",
+      "package": "iiif_common_exporter",
+      "config": "config.example.json",
+      "arguments": []
+    },
+    {
+      "number": 8,
+      "name": "Linked Image Downloader",
+      "directory": "../Module_8",
+      "package": "iiif_image_downloader",
+      "command": "download-example",
+      "config": "config.example.json",
+      "arguments": []
+    }
+  ]
+}

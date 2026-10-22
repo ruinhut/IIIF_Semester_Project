@@ -1,0 +1,95 @@
+﻿provider_id,provider_name,institution_url,status
+provider-691126b502b5821e,Art Institute of Chicago,https://www.artic.edu/,manifest_found_and_basic_structure_validated
+provider-6fb76c5e6a229a82,Austrian National Library,https://iiif.onb.ac.at/,manifest_found_and_basic_structure_validated
+provider-9639004395c2739d,Bavarian State Library (BSB) / Munich Digitization Centre (MDZ),https://www.digitale-sammlungen.de/en/,manifest_found_and_basic_structure_validated
+provider-83eb25cc392724da,Beyond Words: Illuminating Manuscripts in Boston Collections,http://beyondwords2016.org/,unresolved_in_cumulative_evidence
+provider-a668e1096468c352,Bibliothèque nationale de France (BnF),https://gallica.bnf.fr/,unresolved_in_cumulative_evidence
+provider-f10ea7c297cd81a8,Biblissima,https://portail.biblissima.fr/en/,manifest_found_and_basic_structure_validated
+provider-a2d020e1ff7f28ef,Biblissima reconstituted manuscript demo,http://demos.biblissima-condorcet.fr/chateauroux/osd-demo/,manifest_found_and_basic_structure_validated
+provider-4ef10065e633729c,Blavatnik Archive,https://www.blavatnikarchive.org/collections,manifest_found_and_basic_structure_validated
+provider-028fd9292205c39c,Bodmer Lab,https://bodmerlab.unige.ch/fr/search?keywords=,manifest_found_and_basic_structure_validated
+provider-acb86cbbcb639914,British Library,https://www.bl.uk/collection-guides/iiif,unresolved_in_cumulative_evidence
+provider-32c223e0cddf015c,Brown University Digital Repository,https://repository.library.brown.edu/studio/,manifest_found_and_basic_structure_validated
+provider-9c24703f7d539465,Cardiff University,https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1,unresolved_in_cumulative_evidence
+provider-6a0186046b49634f,Carnegie Museum of Art,http://cmoa.org/about/,manifest_found_and_basic_structure_validated
+provider-31c6cd47abf916e0,Cuban Digital Collections,http://iiif.sld.cu/,unresolved_in_cumulative_evidence
+provider-c4aa50f2571a99e9,Cultural Japan,https://cultural.jp/,unresolved_in_cumulative_evidence
+provider-0a19a8e5992b5a87,David Rumsey Map Collection,https://www.davidrumsey.com/,manifest_found_and_basic_structure_validated
+provider-02221348697554a3,DigiPress - The newspaper portal of the Bayerische Staatsbibliothek (Bavarian State Library),https://digipress.digitale-sammlungen.de/,manifest_found_and_basic_structure_validated
+provider-9dd288533f853f26,Digital Collections iiif of the Bavarian State Library,https://app.digitale-sammlungen.de/bookshelf/?language=en,manifest_found_and_basic_structure_validated
+provider-8d5551c46daf6536,Digital Commonwealth,https://digitalcommonwealth.org/,unresolved_in_cumulative_evidence
+provider-fe4c0f49dea727df,DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library,https://ostasien.digitale-sammlungen.de/?locale=en,unresolved_in_cumulative_evidence
+provider-f034696f3b1f1c1f,Digital Repository of Ireland,https://dri.ie/,unresolved_in_cumulative_evidence
+provider-617127ddd5e1eb45,DigitalGeorgetown's Integration of Universal Viewer into DSpace,https://repository.library.georgetown.edu/handle/10822/1044538,unresolved_in_cumulative_evidence
+provider-e1782e53439deb7b,DigiVatLib,http://digi.vatlib.it/,unresolved_in_cumulative_evidence
+provider-53220deba7b0d3eb,Durham University,https://discover.durham.ac.uk/discovery/search?tab=MUSECOLL&search_scope=IIIF&vid=44DUR_INST:VU1&offset=0,manifest_found_and_basic_structure_validated
+provider-858c23aa6223857c,e-codices,http://www.e-codices.unifr.ch/,manifest_found_and_basic_structure_validated
+provider-ef8c581d8869b1b6,e-codices - Virtual Manuscript Library of Switzerland,https://e-codices.ch/en,manifest_found_and_basic_structure_validated
+provider-7caa47e568a1951d,e-manuscripta (Manuscript material from Swiss libraries and archives),https://www.e-manuscripta.ch/,manifest_found_and_basic_structure_validated
+provider-3e6e726f68de3eaa,e-rara (digitized rare books from Swiss institutions),https://www.e-rara.ch/,manifest_found_and_basic_structure_validated
+provider-f2683615336e129a,Ecole Polytechnique Fédérale de Lausanne (EPFL),https://plume.epfl.ch/,manifest_found_and_basic_structure_validated
+provider-9c46415198317886,Europeana,https://www.europeana.eu/portal/en/search?q=provider_aggregation_edm_isShownBy%3A*iiif*&view=grid,unresolved_in_cumulative_evidence
+provider-818f5f2d2b5bea33,Folger Shakespeare Library,https://collections.folger.edu/,unresolved_in_cumulative_evidence
+provider-ef02e7415eb96a3e,Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments,https://fragmentarium.ms/search,manifest_found_and_basic_structure_validated
+provider-f1308a5306328276,FromThePage,http://www.fromthepage.com/,manifest_found_and_basic_structure_validated
+provider-9fd4bc767a462cd4,Gallica,http://gallica.bnf.fr/,unresolved_in_cumulative_evidence
+provider-d987c625d6365082,Georeferencer,http://www.georeferencer.com/,unresolved_in_cumulative_evidence
+provider-47cf886a2e6017f1,Ghent University,https://lib.ugent.be/en,unresolved_in_cumulative_evidence
+provider-47e8bc7785793a60,Göttingen University Collections,https://gdz.sub.uni-goettingen.de/,manifest_found_and_basic_structure_validated
+provider-637a751532e5f5a3,Harvard Art Museum,https://harvardartmuseums.org/collections,unresolved_in_cumulative_evidence
+provider-f63c0c9fa9fd0139,Harvard Art Museums,http://www.harvardartmuseums.org/,manifest_found_and_basic_structure_validated
+provider-d14fb88cde24ff49,Harvard University Digital Collections,https://library.harvard.edu/digital-collections,manifest_found_and_basic_structure_validated
+provider-2b0e0fbd04a5a32c,Historical State Search,http://historicalstate.lib.ncsu.edu/search,unresolved_in_cumulative_evidence
+provider-10b9080040d0cc13,hocrviewer,https://github.com/jbaiter/hocrviewer-mirador,unresolved_in_cumulative_evidence
+provider-f761dd27f50f2d55,Huntington Digital Library,https://hdl.huntington.org/digital/,manifest_found_and_basic_structure_validated
+provider-3acece25cdf777e4,Indigenous Digital Archive,https://omeka.dlcs-ida.org/s/ida/page/home,unresolved_in_cumulative_evidence
+provider-c321c7f2be84b70b,Internet Archive,https://archive.org/,manifest_found_and_basic_structure_validated
+provider-d98fe11ebfc34f6d,J. Paul Getty Trust,https://search.getty.edu/gateway/search?q=&cat=highlight&f=%22Open+Content+Images%22&rows=10&srt=a&dir=s&pg=1,unresolved_in_cumulative_evidence
+provider-ef2f1cc06db37bc3,KU Leuven,https://kuleuven.limo.libis.be/discovery,unresolved_in_cumulative_evidence
+provider-5e1c10e9ec094e2b,Lancaster University Library,https://digitalcollections.lancaster.ac.uk/,manifest_found_and_basic_structure_validated
+provider-e048f92222cd2e49,Leiden University,https://digitalcollections.universiteitleiden.nl/,manifest_found_and_basic_structure_validated
+provider-296564297962fb5e,Library of Congress,https://www.loc.gov/collections/,unresolved_in_cumulative_evidence
+provider-c4bca842117bf9f7,National Gallery of Art Library,https://library.nga.gov/discovery/collectionDiscovery?vid=01NGA_INST:NGA&collectionId=8157583990004896,unresolved_in_cumulative_evidence
+provider-7354f1a7e6bbf41f,National Library of Finland (Finna.fi),https://www.finna.fi/,unresolved_in_cumulative_evidence
+provider-5c37bd59a5085c75,National Library of Scotland,https://digital.nls.uk/gallery/,manifest_found_and_basic_structure_validated
+provider-0af71df3c01cdd4e,National Library of Wales,https://www.library.wales/,manifest_found_and_basic_structure_validated
+provider-760200a911a3f30f,National Palace Museum (Taiwan),https://digitalarchive.npm.gov.tw/,unresolved_in_cumulative_evidence
+provider-cabfcd6f3de8ca7d,North Carolina State University Libraries,https://d.lib.ncsu.edu/collections/,unresolved_in_cumulative_evidence
+provider-d305e1aa116fabbc,Northwestern University,https://digitalcollections.library.northwestern.edu/collections/,manifest_found_and_basic_structure_validated
+provider-38aa7bce2f3b0361,Parliamentary Archives - UK,https://archives.parliament.uk/,unresolved_in_cumulative_evidence
+provider-4853865a686721d7,Princeton University Art Museum,https://artmuseum.princeton.edu/search/collections,unresolved_in_cumulative_evidence
+provider-4e06374e85489c6e,Princeton University Libraries,https://dpul.princeton.edu/,manifest_found_and_basic_structure_validated
+provider-521d522730b9f10b,Qatar National Library,https://www.qdl.qa/en/search/site/?f[0]=document_source:archive_source,unresolved_in_cumulative_evidence
+provider-e1d421d66c6ea5a2,Radboud University Library,https://bijzonderecollecties.ubn.ru.nl/,manifest_found_and_basic_structure_validated
+provider-dc8b65c17e7d0e22,SAT Taishōzō Image DB,http://dzkimgs.l.u-tokyo.ac.jp/SATi/images.php?alang=en,unresolved_in_cumulative_evidence
+provider-c94006b2714289d6,Smithsonian Institution,https://collections.si.edu/search/results.htm?q=&iiif.enabled=true,unresolved_in_cumulative_evidence
+provider-6425a20ec00665e3,Smithsonian National Zoo,https://nationalzoo.si.edu/openaccess/search?edan_fq%5B%5D=online_visual_material%3Atrue,unresolved_in_cumulative_evidence
+provider-648f0743acabd9c2,Stanford University,https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available,manifest_found_and_basic_structure_validated
+provider-0aeecd6836053c69,The Frick Collection,http://digitalcollections.frick.org/digico/,unresolved_in_cumulative_evidence
+provider-a1544ec8d50c2696,The SCTA Reading Room,http://scta.lombardpress.org/,unresolved_in_cumulative_evidence
+provider-a360845c2b46d1bc,The Wolsey Manuscripts,http://www.wolseymanuscripts.ac.uk/manuscripts,unresolved_in_cumulative_evidence
+provider-7781a87376497b5c,UCLA Library Digital Collections,https://digital.library.ucla.edu/,unresolved_in_cumulative_evidence
+provider-015ee4ecd4a6fd91,Universitaet Jena,https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277,manifest_found_and_basic_structure_validated
+provider-370a429900074b10,University College Dublin Libraries,https://digital.ucd.ie/,unresolved_in_cumulative_evidence
+provider-1aa346b109dd7584,University of Cambridge,https://cudl.lib.cam.ac.uk/,manifest_found_and_basic_structure_validated
+provider-e883d0f637379155,University of Illinois at Urbana-Champaign Library,https://digital.library.illinois.edu/items?fq%5B%5D=primary_media_category%3A0,unresolved_in_cumulative_evidence
+provider-e8f0640dd782bf74,University of Leeds Libraries' Cultural Collections,https://library.leeds.ac.uk/info/1500/special_collections,unresolved_in_cumulative_evidence
+provider-09ef3155e4838a64,University of Leicester Library,https://specialcollections.le.ac.uk/,manifest_found_and_basic_structure_validated
+provider-5bb54fcb57aa7da9,University of North Texas Libraries,https://digital.library.unt.edu/,manifest_found_and_basic_structure_validated
+provider-992059478d1af0a4,University of Oxford (Digital Bodleian),https://digital.bodleian.ox.ac.uk/,manifest_found_and_basic_structure_validated
+provider-47ee4f79e1a60cac,University of St. Andrews,https://www.st-andrews.ac.uk/collections,unresolved_in_cumulative_evidence
+provider-2254ed59cf35068a,University of Toronto,https://collections.library.utoronto.ca/,manifest_found_and_basic_structure_validated
+provider-7ec00147ef5efa4a,University of Washington Libraries,https://content.lib.washington.edu/,manifest_found_and_basic_structure_validated
+provider-fa146b049ccac158,Utrecht University Library,https://objects.library.uu.nl/reader/object_list.php?lan=en,manifest_found_and_basic_structure_validated
+provider-9087fc100047c3b2,Vatican Library,https://digi.vatlib.it/,manifest_found_and_basic_structure_validated
+provider-f2fa8935cf790b44,vHMML,https://www.vhmml.org/,unresolved_in_cumulative_evidence
+provider-870ce1c300376029,Villanova University,https://digital.library.villanova.edu/,unresolved_in_cumulative_evidence
+provider-b49c571f8e0c0ba0,Wellcome Collection,https://wellcomecollection.org/collections,manifest_found_and_basic_structure_validated
+provider-d5e7b7675f084f36,Wikidata,https://www.wikidata.org/,manifest_found_and_basic_structure_validated
+provider-9a9d50ec8631eafd,Wikipedia,https://www.wikipedia.org/,unresolved_in_cumulative_evidence
+provider-33ef699d79fc12aa,World Digitial Library,https://www.wdl.org/,unresolved_in_cumulative_evidence
+provider-8763d3efa30c6554,Yale Center for British Art,http://britishart.yale.edu/,unresolved_in_cumulative_evidence
+provider-8798d72493175a05,Yale Center for British Art,https://collections.britishart.yale.edu/,unresolved_in_cumulative_evidence
+provider-665981fb2cfa68fa,Yale Peabody Museum,https://peabody.yale.edu/explore/collections,unresolved_in_cumulative_evidence
+provider-116ce327597310c6,Yale University Art Gallery,https://artgallery.yale.edu/,unresolved_in_cumulative_evidence
+provider-feedf2702c521119,Yale University Library,https://collections.library.yale.edu/,unresolved_in_cumulative_evidence

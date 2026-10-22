@@ -1,0 +1,6 @@
+﻿provider_id,provider_name,discovered_manifest_urls,validated_manifests,exported_image_associations,distinct_image_urls,actual_sample_images,actual_width,actual_height,canvas_width,canvas_height,matches_declared_dimensions
+provider-e1782e53439deb7b,DigiVatLib,6,6,1961,1961,1,1416,1965,1416,1965,True
+provider-d98fe11ebfc34f6d,J. Paul Getty Trust,6,6,19,19,1,483,600,483,600,True
+provider-c4aa50f2571a99e9,Cultural Japan,6,6,6,6,1,4576,3510,4576,3510,True
+provider-637a751532e5f5a3,Harvard Art Museum,6,6,7,7,1,299,1024,299,1024,True
+provider-c4bca842117bf9f7,National Gallery of Art Library,3,3,999,999,1,2818,4096,3302,4800,False

@@ -12,8 +12,8 @@ from urllib.parse import urlsplit, urlunsplit
 MODULE_4_SCHEMA_VERSION = "1.0"
 
 
-def canonicalize_url(value: str) -> str:
-    """Validate and normalize a public HTTP(S) URL."""
+def canonicalize_url(value: str, *, preserve_fragment: bool = False) -> str:
+    """Normalize a transport URL, retaining fragments for logical Canvas IDs."""
 
     text = str(value).strip()
     parts = urlsplit(text)
@@ -28,7 +28,8 @@ def canonicalize_url(value: str) -> str:
         or (parts.scheme.lower() == "https" and port == 443)
     ):
         host = f"{host}:{port}"
-    return urlunsplit((parts.scheme.lower(), host, parts.path or "/", parts.query, ""))
+    return urlunsplit((parts.scheme.lower(), host, parts.path or "/", parts.query,
+                       parts.fragment if preserve_fragment else ""))
 
 
 def stable_manifest_id(manifest_url: str) -> str:
@@ -125,6 +126,7 @@ class ValidationResult:
 
     status: str = "invalid"
     presentation_version: Optional[str] = None
+    source_format: Optional[str] = None
     declared_id: Optional[str] = None
     declared_type: Optional[str] = None
     context_values: list[str] = field(default_factory=list)
@@ -141,6 +143,7 @@ class ValidationResult:
         return {
             "status": self.status,
             "presentation_version": self.presentation_version,
+            "source_format": self.source_format,
             "declared_id": self.declared_id,
             "declared_type": self.declared_type,
             "context_values": list(self.context_values),

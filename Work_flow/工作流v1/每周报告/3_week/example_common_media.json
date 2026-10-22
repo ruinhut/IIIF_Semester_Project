@@ -1,0 +1,30 @@
+﻿{
+    "canvas":  {
+                   "id":  "https://fragmentarium.ms/metadata/iiif/F-u3vo/canvas/F-u3vo/Wilhelmsstift_KH_5184_IIv_Ir.jp2.json",
+                   "label":  "Wilhelmsstift_KH_5184_IIv_Ir"
+               },
+    "image":  {
+                  "format":  "image/jpeg",
+                  "id":  "https://fragmentarium.ms/loris/F-u3vo/Wilhelmsstift_KH_5184_IIv_Ir.jp2/full/full/0/default.jpg",
+                  "service_urls":  [
+                                       "https://fragmentarium.ms/loris/F-u3vo/Wilhelmsstift_KH_5184_IIv_Ir.jp2"
+                                   ],
+                  "type":  "Image"
+              },
+    "record_id":  "manifest-5c57a6b89f846c5f",
+    "resource_id":  "resource-9e005357d509c62648f4",
+    "rights":  {
+                   "academic_analysis_allowed":  true,
+                   "category":  "open_license",
+                   "commercial_use_allowed":  true,
+                   "decision":  "allow",
+                   "decision_scope":  "public_reuse",
+                   "policy_version":  "automatic-2026-09-29",
+                   "public_distribution_allowed":  true,
+                   "public_reuse_eligible":  true,
+                   "research_status":  "retained"
+               },
+    "schema_version":  "iiif-time-atlas-media-0.1",
+    "sequence":  0,
+    "source_manifest_url":  "https://fragmentarium.ms/metadata/iiif/F-u3vo/manifest.json"
+}

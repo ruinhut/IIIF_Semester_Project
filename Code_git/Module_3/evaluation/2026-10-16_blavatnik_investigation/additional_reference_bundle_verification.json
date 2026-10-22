@@ -1,0 +1,591 @@
+{
+  "verified_bundles": 97,
+  "schema_validated_json_files": 291,
+  "exact_original_text_and_image_matches": 97,
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-69ce49a7f26f00fa",
+      "resource_id": "resource-0e2688b8294ee592e5dd",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-69ce49a7f26f00fa\\000000_resource-0e2688b8294ee592e5dd",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-53d24555da62a23c",
+      "resource_id": "resource-5dd974fd04e6367aa3b1",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-53d24555da62a23c\\000000_resource-5dd974fd04e6367aa3b1",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-2e0b392e11cb0330",
+      "resource_id": "resource-b74fc1dd085502011a7f",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-2e0b392e11cb0330\\000000_resource-b74fc1dd085502011a7f",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-d8b973696fbc80b8",
+      "resource_id": "resource-f4d026b05166e5f36ea6",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-d8b973696fbc80b8\\000000_resource-f4d026b05166e5f36ea6",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-f2c28c03e379025b",
+      "resource_id": "resource-4475c54dff6e604ec9c4",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-f2c28c03e379025b\\000000_resource-4475c54dff6e604ec9c4",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-f231319288c08b5e",
+      "resource_id": "resource-9f540d527cca745e0e0f",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-f231319288c08b5e\\000000_resource-9f540d527cca745e0e0f",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-e0c9b70cc688ba9d",
+      "resource_id": "resource-1c999ae186521e8f4edf",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-e0c9b70cc688ba9d\\000000_resource-1c999ae186521e8f4edf",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-94ddb7238d64f5b5",
+      "resource_id": "resource-71b0feeebd67e8dd853d",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-94ddb7238d64f5b5\\000000_resource-71b0feeebd67e8dd853d",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-bd042fd663d9033d",
+      "resource_id": "resource-80391d3b7e7786023cd9",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-bd042fd663d9033d\\000000_resource-80391d3b7e7786023cd9",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-f7c20ceb3ace20f9",
+      "resource_id": "resource-1e1d958934211a7c91ca",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-f7c20ceb3ace20f9\\000000_resource-1e1d958934211a7c91ca",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-7319a4aab909cd06",
+      "resource_id": "resource-5e88748df6cbb3fcfe4b",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-7319a4aab909cd06\\000000_resource-5e88748df6cbb3fcfe4b",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-105e182228f6d641",
+      "resource_id": "resource-27a67bfa2edba1e27932",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-105e182228f6d641\\000000_resource-27a67bfa2edba1e27932",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-ea46a3c66c08cd6d",
+      "resource_id": "resource-874c7e14166a41f0b1ae",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-ea46a3c66c08cd6d\\000000_resource-874c7e14166a41f0b1ae",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-d9bf15b2f822a80e",
+      "resource_id": "resource-1c395e31198bd4e59889",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-d9bf15b2f822a80e\\000000_resource-1c395e31198bd4e59889",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-2c65b46ee43e3f19",
+      "resource_id": "resource-c1da1b5436430d345ec1",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-2c65b46ee43e3f19\\000000_resource-c1da1b5436430d345ec1",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-540e010a9b021045",
+      "resource_id": "resource-481337eea482da8b71ad",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-540e010a9b021045\\000000_resource-481337eea482da8b71ad",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-72cb47eaa484f05b",
+      "resource_id": "resource-8c3122c96218c7579197",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-72cb47eaa484f05b\\000000_resource-8c3122c96218c7579197",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-82683ae94dbd5483",
+      "resource_id": "resource-a22dcbcf790206f34d93",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-82683ae94dbd5483\\000000_resource-a22dcbcf790206f34d93",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-bf4c45cc7d4baa28",
+      "resource_id": "resource-8098b4467382ce67125e",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-bf4c45cc7d4baa28\\000000_resource-8098b4467382ce67125e",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-a3e0e039f6b35214",
+      "resource_id": "resource-257d080c27518313ae9e",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-a3e0e039f6b35214\\000000_resource-257d080c27518313ae9e",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-ae7cc8d1c4a76f7e",
+      "resource_id": "resource-5adab786d8d931f92ccf",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-ae7cc8d1c4a76f7e\\000000_resource-5adab786d8d931f92ccf",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-4bc85382148340ff",
+      "resource_id": "resource-58051221b53de6faad36",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-4bc85382148340ff\\000000_resource-58051221b53de6faad36",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-09a88fbd5422cb72",
+      "resource_id": "resource-a2c6656a4fd58beefcdc",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-09a88fbd5422cb72\\000000_resource-a2c6656a4fd58beefcdc",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-fda5b89195e80022",
+      "resource_id": "resource-e728abaef948b4937718",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-fda5b89195e80022\\000000_resource-e728abaef948b4937718",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-05e8307e67f160e3",
+      "resource_id": "resource-a580ddbb66e53dd275ce",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-05e8307e67f160e3\\000000_resource-a580ddbb66e53dd275ce",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-d22cbd0d4fee0cd1",
+      "resource_id": "resource-6e16c302473c29b8abd5",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-d22cbd0d4fee0cd1\\000000_resource-6e16c302473c29b8abd5",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-e07460ad86276512",
+      "resource_id": "resource-5279a7e86ecc76d29944",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-e07460ad86276512\\000000_resource-5279a7e86ecc76d29944",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-b299d4f1d2b9859c",
+      "resource_id": "resource-3aaac2d35d1374d60cbf",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-b299d4f1d2b9859c\\000000_resource-3aaac2d35d1374d60cbf",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-bf0c38c43c7ab1ef",
+      "resource_id": "resource-a5e48363b3837ac42bb1",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-bf0c38c43c7ab1ef\\000000_resource-a5e48363b3837ac42bb1",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-5bb826c2fef9d3c6",
+      "resource_id": "resource-acfc4ef73494ada319ab",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-5bb826c2fef9d3c6\\000000_resource-acfc4ef73494ada319ab",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-1852bdab4c939693",
+      "resource_id": "resource-e12934a3b464a3a3aeeb",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-1852bdab4c939693\\000000_resource-e12934a3b464a3a3aeeb",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-b0d4b6988b4a260d",
+      "resource_id": "resource-0597067bd84e71a8ec82",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-b0d4b6988b4a260d\\000000_resource-0597067bd84e71a8ec82",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-eb213c06b16f1cdf",
+      "resource_id": "resource-e3707a9f1dc04dbec69c",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-eb213c06b16f1cdf\\000000_resource-e3707a9f1dc04dbec69c",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-a7bc236f14334b49",
+      "resource_id": "resource-6ef8f5c6bdfcc8fe7c65",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-a7bc236f14334b49\\000000_resource-6ef8f5c6bdfcc8fe7c65",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-ca93cfa15852b7a0",
+      "resource_id": "resource-6dca3cbc655b95496c57",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-ca93cfa15852b7a0\\000000_resource-6dca3cbc655b95496c57",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-d20a59880793cdc8",
+      "resource_id": "resource-db6bcbdaaa54fece6f43",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-d20a59880793cdc8\\000000_resource-db6bcbdaaa54fece6f43",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-debcfe043bde009f",
+      "resource_id": "resource-a6866b01fc2f42cc1ca9",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-debcfe043bde009f\\000000_resource-a6866b01fc2f42cc1ca9",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-7a6b4452ad96c35f",
+      "resource_id": "resource-288c62ee153204334b91",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-7a6b4452ad96c35f\\000000_resource-288c62ee153204334b91",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-3d4cf0d76334bd1c",
+      "resource_id": "resource-7fce04d216cfaceaaf78",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-3d4cf0d76334bd1c\\000000_resource-7fce04d216cfaceaaf78",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-3daa60855bdcff00",
+      "resource_id": "resource-209efa63b0444bb0ba37",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-3daa60855bdcff00\\000000_resource-209efa63b0444bb0ba37",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-4b650a91469ca12f",
+      "resource_id": "resource-38507eb76a1a4bb47b43",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-4b650a91469ca12f\\000000_resource-38507eb76a1a4bb47b43",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-deddd40c2c4c83ae",
+      "resource_id": "resource-692bb3e7dee914d49ae4",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-deddd40c2c4c83ae\\000000_resource-692bb3e7dee914d49ae4",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-3c3294ea5c414d1b",
+      "resource_id": "resource-09f4c3ba0569015ab1eb",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-3c3294ea5c414d1b\\000000_resource-09f4c3ba0569015ab1eb",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-572bb9cda5fc4610",
+      "resource_id": "resource-1be8eb3a24cf8b624757",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-572bb9cda5fc4610\\000000_resource-1be8eb3a24cf8b624757",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-e66218a2fa996c50",
+      "resource_id": "resource-e9217b250e1a57dfb90d",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-e66218a2fa996c50\\000000_resource-e9217b250e1a57dfb90d",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-e4c1d052c0a3480c",
+      "resource_id": "resource-f161a8e0d0dcdab3bc30",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-e4c1d052c0a3480c\\000000_resource-f161a8e0d0dcdab3bc30",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-9a09b401f32ba6f6",
+      "resource_id": "resource-782d236fba95b661b44f",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-9a09b401f32ba6f6\\000000_resource-782d236fba95b661b44f",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-cb7b5412c97a8c9a",
+      "resource_id": "resource-0992f7d2d392f048fb75",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-cb7b5412c97a8c9a\\000000_resource-0992f7d2d392f048fb75",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-bb909a76244aebac",
+      "resource_id": "resource-25bcb3efa7c1be89db3e",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-bb909a76244aebac\\000000_resource-25bcb3efa7c1be89db3e",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-f804bf29c6aa5aea",
+      "resource_id": "resource-f571d130ddef8513b337",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-f804bf29c6aa5aea\\000000_resource-f571d130ddef8513b337",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-7d3f3c4081e7c7e2",
+      "resource_id": "resource-6624cdf0ee711a86e247",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-7d3f3c4081e7c7e2\\000000_resource-6624cdf0ee711a86e247",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-1c3c6f10a3217afb",
+      "resource_id": "resource-eea073a3d329f5d6da5a",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-1c3c6f10a3217afb\\000000_resource-eea073a3d329f5d6da5a",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-cbca6634d0f941fd",
+      "resource_id": "resource-31d680536016acb82c50",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-cbca6634d0f941fd\\000000_resource-31d680536016acb82c50",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-74da611762a1d0b9",
+      "resource_id": "resource-2cb8c537692687c951f4",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-74da611762a1d0b9\\000000_resource-2cb8c537692687c951f4",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-e93305889c5c628a",
+      "resource_id": "resource-958da277aac0421e5ce3",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-e93305889c5c628a\\000000_resource-958da277aac0421e5ce3",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-d2e16255057a928a",
+      "resource_id": "resource-89d3bc671de23c2a4e14",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-d2e16255057a928a\\000000_resource-89d3bc671de23c2a4e14",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-429802f56cb0c96d",
+      "resource_id": "resource-7a18ee9a43049fc95c6a",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-429802f56cb0c96d\\000000_resource-7a18ee9a43049fc95c6a",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-2c8650973e489414",
+      "resource_id": "resource-7560f9e906f3544b4191",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-2c8650973e489414\\000000_resource-7560f9e906f3544b4191",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-eb21b159dddf0151",
+      "resource_id": "resource-ab99bbecefb44de8c36b",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-eb21b159dddf0151\\000000_resource-ab99bbecefb44de8c36b",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-584bb23dcae6a848",
+      "resource_id": "resource-02fbc665399a2fc9bb1b",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-584bb23dcae6a848\\000000_resource-02fbc665399a2fc9bb1b",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-cd4259cc83eb36a1",
+      "resource_id": "resource-50c7838dc9f554f3c6d2",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-cd4259cc83eb36a1\\000000_resource-50c7838dc9f554f3c6d2",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-5e33615e60fb2cdd",
+      "resource_id": "resource-1137b3d9767fd31439f7",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-5e33615e60fb2cdd\\000000_resource-1137b3d9767fd31439f7",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-5977ef87b7a6e892",
+      "resource_id": "resource-b522d19acccdcf68539e",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-5977ef87b7a6e892\\000000_resource-b522d19acccdcf68539e",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-9ea13668eb9ead99",
+      "resource_id": "resource-16c7a818e3d9ea6755e0",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-9ea13668eb9ead99\\000000_resource-16c7a818e3d9ea6755e0",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-6049d3b28c293204",
+      "resource_id": "resource-0a38928e5f08d35fa3f0",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-6049d3b28c293204\\000000_resource-0a38928e5f08d35fa3f0",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-8d105dd9aef5e47c",
+      "resource_id": "resource-a19f5ed0751e78bba80a",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-8d105dd9aef5e47c\\000000_resource-a19f5ed0751e78bba80a",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-c8abd05152c442b3",
+      "resource_id": "resource-f3de0c4362c0cf947e5f",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-c8abd05152c442b3\\000000_resource-f3de0c4362c0cf947e5f",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-e624ffeb5413e4bf",
+      "resource_id": "resource-baf7f3839abde7375e76",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-e624ffeb5413e4bf\\000000_resource-baf7f3839abde7375e76",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-6ab6a8d1ec2fbeee",
+      "resource_id": "resource-25a81c75f92f02424f67",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-6ab6a8d1ec2fbeee\\000000_resource-25a81c75f92f02424f67",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-7f180d4b77d2f570",
+      "resource_id": "resource-e31fb8c1526e564c9504",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-7f180d4b77d2f570\\000000_resource-e31fb8c1526e564c9504",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-83a89269776bac0e",
+      "resource_id": "resource-063f8e2fc152d306e0e6",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-83a89269776bac0e\\000000_resource-063f8e2fc152d306e0e6",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-23bb2d111d8c95a4",
+      "resource_id": "resource-d4e55b1ae52ac5548e3e",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-23bb2d111d8c95a4\\000000_resource-d4e55b1ae52ac5548e3e",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-24253ecb40b25b09",
+      "resource_id": "resource-b7193dfe83a3e4c969a7",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-24253ecb40b25b09\\000000_resource-b7193dfe83a3e4c969a7",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-fefb6d2c970b53de",
+      "resource_id": "resource-79794b564f6eef50e112",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-fefb6d2c970b53de\\000000_resource-79794b564f6eef50e112",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-deed338c77045ff5",
+      "resource_id": "resource-1ab3c0502ae5fde186e1",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-deed338c77045ff5\\000000_resource-1ab3c0502ae5fde186e1",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-264f1a145cb4a73e",
+      "resource_id": "resource-518d5f29397a0dc028ba",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-264f1a145cb4a73e\\000000_resource-518d5f29397a0dc028ba",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-069a6e79aba4f912",
+      "resource_id": "resource-849a3fb97db8f632d9ee",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-069a6e79aba4f912\\000000_resource-849a3fb97db8f632d9ee",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-5aa5a6e3a620316c",
+      "resource_id": "resource-58f21f8f67cba7d50ffc",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-5aa5a6e3a620316c\\000000_resource-58f21f8f67cba7d50ffc",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-8e92da440bbe126a",
+      "resource_id": "resource-1637e6184eb97852b03c",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-8e92da440bbe126a\\000000_resource-1637e6184eb97852b03c",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-72af2b89aad46d74",
+      "resource_id": "resource-8afa2a8a8ad70109f8a7",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-72af2b89aad46d74\\000000_resource-8afa2a8a8ad70109f8a7",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-e18e463484f7d0c4",
+      "resource_id": "resource-ab3566c3fa85cd740122",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-e18e463484f7d0c4\\000000_resource-ab3566c3fa85cd740122",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-34af72c4d8ea6ccc",
+      "resource_id": "resource-2f78c1b04c8f0c4a932c",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-34af72c4d8ea6ccc\\000000_resource-2f78c1b04c8f0c4a932c",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-5ebb49c3c575cf18",
+      "resource_id": "resource-cf44f39c9c3f7f5099b1",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-5ebb49c3c575cf18\\000000_resource-cf44f39c9c3f7f5099b1",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-4bb15227700ac7af",
+      "resource_id": "resource-a36c9c916347fb919d83",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-4bb15227700ac7af\\000000_resource-a36c9c916347fb919d83",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-1b7f7e708b5895c8",
+      "resource_id": "resource-afd97b6fdfbbddbb9b82",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-1b7f7e708b5895c8\\000000_resource-afd97b6fdfbbddbb9b82",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-403b3a81539364c9",
+      "resource_id": "resource-97e2b0203c31d3ef678f",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-403b3a81539364c9\\000000_resource-97e2b0203c31d3ef678f",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-24d595f926593c81",
+      "resource_id": "resource-0fa9a1d37675d6233a21",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-24d595f926593c81\\000000_resource-0fa9a1d37675d6233a21",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-e541ca6e256deb59",
+      "resource_id": "resource-eb6823dc7d7ea037563e",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-e541ca6e256deb59\\000000_resource-eb6823dc7d7ea037563e",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-6c8166ed09796008",
+      "resource_id": "resource-c93514a06d4438c51250",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-6c8166ed09796008\\000000_resource-c93514a06d4438c51250",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-b114bc25c9b3bab4",
+      "resource_id": "resource-c8843a2b8ff7352448b3",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-b114bc25c9b3bab4\\000000_resource-c8843a2b8ff7352448b3",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-3fc6a547f2524ffe",
+      "resource_id": "resource-0e5f5332989c899ea7f3",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-3fc6a547f2524ffe\\000000_resource-0e5f5332989c899ea7f3",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-e722f80ab8fa03ff",
+      "resource_id": "resource-4c68b84a51871f10678a",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-e722f80ab8fa03ff\\000000_resource-4c68b84a51871f10678a",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-8766955563126579",
+      "resource_id": "resource-fa95ed2a49f13561bd90",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-8766955563126579\\000000_resource-fa95ed2a49f13561bd90",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-2e8f0cb6e464e1d2",
+      "resource_id": "resource-b26dd54ae8261ad8b15c",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-2e8f0cb6e464e1d2\\000000_resource-b26dd54ae8261ad8b15c",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-816275deb6aca960",
+      "resource_id": "resource-e757c0f977014057f060",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-816275deb6aca960\\000000_resource-e757c0f977014057f060",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-a7225fe6ba0343f4",
+      "resource_id": "resource-ecac85c9cdab083d91ea",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-a7225fe6ba0343f4\\000000_resource-ecac85c9cdab083d91ea",
+      "references": 1
+    },
+    {
+      "record_id": "manifest-bd0b9561a8a46a48",
+      "resource_id": "resource-44f11618406f8b176169",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-16_blavatnik_investigation\\additional_references\\module8\\output\\all\\with_reference\\manifest-bd0b9561a8a46a48\\000000_resource-44f11618406f8b176169",
+      "references": 1
+    }
+  ],
+  "scope": "JSON schemas, IDs, Canvas/image hashes and exact source text; image decoding is checked separately."
+}

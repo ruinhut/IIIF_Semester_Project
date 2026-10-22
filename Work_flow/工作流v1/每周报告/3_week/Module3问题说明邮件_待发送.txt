@@ -1,0 +1,28 @@
+Subject: Clarification on EPFL Plume and Module 3 generalisation
+
+Dear Professor Kaplan,
+
+Attached is the revised figure summarising the current Module 3 generalisation evaluation.
+
+The 94 providers form the bounded census used in our baseline test. Module 3 resolved 10 of them with its original strategies: direct Manifests, IIIF Collections, Change Discovery streams, explicit IIIF links in JSON or HTML, and bounded same-site discovery. The other 84 are unresolved under these strategies; this does not mean that they do not provide IIIF.
+
+A held-out investigation of EPFL Plume exposed a platform-mediated discovery pattern that was not covered by the baseline. Its public homepage returned HTML but did not expose a bulk IIIF Collection or Change Discovery stream. Platform identification and documentation review showed that catalogue records can instead be enumerated through the Omeka S REST API:
+
+https://plume.epfl.ch/api/items
+
+The reusable process paginates this API, keeps records containing media, extracts each `o:id`, inserts that identifier into documented Manifest routes, and validates the resulting JSON as IIIF Presentation. For example, item 44 resolves to:
+
+https://plume.epfl.ch/iiif/3/44/manifest
+
+This Manifest was validated as Presentation 3 and contains 415 Canvases. Its page images are then obtained through the IIIF Image API service declared by each Canvas. For example:
+
+https://plume.epfl.ch/cantaloupe/iiif/2/CHEPFL_LIPR_AXA18_0010.tif/full/full/0/default.jpg
+
+I separated this method into a reusable API-pagination and identifier-to-Manifest skill, while keeping EPFL-specific URLs, JSON paths and templates in configuration. The same skill was applied to the Art Institute of Chicago with configuration changes only.
+
+The resulting design is: standard IIIF discovery first, reusable configurable platform skills second, and assisted investigation only for unresolved providers. Every discovered recipe must be validated before being stored as provider knowledge. Modules 4–7 should continue to consume a stable normalized contract, so adding a Module 3 recipe should not require provider-specific changes downstream.
+
+The reusable skill and provider knowledge are implemented and tested. Runtime AI integration remains a future extension for proposing recipes for previously unseen platforms.
+
+Best regards,
+Boheng Shang

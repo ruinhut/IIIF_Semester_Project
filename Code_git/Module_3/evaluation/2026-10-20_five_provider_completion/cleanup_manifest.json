@@ -1,0 +1,17 @@
+﻿{
+    "created_at":  "2026-10-20T16:50:20.0202622+02:00",
+    "removed_files":  [
+                          {
+                              "relative_path":  "probes\\standrews_items\\responses\\3546ac63689fe99d4123.txt",
+                              "bytes":  8388608,
+                              "reason":  "Truncated exploratory XML response, not used by accepted discovery recipes; request audit retained"
+                          },
+                          {
+                              "relative_path":  "probes\\standrews_items\\responses\\fd79dd159f3920a9212e.txt",
+                              "bytes":  8388608,
+                              "reason":  "Truncated exploratory XML response, not used by accepted discovery recipes; request audit retained"
+                          }
+                      ],
+    "total_removed_bytes":  16777216,
+    "retained":  "Code, configs, knowledge, request audits, raw validated Manifests and all sample bundles"
+}

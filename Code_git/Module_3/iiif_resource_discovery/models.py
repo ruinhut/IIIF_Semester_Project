@@ -9,7 +9,7 @@ from typing import Any, Mapping, Optional
 from urllib.parse import urlsplit, urlunsplit
 
 
-MODULE_3_SCHEMA_VERSION = "2.0"
+MODULE_3_SCHEMA_VERSION = "2.1"
 
 
 def canonicalize_url(value: str) -> str:
@@ -228,6 +228,7 @@ class ProviderDiscoveryResult:
     html_pages_visited: int = 0
     stream_pages_visited: int = 0
     collections_visited: int = 0
+    knowledge_application: list[Mapping[str, Any]] = field(default_factory=list)
     truncated: bool = False
 
     def to_dict(self) -> dict[str, Any]:
@@ -246,6 +247,9 @@ class ProviderDiscoveryResult:
             "html_pages_visited": self.html_pages_visited,
             "stream_pages_visited": self.stream_pages_visited,
             "collections_visited": self.collections_visited,
+            "knowledge_application": [
+                deepcopy(dict(item)) for item in self.knowledge_application
+            ],
             "truncated": self.truncated,
         }
         return data

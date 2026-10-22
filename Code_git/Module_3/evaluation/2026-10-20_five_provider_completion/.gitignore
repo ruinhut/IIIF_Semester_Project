@@ -1,0 +1,7 @@
+probes/*/responses/
+validation/
+downstream/
+download_examples/
+first_attempt/
+combined_resource_inventory.jsonl
+combined_validated_manifests.jsonl

@@ -17,6 +17,7 @@ from .models import (
     ResolvedEndpoint,
     canonicalize_url,
 )
+from .skills import execute_omeka_s_probe, execute_skill
 
 
 ACTIVE_ACTIVITY_TYPES = {"Create", "Update", "Add", "Move"}
@@ -52,6 +53,7 @@ class DiscoveryLimits:
 @dataclass
 class _DiscoveryState:
     manifest_urls: set[str] = field(default_factory=set)
+    manifest_finding_keys: set[tuple[Any, ...]] = field(default_factory=set)
     resolved_endpoint_keys: set[tuple[str, str]] = field(default_factory=set)
     processed_machine_urls: set[str] = field(default_factory=set)
     processed_collection_urls: set[str] = field(default_factory=set)
@@ -69,6 +71,7 @@ class ResourceDiscoverer:
         html_enabled: bool = True,
         same_host_only: bool = True,
         html_delay_seconds: float = 0.1,
+        omeka_s_probe_enabled: bool = True,
     ) -> None:
         if html_delay_seconds < 0:
             raise ValueError("html_delay_seconds must be non-negative")
@@ -77,6 +80,7 @@ class ResourceDiscoverer:
         self.html_enabled = html_enabled
         self.same_host_only = same_host_only
         self.html_delay_seconds = html_delay_seconds
+        self.omeka_s_probe_enabled = omeka_s_probe_enabled
 
     def discover(
         self,
@@ -84,6 +88,8 @@ class ResourceDiscoverer:
         *,
         curated_entry_points: Sequence[str] = (),
         curated_html_seeds: Sequence[str] = (),
+        knowledge_skills: Sequence[Mapping[str, Any]] = (),
+        investigation_id: str | None = None,
     ) -> ProviderDiscoveryResult:
         """Discover a bounded, deduplicated set of Manifests for one provider."""
 
@@ -124,6 +130,11 @@ class ResourceDiscoverer:
             elif check_result == "reachable_non_json" and self.html_enabled:
                 html_seeds.append(final_url)
                 processable_route_found = True
+            elif check_result == "reachable_non_json":
+                result.issues.append(DiscoveryIssue(
+                    final_url, "module_2_reachable_non_json",
+                    f"Endpoint role {endpoint_role!r} is reachable HTML/non-JSON; HTML discovery is disabled for this run",
+                ))
             elif check_result in {"invalid_json", "response_too_large", "restricted"}:
                 result.issues.append(
                     DiscoveryIssue(
@@ -154,7 +165,105 @@ class ResourceDiscoverer:
                 )
             )
 
-        if self.html_enabled:
+        for url, (method, source_url) in list(candidates.items()):
+            if self._manifest_limit_reached(result, state):
+                result.truncated = True
+                break
+            self._process_machine_candidate(url, method, source_url, result, state)
+
+        knowledge_succeeded = False
+        if knowledge_skills and not state.manifest_urls:
+            for skill in knowledge_skills:
+                remaining = (
+                    self.limits.max_manifests_per_provider
+                    - len(state.manifest_urls)
+                )
+                if remaining <= 0:
+                    result.truncated = True
+                    break
+                execution = execute_skill(
+                    skill,
+                    self.fetcher,
+                    investigation_id=investigation_id or "unrecorded-investigation",
+                    max_manifests=remaining,
+                )
+                result.knowledge_application.append(execution.audit)
+                result.issues.extend(execution.issues)
+                result.truncated = result.truncated or execution.truncated
+                for manifest in execution.manifests:
+                    method = f"knowledge_skill:{manifest.skill_id}"
+                    self._add_resolved(
+                        result,
+                        state,
+                        manifest.manifest_url,
+                        "Manifest",
+                        method,
+                        manifest.source_url,
+                    )
+                    self._add_manifest(
+                        result,
+                        state,
+                        manifest.manifest_url,
+                        discovery_method=method,
+                        source_url=manifest.source_url,
+                    )
+                for entry in execution.entry_points:
+                    if self._manifest_limit_reached(result, state):
+                        result.truncated = True
+                        break
+                    self._process_machine_candidate(
+                        entry.endpoint_url, f"knowledge_skill:{entry.skill_id}",
+                        entry.source_url, result, state,
+                    )
+            knowledge_succeeded = bool(state.manifest_urls)
+        elif knowledge_skills:
+            result.knowledge_application.extend(
+                {
+                    "investigation_id": investigation_id,
+                    "skill_id": str(skill.get("skill_id", "unnamed-skill")),
+                    "skill_type": str(skill.get("type", "")) or None,
+                    "status": "skipped_existing_manifests",
+                }
+                for skill in knowledge_skills
+            )
+
+        if (
+            self.omeka_s_probe_enabled
+            and not state.manifest_urls
+            and html_seeds
+        ):
+            execution = execute_omeka_s_probe(
+                _deduplicated_urls(html_seeds),
+                self.fetcher,
+                max_manifests=self.limits.max_manifests_per_provider,
+                request_delay_seconds=self.html_delay_seconds,
+            )
+            if execution is not None:
+                result.knowledge_application.append(execution.audit)
+                result.issues.extend(execution.issues)
+                result.truncated = result.truncated or execution.truncated
+                for manifest in execution.manifests:
+                    method = f"platform_skill:{manifest.skill_id}"
+                    self._add_resolved(
+                        result,
+                        state,
+                        manifest.manifest_url,
+                        "Manifest",
+                        method,
+                        manifest.source_url,
+                    )
+                    self._add_manifest(
+                        result,
+                        state,
+                        manifest.manifest_url,
+                        discovery_method=method,
+                        source_url=manifest.source_url,
+                    )
+                knowledge_succeeded = knowledge_succeeded or bool(
+                    execution.manifests
+                )
+
+        if self.html_enabled and not knowledge_succeeded:
             for seed in _deduplicated_urls(html_seeds):
                 html_result = discover_html_candidates(
                     seed,
@@ -177,11 +286,13 @@ class ResourceDiscoverer:
                         result,
                     )
 
-        for url, (method, source_url) in list(candidates.items()):
-            if self._manifest_limit_reached(result, state):
-                result.truncated = True
-                break
-            self._process_machine_candidate(url, method, source_url, result, state)
+            for url, (method, source_url) in list(candidates.items()):
+                if self._manifest_limit_reached(result, state):
+                    result.truncated = True
+                    break
+                self._process_machine_candidate(
+                    url, method, source_url, result, state
+                )
 
         if state.manifest_urls:
             result.status = "manifests_found"
@@ -443,18 +554,22 @@ class ResourceDiscoverer:
                     result.truncated = True
                     return
 
-            next_url = _link_url(value.get("next"))
-            if next_url and next_url not in state.processed_collection_urls:
-                queue.append(
-                    (
-                        next_url,
-                        None,
-                        "presentation_collection_next",
-                        final_url,
-                        activity_type,
-                        activity_time,
+            # CONTENTdm and other Presentation 2 providers expose an empty
+            # Collection wrapper whose actual members begin at `first`.
+            # Follow both relations within the same visited set and budget.
+            for relation in ("first", "next"):
+                page_url = _link_url(value.get(relation))
+                if page_url and page_url not in state.processed_collection_urls:
+                    queue.append(
+                        (
+                            page_url,
+                            None,
+                            f"presentation_collection_{relation}",
+                            final_url,
+                            activity_type,
+                            activity_time,
+                        )
                     )
-                )
         if queue:
             result.truncated = True
 
@@ -510,18 +625,11 @@ class ResourceDiscoverer:
             evidence.activity_type,
             evidence.activity_time,
         )
-        existing_keys = {
-            (
-                item.manifest_url,
-                item.evidence.discovery_method,
-                item.evidence.source_url,
-                item.evidence.activity_type,
-                item.evidence.activity_time,
-            )
-            for item in result.manifests
-        }
-        if finding_key not in existing_keys:
+        # Preserve distinct evidence without rescanning every previous finding.
+        # Rebuilding that set for each item made a large catalogue quadratic.
+        if finding_key not in state.manifest_finding_keys:
             result.manifests.append(ManifestFinding(canonical, evidence))
+            state.manifest_finding_keys.add(finding_key)
         state.manifest_urls.add(canonical)
 
     def _add_resolved(

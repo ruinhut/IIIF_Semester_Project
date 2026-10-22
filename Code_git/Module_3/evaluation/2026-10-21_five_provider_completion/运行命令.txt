@@ -1,0 +1,69 @@
+# PowerShell commands. Run numbered blocks in order in the same terminal.
+# This reuses the prepared five-source configs and writes to this evaluation folder.
+# Back up this folder first if you need to preserve the exact current output.
+# A fresh run may differ because public APIs and rate limits change.
+
+# 1. Set variables EVERY time you open a new terminal.
+$CodeRoot = 'E:\exchange-epfl\Semester_Project\Code_git'
+$PipelinePython = Join-Path $CodeRoot '.venv\Scripts\python.exe'
+$EvaluationRoot = Join-Path $CodeRoot 'Module_3\evaluation\2026-10-21_five_provider_completion'
+$env:PYTHONIOENCODING = 'utf-8'
+$env:PYTHONUTF8 = '1'
+# Valid CA file on this computer. On another computer use its valid CA bundle.
+$env:SSL_CERT_FILE = 'C:\Users\43057\AppData\Local\Programs\Python\Python310\lib\site-packages\certifi\cacert.pem'
+Set-Location -LiteralPath $CodeRoot
+if (-not (Test-Path -LiteralPath $PipelinePython)) { throw 'Python environment missing' }
+if (-not (Test-Path -LiteralPath "$EvaluationRoot\module3_validation.json")) { throw 'Prepared config missing' }
+
+# 2. Recheck selected provider entry URLs. Module 1 census is the existing input.
+& $PipelinePython -m iiif_entry_validator run --config "$EvaluationRoot\module2_validation.json"
+if ($LASTEXITCODE -ne 0) { throw 'Module 2 failed' }
+# Output: $EvaluationRoot\validation\module2\output
+
+# 3. Fresh discovery using the reviewed candidate knowledge; six Manifests/source limit.
+# No --resume: this performs fresh requests. Stop and inspect HTTP 429; do not loop retries.
+& $PipelinePython Module_3\tools\run_discovery_with_evidence.py --config "$EvaluationRoot\module3_validation.json" --network-delay 2
+if ($LASTEXITCODE -ne 0) { throw 'Module 3 failed' }
+# Output: $EvaluationRoot\validation\module3\output
+# HTTP evidence: $EvaluationRoot\validation\module3\requests.jsonl
+# A successful process exit does not imply all providers/pages succeeded.
+
+# 4. Independently fetch and validate discovered Manifests.
+& $PipelinePython -m iiif_manifest_validator run --config "$EvaluationRoot\module4_validation.json"
+if ($LASTEXITCODE -ne 0) { throw 'Module 4 failed' }
+# Output: $EvaluationRoot\validation\module4\output
+# Raw JSON: $EvaluationRoot\validation\module4\raw_manifests
+
+# 5. Run Modules 5-7, then select ONE image/source and download through Module 8.
+& $PipelinePython Module_3\tools\complete_oct19_provider_completion.py --evaluation-root $EvaluationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Modules 5-8 failed; inspect per-stage results' }
+# Module 5 output: $EvaluationRoot\downstream\module5\output
+# Module 6 output: $EvaluationRoot\downstream\module6\output
+# Module 7 output: $EvaluationRoot\downstream\module7\output
+# Images + three linked JSONs: $EvaluationRoot\download_examples\module8\output\all
+# with_reference and without_reference are separate subdirectories when present.
+# Current five samples have no reference and are under without_reference.
+
+# 6. Validate linked JSON structures and identifiers.
+& $PipelinePython Module_3\tools\verify_linked_download_bundles.py --output-root "$EvaluationRoot\download_examples\module8\output" --mode all --report "$EvaluationRoot\bundle_verification.json"
+if ($LASTEXITCODE -ne 0) { throw 'Bundle verification failed' }
+
+# 7. Decode actual image files and compare dimensions (this Python has Pillow).
+$ImagePython = 'C:\Users\43057\AppData\Local\Programs\Python\Python310\python.exe'
+& $ImagePython Module_3\tools\verify_downloaded_pixels.py --module8-output "$EvaluationRoot\download_examples\module8\output" --raw-manifest-directory "$EvaluationRoot\validation\module4\raw_manifests" --mode all --report "$EvaluationRoot\image_decode_verification.json"
+if ($LASTEXITCODE -ne 0) { throw 'Image verification failed' }
+
+# 8. Local unit/regression tests. This uses fixtures and does not harvest all providers.
+foreach ($Number in 3..8) {
+    Push-Location -LiteralPath (Join-Path $CodeRoot "Module_$Number")
+    try {
+        & $PipelinePython -m pytest -q
+        if ($LASTEXITCODE -ne 0) { throw "Module $Number tests failed" }
+    } finally { Pop-Location }
+}
+
+# 9. View output.
+Invoke-Item -LiteralPath "$EvaluationRoot\download_examples\module8\output\all\without_reference"
+Invoke-Item -LiteralPath "$EvaluationRoot\sample_downloads.csv"
+# sample_downloads.csv and provider_results.csv describe the saved verified run.
+# After a rerun with different results, regenerate statistics rather than assuming 26/2991.

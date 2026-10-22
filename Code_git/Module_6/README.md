@@ -1,31 +1,53 @@
 # Module 6 — Metadata Extraction and Normalization
 
-Module 6 reads the rights-cleared Manifests and image inventory produced by Module 5. It preserves every original IIIF metadata entry and maps recognizable values into stable core fields: identifier, title, description, creator, date, place, subject, type, language, rights, and source.
+Module 6 reads every research-retained Manifest and resource row produced by Module 5. This includes public-reuse-eligible, unknown-rights and restricted records.
 
-Normalization is conservative. Missing or ambiguous date/place values are retained and marked as partial; they are never invented or silently discarded. Dates are normalized only when an explicit ISO date, year, year range, or century can be recognized. Place names are cleaned but not geocoded in this module.
-
-## Run
-
-```powershell
-cd Code_git/Module_6
-python -m pip install -e .
-python -m iiif_metadata_normalizer run --config config.example.json
-```
-
-For the checked-in small sample, replace the last file with `config.smoke.json`.
+It preserves every original IIIF metadata entry and maps recognizable values into stable core fields: identifier, title, description, creator, date, place, subject, type, language, rights and source. Rights restrictions remain attached to each normalized record and resource so Module 7 can keep research-only data separate from public-reuse data.
 
 ## Inputs
 
-- `allowed_manifests.jsonl`: Module 5 records with `rights_assessment.decision = allow`.
-- `allowed_resource_inventory.jsonl`: rights-cleared Canvas/image rows.
-- Module 4 raw Manifest files, verified against the SHA-256 stored in the handoff.
+- `research_manifests.jsonl`: all Module 5 records with `research_status = retained`.
+- `research_resource_inventory.jsonl`: all resources allowed for academic analysis.
+- Module 4 raw Manifest files, read in their current local form.
 
 ## Outputs
 
-- `normalized_records.jsonl`: lossless normalized object records plus raw metadata provenance.
-- `normalized_resources.jsonl`: one image/body row per resource with a stable `resource_id`.
-- `metadata_summary.csv` and `normalized_resources.csv`: convenient review tables.
-- `failed_records.jsonl`: unreadable, invalid, or checksum-failing records.
-- `data/log/Module6_<local-time>_log.txt`: run counts and paths.
+- `normalized_records.jsonl`
+- `normalized_resources.jsonl`
+- `normalized_reference_texts.jsonl`: provider-declared OCR/transcription links,
+  including their Manifest, Canvas, provider, format and alignment scope
 
-Run tests with `python -m pytest -q`.
+- `metadata_summary.csv`
+- `normalized_resources.csv`
+- `failed_records.jsonl`
+- `data/log/Module6_<local-time>_log.txt`
+
+Normalization is conservative. Missing or ambiguous values are retained and marked partial; they are never invented or silently discarded.
+
+### Optional public-catalogue reference enrichment
+
+`provider_reference_sources` may point to reviewed provider configuration such
+as `config/provider_reference_sources.json`. The generic enrichment reads
+original-language transcription from a public item API when the Manifest does
+not declare it. It caches the original JSON and preserves the exact text and
+language field paths in provenance. It never substitutes an English
+translation for an original-language OCR reference.
+
+Current alignment requires one Canvas, one image body, one catalogue page,
+and an image identifier matching the actual declared body/service URL.
+Multi-page document text and ambiguous image matches are skipped with an
+audited reason; valid image metadata remains available. Institutional text is
+a reference candidate, not automatically manually corrected ground truth.
+`catalogue_reference_audit.jsonl` records extraction, skips and failures.
+`catalogue_reference_cache_directory` selects an explicit saved public-item
+snapshot. A reviewed source may set `cache_only: true` for a reproducible
+offline enrichment pass; absent item records are reported as
+`not_in_selected_catalogue_snapshot`, not treated as evidence that the
+institution has no transcription.
+
+## Run and test
+
+```powershell
+python -m iiif_metadata_normalizer run --config config.example.json
+python -m pytest -q
+```

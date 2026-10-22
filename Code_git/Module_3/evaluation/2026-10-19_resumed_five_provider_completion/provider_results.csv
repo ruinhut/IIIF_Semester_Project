@@ -1,0 +1,6 @@
+﻿provider_id,provider_name,discovered_manifest_urls,validated_manifests,exported_image_associations,distinct_image_urls,actual_sample_images,actual_width,actual_height,canvas_width,canvas_height,matches_declared_dimensions
+provider-4e06374e85489c6e,Princeton University Libraries,6,6,10,10,1,1000,1430,5976,8546,False
+provider-5bb54fcb57aa7da9,University of North Texas Libraries,6,6,6,6,1,1500,1154,1500,1154,True
+provider-d14fb88cde24ff49,Harvard University Digital Collections,6,6,1946,1946,1,3837,5000,6522,8500,False
+provider-648f0743acabd9c2,Stanford University,6,6,71,71,1,2599,4094,2599,4094,True
+provider-f10ea7c297cd81a8,Biblissima,6,6,70,70,1,3000,2250,5440,4080,False

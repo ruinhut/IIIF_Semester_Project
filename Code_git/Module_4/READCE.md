@@ -63,11 +63,26 @@ config.smoke.json 对应5个公开 Manifest 的联网测试样本。
 
 ## 自动化测试
 
+Canvas 的标识符保留 `#canvas` 等 fragment，因为它属于逻辑资源的身份。
+这与 HTTP 请求 URL 的处理不同；不会修改发布方原始 JSON。
+
 ~~~powershell
 python -m unittest discover -s tests -v
 ~~~
 
 测试覆盖 Presentation 2/3、重定向、访问限制、响应过大、错误 JSON、错误资源类型、人工审核分类、资源输出和缓存复用。
+
+## 缺失标识符的透明处理
+
+`normalization.infer_missing_manifest_id` 默认开启：仅当响应明确声明为
+IIIF Presentation Manifest、且顶层标识符缺失时，以成功请求的最终 URL
+补足 `id` / `@id`。原始 JSON 不改动，另写 `.normalized.json`；输出同时
+保留 `source_structural_validation` 原始问题及 `structural_normalization`
+补丁依据。设为 `false` 可严格拒绝原始缺失标识符的响应。
+
+校验范围是本项目用于提取图片的基本结构检查，不是全部 IIIF 必填字段
+的合规认证。复用 Module 3 当前 HTTP 快照时也会保留来源和原始时间，
+不会把缓存命中说成重新联网成功。
 
 ## Git
 

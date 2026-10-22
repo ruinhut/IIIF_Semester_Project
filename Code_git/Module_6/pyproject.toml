@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "iiif-metadata-normalizer"
-version = "0.1.0"
-description = "Extract and normalize descriptive metadata from rights-cleared IIIF Manifests"
+version = "0.2.0"
+description = "Extract and normalize metadata from IIIF Manifests retained for academic research"
 requires-python = ">=3.10"
 dependencies = []
 

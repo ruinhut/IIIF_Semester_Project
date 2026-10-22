@@ -1,0 +1,22 @@
+Subject: Clarification on the EPFL Plume discovery workflow
+
+Dear Professor Kaplan,
+
+Following today's discussion, I would like to clarify why the initial Module 3 run did not resolve EPFL Plume.
+
+As shown in the IIIF guide, an individual Plume item page exposes a Manifest link. The baseline nevertheless missed it for two reasons. First, it received only the homepage and limited HTML discovery to three pages and a depth of one. It reached the catalogue listing but stopped before visiting individual item pages. Second, increasing the crawl depth could find these links, but enumerating a whole catalogue by requesting HTML pages one by one would be slow and fragile.
+
+With AI assistance, page-level signals such as the `/s/fr/...` route, `Omeka.jsTranslate`, and Omeka module and theme paths were used to form an Omeka S hypothesis. The hypothesis was then checked against the installation-level `/api` route and the official documentation. This identified the structured catalogue endpoint:
+
+https://plume.epfl.ch/api/items
+
+The program can use this API to enumerate item identifiers efficiently. It extracts each record's `o:id`, constructs candidate Manifest URLs, and accepts a result only when the response is valid JSON with an IIIF Presentation context and `Manifest` type. For example, item 44 resolves to:
+
+https://plume.epfl.ch/iiif/3/44/manifest
+
+The Omeka S API does not replace IIIF; it supplies the identifiers needed for efficient catalogue-wide discovery. I have therefore separated reusable operations—API pagination, identifier extraction, template expansion, and IIIF validation—from provider-specific configuration. The same procedure was applied to the Art Institute of Chicago with configuration changes only.
+
+AI proposes candidate discovery recipes, while deterministic checks decide whether they are valid and reusable. Module 3 keeps the same downstream output, so Modules 4–7 remain provider-independent.
+
+Best regards,
+Boheng Shang

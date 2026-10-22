@@ -11,7 +11,7 @@ from .runner import PipelineRunError, run_pipeline
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run Modules 1–7 sequentially and stop on the first failure")
+    parser = argparse.ArgumentParser(description="Run Modules 1–8 sequentially and stop on the first failure")
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--from-module", type=int, dest="first")
     parser.add_argument("--to-module", type=int, dest="last")

@@ -1,0 +1,72 @@
+[
+  {
+    "provider_id": "provider-e1782e53439deb7b",
+    "provider_name": "DigiVatLib",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 1961,
+    "distinct_image_urls": 1961,
+    "actual_sample_images": 1,
+    "actual_width": 1416,
+    "actual_height": 1965,
+    "canvas_width": 1416,
+    "canvas_height": 1965,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-d98fe11ebfc34f6d",
+    "provider_name": "J. Paul Getty Trust",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 19,
+    "distinct_image_urls": 19,
+    "actual_sample_images": 1,
+    "actual_width": 483,
+    "actual_height": 600,
+    "canvas_width": 483,
+    "canvas_height": 600,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-c4aa50f2571a99e9",
+    "provider_name": "Cultural Japan",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 6,
+    "distinct_image_urls": 6,
+    "actual_sample_images": 1,
+    "actual_width": 4576,
+    "actual_height": 3510,
+    "canvas_width": 4576,
+    "canvas_height": 3510,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-637a751532e5f5a3",
+    "provider_name": "Harvard Art Museum",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 7,
+    "distinct_image_urls": 7,
+    "actual_sample_images": 1,
+    "actual_width": 299,
+    "actual_height": 1024,
+    "canvas_width": 299,
+    "canvas_height": 1024,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-c4bca842117bf9f7",
+    "provider_name": "National Gallery of Art Library",
+    "discovered_manifest_urls": 3,
+    "validated_manifests": 3,
+    "exported_image_associations": 999,
+    "distinct_image_urls": 999,
+    "actual_sample_images": 1,
+    "actual_width": 2818,
+    "actual_height": 4096,
+    "canvas_width": 3302,
+    "canvas_height": 4800,
+    "matches_declared_dimensions": false
+  }
+]

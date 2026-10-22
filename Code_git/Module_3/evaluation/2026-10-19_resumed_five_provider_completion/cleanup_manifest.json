@@ -1,0 +1,217 @@
+﻿{
+    "cleaned_at_utc":  "2026-10-19T16:27:46.7943493Z",
+    "evaluation_root":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion",
+    "deleted_file_count":  40,
+    "deleted_bytes":  5957820,
+    "removed_files":  [
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\0127d28f1399b3a81515.html",
+                              "bytes":  46754,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\07247f388900d2ba3146.html",
+                              "bytes":  21788,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\0e22199bc14697a48f51.html",
+                              "bytes":  498667,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\1d4a3bf3ece0251a5ce0.txt",
+                              "bytes":  2767,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\20948733a25877025470.html",
+                              "bytes":  2752,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\23c0d8bf53755c320139.html",
+                              "bytes":  222,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\3e730079ef1d46d53594.txt",
+                              "bytes":  425502,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\4c422e7375c097bd48aa.json",
+                              "bytes":  1133986,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\4d730c84afffe503f288.json",
+                              "bytes":  583,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\4dec6840400a8c79a55a.html",
+                              "bytes":  5201,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\504618d7ade4ee91e895.html",
+                              "bytes":  222,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\5a81d96a1c5ff6edfa57.json",
+                              "bytes":  458188,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\5e1b4d3ee25dcdc259f6.json",
+                              "bytes":  722082,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\62053e521b284e36105c.html",
+                              "bytes":  57348,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\6285d559fd11531b135c.json",
+                              "bytes":  734,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\673f526913a4e5b67102.html",
+                              "bytes":  222,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\6fe57fbde990f43c9bb0.html",
+                              "bytes":  1414616,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\72a50581200c61f485f6.json",
+                              "bytes":  54,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\77735c638dcab322d57a.json",
+                              "bytes":  30554,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\7ef61883fec1f8e8a941.html",
+                              "bytes":  981620,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\8748f7a61b59626d3359.html",
+                              "bytes":  15188,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\90a54148f97686498196.html",
+                              "bytes":  2698,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\923cce80271823cd7614.html",
+                              "bytes":  110,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\9efd32ecb7614831870b.html",
+                              "bytes":  236,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\a42f577759b166fdaaab.json",
+                              "bytes":  20091,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\a5e19c6cfc63e9159f9c.html",
+                              "bytes":  110,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\a8efb23de4bacbfb38e0.json",
+                              "bytes":  741,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\a93204db0c17d0376829.html",
+                              "bytes":  14935,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\b5ec2e92298464492b7d.html",
+                              "bytes":  71223,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\bd8071a5a52a09e5ff13.html",
+                              "bytes":  0,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\c80c9ac523dd58f60b82.html",
+                              "bytes":  7023,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\c994ddafc3f084c7bc8d.html",
+                              "bytes":  5201,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\cab027b70b623856064c.json",
+                              "bytes":  3489,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\cc0e67ab9242cb2dd6c3.txt",
+                              "bytes":  0,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\db73c2b702f6b5d6e790.html",
+                              "bytes":  110,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\df4f7b309a0b0957d0cc.json",
+                              "bytes":  761,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\ee2d4272be745481ec9b.json",
+                              "bytes":  3808,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\f268168fb94aec0da12d.json",
+                              "bytes":  1372,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\f2ddbf0984a34f597180.txt",
+                              "bytes":  0,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_resumed_five_provider_completion\\live\\responses\\fd3a532e1bdfdfd8e93a.html",
+                              "bytes":  6862,
+                              "reason":  "Temporary route-probe body; request status and provenance remain in live/checks.jsonl; final run evidence remains in Module 3/4"
+                          }
+                      ],
+    "preserved":  [
+                      "Historical evaluation directories",
+                      "All production code and knowledge",
+                      "Reviewed provider configuration",
+                      "Request logs and selected primary-source evidence",
+                      "Module 4 raw Manifests",
+                      "Final Module 7 JSONL",
+                      "Five Module 8 image/JSON bundles"
+                  ]
+}

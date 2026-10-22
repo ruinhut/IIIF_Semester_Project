@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-10-19T11:31:17.075828+00:00",
+  "new_resolved_source_entries": 5,
+  "discovered_manifest_urls": 105,
+  "validated_manifests": 104,
+  "unavailable_manifest_urls": 1,
+  "declared_image_associations": 7766,
+  "distinct_image_urls": 7766,
+  "actual_downloaded_sample_images": 5,
+  "actual_sample_image_bytes": 5874054,
+  "reference_descriptors": 4256,
+  "page_scoped_reference_descriptors": 4173,
+  "unique_pages_with_reference_descriptors": 844,
+  "downloaded_reference_versions": 4,
+  "downloaded_reference_pages": 1,
+  "schema_validated_sample_json_files": 15,
+  "sample_images_decoded": 5,
+  "tests_passed": 152,
+  "previous_resolved_census_entries": 34,
+  "cumulative_resolved_census_entries": 39,
+  "census_entries": 94,
+  "remaining_unresolved_census_entries": 55,
+  "configuration_promoted": true,
+  "preservation": {
+    "knowledge": {
+      "old_entries": 15,
+      "current_entries": 16,
+      "old_entries_unchanged": true
+    },
+    "endpoints": {
+      "old_entries": 11,
+      "current_entries": 15,
+      "old_entries_unchanged": true
+    }
+  },
+  "scope": "Bounded catalogue/collection samples, not full-institution harvests; census entries include platforms and duplicate institutions."
+}

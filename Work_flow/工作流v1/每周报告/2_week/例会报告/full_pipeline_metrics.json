@@ -1,0 +1,311 @@
+{
+  "run": {
+    "status": "completed",
+    "started_at": "2026-09-28T16:35:30+02:00",
+    "finished_at": "2026-09-28T16:56:15+02:00",
+    "elapsed_seconds": 1245.0,
+    "pipeline_log": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Pipeline_Runner\\data\\log\\Pipeline_2026-09-28_16-35-30_log.json",
+    "module_return_codes": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    "module_durations_seconds": {
+      "1": 1.0,
+      "2": 198.0,
+      "3": 804.0,
+      "4": 231.0,
+      "5": 11.0,
+      "6": 0.0,
+      "7": 0.0
+    }
+  },
+  "module_1": {
+    "providers": 94,
+    "selected_providers": 94,
+    "endpoints": 158
+  },
+  "module_2": {
+    "checked_endpoints": 158,
+    "result_counts": {
+      "reachable_non_json": 92,
+      "reachable_json": 7,
+      "temporary_failure": 9,
+      "unreachable": 19,
+      "restricted": 29,
+      "response_too_large": 2
+    },
+    "reachable_endpoints": 99,
+    "reachable_providers": 67,
+    "json_providers": 6,
+    "response_time_ms": {
+      "median": 500.0,
+      "p90": 1776.9,
+      "max": 21312.0
+    }
+  },
+  "module_3": {
+    "processed_providers": 94,
+    "status_counts": {
+      "unresolved": 84,
+      "manifests_found": 10
+    },
+    "resolved_endpoints": 29,
+    "resolution_methods": {
+      "module_2_json:presentation_collection": 1,
+      "html_declared_link": 21,
+      "module_2_json:manifest": 3,
+      "module_2_json:change_discovery": 1,
+      "change_discovery_page": 2,
+      "provider_api_link": 1
+    },
+    "unique_manifests": 324,
+    "manifest_yield_by_provider": {
+      "DigiPress - The newspaper portal of the Bayerische Staatsbibliothek (Bavarian State Library)": 1,
+      "Bavarian State Library (BSB) / Munich Digitization Centre (MDZ)": 100,
+      "Carnegie Museum of Art": 100,
+      "Biblissima reconstituted manuscript demo": 1,
+      "Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments": 18,
+      "Gallica": 1,
+      "Internet Archive": 1,
+      "University of Oxford (Digital Bodleian)": 100,
+      "Harvard Art Museums": 1,
+      "Wikidata": 1
+    },
+    "truncated_provider_runs": 42,
+    "top_issue_types": {
+      "not_json": 537,
+      "module_2_restricted": 29,
+      "http_403": 27,
+      "no_processable_entry": 27,
+      "module_2_unreachable": 19,
+      "http_406": 15,
+      "http_404": 13,
+      "unsupported_json_type": 13,
+      "http_400": 9,
+      "module_2_temporary_failure": 9,
+      "http_502": 7,
+      "network_error": 6,
+      "http_401": 4,
+      "http_500": 2,
+      "timeout": 2
+    }
+  },
+  "module_4": {
+    "input_manifests": 324,
+    "valid_manifests": 324,
+    "manual_review": 0,
+    "invalid": 0,
+    "unavailable": 0,
+    "presentation_versions": {
+      "2": 323,
+      "3": 1
+    },
+    "canvases": 54632,
+    "image_bodies": 54652,
+    "image_services": 54653,
+    "inventory_rows": 54654,
+    "downloaded_bytes": 51709561,
+    "response_time_ms": {
+      "median": 413.5,
+      "p90": 1579.8,
+      "max": 13767.0
+    }
+  },
+  "module_5": {
+    "assessed": 324,
+    "decisions": {
+      "exclude": 306,
+      "allow": 18
+    },
+    "categories": {
+      "in_copyright": 2,
+      "noncommercial_or_limited": 100,
+      "unknown": 202,
+      "open_license": 8,
+      "public_domain": 10,
+      "institutional_terms": 1,
+      "conflicting": 1
+    },
+    "allowed_resources": 106
+  },
+  "module_6": {
+    "normalized_records": 18,
+    "normalized_resources": 106,
+    "failed_records": 0,
+    "quality": {
+      "complete": 18
+    },
+    "field_presence": {
+      "title": 18,
+      "description": 18,
+      "dates": 18,
+      "places": 18,
+      "languages": 17,
+      "types": 18
+    }
+  },
+  "module_7": {
+    "valid_records": 18,
+    "rejected_records": 0,
+    "valid_media": 106,
+    "rejected_media": 0,
+    "rights_categories": {
+      "open_license": 8,
+      "public_domain": 10
+    },
+    "presentation_versions": {
+      "2": 18
+    },
+    "provider_object_counts": {
+      "Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments": 18
+    },
+    "provider_media_counts": {
+      "Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments": 106
+    },
+    "media_per_record": {
+      "mean": 5.89,
+      "median": 2.5,
+      "min": 1,
+      "max": 52
+    },
+    "dataset_manifest": {
+      "bundle_version": "iiif-time-atlas-bundle-0.1",
+      "counts": {
+        "input_media": 106,
+        "input_records": 18,
+        "rejected_media": 0,
+        "rejected_records": 0,
+        "valid_media": 106,
+        "valid_records": 18
+      },
+      "files": [
+        {
+          "bytes": 83152,
+          "name": "common_records.jsonl",
+          "sha256": "7de6ba718599e7d5ed3cc09c038cc2afde56248f2b1661a94a013fcc8989ec67"
+        },
+        {
+          "bytes": 78790,
+          "name": "common_media.jsonl",
+          "sha256": "5fa11cc4837fc3e1346c84f47af055c24ab6ba3d7f65105daf03b8549c90916e"
+        },
+        {
+          "bytes": 6883,
+          "name": "common_records.csv",
+          "sha256": "e31b1582b04f7b367186f5e028cb6ef5b68c24c5eb857dda8203dfa7919f3a4a"
+        },
+        {
+          "bytes": 46316,
+          "name": "common_media.csv",
+          "sha256": "59c1ae6e6c63ff09871b0f9835fa8095a452e0b43ac38a7f59961d7883cbc26d"
+        },
+        {
+          "bytes": 0,
+          "name": "rejected_records.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 0,
+          "name": "rejected_media.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "generated_at": "2026-09-28T16:56:15+02:00",
+      "media_schema_version": "iiif-time-atlas-media-0.1",
+      "profile_version": "provisional-0.1",
+      "record_schema_version": "iiif-time-atlas-record-0.1",
+      "schemas": {
+        "media": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_7\\schemas\\media-0.1.schema.json",
+        "record": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_7\\schemas\\record-0.1.schema.json"
+      },
+      "source_inputs": {
+        "records": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_6\\data\\output\\normalized_records.jsonl",
+        "resources": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_6\\data\\output\\normalized_resources.jsonl"
+      }
+    }
+  },
+  "success_metrics": [
+    {
+      "metric": "Endpoint HTTP success",
+      "numerator": 99,
+      "denominator": 158,
+      "rate_percent": 62.66,
+      "definition": "reachable JSON or non-JSON endpoints / checked endpoints"
+    },
+    {
+      "metric": "Provider reachability",
+      "numerator": 67,
+      "denominator": 94,
+      "rate_percent": 71.28,
+      "definition": "providers with >=1 reachable endpoint / selected providers"
+    },
+    {
+      "metric": "Provider JSON availability",
+      "numerator": 6,
+      "denominator": 94,
+      "rate_percent": 6.38,
+      "definition": "providers with >=1 parseable JSON endpoint / selected providers"
+    },
+    {
+      "metric": "Provider discovery success",
+      "numerator": 10,
+      "denominator": 94,
+      "rate_percent": 10.64,
+      "definition": "providers yielding >=1 Manifest / processed providers"
+    },
+    {
+      "metric": "Manifest structural validity",
+      "numerator": 324,
+      "denominator": 324,
+      "rate_percent": 100.0,
+      "definition": "valid Manifests / discovered Manifest URLs"
+    },
+    {
+      "metric": "Rights retention",
+      "numerator": 18,
+      "denominator": 324,
+      "rate_percent": 5.56,
+      "definition": "allowed Manifests / rights-assessed Manifests"
+    },
+    {
+      "metric": "Normalization success",
+      "numerator": 18,
+      "denominator": 18,
+      "rate_percent": 100.0,
+      "definition": "normalized records / allowed Manifests"
+    },
+    {
+      "metric": "Complete normalized records",
+      "numerator": 18,
+      "denominator": 18,
+      "rate_percent": 100.0,
+      "definition": "complete normalized records / normalized records"
+    },
+    {
+      "metric": "Final record acceptance",
+      "numerator": 18,
+      "denominator": 18,
+      "rate_percent": 100.0,
+      "definition": "schema-valid final records / normalized records"
+    },
+    {
+      "metric": "Final media acceptance",
+      "numerator": 106,
+      "denominator": 106,
+      "rate_percent": 100.0,
+      "definition": "schema-valid final media / normalized media"
+    },
+    {
+      "metric": "End-to-end object yield",
+      "numerator": 18,
+      "denominator": 324,
+      "rate_percent": 5.56,
+      "definition": "final records / discovered Manifest URLs"
+    }
+  ]
+}

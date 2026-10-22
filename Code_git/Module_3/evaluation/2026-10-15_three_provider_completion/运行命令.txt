@@ -1,0 +1,50 @@
+﻿# PowerShell: this file uses ordinary ASCII hyphens.
+$ErrorActionPreference = "Stop"
+$CodeRoot = "E:\exchange-epfl\Semester_Project\Code_git"
+$Python = Join-Path $CodeRoot ".venv\Scripts\python.exe"
+$Evaluation = Join-Path $CodeRoot "Module_3\evaluation\2026-10-15_three_provider_completion"
+Set-Location -LiteralPath $CodeRoot
+
+# Module 3: 20 Manifest samples per institution
+& $Python "Module_3\tools\prepare_three_provider_completion.py" --sample-limit 20
+if ($LASTEXITCODE -ne 0) { throw "Pipeline stage failed; inspect its log before continuing." }
+& $Python "Module_3\tools\run_discovery_with_evidence.py" --config "$Evaluation\module3_validation.json"
+if ($LASTEXITCODE -ne 0) { throw "Pipeline stage failed; inspect its log before continuing." }
+
+# Module 4: fetch and validate 60 Manifests
+$env:PYTHONPATH = Join-Path $CodeRoot "Module_4"
+& $Python -m iiif_manifest_validator run --config "$Evaluation\module4_validation.json"
+if ($LASTEXITCODE -ne 0) { throw "Pipeline stage failed; inspect its log before continuing." }
+
+# Choose one object and image per institution
+& $Python "Module_3\tools\prepare_three_provider_download_examples.py"
+if ($LASTEXITCODE -ne 0) { throw "Pipeline stage failed; inspect its log before continuing." }
+
+# Module 5
+$env:PYTHONPATH = Join-Path $CodeRoot "Module_5"
+& $Python -m iiif_rights_filter run --config "$Evaluation\module5_examples.json"
+if ($LASTEXITCODE -ne 0) { throw "Pipeline stage failed; inspect its log before continuing." }
+
+# Module 6
+$env:PYTHONPATH = Join-Path $CodeRoot "Module_6"
+& $Python -m iiif_metadata_normalizer run --config "$Evaluation\module6_examples.json"
+if ($LASTEXITCODE -ne 0) { throw "Pipeline stage failed; inspect its log before continuing." }
+
+# Module 7
+$env:PYTHONPATH = Join-Path $CodeRoot "Module_7"
+& $Python -m iiif_common_exporter run --config "$Evaluation\module7_examples.json"
+if ($LASTEXITCODE -ne 0) { throw "Pipeline stage failed; inspect its log before continuing." }
+
+# Module 8
+$env:PYTHONPATH = Join-Path $CodeRoot "Module_8"
+& $Python -m iiif_image_downloader download-all --config "$Evaluation\module8_examples.json"
+if ($LASTEXITCODE -ne 0) { throw "Pipeline stage failed; inspect its log before continuing." }
+
+# Open actual downloads
+Invoke-Item -LiteralPath "$Evaluation\download_examples\module8\output\all"
+
+# Open per-institution statistics from this verified run
+Invoke-Item -LiteralPath "$Evaluation\provider_results.csv"
+
+# Existing verified image bundles may be reused on a rerun (overwrite_existing=false).
+# provider_results.csv records the original verified batch; it is not refreshed by these commands.

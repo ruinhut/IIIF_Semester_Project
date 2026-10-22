@@ -1,0 +1,17 @@
+[
+  {
+    "resource_id": "resource-fb666c71b819fba55014",
+    "canvas_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178213/canvas/10",
+    "reference_url": "https://api.digitale-sammlungen.de/ocr/bsb11178213/10",
+    "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-2627f9d5cd81d8f4\\000009_resource-fb666c71b819fba55014\\image.jpg",
+    "hocr_words": 157,
+    "plain_text_characters": 373,
+    "plain_text_excerpt": "J 舊 棄 長勝 一 堡 募 民 真實 每 堡安夫 三 百名 撥 官 操守 不 動 官 糧 等 因 已經 查勘 是 四 堡 之外 又 收 長勝 堡 也 張仲 溝 長城 繇 迤 西 折 迤 西南 又 繇 迤 西南 折 迤 西 張仲 溝 | 乃復 折 迤 西 第一 溝 徑 李 兒 溝 長城 復 折 迤 ",
+    "hocr_page_bbox": "bbox 0 0 1731 2996",
+    "actual_image_dimensions": [
+      1731,
+      2996
+    ],
+    "bbox_matches_image": true
+  }
+]

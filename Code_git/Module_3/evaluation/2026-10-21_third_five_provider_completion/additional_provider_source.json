@@ -1,0 +1,28 @@
+{
+  "providers": [
+    {
+      "name": "Victoria and Albert Museum",
+      "institution_url": "https://www.vam.ac.uk/",
+      "source_page_url": "https://developers.vam.ac.uk/guide/v2/images/iiif.html",
+      "discovery_endpoint": "https://api.vam.ac.uk/v2/objects/search?q=manuscript&images_exist=true&page_size=6",
+      "endpoint_role": "catalogue_api",
+      "discovery_type": "JSON API"
+    },
+    {
+      "name": "National Diet Library of Japan",
+      "institution_url": "https://www.ndl.go.jp/",
+      "source_page_url": "https://ndlsearch.ndl.go.jp/help/api/specifications",
+      "discovery_endpoint": "https://ndlsearch.ndl.go.jp/api/opensearch?dpid=ndl-dl&title=%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E&until=1900&cnt=6",
+      "endpoint_role": "catalogue_api",
+      "discovery_type": "OpenSearch RSS"
+    },
+    {
+      "name": "Heidelberg University Library",
+      "institution_url": "https://www.ub.uni-heidelberg.de/",
+      "source_page_url": "https://www.ub.uni-heidelberg.de/helios/kataloge/datenschnittstellen.html",
+      "discovery_endpoint": "https://digi.ub.uni-heidelberg.de/cgi-bin/digioai.cgi?verb=ListRecords&metadataPrefix=oai_dc&from=2026-10-20",
+      "endpoint_role": "catalogue_api",
+      "discovery_type": "OAI-PMH"
+    }
+  ]
+}

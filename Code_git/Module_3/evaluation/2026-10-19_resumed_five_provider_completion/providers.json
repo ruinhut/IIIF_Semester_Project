@@ -1,0 +1,317 @@
+[
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://dpul.princeton.edu/",
+    "discovery_type": "InstitutionWebsite",
+    "endpoints": [
+      {
+        "discovery_type": "InstitutionWebsite",
+        "endpoint_role": "institution_website",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/dpul.princeton.edu/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://dpul.princeton.edu/",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://dpul.princeton.edu/",
+    "last_checked_at": null,
+    "name": "Princeton University Libraries",
+    "provider_id": "provider-4e06374e85489c6e",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://dpul.princeton.edu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "url": "https://dpul.princeton.edu/",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "associate",
+      "institution_url": "https://dpul.princeton.edu/",
+      "name": "Princeton University Libraries",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/dpul.princeton.edu/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/dpul.princeton.edu/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry"
+  },
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://digital.library.unt.edu/",
+    "discovery_type": "InstitutionWebsite",
+    "endpoints": [
+      {
+        "discovery_type": "InstitutionWebsite",
+        "endpoint_role": "institution_website",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/digital.library.unt.edu/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://digital.library.unt.edu/",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://digital.library.unt.edu/",
+    "last_checked_at": null,
+    "name": "University of North Texas Libraries",
+    "provider_id": "provider-5bb54fcb57aa7da9",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://digital.library.unt.edu/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "url": "https://digital.library.unt.edu/",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "no",
+      "institution_url": "https://digital.library.unt.edu/",
+      "name": "University of North Texas Libraries",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/digital.library.unt.edu/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/digital.library.unt.edu/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry"
+  },
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://library.harvard.edu/digital-collections",
+    "discovery_type": "Collection",
+    "endpoints": [
+      {
+        "discovery_type": "Collection",
+        "endpoint_role": "presentation_collection",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/library.harvard.edu/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://library.harvard.edu/digital-collections",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://library.harvard.edu/digital-collections",
+    "last_checked_at": null,
+    "name": "Harvard University Digital Collections",
+    "provider_id": "provider-d14fb88cde24ff49",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://library.harvard.edu/digital-collections",
+      "discovery_type": "Collection",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "Collection",
+          "endpoint_role": "presentation_collection",
+          "label": "Institution homepage",
+          "url": "https://library.harvard.edu/digital-collections",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "full",
+      "institution_url": "https://library.harvard.edu/digital-collections",
+      "name": "Harvard University Digital Collections",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/library.harvard.edu/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/library.harvard.edu/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry"
+  },
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+    "discovery_type": "InstitutionWebsite",
+    "endpoints": [
+      {
+        "discovery_type": "InstitutionWebsite",
+        "endpoint_role": "institution_website",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/searchworks.stanford.edu/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+    "last_checked_at": null,
+    "name": "Stanford University",
+    "provider_id": "provider-648f0743acabd9c2",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "url": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "full",
+      "institution_url": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+      "name": "Stanford University",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/searchworks.stanford.edu/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/searchworks.stanford.edu/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry"
+  },
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://portail.biblissima.fr/en/",
+    "discovery_type": "InstitutionWebsite",
+    "endpoints": [
+      {
+        "discovery_type": "InstitutionWebsite",
+        "endpoint_role": "institution_website",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/biblissima.fr/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://portail.biblissima.fr/en/",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://portail.biblissima.fr/en/",
+    "last_checked_at": null,
+    "name": "Biblissima",
+    "provider_id": "provider-f10ea7c297cd81a8",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://portail.biblissima.fr/en/",
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "url": "https://portail.biblissima.fr/en/",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "no",
+      "institution_url": "https://portail.biblissima.fr/en/",
+      "name": "Biblissima",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/biblissima.fr/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/biblissima.fr/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry"
+  }
+]

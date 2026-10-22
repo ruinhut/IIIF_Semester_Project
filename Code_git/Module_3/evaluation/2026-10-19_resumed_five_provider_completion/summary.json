@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-10-19T16:27:06.407193+00:00",
+  "new_resolved_source_entries": 5,
+  "discovered_manifest_urls": 30,
+  "validated_manifests": 30,
+  "exported_documents": 30,
+  "exported_image_associations": 2103,
+  "distinct_image_urls": 2103,
+  "actual_downloaded_sample_images": 5,
+  "actual_sample_image_bytes": 6965788,
+  "ocr_reference_descriptors": 0,
+  "schema_validated_sample_json_files": 15,
+  "decoded_images": 5,
+  "smaller_than_canvas_declaration": 3,
+  "tests_passed": 157,
+  "previous_resolved_census_entries": 39,
+  "cumulative_resolved_census_entries": 44,
+  "census_entries": 94,
+  "remaining_unresolved_census_entries": 50,
+  "configuration_promoted": true,
+  "scope": "Bounded samples; source entries include an aggregator. Historical successes were not all re-fetched today.",
+  "unresolved_investigation": {
+    "provider_name": "Villanova University",
+    "observed_status": "HTTP 403",
+    "counted_as_new_success": false
+  },
+  "cleanup": {
+    "deleted_files": 40,
+    "deleted_bytes": 5957820,
+    "manifest": "cleanup_manifest.json"
+  }
+}

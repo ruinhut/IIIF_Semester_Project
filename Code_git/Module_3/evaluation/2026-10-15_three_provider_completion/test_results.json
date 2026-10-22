@@ -1,0 +1,12 @@
+{
+  "module3": {
+    "passed": 44,
+    "command": "python -m pytest -q",
+    "result": "44 passed in 10.48s"
+  },
+  "module8": {
+    "passed": 16,
+    "command": "python -m pytest -q",
+    "result": "16 passed in 6.10s"
+  }
+}

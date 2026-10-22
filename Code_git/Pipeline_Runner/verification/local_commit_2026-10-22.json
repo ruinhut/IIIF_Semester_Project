@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-22",
+  "scope": "Local unit/integration test suites; no new live full-catalogue harvest",
+  "modules": [
+    {
+      "module": "Module_1",
+      "exit_code": 0,
+      "passed": 14,
+      "subtests_passed": 0
+    },
+    {
+      "module": "Module_2",
+      "exit_code": 0,
+      "passed": 12,
+      "subtests_passed": 5
+    },
+    {
+      "module": "Module_3",
+      "exit_code": 0,
+      "passed": 69,
+      "subtests_passed": 0
+    },
+    {
+      "module": "Module_4",
+      "exit_code": 0,
+      "passed": 20,
+      "subtests_passed": 0
+    },
+    {
+      "module": "Module_5",
+      "exit_code": 0,
+      "passed": 14,
+      "subtests_passed": 7
+    },
+    {
+      "module": "Module_6",
+      "exit_code": 0,
+      "passed": 30,
+      "subtests_passed": 0
+    },
+    {
+      "module": "Module_7",
+      "exit_code": 0,
+      "passed": 29,
+      "subtests_passed": 0
+    },
+    {
+      "module": "Module_8",
+      "exit_code": 0,
+      "passed": 25,
+      "subtests_passed": 0
+    },
+    {
+      "module": "Pipeline_Runner",
+      "exit_code": 0,
+      "passed": 8,
+      "subtests_passed": 0
+    }
+  ],
+  "passed": 221,
+  "subtests_passed": 12
+}

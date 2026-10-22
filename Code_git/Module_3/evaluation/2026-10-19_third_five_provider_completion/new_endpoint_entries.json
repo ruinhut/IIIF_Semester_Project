@@ -1,0 +1,25 @@
+[
+  {
+    "provider_id": "provider-f034696f3b1f1c1f",
+    "provider_name": "Digital Repository of Ireland",
+    "entry_points": [
+      "https://repository.dri.ie/iiif/collection/b564jg065.json"
+    ],
+    "html_seeds": [],
+    "investigation_id": "2026-10-19-dri-hingston-collection",
+    "evidence_directory": "evaluation/2026-10-19_third_five_provider_completion",
+    "coverage_note": "Hingston nested collection: public scholarly access; no claim of DRI-wide enumeration or publication permission."
+  },
+  {
+    "provider_id": "provider-a1544ec8d50c2696",
+    "provider_name": "The SCTA Reading Room",
+    "entry_points": [
+      "https://scta.info/iiif/plaoulcommentary/collection",
+      "https://scta.info/iiif/PetrusGracilis/collection"
+    ],
+    "html_seeds": [],
+    "investigation_id": "2026-10-19-scta-text-collections",
+    "evidence_directory": "evaluation/2026-10-19_third_five_provider_completion",
+    "coverage_note": "Public SCTA text collections, with source image-service availability checked separately. Not all SCTA texts."
+  }
+]

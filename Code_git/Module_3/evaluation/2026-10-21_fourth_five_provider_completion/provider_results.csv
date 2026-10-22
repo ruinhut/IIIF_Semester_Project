@@ -1,0 +1,6 @@
+﻿provider_id,provider_name,discovered_manifest_urls,validated_manifests,exported_image_associations,distinct_image_urls,actual_sample_images,actual_width,actual_height,canvas_width,canvas_height,matches_declared_dimensions
+provider-4c8b793ca123a00e,Berlin State Library,6,6,681,681,1,2221,3540,2221,3540,True
+provider-95f1c3c6418c9eb9,National Library of Norway,5,5,1380,1380,1,2638,3867,2638,3867,True
+provider-ea2fe6808cb57161,Pennsylvania State University Libraries,1,1,57,57,1,2627,2546,2627,2546,True
+provider-a7f2a27b95b31ac2,University Library of Bern,6,6,6212,6212,1,1860,2903,1860,2903,True
+provider-9a42b37ef5cedd2f,University of Manchester Library,6,6,1864,1864,1,1543,2000,4243,5500,False

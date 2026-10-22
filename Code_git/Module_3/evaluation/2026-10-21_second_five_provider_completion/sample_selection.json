@@ -1,0 +1,9 @@
+{
+  "provider-fe4c0f49dea727df": {
+    "manifest_url_pattern": "/bsb11178213/manifest$",
+    "canvas_sequence": 9
+  },
+  "provider-f2fa8935cf790b44": {
+    "canvas_sequence": 3
+  }
+}

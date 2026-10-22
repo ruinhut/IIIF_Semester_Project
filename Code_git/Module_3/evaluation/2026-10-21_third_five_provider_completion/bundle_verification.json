@@ -1,0 +1,75 @@
+{
+  "verified_bundles": 5,
+  "schema_validated_json_files": 15,
+  "provider_ids": [
+    "provider-2433bd8d5611ff84",
+    "provider-3acece25cdf777e4",
+    "provider-68a08bd449531996",
+    "provider-877592e2f2c8d531",
+    "provider-acb86cbbcb639914"
+  ],
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-82b7254d4ef23e0b",
+      "resource_id": "resource-a6a70940265577b6ac7e",
+      "providers": [
+        {
+          "provider_id": "provider-acb86cbbcb639914",
+          "provider_name": "British Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-82b7254d4ef23e0b\\000009_resource-a6a70940265577b6ac7e\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-d2bfa464f34b7390",
+      "resource_id": "resource-28f4c22fe1056626b699",
+      "providers": [
+        {
+          "provider_id": "provider-3acece25cdf777e4",
+          "provider_name": "Indigenous Digital Archive"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-d2bfa464f34b7390\\000000_resource-28f4c22fe1056626b699\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-c3f0b5d8a2b46d01",
+      "resource_id": "resource-fade00134d36dc7b5f98",
+      "providers": [
+        {
+          "provider_id": "provider-877592e2f2c8d531",
+          "provider_name": "Heidelberg University Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-c3f0b5d8a2b46d01\\000009_resource-fade00134d36dc7b5f98\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-109bda2bf7f5a2f8",
+      "resource_id": "resource-e9486f5f094aaec157fe",
+      "providers": [
+        {
+          "provider_id": "provider-2433bd8d5611ff84",
+          "provider_name": "National Diet Library of Japan"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-109bda2bf7f5a2f8\\000009_resource-e9486f5f094aaec157fe\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-c6f93b506f635a3a",
+      "resource_id": "resource-f54ea5feb5b57c17e9b3",
+      "providers": [
+        {
+          "provider_id": "provider-68a08bd449531996",
+          "provider_name": "Victoria and Albert Museum"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_third_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-c6f93b506f635a3a\\000009_resource-f54ea5feb5b57c17e9b3\\image.jpg",
+      "reference_files": 0
+    }
+  ],
+  "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+}

@@ -1,0 +1,12 @@
+Subject: Weekly progress — IIIF Document Information Extraction — 9 October
+
+Dear Professor Kaplan,
+
+This week, I revisited the official IIIF Finding Resources guides. With AI assistance, I reviewed all currently listed provider/resource guides and converted their documented resource-access procedures into a structured Module 3 knowledge base.
+
+For the routes that are currently reachable and validated as executable, the pipeline can successfully retrieve the corresponding IIIF resources and download their Manifests and images. The remaining official guide entries have been preserved as documented candidate procedures for subsequent live validation.
+
+I am not currently blocked.
+
+Best regards,
+Boheng Shang

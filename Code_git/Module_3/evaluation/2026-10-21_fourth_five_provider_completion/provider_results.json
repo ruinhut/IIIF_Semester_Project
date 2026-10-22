@@ -1,0 +1,72 @@
+[
+  {
+    "provider_id": "provider-4c8b793ca123a00e",
+    "provider_name": "Berlin State Library",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 681,
+    "distinct_image_urls": 681,
+    "actual_sample_images": 1,
+    "actual_width": 2221,
+    "actual_height": 3540,
+    "canvas_width": 2221,
+    "canvas_height": 3540,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-95f1c3c6418c9eb9",
+    "provider_name": "National Library of Norway",
+    "discovered_manifest_urls": 5,
+    "validated_manifests": 5,
+    "exported_image_associations": 1380,
+    "distinct_image_urls": 1380,
+    "actual_sample_images": 1,
+    "actual_width": 2638,
+    "actual_height": 3867,
+    "canvas_width": 2638,
+    "canvas_height": 3867,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-ea2fe6808cb57161",
+    "provider_name": "Pennsylvania State University Libraries",
+    "discovered_manifest_urls": 1,
+    "validated_manifests": 1,
+    "exported_image_associations": 57,
+    "distinct_image_urls": 57,
+    "actual_sample_images": 1,
+    "actual_width": 2627,
+    "actual_height": 2546,
+    "canvas_width": 2627,
+    "canvas_height": 2546,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-a7f2a27b95b31ac2",
+    "provider_name": "University Library of Bern",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 6212,
+    "distinct_image_urls": 6212,
+    "actual_sample_images": 1,
+    "actual_width": 1860,
+    "actual_height": 2903,
+    "canvas_width": 1860,
+    "canvas_height": 2903,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-9a42b37ef5cedd2f",
+    "provider_name": "University of Manchester Library",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 1864,
+    "distinct_image_urls": 1864,
+    "actual_sample_images": 1,
+    "actual_width": 1543,
+    "actual_height": 2000,
+    "canvas_width": 4243,
+    "canvas_height": 5500,
+    "matches_declared_dimensions": false
+  }
+]

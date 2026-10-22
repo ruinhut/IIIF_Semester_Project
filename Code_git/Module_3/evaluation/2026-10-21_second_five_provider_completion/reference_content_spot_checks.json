@@ -1,0 +1,34 @@
+[
+  {
+    "url": "https://api.digitale-sammlungen.de/ocr/bsb11178213/10",
+    "status": 200,
+    "bytes": 12297,
+    "decoded_characters": 373,
+    "hocr_word_elements": 157,
+    "text_excerpt": "J 舊 棄 長勝 一 堡 募 民 真實 每 堡安夫 三 百名 撥 官 操守 不 動 官 糧 等 因 已經 查勘 是 四 堡 之外 又 收 長勝 堡 也 張仲 溝 長城 繇 迤 西 折 迤 西南 又 繇 迤 西南 折 迤 西 張仲 溝 | 乃復 折 迤 西 第一 溝 徑 李 兒 溝 長城 復 折 迤 "
+  },
+  {
+    "url": "https://api.digitale-sammlungen.de/ocr/bsb11178213/20",
+    "status": 200,
+    "bytes": 15418,
+    "decoded_characters": 482,
+    "hocr_word_elements": 211,
+    "text_excerpt": "吳漢 橫 野 大 將軍 , 王 常 建 義 大 將軍 朱 祐 破 姦 大 將軍 俠 進 等 五 萬餘 人 擊 盧 芳 將 買 覽 閔 堪 於 高 柳 塞北 遣騎 助 芳 漢軍 遇 雨 戰 不利 十年 上 谷 太守 王 覇 復 與 吳漢 等 四 將軍 六 萬人 出 高 柳 擊 賈 覽 詔 霸 與 漁陽"
+  },
+  {
+    "url": "https://api.digitale-sammlungen.de/ocr/bsb11178213/50",
+    "status": 200,
+    "bytes": 14938,
+    "decoded_characters": 464,
+    "hocr_word_elements": 203,
+    "text_excerpt": "繽 沙坡 口 明 景泰 元年 六月 也先 寇 蔚州 少 保 于謙 議 增 紫 荆 倒 馬屯兵 雨 鎮 三 關 志 兩 關 者 畿 甸 之 重障 而 蔚 則 兩 關 之外 藩 也 故 安 畿 甸 者 重 兩 關 謹 兩 關 者 慎 蔚 夫 蔚 南山 即 古 所謂 代 谷 也 壁立 峻 絶 可謂 天險 "
+  },
+  {
+    "url": "https://api.digitale-sammlungen.de/ocr/bsb11178213/100",
+    "status": 200,
+    "bytes": 14889,
+    "decoded_characters": 461,
+    "hocr_word_elements": 199,
+    "text_excerpt": "置 北 温州 領 溫泉 新城 高唐 三 縣屬 隰 州總管 府 貞觀 元 年 省 北 温州 及 新城 高唐 二 縣 以 溫泉 屬 隰 州 金志 石 州 温泉 縣 貞 祐 四年 五月 敗 隸 汾州 有 遠望 山 温泉 白壁 關 西 二十 里 唐 尉遲恭 守成 於此 石 上 有 痕 若 馬蹄 白壁 里 天"
+  }
+]

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "iiif-pipeline-runner"
 version = "0.1.0"
-description = "Sequential runner for the seven-module IIIF harvesting pipeline"
+description = "Sequential runner for the eight-module IIIF harvesting pipeline"
 requires-python = ">=3.10"
 
 [project.scripts]

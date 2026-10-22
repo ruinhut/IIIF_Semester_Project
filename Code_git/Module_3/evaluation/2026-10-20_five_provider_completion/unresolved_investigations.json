@@ -1,0 +1,37 @@
+[
+  {
+    "provider_name": "Yale University Library",
+    "observed_status": "HTTP 202 empty search response; distinct from the successful Yale museum routes",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Digital Commonwealth",
+    "observed_status": "HTTP 403 on documented search API and custom portal",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "National Library of Finland (Finna.fi)",
+    "observed_status": "HTTP 403 on documented public search routes",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "North Carolina State University Libraries",
+    "observed_status": "HTTP 401 on catalogue routes",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "University College Dublin Libraries",
+    "observed_status": "TLS issuer-chain validation failure; verification was not disabled",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Library of Congress",
+    "observed_status": "HTTP 403 on public JSON search",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "University of Leeds Libraries Cultural Collections",
+    "observed_status": "A native Manifest works, but bulk enumeration is not established; HTML catalogue returned 403",
+    "counted_as_new_success": false
+  }
+]

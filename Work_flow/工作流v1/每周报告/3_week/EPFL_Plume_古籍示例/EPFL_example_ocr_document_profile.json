@@ -1,0 +1,84 @@
+﻿{
+    "date_profile":  {
+                         "centuries":  [
+                                           16
+                                       ],
+                         "century_labels":  [
+                                                "16th century"
+                                            ],
+                         "end_year":  1580,
+                         "primary_century":  16,
+                         "primary_century_label":  "16th century",
+                         "raw_values":  [
+                                            "1580",
+                                            "XVIe."
+                                        ],
+                         "start_year":  1580
+                     },
+    "document_types":  [
+                           {
+                               "source_label":  "Type",
+                               "value":  "imprimé"
+                           }
+                       ],
+    "historical_typography":  {
+                                  "assessment_status":  "metadata_only",
+                                  "note":  "Features are reported only when explicit metadata evidence is present. An empty list does not mean that the feature is absent.",
+                                  "reported_features":  [
+
+                                                        ]
+                              },
+    "languages":  [
+                      {
+                          "code":  null,
+                          "raw":  "Français"
+                      }
+                  ],
+    "manifest_url":  "https://plume.epfl.ch/iiif/3/44/manifest",
+    "media_count":  415,
+    "metadata_coverage":  {
+                              "date_normalized":  true,
+                              "language_reported":  true,
+                              "production_method_classified":  true,
+                              "scan_quality_assessed":  false,
+                              "script_reported":  false
+                          },
+    "production_method":  {
+                              "category":  "printed",
+                              "confidence":  "metadata_inferred",
+                              "evidence":  [
+                                               {
+                                                   "json_path":  "$.metadata[7].value.none[0]",
+                                                   "source_label":  "Type",
+                                                   "value":  "imprimé"
+                                               }
+                                           ],
+                              "note":  "Classification is based on metadata terms and has not been visually verified."
+                          },
+    "provider_names":  [
+                           "Ecole Polytechnique Fédérale de Lausanne (EPFL)"
+                       ],
+    "record_id":  "manifest-6828466c563477ac",
+    "rights":  {
+                   "academic_analysis_allowed":  true,
+                   "public_reuse_eligible":  false,
+                   "research_status":  "retained"
+               },
+    "scan_quality":  {
+                         "assessment_status":  "not_assessed_no_image_pixels",
+                         "flags":  {
+                                       "bleed_through":  "unknown",
+                                       "blur":  "unknown",
+                                       "damaged_pages":  "unknown",
+                                       "low_contrast":  "unknown",
+                                       "microfilm":  "unknown",
+                                       "skew":  "unknown"
+                                   },
+                         "note":  "Module 7 receives image references, not decoded image pixels; microfilm, bleed-through, damage, blur, skew and contrast require image sampling or downstream inspection."
+                     },
+    "schema_version":  "iiif-ocr-profile-0.1",
+    "scripts":  [
+
+                ],
+    "title":  "Discours admirables de la nature des eaux et fonteines, tant naturelles qu\u0027artificielles, des métaux, des sels \u0026 salines, des pierres, des terres, du feu \u0026 des émaux : avec plusieurs autres, excellens secrets des choses naturelles : plus un traité de la marne, fort utile \u0026 nécessaire, pour ceux qui se mellent de l\u0027agriculture : le tout dressé par dialogues, esquels sont introduits la théorique \u0026 la practique"
+}

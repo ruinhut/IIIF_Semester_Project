@@ -1,4 +1,4 @@
-"""Validated, fail-fast orchestration for Modules 1–7."""
+"""Validated, fail-fast orchestration for Modules 1–8."""
 
 from __future__ import annotations
 
@@ -22,6 +22,7 @@ def run_pipeline(config_path: Path, *, first: int | None = None, last: int | Non
     started = datetime.now().astimezone()
     module_results: list[dict[str, Any]] = []
 
+    highest_module = max(item["number"] for item in modules)
     for module in modules:
         directory = _resolve(base, module["directory"])
         module_config = _resolve(directory, module["config"])
@@ -29,7 +30,20 @@ def run_pipeline(config_path: Path, *, first: int | None = None, last: int | Non
             raise FileNotFoundError(f"Module directory does not exist: {directory}")
         if not module_config.is_file():
             raise FileNotFoundError(f"Module config does not exist: {module_config}")
-        command = [sys.executable, "-m", module["package"], "run", "--config", str(module_config), *module["arguments"]]
+        command = [
+            sys.executable,
+            "-m",
+            module["package"],
+            module["command"],
+            "--config",
+            str(module_config),
+            *module["arguments"],
+        ]
+        print(
+            f"[Module {module['number']}/{highest_module}] Starting: {module['name']}",
+            file=sys.stderr,
+            flush=True,
+        )
         module_started = datetime.now().astimezone()
         completed = subprocess.run(command, cwd=directory, capture_output=True, text=True, encoding="utf-8", errors="replace")
         result = {
@@ -41,9 +55,20 @@ def run_pipeline(config_path: Path, *, first: int | None = None, last: int | Non
         }
         module_results.append(result)
         if completed.returncode != 0:
+            print(
+                f"[Module {module['number']}/{highest_module}] Failed with exit code "
+                f"{completed.returncode}",
+                file=sys.stderr,
+                flush=True,
+            )
             summary = _summary(started, module_results, status="failed")
             _write_log(log_dir, started, summary)
             raise PipelineRunError(module["number"], completed.returncode, summary)
+        print(
+            f"[Module {module['number']}/{highest_module}] Completed",
+            file=sys.stderr,
+            flush=True,
+        )
 
     summary = _summary(started, module_results, status="completed")
     log = _write_log(log_dir, started, summary)
@@ -76,15 +101,22 @@ def _validate_modules(value: Any) -> list[dict[str, Any]]:
         if not isinstance(raw, Mapping):
             raise ValueError("Each module configuration must be an object")
         number = raw.get("number")
-        if not isinstance(number, int) or isinstance(number, bool) or number < 1 or number > 7 or number in seen:
-            raise ValueError("Module numbers must be unique integers from 1 to 7")
+        if not isinstance(number, int) or isinstance(number, bool) or number < 1 or number > 8 or number in seen:
+            raise ValueError("Module numbers must be unique integers from 1 to 8")
         for key in ("name", "directory", "package", "config"):
             if not isinstance(raw.get(key), str) or not str(raw[key]).strip():
                 raise ValueError(f"Module {number} requires {key}")
         arguments = raw.get("arguments", [])
         if not isinstance(arguments, list) or not all(isinstance(item, str) for item in arguments):
             raise ValueError(f"Module {number} arguments must be a list of strings")
-        output.append({**dict(raw), "arguments": list(arguments)})
+        command = raw.get("command", "run")
+        if not isinstance(command, str) or not command.strip():
+            raise ValueError(f"Module {number} command must be a non-empty string")
+        output.append({
+            **dict(raw),
+            "command": command.strip(),
+            "arguments": list(arguments),
+        })
         seen.add(number)
     return sorted(output, key=lambda item: item["number"])
 

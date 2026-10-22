@@ -1,0 +1,75 @@
+{
+  "verified_bundles": 5,
+  "schema_validated_json_files": 15,
+  "provider_ids": [
+    "provider-4853865a686721d7",
+    "provider-7781a87376497b5c",
+    "provider-a1544ec8d50c2696",
+    "provider-c94006b2714289d6",
+    "provider-f034696f3b1f1c1f"
+  ],
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-40600020bdcdb536",
+      "resource_id": "resource-7a1d34c29f2a82fcf10a",
+      "providers": [
+        {
+          "provider_id": "provider-f034696f3b1f1c1f",
+          "provider_name": "Digital Repository of Ireland"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-40600020bdcdb536\\000000_resource-7a1d34c29f2a82fcf10a\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-ad7ede46a9543f75",
+      "resource_id": "resource-88d548ca977ab6355bb5",
+      "providers": [
+        {
+          "provider_id": "provider-4853865a686721d7",
+          "provider_name": "Princeton University Art Museum"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-ad7ede46a9543f75\\000000_resource-88d548ca977ab6355bb5\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-608bb69863e7f5c7",
+      "resource_id": "resource-7f5c956826800712a811",
+      "providers": [
+        {
+          "provider_id": "provider-7781a87376497b5c",
+          "provider_name": "UCLA Library Digital Collections"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-608bb69863e7f5c7\\000000_resource-7f5c956826800712a811\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-85768a3237ec9b1b",
+      "resource_id": "resource-53862234a42523e58396",
+      "providers": [
+        {
+          "provider_id": "provider-a1544ec8d50c2696",
+          "provider_name": "The SCTA Reading Room"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-85768a3237ec9b1b\\000009_resource-53862234a42523e58396\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-467b395d377dcb6b",
+      "resource_id": "resource-62b19ea9026ae8b26a85",
+      "providers": [
+        {
+          "provider_id": "provider-c94006b2714289d6",
+          "provider_name": "Smithsonian Institution"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-467b395d377dcb6b\\000009_resource-62b19ea9026ae8b26a85\\image.jpg",
+      "reference_files": 0
+    }
+  ],
+  "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+}

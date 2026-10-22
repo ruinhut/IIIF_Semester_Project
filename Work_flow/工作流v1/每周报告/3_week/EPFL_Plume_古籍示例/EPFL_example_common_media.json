@@ -1,0 +1,33 @@
+﻿{
+    "canvas":  {
+                   "id":  "https://plume.epfl.ch/iiif/3/44/canvas/p10",
+                   "label":  "10"
+               },
+    "image":  {
+                  "format":  "image/jpeg",
+                  "id":  "https://plume.epfl.ch/cantaloupe/iiif/2/CHEPFL_LIPR_AXA18_0010.tif/full/full/0/default.jpg",
+                  "service_urls":  [
+                                       "https://plume.epfl.ch/cantaloupe/iiif/2/CHEPFL_LIPR_AXA18_0010.tif"
+                                   ],
+                  "type":  "Image",
+                  "source_id":  "https://plume.epfl.ch/cantaloupe/iiif/2/CHEPFL_LIPR_AXA18_0010.tif",
+                  "download_url":  "https://plume.epfl.ch/cantaloupe/iiif/2/CHEPFL_LIPR_AXA18_0010.tif/full/full/0/default.jpg",
+                  "info_json_url":  "https://plume.epfl.ch/cantaloupe/iiif/2/CHEPFL_LIPR_AXA18_0010.tif/info.json"
+              },
+    "record_id":  "manifest-6828466c563477ac",
+    "resource_id":  "resource-7f68fe64f3bd7be45c67",
+    "rights":  {
+                   "academic_analysis_allowed":  true,
+                   "category":  "conflicting",
+                   "commercial_use_allowed":  false,
+                   "decision":  "exclude",
+                   "decision_scope":  "public_reuse",
+                   "policy_version":  "automatic-2026-09-29",
+                   "public_distribution_allowed":  false,
+                   "public_reuse_eligible":  false,
+                   "research_status":  "retained"
+               },
+    "schema_version":  "iiif-time-atlas-media-0.1",
+    "sequence":  9,
+    "source_manifest_url":  "https://plume.epfl.ch/iiif/3/44/manifest"
+}

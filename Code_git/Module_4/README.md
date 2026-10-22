@@ -40,6 +40,21 @@ invalid output. Network and HTTP failures remain separately auditable.
 
 ## Outputs
 
+### Missing source identifiers
+
+`normalization.infer_missing_manifest_id` defaults to `true`. If a response
+declares an IIIF Presentation Manifest and lacks its top-level `id`/`@id`,
+Module 4 may infer only that identifier from the successful final retrieval
+URL. Original bytes remain unchanged. A separate `.normalized.json`,
+`source_structural_validation` and `structural_normalization` preserve the
+source error, patch and evidence. No Canvas, image or descriptive content is
+invented. Set the option to `false` for strict source rejection. A valid
+normalized result means basic project checks passed, not full IIIF conformance.
+
+Explicitly imported Module 3 HTTP snapshots may be reused as cache; their
+metadata retains the original retrieval time and import trace. A cache hit
+must not be reported as an independent new HTTP request.
+
 Runtime files are written under data/ and ignored by Git except placeholders:
 
 - data/raw_manifests/<manifest_id>.json - exact parseable response bytes;
@@ -79,6 +94,10 @@ python -m iiif_manifest_validator run --config config.example.json --limit 5 --f
 A five-provider public sample is available through config.smoke.json.
 
 ## Test
+
+Canvas identifiers retain their URI fragments, such as `#canvas`. These
+fragments distinguish logical resources and are not removed like fragments
+on HTTP retrieval URLs. Raw publisher responses remain unchanged.
 
 ~~~powershell
 python -m unittest discover -s tests -v

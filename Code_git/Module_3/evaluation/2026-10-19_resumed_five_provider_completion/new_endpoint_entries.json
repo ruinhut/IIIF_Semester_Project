@@ -1,0 +1,13 @@
+[
+  {
+    "provider_id": "provider-5bb54fcb57aa7da9",
+    "provider_name": "University of North Texas Libraries",
+    "entry_points": [
+      "https://digital.library.unt.edu/explore/collections/UNTPC/top",
+      "https://digital.library.unt.edu/explore/collections/UNTSW/top"
+    ],
+    "html_seeds": [],
+    "investigation_id": "2026-10-19-unt-documented-collection-api",
+    "evidence_directory": "evaluation/2026-10-19_resumed_five_provider_completion"
+  }
+]

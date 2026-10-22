@@ -1,0 +1,21 @@
+{
+  "second_page_url": "https://ostasien.digitale-sammlungen.de/search?q=China&searchType=free&start=1&rows=10",
+  "status": 200,
+  "second_page_manifest_urls": [
+    "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178223/manifest",
+    "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178224/manifest",
+    "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178225/manifest",
+    "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178226/manifest",
+    "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178227/manifest",
+    "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178228/manifest",
+    "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178229/manifest",
+    "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178230/manifest",
+    "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178231/manifest",
+    "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb11178232/manifest"
+  ],
+  "overlap_with_first_page": 0,
+  "result_range": [
+    "11 - 20 von 108 Treffer",
+    "11 - 20 von 108 Treffer"
+  ]
+}

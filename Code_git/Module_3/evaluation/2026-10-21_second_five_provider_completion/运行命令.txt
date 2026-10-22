@@ -1,0 +1,63 @@
+﻿# PowerShell：在新终端中从第一段开始运行。以下所有连字符均为 ASCII。
+# 这次演示每个来源最多验证 6 个 Manifest、最终只下载每个来源的一张图片。
+$ErrorActionPreference = 'Stop'
+$ProjectRoot = 'E:\exchange-epfl\Semester_Project'
+$CodeRoot = Join-Path $ProjectRoot 'Code_git'
+$PipelinePython = Join-Path $CodeRoot '.venv\Scripts\python.exe'
+$ImageCheckPython = 'C:\Users\43057\AppData\Local\Programs\Python\Python310\python.exe'
+$RunRoot = Join-Path $CodeRoot 'Module_3\evaluation\2026-10-21_second_five_provider_completion'
+$env:PYTHONIOENCODING = 'utf-8'
+$env:PYTHONUTF8 = '1'
+$env:SSL_CERT_FILE = 'C:\Users\43057\AppData\Local\Programs\Python\Python310\lib\site-packages\certifi\cacert.pem'
+if (-not (Test-Path -LiteralPath $PipelinePython)) { throw 'Project virtual environment not found' }
+Set-Location $ProjectRoot
+
+# 1. 从 Module 1 的既有清单选择本轮五条来源；保留其来源信息。
+& $PipelinePython "$CodeRoot\Module_3\tools\prepare_oct21_second_five.py"
+if ($LASTEXITCODE -ne 0) { throw 'Preparation failed' }
+# 输入/配置：$RunRoot\selected_providers.jsonl 和 module2_validation.json 等。
+
+# 2. Module 2：检查清单里的原始入口。
+& $PipelinePython -m iiif_entry_validator run --config "$RunRoot\module2_validation.json"
+if ($LASTEXITCODE -ne 0) { throw 'Module 2 failed' }
+# 查看：$RunRoot\validation\module2\output 和 log。
+# 原首页失败不代表不存在 IIIF；Module 3 还执行已经核验、保存的发现配置。
+
+# 3. Module 3：运行本轮保存的四个发现配置和一个 Collection 入口。
+& $PipelinePython "$CodeRoot\Module_3\tools\run_discovery_with_evidence.py" --config "$RunRoot\module3_validation.json" --network-delay 0.5
+if ($LASTEXITCODE -ne 0) { throw 'Module 3 failed' }
+# 查看：$RunRoot\validation\module3\output\manifest_urls.jsonl。
+
+# 4. Module 4：独立获取并校验 Manifest。
+& $PipelinePython -m iiif_manifest_validator run --config "$RunRoot\module4_validation.json"
+if ($LASTEXITCODE -ne 0) { throw 'Module 4 failed' }
+# 查看：$RunRoot\validation\module4\output 和 raw_manifests。
+
+# 5. 依次执行 Module 5、6、7、8；末步只给五个样例下载图片和配套 JSON。
+& $PipelinePython "$CodeRoot\Module_3\tools\complete_oct19_provider_completion.py" --evaluation-root $RunRoot
+if ($LASTEXITCODE -ne 0) { throw 'Downstream execution failed' }
+# 查看版权：$RunRoot\downstream\module5\output。
+# 查看规范化记录：$RunRoot\downstream\module6\output。
+# 查看最终 JSONL：$RunRoot\downstream\module7\output。
+# 查看样例：$RunRoot\download_examples\module8\output\all\with_reference 和 without_reference。
+# 各样例含 image.jpg、common_record.json、common_media.json、ocr_document_profile.json。
+# 有参考文本的还含 hOCR、txt、institution_reference_texts.json。
+# 还要查看 Module 8 运行摘要中的 failed_images/reference_text_failures，不能只看退出码。
+
+# 6. 校验五个下载包的三份 JSON 和关联。
+& $PipelinePython "$CodeRoot\Module_3\tools\verify_linked_download_bundles.py" --output-root "$RunRoot\download_examples\module8\output" --mode all --report "$RunRoot\bundle_verification.json"
+if ($LASTEXITCODE -ne 0) { throw 'Bundle verification failed' }
+
+# 7. 完整解码图片。此 Python 已安装 Pillow，仅用于额外核验。
+& $ImageCheckPython "$CodeRoot\Module_3\tools\verify_downloaded_pixels.py" --module8-output "$RunRoot\download_examples\module8\output" --raw-manifest-directory "$RunRoot\validation\module4\raw_manifests" --mode all --report "$RunRoot\image_decode_verification.json"
+if ($LASTEXITCODE -ne 0) { throw 'Image verification failed' }
+
+# 8. 运行 Module 3-8 自动测试，结果写入 test_results.json。
+& $PipelinePython "$CodeRoot\Module_3\tools\run_completion_test_suites.py" --evaluation-root $RunRoot
+if ($LASTEXITCODE -ne 0) { throw 'Regression tests failed' }
+
+# 9. 打开本轮输出文件夹。
+Invoke-Item "$RunRoot\download_examples\module8\output\all"
+Invoke-Item "$RunRoot\downstream\module7\output"
+
+# 不要删除 Module 1 的输入清单、配置和知识库。网络结果可能随机构变化。

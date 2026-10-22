@@ -1,0 +1,6 @@
+﻿provider_id,provider_name,discovered_manifest_urls,validated_manifests,exported_image_associations,distinct_image_urls,actual_sample_images,actual_width,actual_height,canvas_width,canvas_height,matches_declared_dimensions
+provider-47cf886a2e6017f1,Ghent University,6,6,1206,1206,1,6246,4174,6246,4174,True
+provider-47ee4f79e1a60cac,University of St. Andrews,4,4,7,7,1,825,617,825,617,True
+provider-8798d72493175a05,Yale Center for British Art,6,6,15,15,1,7051,5142,7051,5142,True
+provider-665981fb2cfa68fa,Yale Peabody Museum,6,6,6,6,1,805,978,805,978,True
+provider-116ce327597310c6,Yale University Art Gallery,6,6,11,11,1,3488,2616,3488,2616,True

@@ -1,0 +1,22 @@
+{
+  "inventory_date": "2026-09-25",
+  "discovered_manifest_url_count": 325,
+  "valid_manifest_count_at_inventory_time": 324,
+  "status_counts": {
+    "network_error": 1,
+    "valid_manifest": 324
+  },
+  "manifest_with_rights_count": 120,
+  "canvas_count": 52606,
+  "content_body_count": 52618,
+  "image_body_count": 52618,
+  "other_body_count": 0,
+  "image_service_count": 52619,
+  "auxiliary_file_count": 17733,
+  "limits": {
+    "timeout_seconds": 12,
+    "max_response_bytes": 16777216,
+    "workers": 8
+  },
+  "interpretation": "Counts describe resources declared by currently accessible Manifests. They are not downloaded image files and have not passed the future rights filter."
+}

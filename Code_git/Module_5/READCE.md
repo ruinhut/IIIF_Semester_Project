@@ -1,58 +1,59 @@
-# Module 5——IIIF 版权识别与筛选
+# Module 5——IIIF 版权识别与研究数据保留
 
-Module 5 是完全自动化模块。它读取 Module 4 的有效 Manifest，提取和分类版权证据，执行带版本号的“允许/排除”策略，只把版权明确允许的资源交给下游。模块不再产生任何人工审核队列。
+Module 5 读取 Module 4 已通过结构校验的 Manifest，提取并规范化版权证据，然后执行带版本号的自动策略。
 
-必须区分两个概念：
+schema 2.0 将两个问题分开处理：
 
-- 没写版权信息：`unknown`，界面显示“未知版权”；
-- 明确声明公共领域：`public_domain`，界面显示“公共领域”。
+1. URL、元数据和相关记录能否被项目保存并用于学术分析；
+2. 资源能否被公开传播或用于商业用途。
 
-缺失版权信息不能推断为“无版权”。未知版权记录会被完整保存，但自动排除出版权已明确的数据集。
+**所有处理过的记录都会保留并送入 Module 6。**
+`allow` 和 `exclude` 只表示是否进入“可公开再利用”子集，不再决定记录是否继续进入流水线。
 
-## 功能
+## 自动状态
 
-本模块会：
+| 版权类别 | 公开再利用 | 研究下游 |
+|---|---|---|
+| `public_domain` | `allow` | 保留 |
+| `open_license` | `allow` | 保留 |
+| `noncommercial_or_limited` | `exclude` | 保留 |
+| `in_copyright` | `exclude` | 保留 |
+| `no_known_copyright` | `exclude` | 保留 |
+| `institutional_terms` | `exclude` | 保留 |
+| `unknown` | `exclude` | 保留 |
+| `conflicting` | `exclude` | 保留 |
 
-- 读取 Module 4 的有效 Manifest、资源清单和缓存的原始 JSON；
-- 在启用时核对 Module 4 保存的 SHA-256；
-- 提取 Manifest、Canvas、Annotation 和 Body 层级的 `rights` 与 `license`；
-- 保留版权相关 metadata、`requiredStatement` 和旧版 `attribution`；
-- 保存原始值、规范化值、JSON 路径、资源层级、类别和分类规则；
-- 区分决定性版权证据与仅说明署名的文字；
-- 输出中英文版权显示名称；
-- 自动给出 `allow` 或 `exclude`；
-- 只导出允许 Manifest 的页面和图像资源。
+因此，`exclude` 的准确含义是“不得进入公开再利用数据集”，并不是“从流水线删除”。
+
+每条版权判断都会保存：
+
+- 原始版权声明及规范化值；
+- JSON 路径、资源层级和匹配规则；
+- 机构名称、Manifest URL 和来源证据；
+- `decision_scope: public_reuse`；
+- `research_status: retained`；
+- URL/元数据保存、学术分析、公开传播和商业使用权限；
+- 策略版本、判断理由和运行时间。
 
 ## 输入
 
-默认读取：
-
 - `../Module_4/data/output/validated_manifests.jsonl`
 - `../Module_4/data/output/manifest_resource_inventory.jsonl`
-- Module 4 保存的原始 Manifest JSON
+- Module 4 缓存的原始 Manifest JSON
 
-只有 Module 4 schema 1.0 且结构状态为 `valid` 的记录可以进入本模块。
+## 输出
 
-## 自动策略
+- `research_manifests.jsonl`：全部 Manifest 和完整版权判断；Module 6 的正式输入。
+- `research_only_manifests.jsonl`：可以保存和研究，但不能公开再利用的记录。
+- `reuse_eligible_manifests.jsonl`：可以公开再利用的记录。
+- `research_resource_inventory.jsonl/csv`：全部研究资源行；Module 6 的正式输入。
+- `reuse_eligible_resource_inventory.jsonl/csv`：可公开再利用的资源子集。
+- `rights_summary.csv`：每个 Manifest 一行的审计表。
+- `data/log/Module5_电脑时间_log.txt`：输入、策略、数量和输出路径。
 
-策略文件为 `policies/automatic-2026-09-25.json`。
-
-| 类别 | 显示含义 | 自动决策 |
-|---|---|---|
-| `public_domain` | 公共领域 | 允许 |
-| `open_license` | CC BY 或 CC BY-SA | 允许 |
-| `noncommercial_or_limited` | 限制性使用 | 排除 |
-| `in_copyright` | 版权保护中 | 排除 |
-| `no_known_copyright` | 无已知版权限制 | 排除 |
-| `institutional_terms` | 机构使用条款 | 排除 |
-| `unknown` | 未知版权 | 排除 |
-| `conflicting` | 版权信息冲突 | 排除 |
-
-原始 JSON 缺失、无法解析或 SHA-256 不一致时也会自动排除，不会等待人工。
+即使原始 JSON 缺失或解析失败，记录的 URL、机构、元数据和失败原因仍会保存在研究输出中，但不会获得公开再利用资格。
 
 ## 运行
-
-在 `Code_git/Module_5` 中执行：
 
 ```powershell
 python -m iiif_rights_filter run --config config.example.json
@@ -60,19 +61,8 @@ python -m iiif_rights_filter run --config config.smoke.json
 python -m iiif_rights_filter run --config config.example.json --limit 20
 ```
 
-## 输出
-
-- `rights_assessed_manifests.jsonl`：全部 Manifest，包括被排除的记录和完整证据；
-- `allowed_manifests.jsonl`：自动允许的 Manifest；
-- `excluded_manifests.jsonl`：自动排除的 Manifest 及原因；
-- `allowed_resource_inventory.jsonl/csv`：允许 Manifest 的页面和图像资源；
-- `rights_summary.csv`：每个 Manifest 一行，并包含中英文显示名称；
-- `data/log/Module5_电脑时间_log.txt`：策略、数量和输出路径。
-
 ## 测试
 
 ```powershell
 python -W error::ResourceWarning -m unittest discover -s tests -v
 ```
-
-五个真实 Manifest 的预期结果为：1 个允许、4 个自动排除。Fragmentarium 因 CC BY 被允许，输出 3 条图像资源；BSB 的 NoC-NC、Digital Commonwealth 的无已知版权限制、Gallica 的机构条款和 Harvard 的未知版权都会保留分类信息，但不进入下游版权已明确的数据集。

@@ -1,0 +1,201 @@
+﻿{
+    "cleaned_at_utc":  "2026-10-19T16:47:41.6674123Z",
+    "evaluation_root":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion",
+    "deleted_file_count":  37,
+    "deleted_bytes":  5333757,
+    "removed_files":  [
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\08a44fd1388748a72558.json",
+                              "bytes":  34084,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\0f33227b8995f1ebe09f.txt",
+                              "bytes":  1,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\1ab5871765149cf7ccf4.html",
+                              "bytes":  118,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\1fcde8b323133f43aa9f.json",
+                              "bytes":  42790,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\2c52bb8a7303df63b677.json",
+                              "bytes":  971,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\38aa7bce2f3b0361d4c1.html",
+                              "bytes":  5639,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\3aa2f00074330facf223.json",
+                              "bytes":  118,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\3d3ce4f9fd65db3c8066.html",
+                              "bytes":  14415,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\467b395d377dcb6b021c.json",
+                              "bytes":  2044100,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\4b535c7cfd7fb72ce4c7.json",
+                              "bytes":  532,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\4bcbf4621dcd65d8cb37.html",
+                              "bytes":  12306,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\4f577ad55823a2848843.html",
+                              "bytes":  5706,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\505a2ea08ca4f5d602f8.json",
+                              "bytes":  5092,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\593f3de92bf4014a5fac.json",
+                              "bytes":  9157,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\5e826d18637812b1271b.json",
+                              "bytes":  4969,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\61200761c768061d5361.json",
+                              "bytes":  454,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\719cf57f7b7f64810b0a.json",
+                              "bytes":  310,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\73de75dc9ad8809d0fa8.json",
+                              "bytes":  1948158,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\778728be32490e413dc5.txt",
+                              "bytes":  1,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\77cd4ee7ce9748291db1.json",
+                              "bytes":  263894,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\7c24cf80fe9b424212b1.json",
+                              "bytes":  49,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\80fe9002f9b55e4680ac.html",
+                              "bytes":  1814,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\8bba3fab04711b51e67c.html",
+                              "bytes":  513,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\a66eecb9d2b4c383cc9c.json",
+                              "bytes":  3056,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\a77f499ba213dd845218.json",
+                              "bytes":  30361,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\ad1c579fb4e2a8c29b44.html",
+                              "bytes":  16210,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\b5e94f93eec81f698f28.html",
+                              "bytes":  594,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\b8bc9d1a63eda8d10464.html",
+                              "bytes":  633,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\c487722646de1bd1760d.json",
+                              "bytes":  2567,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\c9870bfabcc98b4c7e34.html",
+                              "bytes":  110,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\cbf29007a22129dd316e.json",
+                              "bytes":  25032,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\d401a6871662f8dc7ae3.txt",
+                              "bytes":  11,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\efc644cbfae27f87edd4.json",
+                              "bytes":  261723,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\f353c9d4d9869e854ff7.json",
+                              "bytes":  3145,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\faf7050ebfc4be2eab91.txt",
+                              "bytes":  11,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\fba9a7cd007c43be3a83.json",
+                              "bytes":  588583,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          },
+                          {
+                              "path":  "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-19_third_five_provider_completion\\live\\responses\\fc778f7df0a1c8e19033.json",
+                              "bytes":  6530,
+                              "reason":  "Temporary route probe; compact request status remains in live/checks.jsonl and final chain evidence remains in Module 3/4"
+                          }
+                      ],
+    "preserved":  [
+                      "All historical evaluations",
+                      "Production source and learned recipes",
+                      "Source Manifest JSON and validation metadata",
+                      "Final Module 7 JSONL",
+                      "Five actual image bundles",
+                      "Primary documentation and necessary request evidence"
+                  ]
+}

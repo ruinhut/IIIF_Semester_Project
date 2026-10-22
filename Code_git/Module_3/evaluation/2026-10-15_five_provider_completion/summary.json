@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-10-15T19:10:05.403163+00:00",
+  "providers_resolved": 5,
+  "manifest_urls": 100,
+  "validated_manifests": 100,
+  "declared_image_bodies": 26832,
+  "downloaded_example_images": 5,
+  "module3_tests_passed": 44,
+  "module8_tests_passed": 16,
+  "previous_unresolved_entries": 69,
+  "remaining_unresolved_entries": 64,
+  "scope": "20 Manifest samples per provider; image counts are declared resources, not full-collection totals or completed downloads."
+}

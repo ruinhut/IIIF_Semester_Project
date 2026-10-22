@@ -1,0 +1,64 @@
+[
+  {
+    "provider_name": "Digital Collections iiif of the Bavarian State Library",
+    "manifest_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb12188369/manifest",
+    "record_id": "manifest-8daacdf9ccaf92cb",
+    "resource_id": "resource-e775158f6a820c74df32",
+    "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_three_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-8daacdf9ccaf92cb\\000009_resource-e775158f6a820c74df32\\image.jpg",
+    "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_three_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-8daacdf9ccaf92cb\\000009_resource-e775158f6a820c74df32",
+    "image_url": "https://api.digitale-sammlungen.de/iiif/image/v2/bsb12188369_00010/full/full/0/default.jpg",
+    "reference_texts": 1,
+    "decoded_image": {
+      "record_id": "manifest-8daacdf9ccaf92cb",
+      "path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_three_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-8daacdf9ccaf92cb\\000009_resource-e775158f6a820c74df32\\image.jpg",
+      "width": 1096,
+      "height": 1728,
+      "decoded_format": "JPEG",
+      "verified": true,
+      "hocr_page_bbox": [
+        0,
+        0,
+        1096,
+        1728
+      ],
+      "ocr_word_count": 158,
+      "reference_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_three_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-8daacdf9ccaf92cb\\000009_resource-e775158f6a820c74df32\\institution_reference_001.hocr.html"
+    }
+  },
+  {
+    "provider_name": "David Rumsey Map Collection",
+    "manifest_url": "https://www.davidrumsey.com/luna/servlet/iiif/m/RUMSEY~8~1~222138~5505804/manifest",
+    "record_id": "manifest-89f9ab82bed1d9cf",
+    "resource_id": "resource-32e7fb235ca86d0b3040",
+    "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_three_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-89f9ab82bed1d9cf\\000000_resource-32e7fb235ca86d0b3040\\image.jpg",
+    "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_three_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-89f9ab82bed1d9cf\\000000_resource-32e7fb235ca86d0b3040",
+    "image_url": "https://www.davidrumsey.com/luna/servlet/iiif/RUMSEY~8~1~222138~5505804/full/!1024,1024/0/default.jpg",
+    "reference_texts": 0,
+    "decoded_image": {
+      "record_id": "manifest-89f9ab82bed1d9cf",
+      "path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_three_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-89f9ab82bed1d9cf\\000000_resource-32e7fb235ca86d0b3040\\image.jpg",
+      "width": 836,
+      "height": 1024,
+      "decoded_format": "JPEG",
+      "verified": true
+    }
+  },
+  {
+    "provider_name": "Vatican Library",
+    "manifest_url": "https://digi.vatlib.it/iiif/MSS_Capp.Giulia.II.1.pt.bis/manifest.json",
+    "record_id": "manifest-1afd720de931f009",
+    "resource_id": "resource-4de49d9edb838fc68908",
+    "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_three_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-1afd720de931f009\\000009_resource-4de49d9edb838fc68908\\image.jpg",
+    "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_three_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-1afd720de931f009\\000009_resource-4de49d9edb838fc68908",
+    "image_url": "https://digi.vatlib.it/pub/digit/MSS_Capp.Giulia.II.1.pt.bis/iiif/Capp.Giulia.II.1.pt.bis_0010_fa_0004v.jp2/full/full/0/default.jpg",
+    "reference_texts": 0,
+    "decoded_image": {
+      "record_id": "manifest-1afd720de931f009",
+      "path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-15_three_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-1afd720de931f009\\000009_resource-4de49d9edb838fc68908\\image.jpg",
+      "width": 2512,
+      "height": 1909,
+      "decoded_format": "JPEG",
+      "verified": true
+    }
+  }
+]

@@ -1,0 +1,386 @@
+{
+  "generated_at": "2026-10-21T18:03:48.363194+00:00",
+  "new_resolved_source_entries": 5,
+  "discovered_manifest_urls": 26,
+  "validated_manifests": 26,
+  "exported_documents": 26,
+  "exported_image_associations": 7918,
+  "distinct_image_urls": 7918,
+  "actual_downloaded_sample_images": 5,
+  "actual_sample_image_bytes": 5383428,
+  "ocr_reference_descriptors": 5256,
+  "schema_validated_sample_json_files": 15,
+  "decoded_images": 5,
+  "smaller_than_canvas_declaration": 0,
+  "tests_passed": 179,
+  "previous_resolved_census_entries": 59,
+  "cumulative_resolved_census_entries": 64,
+  "census_entries": 94,
+  "remaining_unresolved_census_entries": 30,
+  "configuration_promoted": true,
+  "scope": "Bounded samples; source entries include an aggregator. Historical successes were not all re-fetched today.",
+  "unresolved_investigation": [
+    {
+      "provider_name": "Leeds",
+      "url": "https://explore.library.leeds.ac.uk/special-collections-explore?displayMedia=image&displayOption=grid&resultLength=6&resultStart=1",
+      "status": 403,
+      "final_url": "https://explore.library.leeds.ac.uk/special-collections-explore?displayMedia=image&displayOption=grid&resultLength=6&resultStart=1",
+      "content_type": "text/html; charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\fifth\\responses\\22575eb8f3fcf041b895.html"
+    },
+    {
+      "provider_name": "Yale Library",
+      "url": "https://lux.collections.yale.edu/data/results?query=library&scope=work",
+      "status": 404,
+      "final_url": "https://lux.collections.yale.edu/data/results?query=library&scope=work",
+      "content_type": "text/html; charset=utf-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\fifth\\responses\\ab2db1e867ae5902c633.html"
+    },
+    {
+      "provider_name": "Cardiff",
+      "url": "https://librarysearch.cardiff.ac.uk/primaws/rest/pub/pcDelivery?docId=alma9911991475402420&vid=44WHELF_CAR:44WHELF_CAR_VU1",
+      "status": 404,
+      "final_url": "https://librarysearch.cardiff.ac.uk/primaws/rest/pub/pcDelivery?docId=alma9911991475402420&vid=44WHELF_CAR:44WHELF_CAR_VU1",
+      "content_type": "",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\fifth\\responses\\1937d399024319172f88.txt"
+    },
+    {
+      "provider_name": "Folger",
+      "url": "https://catalog.folger.edu/api/v1/search?q=Shakespeare&limit=6",
+      "status": 403,
+      "final_url": "https://catalog.folger.edu/api/v1/search?q=Shakespeare&limit=6",
+      "content_type": "application/json",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\fourth\\responses\\9f149d781685c990c266.json"
+    },
+    {
+      "provider_name": "vHMML",
+      "url": "https://www.vhmml.org/readingRoom/search?publicManifest=true&page=0&pageSize=6",
+      "status": 403,
+      "final_url": "https://www.vhmml.org/readingRoom/search?publicManifest=true&page=0&pageSize=6",
+      "content_type": "text/html;charset=utf-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\fourth\\responses\\d83ae59ec3df55e5b15d.html"
+    },
+    {
+      "provider_name": "Folger",
+      "url": "https://collections.folger.edu/",
+      "status": null,
+      "final_url": null,
+      "content_type": null,
+      "error_type": "URLError",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:997)>",
+      "response_file": null
+    },
+    {
+      "provider_name": "Folger",
+      "url": "https://collections.folger.edu/search?q=Shakespeare",
+      "status": null,
+      "final_url": null,
+      "content_type": null,
+      "error_type": "URLError",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:997)>",
+      "response_file": null
+    },
+    {
+      "provider_name": "KU Leuven",
+      "url": "https://repository.teneo.libis.be/",
+      "status": 200,
+      "final_url": "https://status.kuleuven.io/posts/01m5ev2r2apv9adt2n52pf2rg5",
+      "content_type": "text/html; charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\initial\\responses\\bddc84924cfd6219b50b.html"
+    },
+    {
+      "provider_name": "Georgetown",
+      "url": "https://repository.library.georgetown.edu/handle/10822/1044538",
+      "status": 200,
+      "final_url": "https://repository.digital.georgetown.edu/collections/cac4b972-0549-4ca5-bda8-004942a11798",
+      "content_type": "text/html",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\initial\\responses\\617127ddd5e1eb45cd9a.html"
+    },
+    {
+      "provider_name": "KU Leuven",
+      "url": "https://kuleuven.limo.libis.be/primaws/rest/pub/pnxs?lang=en&offset=0&limit=6&q=any%2Ccontains%2Cmanuscript&vid=32KUL_KUL%3AKULeuven&tab=all_content&scope=All_Content",
+      "status": 200,
+      "final_url": "https://kuleuven.limo.libis.be/primaws/rest/pub/pnxs?lang=en&offset=0&limit=6&q=any%2Ccontains%2Cmanuscript&vid=32KUL_KUL%3AKULeuven&tab=all_content&scope=All_Content",
+      "content_type": "application/json;charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\initial\\responses\\7ada4f65d937ca728926.json"
+    },
+    {
+      "provider_name": "Georgetown",
+      "url": "https://repository.library.georgetown.edu/server/api",
+      "status": 200,
+      "final_url": "https://repository.digital.georgetown.edu/",
+      "content_type": "text/html",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\initial\\responses\\392d5860ea76cd52c704.html"
+    },
+    {
+      "provider_name": "Finna",
+      "url": "https://api.finna.fi/v1/search?lookfor=map&type=AllFields&limit=6",
+      "status": 403,
+      "final_url": "https://api.finna.fi/v1/search?lookfor=map&type=AllFields&limit=6",
+      "content_type": "text/html; charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\initial\\responses\\0576d4dd854c2e80b941.html"
+    },
+    {
+      "provider_name": "Finna",
+      "url": "https://api.finna.fi/v1/search?lookfor=manuscript&type=AllFields&limit=6",
+      "status": 403,
+      "final_url": "https://api.finna.fi/v1/search?lookfor=manuscript&type=AllFields&limit=6",
+      "content_type": "text/html; charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\initial\\responses\\5dfa6b4ced5f11762139.html"
+    },
+    {
+      "provider_name": "NPM Taiwan",
+      "url": "https://digitalarchive.npm.gov.tw/",
+      "status": 403,
+      "final_url": "https://digitalarchive.npm.gov.tw/",
+      "content_type": "text/html; charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\initial\\responses\\760200a911a3f30f1a39.html"
+    },
+    {
+      "provider_name": "NPM Taiwan",
+      "url": "https://digitalarchive.npm.gov.tw/Integrate/Query",
+      "status": 403,
+      "final_url": "https://digitalarchive.npm.gov.tw/Integrate/Query",
+      "content_type": "text/html; charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\initial\\responses\\4f30b9bbff74e0a9b79f.html"
+    },
+    {
+      "provider_name": "Georgetown",
+      "url": "https://repository.library.georgetown.edu/rest/items?limit=3",
+      "status": 200,
+      "final_url": "https://repository.digital.georgetown.edu/?limit=3",
+      "content_type": "text/html",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\initial\\responses\\81c82b5d727c196fe017.html"
+    },
+    {
+      "provider_name": "Georgetown",
+      "url": "https://repository.library.georgetown.edu/iiif/collection",
+      "status": 200,
+      "final_url": "https://repository.digital.georgetown.edu/",
+      "content_type": "text/html",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\initial\\responses\\50adca916082587476c0.html"
+    },
+    {
+      "provider_name": "Cardiff",
+      "url": "https://digitalcollections.cardiff.ac.uk/",
+      "status": null,
+      "final_url": null,
+      "content_type": null,
+      "error_type": "URLError",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:997)>",
+      "response_file": null
+    },
+    {
+      "provider_name": "KU Leuven",
+      "url": "https://kuleuven.limo.libis.be/primaws/rest/pub/pnxs?lang=en&offset=0&limit=8&tab=LibraryCatalog&scope=MyInstitution&vid=32KUL_KUL%3AKULeuven&q=any%2Ccontains%2Cteneo.libis.be",
+      "status": 200,
+      "final_url": "https://kuleuven.limo.libis.be/primaws/rest/pub/pnxs?lang=en&offset=0&limit=8&tab=LibraryCatalog&scope=MyInstitution&vid=32KUL_KUL%3AKULeuven&q=any%2Ccontains%2Cteneo.libis.be",
+      "content_type": "application/json;charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\secondary\\responses\\073b9d3592567a067fc2.json"
+    },
+    {
+      "provider_name": "KU Leuven",
+      "url": "https://services.libis.be/m2/manifest/GBIB_Jesuitica",
+      "status": 200,
+      "final_url": "https://status.kuleuven.io/posts/01m5ev2r2apv9adt2n52pf2rg5",
+      "content_type": "text/html; charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\secondary\\responses\\72ada91bd45a2efcd943.html"
+    },
+    {
+      "provider_name": "Cuban Digital Collections",
+      "url": "https://iiif.sld.cu/",
+      "status": null,
+      "final_url": null,
+      "content_type": null,
+      "error_type": "URLError",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:997)>",
+      "response_file": null
+    },
+    {
+      "provider_name": "Cuban Digital Collections",
+      "url": "http://iiif.sld.cu/",
+      "status": 502,
+      "final_url": "http://iiif.sld.cu/",
+      "content_type": "",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\secondary\\responses\\31c6cd47abf916e0a923.txt"
+    },
+    {
+      "provider_name": "vHMML",
+      "url": "https://iiif.vhmml.org/",
+      "status": null,
+      "final_url": null,
+      "content_type": null,
+      "error_type": "URLError",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:997)>",
+      "response_file": null
+    },
+    {
+      "provider_name": "vHMML",
+      "url": "https://www.vhmml.org/iiif/",
+      "status": 404,
+      "final_url": "https://www.vhmml.org/iiif/",
+      "content_type": "text/html;charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\secondary\\responses\\40c7ff76aaf2d456b08c.html"
+    },
+    {
+      "provider_name": "Beyond Words",
+      "url": "https://beyondwords2016.org/",
+      "status": null,
+      "final_url": null,
+      "content_type": null,
+      "error_type": "URLError",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:997)>",
+      "response_file": null
+    },
+    {
+      "provider_name": "Beyond Words",
+      "url": "https://beyondwords2016.org/manifest.json",
+      "status": null,
+      "final_url": null,
+      "content_type": null,
+      "error_type": "URLError",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:997)>",
+      "response_file": null
+    },
+    {
+      "provider_name": "Beyond Words",
+      "url": "https://beyondwords2016.org/iiif/collection.json",
+      "status": null,
+      "final_url": null,
+      "content_type": null,
+      "error_type": "URLError",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:997)>",
+      "response_file": null
+    },
+    {
+      "provider_name": "vHMML",
+      "url": "https://hmmlcloud.org/dreamsea/browse.php",
+      "status": 404,
+      "final_url": "https://hmmlcloud.org/dreamsea/browse.php",
+      "content_type": "text/html; charset=iso-8859-1",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\seventh\\responses\\cc3e6f0af2da816c384e.html"
+    },
+    {
+      "provider_name": "vHMML",
+      "url": "https://www.vhmml.org/image/READING_ROOM/DS/DS 0011 00111//DS_0011_00111_010.jpg",
+      "status": null,
+      "final_url": null,
+      "content_type": null,
+      "error_type": "InvalidURL",
+      "error": "URL can't contain control characters. '/image/READING_ROOM/DS/DS 0011 00111//DS_0011_00111_010.jpg' (found at least ' ')",
+      "response_file": null
+    },
+    {
+      "provider_name": "Digital Commonwealth",
+      "url": "https://collections.leventhalmap.org/search.json?q=Boston&per_page=6",
+      "status": 403,
+      "final_url": "https://collections.leventhalmap.org/search.json?q=Boston&per_page=6",
+      "content_type": "text/plain",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\third\\responses\\c45fbe9c7f563705b7f1.txt"
+    },
+    {
+      "provider_name": "Digital Commonwealth",
+      "url": "https://ark.digitalcommonwealth.org/ark:/50959/v692tc06j/manifest",
+      "status": 403,
+      "final_url": "https://www.digitalcommonwealth.org/search/commonwealth:v692tc06j/manifest",
+      "content_type": "text/html",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\third\\responses\\fc4cf4c1fff09bb4478c.html"
+    },
+    {
+      "provider_name": "National Palace Museum",
+      "url": "https://digitalarchive.npm.gov.tw/Antique/setJsonU?uid=43351&Dept=U",
+      "status": 403,
+      "final_url": "https://digitalarchive.npm.gov.tw/Antique/setJsonU?uid=43351&Dept=U",
+      "content_type": "text/html; charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\third\\responses\\33e28944209be7a36fba.html"
+    },
+    {
+      "provider_name": "National Palace Museum",
+      "url": "https://digitalarchive.npm.gov.tw/opendata/Integrate/GetJson?cid=12060&dept=P&imageName=",
+      "status": 403,
+      "final_url": "https://digitalarchive.npm.gov.tw/opendata/Integrate/GetJson?cid=12060&dept=P&imageName=",
+      "content_type": "text/html; charset=UTF-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\third\\responses\\711c9355c23802a4d415.html"
+    },
+    {
+      "provider_name": "Georgetown",
+      "url": "https://api.github.com/repos/Georgetown-University-Libraries/File-Analyzer-Test-Data",
+      "status": 404,
+      "final_url": "https://api.github.com/repos/Georgetown-University-Libraries/File-Analyzer-Test-Data",
+      "content_type": "application/json; charset=utf-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\third\\responses\\116478eb7b7b4d6cd21b.json"
+    },
+    {
+      "provider_name": "Georgetown",
+      "url": "https://georgetown-university-libraries.github.io/File-Analyzer-Test-Data/iiif/demo8/",
+      "status": 404,
+      "final_url": "https://georgetown-university-libraries.github.io/File-Analyzer-Test-Data/iiif/demo8/",
+      "content_type": "text/html; charset=utf-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\third\\responses\\2ededb6e7bc3ddfaf84b.html"
+    },
+    {
+      "provider_name": "Digital Commonwealth",
+      "url": "https://search.digital-scriptorium.org/catalog.json?q=Boston+Public+Library&per_page=6",
+      "status": 200,
+      "final_url": "https://search.digital-scriptorium.org/catalog.json?q=Boston+Public+Library&per_page=6",
+      "content_type": "application/json; charset=utf-8",
+      "error_type": null,
+      "error": null,
+      "response_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-21_second_five_provider_completion\\probes\\third\\responses\\e0e721155a88d5b51e85.json"
+    }
+  ],
+  "legacy_shared_canvas_manifests": 0,
+  "summed_per_manifest_distinct_image_body_count": 7918
+}

@@ -1,0 +1,128 @@
+# PowerShell. Run the variable definitions in EVERY new terminal session.
+# All command hyphens are ASCII. No environment activation is required.
+$ErrorActionPreference = "Stop"
+$CodeRoot = "E:\exchange-epfl\Semester_Project\Code_git"
+$Python = Join-Path $CodeRoot ".venv\Scripts\python.exe"
+$Evaluation = Join-Path $CodeRoot "Module_3\evaluation\2026-10-16_blavatnik_investigation"
+if (-not (Test-Path -LiteralPath $Python)) { throw "Project Python was not found. Check CodeRoot." }
+Set-Location -LiteralPath $CodeRoot
+
+# Optional direct endpoint checks. Search requires POST, a public site header and JSON.
+# A browser address-bar GET is not equivalent to this request.
+$SearchHeaders = @{ "N-Belonging-To" = "BAF" }
+$SearchBody = '{"query":"","filters":[],"from":0}'
+$SearchResult = Invoke-RestMethod -Method Post -Uri "https://www.blavatnikarchive.org/api/data/es/search?size=60" -Headers $SearchHeaders -ContentType "application/json" -Body $SearchBody
+$SearchResult.es_hits.total
+# A real item-level Manifest is a direct GET.
+$ManifestExample = Invoke-RestMethod -Method Get -Uri "https://www.blavatnikarchive.org/api/data/es/iiif-manifest/6897?type=mirador&site=BAF"
+$ManifestExample.sequences[0].canvases.Count
+
+# 1. Reconstruct the complete catalogue from saved public search pages.
+& $Python "Module_3\tools\enumerate_catalogue_recipes.py" --recipes "$Evaluation\entire_catalogue_recipe.json" --output "$Evaluation\entire_catalogue_snapshot_v2" --resume
+if ($LASTEXITCODE -ne 0) { throw "Catalogue step failed." }
+
+# 2. Install the reviewed recipe while preserving older provider entries.
+& $Python "Module_3\tools\prepare_blavatnik_investigation.py" --limit 25000 --batch final
+if ($LASTEXITCODE -ne 0) { throw "Preparation failed." }
+
+# 3. Module 3. Replay saved successful HTTP responses; missing URLs are fetched.
+# Replay is NOT an independent new HTTP measurement.
+& $Python "Module_3\tools\run_discovery_with_evidence.py" --config "$Evaluation\module3_final.json" --resume --resume-from "$Evaluation\expanded\module3\requests.jsonl" --replay-without-delay --network-delay 0.2
+if ($LASTEXITCODE -ne 0) { throw "Module 3 failed." }
+
+# 4. Import exact source bytes, then run Modules 4, 5, 6 and 7.
+# Module 4 retains source errors and writes normalization into separate files.
+# Full image references are exported here; this does NOT download all images.
+& $Python "Module_3\tools\complete_blavatnik_downstream.py"
+if ($LASTEXITCODE -ne 0) { throw "Downstream processing failed." }
+
+# 5. OPTIONAL: extend the public-item JSON snapshot for reference availability.
+# It prioritizes text-bearing material and checkpoints after two hours.
+$SnapshotDeadline = [DateTimeOffset]::UtcNow.AddHours(2).ToString("o")
+& $Python "Module_3\tools\snapshot_public_item_records.py" --catalogue "$Evaluation\entire_catalogue_snapshot_v2\catalogue_records.jsonl" --url-template "https://www.blavatnikarchive.org/api/data/es/item/{identifier}" --output "$Evaluation\item_snapshot" --deadline-utc $SnapshotDeadline
+if ($LASTEXITCODE -ne 0) { throw "Public-item snapshot failed." }
+
+# 6. Refresh Modules 6 and 7 from the explicitly saved item snapshot only.
+& $Python "Module_3\tools\complete_blavatnik_downstream.py" --refresh-references
+if ($LASTEXITCODE -ne 0) { throw "Reference enrichment failed." }
+
+# 7. Repeat the original, fixed reference-image example batch.
+# Existing successful images are reused; the known source 404 remains a failure.
+Set-Location -LiteralPath (Join-Path $CodeRoot "Module_4")
+& $Python -m iiif_manifest_validator run --config "$Evaluation\module4_reference_batch.json"
+if ($LASTEXITCODE -ne 0) { throw "Reference Module 4 failed." }
+Set-Location -LiteralPath (Join-Path $CodeRoot "Module_5")
+& $Python -m iiif_rights_filter run --config "$Evaluation\module5_reference_batch.json"
+if ($LASTEXITCODE -ne 0) { throw "Reference Module 5 failed." }
+Set-Location -LiteralPath (Join-Path $CodeRoot "Module_6")
+& $Python -m iiif_metadata_normalizer run --config "$Evaluation\module6_reference_batch.json"
+if ($LASTEXITCODE -ne 0) { throw "Reference Module 6 failed." }
+Set-Location -LiteralPath (Join-Path $CodeRoot "Module_7")
+& $Python -m iiif_common_exporter run --config "$Evaluation\module7_reference_batch.json"
+if ($LASTEXITCODE -ne 0) { throw "Reference Module 7 failed." }
+Set-Location -LiteralPath (Join-Path $CodeRoot "Module_8")
+& $Python -m iiif_image_downloader download-all --config "$Evaluation\module8_reference_batch.json"
+if ($LASTEXITCODE -ne 0) { throw "Reference Module 8 failed." }
+
+# 8. Verify schemas, foreign keys, original text and exact image identifiers.
+Set-Location -LiteralPath $CodeRoot
+& $Python "Module_3\tools\verify_catalogue_reference_bundles.py" --module8-output "$Evaluation\reference_batch\module8\output" --report "$Evaluation\reference_batch_link_verification.json"
+if ($LASTEXITCODE -ne 0) { throw "Reference bundle verification failed." }
+
+# 9. Repeat the separate type-balanced 100-image check.
+& $Python "Module_3\tools\prepare_blavatnik_diverse_downloads.py" --limit 100
+if ($LASTEXITCODE -ne 0) { throw "Type sample preparation failed." }
+Set-Location -LiteralPath (Join-Path $CodeRoot "Module_8")
+& $Python -m iiif_image_downloader download-all --config "$Evaluation\module8_diverse.json"
+if ($LASTEXITCODE -ne 0) { throw "Type sample download failed." }
+Set-Location -LiteralPath $CodeRoot
+& $Python "Module_3\tools\verify_catalogue_reference_bundles.py" --module8-output "$Evaluation\diverse_downloads\module8\output" --allow-without-reference --report "$Evaluation\diverse_bundle_verification.json"
+if ($LASTEXITCODE -ne 0) { throw "Type sample JSON verification failed." }
+
+# 10. Add further reference pages, preserving all earlier attempts in statistics.
+& $Python "Module_3\tools\prepare_additional_reference_downloads.py" --limit 150
+if ($LASTEXITCODE -ne 0) { throw "Additional reference preparation failed." }
+Set-Location -LiteralPath (Join-Path $CodeRoot "Module_8")
+& $Python -m iiif_image_downloader download-all --config "$Evaluation\module8_additional_references.json"
+if ($LASTEXITCODE -ne 0) { throw "Additional reference download failed." }
+Set-Location -LiteralPath $CodeRoot
+& $Python "Module_3\tools\verify_catalogue_reference_bundles.py" --module8-output "$Evaluation\additional_references\module8\output" --report "$Evaluation\additional_reference_bundle_verification.json"
+if ($LASTEXITCODE -ne 0) { throw "Additional reference verification failed." }
+
+# 11. Reconcile real download paths and refresh all tables/reports.
+# Pixel QA uses this workspace's separate interpreter with Pillow.
+$PixelPython = "C:\Users\43057\AppData\Local\Programs\Python\Python310\python.exe"
+if (-not (Test-Path -LiteralPath $PixelPython)) { throw "Select a Python interpreter with Pillow for pixel QA." }
+& $PixelPython "Module_3\tools\verify_downloaded_pixels.py" --module8-output "$Evaluation\reference_batch\module8\output" --raw-manifest-directory "$Evaluation\final\module4\raw_manifests" --report "$Evaluation\reference_batch_pixels_recheck.json"
+if ($LASTEXITCODE -ne 0) { throw "Reference pixel QA failed." }
+& $PixelPython "Module_3\tools\verify_downloaded_pixels.py" --module8-output "$Evaluation\diverse_downloads\module8\output" --raw-manifest-directory "$Evaluation\final\module4\raw_manifests" --report "$Evaluation\diverse_image_verification.json"
+if ($LASTEXITCODE -ne 0) { throw "Type sample pixel QA failed." }
+& $PixelPython "Module_3\tools\verify_downloaded_pixels.py" --module8-output "$Evaluation\additional_references\module8\output" --raw-manifest-directory "$Evaluation\final\module4\raw_manifests" --report "$Evaluation\additional_reference_image_verification.json"
+if ($LASTEXITCODE -ne 0) { throw "Additional reference pixel QA failed." }
+& $Python "Module_3\tools\summarize_blavatnik_investigation.py"
+if ($LASTEXITCODE -ne 0) { throw "Summary failed." }
+& $Python "Module_3\tools\report_blavatnik_catalogue.py"
+if ($LASTEXITCODE -ne 0) { throw "Report failed." }
+
+# Output locations.
+Invoke-Item -LiteralPath "$Evaluation\final\module3\output"
+Invoke-Item -LiteralPath "$Evaluation\final\module4\output"
+Invoke-Item -LiteralPath "$Evaluation\final\module7\output"
+Invoke-Item -LiteralPath "$Evaluation\reference_batch\module8\output\all\with_reference"
+Invoke-Item -LiteralPath "$Evaluation\stage_counts.csv"
+
+# Optional full image job. NOT executed in this experiment: it consumes the full
+# 50,600 image associations (50,188 distinct URLs), rather than a bounded sample.
+# Set-Location -LiteralPath (Join-Path $CodeRoot "Module_8")
+# & $Python -m iiif_image_downloader download-all --config "$Evaluation\module8_final.json"
+# The same full config also supports download-example for one image.
+
+# Optional deterministic regression tests. TestFolders is defined here explicitly.
+$TestFolders = 3..8 | ForEach-Object { "Module_$_" }
+foreach ($Folder in $TestFolders) {
+    Write-Host "Testing $Folder" -ForegroundColor Cyan
+    Set-Location -LiteralPath (Join-Path $CodeRoot $Folder)
+    & $Python -m pytest -q
+    if ($LASTEXITCODE -ne 0) { throw "Tests failed: $Folder" }
+}
+Set-Location -LiteralPath $CodeRoot

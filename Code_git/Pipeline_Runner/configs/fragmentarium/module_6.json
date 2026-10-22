@@ -1,9 +1,11 @@
-﻿{
-  "allowed_manifests_jsonl": "../../data/e2e_validation/module_5/output/allowed_manifests.jsonl",
-  "allowed_resource_inventory_jsonl": "../../data/e2e_validation/module_5/output/allowed_resource_inventory.jsonl",
+{
+  "research_manifests_jsonl": "../../data/e2e_validation/module_5/output/research_manifests.jsonl",
+  "research_resource_inventory_jsonl": "../../data/e2e_validation/module_5/output/research_resource_inventory.jsonl",
   "module_4_directory": "../../data/e2e_validation/module_4",
   "output_directory": "../../data/e2e_validation/module_6/output",
   "log_directory": "../../data/e2e_validation/module_6/log",
   "language_priority": ["en", "fr", "de", "it", "la", "und"],
-  "run": {"max_records": 2, "verify_raw_sha256": true}
+  "run": {
+    "max_records": 2
+  }
 }

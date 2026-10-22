@@ -1,0 +1,6 @@
+﻿provider_id,provider_name,discovered_manifest_urls,validated_manifests,exported_image_associations,distinct_image_urls,actual_sample_images,actual_width,actual_height,canvas_width,canvas_height,matches_declared_dimensions
+provider-fe4c0f49dea727df,DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library,6,6,5256,5256,1,1731,2996,1731,2996,True
+provider-9c24703f7d539465,Cardiff University,2,2,95,95,1,4032,6048,4032,6048,True
+provider-e8f0640dd782bf74,University of Leeds Libraries' Cultural Collections,6,6,1867,1867,1,762,1024,762,1024,True
+provider-f2fa8935cf790b44,vHMML,6,6,118,118,1,6000,4000,6000,4000,True
+provider-feedf2702c521119,Yale University Library,6,6,582,582,1,3686,5571,3686,5571,True

@@ -1,0 +1,255 @@
+{
+  "collection_focus": null,
+  "discovery_endpoint": "http://digitalcollections.frick.org/digico/",
+  "discovery_type": "Collection",
+  "endpoint_candidate": {
+    "discovery_type": "Collection",
+    "endpoint_role": "presentation_collection",
+    "label": "Institution homepage",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+      "source_type": "iiif_community_implementation_list",
+      "source_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md"
+    },
+    "url": "http://digitalcollections.frick.org/digico/",
+    "verification_status": "pending_module_2"
+  },
+  "endpoint_check": {
+    "attempt_count": 1,
+    "body_truncated": false,
+    "check_result": "reachable_non_json",
+    "checked_at": "2026-10-12T22:09:31+02:00",
+    "content_type": "text/html",
+    "error_message": null,
+    "error_type": null,
+    "final_url": "https://digitalcollections.frick.org/digico/",
+    "json_parseable": null,
+    "json_resource_type": null,
+    "redirect_chain": [
+      {
+        "from_url": "http://digitalcollections.frick.org/digico/",
+        "status_code": 302,
+        "to_url": "https://digitalcollections.frick.org/digico/"
+      }
+    ],
+    "requested_url": "http://digitalcollections.frick.org/digico/",
+    "response_bytes": 3458,
+    "response_time_ms": 1000,
+    "status_code": 200
+  },
+  "endpoint_checks": [
+    {
+      "endpoint_candidate": {
+        "discovery_type": "Collection",
+        "endpoint_role": "presentation_collection",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+          "source_type": "iiif_community_implementation_list",
+          "source_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md"
+        },
+        "url": "http://digitalcollections.frick.org/digico/",
+        "verification_status": "pending_module_2"
+      },
+      "endpoint_check": {
+        "attempt_count": 1,
+        "body_truncated": false,
+        "check_result": "reachable_non_json",
+        "checked_at": "2026-10-12T22:09:31+02:00",
+        "content_type": "text/html",
+        "error_message": null,
+        "error_type": null,
+        "final_url": "https://digitalcollections.frick.org/digico/",
+        "json_parseable": null,
+        "json_resource_type": null,
+        "redirect_chain": [
+          {
+            "from_url": "http://digitalcollections.frick.org/digico/",
+            "status_code": 302,
+            "to_url": "https://digitalcollections.frick.org/digico/"
+          }
+        ],
+        "requested_url": "http://digitalcollections.frick.org/digico/",
+        "response_bytes": 3458,
+        "response_time_ms": 1000,
+        "status_code": 200
+      }
+    }
+  ],
+  "endpoints": [
+    {
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "label": "Institution homepage",
+      "source": {
+        "activity_type": null,
+        "observed_at": "2026-10-12T22:09:30+02:00",
+        "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+        "source_type": "iiif_community_implementation_list",
+        "source_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md"
+      },
+      "url": "http://digitalcollections.frick.org/digico/",
+      "verification_status": "pending_module_2"
+    }
+  ],
+  "estimated_size": null,
+  "institution_url": "http://digitalcollections.frick.org/digico/",
+  "last_checked_at": null,
+  "module_2_schema_version": "2.0",
+  "module_3_schema_version": "2.1",
+  "name": "The Frick Collection",
+  "provider_id": "provider-0aeecd6836053c69",
+  "raw_source_record": {
+    "catalog_entry_kind": "awesome_iiif_implementation",
+    "collection_focus": null,
+    "discovery_endpoint": "http://digitalcollections.frick.org/digico/#/",
+    "discovery_type": "Collection",
+    "endpoint_verification": "pending_module_2",
+    "endpoints": [
+      {
+        "discovery_type": "Collection",
+        "endpoint_role": "presentation_collection",
+        "label": "Institution homepage",
+        "url": "http://digitalcollections.frick.org/digico/#/",
+        "verification_status": "pending_module_2"
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "http://digitalcollections.frick.org/digico/#/",
+    "name": "The Frick Collection",
+    "record_status": "active",
+    "rights_status": "unknown",
+    "rights_values": [],
+    "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+    "stream_label": "Community-maintained IIIF Catalogue entry"
+  },
+  "record_status": "active",
+  "resource_discovery": {
+    "collections_visited": 0,
+    "html_pages_visited": 2,
+    "input_endpoint_count": 1,
+    "issues": [
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/digico/css/libraries.css"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/digico/css/frick.css"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/images/mainpage_logo_long_final.png"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/digico/js/libraries.min.js"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/digico/js/frick.app.min.js"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/digico/js/openseadragon/openseadragon.min.js"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/landing/css/tiny-slider.css"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/landing/css/style.css"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/landing/js/tiny-slider.js"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/landing/css/slick.css"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/landing/css/slick-theme.css"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://imagesdigitalcollections.frick.org/media/featured/AXG4MUX3AfEiDKxjQXK4/landing"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/images/Landing_logo_long_final_brighter.png"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/images/digital_collections_logo_final.png"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/digico/"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/images/digitalprojects/aries.png"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/images/digitalprojects/stanford.png"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/images/digitalprojects/CHOCdirectory.png"
+      },
+      {
+        "issue_type": "not_json",
+        "message": "Candidate did not return JSON",
+        "url": "https://digitalcollections.frick.org/images/digitalprojects/describeit.png"
+      }
+    ],
+    "knowledge_application": [],
+    "manifest_count": 0,
+    "resolved_endpoints": [],
+    "status": "unresolved",
+    "stream_pages_visited": 0,
+    "truncated": true
+  },
+  "rights_status": "unknown",
+  "rights_values": [],
+  "schema_version": "2.0",
+  "source": {
+    "activity_type": null,
+    "observed_at": "2026-10-12T22:09:30+02:00",
+    "source_page_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md",
+    "source_type": "iiif_community_implementation_list",
+    "source_url": "https://github.com/IIIF/awesome-iiif/blob/main/implementations.md"
+  },
+  "stream_label": "Community-maintained IIIF Catalogue entry"
+}

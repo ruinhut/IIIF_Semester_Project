@@ -1,0 +1,44 @@
+{
+  "providers": [
+    {
+      "name": "University of Manchester Library",
+      "institution_url": "https://www.library.manchester.ac.uk/",
+      "discovery_endpoint": "https://www.digitalcollections.manchester.ac.uk/search/JSONAdvanced?keyword=manuscript&start=0&end=20",
+      "discovery_type": "JSON API",
+      "endpoint_role": "catalogue_api",
+      "source_page_url": "https://www.digitalcollections.manchester.ac.uk/help/"
+    },
+    {
+      "name": "Pennsylvania State University Libraries",
+      "institution_url": "https://libraries.psu.edu/",
+      "discovery_endpoint": "https://digital.libraries.psu.edu/iiif/2/ejb/manifest.json",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digital.libraries.psu.edu/digital/collection/ejb"
+    },
+    {
+      "name": "National Library of Norway",
+      "institution_url": "https://www.nb.no/",
+      "discovery_endpoint": "https://api.nb.no/catalog/v1/items?q=mediatype%3Ab%C3%B8ker+AND+digital%3AJa&filter=date%3A%5B15000101+TO+19001231%5D&digitalAccessibleOnly=true&size=6",
+      "discovery_type": "JSON API",
+      "endpoint_role": "catalogue_api",
+      "source_page_url": "https://api.nb.no/catalog/v1/items/api-docs"
+    },
+    {
+      "name": "Berlin State Library",
+      "institution_url": "https://staatsbibliothek-berlin.de/",
+      "discovery_endpoint": "https://oai.sbb.berlin/?verb=ListRecords&metadataPrefix=oai_dc",
+      "discovery_type": "OAI-PMH",
+      "endpoint_role": "catalogue_api",
+      "source_page_url": "https://lab.sbb.berlin/dc/?lang=en"
+    },
+    {
+      "name": "University Library of Bern",
+      "institution_url": "https://www.ub.unibe.ch/",
+      "discovery_endpoint": "https://iiif.ub.unibe.ch/presentation/v2.1/collection/691e6e0c-afc2-4f17-aee5-d9f88be15865/",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://ub-unibe-ch.github.io/IIIF_Server/presentation_api/"
+    }
+  ]
+}

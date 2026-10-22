@@ -1,0 +1,89 @@
+[
+  {
+    "provider_id": "provider-95f1c3c6418c9eb9",
+    "provider_name": "National Library of Norway",
+    "execution": {
+      "manifests": [
+        {
+          "manifest_url": "https://api.nb.no/catalog/v1/iiif/351f0a150ed02166b2e503b93ee7ffdd/manifest",
+          "source_url": "https://api.nb.no/catalog/v1/items?q=mediatype%3Ab%C3%B8ker+AND+digital%3AJa&filter=date%3A%5B15000101+TO+19001231%5D&digitalAccessibleOnly=true&page=0&size=6",
+          "skill_id": "norway-public-digital-books-hal-presentation-links"
+        }
+      ],
+      "entry_points": [],
+      "issues": [],
+      "audit": {
+        "investigation_id": "2026-10-21-fourth-five-provider-discovery",
+        "skill_id": "norway-public-digital-books-hal-presentation-links",
+        "skill_type": "paginated_json_manifest_links",
+        "status": "manifests_found",
+        "api_url": "https://api.nb.no/catalog/v1/items",
+        "pages_fetched": 1,
+        "records_examined": 6,
+        "manifest_requests": 1,
+        "manifests_validated": 1,
+        "failure_counts": {},
+        "truncated": true
+      },
+      "truncated": true
+    }
+  },
+  {
+    "provider_id": "provider-ea2fe6808cb57161",
+    "provider_name": "Pennsylvania State University Libraries",
+    "execution": {
+      "manifests": [
+        {
+          "manifest_url": "http://cdm17287.contentdm.oclc.org/iiif/2/ejb:57/manifest.json",
+          "source_url": "https://digital.libraries.psu.edu/iiif/2/ejb/manifest.json",
+          "skill_id": "penn-state-contentdm-public-diary-collection"
+        }
+      ],
+      "entry_points": [],
+      "issues": [],
+      "audit": {
+        "investigation_id": "2026-10-21-fourth-five-provider-discovery",
+        "skill_id": "penn-state-contentdm-public-diary-collection",
+        "skill_type": "paginated_json_manifest_links",
+        "status": "manifests_found",
+        "api_url": "https://digital.libraries.psu.edu/iiif/2/ejb/manifest.json",
+        "pages_fetched": 1,
+        "records_examined": 1,
+        "manifest_requests": 1,
+        "manifests_validated": 1,
+        "failure_counts": {},
+        "truncated": true
+      },
+      "truncated": true
+    }
+  },
+  {
+    "provider_id": "provider-a7f2a27b95b31ac2",
+    "provider_name": "University Library of Bern",
+    "execution": {
+      "manifests": [
+        {
+          "manifest_url": "https://iiif.ub.unibe.ch/presentation/v2.1/manifest/78285e64-0b86-4010-99f2-6c14b100432d/",
+          "source_url": "https://iiif.ub.unibe.ch/presentation/v2.1/collection/691e6e0c-afc2-4f17-aee5-d9f88be15865/",
+          "skill_id": "bern-public-haller-gga-iiif-collection"
+        }
+      ],
+      "entry_points": [],
+      "issues": [],
+      "audit": {
+        "investigation_id": "2026-10-21-fourth-five-provider-discovery",
+        "skill_id": "bern-public-haller-gga-iiif-collection",
+        "skill_type": "paginated_json_manifest_links",
+        "status": "manifests_found",
+        "api_url": "https://iiif.ub.unibe.ch/presentation/v2.1/collection/691e6e0c-afc2-4f17-aee5-d9f88be15865/",
+        "pages_fetched": 1,
+        "records_examined": 73,
+        "manifest_requests": 1,
+        "manifests_validated": 1,
+        "failure_counts": {},
+        "truncated": true
+      },
+      "truncated": true
+    }
+  }
+]

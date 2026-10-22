@@ -56,6 +56,7 @@ def main(argv: list[str] | None = None) -> int:
                     "image_body_count": result.image_body_count,
                     "image_service_count": result.image_service_count,
                     "cache_hit_count": result.cache_hit_count,
+                    "normalized_manifest_count": result.normalized_manifest_count,
                     "validated_manifests_jsonl": str(
                         result.validated_manifests_jsonl
                     ),

@@ -1,0 +1,242 @@
+[
+  {
+    "provider_id": "provider-83eb25cc392724da",
+    "provider_name": "Beyond Words: Illuminating Manuscripts in Boston Collections",
+    "institution_url": "http://beyondwords2016.org/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-a668e1096468c352",
+    "provider_name": "Bibliothèque nationale de France (BnF)",
+    "institution_url": "https://gallica.bnf.fr/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-acb86cbbcb639914",
+    "provider_name": "British Library",
+    "institution_url": "https://www.bl.uk/collection-guides/iiif",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-9c24703f7d539465",
+    "provider_name": "Cardiff University",
+    "institution_url": "https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-31c6cd47abf916e0",
+    "provider_name": "Cuban Digital Collections",
+    "institution_url": "http://iiif.sld.cu/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-c4aa50f2571a99e9",
+    "provider_name": "Cultural Japan",
+    "institution_url": "https://cultural.jp/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-8d5551c46daf6536",
+    "provider_name": "Digital Commonwealth",
+    "institution_url": "https://digitalcommonwealth.org/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-fe4c0f49dea727df",
+    "provider_name": "DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library",
+    "institution_url": "https://ostasien.digitale-sammlungen.de/?locale=en",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-617127ddd5e1eb45",
+    "provider_name": "DigitalGeorgetown's Integration of Universal Viewer into DSpace",
+    "institution_url": "https://repository.library.georgetown.edu/handle/10822/1044538",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-e1782e53439deb7b",
+    "provider_name": "DigiVatLib",
+    "institution_url": "http://digi.vatlib.it/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-9c46415198317886",
+    "provider_name": "Europeana",
+    "institution_url": "https://www.europeana.eu/portal/en/search?q=provider_aggregation_edm_isShownBy%3A*iiif*&view=grid",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-818f5f2d2b5bea33",
+    "provider_name": "Folger Shakespeare Library",
+    "institution_url": "https://collections.folger.edu/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-9fd4bc767a462cd4",
+    "provider_name": "Gallica",
+    "institution_url": "http://gallica.bnf.fr/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-d987c625d6365082",
+    "provider_name": "Georeferencer",
+    "institution_url": "http://www.georeferencer.com/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-637a751532e5f5a3",
+    "provider_name": "Harvard Art Museum",
+    "institution_url": "https://harvardartmuseums.org/collections",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-2b0e0fbd04a5a32c",
+    "provider_name": "Historical State Search",
+    "institution_url": "http://historicalstate.lib.ncsu.edu/search",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-10b9080040d0cc13",
+    "provider_name": "hocrviewer",
+    "institution_url": "https://github.com/jbaiter/hocrviewer-mirador",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-3acece25cdf777e4",
+    "provider_name": "Indigenous Digital Archive",
+    "institution_url": "https://omeka.dlcs-ida.org/s/ida/page/home",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-d98fe11ebfc34f6d",
+    "provider_name": "J. Paul Getty Trust",
+    "institution_url": "https://search.getty.edu/gateway/search?q=&cat=highlight&f=%22Open+Content+Images%22&rows=10&srt=a&dir=s&pg=1",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-ef2f1cc06db37bc3",
+    "provider_name": "KU Leuven",
+    "institution_url": "https://kuleuven.limo.libis.be/discovery",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-296564297962fb5e",
+    "provider_name": "Library of Congress",
+    "institution_url": "https://www.loc.gov/collections/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-c4bca842117bf9f7",
+    "provider_name": "National Gallery of Art Library",
+    "institution_url": "https://library.nga.gov/discovery/collectionDiscovery?vid=01NGA_INST:NGA&collectionId=8157583990004896",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-7354f1a7e6bbf41f",
+    "provider_name": "National Library of Finland (Finna.fi)",
+    "institution_url": "https://www.finna.fi/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-760200a911a3f30f",
+    "provider_name": "National Palace Museum (Taiwan)",
+    "institution_url": "https://digitalarchive.npm.gov.tw/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-cabfcd6f3de8ca7d",
+    "provider_name": "North Carolina State University Libraries",
+    "institution_url": "https://d.lib.ncsu.edu/collections/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-38aa7bce2f3b0361",
+    "provider_name": "Parliamentary Archives - UK",
+    "institution_url": "https://archives.parliament.uk/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-521d522730b9f10b",
+    "provider_name": "Qatar National Library",
+    "institution_url": "https://www.qdl.qa/en/search/site/?f[0]=document_source:archive_source",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-dc8b65c17e7d0e22",
+    "provider_name": "SAT Taishōzō Image DB",
+    "institution_url": "http://dzkimgs.l.u-tokyo.ac.jp/SATi/images.php?alang=en",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-6425a20ec00665e3",
+    "provider_name": "Smithsonian National Zoo",
+    "institution_url": "https://nationalzoo.si.edu/openaccess/search?edan_fq%5B%5D=online_visual_material%3Atrue",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-0aeecd6836053c69",
+    "provider_name": "The Frick Collection",
+    "institution_url": "http://digitalcollections.frick.org/digico/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-a360845c2b46d1bc",
+    "provider_name": "The Wolsey Manuscripts",
+    "institution_url": "http://www.wolseymanuscripts.ac.uk/manuscripts",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-370a429900074b10",
+    "provider_name": "University College Dublin Libraries",
+    "institution_url": "https://digital.ucd.ie/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-e883d0f637379155",
+    "provider_name": "University of Illinois at Urbana-Champaign Library",
+    "institution_url": "https://digital.library.illinois.edu/items?fq%5B%5D=primary_media_category%3A0",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-e8f0640dd782bf74",
+    "provider_name": "University of Leeds Libraries' Cultural Collections",
+    "institution_url": "https://library.leeds.ac.uk/info/1500/special_collections",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-f2fa8935cf790b44",
+    "provider_name": "vHMML",
+    "institution_url": "https://www.vhmml.org/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-870ce1c300376029",
+    "provider_name": "Villanova University",
+    "institution_url": "https://digital.library.villanova.edu/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-9a9d50ec8631eafd",
+    "provider_name": "Wikipedia",
+    "institution_url": "https://www.wikipedia.org/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-33ef699d79fc12aa",
+    "provider_name": "World Digitial Library",
+    "institution_url": "https://www.wdl.org/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-8763d3efa30c6554",
+    "provider_name": "Yale Center for British Art",
+    "institution_url": "http://britishart.yale.edu/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-feedf2702c521119",
+    "provider_name": "Yale University Library",
+    "institution_url": "https://collections.library.yale.edu/",
+    "status": "unresolved_in_cumulative_evidence"
+  }
+]

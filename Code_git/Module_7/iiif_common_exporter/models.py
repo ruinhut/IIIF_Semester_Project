@@ -9,6 +9,8 @@ from typing import Any, Mapping
 
 RECORD_SCHEMA_VERSION = "iiif-time-atlas-record-0.1"
 MEDIA_SCHEMA_VERSION = "iiif-time-atlas-media-0.1"
+OCR_PROFILE_SCHEMA_VERSION = "iiif-ocr-profile-0.1"
+REFERENCE_TEXT_SCHEMA_VERSION = "iiif-ocr-reference-0.1"
 
 
 @dataclass(frozen=True)
