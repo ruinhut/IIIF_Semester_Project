@@ -1,0 +1,6 @@
+﻿provider_id,provider_name,discovered_manifest_urls,validated_manifests,exported_image_associations,distinct_image_urls,actual_sample_images,actual_width,actual_height,canvas_width,canvas_height,matches_declared_dimensions
+provider-ef2f1cc06db37bc3,KU Leuven,6,6,1162,1162,1,3672,4527,3672,4527,True
+provider-cdf3a2fdf8526fb3,Badische Landesbibliothek Karlsruhe,6,6,812,812,1,1000,1472,1000,1422,False
+provider-076d99a3ef08152f,Bonn University and State Library,6,6,2786,2786,1,1000,1379,1000,1379,True
+provider-5653f5b86f12f06c,Frankfurt University Library,6,5,135,135,1,1000,1555,1000,1505,False
+provider-acbb0beb87eb1bca,Paderborn University Library,6,6,1644,1644,1,1000,1351,1000,1301,False

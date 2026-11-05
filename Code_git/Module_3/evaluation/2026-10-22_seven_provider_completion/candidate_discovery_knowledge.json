@@ -1,0 +1,197 @@
+{
+  "knowledge_base_version": "1.0",
+  "providers": [
+    {
+      "provider_id": "provider-13a00dd64dbcd954",
+      "provider_name": "Cologne Archdiocesan and Cathedral Library",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-13a00dd64dbcd954-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Historical holdings. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-f170e5beef7888fa",
+      "provider_name": "Lippische Landesbibliothek Detmold",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-f170e5beef7888fa-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "All-title catalogue sample. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-7572570799c45089",
+      "provider_name": "Mainz City Library",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-7572570799c45089-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/stbmz/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Institution-scoped public Dilibri catalogue. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest. Native next and child Collection URLs omit this institution's virtual path. The reviewed same-origin Collection-only mapping preserves it; Manifest URLs remain as declared. Different Dilibri libraries are separate holders; the portal itself is not an eighth institution. Public HTML listing pages may return a browser challenge; no challenge is bypassed.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/stbmz/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-20af5a2db16c5b02",
+      "provider_name": "Rheinland-Pfalz State Library Centre",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-20af5a2db16c5b02-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/rlb/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Institution-scoped public Dilibri catalogue. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest. Native next and child Collection URLs omit this institution's virtual path. The reviewed same-origin Collection-only mapping preserves it; Manifest URLs remain as declared. Different Dilibri libraries are separate holders; the portal itself is not an eighth institution. Public HTML listing pages may return a browser challenge; no challenge is bypassed.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/rlb/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-29c6053362990273",
+      "provider_name": "Trier City Library",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-29c6053362990273-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/stbtr/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Institution-scoped public Dilibri catalogue. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest. Native next and child Collection URLs omit this institution's virtual path. The reviewed same-origin Collection-only mapping preserves it; Manifest URLs remain as declared. Different Dilibri libraries are separate holders; the portal itself is not an eighth institution. Public HTML listing pages may return a browser challenge; no challenge is bypassed.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/stbtr/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-c30599006b9755ac",
+      "provider_name": "Trier University Library",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-c30599006b9755ac-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/ubtr/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Institution-scoped public Dilibri catalogue. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest. Native next and child Collection URLs omit this institution's virtual path. The reviewed same-origin Collection-only mapping preserves it; Manifest URLs remain as declared. Different Dilibri libraries are separate holders; the portal itself is not an eighth institution. Public HTML listing pages may return a browser challenge; no challenge is bypassed.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/ubtr/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-8526ab6e6c62cc03",
+      "provider_name": "Wienbibliothek im Rathaus",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-8526ab6e6c62cc03-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Culture and literature collection. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest."
+        }
+      ]
+    }
+  ]
+}

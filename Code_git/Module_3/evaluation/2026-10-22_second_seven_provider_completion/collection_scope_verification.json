@@ -1,0 +1,118 @@
+[
+  {
+    "provider_name": "Koblenz City Library",
+    "manifest_budget": 24,
+    "unique_discovered_urls": 24,
+    "collection_requests": [
+      "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all",
+      "https://www.dilibri.de/stbkodfg/i3f/v21/collection/312294",
+      "https://www.dilibri.de/stbkodfg/i3f/v21/collection/310050",
+      "https://www.dilibri.de/stbkodfg/i3f/v21/collection/320558",
+      "https://www.dilibri.de/stbkodfg/i3f/v21/collection/417083",
+      "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all_o20"
+    ],
+    "all_requests_keep_institution_scope": true,
+    "added_to_downstream_count": false,
+    "audit": [
+      {
+        "skill_id": "provider-69e1df17c2cb409b-native-reviewed-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/312294",
+        "requested_url": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/312294"
+      },
+      {
+        "skill_id": "provider-69e1df17c2cb409b-native-reviewed-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/310050",
+        "requested_url": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/310050"
+      },
+      {
+        "skill_id": "provider-69e1df17c2cb409b-native-reviewed-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/320558",
+        "requested_url": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/320558"
+      },
+      {
+        "skill_id": "provider-69e1df17c2cb409b-native-reviewed-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/417083",
+        "requested_url": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/417083"
+      },
+      {
+        "skill_id": "provider-69e1df17c2cb409b-native-reviewed-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+        "requested_url": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all_o20"
+      }
+    ]
+  },
+  {
+    "provider_name": "Trier Seminary Library",
+    "manifest_budget": 24,
+    "unique_discovered_urls": 12,
+    "collection_requests": [
+      "https://www.dilibri.de/pstr/i3f/v21/collection/all"
+    ],
+    "all_requests_keep_institution_scope": true,
+    "added_to_downstream_count": false,
+    "audit": []
+  },
+  {
+    "provider_name": "University of Graz Library",
+    "manifest_budget": 24,
+    "unique_discovered_urls": 24,
+    "collection_requests": [
+      "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all",
+      "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all_o10",
+      "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all_o20"
+    ],
+    "all_requests_keep_institution_scope": true,
+    "added_to_downstream_count": false,
+    "audit": [
+      {
+        "skill_id": "provider-33ed8b7dc75e0d1a-native-reviewed-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://unipub.uni-graz.at/i3f/v21/collection/all_o10",
+        "requested_url": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all_o10"
+      },
+      {
+        "skill_id": "provider-33ed8b7dc75e0d1a-native-reviewed-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://unipub.uni-graz.at/i3f/v21/collection/all",
+        "requested_url": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all"
+      },
+      {
+        "skill_id": "provider-33ed8b7dc75e0d1a-native-reviewed-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://unipub.uni-graz.at/i3f/v21/collection/all_o20",
+        "requested_url": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all_o20"
+      }
+    ]
+  },
+  {
+    "provider_name": "Worms City Library",
+    "manifest_budget": 24,
+    "unique_discovered_urls": 24,
+    "collection_requests": [
+      "https://www.dilibri.de/stbwo/i3f/v21/collection/all",
+      "https://www.dilibri.de/stbwo/i3f/v21/collection/2047309",
+      "https://www.dilibri.de/stbwo/i3f/v21/collection/all_o20"
+    ],
+    "all_requests_keep_institution_scope": true,
+    "added_to_downstream_count": false,
+    "audit": [
+      {
+        "skill_id": "provider-77592534c46f4887-native-reviewed-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/2047309",
+        "requested_url": "https://www.dilibri.de/stbwo/i3f/v21/collection/2047309"
+      },
+      {
+        "skill_id": "provider-77592534c46f4887-native-reviewed-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+        "requested_url": "https://www.dilibri.de/stbwo/i3f/v21/collection/all_o20"
+      }
+    ]
+  }
+]

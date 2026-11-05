@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-10-22T13:09:26.650089+00:00",
+  "new_resolved_source_entries": 5,
+  "discovered_manifest_urls": 30,
+  "validated_manifests": 29,
+  "exported_documents": 29,
+  "exported_image_associations": 6539,
+  "distinct_image_urls": 6539,
+  "actual_downloaded_sample_images": 5,
+  "actual_sample_image_bytes": 3408662,
+  "ocr_reference_descriptors": 0,
+  "schema_validated_sample_json_files": 15,
+  "decoded_images": 5,
+  "decoded_images_with_dimension_mismatch": 3,
+  "smaller_than_canvas_declaration": 0,
+  "larger_than_canvas_declaration": 3,
+  "tests_passed": 187,
+  "previous_resolved_census_entries": 74,
+  "cumulative_resolved_census_entries": 79,
+  "census_entries": 106,
+  "remaining_unresolved_census_entries": 27,
+  "configuration_promoted": true,
+  "scope": "Bounded samples; source entries include an aggregator. Historical successes were not all re-fetched today.",
+  "unresolved_investigation": [
+    {
+      "provider_name": "Lovaniensia / KU Leuven",
+      "url": "https://www.lovaniensia.be/api/items?per_page=6&page=1",
+      "observed_status": "HTTP 403",
+      "resolution": "Use explicitly public catalogue and detail links; no API restriction bypassed."
+    },
+    {
+      "provider_name": "KU Leuven legacy Jesuitica route",
+      "url": "https://services.libis.be/m2/manifest/GBIB_Jesuitica",
+      "observed_status": "HTTP 404",
+      "resolution": "Historical lecture example was not promoted; use the current public Lovaniensia route."
+    },
+    {
+      "provider_name": "Digital Commonwealth",
+      "observed_status": "HTTP 403",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Villanova University",
+      "observed_status": "HTTP 403",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Qatar Digital Library",
+      "observed_status": "HTTP 403 on one candidate Manifest",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Georgetown",
+      "observed_status": "HTTP 200 with HTML access challenge, not catalogue JSON",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "University College Dublin / Duesseldorf",
+      "observed_status": "URLError; details retained in probe responses",
+      "counted_as_new_success": false
+    }
+  ],
+  "legacy_shared_canvas_manifests": 0,
+  "summed_per_manifest_distinct_image_body_count": 6539,
+  "new_institutions": 4,
+  "restored_old_sources": 1,
+  "old_census_entries": 94,
+  "old_census_resolved": 67,
+  "old_census_remaining": 27,
+  "tests_subtests_passed": 7,
+  "actual_downloaded_reference_texts": 0,
+  "fallback_recipes_separately_validated": 4,
+  "distinct_pagination_checks": 5,
+  "final_sample_images": 5,
+  "total_images_downloaded_including_initial_example": 6,
+  "initial_frankfurt_example_archived": "initial_examples/manifest-0e9ab42db5c5903d",
+  "image_resolution_note": "Three VisualLibrary derivatives add 50 pixels of attribution border; retain actual dimensions and do not treat them as raw OCR coordinate space."
+}

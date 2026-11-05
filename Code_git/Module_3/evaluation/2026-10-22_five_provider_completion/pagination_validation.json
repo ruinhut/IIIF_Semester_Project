@@ -1,0 +1,66 @@
+[
+  {
+    "provider": "KU Leuven",
+    "page_1_records": [
+      "6190",
+      "6193",
+      "6196",
+      "6199",
+      "6202",
+      "6205",
+      "6208",
+      "6211",
+      "6214",
+      "6217"
+    ],
+    "page_2_records": [
+      "6159",
+      "6162",
+      "6165",
+      "6168",
+      "6171",
+      "6177",
+      "6178",
+      "6181",
+      "6184",
+      "6187"
+    ],
+    "distinct_pages": true
+  },
+  {
+    "provider": "Badische Landesbibliothek Karlsruhe",
+    "first_page": "https://digital.blb-karlsruhe.de/i3f/v21/collection/178827",
+    "declared_next": "https://digital.blb-karlsruhe.de/i3f/v21/collection/178827_o20",
+    "first_page_members": 20,
+    "next_page_members": 20,
+    "distinct_pages": true,
+    "note": "Page traversal checked; these links were not all fetched as Manifests."
+  },
+  {
+    "provider": "Bonn University and State Library",
+    "first_page": "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/collection/10250864",
+    "declared_next": "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/collection/10250864_o20",
+    "first_page_members": 20,
+    "next_page_members": 20,
+    "distinct_pages": true,
+    "note": "Page traversal checked; these links were not all fetched as Manifests."
+  },
+  {
+    "provider": "Frankfurt University Library",
+    "first_page": "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/collection/all",
+    "declared_next": "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/collection/all_o20",
+    "first_page_members": 20,
+    "next_page_members": 20,
+    "distinct_pages": true,
+    "note": "Page traversal checked; these links were not all fetched as Manifests."
+  },
+  {
+    "provider": "Paderborn University Library",
+    "first_page": "https://digital.ub.uni-paderborn.de/i3f/v21/collection/8437472",
+    "declared_next": "https://digital.ub.uni-paderborn.de/i3f/v21/collection/8437472_o20",
+    "first_page_members": 20,
+    "next_page_members": 4,
+    "distinct_pages": true,
+    "note": "Page traversal checked; these links were not all fetched as Manifests."
+  }
+]

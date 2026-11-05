@@ -1,0 +1,90 @@
+[
+  {
+    "provider_id": "provider-cdf3a2fdf8526fb3",
+    "provider_name": "Badische Landesbibliothek Karlsruhe",
+    "validated_manifest_urls": [
+      "https://digital.blb-karlsruhe.de/i3f/v21/7397757/manifest",
+      "https://digital.blb-karlsruhe.de/i3f/v21/6125436/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-five-provider-discovery",
+      "skill_id": "provider-cdf3a2fdf8526fb3-native-visuallibrary-collection-members",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://digital.blb-karlsruhe.de/i3f/v21/collection/178827",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_id": "provider-076d99a3ef08152f",
+    "provider_name": "Bonn University and State Library",
+    "validated_manifest_urls": [
+      "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/10231184/manifest",
+      "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/10420249/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-five-provider-discovery",
+      "skill_id": "provider-076d99a3ef08152f-native-visuallibrary-collection-members",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/collection/10250864",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_id": "provider-5653f5b86f12f06c",
+    "provider_name": "Frankfurt University Library",
+    "validated_manifest_urls": [
+      "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/260678/manifest",
+      "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/2130110/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-five-provider-discovery",
+      "skill_id": "provider-5653f5b86f12f06c-native-visuallibrary-collection-members",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_id": "provider-acbb0beb87eb1bca",
+    "provider_name": "Paderborn University Library",
+    "validated_manifest_urls": [
+      "https://digital.ub.uni-paderborn.de/i3f/v21/8456699/manifest",
+      "https://digital.ub.uni-paderborn.de/i3f/v21/6920718/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-five-provider-discovery",
+      "skill_id": "provider-acbb0beb87eb1bca-native-visuallibrary-collection-members",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://digital.ub.uni-paderborn.de/i3f/v21/collection/8437472",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "provider_name": "Mainz City Library",
+    "discovered_urls": 24,
+    "collection_requests": [
+      "https://www.dilibri.de/stbmz/i3f/v21/collection/all",
+      "https://www.dilibri.de/stbmz/i3f/v21/collection/1818372"
+    ],
+    "all_requests_keep_institution_scope": true,
+    "root_next_reached_before_manifest_cap": false,
+    "scope_audit": [
+      {
+        "skill_id": "provider-7572570799c45089-reviewed-native-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/1818372",
+        "requested_url": "https://www.dilibri.de/stbmz/i3f/v21/collection/1818372"
+      }
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Rheinland-Pfalz State Library Centre",
+    "discovered_urls": 24,
+    "collection_requests": [
+      "https://www.dilibri.de/rlb/i3f/v21/collection/all",
+      "https://www.dilibri.de/rlb/i3f/v21/collection/2544262",
+      "https://www.dilibri.de/rlb/i3f/v21/collection/all_o20"
+    ],
+    "all_requests_keep_institution_scope": true,
+    "root_next_reached_before_manifest_cap": true,
+    "scope_audit": [
+      {
+        "skill_id": "provider-20af5a2db16c5b02-reviewed-native-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/2544262",
+        "requested_url": "https://www.dilibri.de/rlb/i3f/v21/collection/2544262"
+      },
+      {
+        "skill_id": "provider-20af5a2db16c5b02-reviewed-native-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+        "requested_url": "https://www.dilibri.de/rlb/i3f/v21/collection/all_o20"
+      }
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Trier City Library",
+    "discovered_urls": 24,
+    "collection_requests": [
+      "https://www.dilibri.de/stbtr/i3f/v21/collection/all",
+      "https://www.dilibri.de/stbtr/i3f/v21/collection/all_o20"
+    ],
+    "all_requests_keep_institution_scope": true,
+    "root_next_reached_before_manifest_cap": true,
+    "scope_audit": [
+      {
+        "skill_id": "provider-29c6053362990273-reviewed-native-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+        "requested_url": "https://www.dilibri.de/stbtr/i3f/v21/collection/all_o20"
+      }
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Trier University Library",
+    "discovered_urls": 24,
+    "collection_requests": [
+      "https://www.dilibri.de/ubtr/i3f/v21/collection/all",
+      "https://www.dilibri.de/ubtr/i3f/v21/collection/122339",
+      "https://www.dilibri.de/ubtr/i3f/v21/collection/31050",
+      "https://www.dilibri.de/ubtr/i3f/v21/collection/all_o20"
+    ],
+    "all_requests_keep_institution_scope": true,
+    "root_next_reached_before_manifest_cap": true,
+    "scope_audit": [
+      {
+        "skill_id": "provider-c30599006b9755ac-reviewed-native-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/122339",
+        "requested_url": "https://www.dilibri.de/ubtr/i3f/v21/collection/122339"
+      },
+      {
+        "skill_id": "provider-c30599006b9755ac-reviewed-native-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/31050",
+        "requested_url": "https://www.dilibri.de/ubtr/i3f/v21/collection/31050"
+      },
+      {
+        "skill_id": "provider-c30599006b9755ac-reviewed-native-collection",
+        "status": "collection_scope_preserved",
+        "declared_url": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+        "requested_url": "https://www.dilibri.de/ubtr/i3f/v21/collection/all_o20"
+      }
+    ],
+    "added_to_downstream_count": false
+  }
+]

@@ -1,0 +1,131 @@
+[
+  {
+    "provider_id": "provider-ef2f1cc06db37bc3",
+    "provider_name": "KU Leuven",
+    "investigation_id": "2026-10-22-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "ku-leuven-lovaniensia-public-catalogue-detail-manifests",
+        "type": "paginated_html_identifiers_to_manifest_templates",
+        "api_url": "https://www.lovaniensia.be/items/browse",
+        "record_url_pattern": "^https://www\\.lovaniensia\\.be/items/show/(?P<identifier>\\d+)$",
+        "identifier_followup": {
+          "url_template": "https://www.lovaniensia.be/items/show/{identifier}",
+          "format": "html",
+          "identifier_pattern": "^https://data\\.lovaniensia\\.be/(?P<identifier>IE\\d+)/manifest$"
+        },
+        "manifest_url_templates": [
+          "https://data.lovaniensia.be/{identifier}/manifest"
+        ],
+        "pagination": {
+          "page_parameter": "page",
+          "page_size_parameter": "",
+          "page_size": 20,
+          "start_page": 1,
+          "max_pages": 100,
+          "detect_next_page": true
+        },
+        "max_identifiers": 2000,
+        "coverage_note": "Public Lovaniensia catalogue subset. Follow declared item links, then the explicit Manifest anchor; do not guess IE numbers. The first sample records' Location metadata identifies KU Leuven Libraries Special Collections. Lovaniensia is a collaborative project, so provenance must be retained rather than assigning every future record to KU. Its /api/items returned 403; this recipe uses the accessible public catalogue and does not bypass that restriction.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-cdf3a2fdf8526fb3",
+    "provider_name": "Badische Landesbibliothek Karlsruhe",
+    "investigation_id": "2026-10-22-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-cdf3a2fdf8526fb3-native-visuallibrary-collection-members",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://digital.blb-karlsruhe.de/i3f/v21/collection/178827",
+        "records_path": "members",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 100,
+          "max_pages": 1
+        },
+        "coverage_note": "Incunabula. This fallback reads the native Collection's first-page explicit members only. The main generic IIIF Collection walker separately supports declared next links; the bounded run stops at six Manifests, not at catalogue exhaustion. No catalogue-wide count is inferred from the sample.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-076d99a3ef08152f",
+    "provider_name": "Bonn University and State Library",
+    "investigation_id": "2026-10-22-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-076d99a3ef08152f-native-visuallibrary-collection-members",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/collection/10250864",
+        "records_path": "members",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 100,
+          "max_pages": 1
+        },
+        "coverage_note": "Medieval manuscripts. This fallback reads the native Collection's first-page explicit members only. The main generic IIIF Collection walker separately supports declared next links; the bounded run stops at six Manifests, not at catalogue exhaustion. No catalogue-wide count is inferred from the sample.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-5653f5b86f12f06c",
+    "provider_name": "Frankfurt University Library",
+    "investigation_id": "2026-10-22-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-5653f5b86f12f06c-native-visuallibrary-collection-members",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/collection/all",
+        "records_path": "members",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 100,
+          "max_pages": 1
+        },
+        "coverage_note": "All-collection first-page sample. This fallback reads the native Collection's first-page explicit members only. The main generic IIIF Collection walker separately supports declared next links; the bounded run stops at six Manifests, not at catalogue exhaustion. No catalogue-wide count is inferred from the sample.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-acbb0beb87eb1bca",
+    "provider_name": "Paderborn University Library",
+    "investigation_id": "2026-10-22-five-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_five_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-acbb0beb87eb1bca-native-visuallibrary-collection-members",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://digital.ub.uni-paderborn.de/i3f/v21/collection/8437472",
+        "records_path": "members",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 100,
+          "max_pages": 1
+        },
+        "coverage_note": "Zugschwerdt'sche Leihbibliothek. This fallback reads the native Collection's first-page explicit members only. The main generic IIIF Collection walker separately supports declared next links; the bounded run stops at six Manifests, not at catalogue exhaustion. No catalogue-wide count is inferred from the sample.",
+        "request_delay_seconds": 0.6
+      }
+    ]
+  }
+]

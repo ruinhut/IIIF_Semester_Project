@@ -1,0 +1,259 @@
+{
+  "sample_manifest_ownership_checks": [
+    {
+      "provider_name": "Rheinland-Pfalz State Library Centre",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/1369513/manifest",
+      "declared_attribution": "Landesbibliothekszentrum Rheinland-Pfalz",
+      "online_edition_metadata": [
+        {
+          "value": "Koblenz : Landesbibliothekszentrum Rheinland-Pfalz, 2015",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Mainz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/1812914/manifest",
+      "declared_attribution": "Stadtbibliothek Mainz",
+      "online_edition_metadata": [
+        {
+          "value": "Mainz : Stadtbibliothek Mainz, 2017Mainz",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier University Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/1959278/manifest",
+      "declared_attribution": "Universitätsbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Universitätsbibliothek, 2018",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier University Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/1986528/manifest",
+      "declared_attribution": "Universitätsbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Universitätsbibliothek, 2018",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Mainz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/1994001/manifest",
+      "declared_attribution": "Stadtbibliothek Mainz",
+      "online_edition_metadata": [
+        {
+          "value": "Mainz : Stadtbibliothek Mainz, 2018",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier University Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2036528/manifest",
+      "declared_attribution": "Universitätsbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Universitätsbibliothek, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier University Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2066111/manifest",
+      "declared_attribution": "Universitätsbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Universitätsbibliothek, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2255129/manifest",
+      "declared_attribution": "Stadtbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Stadtbibliothek, 2020",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Rheinland-Pfalz State Library Centre",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/228737/manifest",
+      "declared_attribution": "Landesbibliothekszentrum Rheinland-Pfalz",
+      "online_edition_metadata": [
+        {
+          "value": "Koblenz : Landesbibliothekszentrum Rheinland-Pfalz, 2009",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2396384/manifest",
+      "declared_attribution": "Stadtbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Stadtbibliothek, 2021",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Rheinland-Pfalz State Library Centre",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2609818/manifest",
+      "declared_attribution": "Landesbibliothekszentrum Rheinland-Pfalz",
+      "online_edition_metadata": [
+        {
+          "value": "Koblenz : Landesbibliothekszentrum Rheinland-Pfalz, 2021",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier University Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/281061/manifest",
+      "declared_attribution": "Universitätsbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Universitätsbibliothek, 2010",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Rheinland-Pfalz State Library Centre",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/296109/manifest",
+      "declared_attribution": "Landesbibliothekszentrum Rheinland-Pfalz",
+      "online_edition_metadata": [
+        {
+          "value": "Koblenz : Landesbibliothekszentrum Rheinland-Pfalz, 2010",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Mainz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/3323437/manifest",
+      "declared_attribution": "Stadtbibliothek Mainz",
+      "online_edition_metadata": [
+        {
+          "value": "Mainz : Stadtbibliothek Mainz, 2023",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/3323589/manifest",
+      "declared_attribution": "Stadtbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Stadtbibliothek, 2023",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Rheinland-Pfalz State Library Centre",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/3413822/manifest",
+      "declared_attribution": "Landesbibliothekszentrum Rheinland-Pfalz",
+      "online_edition_metadata": [
+        {
+          "value": "Koblenz : Landesbibliothekszentrum Rheinland-Pfalz, 2023",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Mainz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/3800943/manifest",
+      "declared_attribution": "Stadtbibliothek Mainz",
+      "online_edition_metadata": [
+        {
+          "value": "Mainz : Stadtbibliothek Mainz, 2026",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Mainz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/3804901/manifest",
+      "declared_attribution": "Stadtbibliothek Mainz",
+      "online_edition_metadata": [
+        {
+          "value": "Mainz : Stadtbibliothek Mainz, 2026",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Mainz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/4092989/manifest",
+      "declared_attribution": "Stadtbibliothek Mainz",
+      "online_edition_metadata": [
+        {
+          "value": "Mainz : Stadtbibliothek Mainz, 2026",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Rheinland-Pfalz State Library Centre",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/4141666/manifest",
+      "declared_attribution": "Landesbibliothekszentrum Rheinland-Pfalz",
+      "online_edition_metadata": [
+        {
+          "value": "Koblenz : Landesbibliothekszentrum Rheinland-Pfalz, 2026",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/873089/manifest",
+      "declared_attribution": "Stadtbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Stadtbibliothek, 2012",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier University Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/90959/manifest",
+      "declared_attribution": "Universitätsbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Universitätsbibliothek, 2008",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    },
+    {
+      "provider_name": "Trier City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/991882/manifest",
+      "declared_attribution": "Stadtbibliothek",
+      "online_edition_metadata": [
+        {
+          "value": "Trier : Stadtbibliothek, 2013",
+          "label": "Online-Ausgabe"
+        }
+      ]
+    }
+  ],
+  "independent_holders": 4,
+  "manifest_urls_overlap_between_holders": false
+}

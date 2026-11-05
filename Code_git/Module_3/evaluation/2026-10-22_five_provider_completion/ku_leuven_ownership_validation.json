@@ -1,0 +1,104 @@
+[
+  {
+    "manifest_url": "https://data.lovaniensia.be/IE17067641/manifest",
+    "declared_location": [
+      {
+        "label": {
+          "none": [
+            "Location"
+          ]
+        },
+        "value": {
+          "none": [
+            "KU Leuven Libraries Special Collections, CaaA2065"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "manifest_url": "https://data.lovaniensia.be/IE74486921/manifest",
+    "declared_location": [
+      {
+        "label": {
+          "none": [
+            "Location"
+          ]
+        },
+        "value": {
+          "none": [
+            "KU Leuven Libraries Special Collections, CaaA2761"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "manifest_url": "https://data.lovaniensia.be/IE74487183/manifest",
+    "declared_location": [
+      {
+        "label": {
+          "none": [
+            "Location"
+          ]
+        },
+        "value": {
+          "none": [
+            "KU Leuven Libraries Special Collections, CaaA2779"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "manifest_url": "https://data.lovaniensia.be/IE74487473/manifest",
+    "declared_location": [
+      {
+        "label": {
+          "none": [
+            "Location"
+          ]
+        },
+        "value": {
+          "none": [
+            "KU Leuven Libraries Special Collections, CaaA2762"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "manifest_url": "https://data.lovaniensia.be/IE74487531/manifest",
+    "declared_location": [
+      {
+        "label": {
+          "none": [
+            "Location"
+          ]
+        },
+        "value": {
+          "none": [
+            "KU Leuven Libraries Special Collections, CaaA2781"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "manifest_url": "https://data.lovaniensia.be/IE74492590/manifest",
+    "declared_location": [
+      {
+        "label": {
+          "none": [
+            "Location"
+          ]
+        },
+        "value": {
+          "none": [
+            "KU Leuven Libraries Special Collections, CaaA2772"
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "provider_name": "Berlin Central and Regional Library",
+    "catalogue_url": "https://digital.zlb.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+    "catalogue_record_count": 50,
+    "declared_next": null,
+    "pagination_verified": false,
+    "coverage": "Capped public RSS subset only; no catalogue completeness claim."
+  },
+  {
+    "provider_name": "Humboldt University of Berlin Library",
+    "catalogue_url": "https://www.digi-hub.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+    "catalogue_record_count": 50,
+    "declared_next": null,
+    "pagination_verified": false,
+    "coverage": "Capped public RSS subset only; no catalogue completeness claim."
+  },
+  {
+    "provider_name": "Kiel City Archives",
+    "catalogue_url": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Stadtarchiv+Kiel%22&sortField=DATECREATED&sortDescending=true",
+    "catalogue_record_count": 50,
+    "declared_next": null,
+    "pagination_verified": false,
+    "coverage": "Capped public RSS subset only; no catalogue completeness claim."
+  },
+  {
+    "provider_name": "Kiel University Library",
+    "catalogue_url": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Universit%C3%A4tsbibliothek+Kiel%22&sortField=DATECREATED&sortDescending=true",
+    "catalogue_record_count": 50,
+    "declared_next": null,
+    "pagination_verified": false,
+    "coverage": "Capped public RSS subset only; no catalogue completeness claim."
+  },
+  {
+    "provider_name": "SLUB Dresden",
+    "catalogue_url": "https://digital.slub-dresden.de/oai/?verb=ListRecords&metadataPrefix=oai_dc",
+    "catalogue_record_count": 25,
+    "declared_continuation_token_present": true,
+    "next_page_url": "https://digital.slub-dresden.de/oai/?verb=ListRecords&resumptionToken=6ada6ada3ce36",
+    "next_page_record_count": 25,
+    "distinct_pages": true
+  },
+  {
+    "provider_name": "University of Kassel Library",
+    "catalogue_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=true",
+    "catalogue_record_count": 50,
+    "declared_next": null,
+    "pagination_verified": false,
+    "coverage": "Capped public RSS subset only; no catalogue completeness claim."
+  },
+  {
+    "provider_name": "Upper Austrian State Library",
+    "catalogue_url": "https://digi.landesbibliothek.at/viewer/api/v2/collections/DC/karten/",
+    "catalogue_record_count": 466,
+    "declared_next": null,
+    "coverage": "Native Presentation 3 maps Collection. Generic Collection traversal handles declared first/next links; this fallback inspects one response. Not all library holdings."
+  }
+]

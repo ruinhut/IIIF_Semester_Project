@@ -1,0 +1,60 @@
+{
+  "providers": [
+    {
+      "name": "Wienbibliothek im Rathaus",
+      "institution_url": "https://www.wienbibliothek.at/",
+      "discovery_endpoint": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.digital.wienbibliothek.at/"
+    },
+    {
+      "name": "Lippische Landesbibliothek Detmold",
+      "institution_url": "https://www.llb-detmold.de/",
+      "discovery_endpoint": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digitale-sammlungen.llb-detmold.de/"
+    },
+    {
+      "name": "Cologne Archdiocesan and Cathedral Library",
+      "institution_url": "https://www.dombibliothek-koeln.de/",
+      "discovery_endpoint": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digital.dombibliothek-koeln.de/"
+    },
+    {
+      "name": "Rheinland-Pfalz State Library Centre",
+      "institution_url": "https://lbz.rlp.de/",
+      "discovery_endpoint": "https://www.dilibri.de/rlb/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/rlb"
+    },
+    {
+      "name": "Trier University Library",
+      "institution_url": "https://www.uni-trier.de/bibliothek/",
+      "discovery_endpoint": "https://www.dilibri.de/ubtr/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/ubtr"
+    },
+    {
+      "name": "Trier City Library",
+      "institution_url": "https://www.stadtbibliothek-weberbach.de/",
+      "discovery_endpoint": "https://www.dilibri.de/stbtr/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/stbtr"
+    },
+    {
+      "name": "Mainz City Library",
+      "institution_url": "https://www.mainz.de/microsite/bibliotheken/",
+      "discovery_endpoint": "https://www.dilibri.de/stbmz/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/stbmz"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+﻿# PowerShell. Copy from this TXT, not PDF.
+Set-Location -LiteralPath 'E:\exchange-epfl\Semester_Project'
+$PipelinePython = 'E:\exchange-epfl\Semester_Project\Code_git\.venv\Scripts\python.exe'
+$env:PYTHONIOENCODING = 'utf-8'
+$env:PYTHONUTF8 = '1'
+if (-not (Test-Path -LiteralPath $PipelinePython)) { throw 'Python not found' }
+
+# Module 1 registration already ran: Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/registration/module1/output
+# Module 2 output: Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/validation/module2/output
+& $PipelinePython -m iiif_entry_validator run --config 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/module2_validation.json'
+if ($LASTEXITCODE -ne 0) { throw 'Module 2 failed' }
+
+# Module 3 output: Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/validation/module3/output
+& $PipelinePython Code_git/Module_3/tools/run_discovery_with_evidence.py --config 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/module3_validation.json' --network-delay 0.6
+if ($LASTEXITCODE -ne 0) { throw 'Module 3 failed' }
+
+# Module 4 output: Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/validation/module4/output
+& $PipelinePython -m iiif_manifest_validator run --config 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/module4_validation.json'
+if ($LASTEXITCODE -ne 0) { throw 'Module 4 failed' }
+
+# Modules 5-7: Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/downstream/module5/output (and module6/module7)
+# Module 8: Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/download_examples/module8/output/all/without_reference
+# One reviewed image per source, not all 8564 image links.
+& $PipelinePython Code_git/Module_3/tools/complete_oct19_provider_completion.py --evaluation-root 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion'
+if ($LASTEXITCODE -ne 0) { throw 'Module 5-8 failed' }
+& $PipelinePython Code_git/Module_3/tools/verify_linked_download_bundles.py --output-root 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/download_examples/module8/output' --mode all --report 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/bundle_verification.json'
+if ($LASTEXITCODE -ne 0) { throw 'Bundle verification failed' }
+
+# Reusable independent scope, recipe and source-metadata audit.
+& $PipelinePython Code_git/Module_3/tools/verify_native_collection_recipes.py --evaluation-root 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion' --ownership-profile 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/institution_ownership_rules.json'
+if ($LASTEXITCODE -ne 0) { throw 'Recipe verification failed' }
+& $PipelinePython Code_git/Module_3/tools/run_completion_test_suites.py --evaluation-root 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion'
+if ($LASTEXITCODE -ne 0) { throw 'Tests failed' }
+
+Import-Csv -LiteralPath 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/provider_results.csv' | Format-Table -AutoSize
+Import-Csv -LiteralPath 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/sample_downloads.csv' | Format-List
+Invoke-Item -LiteralPath 'Code_git/Module_3/evaluation/2026-10-22_second_seven_provider_completion/download_examples/module8/output/all/without_reference'

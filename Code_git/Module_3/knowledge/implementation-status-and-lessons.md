@@ -276,3 +276,141 @@ and [the reusable XML skill](skills/xml_catalogue_discovery.md).
 
 See [the dated investigation](institutions/2026-10-21_fourth_five_provider_completion.md)
 and [the reusable lessons](skills/range_catalogues_and_alto_reference_safety.md).
+
+## 2026-10-22 — KU Leuven restored and four public libraries added
+
+- Restored the old KU Leuven entry through the public Lovaniensia catalogue and
+  its explicit detail-page Manifest links. All six sample locations identify KU
+  Libraries Special Collections. Its restricted Omeka API was not bypassed.
+  Preserved the existing ID, Limo endpoint and source fields, adding one endpoint.
+- Registered Karlsruhe, Bonn, Frankfurt and Paderborn libraries. Their verified
+  native VisualLibrary Collections reuse existing members/next traversal. All
+  four next pages and KU's second result page contain different records.
+- Census 102→106; cumulative validated sources **74→79/106**. Within the original
+  94-entry census, 67 are resolved and **27 remain unresolved**. Cumulative
+  history was not all re-fetched today; some source entries are aggregators.
+- M3 found 30 URLs; fresh M4 accepted 29 and rejected one Frankfurt Manifest with
+  no sequences/Canvases. M5–7 exported 29 records, **6,539 image associations** and
+  29 OCR profiles. No institutional reference text was declared in this sample.
+- M8 final output has five real images and fifteen linked JSON files; all decode
+  and schema checks passed. Six distinct images were downloaded in total: the
+  initial blank Frankfurt example was archived and replaced by a text-bearing
+  Hebrew-script page. No additional image associations are claimed as downloaded.
+- Three VisualLibrary previews add a 50-pixel attribution border; actual height
+  exceeds the declaration. Preserve actual dimensions before OCR alignment.
+  Corrected the evaluation summary to distinguish mismatch, smaller and larger.
+- Knowledge 47→52; all old 47 entries and 19 curated entries preserved. Runtime
+  modules and schemas unchanged, no runtime AI API added. M3–8 tests: **187 passed
+  plus seven subtests**. Failed 403/challenge/URLError probes were not successes.
+
+See [the investigation](institutions/2026-10-22_five_provider_completion.md),
+[the reusable procedure](skills/public_catalogue_details_and_native_collections.md)
+and `../evaluation/2026-10-22_five_provider_completion/` for reproducible evidence.
+
+## 2026-10-22 — seven additional libraries, target 86 reached
+
+- Added Vienna/Wienbibliothek, Detmold, Cologne's diocesan/cathedral library,
+  Rheinland-Pfalz State Library Centre, Mainz City Library, Trier City Library
+  and Trier University Library. All previous 106 census records are unchanged.
+  Cumulative historical evidence: **86/113 source entries**, still 27 unresolved
+  old entries. This is not a deduplicated institution count or a full harvest.
+- All seven public native Collections passed M2; M3 found 42 unique URLs.
+  M4 fetched all 42 freshly and accepted 41; one Trier City member returned 404.
+  M5–7 exported **41 records, 2,303 image associations and 41 OCR profiles**.
+- Final M8 output has seven actual images and 21 linked JSON files, all decoded
+  and schema/ID verified. Actual dimensions match image-body declarations; these
+  are mostly 1000-pixel previews, not archival-resolution claims. Two initial
+  blank-page examples were archived and replaced; nine distinct images were
+  downloaded in total. No institutional reference text was declared in this run.
+- Added opt-in, same-origin Collection-prefix mappings to prevent a shared
+  platform's child/next URLs from dropping virtual-library scope. Runtime has no
+  new hard-coded institution IDs/hosts; old provider behavior is unchanged.
+  Invalid rules are recorded, not executed; scope audit events do not inflate
+  discovery-skill execution counts. Manifest and downstream contracts unchanged.
+- Seven next-page pairs differ. Four independent Dilibri libraries each passed
+  a 24-unique-URL M3 traversal with scoped Collection requests. Their 23 valid
+  downstream Manifests were checked against attribution/Online-Ausgabe; no
+  inter-library Manifest URL overlap. These extras are not added to 41 records.
+- Six new regression tests. M3–8: **193 passed plus seven subtests**. Knowledge
+  **52→59**, all old 52 and 19 curated entries preserved. No runtime LLM API.
+- Finna/Illinois 403, NCSU 401, Hamburg browser challenge and other probe errors
+  remain failures, not absence-of-IIIF claims. Native public JSON availability
+  is distinct from blocked HTML catalogue pages; no challenge was bypassed.
+
+See [the seven-library investigation](institutions/2026-10-22_seven_provider_completion.md),
+[the reusable scope procedure](skills/virtual_institution_collection_scope.md)
+and `../evaluation/2026-10-22_seven_provider_completion/` for reports and commands.
+
+## 2026-10-22 — second seven-source batch, target 93 reached
+
+- Added Oldenburg State Library, Leipzig University Library, Graz University
+  Library, Potsdam/Digitales Brandenburg, Koblenz City Library, Worms City Library
+  and Trier Seminary Library. All old 113 census records remain unchanged.
+  Cumulative bounded-run evidence: **93/120 source entries**; the original census
+  still has 27 unresolved entries. This is not a deduplicated institution total.
+- M2: 7/7 native Collection roots reachable. M3: 42 unique URLs; M4 freshly
+  attempted 42, accepted 41 and preserved one Seminary Manifest 404. Cache hits 0.
+  M5–7: **41 records, 8,564 image associations, 41 OCR profiles**, no institutional
+  page-reference texts. The 72 candidate ground-truth rows are not correct texts.
+- M8: seven final real images and 21 schema/ID-verified JSON files, all images
+  decoded. Leipzig 3840×5760; most others 1000-pixel previews. Oldenburg adds a
+  50-pixel attribution border; actual 1000×1254 versus 1000×1204 declared.
+  An initial blank page was archived/replaced; eight distinct images in total.
+- Reused Collection/members/manifests traversal and the existing scope mapping
+  at another platform (Graz). No runtime module/schema changes and no runtime
+  AI API added. Graz next offset is 10, so follow native next, not a guessed 20.
+- Seven fallback recipes independently checked, five different next-page pairs,
+  and four scoped runs (24/24/24/12 unique URLs). Extra discovered URLs are not
+  extra M4-valid objects. All 41 source labels/edition publishers checked; no
+  inter-source Manifest URL overlap. Potsdam publisher is not original ownership.
+- Knowledge **59→66**, old 59 and 19 curated entries preserved. M3–8 tests:
+  **193 passed plus seven subtests**. Added a reusable directory/profile-driven
+  native Collection audit command so checks do not require conversational context.
+- New lesson: Rijksmuseum CD may label ordinary metadata representations as
+  Manifest. Validate Presentation context/Canvases after resolving the documented
+  Linked Art chain; do not count a Change Discovery type as success. This lead,
+  working Freiburg/Dresden OAI catalogues and failed routes remain unpromoted.
+
+See [the investigation](institutions/2026-10-22_second_seven_provider_completion.md)
+and `../evaluation/2026-10-22_second_seven_provider_completion/` for the Chinese
+midterm wording, measured counts, actual bundles, provenance and commands.
+
+## 2026-10-22 — third seven-institution batch, 100 source entries
+
+- Added Kassel University Library, Humboldt University Library, Berlin Central
+  and Regional Library, Kiel University Library, Kiel City Archives, SLUB Dresden
+  and Upper Austrian State Library. All old 120 census records are unchanged.
+  Cumulative bounded-run evidence: **100/127 source entries**, still 27 unresolved
+  original entries; not a deduplicated institution count or a full catalogue run.
+- M2: seven reachable roots (six XML, one native Collection JSON). M3 found 42
+  URLs; M4 freshly retrieved **42/42 valid**, zero cache hits. M5–7: **42 records,
+  7,123 image associations and 42 OCR profiles**. M5 research retains all objects;
+  14 public-reuse allow, 28 exclude, without turning unknown into public domain.
+- Reused existing XML identifier/template and native Collection skills; no
+  runtime module/schema changes. Five RSS recipes cover capped 50-record feeds,
+  **not full enumerations**. Linz's selected Collection has 466 declared members;
+  SLUB's OAI continuation was independently checked across two distinct pages.
+- Independent rechecks: seven recipes × two validated responses; all 42 URLs
+  distinct across sources. Both Kiel holders' native owner fields verified on
+  all 12 Manifests. The shared portal is not counted as an extra institution.
+- M8: seven final real images and 21 schema/ID-verified JSON files, all decoded
+  and matching Manifest dimensions. Six native services permit larger images
+  than the original preview URLs. An explicit **evaluation helper** reads their
+  declared info.json and requests supported full-size representations; production
+  M7/M8 defaults remain unchanged. SLUB's service itself is a 1000×1509 medium
+  image. Blank/cover/low-resolution first examples remain in `initial_examples/`.
+- Linz declares 3,504 reference descriptors: **3,498 image-linked and six
+  Manifest-level**. Actual final download: one source ALTO and plain text paired
+  with Canvas 21. Image and ALTO both **2882×4629**, 159 word boxes inside bounds.
+  This is provider OCR, not certified manually corrected ground truth. Final
+  outputs split one `with_reference` and six `without_reference` bundles.
+- Tests M3–8: **193 passed plus seven subtests**. Knowledge **66→73**, all old
+  66 and 19 curated entries unchanged. No runtime AI API/autonomous investigator.
+- Failures retained: ZLB year-volume timeout, Lübeck external image URLError,
+  GWLB new-ID template 404 despite working old example/OAI, Weimar feed timeout.
+  They are not absence-of-IIIF findings or additional resolved sources.
+
+See [the investigation](institutions/2026-10-22_third_seven_provider_completion.md),
+[the reusable catalogue/image procedure](skills/public_rss_oai_and_image_representations.md)
+and `../evaluation/2026-10-22_third_seven_provider_completion/` for Chinese results,
+CSV counts, linked samples, reference alignment and reproducible commands.

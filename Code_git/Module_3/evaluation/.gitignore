@@ -14,6 +14,7 @@
 !/*/providers.json
 !/*/selected_providers.jsonl
 !/*/sample_selection.json
+!/*/image_representation_selection.json
 !/*/sample_downloads.csv
 !/*/sample_downloads.json
 !/*/provider_results.csv
@@ -30,6 +31,9 @@
 !/*/reference_sample_validation.json
 !/*/reference_content_spot_checks.json
 !/*/fallback_recipe_validation.json
+!/*/pagination_validation.json
+!/*/ku_leuven_ownership_validation.json
+!/*/institution_ownership_rules.json
 !/*/vam_recipe_validation.json
 !/*/module*_validation.json
 !/*/module*_config.json

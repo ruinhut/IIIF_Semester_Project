@@ -1,0 +1,9 @@
+{
+  "Koblenz City Library": {"field": "online_edition", "required_tokens": ["Koblenz", "Stadtbibliothek"]},
+  "Leipzig University Library": {"field": "label", "required_tokens": ["Leipzig", "Universitätsbibliothek"]},
+  "Oldenburg State Library": {"field": "online_edition", "required_tokens": ["Oldenburg", "Landesbibliothek"]},
+  "Potsdam University Library - Digitales Brandenburg": {"field": "online_edition", "required_tokens": ["Potsdam", "Universitätsbibliothek"], "institution_relation": "digital_edition_publisher_not_a_claim_of_original_ownership"},
+  "Trier Seminary Library": {"field": "online_edition", "required_tokens": ["Trier", "Priesterseminars"]},
+  "University of Graz Library": {"field": "label", "required_tokens": ["Graz", "Universitätsbibliothek"]},
+  "Worms City Library": {"field": "online_edition", "required_tokens": ["Worms", "Stadtbibliothek"]}
+}

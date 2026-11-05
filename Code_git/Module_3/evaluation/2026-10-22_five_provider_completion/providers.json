@@ -1,0 +1,263 @@
+[
+  {
+    "collection_focus": null,
+    "discovery_endpoint": "https://kuleuven.limo.libis.be/discovery",
+    "discovery_type": "InstitutionWebsite",
+    "endpoints": [
+      {
+        "discovery_type": "InstitutionWebsite",
+        "endpoint_role": "institution_website",
+        "label": "Institution homepage",
+        "source": {
+          "activity_type": null,
+          "observed_at": "2026-10-12T22:09:30+02:00",
+          "source_page_url": "https://guides.iiif.io/guides/kuleuven.limo.libis.be/",
+          "source_type": "iiif_official_resource_guide",
+          "source_url": "https://guides.iiif.io/finding_resources/"
+        },
+        "url": "https://kuleuven.limo.libis.be/discovery",
+        "verification_status": "pending_module_2"
+      },
+      {
+        "url": "https://www.lovaniensia.be/items/browse",
+        "endpoint_role": "catalogue_listing",
+        "discovery_type": "HTML",
+        "label": "Lovaniensia public catalogue, checked 2026-10-22",
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "institution_documentation",
+          "source_url": "https://www.lovaniensia.be/",
+          "source_page_url": "https://www.lovaniensia.be/",
+          "observed_at": "2026-10-22T13:00:00Z"
+        }
+      }
+    ],
+    "estimated_size": null,
+    "institution_url": "https://kuleuven.limo.libis.be/discovery",
+    "last_checked_at": null,
+    "name": "KU Leuven",
+    "provider_id": "provider-ef2f1cc06db37bc3",
+    "raw_source_record": {
+      "catalog_entry_kind": "iiif_resource_guide",
+      "collection_focus": null,
+      "discovery_endpoint": "https://kuleuven.limo.libis.be/discovery",
+      "discovery_type": "InstitutionWebsite",
+      "endpoint_verification": "pending_module_2",
+      "endpoints": [
+        {
+          "discovery_type": "InstitutionWebsite",
+          "endpoint_role": "institution_website",
+          "label": "Institution homepage",
+          "url": "https://kuleuven.limo.libis.be/discovery",
+          "verification_status": "pending_module_2"
+        }
+      ],
+      "estimated_size": null,
+      "iiif_consortium_status": "no",
+      "institution_url": "https://kuleuven.limo.libis.be/discovery",
+      "name": "KU Leuven",
+      "record_status": "active",
+      "rights_status": "unknown",
+      "rights_values": [],
+      "source_page_url": "https://guides.iiif.io/guides/kuleuven.limo.libis.be/",
+      "stream_label": "Official IIIF resource-guide entry"
+    },
+    "record_status": "active",
+    "rights_status": "unknown",
+    "rights_values": [],
+    "schema_version": "2.0",
+    "source": {
+      "activity_type": null,
+      "observed_at": "2026-10-12T22:09:30+02:00",
+      "source_page_url": "https://guides.iiif.io/guides/kuleuven.limo.libis.be/",
+      "source_type": "iiif_official_resource_guide",
+      "source_url": "https://guides.iiif.io/finding_resources/"
+    },
+    "stream_label": "Official IIIF resource-guide entry",
+    "endpoint_count": 2
+  },
+  {
+    "provider_id": "provider-cdf3a2fdf8526fb3",
+    "name": "Badische Landesbibliothek Karlsruhe",
+    "institution_url": "https://www.blb-karlsruhe.de/",
+    "discovery_endpoint": "https://digital.blb-karlsruhe.de/i3f/v21/collection/178827",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://digital.blb-karlsruhe.de/blbdd/wiki/schnittstellen",
+      "activity_type": null,
+      "observed_at": "2026-10-22T15:00:55+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digital.blb-karlsruhe.de/i3f/v21/collection/178827",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.blb-karlsruhe.de/",
+      "name": "Badische Landesbibliothek Karlsruhe",
+      "source_page_url": "https://digital.blb-karlsruhe.de/blbdd/wiki/schnittstellen"
+    },
+    "endpoints": [
+      {
+        "url": "https://digital.blb-karlsruhe.de/i3f/v21/collection/178827",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://digital.blb-karlsruhe.de/blbdd/wiki/schnittstellen",
+          "activity_type": null,
+          "observed_at": "2026-10-22T15:00:55+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-076d99a3ef08152f",
+    "name": "Bonn University and State Library",
+    "institution_url": "https://www.ulb.uni-bonn.de/",
+    "discovery_endpoint": "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/collection/10250864",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://digitale-sammlungen.ulb.uni-bonn.de/ulbbn/wiki/about",
+      "activity_type": null,
+      "observed_at": "2026-10-22T15:00:55+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/collection/10250864",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.ulb.uni-bonn.de/",
+      "name": "Bonn University and State Library",
+      "source_page_url": "https://digitale-sammlungen.ulb.uni-bonn.de/ulbbn/wiki/about"
+    },
+    "endpoints": [
+      {
+        "url": "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/collection/10250864",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://digitale-sammlungen.ulb.uni-bonn.de/ulbbn/wiki/about",
+          "activity_type": null,
+          "observed_at": "2026-10-22T15:00:55+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-5653f5b86f12f06c",
+    "name": "Frankfurt University Library",
+    "institution_url": "https://www.ub.uni-frankfurt.de/",
+    "discovery_endpoint": "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://sammlungen.ub.uni-frankfurt.de/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T15:00:55+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.ub.uni-frankfurt.de/",
+      "name": "Frankfurt University Library",
+      "source_page_url": "https://sammlungen.ub.uni-frankfurt.de/"
+    },
+    "endpoints": [
+      {
+        "url": "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://sammlungen.ub.uni-frankfurt.de/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T15:00:55+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-acbb0beb87eb1bca",
+    "name": "Paderborn University Library",
+    "institution_url": "https://www.ub.uni-paderborn.de/",
+    "discovery_endpoint": "https://digital.ub.uni-paderborn.de/i3f/v21/collection/8437472",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://digital.ub.uni-paderborn.de/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T15:00:55+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digital.ub.uni-paderborn.de/i3f/v21/collection/8437472",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.ub.uni-paderborn.de/",
+      "name": "Paderborn University Library",
+      "source_page_url": "https://digital.ub.uni-paderborn.de/"
+    },
+    "endpoints": [
+      {
+        "url": "https://digital.ub.uni-paderborn.de/i3f/v21/collection/8437472",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://digital.ub.uni-paderborn.de/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T15:00:55+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  }
+]

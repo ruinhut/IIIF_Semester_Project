@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-10-22T19:05:01.699158+00:00",
+  "new_resolved_source_entries": 7,
+  "discovered_manifest_urls": 42,
+  "validated_manifests": 41,
+  "exported_documents": 41,
+  "exported_image_associations": 8564,
+  "distinct_image_urls": 8564,
+  "actual_downloaded_sample_images": 7,
+  "actual_sample_image_bytes": 14005609,
+  "ocr_reference_descriptors": 0,
+  "schema_validated_sample_json_files": 21,
+  "decoded_images": 7,
+  "decoded_images_with_dimension_mismatch": 1,
+  "smaller_than_canvas_declaration": 0,
+  "larger_than_canvas_declaration": 1,
+  "tests_passed": 193,
+  "previous_resolved_census_entries": 86,
+  "cumulative_resolved_census_entries": 93,
+  "census_entries": 120,
+  "remaining_unresolved_census_entries": 27,
+  "configuration_promoted": true,
+  "scope": "Bounded samples; source entries include an aggregator. Historical successes were not all re-fetched today.",
+  "unresolved_investigation": [
+    {
+      "provider_name": "Rijksmuseum",
+      "observed_status": "Public Change Discovery root/page work; events also label non-Presentation metadata serializations as Manifest.",
+      "next_method": "Official documentation describes a Linked Art object-to-VisualItem-to-DigitalObject chain and native Micrio Manifest. This chain was not executed end to end in this batch.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Freiburg University Library / SLUB Dresden",
+      "observed_status": "Public OAI-PMH METS catalogue responses saved; Manifest/image chain not validated in this batch.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Leipzig old UBLab guide",
+      "observed_status": "Old documentation URL redirects to the library homepage; native top Collection still returns valid JSON.",
+      "resolution": "Use the actual root's declared Greek manuscript Collection; do not treat an old guide redirect as loss of the IIIF server."
+    },
+    {
+      "provider_name": "Mannheim / Salzburg / Stuttgart / Duesseldorf / Bremen / Dortmund / Duisburg-Essen",
+      "observed_status": "Probed routes raised URLError; details saved locally. This does not prove the institutions lack IIIF.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Kassel",
+      "observed_status": "HTTP 404 on a candidate index route",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Trier Seminary Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/1937135/manifest",
+      "observed_status": "M4 HTTP 404",
+      "included_in_valid_manifest_count": false
+    }
+  ],
+  "legacy_shared_canvas_manifests": 0,
+  "summed_per_manifest_distinct_image_body_count": 8564,
+  "new_institutions": 7,
+  "restored_old_sources": 0,
+  "old_census_entries": 94,
+  "old_census_resolved": 67,
+  "old_census_remaining": 27,
+  "tests_subtests_passed": 7,
+  "actual_downloaded_reference_texts": 0,
+  "final_sample_images": 7,
+  "total_images_downloaded_including_initial_examples": 8,
+  "independently_checked_provenance_records": 41,
+  "separate_fallback_recipes_validated": 7,
+  "separate_next_page_pairs_checked": 5,
+  "runtime_modules_changed": false,
+  "scope_note": "Historical bounded-run evidence, not a deduplicated institution count or a full reharvest of 120 sources."
+}

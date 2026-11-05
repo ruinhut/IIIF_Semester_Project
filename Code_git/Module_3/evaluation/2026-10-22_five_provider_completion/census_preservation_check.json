@@ -1,0 +1,10 @@
+{
+  "before_entries": 102,
+  "after_entries": 106,
+  "new_institutions": 4,
+  "restored_old_sources": 1,
+  "unchanged_old_records": 101,
+  "ku_leuven_existing_identity_and_fields_preserved": true,
+  "ku_leuven_original_endpoints_preserved": true,
+  "ku_leuven_added_catalogue_endpoint": true
+}

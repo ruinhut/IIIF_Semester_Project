@@ -1,0 +1,10 @@
+{
+  "provider-f170e5beef7888fa": {
+    "manifest_url_pattern": "/9323782/manifest$",
+    "canvas_sequence": 20
+  },
+  "provider-20af5a2db16c5b02": {
+    "manifest_url_pattern": "/296109/manifest$",
+    "canvas_sequence": 9
+  }
+}

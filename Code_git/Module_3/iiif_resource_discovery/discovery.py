@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 import re
 from typing import Any, Mapping, Optional, Sequence
+from urllib.parse import urlsplit
 
 from .fetch import FetchError, HttpFetcher, is_json_document
 from .html_discovery import discover_html_candidates
@@ -58,6 +59,7 @@ class _DiscoveryState:
     processed_machine_urls: set[str] = field(default_factory=set)
     processed_collection_urls: set[str] = field(default_factory=set)
     processed_stream_pages: set[str] = field(default_factory=set)
+    collection_url_rewrites: list[tuple[str, str, str]] = field(default_factory=list)
 
 
 class ResourceDiscoverer:
@@ -95,6 +97,31 @@ class ResourceDiscoverer:
 
         result = ProviderDiscoveryResult(provider=provider)
         state = _DiscoveryState()
+        # Opt-in, reviewed same-host rules preserve a virtual institution's
+        # scope when a server emits global Collection pagination links.
+        for skill in knowledge_skills:
+            rules = skill.get("collection_url_rewrites", [])
+            if not isinstance(rules, list):
+                result.issues.append(DiscoveryIssue(provider.discovery_endpoint,
+                    "invalid_collection_scope_rule", "collection_url_rewrites must be an array"))
+                continue
+            for rule in rules:
+                try:
+                    if not isinstance(rule, Mapping) or not all(isinstance(rule.get(key), str)
+                            for key in ("from_prefix", "to_prefix")):
+                        raise ValueError("Collection scope prefixes must be strings")
+                    source = canonicalize_url(rule["from_prefix"])
+                    target = canonicalize_url(rule["to_prefix"])
+                    old, new = urlsplit(source), urlsplit(target)
+                    if ((old.scheme, old.netloc) != (new.scheme, new.netloc)
+                            or not old.path.endswith("/collection/")
+                            or not new.path.endswith("/collection/")
+                            or old.query or new.query):
+                        raise ValueError("Collection rewrites require same-origin /collection/ prefixes")
+                    state.collection_url_rewrites.append((source, target, str(skill.get("skill_id", "reviewed-rule"))))
+                except (TypeError, KeyError, ValueError) as exc:
+                    result.issues.append(DiscoveryIssue(provider.discovery_endpoint,
+                        "invalid_collection_scope_rule", str(exc)))
         candidates: dict[str, tuple[str, str]] = {}
         html_seeds: list[str] = []
 
@@ -496,6 +523,14 @@ class ResourceDiscoverer:
         while queue and result.collections_visited < self.limits.max_collections_per_provider:
             collection_url, embedded, method, source_url, activity_type, activity_time = queue.pop(0)
             collection_url = canonicalize_url(collection_url)
+            for source, target, skill_id in state.collection_url_rewrites:
+                if collection_url.startswith(source) and not collection_url.startswith(target):
+                    original_url = collection_url
+                    collection_url = target + collection_url[len(source):]
+                    result.knowledge_application.append({"skill_id": skill_id,
+                        "status": "collection_scope_preserved", "declared_url": original_url,
+                        "requested_url": collection_url})
+                    break
             if collection_url in state.processed_collection_urls:
                 continue
             state.processed_collection_urls.add(collection_url)

@@ -1,0 +1,84 @@
+{
+  "generated_at": "2026-10-22T18:27:41.799602+00:00",
+  "new_resolved_source_entries": 7,
+  "discovered_manifest_urls": 42,
+  "validated_manifests": 41,
+  "exported_documents": 41,
+  "exported_image_associations": 2303,
+  "distinct_image_urls": 2303,
+  "actual_downloaded_sample_images": 7,
+  "actual_sample_image_bytes": 1334340,
+  "ocr_reference_descriptors": 0,
+  "schema_validated_sample_json_files": 21,
+  "decoded_images": 7,
+  "decoded_images_with_dimension_mismatch": 0,
+  "smaller_than_canvas_declaration": 0,
+  "larger_than_canvas_declaration": 0,
+  "tests_passed": 193,
+  "previous_resolved_census_entries": 79,
+  "cumulative_resolved_census_entries": 86,
+  "census_entries": 113,
+  "remaining_unresolved_census_entries": 27,
+  "configuration_promoted": true,
+  "scope": "Bounded samples; source entries include an aggregator. Historical successes were not all re-fetched today.",
+  "unresolved_investigation": [
+    {
+      "provider_name": "Finna",
+      "observed_status": "HTTP 403 on the public API search",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "University of Illinois",
+      "observed_status": "HTTP 403 on catalogue JSON",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "North Carolina State University",
+      "observed_status": "HTTP 401 on catalogue JSON",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Hamburg",
+      "observed_status": "HTML CAPTCHA / browser challenge",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Halle",
+      "observed_status": "HTTP 404 on guessed Collection routes",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Folger / Bremen / Wuppertal / Luebeck",
+      "observed_status": "URLError; exact errors retained in probe checks",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Dilibri partner HTML history pages",
+      "observed_status": "HTTP 200 browser verification page, not a catalogue",
+      "resolution": "Native public IIIF Collections work; do not run the challenge or count the HTML response as discovery."
+    },
+    {
+      "provider_name": "Trier City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2799234/manifest",
+      "observed_status": "M4 HTTP 404",
+      "included_in_valid_manifest_count": false
+    }
+  ],
+  "legacy_shared_canvas_manifests": 0,
+  "summed_per_manifest_distinct_image_body_count": 2303,
+  "new_institutions": 7,
+  "restored_old_sources": 0,
+  "old_census_entries": 94,
+  "old_census_resolved": 67,
+  "old_census_remaining": 27,
+  "tests_subtests_passed": 7,
+  "actual_downloaded_reference_texts": 0,
+  "total_images_downloaded_including_initial_examples": 9,
+  "final_sample_images": 7,
+  "separately_validated_fallback_recipes": 7,
+  "separately_checked_pagination_pairs": 7,
+  "institution_scoped_24_url_runs": 4,
+  "independently_verified_holder_metadata_records": 23,
+  "all_final_sample_dimensions_match_declared_image_body": true,
+  "scope_note": "79 historical successes plus seven additional libraries. Cumulative source entries are not a deduplicated institution count; earlier successes were not all re-fetched today."
+}

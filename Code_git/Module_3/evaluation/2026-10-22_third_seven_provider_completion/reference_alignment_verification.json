@@ -1,0 +1,14 @@
+[
+  {
+    "resource_id": "resource-5a1740085010f7233fd1",
+    "canvas_id": "https://digi.landesbibliothek.at/viewer/api/v2/records/AC05304281/pages/21/canvas/",
+    "source_url": "https://digi.landesbibliothek.at/viewer/api/v2/records/AC05304281/files/alto/00000021.xml",
+    "downloaded_source_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\download_examples\\module8\\output\\all\\with_reference\\manifest-0e0173792b2ca81e\\000020_resource-5a1740085010f7233fd1\\institution_reference_001.xml",
+    "image_width": 2882,
+    "image_height": 4629,
+    "alto_words": 159,
+    "image_and_alto_page_dimensions_match": true,
+    "word_boxes_within_image": true,
+    "manually_corrected_gold_truth_asserted": false
+  }
+]

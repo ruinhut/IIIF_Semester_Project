@@ -1,0 +1,32 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.18", nodesep="0.28", ranksep="0.40", fontname="Arial"];
+node [shape=box, style="rounded,filled", fillcolor="#EAF2FA", color="#8CA8C0", fontname="Arial", fontsize=12, margin="0.14,0.09"];
+edge [color="#45627A", arrowsize=0.7, fontname="Arial", fontsize=10];
+
+graph [newrank=true];
+subgraph cluster_rights {
+label="Rights classification"; color="#C5D5E3"; fontname="Arial";
+valid [label="M4-valid document"];
+rights [label="M5: assess rights\nPreserve evidence"];
+research [label="Research-retained\nIncludes unknown /\nreuse-excluded", fillcolor="#E5F2E9"];
+reuse [label="Reuse-eligible subset\nCurrent policy", fillcolor="#F5F7F9"];
+valid -> rights; rights -> research; rights -> reuse;
+}
+subgraph cluster_reference {
+label="Reference availability (successful image downloads)"; color="#C5D5E3"; fontname="Arial";
+export [label="M6-M7: normalize\nand associate data"];
+declared [label="Page reference\ndeclared?", shape=diamond, fillcolor="#FFF1DF"];
+attempt [label="M8: try reference\ndownload"];
+with [label="with_reference\nImage + 3 JSON\n+ text + provenance", fillcolor="#E5F2E9"];
+failed [label="reference_failed\nImage + 3 JSON\nFailure recorded", fillcolor="#FBE8E5"];
+without [label="without_reference\nImage + 3 JSON"];
+export -> declared;
+declared -> without [label="No"]; declared -> attempt [label="Yes"];
+attempt -> with [label="Success"]; attempt -> failed [label="Failed"];
+}
+{rank=same;valid;export;}
+{rank=same;rights;declared;}
+{rank=same;research;reuse;attempt;}
+{rank=same;with;failed;without;}
+research -> export [constraint=false, label="research handoff"];
+}

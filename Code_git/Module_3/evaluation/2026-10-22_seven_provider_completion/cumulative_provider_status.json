@@ -1,0 +1,680 @@
+[
+  {
+    "provider_id": "provider-691126b502b5821e",
+    "provider_name": "Art Institute of Chicago",
+    "institution_url": "https://www.artic.edu/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-6fb76c5e6a229a82",
+    "provider_name": "Austrian National Library",
+    "institution_url": "https://iiif.onb.ac.at/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-9639004395c2739d",
+    "provider_name": "Bavarian State Library (BSB) / Munich Digitization Centre (MDZ)",
+    "institution_url": "https://www.digitale-sammlungen.de/en/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-83eb25cc392724da",
+    "provider_name": "Beyond Words: Illuminating Manuscripts in Boston Collections",
+    "institution_url": "http://beyondwords2016.org/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-a668e1096468c352",
+    "provider_name": "Bibliothèque nationale de France (BnF)",
+    "institution_url": "https://gallica.bnf.fr/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-f10ea7c297cd81a8",
+    "provider_name": "Biblissima",
+    "institution_url": "https://portail.biblissima.fr/en/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-a2d020e1ff7f28ef",
+    "provider_name": "Biblissima reconstituted manuscript demo",
+    "institution_url": "http://demos.biblissima-condorcet.fr/chateauroux/osd-demo/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-4ef10065e633729c",
+    "provider_name": "Blavatnik Archive",
+    "institution_url": "https://www.blavatnikarchive.org/collections",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-028fd9292205c39c",
+    "provider_name": "Bodmer Lab",
+    "institution_url": "https://bodmerlab.unige.ch/fr/search?keywords=",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-acb86cbbcb639914",
+    "provider_name": "British Library",
+    "institution_url": "https://www.bl.uk/collection-guides/iiif",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-32c223e0cddf015c",
+    "provider_name": "Brown University Digital Repository",
+    "institution_url": "https://repository.library.brown.edu/studio/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-9c24703f7d539465",
+    "provider_name": "Cardiff University",
+    "institution_url": "https://librarysearch.cardiff.ac.uk/discovery/collectionDiscovery?vid=44WHELF_CAR:44WHELF_CAR_VU1",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-6a0186046b49634f",
+    "provider_name": "Carnegie Museum of Art",
+    "institution_url": "http://cmoa.org/about/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-31c6cd47abf916e0",
+    "provider_name": "Cuban Digital Collections",
+    "institution_url": "http://iiif.sld.cu/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-c4aa50f2571a99e9",
+    "provider_name": "Cultural Japan",
+    "institution_url": "https://cultural.jp/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-0a19a8e5992b5a87",
+    "provider_name": "David Rumsey Map Collection",
+    "institution_url": "https://www.davidrumsey.com/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-02221348697554a3",
+    "provider_name": "DigiPress - The newspaper portal of the Bayerische Staatsbibliothek (Bavarian State Library)",
+    "institution_url": "https://digipress.digitale-sammlungen.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-9dd288533f853f26",
+    "provider_name": "Digital Collections iiif of the Bavarian State Library",
+    "institution_url": "https://app.digitale-sammlungen.de/bookshelf/?language=en",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-8d5551c46daf6536",
+    "provider_name": "Digital Commonwealth",
+    "institution_url": "https://digitalcommonwealth.org/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-fe4c0f49dea727df",
+    "provider_name": "DIGITAL EAST ASIA COLLECTIONS of the Bavarian State Library",
+    "institution_url": "https://ostasien.digitale-sammlungen.de/?locale=en",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-f034696f3b1f1c1f",
+    "provider_name": "Digital Repository of Ireland",
+    "institution_url": "https://dri.ie/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-617127ddd5e1eb45",
+    "provider_name": "DigitalGeorgetown's Integration of Universal Viewer into DSpace",
+    "institution_url": "https://repository.library.georgetown.edu/handle/10822/1044538",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-e1782e53439deb7b",
+    "provider_name": "DigiVatLib",
+    "institution_url": "http://digi.vatlib.it/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-53220deba7b0d3eb",
+    "provider_name": "Durham University",
+    "institution_url": "https://discover.durham.ac.uk/discovery/search?tab=MUSECOLL&search_scope=IIIF&vid=44DUR_INST:VU1&offset=0",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-858c23aa6223857c",
+    "provider_name": "e-codices",
+    "institution_url": "http://www.e-codices.unifr.ch/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-ef8c581d8869b1b6",
+    "provider_name": "e-codices - Virtual Manuscript Library of Switzerland",
+    "institution_url": "https://e-codices.ch/en",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-7caa47e568a1951d",
+    "provider_name": "e-manuscripta (Manuscript material from Swiss libraries and archives)",
+    "institution_url": "https://www.e-manuscripta.ch/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-3e6e726f68de3eaa",
+    "provider_name": "e-rara (digitized rare books from Swiss institutions)",
+    "institution_url": "https://www.e-rara.ch/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-f2683615336e129a",
+    "provider_name": "Ecole Polytechnique Fédérale de Lausanne (EPFL)",
+    "institution_url": "https://plume.epfl.ch/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-9c46415198317886",
+    "provider_name": "Europeana",
+    "institution_url": "https://www.europeana.eu/portal/en/search?q=provider_aggregation_edm_isShownBy%3A*iiif*&view=grid",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-818f5f2d2b5bea33",
+    "provider_name": "Folger Shakespeare Library",
+    "institution_url": "https://collections.folger.edu/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-ef02e7415eb96a3e",
+    "provider_name": "Fragmentarium - Digital Research Laboratory for Medieval Manuscript Fragments",
+    "institution_url": "https://fragmentarium.ms/search",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-f1308a5306328276",
+    "provider_name": "FromThePage",
+    "institution_url": "http://www.fromthepage.com/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-9fd4bc767a462cd4",
+    "provider_name": "Gallica",
+    "institution_url": "http://gallica.bnf.fr/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-d987c625d6365082",
+    "provider_name": "Georeferencer",
+    "institution_url": "http://www.georeferencer.com/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-47cf886a2e6017f1",
+    "provider_name": "Ghent University",
+    "institution_url": "https://lib.ugent.be/en",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-47e8bc7785793a60",
+    "provider_name": "Göttingen University Collections",
+    "institution_url": "https://gdz.sub.uni-goettingen.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-637a751532e5f5a3",
+    "provider_name": "Harvard Art Museum",
+    "institution_url": "https://harvardartmuseums.org/collections",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-f63c0c9fa9fd0139",
+    "provider_name": "Harvard Art Museums",
+    "institution_url": "http://www.harvardartmuseums.org/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-d14fb88cde24ff49",
+    "provider_name": "Harvard University Digital Collections",
+    "institution_url": "https://library.harvard.edu/digital-collections",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-2b0e0fbd04a5a32c",
+    "provider_name": "Historical State Search",
+    "institution_url": "http://historicalstate.lib.ncsu.edu/search",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-10b9080040d0cc13",
+    "provider_name": "hocrviewer",
+    "institution_url": "https://github.com/jbaiter/hocrviewer-mirador",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-f761dd27f50f2d55",
+    "provider_name": "Huntington Digital Library",
+    "institution_url": "https://hdl.huntington.org/digital/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-3acece25cdf777e4",
+    "provider_name": "Indigenous Digital Archive",
+    "institution_url": "https://omeka.dlcs-ida.org/s/ida/page/home",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-c321c7f2be84b70b",
+    "provider_name": "Internet Archive",
+    "institution_url": "https://archive.org/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-d98fe11ebfc34f6d",
+    "provider_name": "J. Paul Getty Trust",
+    "institution_url": "https://search.getty.edu/gateway/search?q=&cat=highlight&f=%22Open+Content+Images%22&rows=10&srt=a&dir=s&pg=1",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-ef2f1cc06db37bc3",
+    "provider_name": "KU Leuven",
+    "institution_url": "https://kuleuven.limo.libis.be/discovery",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-5e1c10e9ec094e2b",
+    "provider_name": "Lancaster University Library",
+    "institution_url": "https://digitalcollections.lancaster.ac.uk/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-e048f92222cd2e49",
+    "provider_name": "Leiden University",
+    "institution_url": "https://digitalcollections.universiteitleiden.nl/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-296564297962fb5e",
+    "provider_name": "Library of Congress",
+    "institution_url": "https://www.loc.gov/collections/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-c4bca842117bf9f7",
+    "provider_name": "National Gallery of Art Library",
+    "institution_url": "https://library.nga.gov/discovery/collectionDiscovery?vid=01NGA_INST:NGA&collectionId=8157583990004896",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-7354f1a7e6bbf41f",
+    "provider_name": "National Library of Finland (Finna.fi)",
+    "institution_url": "https://www.finna.fi/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-5c37bd59a5085c75",
+    "provider_name": "National Library of Scotland",
+    "institution_url": "https://digital.nls.uk/gallery/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-0af71df3c01cdd4e",
+    "provider_name": "National Library of Wales",
+    "institution_url": "https://www.library.wales/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-760200a911a3f30f",
+    "provider_name": "National Palace Museum (Taiwan)",
+    "institution_url": "https://digitalarchive.npm.gov.tw/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-cabfcd6f3de8ca7d",
+    "provider_name": "North Carolina State University Libraries",
+    "institution_url": "https://d.lib.ncsu.edu/collections/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-d305e1aa116fabbc",
+    "provider_name": "Northwestern University",
+    "institution_url": "https://digitalcollections.library.northwestern.edu/collections/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-38aa7bce2f3b0361",
+    "provider_name": "Parliamentary Archives - UK",
+    "institution_url": "https://archives.parliament.uk/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-4853865a686721d7",
+    "provider_name": "Princeton University Art Museum",
+    "institution_url": "https://artmuseum.princeton.edu/search/collections",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-4e06374e85489c6e",
+    "provider_name": "Princeton University Libraries",
+    "institution_url": "https://dpul.princeton.edu/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-521d522730b9f10b",
+    "provider_name": "Qatar National Library",
+    "institution_url": "https://www.qdl.qa/en/search/site/?f[0]=document_source:archive_source",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-e1d421d66c6ea5a2",
+    "provider_name": "Radboud University Library",
+    "institution_url": "https://bijzonderecollecties.ubn.ru.nl/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-dc8b65c17e7d0e22",
+    "provider_name": "SAT Taishōzō Image DB",
+    "institution_url": "http://dzkimgs.l.u-tokyo.ac.jp/SATi/images.php?alang=en",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-c94006b2714289d6",
+    "provider_name": "Smithsonian Institution",
+    "institution_url": "https://collections.si.edu/search/results.htm?q=&iiif.enabled=true",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-6425a20ec00665e3",
+    "provider_name": "Smithsonian National Zoo",
+    "institution_url": "https://nationalzoo.si.edu/openaccess/search?edan_fq%5B%5D=online_visual_material%3Atrue",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-648f0743acabd9c2",
+    "provider_name": "Stanford University",
+    "institution_url": "https://searchworks.stanford.edu/catalog?f%5Biiif_resources%5D%5B%5D=available",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-0aeecd6836053c69",
+    "provider_name": "The Frick Collection",
+    "institution_url": "http://digitalcollections.frick.org/digico/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-a1544ec8d50c2696",
+    "provider_name": "The SCTA Reading Room",
+    "institution_url": "http://scta.lombardpress.org/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-a360845c2b46d1bc",
+    "provider_name": "The Wolsey Manuscripts",
+    "institution_url": "http://www.wolseymanuscripts.ac.uk/manuscripts",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-7781a87376497b5c",
+    "provider_name": "UCLA Library Digital Collections",
+    "institution_url": "https://digital.library.ucla.edu/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-015ee4ecd4a6fd91",
+    "provider_name": "Universitaet Jena",
+    "institution_url": "https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00014277",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-370a429900074b10",
+    "provider_name": "University College Dublin Libraries",
+    "institution_url": "https://digital.ucd.ie/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-1aa346b109dd7584",
+    "provider_name": "University of Cambridge",
+    "institution_url": "https://cudl.lib.cam.ac.uk/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-e883d0f637379155",
+    "provider_name": "University of Illinois at Urbana-Champaign Library",
+    "institution_url": "https://digital.library.illinois.edu/items?fq%5B%5D=primary_media_category%3A0",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-e8f0640dd782bf74",
+    "provider_name": "University of Leeds Libraries' Cultural Collections",
+    "institution_url": "https://library.leeds.ac.uk/info/1500/special_collections",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-09ef3155e4838a64",
+    "provider_name": "University of Leicester Library",
+    "institution_url": "https://specialcollections.le.ac.uk/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-5bb54fcb57aa7da9",
+    "provider_name": "University of North Texas Libraries",
+    "institution_url": "https://digital.library.unt.edu/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-992059478d1af0a4",
+    "provider_name": "University of Oxford (Digital Bodleian)",
+    "institution_url": "https://digital.bodleian.ox.ac.uk/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-47ee4f79e1a60cac",
+    "provider_name": "University of St. Andrews",
+    "institution_url": "https://www.st-andrews.ac.uk/collections",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-2254ed59cf35068a",
+    "provider_name": "University of Toronto",
+    "institution_url": "https://collections.library.utoronto.ca/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-7ec00147ef5efa4a",
+    "provider_name": "University of Washington Libraries",
+    "institution_url": "https://content.lib.washington.edu/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-fa146b049ccac158",
+    "provider_name": "Utrecht University Library",
+    "institution_url": "https://objects.library.uu.nl/reader/object_list.php?lan=en",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-9087fc100047c3b2",
+    "provider_name": "Vatican Library",
+    "institution_url": "https://digi.vatlib.it/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-f2fa8935cf790b44",
+    "provider_name": "vHMML",
+    "institution_url": "https://www.vhmml.org/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-870ce1c300376029",
+    "provider_name": "Villanova University",
+    "institution_url": "https://digital.library.villanova.edu/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-b49c571f8e0c0ba0",
+    "provider_name": "Wellcome Collection",
+    "institution_url": "https://wellcomecollection.org/collections",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-d5e7b7675f084f36",
+    "provider_name": "Wikidata",
+    "institution_url": "https://www.wikidata.org/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-9a9d50ec8631eafd",
+    "provider_name": "Wikipedia",
+    "institution_url": "https://www.wikipedia.org/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-33ef699d79fc12aa",
+    "provider_name": "World Digitial Library",
+    "institution_url": "https://www.wdl.org/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-8763d3efa30c6554",
+    "provider_name": "Yale Center for British Art",
+    "institution_url": "http://britishart.yale.edu/",
+    "status": "unresolved_in_cumulative_evidence"
+  },
+  {
+    "provider_id": "provider-8798d72493175a05",
+    "provider_name": "Yale Center for British Art",
+    "institution_url": "https://collections.britishart.yale.edu/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-665981fb2cfa68fa",
+    "provider_name": "Yale Peabody Museum",
+    "institution_url": "https://peabody.yale.edu/explore/collections",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-116ce327597310c6",
+    "provider_name": "Yale University Art Gallery",
+    "institution_url": "https://artgallery.yale.edu/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-feedf2702c521119",
+    "provider_name": "Yale University Library",
+    "institution_url": "https://collections.library.yale.edu/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-877592e2f2c8d531",
+    "provider_name": "Heidelberg University Library",
+    "institution_url": "https://www.ub.uni-heidelberg.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-2433bd8d5611ff84",
+    "provider_name": "National Diet Library of Japan",
+    "institution_url": "https://www.ndl.go.jp/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-68a08bd449531996",
+    "provider_name": "Victoria and Albert Museum",
+    "institution_url": "https://www.vam.ac.uk/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-4c8b793ca123a00e",
+    "provider_name": "Berlin State Library",
+    "institution_url": "https://staatsbibliothek-berlin.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-95f1c3c6418c9eb9",
+    "provider_name": "National Library of Norway",
+    "institution_url": "https://www.nb.no/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-ea2fe6808cb57161",
+    "provider_name": "Pennsylvania State University Libraries",
+    "institution_url": "https://libraries.psu.edu/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-a7f2a27b95b31ac2",
+    "provider_name": "University Library of Bern",
+    "institution_url": "https://www.ub.unibe.ch/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-9a42b37ef5cedd2f",
+    "provider_name": "University of Manchester Library",
+    "institution_url": "https://www.library.manchester.ac.uk/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-cdf3a2fdf8526fb3",
+    "provider_name": "Badische Landesbibliothek Karlsruhe",
+    "institution_url": "https://www.blb-karlsruhe.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-076d99a3ef08152f",
+    "provider_name": "Bonn University and State Library",
+    "institution_url": "https://www.ulb.uni-bonn.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-5653f5b86f12f06c",
+    "provider_name": "Frankfurt University Library",
+    "institution_url": "https://www.ub.uni-frankfurt.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-acbb0beb87eb1bca",
+    "provider_name": "Paderborn University Library",
+    "institution_url": "https://www.ub.uni-paderborn.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-13a00dd64dbcd954",
+    "provider_name": "Cologne Archdiocesan and Cathedral Library",
+    "institution_url": "https://www.dombibliothek-koeln.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-f170e5beef7888fa",
+    "provider_name": "Lippische Landesbibliothek Detmold",
+    "institution_url": "https://www.llb-detmold.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-7572570799c45089",
+    "provider_name": "Mainz City Library",
+    "institution_url": "https://www.mainz.de/microsite/bibliotheken/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-20af5a2db16c5b02",
+    "provider_name": "Rheinland-Pfalz State Library Centre",
+    "institution_url": "https://lbz.rlp.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-29c6053362990273",
+    "provider_name": "Trier City Library",
+    "institution_url": "https://www.stadtbibliothek-weberbach.de/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-c30599006b9755ac",
+    "provider_name": "Trier University Library",
+    "institution_url": "https://www.uni-trier.de/bibliothek/",
+    "status": "manifest_found_and_basic_structure_validated"
+  },
+  {
+    "provider_id": "provider-8526ab6e6c62cc03",
+    "provider_name": "Wienbibliothek im Rathaus",
+    "institution_url": "https://www.wienbibliothek.at/",
+    "status": "manifest_found_and_basic_structure_validated"
+  }
+]

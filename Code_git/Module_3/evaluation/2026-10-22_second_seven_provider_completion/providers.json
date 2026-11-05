@@ -1,0 +1,324 @@
+[
+  {
+    "provider_id": "provider-69e1df17c2cb409b",
+    "name": "Koblenz City Library",
+    "institution_url": "https://www.koblenz-stadtbibliothek.de/",
+    "discovery_endpoint": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://www.dilibri.de/stbkodfg",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:59:01+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.koblenz-stadtbibliothek.de/",
+      "name": "Koblenz City Library",
+      "source_page_url": "https://www.dilibri.de/stbkodfg"
+    },
+    "endpoints": [
+      {
+        "url": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://www.dilibri.de/stbkodfg",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:59:01+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-f912979871e7fbf4",
+    "name": "Leipzig University Library",
+    "institution_url": "https://www.ub.uni-leipzig.de/",
+    "discovery_endpoint": "https://iiif.ub.uni-leipzig.de/static/collections/GriechischeHandschriften/collection.json",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://iiif.ub.uni-leipzig.de/static/collections/toplevel.json",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:59:01+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://iiif.ub.uni-leipzig.de/static/collections/GriechischeHandschriften/collection.json",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.ub.uni-leipzig.de/",
+      "name": "Leipzig University Library",
+      "source_page_url": "https://iiif.ub.uni-leipzig.de/static/collections/toplevel.json"
+    },
+    "endpoints": [
+      {
+        "url": "https://iiif.ub.uni-leipzig.de/static/collections/GriechischeHandschriften/collection.json",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://iiif.ub.uni-leipzig.de/static/collections/toplevel.json",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:59:01+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-09986bf13ec40af6",
+    "name": "Oldenburg State Library",
+    "institution_url": "https://www.lb-oldenburg.de/",
+    "discovery_endpoint": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://digital.lb-oldenburg.de/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:59:01+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.lb-oldenburg.de/",
+      "name": "Oldenburg State Library",
+      "source_page_url": "https://digital.lb-oldenburg.de/"
+    },
+    "endpoints": [
+      {
+        "url": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://digital.lb-oldenburg.de/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:59:01+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-748e49a80d347462",
+    "name": "Potsdam University Library - Digitales Brandenburg",
+    "institution_url": "https://www.ub.uni-potsdam.de/",
+    "discovery_endpoint": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://digital.ub.uni-potsdam.de/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:59:01+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.ub.uni-potsdam.de/",
+      "name": "Potsdam University Library - Digitales Brandenburg",
+      "source_page_url": "https://digital.ub.uni-potsdam.de/"
+    },
+    "endpoints": [
+      {
+        "url": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://digital.ub.uni-potsdam.de/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:59:01+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-e8cf142de07e9c61",
+    "name": "Trier Seminary Library",
+    "institution_url": "https://www.bps-trier.de/",
+    "discovery_endpoint": "https://www.dilibri.de/pstr/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://www.dilibri.de/pstr",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:59:01+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://www.dilibri.de/pstr/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.bps-trier.de/",
+      "name": "Trier Seminary Library",
+      "source_page_url": "https://www.dilibri.de/pstr"
+    },
+    "endpoints": [
+      {
+        "url": "https://www.dilibri.de/pstr/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://www.dilibri.de/pstr",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:59:01+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-33ed8b7dc75e0d1a",
+    "name": "University of Graz Library",
+    "institution_url": "https://ub.uni-graz.at/",
+    "discovery_endpoint": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://unipub.uni-graz.at/obvugrscript",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:59:01+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://ub.uni-graz.at/",
+      "name": "University of Graz Library",
+      "source_page_url": "https://unipub.uni-graz.at/obvugrscript"
+    },
+    "endpoints": [
+      {
+        "url": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://unipub.uni-graz.at/obvugrscript",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:59:01+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-77592534c46f4887",
+    "name": "Worms City Library",
+    "institution_url": "https://www.worms.de/neu-de/bildung-bieten/stadtbibliothek/",
+    "discovery_endpoint": "https://www.dilibri.de/stbwo/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://www.dilibri.de/stbwo",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:59:01+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://www.dilibri.de/stbwo/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.worms.de/neu-de/bildung-bieten/stadtbibliothek/",
+      "name": "Worms City Library",
+      "source_page_url": "https://www.dilibri.de/stbwo"
+    },
+    "endpoints": [
+      {
+        "url": "https://www.dilibri.de/stbwo/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://www.dilibri.de/stbwo",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:59:01+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  }
+]

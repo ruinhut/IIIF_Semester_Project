@@ -1,0 +1,43 @@
+[
+  {
+    "provider_name": "Finna",
+    "observed_status": "HTTP 403 on the public API search",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "University of Illinois",
+    "observed_status": "HTTP 403 on catalogue JSON",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "North Carolina State University",
+    "observed_status": "HTTP 401 on catalogue JSON",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Hamburg",
+    "observed_status": "HTML CAPTCHA / browser challenge",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Halle",
+    "observed_status": "HTTP 404 on guessed Collection routes",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Folger / Bremen / Wuppertal / Luebeck",
+    "observed_status": "URLError; exact errors retained in probe checks",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Dilibri partner HTML history pages",
+    "observed_status": "HTTP 200 browser verification page, not a catalogue",
+    "resolution": "Native public IIIF Collections work; do not run the challenge or count the HTML response as discovery."
+  },
+  {
+    "provider_name": "Trier City Library",
+    "manifest_url": "https://www.dilibri.de/i3f/v21/2799234/manifest",
+    "observed_status": "M4 HTTP 404",
+    "included_in_valid_manifest_count": false
+  }
+]

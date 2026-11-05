@@ -1,0 +1,72 @@
+[
+  {
+    "provider_id": "provider-ef2f1cc06db37bc3",
+    "provider_name": "KU Leuven",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 1162,
+    "distinct_image_urls": 1162,
+    "actual_sample_images": 1,
+    "actual_width": 3672,
+    "actual_height": 4527,
+    "canvas_width": 3672,
+    "canvas_height": 4527,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-cdf3a2fdf8526fb3",
+    "provider_name": "Badische Landesbibliothek Karlsruhe",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 812,
+    "distinct_image_urls": 812,
+    "actual_sample_images": 1,
+    "actual_width": 1000,
+    "actual_height": 1472,
+    "canvas_width": 1000,
+    "canvas_height": 1422,
+    "matches_declared_dimensions": false
+  },
+  {
+    "provider_id": "provider-076d99a3ef08152f",
+    "provider_name": "Bonn University and State Library",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 2786,
+    "distinct_image_urls": 2786,
+    "actual_sample_images": 1,
+    "actual_width": 1000,
+    "actual_height": 1379,
+    "canvas_width": 1000,
+    "canvas_height": 1379,
+    "matches_declared_dimensions": true
+  },
+  {
+    "provider_id": "provider-5653f5b86f12f06c",
+    "provider_name": "Frankfurt University Library",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 5,
+    "exported_image_associations": 135,
+    "distinct_image_urls": 135,
+    "actual_sample_images": 1,
+    "actual_width": 1000,
+    "actual_height": 1555,
+    "canvas_width": 1000,
+    "canvas_height": 1505,
+    "matches_declared_dimensions": false
+  },
+  {
+    "provider_id": "provider-acbb0beb87eb1bca",
+    "provider_name": "Paderborn University Library",
+    "discovered_manifest_urls": 6,
+    "validated_manifests": 6,
+    "exported_image_associations": 1644,
+    "distinct_image_urls": 1644,
+    "actual_sample_images": 1,
+    "actual_width": 1000,
+    "actual_height": 1351,
+    "canvas_width": 1000,
+    "canvas_height": 1301,
+    "matches_declared_dimensions": false
+  }
+]

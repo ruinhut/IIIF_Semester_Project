@@ -1,0 +1,8 @@
+﻿provider_id,provider_name,discovered_manifest_urls,validated_manifests,exported_image_associations,distinct_image_urls,actual_sample_images,actual_width,actual_height,canvas_width,canvas_height,matches_declared_dimensions
+provider-13a00dd64dbcd954,Cologne Archdiocesan and Cathedral Library,6,6,344,344,1,1000,1449,1000,1449,True
+provider-f170e5beef7888fa,Lippische Landesbibliothek Detmold,6,6,504,504,1,1000,1468,1000,1468,True
+provider-7572570799c45089,Mainz City Library,6,6,273,273,1,1000,1326,1000,1326,True
+provider-20af5a2db16c5b02,Rheinland-Pfalz State Library Centre,6,6,774,774,1,1000,1351,1000,1351,True
+provider-29c6053362990273,Trier City Library,6,5,76,76,1,1000,1691,1000,1691,True
+provider-c30599006b9755ac,Trier University Library,6,6,248,248,1,1000,863,1000,863,True
+provider-8526ab6e6c62cc03,Wienbibliothek im Rathaus,6,6,84,84,1,1000,1280,1000,1280,True

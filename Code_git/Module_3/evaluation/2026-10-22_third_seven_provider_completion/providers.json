@@ -1,0 +1,324 @@
+[
+  {
+    "provider_id": "provider-f57cbc63bd02c19a",
+    "name": "Berlin Central and Regional Library",
+    "institution_url": "https://www.zlb.de/",
+    "discovery_endpoint": "https://digital.zlb.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+    "discovery_type": "OpenSearch RSS",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://digital.zlb.de/viewer/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T21:52:58+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digital.zlb.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api",
+      "institution_url": "https://www.zlb.de/",
+      "name": "Berlin Central and Regional Library",
+      "source_page_url": "https://digital.zlb.de/viewer/"
+    },
+    "endpoints": [
+      {
+        "url": "https://digital.zlb.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+        "endpoint_role": "catalogue_api",
+        "discovery_type": "OpenSearch RSS",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://digital.zlb.de/viewer/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T21:52:58+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-1cec8517c3b86ffb",
+    "name": "Humboldt University of Berlin Library",
+    "institution_url": "https://www.ub.hu-berlin.de/",
+    "discovery_endpoint": "https://www.digi-hub.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+    "discovery_type": "OpenSearch RSS",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://www.digi-hub.de/viewer/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T21:52:58+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://www.digi-hub.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api",
+      "institution_url": "https://www.ub.hu-berlin.de/",
+      "name": "Humboldt University of Berlin Library",
+      "source_page_url": "https://www.digi-hub.de/viewer/"
+    },
+    "endpoints": [
+      {
+        "url": "https://www.digi-hub.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+        "endpoint_role": "catalogue_api",
+        "discovery_type": "OpenSearch RSS",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://www.digi-hub.de/viewer/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T21:52:58+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-193d9285d6f4d4fd",
+    "name": "Kiel City Archives",
+    "institution_url": "https://www.kiel.de/de/bildung_wissenschaft/stadtarchiv/",
+    "discovery_endpoint": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Stadtarchiv+Kiel%22&sortField=DATECREATED&sortDescending=true",
+    "discovery_type": "OpenSearch RSS",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://schriftgut.sh/viewer/partner/stadtarchiv-kiel/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T21:52:58+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Stadtarchiv+Kiel%22&sortField=DATECREATED&sortDescending=true",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api",
+      "institution_url": "https://www.kiel.de/de/bildung_wissenschaft/stadtarchiv/",
+      "name": "Kiel City Archives",
+      "source_page_url": "https://schriftgut.sh/viewer/partner/stadtarchiv-kiel/"
+    },
+    "endpoints": [
+      {
+        "url": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Stadtarchiv+Kiel%22&sortField=DATECREATED&sortDescending=true",
+        "endpoint_role": "catalogue_api",
+        "discovery_type": "OpenSearch RSS",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://schriftgut.sh/viewer/partner/stadtarchiv-kiel/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T21:52:58+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-7bab05774b901c2f",
+    "name": "Kiel University Library",
+    "institution_url": "https://www.ub.uni-kiel.de/",
+    "discovery_endpoint": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Universit%C3%A4tsbibliothek+Kiel%22&sortField=DATECREATED&sortDescending=true",
+    "discovery_type": "OpenSearch RSS",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://schriftgut.sh/viewer/partner/ub-kiel/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T21:52:58+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Universit%C3%A4tsbibliothek+Kiel%22&sortField=DATECREATED&sortDescending=true",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api",
+      "institution_url": "https://www.ub.uni-kiel.de/",
+      "name": "Kiel University Library",
+      "source_page_url": "https://schriftgut.sh/viewer/partner/ub-kiel/"
+    },
+    "endpoints": [
+      {
+        "url": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Universit%C3%A4tsbibliothek+Kiel%22&sortField=DATECREATED&sortDescending=true",
+        "endpoint_role": "catalogue_api",
+        "discovery_type": "OpenSearch RSS",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://schriftgut.sh/viewer/partner/ub-kiel/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T21:52:58+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-2c24cb85e4f47a27",
+    "name": "SLUB Dresden",
+    "institution_url": "https://www.slub-dresden.de/",
+    "discovery_endpoint": "https://digital.slub-dresden.de/oai/?verb=ListRecords&metadataPrefix=oai_dc",
+    "discovery_type": "OAI-PMH",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://digital.slub-dresden.de/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T21:52:58+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digital.slub-dresden.de/oai/?verb=ListRecords&metadataPrefix=oai_dc",
+      "discovery_type": "OAI-PMH",
+      "endpoint_role": "catalogue_api",
+      "institution_url": "https://www.slub-dresden.de/",
+      "name": "SLUB Dresden",
+      "source_page_url": "https://digital.slub-dresden.de/"
+    },
+    "endpoints": [
+      {
+        "url": "https://digital.slub-dresden.de/oai/?verb=ListRecords&metadataPrefix=oai_dc",
+        "endpoint_role": "catalogue_api",
+        "discovery_type": "OAI-PMH",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://digital.slub-dresden.de/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T21:52:58+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-486a3d9e11d8ec5e",
+    "name": "University of Kassel Library",
+    "institution_url": "https://www.uni-kassel.de/ub/",
+    "discovery_endpoint": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=true",
+    "discovery_type": "OpenSearch RSS",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://orka.bibliothek.uni-kassel.de/viewer/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T21:52:58+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=true",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api",
+      "institution_url": "https://www.uni-kassel.de/ub/",
+      "name": "University of Kassel Library",
+      "source_page_url": "https://orka.bibliothek.uni-kassel.de/viewer/"
+    },
+    "endpoints": [
+      {
+        "url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=true",
+        "endpoint_role": "catalogue_api",
+        "discovery_type": "OpenSearch RSS",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://orka.bibliothek.uni-kassel.de/viewer/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T21:52:58+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-6423933108a72108",
+    "name": "Upper Austrian State Library",
+    "institution_url": "https://www.landesbibliothek.at/",
+    "discovery_endpoint": "https://digi.landesbibliothek.at/viewer/api/v2/collections/DC/karten/",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://digi.landesbibliothek.at/viewer/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T21:52:58+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digi.landesbibliothek.at/viewer/api/v2/collections/DC/karten/",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.landesbibliothek.at/",
+      "name": "Upper Austrian State Library",
+      "source_page_url": "https://digi.landesbibliothek.at/viewer/"
+    },
+    "endpoints": [
+      {
+        "url": "https://digi.landesbibliothek.at/viewer/api/v2/collections/DC/karten/",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_third_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://digi.landesbibliothek.at/viewer/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T21:52:58+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  }
+]

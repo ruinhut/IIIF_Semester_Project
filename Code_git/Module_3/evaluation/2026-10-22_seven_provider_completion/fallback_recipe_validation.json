@@ -1,0 +1,149 @@
+[
+  {
+    "provider_name": "Cologne Archdiocesan and Cathedral Library",
+    "validated_manifest_urls": [
+      "https://digital.dombibliothek-koeln.de/i3f/v21/90591/manifest",
+      "https://digital.dombibliothek-koeln.de/i3f/v21/513855/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "skill_id": "provider-13a00dd64dbcd954-reviewed-native-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Lippische Landesbibliothek Detmold",
+    "validated_manifest_urls": [
+      "https://digitale-sammlungen.llb-detmold.de/i3f/v21/9293828/manifest",
+      "https://digitale-sammlungen.llb-detmold.de/i3f/v21/8311491/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "skill_id": "provider-f170e5beef7888fa-reviewed-native-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Mainz City Library",
+    "validated_manifest_urls": [
+      "https://www.dilibri.de/i3f/v21/3323437/manifest",
+      "https://www.dilibri.de/i3f/v21/3800943/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "skill_id": "provider-7572570799c45089-reviewed-native-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://www.dilibri.de/stbmz/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Rheinland-Pfalz State Library Centre",
+    "validated_manifest_urls": [
+      "https://www.dilibri.de/i3f/v21/2609818/manifest",
+      "https://www.dilibri.de/i3f/v21/228737/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "skill_id": "provider-20af5a2db16c5b02-reviewed-native-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://www.dilibri.de/rlb/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Trier City Library",
+    "validated_manifest_urls": [
+      "https://www.dilibri.de/i3f/v21/2396384/manifest",
+      "https://www.dilibri.de/i3f/v21/873089/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "skill_id": "provider-29c6053362990273-reviewed-native-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://www.dilibri.de/stbtr/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Trier University Library",
+    "validated_manifest_urls": [
+      "https://www.dilibri.de/i3f/v21/1959278/manifest",
+      "https://www.dilibri.de/i3f/v21/2066111/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "skill_id": "provider-c30599006b9755ac-reviewed-native-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://www.dilibri.de/ubtr/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Wienbibliothek im Rathaus",
+    "validated_manifest_urls": [
+      "https://www.digital.wienbibliothek.at/i3f/v21/4525036/manifest",
+      "https://www.digital.wienbibliothek.at/i3f/v21/3920503/manifest"
+    ],
+    "audit": {
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "skill_id": "provider-8526ab6e6c62cc03-reviewed-native-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "added_to_downstream_count": false
+  }
+]

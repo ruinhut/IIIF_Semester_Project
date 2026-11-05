@@ -1,0 +1,8 @@
+﻿provider_id,provider_name,discovered_manifest_urls,validated_manifests,exported_image_associations,distinct_image_urls,actual_sample_images,actual_width,actual_height,canvas_width,canvas_height,matches_declared_dimensions
+provider-69e1df17c2cb409b,Koblenz City Library,6,6,1611,1611,1,1000,1648,1000,1648,True
+provider-f912979871e7fbf4,Leipzig University Library,6,6,1790,1790,1,3840,5760,3840,5760,True
+provider-09986bf13ec40af6,Oldenburg State Library,6,6,980,980,1,1000,1254,1000,1204,False
+provider-748e49a80d347462,Potsdam University Library - Digitales Brandenburg,6,6,674,674,1,1000,1493,1000,1493,True
+provider-e8cf142de07e9c61,Trier Seminary Library,6,5,477,477,1,1000,1571,1000,1571,True
+provider-33ed8b7dc75e0d1a,University of Graz Library,6,6,2544,2544,1,1000,1414,1000,1414,True
+provider-77592534c46f4887,Worms City Library,6,6,488,488,1,1000,1296,1000,1296,True

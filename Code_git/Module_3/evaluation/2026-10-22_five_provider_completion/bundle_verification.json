@@ -1,0 +1,75 @@
+{
+  "verified_bundles": 5,
+  "schema_validated_json_files": 15,
+  "provider_ids": [
+    "provider-076d99a3ef08152f",
+    "provider-5653f5b86f12f06c",
+    "provider-acbb0beb87eb1bca",
+    "provider-cdf3a2fdf8526fb3",
+    "provider-ef2f1cc06db37bc3"
+  ],
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-06c9d05eff13e66a",
+      "resource_id": "resource-7674a870130dc6aab94d",
+      "providers": [
+        {
+          "provider_id": "provider-ef2f1cc06db37bc3",
+          "provider_name": "KU Leuven"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-06c9d05eff13e66a\\000009_resource-7674a870130dc6aab94d\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-2e76379d770b0931",
+      "resource_id": "resource-eef112f3d5c66e17ea53",
+      "providers": [
+        {
+          "provider_id": "provider-cdf3a2fdf8526fb3",
+          "provider_name": "Badische Landesbibliothek Karlsruhe"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-2e76379d770b0931\\000009_resource-eef112f3d5c66e17ea53\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-5235428a429e0863",
+      "resource_id": "resource-3de198b0b71a69a16ac2",
+      "providers": [
+        {
+          "provider_id": "provider-076d99a3ef08152f",
+          "provider_name": "Bonn University and State Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-5235428a429e0863\\000009_resource-3de198b0b71a69a16ac2\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-1e5622cca661b103",
+      "resource_id": "resource-64459dab872727ed1b15",
+      "providers": [
+        {
+          "provider_id": "provider-5653f5b86f12f06c",
+          "provider_name": "Frankfurt University Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-1e5622cca661b103\\000009_resource-64459dab872727ed1b15\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-980113628279fdda",
+      "resource_id": "resource-4bcc02066f9288ef3d0b",
+      "providers": [
+        {
+          "provider_id": "provider-acbb0beb87eb1bca",
+          "provider_name": "Paderborn University Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_five_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-980113628279fdda\\000009_resource-4bcc02066f9288ef3d0b\\image.jpg",
+      "reference_files": 0
+    }
+  ],
+  "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+}

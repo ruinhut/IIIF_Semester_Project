@@ -1,0 +1,60 @@
+{
+  "providers": [
+    {
+      "name": "Oldenburg State Library",
+      "institution_url": "https://www.lb-oldenburg.de/",
+      "discovery_endpoint": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digital.lb-oldenburg.de/"
+    },
+    {
+      "name": "University of Graz Library",
+      "institution_url": "https://ub.uni-graz.at/",
+      "discovery_endpoint": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://unipub.uni-graz.at/obvugrscript"
+    },
+    {
+      "name": "Leipzig University Library",
+      "institution_url": "https://www.ub.uni-leipzig.de/",
+      "discovery_endpoint": "https://iiif.ub.uni-leipzig.de/static/collections/GriechischeHandschriften/collection.json",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://iiif.ub.uni-leipzig.de/static/collections/toplevel.json"
+    },
+    {
+      "name": "Potsdam University Library - Digitales Brandenburg",
+      "institution_url": "https://www.ub.uni-potsdam.de/",
+      "discovery_endpoint": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digital.ub.uni-potsdam.de/"
+    },
+    {
+      "name": "Trier Seminary Library",
+      "institution_url": "https://www.bps-trier.de/",
+      "discovery_endpoint": "https://www.dilibri.de/pstr/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/pstr"
+    },
+    {
+      "name": "Koblenz City Library",
+      "institution_url": "https://www.koblenz-stadtbibliothek.de/",
+      "discovery_endpoint": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/stbkodfg"
+    },
+    {
+      "name": "Worms City Library",
+      "institution_url": "https://www.worms.de/neu-de/bildung-bieten/stadtbibliothek/",
+      "discovery_endpoint": "https://www.dilibri.de/stbwo/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/stbwo"
+    }
+  ]
+}

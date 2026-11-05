@@ -1,0 +1,438 @@
+{
+  "records_checked": 41,
+  "manifest_urls_overlap_between_sources": false,
+  "records": [
+    {
+      "provider_name": "Oldenburg State Library",
+      "manifest_url": "https://digital.lb-oldenburg.de/i3f/v21/805802/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Oldenburg : Landesbibliothek Oldenburg, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Oldenburg State Library",
+      "manifest_url": "https://digital.lb-oldenburg.de/i3f/v21/806299/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Oldenburg : Landesbibliothek Oldenburg, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Oldenburg State Library",
+      "manifest_url": "https://digital.lb-oldenburg.de/i3f/v21/812674/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Oldenburg : Landesbibliothek Oldenburg, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Oldenburg State Library",
+      "manifest_url": "https://digital.lb-oldenburg.de/i3f/v21/825054/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Oldenburg : Landesbibliothek Oldenburg, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Oldenburg State Library",
+      "manifest_url": "https://digital.lb-oldenburg.de/i3f/v21/906494/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Oldenburg : Landesbibliothek Oldenburg, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Oldenburg State Library",
+      "manifest_url": "https://digital.lb-oldenburg.de/i3f/v21/906540/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Oldenburg : Landesbibliothek Oldenburg, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Potsdam University Library - Digitales Brandenburg",
+      "manifest_url": "https://digital.ub.uni-potsdam.de/i3f/v21/123392/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Potsdam : Universitätsbibliothek, 2013",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "digital_edition_publisher_not_a_claim_of_original_ownership"
+    },
+    {
+      "provider_name": "Potsdam University Library - Digitales Brandenburg",
+      "manifest_url": "https://digital.ub.uni-potsdam.de/i3f/v21/171711/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Potsdam : Universitätsbibliothek, 2014",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "digital_edition_publisher_not_a_claim_of_original_ownership"
+    },
+    {
+      "provider_name": "Potsdam University Library - Digitales Brandenburg",
+      "manifest_url": "https://digital.ub.uni-potsdam.de/i3f/v21/22709/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Potsdam : Universitätsbibliothek, 2012",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "digital_edition_publisher_not_a_claim_of_original_ownership"
+    },
+    {
+      "provider_name": "Potsdam University Library - Digitales Brandenburg",
+      "manifest_url": "https://digital.ub.uni-potsdam.de/i3f/v21/285230/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Potsdam : Universitätsbibliothek, 2016",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "digital_edition_publisher_not_a_claim_of_original_ownership"
+    },
+    {
+      "provider_name": "Potsdam University Library - Digitales Brandenburg",
+      "manifest_url": "https://digital.ub.uni-potsdam.de/i3f/v21/325837/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Potsdam : Universitätsbibliothek, 2017",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "digital_edition_publisher_not_a_claim_of_original_ownership"
+    },
+    {
+      "provider_name": "Potsdam University Library - Digitales Brandenburg",
+      "manifest_url": "https://digital.ub.uni-potsdam.de/i3f/v21/73336/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Potsdam : Universitätsbibliothek, 2013",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "digital_edition_publisher_not_a_claim_of_original_ownership"
+    },
+    {
+      "provider_name": "Leipzig University Library",
+      "manifest_url": "https://iiif.ub.uni-leipzig.de/0000004570/manifest.json",
+      "checked_field": "label",
+      "declared_values": "Leipzig, Universitätsbibliothek Leipzig, Cod. gr. 11",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Leipzig University Library",
+      "manifest_url": "https://iiif.ub.uni-leipzig.de/0000004592/manifest.json",
+      "checked_field": "label",
+      "declared_values": "Leipzig, Universitätsbibliothek Leipzig, Cod. gr. 76",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Leipzig University Library",
+      "manifest_url": "https://iiif.ub.uni-leipzig.de/0000004600/manifest.json",
+      "checked_field": "label",
+      "declared_values": "Leipzig, Universitätsbibliothek Leipzig, Cod. gr. 73",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Leipzig University Library",
+      "manifest_url": "https://iiif.ub.uni-leipzig.de/0000013226/manifest.json",
+      "checked_field": "label",
+      "declared_values": "Leipzig, Universitätsbibliothek Leipzig, Cod. gr. 49",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Leipzig University Library",
+      "manifest_url": "https://iiif.ub.uni-leipzig.de/0000013536/manifest.json",
+      "checked_field": "label",
+      "declared_values": "Leipzig, Universitätsbibliothek Leipzig, Rep. I 43 (Leihgabe Leipziger Stadtbibliothek)",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Leipzig University Library",
+      "manifest_url": "https://iiif.ub.uni-leipzig.de/0000013700/manifest.json",
+      "checked_field": "label",
+      "declared_values": "Leipzig, Universitätsbibliothek Leipzig, Cod. gr. 56",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "University of Graz Library",
+      "manifest_url": "https://unipub.uni-graz.at/i3f/v21/12467694/manifest",
+      "checked_field": "label",
+      "declared_values": "Graz, Universitätsbibliothek Ms 0002",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "University of Graz Library",
+      "manifest_url": "https://unipub.uni-graz.at/i3f/v21/6333401/manifest",
+      "checked_field": "label",
+      "declared_values": "Graz, Universitätsbibliothek Ms 0003",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "University of Graz Library",
+      "manifest_url": "https://unipub.uni-graz.at/i3f/v21/6457602/manifest",
+      "checked_field": "label",
+      "declared_values": "Graz, Universitätsbibliothek Ms 0001",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "University of Graz Library",
+      "manifest_url": "https://unipub.uni-graz.at/i3f/v21/6654029/manifest",
+      "checked_field": "label",
+      "declared_values": "Graz, Universitätsbibliothek Ms 0004",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "University of Graz Library",
+      "manifest_url": "https://unipub.uni-graz.at/i3f/v21/6705781/manifest",
+      "checked_field": "label",
+      "declared_values": "Graz, Universitätsbibliothek Ms 0006",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "University of Graz Library",
+      "manifest_url": "https://unipub.uni-graz.at/i3f/v21/6710962/manifest",
+      "checked_field": "label",
+      "declared_values": "Graz, Universitätsbibliothek Ms 0005",
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Trier Seminary Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/1953898/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Trier : Bibliothek des Priesterseminars, 2018",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Trier Seminary Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/1955654/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Trier : Bibliothek des Priesterseminars, 2018",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Trier Seminary Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2023427/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Trier : Bibliothek des Priesterseminars, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Trier Seminary Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2023458/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Trier : Bibliothek des Priesterseminars, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Trier Seminary Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2030950/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Trier : Bibliothek des Priesterseminars, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Worms City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2039355/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Worms : Stadtbibliothek, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Worms City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2040587/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Worms : Stadtbibliothek, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Worms City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2044236/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Worms : Stadtbibliothek, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Worms City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2046938/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Worms : Stadtbibliothek, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Worms City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2047125/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Worms : Stadtbibliothek, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Worms City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/2047529/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Worms : Stadtbibliothek, 2019",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Koblenz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/307472/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Koblenz : Stadtbibliothek, 2010",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Koblenz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/340512/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Koblenz : Stadtbibliothek, 2010",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Koblenz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/365346/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Koblenz : Stadtbibliothek, 2010",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Koblenz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/375167/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Koblenz : Stadtbibliothek, 2010",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Koblenz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/537475/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Koblenz : Stadtbibliothek, 2011",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    },
+    {
+      "provider_name": "Koblenz City Library",
+      "manifest_url": "https://www.dilibri.de/i3f/v21/722664/manifest",
+      "checked_field": "online_edition",
+      "declared_values": [
+        {
+          "value": "Koblenz : Stadtbibliothek, 2012",
+          "label": "Online-Ausgabe"
+        }
+      ],
+      "institution_relation": "source_declared_institution"
+    }
+  ]
+}

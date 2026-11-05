@@ -1,0 +1,61 @@
+[
+  {
+    "provider_name": "Koblenz City Library",
+    "first_page": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all",
+    "first_page_members": 20,
+    "declared_next": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+    "requested_next": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all_o20",
+    "next_page_members": 20,
+    "distinct_pages": true
+  },
+  {
+    "provider_name": "Leipzig University Library",
+    "first_page": "https://iiif.ub.uni-leipzig.de/static/collections/GriechischeHandschriften/collection.json",
+    "first_page_members": 63,
+    "declared_next": null,
+    "note": "No next link declared; member count is not a count of downloaded objects."
+  },
+  {
+    "provider_name": "Oldenburg State Library",
+    "first_page": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124",
+    "first_page_members": 20,
+    "declared_next": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124_o20",
+    "requested_next": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124_o20",
+    "next_page_members": 20,
+    "distinct_pages": true
+  },
+  {
+    "provider_name": "Potsdam University Library - Digitales Brandenburg",
+    "first_page": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all",
+    "first_page_members": 20,
+    "declared_next": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all_o20",
+    "requested_next": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all_o20",
+    "next_page_members": 20,
+    "distinct_pages": true
+  },
+  {
+    "provider_name": "Trier Seminary Library",
+    "first_page": "https://www.dilibri.de/pstr/i3f/v21/collection/all",
+    "first_page_members": 12,
+    "declared_next": null,
+    "note": "No next link declared; member count is not a count of downloaded objects."
+  },
+  {
+    "provider_name": "University of Graz Library",
+    "first_page": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all",
+    "first_page_members": 10,
+    "declared_next": "https://unipub.uni-graz.at/i3f/v21/collection/all_o10",
+    "requested_next": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all_o10",
+    "next_page_members": 10,
+    "distinct_pages": true
+  },
+  {
+    "provider_name": "Worms City Library",
+    "first_page": "https://www.dilibri.de/stbwo/i3f/v21/collection/all",
+    "first_page_members": 20,
+    "declared_next": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+    "requested_next": "https://www.dilibri.de/stbwo/i3f/v21/collection/all_o20",
+    "next_page_members": 18,
+    "distinct_pages": true
+  }
+]

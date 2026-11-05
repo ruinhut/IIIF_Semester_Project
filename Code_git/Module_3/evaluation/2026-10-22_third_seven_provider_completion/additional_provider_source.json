@@ -1,0 +1,60 @@
+{
+  "providers": [
+    {
+      "name": "University of Kassel Library",
+      "institution_url": "https://www.uni-kassel.de/ub/",
+      "source_page_url": "https://orka.bibliothek.uni-kassel.de/viewer/",
+      "discovery_endpoint": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=true",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "Kiel University Library",
+      "institution_url": "https://www.ub.uni-kiel.de/",
+      "source_page_url": "https://schriftgut.sh/viewer/partner/ub-kiel/",
+      "discovery_endpoint": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Universit%C3%A4tsbibliothek+Kiel%22&sortField=DATECREATED&sortDescending=true",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "Kiel City Archives",
+      "institution_url": "https://www.kiel.de/de/bildung_wissenschaft/stadtarchiv/",
+      "source_page_url": "https://schriftgut.sh/viewer/partner/stadtarchiv-kiel/",
+      "discovery_endpoint": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Stadtarchiv+Kiel%22&sortField=DATECREATED&sortDescending=true",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "Humboldt University of Berlin Library",
+      "institution_url": "https://www.ub.hu-berlin.de/",
+      "source_page_url": "https://www.digi-hub.de/viewer/",
+      "discovery_endpoint": "https://www.digi-hub.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "Berlin Central and Regional Library",
+      "institution_url": "https://www.zlb.de/",
+      "source_page_url": "https://digital.zlb.de/viewer/",
+      "discovery_endpoint": "https://digital.zlb.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "SLUB Dresden",
+      "institution_url": "https://www.slub-dresden.de/",
+      "source_page_url": "https://digital.slub-dresden.de/",
+      "discovery_endpoint": "https://digital.slub-dresden.de/oai/?verb=ListRecords&metadataPrefix=oai_dc",
+      "discovery_type": "OAI-PMH",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "Upper Austrian State Library",
+      "institution_url": "https://www.landesbibliothek.at/",
+      "source_page_url": "https://digi.landesbibliothek.at/viewer/",
+      "discovery_endpoint": "https://digi.landesbibliothek.at/viewer/api/v2/collections/DC/karten/",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+Subject: Weekly progress — IIIF Document Information Extraction — 30 October
+
+Dear Professor Kaplan,
+
+I have completed the eight-module pipeline. Valid Manifests have been discovered and validated for 100 of the 127 candidate source entries, which include institutions, projects and aggregators.
+
+In the latest sample run across seven institutions, all 42 Manifests passed validation, yielding 7,123 image records. I downloaded seven sample images with 21 linked JSON files, including one page paired with institutional ALTO OCR. These are sample results, rather than complete institutional harvests.
+
+I am now preparing the midterm presentation. I am not currently blocked.
+
+Best regards,
+Boheng Shang

@@ -1,0 +1,72 @@
+[
+  {
+    "provider_name": "Cologne Archdiocesan and Cathedral Library",
+    "first_page": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367",
+    "declared_next": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367_o20",
+    "requested_next": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367_o20",
+    "first_page_members": 20,
+    "next_page_members": 20,
+    "distinct_pages": true,
+    "scope_rewrite_applied": false
+  },
+  {
+    "provider_name": "Lippische Landesbibliothek Detmold",
+    "first_page": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all",
+    "declared_next": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all_o20",
+    "requested_next": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all_o20",
+    "first_page_members": 20,
+    "next_page_members": 20,
+    "distinct_pages": true,
+    "scope_rewrite_applied": false
+  },
+  {
+    "provider_name": "Mainz City Library",
+    "first_page": "https://www.dilibri.de/stbmz/i3f/v21/collection/all",
+    "declared_next": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+    "requested_next": "https://www.dilibri.de/stbmz/i3f/v21/collection/all_o20",
+    "first_page_members": 20,
+    "next_page_members": 20,
+    "distinct_pages": true,
+    "scope_rewrite_applied": true
+  },
+  {
+    "provider_name": "Rheinland-Pfalz State Library Centre",
+    "first_page": "https://www.dilibri.de/rlb/i3f/v21/collection/all",
+    "declared_next": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+    "requested_next": "https://www.dilibri.de/rlb/i3f/v21/collection/all_o20",
+    "first_page_members": 20,
+    "next_page_members": 20,
+    "distinct_pages": true,
+    "scope_rewrite_applied": true
+  },
+  {
+    "provider_name": "Trier City Library",
+    "first_page": "https://www.dilibri.de/stbtr/i3f/v21/collection/all",
+    "declared_next": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+    "requested_next": "https://www.dilibri.de/stbtr/i3f/v21/collection/all_o20",
+    "first_page_members": 20,
+    "next_page_members": 20,
+    "distinct_pages": true,
+    "scope_rewrite_applied": true
+  },
+  {
+    "provider_name": "Trier University Library",
+    "first_page": "https://www.dilibri.de/ubtr/i3f/v21/collection/all",
+    "declared_next": "https://www.dilibri.de/i3f/v21/collection/all_o20",
+    "requested_next": "https://www.dilibri.de/ubtr/i3f/v21/collection/all_o20",
+    "first_page_members": 20,
+    "next_page_members": 20,
+    "distinct_pages": true,
+    "scope_rewrite_applied": true
+  },
+  {
+    "provider_name": "Wienbibliothek im Rathaus",
+    "first_page": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535",
+    "declared_next": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535_o20",
+    "requested_next": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535_o20",
+    "first_page_members": 20,
+    "next_page_members": 20,
+    "distinct_pages": true,
+    "scope_rewrite_applied": false
+  }
+]

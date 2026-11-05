@@ -4367,6 +4367,752 @@
           "request_delay_seconds": 0.6
         }
       ]
+    },
+    {
+      "provider_id": "provider-ef2f1cc06db37bc3",
+      "provider_name": "KU Leuven",
+      "investigation_id": "2026-10-22-five-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "ku-leuven-lovaniensia-public-catalogue-detail-manifests",
+          "type": "paginated_html_identifiers_to_manifest_templates",
+          "api_url": "https://www.lovaniensia.be/items/browse",
+          "record_url_pattern": "^https://www\\.lovaniensia\\.be/items/show/(?P<identifier>\\d+)$",
+          "identifier_followup": {
+            "url_template": "https://www.lovaniensia.be/items/show/{identifier}",
+            "format": "html",
+            "identifier_pattern": "^https://data\\.lovaniensia\\.be/(?P<identifier>IE\\d+)/manifest$"
+          },
+          "manifest_url_templates": [
+            "https://data.lovaniensia.be/{identifier}/manifest"
+          ],
+          "pagination": {
+            "page_parameter": "page",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "start_page": 1,
+            "max_pages": 100,
+            "detect_next_page": true
+          },
+          "max_identifiers": 2000,
+          "coverage_note": "Public Lovaniensia catalogue subset. Follow declared item links, then the explicit Manifest anchor; do not guess IE numbers. The first sample records' Location metadata identifies KU Leuven Libraries Special Collections. Lovaniensia is a collaborative project, so provenance must be retained rather than assigning every future record to KU. Its /api/items returned 403; this recipe uses the accessible public catalogue and does not bypass that restriction.",
+          "request_delay_seconds": 0.6
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-cdf3a2fdf8526fb3",
+      "provider_name": "Badische Landesbibliothek Karlsruhe",
+      "investigation_id": "2026-10-22-five-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-cdf3a2fdf8526fb3-native-visuallibrary-collection-members",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digital.blb-karlsruhe.de/i3f/v21/collection/178827",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 100,
+            "max_pages": 1
+          },
+          "coverage_note": "Incunabula. This fallback reads the native Collection's first-page explicit members only. The main generic IIIF Collection walker separately supports declared next links; the bounded run stops at six Manifests, not at catalogue exhaustion. No catalogue-wide count is inferred from the sample.",
+          "request_delay_seconds": 0.6
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-076d99a3ef08152f",
+      "provider_name": "Bonn University and State Library",
+      "investigation_id": "2026-10-22-five-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-076d99a3ef08152f-native-visuallibrary-collection-members",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/collection/10250864",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 100,
+            "max_pages": 1
+          },
+          "coverage_note": "Medieval manuscripts. This fallback reads the native Collection's first-page explicit members only. The main generic IIIF Collection walker separately supports declared next links; the bounded run stops at six Manifests, not at catalogue exhaustion. No catalogue-wide count is inferred from the sample.",
+          "request_delay_seconds": 0.6
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-5653f5b86f12f06c",
+      "provider_name": "Frankfurt University Library",
+      "investigation_id": "2026-10-22-five-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-5653f5b86f12f06c-native-visuallibrary-collection-members",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 100,
+            "max_pages": 1
+          },
+          "coverage_note": "All-collection first-page sample. This fallback reads the native Collection's first-page explicit members only. The main generic IIIF Collection walker separately supports declared next links; the bounded run stops at six Manifests, not at catalogue exhaustion. No catalogue-wide count is inferred from the sample.",
+          "request_delay_seconds": 0.6
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-acbb0beb87eb1bca",
+      "provider_name": "Paderborn University Library",
+      "investigation_id": "2026-10-22-five-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_five_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-acbb0beb87eb1bca-native-visuallibrary-collection-members",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digital.ub.uni-paderborn.de/i3f/v21/collection/8437472",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 100,
+            "max_pages": 1
+          },
+          "coverage_note": "Zugschwerdt'sche Leihbibliothek. This fallback reads the native Collection's first-page explicit members only. The main generic IIIF Collection walker separately supports declared next links; the bounded run stops at six Manifests, not at catalogue exhaustion. No catalogue-wide count is inferred from the sample.",
+          "request_delay_seconds": 0.6
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-13a00dd64dbcd954",
+      "provider_name": "Cologne Archdiocesan and Cathedral Library",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-13a00dd64dbcd954-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Historical holdings. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-f170e5beef7888fa",
+      "provider_name": "Lippische Landesbibliothek Detmold",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-f170e5beef7888fa-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "All-title catalogue sample. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-7572570799c45089",
+      "provider_name": "Mainz City Library",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-7572570799c45089-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/stbmz/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Institution-scoped public Dilibri catalogue. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest. Native next and child Collection URLs omit this institution's virtual path. The reviewed same-origin Collection-only mapping preserves it; Manifest URLs remain as declared. Different Dilibri libraries are separate holders; the portal itself is not an eighth institution. Public HTML listing pages may return a browser challenge; no challenge is bypassed.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/stbmz/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-20af5a2db16c5b02",
+      "provider_name": "Rheinland-Pfalz State Library Centre",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-20af5a2db16c5b02-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/rlb/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Institution-scoped public Dilibri catalogue. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest. Native next and child Collection URLs omit this institution's virtual path. The reviewed same-origin Collection-only mapping preserves it; Manifest URLs remain as declared. Different Dilibri libraries are separate holders; the portal itself is not an eighth institution. Public HTML listing pages may return a browser challenge; no challenge is bypassed.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/rlb/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-29c6053362990273",
+      "provider_name": "Trier City Library",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-29c6053362990273-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/stbtr/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Institution-scoped public Dilibri catalogue. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest. Native next and child Collection URLs omit this institution's virtual path. The reviewed same-origin Collection-only mapping preserves it; Manifest URLs remain as declared. Different Dilibri libraries are separate holders; the portal itself is not an eighth institution. Public HTML listing pages may return a browser challenge; no challenge is bypassed.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/stbtr/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-c30599006b9755ac",
+      "provider_name": "Trier University Library",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-c30599006b9755ac-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/ubtr/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Institution-scoped public Dilibri catalogue. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest. Native next and child Collection URLs omit this institution's virtual path. The reviewed same-origin Collection-only mapping preserves it; Manifest URLs remain as declared. Different Dilibri libraries are separate holders; the portal itself is not an eighth institution. Public HTML listing pages may return a browser challenge; no challenge is bypassed.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/ubtr/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-8526ab6e6c62cc03",
+      "provider_name": "Wienbibliothek im Rathaus",
+      "investigation_id": "2026-10-22-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-8526ab6e6c62cc03-reviewed-native-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Culture and literature collection. Supplementary fallback reads first-page explicit Manifest links only. Main generic traversal follows child Collections and next links within the run budget; it is not a complete institution harvest."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-69e1df17c2cb409b",
+      "provider_name": "Koblenz City Library",
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-69e1df17c2cb409b-native-reviewed-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest(?:\\.json)?$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Koblenz city library DFG branch. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest. Preserve the virtual collection prefix on same-origin Collection requests only; do not change declared Manifest or image URLs.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-f912979871e7fbf4",
+      "provider_name": "Leipzig University Library",
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-f912979871e7fbf4-native-reviewed-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://iiif.ub.uni-leipzig.de/static/collections/GriechischeHandschriften/collection.json",
+          "records_path": "manifests",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest(?:\\.json)?$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Greek manuscripts. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-09986bf13ec40af6",
+      "provider_name": "Oldenburg State Library",
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-09986bf13ec40af6-native-reviewed-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest(?:\\.json)?$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Manuscripts Collection. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-748e49a80d347462",
+      "provider_name": "Potsdam University Library - Digitales Brandenburg",
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-748e49a80d347462-native-reviewed-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest(?:\\.json)?$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public catalogue, including cooperating holders. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest."
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-e8cf142de07e9c61",
+      "provider_name": "Trier Seminary Library",
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-e8cf142de07e9c61-native-reviewed-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/pstr/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest(?:\\.json)?$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Seminary library's Dilibri branch. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest. Preserve the virtual collection prefix on same-origin Collection requests only; do not change declared Manifest or image URLs.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/pstr/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-33ed8b7dc75e0d1a",
+      "provider_name": "University of Graz Library",
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-33ed8b7dc75e0d1a-native-reviewed-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest(?:\\.json)?$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Digi SCRIPT manuscript portal. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest. Preserve the virtual collection prefix on same-origin Collection requests only; do not change declared Manifest or image URLs.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://unipub.uni-graz.at/i3f/v21/collection/",
+              "to_prefix": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-77592534c46f4887",
+      "provider_name": "Worms City Library",
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+      "skills": [
+        {
+          "skill_id": "provider-77592534c46f4887-native-reviewed-collection",
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://www.dilibri.de/stbwo/i3f/v21/collection/all",
+          "records_path": "members",
+          "manifest_url_path": "@id",
+          "manifest_url_pattern": "/manifest(?:\\.json)?$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 20,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Worms city library Dilibri branch. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest. Preserve the virtual collection prefix on same-origin Collection requests only; do not change declared Manifest or image URLs.",
+          "collection_url_rewrites": [
+            {
+              "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+              "to_prefix": "https://www.dilibri.de/stbwo/i3f/v21/collection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-f57cbc63bd02c19a",
+      "provider_name": "Berlin Central and Regional Library",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://digital.zlb.de/viewer/api/v1/records/rss",
+          "query_parameters": {
+            "query": "",
+            "sortField": "DATECREATED",
+            "sortDescending": "false"
+          },
+          "xml_namespaces": {},
+          "xml_record_path": ".//item",
+          "xml_identifier_path": "link",
+          "identifier_pattern": "^https://digital\\.zlb\\.de/viewer/(?:image|metadata|toc)/(?P<identifier>[^/?#]+)(?:/.*)?$",
+          "manifest_url_templates": [
+            "https://digital.zlb.de/viewer/api/v1/records/{identifier}/manifest/"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public RSS feed subset (at most 50 feed records); no complete-catalogue or numeric-pagination claim. Each generated native Manifest must be validated.",
+          "skill_id": "provider-f57cbc63bd02c19a-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-1cec8517c3b86ffb",
+      "provider_name": "Humboldt University of Berlin Library",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://www.digi-hub.de/viewer/api/v1/records/rss",
+          "query_parameters": {
+            "query": "",
+            "sortField": "DATECREATED",
+            "sortDescending": "false"
+          },
+          "xml_namespaces": {},
+          "xml_record_path": ".//item",
+          "xml_identifier_path": "link",
+          "identifier_pattern": "^https://www\\.digi\\-hub\\.de/viewer/(?:image|metadata|toc)/(?P<identifier>[^/?#]+)(?:/.*)?$",
+          "manifest_url_templates": [
+            "https://www.digi-hub.de/viewer/api/v1/records/{identifier}/manifest/"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public RSS feed subset (at most 50 feed records); no complete-catalogue or numeric-pagination claim. Each generated native Manifest must be validated.",
+          "skill_id": "provider-1cec8517c3b86ffb-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-193d9285d6f4d4fd",
+      "provider_name": "Kiel City Archives",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://schriftgut.sh/viewer/api/v1/records/rss",
+          "query_parameters": {
+            "query": "MD_DV_OWNER:\"Stadtarchiv Kiel\"",
+            "sortField": "DATECREATED",
+            "sortDescending": "true"
+          },
+          "xml_namespaces": {},
+          "xml_record_path": ".//item",
+          "xml_identifier_path": "link",
+          "identifier_pattern": "^https://schriftgut\\.sh/viewer/(?:image|metadata|toc)/(?P<identifier>[^/?#]+)(?:/.*)?$",
+          "manifest_url_templates": [
+            "https://schriftgut.sh/viewer/api/v1/records/{identifier}/manifest/"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public RSS feed subset (at most 50 feed records); no complete-catalogue or numeric-pagination claim. Each generated native Manifest must be validated. Shared portal filtered by MD_DV_OWNER=Stadtarchiv Kiel; check holder metadata independently.",
+          "skill_id": "provider-193d9285d6f4d4fd-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-7bab05774b901c2f",
+      "provider_name": "Kiel University Library",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://schriftgut.sh/viewer/api/v1/records/rss",
+          "query_parameters": {
+            "query": "MD_DV_OWNER:\"Universitätsbibliothek Kiel\"",
+            "sortField": "DATECREATED",
+            "sortDescending": "true"
+          },
+          "xml_namespaces": {},
+          "xml_record_path": ".//item",
+          "xml_identifier_path": "link",
+          "identifier_pattern": "^https://schriftgut\\.sh/viewer/(?:image|metadata|toc)/(?P<identifier>[^/?#]+)(?:/.*)?$",
+          "manifest_url_templates": [
+            "https://schriftgut.sh/viewer/api/v1/records/{identifier}/manifest/"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public RSS feed subset (at most 50 feed records); no complete-catalogue or numeric-pagination claim. Each generated native Manifest must be validated. Shared portal filtered by MD_DV_OWNER=Universitätsbibliothek Kiel; check holder metadata independently.",
+          "skill_id": "provider-7bab05774b901c2f-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-2c24cb85e4f47a27",
+      "provider_name": "SLUB Dresden",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://digital.slub-dresden.de/oai/",
+          "query_parameters": {
+            "verb": "ListRecords",
+            "metadataPrefix": "oai_dc"
+          },
+          "xml_namespaces": {
+            "oai": "http://www.openarchives.org/OAI/2.0/"
+          },
+          "xml_record_path": ".//oai:record",
+          "xml_identifier_path": "oai:header/oai:identifier",
+          "identifier_pattern": "^oai:de:slub-dresden:db:id-(?P<identifier>[0-9Xx-]+)$",
+          "manifest_url_templates": [
+            "https://iiif.slub-dresden.de/iiif/2/{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 100,
+            "next_token_path": ".//oai:resumptionToken",
+            "token_keep_parameters": [
+              "verb"
+            ]
+          },
+          "max_identifiers": 5000,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public OAI-PMH record identifiers, with opaque continuation tokens. A catalogue record is not assumed to have IIIF: validate each template response. Run Manifest budget remains bounded.",
+          "skill_id": "provider-2c24cb85e4f47a27-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-486a3d9e11d8ec5e",
+      "provider_name": "University of Kassel Library",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/rss",
+          "query_parameters": {
+            "query": "",
+            "sortField": "DATECREATED",
+            "sortDescending": "true"
+          },
+          "xml_namespaces": {},
+          "xml_record_path": ".//item",
+          "xml_identifier_path": "link",
+          "identifier_pattern": "^https://orka\\.bibliothek\\.uni\\-kassel\\.de/viewer/(?:image|metadata|toc)/(?P<identifier>[^/?#]+)(?:/.*)?$",
+          "manifest_url_templates": [
+            "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/{identifier}/manifest/"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public RSS feed subset (at most 50 feed records); no complete-catalogue or numeric-pagination claim. Each generated native Manifest must be validated.",
+          "skill_id": "provider-486a3d9e11d8ec5e-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-6423933108a72108",
+      "provider_name": "Upper Austrian State Library",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digi.landesbibliothek.at/viewer/api/v2/collections/DC/karten/",
+          "records_path": "items",
+          "manifest_url_path": "id",
+          "manifest_url_pattern": "/manifest/$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Native Presentation 3 maps Collection. Generic Collection traversal handles declared first/next links; this fallback inspects one response. Not all library holdings.",
+          "skill_id": "provider-6423933108a72108-public-native-catalogue"
+        }
+      ]
     }
   ]
 }

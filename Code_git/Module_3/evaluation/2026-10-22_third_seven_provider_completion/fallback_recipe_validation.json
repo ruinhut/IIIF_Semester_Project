@@ -1,0 +1,260 @@
+[
+  {
+    "provider_name": "Berlin Central and Regional Library",
+    "audit": {
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "skill_id": "provider-f57cbc63bd02c19a-public-native-catalogue",
+      "skill_type": "paginated_xml_identifiers_to_manifest_templates",
+      "status": "manifests_found",
+      "api_url": "https://digital.zlb.de/viewer/api/v1/records/rss",
+      "catalogue_method": "GET",
+      "pagination_location": "query",
+      "pages_fetched": 1,
+      "records_examined": 50,
+      "source_declared_total": null,
+      "identifiers_selected": 3,
+      "manifest_requests": 3,
+      "followup_requests": 0,
+      "manifests_validated": 2,
+      "collection_roots_validated": 0,
+      "template_success_counts": {
+        "https://digital.zlb.de/viewer/api/v1/records/{identifier}/manifest/": 2
+      },
+      "failure_counts": {
+        "timeout": 1
+      },
+      "truncated": true,
+      "enumeration_pages": [
+        {
+          "url": "https://digital.zlb.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+          "record_count": 50,
+          "has_next": true,
+          "source_declared_total": null
+        }
+      ]
+    },
+    "issues": [],
+    "validated_manifest_urls": [
+      "https://digital.zlb.de/viewer/api/v1/records/15453578/manifest/",
+      "https://digital.zlb.de/viewer/api/v1/records/07-2_0009/manifest/"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Humboldt University of Berlin Library",
+    "audit": {
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "skill_id": "provider-1cec8517c3b86ffb-public-native-catalogue",
+      "skill_type": "paginated_xml_identifiers_to_manifest_templates",
+      "status": "manifests_found",
+      "api_url": "https://www.digi-hub.de/viewer/api/v1/records/rss",
+      "catalogue_method": "GET",
+      "pagination_location": "query",
+      "pages_fetched": 1,
+      "records_examined": 50,
+      "source_declared_total": null,
+      "identifiers_selected": 2,
+      "manifest_requests": 2,
+      "followup_requests": 0,
+      "manifests_validated": 2,
+      "collection_roots_validated": 0,
+      "template_success_counts": {
+        "https://www.digi-hub.de/viewer/api/v1/records/{identifier}/manifest/": 2
+      },
+      "failure_counts": {},
+      "truncated": true,
+      "enumeration_pages": [
+        {
+          "url": "https://www.digi-hub.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+          "record_count": 50,
+          "has_next": true,
+          "source_declared_total": null
+        }
+      ]
+    },
+    "issues": [],
+    "validated_manifest_urls": [
+      "https://www.digi-hub.de/viewer/api/v1/records/BV043214663/manifest/",
+      "https://www.digi-hub.de/viewer/api/v1/records/BV043214613/manifest/"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Kiel City Archives",
+    "audit": {
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "skill_id": "provider-193d9285d6f4d4fd-public-native-catalogue",
+      "skill_type": "paginated_xml_identifiers_to_manifest_templates",
+      "status": "manifests_found",
+      "api_url": "https://schriftgut.sh/viewer/api/v1/records/rss",
+      "catalogue_method": "GET",
+      "pagination_location": "query",
+      "pages_fetched": 1,
+      "records_examined": 50,
+      "source_declared_total": null,
+      "identifiers_selected": 2,
+      "manifest_requests": 2,
+      "followup_requests": 0,
+      "manifests_validated": 2,
+      "collection_roots_validated": 0,
+      "template_success_counts": {
+        "https://schriftgut.sh/viewer/api/v1/records/{identifier}/manifest/": 2
+      },
+      "failure_counts": {},
+      "truncated": true,
+      "enumeration_pages": [
+        {
+          "url": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Stadtarchiv+Kiel%22&sortField=DATECREATED&sortDescending=true",
+          "record_count": 50,
+          "has_next": true,
+          "source_declared_total": null
+        }
+      ]
+    },
+    "issues": [],
+    "validated_manifest_urls": [
+      "https://schriftgut.sh/viewer/api/v1/records/Ka__545/manifest/",
+      "https://schriftgut.sh/viewer/api/v1/records/Ka__853/manifest/"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Kiel University Library",
+    "audit": {
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "skill_id": "provider-7bab05774b901c2f-public-native-catalogue",
+      "skill_type": "paginated_xml_identifiers_to_manifest_templates",
+      "status": "manifests_found",
+      "api_url": "https://schriftgut.sh/viewer/api/v1/records/rss",
+      "catalogue_method": "GET",
+      "pagination_location": "query",
+      "pages_fetched": 1,
+      "records_examined": 50,
+      "source_declared_total": null,
+      "identifiers_selected": 2,
+      "manifest_requests": 2,
+      "followup_requests": 0,
+      "manifests_validated": 2,
+      "collection_roots_validated": 0,
+      "template_success_counts": {
+        "https://schriftgut.sh/viewer/api/v1/records/{identifier}/manifest/": 2
+      },
+      "failure_counts": {},
+      "truncated": true,
+      "enumeration_pages": [
+        {
+          "url": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Universit%C3%A4tsbibliothek+Kiel%22&sortField=DATECREATED&sortDescending=true",
+          "record_count": 50,
+          "has_next": true,
+          "source_declared_total": null
+        }
+      ]
+    },
+    "issues": [],
+    "validated_manifest_urls": [
+      "https://schriftgut.sh/viewer/api/v1/records/PPN1986263665/manifest/",
+      "https://schriftgut.sh/viewer/api/v1/records/PPN1982207086/manifest/"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "SLUB Dresden",
+    "audit": {
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "skill_id": "provider-2c24cb85e4f47a27-public-native-catalogue",
+      "skill_type": "paginated_xml_identifiers_to_manifest_templates",
+      "status": "manifests_found",
+      "api_url": "https://digital.slub-dresden.de/oai/",
+      "catalogue_method": "GET",
+      "pagination_location": "query",
+      "pages_fetched": 1,
+      "records_examined": 25,
+      "source_declared_total": null,
+      "identifiers_selected": 2,
+      "manifest_requests": 2,
+      "followup_requests": 0,
+      "manifests_validated": 2,
+      "collection_roots_validated": 0,
+      "template_success_counts": {
+        "https://iiif.slub-dresden.de/iiif/2/{identifier}/manifest.json": 2
+      },
+      "failure_counts": {},
+      "truncated": true,
+      "enumeration_pages": [
+        {
+          "url": "https://digital.slub-dresden.de/oai/?verb=ListRecords&metadataPrefix=oai_dc",
+          "record_count": 25,
+          "has_next": true,
+          "source_declared_total": null
+        }
+      ]
+    },
+    "issues": [],
+    "validated_manifest_urls": [
+      "https://iiif.slub-dresden.de/iiif/2/32109025X/manifest.json",
+      "https://iiif.slub-dresden.de/iiif/2/321094271/manifest.json"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "University of Kassel Library",
+    "audit": {
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "skill_id": "provider-486a3d9e11d8ec5e-public-native-catalogue",
+      "skill_type": "paginated_xml_identifiers_to_manifest_templates",
+      "status": "manifests_found",
+      "api_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/rss",
+      "catalogue_method": "GET",
+      "pagination_location": "query",
+      "pages_fetched": 1,
+      "records_examined": 50,
+      "source_declared_total": null,
+      "identifiers_selected": 2,
+      "manifest_requests": 2,
+      "followup_requests": 0,
+      "manifests_validated": 2,
+      "collection_roots_validated": 0,
+      "template_success_counts": {
+        "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/{identifier}/manifest/": 2
+      },
+      "failure_counts": {},
+      "truncated": true,
+      "enumeration_pages": [
+        {
+          "url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=true",
+          "record_count": 50,
+          "has_next": true,
+          "source_declared_total": null
+        }
+      ]
+    },
+    "issues": [],
+    "validated_manifest_urls": [
+      "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/DE-611-HS-4058424/manifest/",
+      "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/DE-611-HS-4058422/manifest/"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Upper Austrian State Library",
+    "audit": {
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "skill_id": "provider-6423933108a72108-public-native-catalogue",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://digi.landesbibliothek.at/viewer/api/v2/collections/DC/karten/",
+      "pages_fetched": 1,
+      "records_examined": 466,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "issues": [],
+    "validated_manifest_urls": [
+      "https://digi.landesbibliothek.at/viewer/api/v2/records/AC05755128/manifest/",
+      "https://digi.landesbibliothek.at/viewer/api/v2/records/AC05755121/manifest/"
+    ],
+    "added_to_downstream_count": false
+  }
+]

@@ -105,6 +105,227 @@
       "discovery_type": "Collection",
       "endpoint_role": "presentation_collection",
       "source_page_url": "https://ub-unibe-ch.github.io/IIIF_Server/presentation_api/"
+    },
+    {
+      "name": "Badische Landesbibliothek Karlsruhe",
+      "institution_url": "https://www.blb-karlsruhe.de/",
+      "discovery_endpoint": "https://digital.blb-karlsruhe.de/i3f/v21/collection/178827",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digital.blb-karlsruhe.de/blbdd/wiki/schnittstellen"
+    },
+    {
+      "name": "Paderborn University Library",
+      "institution_url": "https://www.ub.uni-paderborn.de/",
+      "discovery_endpoint": "https://digital.ub.uni-paderborn.de/i3f/v21/collection/8437472",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digital.ub.uni-paderborn.de/"
+    },
+    {
+      "name": "Bonn University and State Library",
+      "institution_url": "https://www.ulb.uni-bonn.de/",
+      "discovery_endpoint": "https://digitale-sammlungen.ulb.uni-bonn.de/i3f/v21/collection/10250864",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digitale-sammlungen.ulb.uni-bonn.de/ulbbn/wiki/about"
+    },
+    {
+      "name": "Frankfurt University Library",
+      "institution_url": "https://www.ub.uni-frankfurt.de/",
+      "discovery_endpoint": "https://sammlungen.ub.uni-frankfurt.de/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://sammlungen.ub.uni-frankfurt.de/"
+    },
+    {
+      "provider_id": "provider-ef2f1cc06db37bc3",
+      "name": "KU Leuven",
+      "institution_url": "https://kuleuven.limo.libis.be/discovery",
+      "source_page_url": "https://www.lovaniensia.be/",
+      "endpoints": [
+        {
+          "url": "https://www.lovaniensia.be/items/browse",
+          "endpoint_role": "catalogue_listing",
+          "discovery_type": "HTML",
+          "label": "Lovaniensia public catalogue, checked 2026-10-22",
+          "verification_status": "unverified",
+          "source": {
+            "source_type": "institution_documentation",
+            "source_url": "https://www.lovaniensia.be/",
+            "source_page_url": "https://www.lovaniensia.be/",
+            "observed_at": "2026-10-22T13:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wienbibliothek im Rathaus",
+      "institution_url": "https://www.wienbibliothek.at/",
+      "discovery_endpoint": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.digital.wienbibliothek.at/"
+    },
+    {
+      "name": "Lippische Landesbibliothek Detmold",
+      "institution_url": "https://www.llb-detmold.de/",
+      "discovery_endpoint": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digitale-sammlungen.llb-detmold.de/"
+    },
+    {
+      "name": "Cologne Archdiocesan and Cathedral Library",
+      "institution_url": "https://www.dombibliothek-koeln.de/",
+      "discovery_endpoint": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digital.dombibliothek-koeln.de/"
+    },
+    {
+      "name": "Rheinland-Pfalz State Library Centre",
+      "institution_url": "https://lbz.rlp.de/",
+      "discovery_endpoint": "https://www.dilibri.de/rlb/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/rlb"
+    },
+    {
+      "name": "Trier University Library",
+      "institution_url": "https://www.uni-trier.de/bibliothek/",
+      "discovery_endpoint": "https://www.dilibri.de/ubtr/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/ubtr"
+    },
+    {
+      "name": "Trier City Library",
+      "institution_url": "https://www.stadtbibliothek-weberbach.de/",
+      "discovery_endpoint": "https://www.dilibri.de/stbtr/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/stbtr"
+    },
+    {
+      "name": "Mainz City Library",
+      "institution_url": "https://www.mainz.de/microsite/bibliotheken/",
+      "discovery_endpoint": "https://www.dilibri.de/stbmz/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/stbmz"
+    },
+    {
+      "name": "Oldenburg State Library",
+      "institution_url": "https://www.lb-oldenburg.de/",
+      "discovery_endpoint": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digital.lb-oldenburg.de/"
+    },
+    {
+      "name": "University of Graz Library",
+      "institution_url": "https://ub.uni-graz.at/",
+      "discovery_endpoint": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://unipub.uni-graz.at/obvugrscript"
+    },
+    {
+      "name": "Leipzig University Library",
+      "institution_url": "https://www.ub.uni-leipzig.de/",
+      "discovery_endpoint": "https://iiif.ub.uni-leipzig.de/static/collections/GriechischeHandschriften/collection.json",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://iiif.ub.uni-leipzig.de/static/collections/toplevel.json"
+    },
+    {
+      "name": "Potsdam University Library - Digitales Brandenburg",
+      "institution_url": "https://www.ub.uni-potsdam.de/",
+      "discovery_endpoint": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://digital.ub.uni-potsdam.de/"
+    },
+    {
+      "name": "Trier Seminary Library",
+      "institution_url": "https://www.bps-trier.de/",
+      "discovery_endpoint": "https://www.dilibri.de/pstr/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/pstr"
+    },
+    {
+      "name": "Koblenz City Library",
+      "institution_url": "https://www.koblenz-stadtbibliothek.de/",
+      "discovery_endpoint": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/stbkodfg"
+    },
+    {
+      "name": "Worms City Library",
+      "institution_url": "https://www.worms.de/neu-de/bildung-bieten/stadtbibliothek/",
+      "discovery_endpoint": "https://www.dilibri.de/stbwo/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "source_page_url": "https://www.dilibri.de/stbwo"
+    },
+    {
+      "name": "University of Kassel Library",
+      "institution_url": "https://www.uni-kassel.de/ub/",
+      "source_page_url": "https://orka.bibliothek.uni-kassel.de/viewer/",
+      "discovery_endpoint": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=true",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "Kiel University Library",
+      "institution_url": "https://www.ub.uni-kiel.de/",
+      "source_page_url": "https://schriftgut.sh/viewer/partner/ub-kiel/",
+      "discovery_endpoint": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Universit%C3%A4tsbibliothek+Kiel%22&sortField=DATECREATED&sortDescending=true",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "Kiel City Archives",
+      "institution_url": "https://www.kiel.de/de/bildung_wissenschaft/stadtarchiv/",
+      "source_page_url": "https://schriftgut.sh/viewer/partner/stadtarchiv-kiel/",
+      "discovery_endpoint": "https://schriftgut.sh/viewer/api/v1/records/rss?query=MD_DV_OWNER%3A%22Stadtarchiv+Kiel%22&sortField=DATECREATED&sortDescending=true",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "Humboldt University of Berlin Library",
+      "institution_url": "https://www.ub.hu-berlin.de/",
+      "source_page_url": "https://www.digi-hub.de/viewer/",
+      "discovery_endpoint": "https://www.digi-hub.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "Berlin Central and Regional Library",
+      "institution_url": "https://www.zlb.de/",
+      "source_page_url": "https://digital.zlb.de/viewer/",
+      "discovery_endpoint": "https://digital.zlb.de/viewer/api/v1/records/rss?query=&sortField=DATECREATED&sortDescending=false",
+      "discovery_type": "OpenSearch RSS",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "SLUB Dresden",
+      "institution_url": "https://www.slub-dresden.de/",
+      "source_page_url": "https://digital.slub-dresden.de/",
+      "discovery_endpoint": "https://digital.slub-dresden.de/oai/?verb=ListRecords&metadataPrefix=oai_dc",
+      "discovery_type": "OAI-PMH",
+      "endpoint_role": "catalogue_api"
+    },
+    {
+      "name": "Upper Austrian State Library",
+      "institution_url": "https://www.landesbibliothek.at/",
+      "source_page_url": "https://digi.landesbibliothek.at/viewer/",
+      "discovery_endpoint": "https://digi.landesbibliothek.at/viewer/api/v2/collections/DC/karten/",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection"
     }
   ]
 }

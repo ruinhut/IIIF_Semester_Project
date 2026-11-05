@@ -1,0 +1,149 @@
+[
+  {
+    "provider_name": "Koblenz City Library",
+    "audit": {
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "skill_id": "provider-69e1df17c2cb409b-native-reviewed-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "validated_manifest_urls": [
+      "https://www.dilibri.de/i3f/v21/340512/manifest",
+      "https://www.dilibri.de/i3f/v21/375167/manifest"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Leipzig University Library",
+    "audit": {
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "skill_id": "provider-f912979871e7fbf4-native-reviewed-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://iiif.ub.uni-leipzig.de/static/collections/GriechischeHandschriften/collection.json",
+      "pages_fetched": 1,
+      "records_examined": 63,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "validated_manifest_urls": [
+      "https://iiif.ub.uni-leipzig.de/0000004592/manifest.json",
+      "https://iiif.ub.uni-leipzig.de/0000004600/manifest.json"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Oldenburg State Library",
+    "audit": {
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "skill_id": "provider-09986bf13ec40af6-native-reviewed-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "validated_manifest_urls": [
+      "https://digital.lb-oldenburg.de/i3f/v21/805802/manifest",
+      "https://digital.lb-oldenburg.de/i3f/v21/806299/manifest"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Potsdam University Library - Digitales Brandenburg",
+    "audit": {
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "skill_id": "provider-748e49a80d347462-native-reviewed-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "validated_manifest_urls": [
+      "https://digital.ub.uni-potsdam.de/i3f/v21/285230/manifest",
+      "https://digital.ub.uni-potsdam.de/i3f/v21/73336/manifest"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Trier Seminary Library",
+    "audit": {
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "skill_id": "provider-e8cf142de07e9c61-native-reviewed-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://www.dilibri.de/pstr/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 12,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "validated_manifest_urls": [
+      "https://www.dilibri.de/i3f/v21/2030950/manifest",
+      "https://www.dilibri.de/i3f/v21/2023427/manifest"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "University of Graz Library",
+    "audit": {
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "skill_id": "provider-33ed8b7dc75e0d1a-native-reviewed-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 10,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "validated_manifest_urls": [
+      "https://unipub.uni-graz.at/i3f/v21/6457602/manifest",
+      "https://unipub.uni-graz.at/i3f/v21/12467694/manifest"
+    ],
+    "added_to_downstream_count": false
+  },
+  {
+    "provider_name": "Worms City Library",
+    "audit": {
+      "investigation_id": "2026-10-22-second-seven-provider-discovery",
+      "skill_id": "provider-77592534c46f4887-native-reviewed-collection",
+      "skill_type": "paginated_json_manifest_links",
+      "status": "manifests_found",
+      "api_url": "https://www.dilibri.de/stbwo/i3f/v21/collection/all",
+      "pages_fetched": 1,
+      "records_examined": 20,
+      "manifest_requests": 2,
+      "manifests_validated": 2,
+      "failure_counts": {},
+      "truncated": true
+    },
+    "validated_manifest_urls": [
+      "https://www.dilibri.de/i3f/v21/2040587/manifest",
+      "https://www.dilibri.de/i3f/v21/2046938/manifest"
+    ],
+    "added_to_downstream_count": false
+  }
+]

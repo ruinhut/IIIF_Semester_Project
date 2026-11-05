@@ -1,0 +1,194 @@
+[
+  {
+    "provider_id": "provider-69e1df17c2cb409b",
+    "provider_name": "Koblenz City Library",
+    "investigation_id": "2026-10-22-second-seven-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-69e1df17c2cb409b-native-reviewed-collection",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/all",
+        "records_path": "members",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest(?:\\.json)?$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 20,
+          "max_pages": 1
+        },
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Koblenz city library DFG branch. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest. Preserve the virtual collection prefix on same-origin Collection requests only; do not change declared Manifest or image URLs.",
+        "collection_url_rewrites": [
+          {
+            "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+            "to_prefix": "https://www.dilibri.de/stbkodfg/i3f/v21/collection/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-f912979871e7fbf4",
+    "provider_name": "Leipzig University Library",
+    "investigation_id": "2026-10-22-second-seven-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-f912979871e7fbf4-native-reviewed-collection",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://iiif.ub.uni-leipzig.de/static/collections/GriechischeHandschriften/collection.json",
+        "records_path": "manifests",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest(?:\\.json)?$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 20,
+          "max_pages": 1
+        },
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Greek manuscripts. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-09986bf13ec40af6",
+    "provider_name": "Oldenburg State Library",
+    "investigation_id": "2026-10-22-second-seven-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-09986bf13ec40af6-native-reviewed-collection",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://digital.lb-oldenburg.de/i3f/v21/collection/785124",
+        "records_path": "members",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest(?:\\.json)?$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 20,
+          "max_pages": 1
+        },
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Manuscripts Collection. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-748e49a80d347462",
+    "provider_name": "Potsdam University Library - Digitales Brandenburg",
+    "investigation_id": "2026-10-22-second-seven-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-748e49a80d347462-native-reviewed-collection",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://digital.ub.uni-potsdam.de/i3f/v21/collection/all",
+        "records_path": "members",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest(?:\\.json)?$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 20,
+          "max_pages": 1
+        },
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Public catalogue, including cooperating holders. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest."
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-e8cf142de07e9c61",
+    "provider_name": "Trier Seminary Library",
+    "investigation_id": "2026-10-22-second-seven-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-e8cf142de07e9c61-native-reviewed-collection",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://www.dilibri.de/pstr/i3f/v21/collection/all",
+        "records_path": "members",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest(?:\\.json)?$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 20,
+          "max_pages": 1
+        },
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Seminary library's Dilibri branch. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest. Preserve the virtual collection prefix on same-origin Collection requests only; do not change declared Manifest or image URLs.",
+        "collection_url_rewrites": [
+          {
+            "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+            "to_prefix": "https://www.dilibri.de/pstr/i3f/v21/collection/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-33ed8b7dc75e0d1a",
+    "provider_name": "University of Graz Library",
+    "investigation_id": "2026-10-22-second-seven-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-33ed8b7dc75e0d1a-native-reviewed-collection",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/all",
+        "records_path": "members",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest(?:\\.json)?$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 20,
+          "max_pages": 1
+        },
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Digi SCRIPT manuscript portal. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest. Preserve the virtual collection prefix on same-origin Collection requests only; do not change declared Manifest or image URLs.",
+        "collection_url_rewrites": [
+          {
+            "from_prefix": "https://unipub.uni-graz.at/i3f/v21/collection/",
+            "to_prefix": "https://unipub.uni-graz.at/obvugrscript/i3f/v21/collection/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "provider_id": "provider-77592534c46f4887",
+    "provider_name": "Worms City Library",
+    "investigation_id": "2026-10-22-second-seven-provider-discovery",
+    "investigation_document": "knowledge/institutions/2026-10-22_second_seven_provider_completion.md",
+    "skills": [
+      {
+        "skill_id": "provider-77592534c46f4887-native-reviewed-collection",
+        "type": "paginated_json_manifest_links",
+        "api_url": "https://www.dilibri.de/stbwo/i3f/v21/collection/all",
+        "records_path": "members",
+        "manifest_url_path": "@id",
+        "manifest_url_pattern": "/manifest(?:\\.json)?$",
+        "pagination": {
+          "page_parameter": "",
+          "page_size_parameter": "",
+          "page_size": 20,
+          "max_pages": 1
+        },
+        "request_delay_seconds": 0.6,
+        "coverage_note": "Worms city library Dilibri branch. First-page fallback only. Main generic Collection walker handles nested Collections and next links subject to a bounded run budget. Sample success is not a complete institution harvest. Preserve the virtual collection prefix on same-origin Collection requests only; do not change declared Manifest or image URLs.",
+        "collection_url_rewrites": [
+          {
+            "from_prefix": "https://www.dilibri.de/i3f/v21/collection/",
+            "to_prefix": "https://www.dilibri.de/stbwo/i3f/v21/collection/"
+          }
+        ]
+      }
+    ]
+  }
+]

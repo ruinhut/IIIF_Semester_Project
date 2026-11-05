@@ -1,0 +1,12 @@
+{
+  "discovery_knowledge.json": {
+    "before_entries": 52,
+    "after_entries": 59,
+    "old_entries_unchanged": true
+  },
+  "provider_endpoints.json": {
+    "before_entries": 19,
+    "after_entries": 19,
+    "old_entries_unchanged": true
+  }
+}

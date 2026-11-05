@@ -1,0 +1,468 @@
+{
+  "records_checked": 42,
+  "manifest_urls_overlap_between_sources": false,
+  "records": [
+    {
+      "provider_name": "Upper Austrian State Library",
+      "manifest_url": "https://digi.landesbibliothek.at/viewer/api/v2/records/AC05304281/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Upper Austrian State Library",
+      "manifest_url": "https://digi.landesbibliothek.at/viewer/api/v2/records/AC05755084/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Upper Austrian State Library",
+      "manifest_url": "https://digi.landesbibliothek.at/viewer/api/v2/records/AC05755121/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Upper Austrian State Library",
+      "manifest_url": "https://digi.landesbibliothek.at/viewer/api/v2/records/AC05755128/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Upper Austrian State Library",
+      "manifest_url": "https://digi.landesbibliothek.at/viewer/api/v2/records/AC05755346/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Upper Austrian State Library",
+      "manifest_url": "https://digi.landesbibliothek.at/viewer/api/v2/records/AC05755361/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Berlin Central and Regional Library",
+      "manifest_url": "https://digital.zlb.de/viewer/api/v1/records/07-2_0009/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Berlin Central and Regional Library",
+      "manifest_url": "https://digital.zlb.de/viewer/api/v1/records/07-2_0010/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Berlin Central and Regional Library",
+      "manifest_url": "https://digital.zlb.de/viewer/api/v1/records/07-2_0011/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Berlin Central and Regional Library",
+      "manifest_url": "https://digital.zlb.de/viewer/api/v1/records/07-2_0012/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Berlin Central and Regional Library",
+      "manifest_url": "https://digital.zlb.de/viewer/api/v1/records/07-2_0013/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Berlin Central and Regional Library",
+      "manifest_url": "https://digital.zlb.de/viewer/api/v1/records/15453578/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "SLUB Dresden",
+      "manifest_url": "https://iiif.slub-dresden.de/iiif/2/312005946/manifest.json",
+      "source_declared_holder_fields": [],
+      "attribution": "<a href=\"https://www.slub-dresden.de/\" target=\"_blank\"><img src=\"https://digital.slub-dresden.de/fileadmin/images/dfgviewer_logo_slub.gif\" /></a><br />Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden<br /><a href=\"http://www.slub-dresden.de/\" target=\"_blank\"><img src=\"http://digital.slub-dresden.de/fileadmin/images/dfgviewer_logo_slub.gif\" /></a><br />Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden<br /><br /><i>Rechteinformationen:</i><br /><a target=\"_blank\" href=\"http://creativecommons.org/publicdomain/mark/1.0/\">Public Domain Mark 1.0</a><br />",
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "SLUB Dresden",
+      "manifest_url": "https://iiif.slub-dresden.de/iiif/2/31880557X/manifest.json",
+      "source_declared_holder_fields": [],
+      "attribution": "<a href=\"https://www.slub-dresden.de/\" target=\"_blank\"><img src=\"https://digital.slub-dresden.de/fileadmin/images/dfgviewer_logo_slub.gif\" /></a><br />Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden<br /><br /><i>Rechteinformationen:</i><br /><a target=\"_blank\" href=\"http://creativecommons.org/publicdomain/mark/1.0/\">Public Domain Mark 1.0</a><br />",
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "SLUB Dresden",
+      "manifest_url": "https://iiif.slub-dresden.de/iiif/2/32109025X/manifest.json",
+      "source_declared_holder_fields": [],
+      "attribution": "<a href=\"https://www.slub-dresden.de/\" target=\"_blank\"><img src=\"https://digital.slub-dresden.de/fileadmin/images/dfgviewer_logo_slub.gif\" /></a><br />Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden<br /><br /><i>Rechteinformationen:</i><br /><a target=\"_blank\" href=\"http://creativecommons.org/publicdomain/mark/1.0/\">Public Domain Mark 1.0</a><br />",
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "SLUB Dresden",
+      "manifest_url": "https://iiif.slub-dresden.de/iiif/2/321094271/manifest.json",
+      "source_declared_holder_fields": [],
+      "attribution": "<a href=\"https://www.slub-dresden.de/\" target=\"_blank\"><img src=\"https://digital.slub-dresden.de/fileadmin/images/dfgviewer_logo_slub.gif\" /></a><br />Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden<br /><br /><i>Rechteinformationen:</i><br /><a target=\"_blank\" href=\"http://creativecommons.org/publicdomain/mark/1.0/\">Public Domain Mark 1.0</a><br />",
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "SLUB Dresden",
+      "manifest_url": "https://iiif.slub-dresden.de/iiif/2/323071260/manifest.json",
+      "source_declared_holder_fields": [],
+      "attribution": "<a href=\"https://www.slub-dresden.de/\" target=\"_blank\"><img src=\"https://digital.slub-dresden.de/fileadmin/images/dfgviewer_logo_slub.gif\" /></a><br />Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden<br /><br /><i>Rechteinformationen:</i><br /><a target=\"_blank\" href=\"http://creativecommons.org/publicdomain/mark/1.0/\">Public Domain Mark 1.0</a><br />",
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "SLUB Dresden",
+      "manifest_url": "https://iiif.slub-dresden.de/iiif/2/323420885/manifest.json",
+      "source_declared_holder_fields": [],
+      "attribution": "<a href=\"https://www.slub-dresden.de/\" target=\"_blank\"><img src=\"https://digital.slub-dresden.de/fileadmin/images/dfgviewer_logo_slub.gif\" /></a><br />Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden<br /><br /><i>Rechteinformationen:</i><br /><a target=\"_blank\" href=\"http://creativecommons.org/publicdomain/mark/1.0/\">Public Domain Mark 1.0</a><br />",
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "University of Kassel Library",
+      "manifest_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/1769857290721/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "University of Kassel Library",
+      "manifest_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/1792599587272/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "University of Kassel Library",
+      "manifest_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/1792671576973/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "University of Kassel Library",
+      "manifest_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/DE-611-HS-4058422/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "University of Kassel Library",
+      "manifest_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/DE-611-HS-4058424/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "University of Kassel Library",
+      "manifest_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/DE-611-HS-4120324/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Kiel City Archives",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/Ka__235/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Stadtarchiv Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel City Archives",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/Ka__545/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Stadtarchiv Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel City Archives",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/Ka__553/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Stadtarchiv Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel City Archives",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/Ka__6335/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Stadtarchiv Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel City Archives",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/Ka__853/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Stadtarchiv Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel City Archives",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/Ka__854/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Stadtarchiv Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel University Library",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/PPN1965402933/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Universitätsbibliothek Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel University Library",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/PPN1968586156/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Universitätsbibliothek Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel University Library",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/PPN1968586466/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Universitätsbibliothek Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel University Library",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/PPN198220575X/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Universitätsbibliothek Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel University Library",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/PPN1982207086/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Universitätsbibliothek Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Kiel University Library",
+      "manifest_url": "https://schriftgut.sh/viewer/api/v1/records/PPN1986263665/manifest/",
+      "source_declared_holder_fields": [
+        {
+          "label": [
+            {
+              "@language": "de",
+              "@value": "Besitzer des Digitalisats"
+            },
+            {
+              "@language": "en",
+              "@value": "Owner of"
+            }
+          ],
+          "value": "Universitätsbibliothek Kiel"
+        }
+      ],
+      "attribution": null,
+      "shared_portal_holder_verified": true
+    },
+    {
+      "provider_name": "Humboldt University of Berlin Library",
+      "manifest_url": "https://www.digi-hub.de/viewer/api/v1/records/1479968607541/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Humboldt University of Berlin Library",
+      "manifest_url": "https://www.digi-hub.de/viewer/api/v1/records/1506071132648/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Humboldt University of Berlin Library",
+      "manifest_url": "https://www.digi-hub.de/viewer/api/v1/records/BV043214613/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Humboldt University of Berlin Library",
+      "manifest_url": "https://www.digi-hub.de/viewer/api/v1/records/BV043214663/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Humboldt University of Berlin Library",
+      "manifest_url": "https://www.digi-hub.de/viewer/api/v1/records/BV043808441/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    },
+    {
+      "provider_name": "Humboldt University of Berlin Library",
+      "manifest_url": "https://www.digi-hub.de/viewer/api/v1/records/BV046182688/manifest/",
+      "source_declared_holder_fields": [],
+      "attribution": null,
+      "shared_portal_holder_verified": null
+    }
+  ]
+}

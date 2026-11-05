@@ -1,0 +1,105 @@
+{
+  "decoded_images": 7,
+  "decode_errors": [],
+  "dimension_mismatches": [],
+  "images": [
+    {
+      "record_id": "manifest-b1691f56b98e643d",
+      "resource_id": "resource-52052e87246389ba3f01",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-b1691f56b98e643d\\000009_resource-52052e87246389ba3f01\\image.jpg",
+      "format": "JPEG",
+      "width": 1000,
+      "height": 1449,
+      "declared_dimensions": [
+        1000,
+        1449
+      ],
+      "dimensions_match": true,
+      "bytes": 239079
+    },
+    {
+      "record_id": "manifest-915cc5fdeefae1dc",
+      "resource_id": "resource-fc33673ddda41a272840",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-915cc5fdeefae1dc\\000020_resource-fc33673ddda41a272840\\image.jpg",
+      "format": "JPEG",
+      "width": 1000,
+      "height": 1468,
+      "declared_dimensions": [
+        1000,
+        1468
+      ],
+      "dimensions_match": true,
+      "bytes": 147974
+    },
+    {
+      "record_id": "manifest-59d1bd4511f296a0",
+      "resource_id": "resource-4c4d78e7089861720759",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-59d1bd4511f296a0\\000000_resource-4c4d78e7089861720759\\image.jpg",
+      "format": "JPEG",
+      "width": 1000,
+      "height": 1326,
+      "declared_dimensions": [
+        1000,
+        1326
+      ],
+      "dimensions_match": true,
+      "bytes": 182818
+    },
+    {
+      "record_id": "manifest-eeded5617db5b1f1",
+      "resource_id": "resource-8131540402560a1caf11",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-eeded5617db5b1f1\\000009_resource-8131540402560a1caf11\\image.jpg",
+      "format": "JPEG",
+      "width": 1000,
+      "height": 1351,
+      "declared_dimensions": [
+        1000,
+        1351
+      ],
+      "dimensions_match": true,
+      "bytes": 202857
+    },
+    {
+      "record_id": "manifest-020c56c75ad4cd18",
+      "resource_id": "resource-67da97eff5e37f9927d1",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-020c56c75ad4cd18\\000009_resource-67da97eff5e37f9927d1\\image.jpg",
+      "format": "JPEG",
+      "width": 1000,
+      "height": 1691,
+      "declared_dimensions": [
+        1000,
+        1691
+      ],
+      "dimensions_match": true,
+      "bytes": 280752
+    },
+    {
+      "record_id": "manifest-888526c6fcce0b12",
+      "resource_id": "resource-b1ed42f4d12e9ec1d3be",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-888526c6fcce0b12\\000000_resource-b1ed42f4d12e9ec1d3be\\image.jpg",
+      "format": "JPEG",
+      "width": 1000,
+      "height": 863,
+      "declared_dimensions": [
+        1000,
+        863
+      ],
+      "dimensions_match": true,
+      "bytes": 186658
+    },
+    {
+      "record_id": "manifest-7642aa3c08993cc3",
+      "resource_id": "resource-4efbd7a5a3ff4029fe0b",
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-7642aa3c08993cc3\\000009_resource-4efbd7a5a3ff4029fe0b\\image.jpg",
+      "format": "JPEG",
+      "width": 1000,
+      "height": 1280,
+      "declared_dimensions": [
+        1000,
+        1280
+      ],
+      "dimensions_match": true,
+      "bytes": 94202
+    }
+  ]
+}

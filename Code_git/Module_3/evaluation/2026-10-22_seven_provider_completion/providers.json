@@ -1,0 +1,324 @@
+[
+  {
+    "provider_id": "provider-13a00dd64dbcd954",
+    "name": "Cologne Archdiocesan and Cathedral Library",
+    "institution_url": "https://www.dombibliothek-koeln.de/",
+    "discovery_endpoint": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://digital.dombibliothek-koeln.de/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:20:36+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.dombibliothek-koeln.de/",
+      "name": "Cologne Archdiocesan and Cathedral Library",
+      "source_page_url": "https://digital.dombibliothek-koeln.de/"
+    },
+    "endpoints": [
+      {
+        "url": "https://digital.dombibliothek-koeln.de/i3f/v21/collection/381367",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://digital.dombibliothek-koeln.de/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:20:36+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-f170e5beef7888fa",
+    "name": "Lippische Landesbibliothek Detmold",
+    "institution_url": "https://www.llb-detmold.de/",
+    "discovery_endpoint": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://digitale-sammlungen.llb-detmold.de/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:20:36+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.llb-detmold.de/",
+      "name": "Lippische Landesbibliothek Detmold",
+      "source_page_url": "https://digitale-sammlungen.llb-detmold.de/"
+    },
+    "endpoints": [
+      {
+        "url": "https://digitale-sammlungen.llb-detmold.de/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://digitale-sammlungen.llb-detmold.de/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:20:36+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-7572570799c45089",
+    "name": "Mainz City Library",
+    "institution_url": "https://www.mainz.de/microsite/bibliotheken/",
+    "discovery_endpoint": "https://www.dilibri.de/stbmz/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://www.dilibri.de/stbmz",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:20:36+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://www.dilibri.de/stbmz/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.mainz.de/microsite/bibliotheken/",
+      "name": "Mainz City Library",
+      "source_page_url": "https://www.dilibri.de/stbmz"
+    },
+    "endpoints": [
+      {
+        "url": "https://www.dilibri.de/stbmz/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://www.dilibri.de/stbmz",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:20:36+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-20af5a2db16c5b02",
+    "name": "Rheinland-Pfalz State Library Centre",
+    "institution_url": "https://lbz.rlp.de/",
+    "discovery_endpoint": "https://www.dilibri.de/rlb/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://www.dilibri.de/rlb",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:20:36+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://www.dilibri.de/rlb/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://lbz.rlp.de/",
+      "name": "Rheinland-Pfalz State Library Centre",
+      "source_page_url": "https://www.dilibri.de/rlb"
+    },
+    "endpoints": [
+      {
+        "url": "https://www.dilibri.de/rlb/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://www.dilibri.de/rlb",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:20:36+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-29c6053362990273",
+    "name": "Trier City Library",
+    "institution_url": "https://www.stadtbibliothek-weberbach.de/",
+    "discovery_endpoint": "https://www.dilibri.de/stbtr/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://www.dilibri.de/stbtr",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:20:36+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://www.dilibri.de/stbtr/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.stadtbibliothek-weberbach.de/",
+      "name": "Trier City Library",
+      "source_page_url": "https://www.dilibri.de/stbtr"
+    },
+    "endpoints": [
+      {
+        "url": "https://www.dilibri.de/stbtr/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://www.dilibri.de/stbtr",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:20:36+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-c30599006b9755ac",
+    "name": "Trier University Library",
+    "institution_url": "https://www.uni-trier.de/bibliothek/",
+    "discovery_endpoint": "https://www.dilibri.de/ubtr/i3f/v21/collection/all",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://www.dilibri.de/ubtr",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:20:36+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://www.dilibri.de/ubtr/i3f/v21/collection/all",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.uni-trier.de/bibliothek/",
+      "name": "Trier University Library",
+      "source_page_url": "https://www.dilibri.de/ubtr"
+    },
+    "endpoints": [
+      {
+        "url": "https://www.dilibri.de/ubtr/i3f/v21/collection/all",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://www.dilibri.de/ubtr",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:20:36+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  },
+  {
+    "provider_id": "provider-8526ab6e6c62cc03",
+    "name": "Wienbibliothek im Rathaus",
+    "institution_url": "https://www.wienbibliothek.at/",
+    "discovery_endpoint": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535",
+    "discovery_type": "Collection",
+    "stream_label": null,
+    "collection_focus": null,
+    "estimated_size": null,
+    "rights_status": "unknown",
+    "rights_values": [],
+    "record_status": "active",
+    "last_checked_at": null,
+    "source": {
+      "source_type": "manual",
+      "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+      "source_page_url": "https://www.digital.wienbibliothek.at/",
+      "activity_type": null,
+      "observed_at": "2026-10-22T20:20:36+02:00"
+    },
+    "raw_source_record": {
+      "discovery_endpoint": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535",
+      "discovery_type": "Collection",
+      "endpoint_role": "presentation_collection",
+      "institution_url": "https://www.wienbibliothek.at/",
+      "name": "Wienbibliothek im Rathaus",
+      "source_page_url": "https://www.digital.wienbibliothek.at/"
+    },
+    "endpoints": [
+      {
+        "url": "https://www.digital.wienbibliothek.at/i3f/v21/collection/2612535",
+        "endpoint_role": "presentation_collection",
+        "discovery_type": "Collection",
+        "label": null,
+        "verification_status": "unverified",
+        "source": {
+          "source_type": "manual",
+          "source_url": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\additional_provider_source.json",
+          "source_page_url": "https://www.digital.wienbibliothek.at/",
+          "activity_type": null,
+          "observed_at": "2026-10-22T20:20:36+02:00"
+        }
+      }
+    ],
+    "schema_version": "2.0"
+  }
+]

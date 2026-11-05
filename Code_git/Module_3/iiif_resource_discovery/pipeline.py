@@ -162,7 +162,7 @@ def run_pipeline(
         1
         for result in provider_results
         for audit in result.knowledge_application
-        if audit.get("status") != "skipped_existing_manifests"
+        if audit.get("status") not in {"skipped_existing_manifests", "collection_scope_preserved"}
     )
     knowledge_resolved_provider_count = sum(
         1

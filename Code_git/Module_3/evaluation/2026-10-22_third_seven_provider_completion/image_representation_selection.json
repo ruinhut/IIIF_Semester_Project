@@ -1,0 +1,72 @@
+[
+  {
+    "provider_name": "Berlin Central and Regional Library",
+    "resource_id": "resource-205c3a89b9d8635e8b3d",
+    "sequence": 1,
+    "original_manifest_image_url": "https://digital.zlb.de/viewer/api/v1/records/07-2_0009/files/images/00000002.tif/full/!300,300/0/default.jpg",
+    "info_json_url": "https://digital.zlb.de/viewer/api/v1/records/07-2_0009/files/images/00000002.tif/info.json",
+    "requested_full_resolution_url": "https://digital.zlb.de/viewer/api/v1/records/07-2_0009/files/images/00000002.tif/full/full/0/default.jpg",
+    "service_width": 3673,
+    "service_height": 5112
+  },
+  {
+    "provider_name": "Humboldt University of Berlin Library",
+    "resource_id": "resource-7cd63e8fd39b5b3276f6",
+    "sequence": 0,
+    "original_manifest_image_url": "https://www.digi-hub.de/viewer/api/v1/records/1479968607541/files/images/00000001.tif/full/!300,300/0/default.jpg",
+    "info_json_url": "https://www.digi-hub.de/viewer/api/v1/records/1479968607541/files/images/00000001.tif/info.json",
+    "requested_full_resolution_url": "https://www.digi-hub.de/viewer/api/v1/records/1479968607541/files/images/00000001.tif/full/full/0/default.jpg",
+    "service_width": 2024,
+    "service_height": 3211
+  },
+  {
+    "provider_name": "Kiel City Archives",
+    "resource_id": "resource-6d99779295c1b5e51c63",
+    "sequence": 0,
+    "original_manifest_image_url": "https://schriftgut.sh/viewer/api/v1/records/Ka__235/files/images/Ka00235.jpg/full/!400,400/0/default.jpg",
+    "info_json_url": "https://schriftgut.sh/viewer/api/v1/records/Ka__235/files/images/Ka00235.jpg/info.json",
+    "requested_full_resolution_url": "https://schriftgut.sh/viewer/api/v1/records/Ka__235/files/images/Ka00235.jpg/full/full/0/default.jpg",
+    "service_width": 4059,
+    "service_height": 3027
+  },
+  {
+    "provider_name": "Kiel University Library",
+    "resource_id": "resource-a75ec604e5941deb41f4",
+    "sequence": 20,
+    "original_manifest_image_url": "https://schriftgut.sh/viewer/api/v1/records/PPN1965402933/files/images/00000021.tif/full/!400,400/0/default.jpg",
+    "info_json_url": "https://schriftgut.sh/viewer/api/v1/records/PPN1965402933/files/images/00000021.tif/info.json",
+    "requested_full_resolution_url": "https://schriftgut.sh/viewer/api/v1/records/PPN1965402933/files/images/00000021.tif/full/full/0/default.jpg",
+    "service_width": 2052,
+    "service_height": 2952
+  },
+  {
+    "provider_name": "SLUB Dresden",
+    "resource_id": "resource-96d94c08391d8746498a",
+    "sequence": 9,
+    "original_manifest_image_url": "https://images.iiif.slub-dresden.de/iiif/2/data%2Fkitodo%2F10et-m_312005946%2F10et-m_312005946_tif%2Fjpegs%2F00000010.tif.medium.jpg/full/full/0/default.jpg",
+    "info_json_url": "https://images.iiif.slub-dresden.de/iiif/2/data%2Fkitodo%2F10et-m_312005946%2F10et-m_312005946_tif%2Fjpegs%2F00000010.tif.medium.jpg/info.json",
+    "requested_full_resolution_url": "https://images.iiif.slub-dresden.de/iiif/2/data%2Fkitodo%2F10et-m_312005946%2F10et-m_312005946_tif%2Fjpegs%2F00000010.tif.medium.jpg/full/full/0/default.jpg",
+    "service_width": 1000,
+    "service_height": 1509
+  },
+  {
+    "provider_name": "University of Kassel Library",
+    "resource_id": "resource-2065b28569394648a4d0",
+    "sequence": 1,
+    "original_manifest_image_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/1769857290721/files/images/000002.tif/full/!400,400/0/default.jpg",
+    "info_json_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/1769857290721/files/images/000002.tif/info.json",
+    "requested_full_resolution_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/1769857290721/files/images/000002.tif/full/full/0/default.jpg",
+    "service_width": 2356,
+    "service_height": 1584
+  },
+  {
+    "provider_name": "Upper Austrian State Library",
+    "resource_id": "resource-5a1740085010f7233fd1",
+    "sequence": 20,
+    "original_manifest_image_url": "https://digi.landesbibliothek.at/viewer/api/v1/records/AC05304281/files/images/00000021.tif/full/!400,400/0/default.jpg",
+    "info_json_url": "https://digi.landesbibliothek.at/viewer/api/v1/records/AC05304281/files/images/00000021.tif/info.json",
+    "requested_full_resolution_url": "https://digi.landesbibliothek.at/viewer/api/v1/records/AC05304281/files/images/00000021.tif/full/full/0/default.jpg",
+    "service_width": 2882,
+    "service_height": 4629
+  }
+]

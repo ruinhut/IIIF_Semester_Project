@@ -1,0 +1,8 @@
+﻿provider_id,provider_name,discovered_manifest_urls,validated_manifests,exported_image_associations,distinct_image_urls,actual_sample_images,actual_width,actual_height,canvas_width,canvas_height,matches_declared_dimensions
+provider-f57cbc63bd02c19a,Berlin Central and Regional Library,6,6,9,9,1,3673,5112,3673,5112,True
+provider-1cec8517c3b86ffb,Humboldt University of Berlin Library,6,6,2000,2000,1,2024,3211,2024,3211,True
+provider-193d9285d6f4d4fd,Kiel City Archives,6,6,7,7,1,4059,3027,4059,3027,True
+provider-7bab05774b901c2f,Kiel University Library,6,6,938,938,1,2052,2952,2052,2952,True
+provider-2c24cb85e4f47a27,SLUB Dresden,6,6,648,648,1,1000,1509,1000,1509,True
+provider-486a3d9e11d8ec5e,University of Kassel Library,6,6,22,22,1,2356,1584,2356,1584,True
+provider-6423933108a72108,Upper Austrian State Library,6,6,3499,3499,1,2882,4629,2882,4629,True

@@ -1,0 +1,238 @@
+{
+  "knowledge_base_version": "1.0",
+  "providers": [
+    {
+      "provider_id": "provider-f57cbc63bd02c19a",
+      "provider_name": "Berlin Central and Regional Library",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://digital.zlb.de/viewer/api/v1/records/rss",
+          "query_parameters": {
+            "query": "",
+            "sortField": "DATECREATED",
+            "sortDescending": "false"
+          },
+          "xml_namespaces": {},
+          "xml_record_path": ".//item",
+          "xml_identifier_path": "link",
+          "identifier_pattern": "^https://digital\\.zlb\\.de/viewer/(?:image|metadata|toc)/(?P<identifier>[^/?#]+)(?:/.*)?$",
+          "manifest_url_templates": [
+            "https://digital.zlb.de/viewer/api/v1/records/{identifier}/manifest/"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public RSS feed subset (at most 50 feed records); no complete-catalogue or numeric-pagination claim. Each generated native Manifest must be validated.",
+          "skill_id": "provider-f57cbc63bd02c19a-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-1cec8517c3b86ffb",
+      "provider_name": "Humboldt University of Berlin Library",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://www.digi-hub.de/viewer/api/v1/records/rss",
+          "query_parameters": {
+            "query": "",
+            "sortField": "DATECREATED",
+            "sortDescending": "false"
+          },
+          "xml_namespaces": {},
+          "xml_record_path": ".//item",
+          "xml_identifier_path": "link",
+          "identifier_pattern": "^https://www\\.digi\\-hub\\.de/viewer/(?:image|metadata|toc)/(?P<identifier>[^/?#]+)(?:/.*)?$",
+          "manifest_url_templates": [
+            "https://www.digi-hub.de/viewer/api/v1/records/{identifier}/manifest/"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public RSS feed subset (at most 50 feed records); no complete-catalogue or numeric-pagination claim. Each generated native Manifest must be validated.",
+          "skill_id": "provider-1cec8517c3b86ffb-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-193d9285d6f4d4fd",
+      "provider_name": "Kiel City Archives",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://schriftgut.sh/viewer/api/v1/records/rss",
+          "query_parameters": {
+            "query": "MD_DV_OWNER:\"Stadtarchiv Kiel\"",
+            "sortField": "DATECREATED",
+            "sortDescending": "true"
+          },
+          "xml_namespaces": {},
+          "xml_record_path": ".//item",
+          "xml_identifier_path": "link",
+          "identifier_pattern": "^https://schriftgut\\.sh/viewer/(?:image|metadata|toc)/(?P<identifier>[^/?#]+)(?:/.*)?$",
+          "manifest_url_templates": [
+            "https://schriftgut.sh/viewer/api/v1/records/{identifier}/manifest/"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public RSS feed subset (at most 50 feed records); no complete-catalogue or numeric-pagination claim. Each generated native Manifest must be validated. Shared portal filtered by MD_DV_OWNER=Stadtarchiv Kiel; check holder metadata independently.",
+          "skill_id": "provider-193d9285d6f4d4fd-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-7bab05774b901c2f",
+      "provider_name": "Kiel University Library",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://schriftgut.sh/viewer/api/v1/records/rss",
+          "query_parameters": {
+            "query": "MD_DV_OWNER:\"Universitätsbibliothek Kiel\"",
+            "sortField": "DATECREATED",
+            "sortDescending": "true"
+          },
+          "xml_namespaces": {},
+          "xml_record_path": ".//item",
+          "xml_identifier_path": "link",
+          "identifier_pattern": "^https://schriftgut\\.sh/viewer/(?:image|metadata|toc)/(?P<identifier>[^/?#]+)(?:/.*)?$",
+          "manifest_url_templates": [
+            "https://schriftgut.sh/viewer/api/v1/records/{identifier}/manifest/"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public RSS feed subset (at most 50 feed records); no complete-catalogue or numeric-pagination claim. Each generated native Manifest must be validated. Shared portal filtered by MD_DV_OWNER=Universitätsbibliothek Kiel; check holder metadata independently.",
+          "skill_id": "provider-7bab05774b901c2f-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-2c24cb85e4f47a27",
+      "provider_name": "SLUB Dresden",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://digital.slub-dresden.de/oai/",
+          "query_parameters": {
+            "verb": "ListRecords",
+            "metadataPrefix": "oai_dc"
+          },
+          "xml_namespaces": {
+            "oai": "http://www.openarchives.org/OAI/2.0/"
+          },
+          "xml_record_path": ".//oai:record",
+          "xml_identifier_path": "oai:header/oai:identifier",
+          "identifier_pattern": "^oai:de:slub-dresden:db:id-(?P<identifier>[0-9Xx-]+)$",
+          "manifest_url_templates": [
+            "https://iiif.slub-dresden.de/iiif/2/{identifier}/manifest.json"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 100,
+            "next_token_path": ".//oai:resumptionToken",
+            "token_keep_parameters": [
+              "verb"
+            ]
+          },
+          "max_identifiers": 5000,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public OAI-PMH record identifiers, with opaque continuation tokens. A catalogue record is not assumed to have IIIF: validate each template response. Run Manifest budget remains bounded.",
+          "skill_id": "provider-2c24cb85e4f47a27-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-486a3d9e11d8ec5e",
+      "provider_name": "University of Kassel Library",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_xml_identifiers_to_manifest_templates",
+          "api_url": "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/rss",
+          "query_parameters": {
+            "query": "",
+            "sortField": "DATECREATED",
+            "sortDescending": "true"
+          },
+          "xml_namespaces": {},
+          "xml_record_path": ".//item",
+          "xml_identifier_path": "link",
+          "identifier_pattern": "^https://orka\\.bibliothek\\.uni\\-kassel\\.de/viewer/(?:image|metadata|toc)/(?P<identifier>[^/?#]+)(?:/.*)?$",
+          "manifest_url_templates": [
+            "https://orka.bibliothek.uni-kassel.de/viewer/api/v1/records/{identifier}/manifest/"
+          ],
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "max_identifiers": 50,
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Public RSS feed subset (at most 50 feed records); no complete-catalogue or numeric-pagination claim. Each generated native Manifest must be validated.",
+          "skill_id": "provider-486a3d9e11d8ec5e-public-native-catalogue"
+        }
+      ]
+    },
+    {
+      "provider_id": "provider-6423933108a72108",
+      "provider_name": "Upper Austrian State Library",
+      "investigation_id": "2026-10-22-third-seven-provider-discovery",
+      "investigation_document": "knowledge/institutions/2026-10-22_third_seven_provider_completion.md",
+      "skills": [
+        {
+          "type": "paginated_json_manifest_links",
+          "api_url": "https://digi.landesbibliothek.at/viewer/api/v2/collections/DC/karten/",
+          "records_path": "items",
+          "manifest_url_path": "id",
+          "manifest_url_pattern": "/manifest/$",
+          "pagination": {
+            "page_parameter": "",
+            "page_size_parameter": "",
+            "page_size": 50,
+            "max_pages": 1
+          },
+          "request_delay_seconds": 0.6,
+          "coverage_note": "Native Presentation 3 maps Collection. Generic Collection traversal handles declared first/next links; this fallback inspects one response. Not all library holdings.",
+          "skill_id": "provider-6423933108a72108-public-native-catalogue"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "provider_name": "Rijksmuseum",
+    "observed_status": "Public Change Discovery root/page work; events also label non-Presentation metadata serializations as Manifest.",
+    "next_method": "Official documentation describes a Linked Art object-to-VisualItem-to-DigitalObject chain and native Micrio Manifest. This chain was not executed end to end in this batch.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Freiburg University Library / SLUB Dresden",
+    "observed_status": "Public OAI-PMH METS catalogue responses saved; Manifest/image chain not validated in this batch.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Leipzig old UBLab guide",
+    "observed_status": "Old documentation URL redirects to the library homepage; native top Collection still returns valid JSON.",
+    "resolution": "Use the actual root's declared Greek manuscript Collection; do not treat an old guide redirect as loss of the IIIF server."
+  },
+  {
+    "provider_name": "Mannheim / Salzburg / Stuttgart / Duesseldorf / Bremen / Dortmund / Duisburg-Essen",
+    "observed_status": "Probed routes raised URLError; details saved locally. This does not prove the institutions lack IIIF.",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Kassel",
+    "observed_status": "HTTP 404 on a candidate index route",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Trier Seminary Library",
+    "manifest_url": "https://www.dilibri.de/i3f/v21/1937135/manifest",
+    "observed_status": "M4 HTTP 404",
+    "included_in_valid_manifest_count": false
+  }
+]

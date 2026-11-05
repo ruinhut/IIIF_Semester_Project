@@ -1,0 +1,12 @@
+Subject: Weekly progress — IIIF Document Information Extraction — 23 October
+
+Dear Professor Kaplan,
+
+This week, I expanded and tested Manifest discovery, saving verified access methods as reusable operations and provider configurations. Cumulative bounded-run validation now covers 100 of 127 candidate source entries. These include institutional projects and aggregators, so this is not a count of 100 distinct institutions or complete catalogue harvests.
+
+In the latest seven-institution run, all 42 sampled Manifests passed retrieval and structural validation, producing 7,123 image records. I downloaded one image with its linked JSON files from each institution. For the Upper Austrian State Library, I also verified a page–ALTO OCR pair: the downloaded image and OCR page dimensions match, and the 159 word boxes lie within the image. This is institution-provided OCR, rather than certified manually corrected ground truth.
+
+Discovery remains the main limitation: 27 original source entries are unresolved, and some working recipes cover only capped catalogue subsets. New access methods still require investigation before they can be reused. Next week, I plan to improve catalogue-wide enumeration and make the investigation workflow more reproducible for new providers. I am not currently blocked.
+
+Best regards,
+Boheng Shang

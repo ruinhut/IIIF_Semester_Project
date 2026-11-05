@@ -1,0 +1,101 @@
+{
+  "verified_bundles": 7,
+  "schema_validated_json_files": 21,
+  "provider_ids": [
+    "provider-09986bf13ec40af6",
+    "provider-33ed8b7dc75e0d1a",
+    "provider-69e1df17c2cb409b",
+    "provider-748e49a80d347462",
+    "provider-77592534c46f4887",
+    "provider-e8cf142de07e9c61",
+    "provider-f912979871e7fbf4"
+  ],
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-bd89f3ea395fa86d",
+      "resource_id": "resource-a4258d5bd9ef47a07aba",
+      "providers": [
+        {
+          "provider_id": "provider-69e1df17c2cb409b",
+          "provider_name": "Koblenz City Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-bd89f3ea395fa86d\\000009_resource-a4258d5bd9ef47a07aba\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-8163c3e0944af021",
+      "resource_id": "resource-32f9218e0532e5d095fc",
+      "providers": [
+        {
+          "provider_id": "provider-f912979871e7fbf4",
+          "provider_name": "Leipzig University Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-8163c3e0944af021\\000009_resource-32f9218e0532e5d095fc\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-0a628284211011a1",
+      "resource_id": "resource-2d8acc6a1ba44410a155",
+      "providers": [
+        {
+          "provider_id": "provider-09986bf13ec40af6",
+          "provider_name": "Oldenburg State Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-0a628284211011a1\\000025_resource-2d8acc6a1ba44410a155\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-ce1c2bc01181b7c3",
+      "resource_id": "resource-1078b1e0890c75b2346d",
+      "providers": [
+        {
+          "provider_id": "provider-748e49a80d347462",
+          "provider_name": "Potsdam University Library - Digitales Brandenburg"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-ce1c2bc01181b7c3\\000009_resource-1078b1e0890c75b2346d\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-8cd4a38fee02f76b",
+      "resource_id": "resource-0ccd35450f49f84fda0d",
+      "providers": [
+        {
+          "provider_id": "provider-e8cf142de07e9c61",
+          "provider_name": "Trier Seminary Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-8cd4a38fee02f76b\\000009_resource-0ccd35450f49f84fda0d\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-991e1e70454708a9",
+      "resource_id": "resource-693be0b69cd0ff4060d1",
+      "providers": [
+        {
+          "provider_id": "provider-33ed8b7dc75e0d1a",
+          "provider_name": "University of Graz Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-991e1e70454708a9\\000009_resource-693be0b69cd0ff4060d1\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-c2eb508764bff217",
+      "resource_id": "resource-dce5edb6fad490f04b1c",
+      "providers": [
+        {
+          "provider_id": "provider-77592534c46f4887",
+          "provider_name": "Worms City Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_second_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-c2eb508764bff217\\000009_resource-dce5edb6fad490f04b1c\\image.jpg",
+      "reference_files": 0
+    }
+  ],
+  "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+}

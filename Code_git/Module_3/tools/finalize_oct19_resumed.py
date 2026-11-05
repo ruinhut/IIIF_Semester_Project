@@ -122,7 +122,14 @@ def main():
         'distinct_image_urls': len({m['image']['download_url'] for m in media}),
         'actual_downloaded_sample_images': len(downloads), 'actual_sample_image_bytes': sum(d['bytes'] for d in downloads),
         'ocr_reference_descriptors': len(references), 'schema_validated_sample_json_files': bundles['schema_validated_json_files'],
-        'decoded_images': pixels['decoded_images'], 'smaller_than_canvas_declaration': len(pixels['dimension_mismatches']),
+        'decoded_images': pixels['decoded_images'],
+        'decoded_images_with_dimension_mismatch': len(pixels['dimension_mismatches']),
+        'smaller_than_canvas_declaration': sum(any(isinstance(d, int) and image[axis] < d
+            for axis, d in zip(('width', 'height'), image['declared_dimensions']))
+            for image in pixels['dimension_mismatches']),
+        'larger_than_canvas_declaration': sum(any(isinstance(d, int) and image[axis] > d
+            for axis, d in zip(('width', 'height'), image['declared_dimensions']))
+            for image in pixels['dimension_mismatches']),
         'tests_passed': sum(t['passed'] for t in tests), 'previous_resolved_census_entries': len(old_ids),
         'cumulative_resolved_census_entries': len(all_ids), 'census_entries': len(census),
         'remaining_unresolved_census_entries': len(remaining), 'configuration_promoted': args.promote,

@@ -1,0 +1,49 @@
+﻿# PowerShell. Copy from this TXT, not PDF.
+Set-Location -LiteralPath 'E:\exchange-epfl\Semester_Project'
+$ProjectRoot = (Get-Location).Path
+$PipelinePython = Join-Path $ProjectRoot 'Code_git\.venv\Scripts\python.exe'
+$EvaluationRoot = Join-Path $ProjectRoot 'Code_git/Module_3/evaluation/2026-10-22_third_seven_provider_completion'
+$env:PYTHONIOENCODING = 'utf-8'
+$env:PYTHONUTF8 = '1'
+if (-not (Test-Path -LiteralPath $PipelinePython)) { throw 'Python not found' }
+
+# M1 registration already exists at $EvaluationRoot/registration/module1/output
+# M2 output: $EvaluationRoot/validation/module2/output
+Set-Location -LiteralPath (Join-Path $ProjectRoot 'Code_git\Module_2')
+& $PipelinePython -m iiif_entry_validator run --config "$EvaluationRoot/module2_validation.json"
+if ($LASTEXITCODE -ne 0) { throw 'Module 2 failed' }
+
+Set-Location -LiteralPath $ProjectRoot
+# M3 output: $EvaluationRoot/validation/module3/output
+& $PipelinePython Code_git/Module_3/tools/run_discovery_with_evidence.py --config "$EvaluationRoot/module3_validation.json" --network-delay 0.6
+if ($LASTEXITCODE -ne 0) { throw 'Module 3 failed' }
+
+# M4 output: $EvaluationRoot/validation/module4/output
+Set-Location -LiteralPath (Join-Path $ProjectRoot 'Code_git\Module_4')
+& $PipelinePython -m iiif_manifest_validator run --config "$EvaluationRoot/module4_validation.json"
+if ($LASTEXITCODE -ne 0) { throw 'Module 4 failed' }
+
+Set-Location -LiteralPath $ProjectRoot
+# M5-7 output: $EvaluationRoot/downstream/module5/output (and module6/module7)
+# M8 first sample: $EvaluationRoot/download_examples/module8/output/all
+& $PipelinePython Code_git/Module_3/tools/complete_oct19_provider_completion.py --evaluation-root $EvaluationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Modules 5-8 failed' }
+
+# Read only explicitly declared Image services; retain original image/source IDs.
+# Archive the first previews and prepare the reviewed pages at service resolution.
+& $PipelinePython Code_git/Module_3/tools/prepare_full_resolution_examples.py --evaluation-root $EvaluationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Image-service verification failed' }
+Set-Location -LiteralPath (Join-Path $ProjectRoot 'Code_git\Module_8')
+& $PipelinePython -m iiif_image_downloader download-all --config "$EvaluationRoot/module8_full_resolution_examples.json"
+if ($LASTEXITCODE -ne 0) { throw 'Module 8 failed' }
+
+Set-Location -LiteralPath $ProjectRoot
+& $PipelinePython Code_git/Module_3/tools/verify_linked_download_bundles.py --output-root "$EvaluationRoot/download_examples/module8/output" --mode all --report "$EvaluationRoot/bundle_verification.json"
+if ($LASTEXITCODE -ne 0) { throw 'Bundle verification failed' }
+& $PipelinePython Code_git/Module_3/tools/verify_catalogue_feed_recipes.py --evaluation-root $EvaluationRoot
+if ($LASTEXITCODE -ne 0) { throw 'Recipe verification failed' }
+
+# Statistics refer to this recorded run; network contents can change on a rerun.
+Import-Csv -LiteralPath "$EvaluationRoot/provider_results.csv" | Format-Table -AutoSize
+Import-Csv -LiteralPath "$EvaluationRoot/sample_downloads.csv" | Format-List
+Invoke-Item -LiteralPath "$EvaluationRoot/download_examples/module8/output/all"

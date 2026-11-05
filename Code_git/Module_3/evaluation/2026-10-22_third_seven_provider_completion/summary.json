@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-10-22T20:03:04.957145+00:00",
+  "new_resolved_source_entries": 7,
+  "discovered_manifest_urls": 42,
+  "validated_manifests": 42,
+  "exported_documents": 42,
+  "exported_image_associations": 7123,
+  "distinct_image_urls": 7123,
+  "actual_downloaded_sample_images": 7,
+  "actual_sample_image_bytes": 9857574,
+  "ocr_reference_descriptors": 3504,
+  "schema_validated_sample_json_files": 21,
+  "decoded_images": 7,
+  "decoded_images_with_dimension_mismatch": 0,
+  "smaller_than_canvas_declaration": 0,
+  "larger_than_canvas_declaration": 0,
+  "tests_passed": 193,
+  "previous_resolved_census_entries": 93,
+  "cumulative_resolved_census_entries": 100,
+  "census_entries": 127,
+  "remaining_unresolved_census_entries": 27,
+  "configuration_promoted": true,
+  "scope": "Bounded samples; source entries include an aggregator. Historical successes were not all re-fetched today.",
+  "unresolved_investigation": [
+    {
+      "provider_name": "Luebeck City Library",
+      "observed_status": "Public Schriftgut.SH Manifest works, but its declared external image URL raised client URLError [Errno 2]. No successful image download established here.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "GWLB Hannover",
+      "observed_status": "Public /oai2/ works and official example /content/00068782/manifest.json is valid. The corresponding template returned 404 for sampled newspaper IDs. ListSets returned noSetHierarchy.",
+      "next_method": "Investigate catalogue-to-content-directory mapping and collection coverage, not blind identifier substitution.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Weimar / Herzogin Anna Amalia Library",
+      "observed_status": "Candidate public RSS request timed out; not a conclusion that IIIF is absent.",
+      "counted_as_new_success": false
+    },
+    {
+      "provider_name": "Berlin Central and Regional Library",
+      "observed_status": "RSS item 019591853_2010 Manifest timed out. Other records succeeded. Guessed YEARPUBLISH search field returned explicit undefined-field HTTP 400 and was not promoted.",
+      "failed_candidate_in_valid_manifest_count": false
+    },
+    {
+      "provider_name": "Freiburg / Bielefeld / Halle / Rostock / Gotha",
+      "observed_status": "Raw catalogue/platform/failed-route probes retained locally; no fresh end-to-end success established in this batch.",
+      "counted_as_new_success": false
+    }
+  ],
+  "legacy_shared_canvas_manifests": 0,
+  "summed_per_manifest_distinct_image_body_count": 7123,
+  "new_institutions": 7,
+  "restored_old_sources": 0,
+  "old_census_entries": 94,
+  "old_census_resolved": 67,
+  "old_census_remaining": 27,
+  "tests_subtests_passed": 7,
+  "actual_downloaded_reference_texts": 1,
+  "final_sample_images": 7,
+  "page_aligned_reference_descriptors": 3498,
+  "manifest_level_reference_descriptors": 6,
+  "independently_checked_provenance_records": 42,
+  "separate_fallback_recipes_validated": 7,
+  "separate_oai_next_page_pairs_checked": 1,
+  "runtime_modules_changed": false,
+  "scope_note": "Cumulative bounded-run source evidence, not deduplicated institutions or complete catalogues. RSS recipes enumerate capped public feed subsets only."
+}

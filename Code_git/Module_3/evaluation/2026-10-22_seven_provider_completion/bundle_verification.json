@@ -1,0 +1,101 @@
+{
+  "verified_bundles": 7,
+  "schema_validated_json_files": 21,
+  "provider_ids": [
+    "provider-13a00dd64dbcd954",
+    "provider-20af5a2db16c5b02",
+    "provider-29c6053362990273",
+    "provider-7572570799c45089",
+    "provider-8526ab6e6c62cc03",
+    "provider-c30599006b9755ac",
+    "provider-f170e5beef7888fa"
+  ],
+  "errors": [],
+  "bundles": [
+    {
+      "record_id": "manifest-b1691f56b98e643d",
+      "resource_id": "resource-52052e87246389ba3f01",
+      "providers": [
+        {
+          "provider_id": "provider-13a00dd64dbcd954",
+          "provider_name": "Cologne Archdiocesan and Cathedral Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-b1691f56b98e643d\\000009_resource-52052e87246389ba3f01\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-915cc5fdeefae1dc",
+      "resource_id": "resource-fc33673ddda41a272840",
+      "providers": [
+        {
+          "provider_id": "provider-f170e5beef7888fa",
+          "provider_name": "Lippische Landesbibliothek Detmold"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-915cc5fdeefae1dc\\000020_resource-fc33673ddda41a272840\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-59d1bd4511f296a0",
+      "resource_id": "resource-4c4d78e7089861720759",
+      "providers": [
+        {
+          "provider_id": "provider-7572570799c45089",
+          "provider_name": "Mainz City Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-59d1bd4511f296a0\\000000_resource-4c4d78e7089861720759\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-eeded5617db5b1f1",
+      "resource_id": "resource-8131540402560a1caf11",
+      "providers": [
+        {
+          "provider_id": "provider-20af5a2db16c5b02",
+          "provider_name": "Rheinland-Pfalz State Library Centre"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-eeded5617db5b1f1\\000009_resource-8131540402560a1caf11\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-020c56c75ad4cd18",
+      "resource_id": "resource-67da97eff5e37f9927d1",
+      "providers": [
+        {
+          "provider_id": "provider-29c6053362990273",
+          "provider_name": "Trier City Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-020c56c75ad4cd18\\000009_resource-67da97eff5e37f9927d1\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-888526c6fcce0b12",
+      "resource_id": "resource-b1ed42f4d12e9ec1d3be",
+      "providers": [
+        {
+          "provider_id": "provider-c30599006b9755ac",
+          "provider_name": "Trier University Library"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-888526c6fcce0b12\\000000_resource-b1ed42f4d12e9ec1d3be\\image.jpg",
+      "reference_files": 0
+    },
+    {
+      "record_id": "manifest-7642aa3c08993cc3",
+      "resource_id": "resource-4efbd7a5a3ff4029fe0b",
+      "providers": [
+        {
+          "provider_id": "provider-8526ab6e6c62cc03",
+          "provider_name": "Wienbibliothek im Rathaus"
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Module_3\\evaluation\\2026-10-22_seven_provider_completion\\download_examples\\module8\\output\\all\\without_reference\\manifest-7642aa3c08993cc3\\000009_resource-4efbd7a5a3ff4029fe0b\\image.jpg",
+      "reference_files": 0
+    }
+  ],
+  "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "provider_name": "Lovaniensia / KU Leuven",
+    "url": "https://www.lovaniensia.be/api/items?per_page=6&page=1",
+    "observed_status": "HTTP 403",
+    "resolution": "Use explicitly public catalogue and detail links; no API restriction bypassed."
+  },
+  {
+    "provider_name": "KU Leuven legacy Jesuitica route",
+    "url": "https://services.libis.be/m2/manifest/GBIB_Jesuitica",
+    "observed_status": "HTTP 404",
+    "resolution": "Historical lecture example was not promoted; use the current public Lovaniensia route."
+  },
+  {
+    "provider_name": "Digital Commonwealth",
+    "observed_status": "HTTP 403",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Villanova University",
+    "observed_status": "HTTP 403",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Qatar Digital Library",
+    "observed_status": "HTTP 403 on one candidate Manifest",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "Georgetown",
+    "observed_status": "HTTP 200 with HTML access challenge, not catalogue JSON",
+    "counted_as_new_success": false
+  },
+  {
+    "provider_name": "University College Dublin / Duesseldorf",
+    "observed_status": "URLError; details retained in probe responses",
+    "counted_as_new_success": false
+  }
+]
