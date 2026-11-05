@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-05",
+  "baseline_commit": "ff46048",
+  "baseline_message": "????????",
+  "scope": [
+    "local Git snapshot",
+    "unified CLI for Modules 1-8",
+    "optional bounded LLM interface for Module 3"
+  ],
+  "ui": "deferred by user",
+  "tests": {
+    "module_1": 14,
+    "module_2": 12,
+    "module_3": 96,
+    "module_4": 20,
+    "module_5": 14,
+    "module_6": 30,
+    "module_7": 29,
+    "module_8": 25,
+    "runner": 22,
+    "total": 262,
+    "additional_subtests": 12,
+    "new_llm_tests": 21
+  },
+  "live_cli": {
+    "input": "explicit EPFL Manifest seed; not unknown-homepage discovery",
+    "manifest_url": "https://plume.epfl.ch/iiif/3/44/manifest",
+    "sequence": [
+      "modules 1-3",
+      "resume modules 4-8"
+    ],
+    "m3_manifests": 1,
+    "m7_media_records": 415,
+    "bundle_verification": {
+      "verified_bundles": 1,
+      "schema_validated_json_files": 3,
+      "provider_ids": [
+        "provider-f2683615336e129a"
+      ],
+      "errors": [],
+      "bundles": [
+        {
+          "record_id": "manifest-6828466c563477ac",
+          "resource_id": "resource-750cf21b8f414283a4dd",
+          "providers": [
+            {
+              "provider_id": "provider-f2683615336e129a",
+              "provider_name": "Direct Manifest seed 1"
+            }
+          ],
+          "image_path": "module_8/output/example/without_reference/manifest-6828466c563477ac/000000_resource-750cf21b8f414283a4dd/image.jpg",
+          "reference_files": 0
+        }
+      ],
+      "scope": "File integrity, schemas and page ownership; transcription accuracy and completeness are not certified."
+    },
+    "evidence_directory": "data/cli_validation_20261105"
+  },
+  "llm_public_recipe_replay": {
+    "kind": "Real public EPFL HTTP with simulated local LLM protocol; not paid-model performance",
+    "first_status": "manifests_found",
+    "manifest_urls": [
+      "https://plume.epfl.ch/iiif/3/44/manifest"
+    ],
+    "mock_model_calls": 2,
+    "replay_status": "manifests_found",
+    "replay_model_calls": 0,
+    "reviewed_knowledge_modified": false
+  },
+  "real_paid_model_calls": 0,
+  "limitations": [
+    "No user model key was supplied; no paid-model generalization evaluation.",
+    "Generated recipes use existing deterministic skill types and public GET requests.",
+    "Historical provider coverage is unchanged; no new providers added.",
+    "One known-seed image handoff test does not measure entire-catalogue completeness."
+  ]
+}

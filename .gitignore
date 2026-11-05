@@ -22,6 +22,7 @@ dist/
 .env.*
 !.env.example
 /.aws/
+/.secrets/
 /.codex/
 .DS_Store
 Thumbs.db

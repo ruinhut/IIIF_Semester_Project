@@ -1,5 +1,45 @@
 # Implementation status and lessons
 
+## 2026-11-05 — local midterm snapshot, unified CLI and optional LLM discovery
+
+- Before modification, saved local commit `ff46048`, message `期中汇报使用版本`.
+  UI implementation is deferred at the user's request. No new provider census
+  entries or replacements of reviewed discovery knowledge are part of this work.
+- Root `pipeline.py` / `pipeline.cmd` support one-command setup and ordered
+  module selection (`--modules`, `--module-count`, or from/to), isolated run
+  directories, configuration snapshots, and resumption at module boundaries.
+  Existing module CLIs and the configured runner remain available.
+- New M3 LLM integration is explicitly opt-in. Credentials come from a hidden
+  prompt, environment or local token file; config snapshots contain no token.
+  Responses and compatible Chat Completions protocols are supported, with an
+  explicit user-selected model. Hosted web search is a separate Responses option.
+- Existing methods run first. Unresolved providers may use saved learned
+  recipes or a bounded model investigation. The model can inspect public URLs
+  and propose data-only recipes, but cannot execute code or supply HTTP auth.
+  Native Presentation context, Manifest type and declared Canvas checks gate
+  learning; M4 remains responsible for full structural validation.
+- Verified new recipes and their evidence are atomically written to a separate
+  `config/learned_discovery_knowledge.json`. Reuse performs fresh HTTP checks and
+  does not need a model key. The reviewed `discovery_knowledge.json` is preserved;
+  downstream M3–M4 contracts and M4–M8 provider-independent behavior stay intact.
+- Per-provider model calls and public retrievals are bounded; failures remain
+  unresolved and appear in `llm_investigation.jsonl` under the log directory.
+  This is recipe learning, not model fine-tuning or proof of arbitrary-provider
+  generalization. Generated recipes currently use public GET retrieval only.
+- CLI live acceptance: EPFL item 44 passed M1–M3, then resumed M4–M8, with one
+  fresh valid Manifest, 415 image records, and one decoded image plus three
+  schema/link-checked JSON records. Evidence:
+  `../../Pipeline_Runner/data/cli_validation_20261105/`.
+- A simulated local Responses service supplied an EPFL API/ID/template recipe;
+  real public HTTP verified `/api/items?id=44` → `/iiif/3/44/manifest`. A second
+  execution reused the saved recipe without a model key. This tests protocol and
+  execution plumbing, **not** a paid model's independent investigation ability.
+  Evidence is in that run's `llm_public_recipe_replay/verification.json`.
+- No real user model credential was available; no paid LLM evaluation was run.
+  Do not report the simulated token-usage counters as real consumption or claim
+  the historical source coverage increased from this work.
+
+
 ## 2026-10-21 — second batch: five more completed source entries
 
 - Added BSB East Asia, Cardiff, Leeds, vHMML and Yale Library from the existing

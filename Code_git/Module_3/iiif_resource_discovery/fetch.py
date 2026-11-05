@@ -10,7 +10,7 @@ import ssl
 import time
 from typing import Any, Callable, Mapping, Optional
 from urllib.error import HTTPError, URLError
-from urllib.request import Request, urlopen
+from urllib.request import Request, urlopen, build_opener, HTTPRedirectHandler
 
 from .models import canonicalize_url
 
@@ -74,6 +74,7 @@ class HttpFetcher:
         max_response_bytes: int = 4 * 1024 * 1024,
         user_agent: str = "iiif-resource-discovery/0.1 (+academic research)",
         sleeper: Callable[[float], None] = time.sleep,
+        url_validator: Callable[[str], None] | None = None,
     ) -> None:
         if timeout_seconds <= 0:
             raise ValueError("timeout_seconds must be positive")
@@ -89,6 +90,7 @@ class HttpFetcher:
         self.max_response_bytes = max_response_bytes
         self.user_agent = user_agent.strip()
         self.sleeper = sleeper
+        self.url_validator = url_validator
 
     def fetch(
         self, url: str, *,
@@ -135,7 +137,18 @@ class HttpFetcher:
             headers=request_headers, data=body, method=method,
         )
         try:
-            with urlopen(request, timeout=self.timeout_seconds) as response:
+            open_request = urlopen
+            if self.url_validator is not None:
+                validator = self.url_validator
+                validator(url)
+
+                class CheckedRedirect(HTTPRedirectHandler):
+                    def redirect_request(self, req, fp, code, msg, hdrs, newurl):
+                        validator(newurl)
+                        return super().redirect_request(req, fp, code, msg, hdrs, newurl)
+
+                open_request = build_opener(CheckedRedirect()).open
+            with open_request(request, timeout=self.timeout_seconds) as response:
                 try:
                     body = response.read(self.max_response_bytes + 1)
                 except IncompleteRead as exc:

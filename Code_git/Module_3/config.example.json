@@ -2,6 +2,20 @@
   "input_jsonl": "../Module_2/data/output/checked_entry_points.jsonl",
   "curated_endpoints": "config/provider_endpoints.json",
   "knowledge_base": "config/discovery_knowledge.json",
+  "learned_knowledge_base": "config/learned_discovery_knowledge.json",
+  "llm_discovery": {
+    "enabled": false,
+    "api_mode": "responses",
+    "base_url": "https://api.openai.com/v1",
+    "model": "",
+    "api_key_env": "IIIF_LLM_API_KEY",
+    "web_search": false,
+    "max_providers": 3,
+    "max_rounds": 6,
+    "max_fetches_per_provider": 16,
+    "max_manifests_per_provider": 3,
+    "max_output_tokens": 2500
+  },
   "output_directory": "data/output",
   "log_directory": "data/log",
   "network": {

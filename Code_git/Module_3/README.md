@@ -12,6 +12,24 @@ Manifest URLs. It has two internal stages:
 This module discovers resource URLs. It does not download and structurally
 validate every Manifest; that is Module 4.
 
+## Optional LLM investigation (2026-11-05)
+
+`llm_discovery.enabled` defaults to `false`. With an explicit model and a local
+API key file or environment variable, unresolved providers may be investigated
+through bounded public retrieval and optional Responses web search. The model
+proposes data-only recipes; the existing skill engine verifies native IIIF
+Manifest responses before saving a recipe in the separate
+`config/learned_discovery_knowledge.json` file. Verified recipes are rechecked on
+later runs without model calls. Reviewed provider knowledge is preserved.
+
+The root launcher supports `--llm --llm-model MODEL --llm-key-prompt`,
+`--llm-key-file`, `--llm-mode`, `--llm-base-url` and explicit request budgets.
+No raw token belongs in a shared configuration. Investigation audits go to
+`log_directory/llm_investigation.jsonl`; the downstream Manifest contract stays
+unchanged. This adds bounded recipe discovery, not unrestricted code generation
+or guaranteed coverage of unknown institutions. See
+[the usage guide](LLM接口与知识复用说明.md).
+
 ## Schema 2.1: provider-level discovery with reusable knowledge
 
 Module 3 groups Module 2 rows by `provider_id` and processes every checked

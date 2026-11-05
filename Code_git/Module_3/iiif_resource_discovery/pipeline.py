@@ -12,6 +12,7 @@ from typing import Any, Mapping, Optional, Sequence
 from .discovery import DiscoveryLimits, ResourceDiscoverer
 from .fetch import HttpFetcher
 from .knowledge import knowledge_for_provider, read_knowledge_base
+from .llm import LLMInvestigator
 from .models import DiscoveryEvidence, ProviderDiscoveryResult, ProviderInputRecord, manifest_record
 from .store import read_provider_jsonl, write_jsonl, write_provider_csv, write_text
 
@@ -134,6 +135,15 @@ def run_pipeline(
         if knowledge_path_value
         else []
     )
+    output_directory = _resolve_path(
+        str(config.get("output_directory", "data/output")), base_directory
+    )
+    log_directory = _resolve_path(str(config.get("log_directory", "data/log")), base_directory)
+    learned_path = _resolve_path(str(config.get("learned_knowledge_base",
+        "config/learned_discovery_knowledge.json")), base_directory)
+    llm_config = _mapping(config.get("llm_discovery", {}), "llm_discovery")
+    investigator = LLMInvestigator(llm_config, base_directory, learned_path,
+        log_directory, discovery_limits) if llm_config.get("enabled", False) or learned_path.exists() else None
     provider_results: list[ProviderDiscoveryResult] = []
     for provider in providers:
         curated = _curated_for_provider(provider, curated_entries)
@@ -147,6 +157,8 @@ def run_pipeline(
             knowledge_skills=knowledge.skills if knowledge else (),
             investigation_id=knowledge.investigation_id if knowledge else None,
         )
+        if investigator is not None:
+            result = investigator.enhance(result)
         provider_results.append(result)
 
     provider_reports = [result.to_dict() for result in provider_results]
@@ -173,10 +185,6 @@ def run_pipeline(
         )
     )
 
-    output_directory = _resolve_path(
-        str(config.get("output_directory", "data/output")), base_directory
-    )
-    log_directory = _resolve_path(str(config.get("log_directory", "data/log")), base_directory)
     output_directory.mkdir(parents=True, exist_ok=True)
     log_directory.mkdir(parents=True, exist_ok=True)
     local_run_time = _local_run_time(run_time)
@@ -216,6 +224,14 @@ def run_pipeline(
             provider_summary_csv=provider_summary_csv,
         ),
     )
+    if investigator is not None:
+        with log_txt.open("a", encoding="utf-8") as handle:
+            handle.write("\nOptional LLM investigation\n"
+                f"Enabled: {bool(llm_config.get('enabled', False))}\n"
+                f"Providers investigated: {investigator.attempted}\n"
+                f"LLM requests: {investigator.client.calls if investigator.client else 0}\n"
+                f"Learned knowledge: {learned_path}\n"
+                f"Investigation audit: {log_directory / 'llm_investigation.jsonl'}\n")
 
     return PipelineResult(
         input_provider_count=input_provider_count,

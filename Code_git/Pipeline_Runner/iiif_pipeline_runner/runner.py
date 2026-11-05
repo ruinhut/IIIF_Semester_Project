@@ -7,13 +7,20 @@ import json
 from pathlib import Path
 import subprocess
 import sys
-from typing import Any, Mapping
+from typing import Any, Mapping, Sequence
 
 
-def run_pipeline(config_path: Path, *, first: int | None = None, last: int | None = None) -> dict[str, Any]:
+def run_pipeline(config_path: Path, *, first: int | None = None, last: int | None = None,
+                 only_modules: Sequence[int] | None = None) -> dict[str, Any]:
     config_path = config_path.resolve()
     config = json.loads(config_path.read_text(encoding="utf-8-sig"))
     modules = select_modules(_validate_modules(config.get("modules")), first=first, last=last)
+    if only_modules is not None:
+        wanted = set(only_modules)
+        available = {m["number"] for m in modules}
+        if not wanted or not wanted <= available:
+            raise ValueError("Selected modules are missing from this pipeline configuration")
+        modules = [m for m in modules if m["number"] in wanted]
     if not modules:
         raise ValueError("No modules selected")
     base = config_path.parent
@@ -54,6 +61,12 @@ def run_pipeline(config_path: Path, *, first: int | None = None, last: int | Non
             "command": command, "stdout": completed.stdout.strip(), "stderr": completed.stderr.strip(),
         }
         module_results.append(result)
+        # Keep a useful checkpoint even if the process is interrupted later.
+        _write_log(log_dir, started, _summary(started, module_results, status="running"))
+        if completed.stdout.strip():
+            print(completed.stdout.strip(), flush=True)
+        if completed.stderr.strip():
+            print(completed.stderr.strip(), file=sys.stderr, flush=True)
         if completed.returncode != 0:
             print(
                 f"[Module {module['number']}/{highest_module}] Failed with exit code "

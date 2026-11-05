@@ -21,6 +21,7 @@ SUPPORTED_SKILL_TYPE = "paginated_json_identifiers_to_manifest_templates"
 DIRECT_LINK_SKILL_TYPE = "paginated_json_manifest_links"
 HTML_IDENTIFIER_SKILL_TYPE = "paginated_html_identifiers_to_manifest_templates"
 XML_IDENTIFIER_SKILL_TYPE = "paginated_xml_identifiers_to_manifest_templates"
+VERIFIED_ENDPOINT_SKILL_TYPE = "verified_iiif_entry_points"
 OMEKA_S_AUTO_SKILL_ID = "omeka-s-auto-detected-items-to-manifests"
 
 
@@ -64,7 +65,7 @@ def execute_skill(
 
     skill_type = str(skill.get("type", "")).strip()
     skill_id = str(skill.get("skill_id", "")).strip() or "unnamed-skill"
-    if skill_type not in {SUPPORTED_SKILL_TYPE, DIRECT_LINK_SKILL_TYPE, HTML_IDENTIFIER_SKILL_TYPE, XML_IDENTIFIER_SKILL_TYPE}:
+    if skill_type not in {SUPPORTED_SKILL_TYPE, DIRECT_LINK_SKILL_TYPE, HTML_IDENTIFIER_SKILL_TYPE, XML_IDENTIFIER_SKILL_TYPE, VERIFIED_ENDPOINT_SKILL_TYPE}:
         return SkillExecution(
             issues=[
                 DiscoveryIssue(
@@ -81,6 +82,27 @@ def execute_skill(
             },
         )
     try:
+        if skill_type == VERIFIED_ENDPOINT_SKILL_TYPE:
+            result = SkillExecution()
+            for url in _string_list(skill.get("entry_points"), "entry_points")[:max_manifests]:
+                try:
+                    value = fetcher.fetch(url).json()
+                    if _is_iiif_manifest(value):
+                        result.manifests.append(ValidatedManifest(url, url, skill_id))
+                    elif _is_iiif_collection(value) or (
+                        isinstance(value, Mapping)
+                        and value.get("type", value.get("@type")) in {"OrderedCollection", "OrderedCollectionPage"}
+                        and "iiif.io/api/discovery/" in json.dumps(value.get("@context"))
+                    ):
+                        result.entry_points.append(ValidatedEntryPoint(url, url, skill_id))
+                    else:
+                        result.issues.append(DiscoveryIssue(url, "not_iiif", "Endpoint is not a supported IIIF resource"))
+                except FetchError as exc:
+                    result.issues.append(DiscoveryIssue(url, exc.error_type, str(exc)))
+            result.audit = {"investigation_id": investigation_id, "skill_id": skill_id, "skill_type": skill_type,
+                "status": "manifests_found" if result.manifests else "entry_points_found" if result.entry_points else "unresolved",
+                "manifests_validated": len(result.manifests), "collection_roots_validated": len(result.entry_points)}
+            return result
         if skill_type == XML_IDENTIFIER_SKILL_TYPE:
             return _execute_xml_identifier_skill(
                 skill, fetcher, investigation_id=investigation_id,

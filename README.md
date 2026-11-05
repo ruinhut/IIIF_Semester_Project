@@ -5,6 +5,55 @@ It discovers institutional Manifests, validates their structure, preserves right
 and provenance, normalizes metadata, and downloads linked page images and
 provider-supplied reference text for downstream OCR experiments.
 
+## Recommended single-command launcher
+
+From the repository root, run `python pipeline.py --setup` once to create/use
+`Code_git/.venv` and install the modules. The launcher automatically uses that
+environment afterwards; individual module activation and `cd` commands are not
+needed. On Windows, `pipeline.cmd` is an equivalent entry point.
+
+```bat
+python pipeline.py --modules 1-8 --institution "Ecole Polytechnique Fédérale de Lausanne (EPFL)" --max-manifests 6
+python pipeline.py --module-count 3 --institution all --max-manifests 2
+python pipeline.py --modules 4-8 --run-dir "PATH_PRINTED_BY_THE_FIRST_RUN" --resume
+```
+
+Runs are isolated under `Code_git/Pipeline_Runner/data/runs/` by default.
+`--modules 6,7,8` selects specific stages; upstream files must exist in the same
+run. `--download example` downloads one image across the output, while
+`--download all` attempts all exported images, not every image on the internet.
+`--dry-run` prepares inspectable configurations without making network calls.
+The original module CLIs and configured runner remain available below.
+
+### Optional LLM-assisted discovery
+
+Module 3 can investigate unresolved providers using your own API credentials.
+It first runs the existing discovery methods and verified knowledge. The model
+can then request public pages and propose a declarative discovery recipe;
+HTTP/JSON/IIIF checks must verify a nonempty native Manifest before that recipe
+is saved. This is recipe reuse, not model training or a guarantee of coverage.
+
+```bat
+python pipeline.py --modules 1-3 --institution "INSTITUTION_NAME" --llm --llm-model "YOUR_MODEL_ID" --llm-key-prompt
+```
+
+The prompt hides your token and does not save it. Alternatively use
+`IIIF_LLM_API_KEY` / `OPENAI_API_KEY`, or `--llm-key-file .secrets/llm-token.txt`.
+Never commit a token; the root `.secrets/` directory is ignored. The default is
+the OpenAI Responses endpoint. Compatible Chat Completions endpoints can use
+`--llm-mode chat_completions --llm-base-url https://YOUR_HOST/v1`.
+Hosted search is opt-in with `--llm-web-search` and needs provider/model support;
+without it, the model can still inspect public URLs through bounded GET requests.
+
+New recipes go into `Code_git/Module_3/config/learned_discovery_knowledge.json`,
+separately from the reviewed knowledge base. Later runs revalidate and reuse
+them without an API key. `--no-llm` disables new model calls on a resumed run.
+The default budget is three unresolved providers, six calls and sixteen public
+GET requests per provider; actual coverage remains reported as found/unresolved.
+Audits are in `module_3/log/llm_investigation.jsonl` under the run directory.
+See [the CLI guide](Code_git/Pipeline_Runner/统一命令行启动说明.md) and
+[the Module 3 LLM guide](Code_git/Module_3/LLM接口与知识复用说明.md).
+
 ## Pipeline
 
 ```text
