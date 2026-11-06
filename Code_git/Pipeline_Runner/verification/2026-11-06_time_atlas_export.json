@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-06",
+  "snapshot_before_development": "595b02ebd5fa92109cb6690a217d7fcdbf51b7ba",
+  "snapshot_branch": "backup/pre-time-atlas-2026-11-06",
+  "official_target": {
+    "repository": "https://github.com/epfl-timemachine/time-atlas-python",
+    "version": "0.3.0",
+    "commit": "2c7d59e03298bd5eec31faec74c7530254e026fa"
+  },
+  "unit_checks": {
+    "python_310_module7": {
+      "passed": 51,
+      "skipped_sdk_tests": 2
+    },
+    "python_310_pipeline_runner": {
+      "passed": 24
+    },
+    "python_312_official_sdk_module7": {
+      "passed": 53,
+      "skipped": 0
+    }
+  },
+  "real_data": {
+    "input_records": 2,
+    "staged_records": 2,
+    "historical_records": 2,
+    "pending_date_records": 0,
+    "media": 37,
+    "reference_texts": 34,
+    "ocr_profiles": 2,
+    "datasets": 1,
+    "observations": 0,
+    "local_areas": 0,
+    "public_reuse_eligible_records": 1
+  },
+  "real_data_source": "Pipeline_Runner/data/runs/20261106_163810_996681/module_6/output",
+  "integration_run": "Pipeline_Runner/data/atlas_validation_20261106/integrated_run",
+  "sdk_check": {
+    "sdk": "time-atlas-python",
+    "sdk_version": "0.3.0",
+    "target_commit": "2c7d59e03298bd5eec31faec74c7530254e026fa",
+    "entities_read": 3,
+    "round_trip_payload_preserved": true,
+    "strict_collection_valid": false,
+    "errors": [
+      "RDECollection validation failed with 1 error(s):\n  - Cannot produce an Area for dataset iiif-heritage-harvest: the collection has no observation or Geometry extent"
+    ],
+    "warnings": [
+      "Dataset iiif-heritage-harvest references no areas; an ad-hoc Area will be built and serialized from the current geographical extent."
+    ],
+    "external_area_verification_required": false,
+    "team_schema_certified": false,
+    "server_import_tested": false,
+    "uploaded": false,
+    "published": false
+  },
+  "scope": "Existing two-document local replay through M7 with --atlas-export. No new institution crawl or image/reference download; no live Atlas upload.",
+  "spatial_fixture": "Synthetic unit-test evidence-backed point produces a referentially closed Dataset/HR/Observation/Area collection passing strict SDK validation; not a real historical geolocation.",
+  "team_schema_status": "No final team-issued executable schema found locally; existing provisional schema and local derived Atlas subset are not team certification."
+}

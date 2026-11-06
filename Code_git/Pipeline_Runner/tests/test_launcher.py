@@ -69,6 +69,29 @@ def test_fixed_seed_does_not_claim_homepage_discovery(tmp_path):
     assert seed["providers"][0]["discovery_type"] == "Manifest"
 
 
+def test_atlas_export_uses_isolated_output_and_default_contract(tmp_path):
+    parser = build_parser()
+    path, run = prepare_run(parser.parse_args(["--run-dir", str(tmp_path / "atlas"), "--atlas-export"]), code_root=CODE)
+    pipeline = json.loads(path.read_text(encoding="utf-8"))
+    cfg7 = json.loads(Path(pipeline["modules"][6]["config"]).read_text(encoding="utf-8"))
+    assert cfg7["time_atlas"]["enabled"] is True
+    assert cfg7["time_atlas"]["output_directory"] == str(run / "atlas")
+    assert Path(cfg7["time_atlas"]["profile_json"]).is_file()
+    assert cfg7["output_directory"] == str(run / "module_7/output")
+
+
+def test_resume_can_enable_atlas_without_reharvesting(tmp_path):
+    parser = build_parser()
+    path, run = prepare_run(parser.parse_args(["--run-dir", str(tmp_path / "resume")]), code_root=CODE)
+    own = tmp_path / "profile.json"
+    own.write_text("{}")
+    prepare_run(parser.parse_args(["--run-dir", str(run), "--resume", "--modules", "7", "--atlas-profile", str(own)]), code_root=CODE)
+    pipeline = json.loads(path.read_text(encoding="utf-8"))
+    cfg7 = json.loads(Path(pipeline["modules"][6]["config"]).read_text(encoding="utf-8"))
+    assert cfg7["time_atlas"]["profile_json"] == str(own)
+    assert cfg7["time_atlas"]["enabled"] is True
+
+
 def test_llm_settings_and_key_path_are_preserved_without_copying_token(tmp_path):
     key = tmp_path / "private-token.txt"
     key.write_text("do-not-copy-this-token")

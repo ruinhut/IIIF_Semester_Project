@@ -238,6 +238,15 @@ def run_pipeline(config_path: Path) -> dict[str, Any]:
         "files": [file_descriptor(path) for path in files.values()],
     }
     write_json(output_dir / "dataset_manifest.json", bundle)
+    atlas_summary = None
+    atlas_config = config.get("time_atlas", {})
+    if atlas_config.get("enabled", False):
+        from .atlas import export_atlas
+        atlas_summary = export_atlas(
+            output_dir,
+            _resolve(base, atlas_config["output_directory"]),
+            profile_path=_resolve(base, atlas_config["profile_json"]) if atlas_config.get("profile_json") else None,
+        )
     summary = {
         "module": "Module 7 - Common-Schema Validator and Exporter",
         "profile_version": profile["profile_version"],
@@ -245,6 +254,8 @@ def run_pipeline(config_path: Path) -> dict[str, Any]:
         **bundle["counts"],
         "output_directory": str(output_dir),
     }
+    if atlas_summary is not None:
+        summary["time_atlas"] = atlas_summary
     _write_log(log_dir, now, summary)
     return summary
 

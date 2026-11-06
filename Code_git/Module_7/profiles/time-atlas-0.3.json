@@ -1,0 +1,10 @@
+{
+  "profile_version": "iiif-time-atlas-adapter-0.1",
+  "target": "epfl-time-atlas-rde-0.3",
+  "dataset_slug": "iiif-heritage-harvest",
+  "dataset_name": {"en": ["IIIF heritage harvest"]},
+  "dataset_version": "0.1.0",
+  "namespace_url": "https://github.com/ruinhut/IIIF_Semester_Project",
+  "external_area_ids": [],
+  "spatial_annotations_jsonl": null
+}

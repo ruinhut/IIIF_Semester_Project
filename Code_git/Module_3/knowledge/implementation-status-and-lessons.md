@@ -1,5 +1,30 @@
 # Implementation status and lessons
 
+## 2026-11-06 — separate offline Time Atlas adapter, not a certified team contract
+
+- Saved all current changes before development as `595b02e`, pushed to
+  `github:backup/pre-time-atlas-2026-11-06` with tag `pre-time-atlas-2026-11-06`.
+- Re-read teacher pages 46–47 (canonical-record responsibility), 58 (team
+  articulation) and 59–60 (Boheng). No executable Kaile/team schema found locally.
+  The existing M7 `provisional-0.1` and example.org schema IDs are local contracts.
+- Inspected EPFL's actual `time-atlas-python` 0.3.0 source at commit
+  `2c7d59e03298bd5eec31faec74c7530254e026fa`. Implemented M7 `atlas` export and
+  launcher `--atlas-export`/`--atlas-profile`; existing OCR outputs remain separate.
+- Export uses stable UUID v5 cross-links, Dataset/HR envelopes, document-level
+  granularity, year-precision provenance, complete image/Canvas/reference joins.
+  Unknown/restricted rights stay research-retained; no publishing is performed.
+- Missing/conflicting/unrepresentable dates remain losslessly staged. Plain place
+  names cannot become coordinates. Strict SDK validation requires dataset Areas;
+  accept explicit spatial evidence or externally supplied Area UUIDs, never invent
+  world extents, institution locations or source-registration UUIDs to pass tests.
+- Real two-document M7 replay produced 2 HRs + 1 Dataset, retaining 37 images and
+  34 reference declarations. Official SDK read/round-trip passed; strict spatial
+  validation correctly failed for missing geometry/Area. This is not live import.
+- Reproducible guide: `Code_git/Module_7/TIME_ATLAS.md`; durable validation summary
+  under `Pipeline_Runner/verification`. Python 3.12 SDK tests cover a synthetic
+  evidence-backed spatial collection passing strict validation; synthetic fixture
+  coordinates must not be presented as geolocation of actual harvested documents.
+
 ## 2026-11-06 — scope checked against the personal assignment
 
 - Re-read pages 59-60 of `Work_flow/工作流v1/工作流指导/工作目标与工作流程.pdf`,

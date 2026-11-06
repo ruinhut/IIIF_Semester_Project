@@ -76,6 +76,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--force-refresh", action="store_true", help="Refetch M4 Manifests rather than reuse its cache")
     parser.add_argument("--dry-run", action="store_true", help="Prepare configs and display the plan without contacting institutions")
     parser.add_argument("--config", type=Path, help="Advanced: use an existing pipeline config without generating snapshots")
+    parser.add_argument("--atlas-export", action="store_true", help="M7 also writes an offline Time Atlas RDE bundle")
+    parser.add_argument("--atlas-profile", type=Path, help="Atlas dataset profile; implies --atlas-export")
     llm = parser.add_argument_group("Optional Module 3 LLM investigation (disabled by default)")
     enable = llm.add_mutually_exclusive_group()
     enable.add_argument("--llm", action="store_true", default=None, help="Investigate unresolved providers with your LLM API")
@@ -144,6 +146,13 @@ def prepare_run(args, *, code_root: Path = CODE_ROOT) -> tuple[Path, Path]:
         if args.institution or args.manifest_url:
             raise ValueError("Resume keeps the original institution/seed selection; start a new run to change it")
         pipeline = json.loads(pipeline_path.read_text(encoding="utf-8-sig"))
+        if args.atlas_export or args.atlas_profile:
+            path7 = Path(pipeline["modules"][6]["config"])
+            value7 = json.loads(path7.read_text(encoding="utf-8-sig"))
+            atlas = value7.setdefault("time_atlas", {})
+            atlas.update(enabled=True, output_directory=str(run / "atlas"))
+            atlas["profile_json"] = str((args.atlas_profile or code_root / "Module_7/profiles/time-atlas-0.3.json").resolve())
+            write_json(path7, value7)
         config3 = Path(pipeline["modules"][2]["config"])
         value = json.loads(config3.read_text(encoding="utf-8-sig"))
         configure_llm(value, args)
@@ -227,6 +236,11 @@ def prepare_run(args, *, code_root: Path = CODE_ROOT) -> tuple[Path, Path]:
         values[8][key] = str(out[7] / filename)
     values[8]["require_reference_text"] = bool(args.require_reference)
     values[8]["example_per_reference_category"] = bool(args.example_per_category)
+    values[7]["time_atlas"] = {
+        "enabled": bool(args.atlas_export or args.atlas_profile),
+        "profile_json": str((args.atlas_profile or code_root / "Module_7/profiles/time-atlas-0.3.json").resolve()),
+        "output_directory": str(run / "atlas"),
+    }
     modules = []
     for n, value in values.items():
         path = configs / f"module_{n}.json"
@@ -272,7 +286,7 @@ def main(argv=None) -> int:
             llm_options = any(v is not None and v is not False for k, v in vars(args).items() if k.startswith("llm"))
             if args.llm is False:
                 llm_options = True
-            if args.run_dir or args.resume or args.institution or args.manifest_url or args.max_manifests or args.download or args.require_reference or args.example_per_category or args.force_refresh or llm_options:
+            if args.run_dir or args.resume or args.institution or args.manifest_url or args.max_manifests or args.download or args.require_reference or args.example_per_category or args.force_refresh or args.atlas_export or args.atlas_profile or llm_options:
                 parser.error("--config uses its saved settings; do not combine with generated-run options")
             path = args.config.resolve()
             run = path.parent

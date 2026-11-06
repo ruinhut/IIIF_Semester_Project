@@ -2,6 +2,14 @@
 
 Module 7 validates Module 6 data and exports a versioned delivery bundle. It keeps the existing object and media outputs and adds an OCR-oriented handoff for Arsha's engine selection and ground-truth planning. The current common schema remains provisional because the team's final schema has not yet been supplied.
 
+An optional **Time Atlas RDE export** is now available with the repository launcher
+flag `--atlas-export`, or `python -m iiif_common_exporter atlas` for existing M7
+outputs. It follows EPFL's `time-atlas-python 0.3.0` envelope/model contract and
+keeps the OCR bundle intact. Unknown/restricted rights stay retained for research;
+missing dates/coordinates are reported without being invented. This is an offline
+export, not a claim of team-schema approval, server import, or public publication.
+See [Time Atlas contract, commands and validation](TIME_ATLAS.md).
+
 The export contains:
 
 1. **Object records** — one row per IIIF Manifest.

@@ -187,3 +187,17 @@ def test_pipeline_rejects_duplicate_record_ids(tmp_path):
     summary = run_pipeline(_prepare(tmp_path, [_source(), _source()], []))
     assert summary["valid_records"] == 0
     assert summary["rejected_records"] == 2
+
+
+def test_atlas_hook_retains_existing_ocr_exports_and_routes_missing_dates(tmp_path):
+    config_path = _prepare(tmp_path, [_source()], [_resource()])
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+    config["time_atlas"] = {"enabled": True, "output_directory": "atlas"}
+    config_path.write_text(json.dumps(config), encoding="utf-8")
+    result = run_pipeline(config_path)
+    assert result["valid_records"] == result["ocr_profiles"] == 1
+    assert result["time_atlas"]["staged_records"] == 1
+    assert result["time_atlas"]["pending_date_records"] == 1
+    assert (tmp_path / "out/common_records.jsonl").is_file()
+    assert (tmp_path / "out/ocr_document_profiles.jsonl").is_file()
+    assert (tmp_path / "atlas/staging/records.jsonl").is_file()

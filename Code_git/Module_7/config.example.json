@@ -8,6 +8,11 @@
   "ocr_profile_schema_json": "schemas/ocr-profile-0.1.schema.json",
   "output_directory": "data/output",
   "log_directory": "data/log",
+  "time_atlas": {
+    "enabled": false,
+    "profile_json": "profiles/time-atlas-0.3.json",
+    "output_directory": "data/atlas_output"
+  },
   "ocr_profile": {
     "max_ground_truth_records": 24,
     "pages_per_record": 3,

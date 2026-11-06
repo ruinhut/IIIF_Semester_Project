@@ -1,0 +1,2 @@
+# Optional official-SDK validation only; use a separate Python >=3.12 environment.
+time-atlas-python @ git+https://github.com/epfl-timemachine/time-atlas-python.git@2c7d59e03298bd5eec31faec74c7530254e026fa

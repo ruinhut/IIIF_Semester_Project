@@ -25,6 +25,18 @@ run. `--download example` downloads one image across the output, while
 `--dry-run` prepares inspectable configurations without making network calls.
 The original module CLIs and configured runner remain available below.
 
+### Optional Time Atlas export
+
+Add `--atlas-export` to a run including Module 7 to write a separate `atlas/`
+directory alongside the existing OCR handoff. `--atlas-profile FILE.json` selects
+dataset identity and optional evidence-backed spatial annotations. Existing M7
+outputs can also be converted offline without harvesting or downloading again.
+The adapter targets EPFL Time Atlas RDE envelopes; it preserves research-only
+rights, page links and reference text declarations. Missing dates remain in
+staging, and missing geometry/Area is reported as a spatial-index limitation.
+Formal team-schema acceptance and live backend import are still unverified.
+See [commands, schema mapping and official-SDK checks](Code_git/Module_7/TIME_ATLAS.md).
+
 ### Optional LLM-assisted discovery
 
 Module 3 can investigate unresolved providers using your own API credentials.
