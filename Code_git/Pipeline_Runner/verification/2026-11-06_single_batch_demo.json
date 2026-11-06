@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-06",
+  "evidence_kind": "Read existing user-run outputs; no new network or download test performed",
+  "run_directory": "Code_git\\Pipeline_Runner\\data\\runs\\20261106_163810_996681",
+  "status": "completed",
+  "modules_run": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "return_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "module_8_summary": {
+    "attempted_images": 2,
+    "available_reference_categories": [
+      "with_reference",
+      "without_reference"
+    ],
+    "cached_images": 0,
+    "downloaded_bytes": 4113277,
+    "downloaded_images": 2,
+    "downloaded_reference_categories": [
+      "with_reference",
+      "without_reference"
+    ],
+    "downloaded_reference_texts": 1,
+    "eligible_images": 37,
+    "example_per_reference_category": true,
+    "failed_bundles": 0,
+    "failed_images": 0,
+    "finished_at": "2026-11-06T16:38:15+01:00",
+    "inputs": {
+      "common_media": 37,
+      "common_records": 2,
+      "institution_reference_texts": 34,
+      "ocr_document_profiles": 2
+    },
+    "log_file": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Pipeline_Runner\\data\\runs\\20261106_163810_996681\\module_8\\log\\Module8_2026-11-06_16-38-13_log.txt",
+    "missing_example_categories": [],
+    "mode": "download-example",
+    "module": 8,
+    "name": "Linked Image Downloader",
+    "output_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Pipeline_Runner\\data\\runs\\20261106_163810_996681\\module_8\\output\\example",
+    "reference_text_failures": 0,
+    "schema_version": "module-8-download-0.2",
+    "skipped_images": 0,
+    "started_at": "2026-11-06T16:38:13+01:00",
+    "status": "completed"
+  }
+}

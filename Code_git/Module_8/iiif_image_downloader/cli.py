@@ -21,10 +21,14 @@ def main() -> None:
     ):
         child = subparsers.add_parser(command, help=help_text)
         child.add_argument("--config", type=Path, required=True)
+        if command == "download-example":
+            child.add_argument("--example-per-category", action="store_true", default=None,
+                               help="One example per available with/without-reference category")
 
     args = parser.parse_args()
     try:
-        summary = run_download(args.config, mode=args.command)
+        summary = run_download(args.config, mode=args.command,
+                               example_per_reference_category=getattr(args, "example_per_category", None))
     except (OSError, ValueError, json.JSONDecodeError, RuntimeError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         raise SystemExit(1)

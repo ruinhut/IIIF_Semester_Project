@@ -1,5 +1,90 @@
 # Implementation status and lessons
 
+## 2026-11-06 — scope checked against the personal assignment
+
+- Re-read pages 59-60 of `Work_flow/工作流v1/工作流指导/工作目标与工作流程.pdf`,
+  the personal sheet "One door to a scattered heritage". The four deliverables
+  are provider census with scale/rights, unified cross-provider harvesting,
+  normalization of identifier/date/place/rights/source, and a schema-conformant
+  data slice for extraction and the Time Atlas. Aggregators are prioritized.
+- M1-7 address that core; M8 and page-linked institutional references support
+  downstream delivery. The task is not to develop an OCR engine or to replace
+  the harvest with an OCR training-set project. "The front" means upstream
+  data processing, not a requirement to build a web front end.
+- The M7 profile is still explicitly provisional. Team-schema acceptance,
+  downstream consumption and Time Atlas input compatibility have not been
+  established merely by passing local schemas or downloading sample images.
+  Unknown/missing descriptive fields must remain retained for research, while
+  date/place coverage and source-scale evidence need further quality work.
+- Recommended priority, not a new supervisor instruction: close the shared
+  schema/data-slice handoff, document aggregator coverage and harvest limits,
+  then improve reusable discovery/reliability. Optional LLM investigation and
+  a small visual interface serve these deliverables; they do not replace them.
+  Keep the confirmed research-retention policy and public-reuse restrictions.
+
+## 2026-11-06 — research-policy regression fixed; all 100 sources freshly evaluated
+
+- Corrected M6's legacy `decision != allow -> missing rights` quality gate.
+  An explicit unknown/restricted rights category is present research metadata.
+  `quality.research_usable` now follows retention and academic-analysis flags;
+  public/commercial restrictions are preserved. Missing dates/places remain
+  annotations rather than research rejection. Added German date-label support.
+- Regression checks: M6 40 tests and M7 29 tests passed. The former test that
+  expected an otherwise complete reuse-excluded record to be partial was fixed.
+- Fresh evaluation froze the user's exact 100 historically validated source
+  entries and all 139 supplied endpoints. M1–7 ran with up to three Manifests
+  per source, fresh M4 retrieval and no runtime LLM. M8 was explicitly not run.
+- Source progress, each denominator 100: M1 100; M2 reachable 88; M3 found URLs
+  98; M4 accepted image Manifests 97; M5/M6/M7 research output 97.
+  These source-level rates must not be replaced by conditional 275/275 rates.
+- M2 checked all 139 candidates; 118 returned HTTP 2xx. The other 21 were:
+  HTTP 403 (8), 401 (1), 429 (1), 404 (4), 400 (2), 405 (1), 502 (1),
+  an uncompleted 308 redirect (1), and client/network errors without an HTTP
+  response (2). Do not attribute every unsuccessful check to the institution:
+  two Internet Archive requests still contained an unexpanded `:id` placeholder,
+  and a Toronto candidate contained Markdown URL residue. These are input/
+  request-handling defects to address, not evidence that IIIF is unavailable.
+  M1's 100/100 means successful selection/export, not validated endpoint quality.
+  Initial parseable JSON was returned by 30 endpoints from 29 sources; the
+  remaining reachable endpoints returned HTML/XML, which can support M3.
+- M3 yielded 280 source-Manifest observations / 274 unique URLs. M4 accepted
+  275 observations / 269 unique URLs; all 275 were retained and normalized for
+  research and exported. M7 exported 44,915 image associations (44,252 distinct
+  download URLs), 275 OCR profiles and 7,232 reference descriptors. No image
+  download success was measured; declared URLs are not downloaded files.
+- 237 public-reuse-excluded records, including 132 unknown-rights records, remain
+  in the research output. They were not relabelled public-reuse eligible.
+- Leipzig: initial Collection requests failed with a local/client network error.
+  Wales: homepage 403 plus catalogue timeout. Northwestern: M3 found three
+  Manifests, but this sample contained no image bodies and was not accepted by
+  M4 for OCR. These observations do not prove the institutions lack IIIF/images.
+- Full outputs, configs, per-source CSV and evaluation summary:
+  `../../Pipeline_Runner/data/midterm_100_20261106_123034/`.
+  Reproduction: `Pipeline_Runner/tools/run_midterm_100_sources.py` and
+  `Pipeline_Runner/tools/chart_midterm_100_sources.py`. Figures use this run,
+  replacing the former selected-seven-source presentation figures.
+- The same rules were written into the actual project's global SKILL.md and
+  linked `references/research-retention-and-evaluation.md`, not just this log.
+- Demo instructions were checked against the actual launcher: `pipeline.py`
+  and `pipeline.cmd` are in the repository root (`Semester_Project`), while the
+  environment and modules are under `Code_git`. Corrected the presentation's
+  erroneous Code_git working-directory instruction. A fresh M1-8 fixed-EPFL
+  plan passed dry-run with force-refresh and no LLM; this check did not execute
+  live harvesting or M8 downloads. Step-by-step Markdown and PowerShell text
+  commands are stored with the midterm presentation materials.
+- Subsequently ran a separate paired historical presentation demo with
+  `Pipeline_Runner/tools/run_presentation_demo.py`: two independent fresh M1-8
+  runs, one BSB 1694 print with retrieved page-linked hOCR, and Fragmentarium
+  F-u3vo (source date 1275-1325) without declared page-linked text. Each case
+  downloaded one image, with zero image/reference failures or cache hits.
+  Six base JSON files passed schema/ID checks; both raster images decoded and
+  were visually reviewed. The BSB hOCR page dimensions/word boxes match its
+  image. See `../../Pipeline_Runner/verification/2026-11-06_paired_heritage_demo.json`.
+  This is independent of the 100-source M1-7 evaluation. The demo wrapper calls
+  the existing launcher twice and does not alter production download-example
+  semantics (one successful image over an entire input). No LLM was invoked.
+
+
 ## 2026-11-05 — local midterm snapshot, unified CLI and optional LLM discovery
 
 - Before modification, saved local commit `ff46048`, message `期中汇报使用版本`.

@@ -136,6 +136,8 @@ def run_pipeline(config_path: Path, *, limit: int | None = None) -> dict[str, An
         "finished_at": finished.isoformat(timespec="seconds"),
         "input_manifest_records": len(handoffs),
         "normalized_records": len(normalized),
+        "research_usable_records": sum(row["quality"]["research_usable"] for row in normalized),
+        "quality_policy": "research-retention-2026-11-06",
         "complete_records": sum(row["quality"]["status"] == "complete" for row in normalized),
         "partial_records": sum(row["quality"]["status"] == "partial" for row in normalized),
         "failed_records": len(failed),

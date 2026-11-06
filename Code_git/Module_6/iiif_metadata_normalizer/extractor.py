@@ -24,7 +24,8 @@ FIELD_TERMS = {
     ),
     "date": (
         "date", "year", "created", "creation", "issued", "publication",
-        "century", "\u5e74\u4ee3", "\u65e5\u671f"
+        "century", "dating", "datum", "datierung", "erscheinungsjahr",
+        "\u5e74\u4ee3", "\u65e5\u671f"
     ),
     "place": (
         "place", "location", "spatial", "geographic", "provenance",
@@ -188,7 +189,9 @@ def extract_and_normalize(
         warnings.append("date_present_but_not_normalized")
     if not any(item["normalized"] for item in place_values):
         missing_fields.append("place")
-    if rights.get("decision") != "allow":
+    # Rights-field presence is independent of public-reuse eligibility.
+    # An explicit unknown/restricted assessment is valid research metadata.
+    if not str(rights.get("category") or "").strip():
         missing_fields.append("rights")
     if not source["manifest_url"] or not providers:
         missing_fields.append("source")
@@ -206,6 +209,10 @@ def extract_and_normalize(
             "status": "complete" if not missing_fields else "partial",
             "missing_fields": sorted(set(missing_fields)),
             "warnings": sorted(set(warnings)),
+            "research_usable": rights.get("research_status") == "retained"
+                and rights.get("usage_permissions", {}).get("academic_analysis") is True
+                and rights.get("usage_permissions", {}).get("retain_url_and_metadata") is True,
+            "usability_scope": "academic_analysis",
         },
         "normalization": {
             "normalized_at": normalized_at,

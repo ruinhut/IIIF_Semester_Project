@@ -1,0 +1,25 @@
+# PowerShell: run all blocks in the same terminal.
+# Initialize the repository and a fresh directory.
+$ProjectRoot = 'E:\exchange-epfl\Semester_Project'
+Set-Location -LiteralPath $ProjectRoot
+$DemoRoot = Join-Path -Path $ProjectRoot -ChildPath ('Code_git\Pipeline_Runner\data\runs\paired_demo_' + (Get-Date -Format 'yyyyMMdd_HHmmss'))
+
+# One command executes two independent M1-8 cases and downloads one image each.
+# Case 1: a 1694 BSB print WITH institutional hOCR.
+# Case 2: a medieval Fragmentarium manuscript WITHOUT a page-linked reference.
+python Code_git/Pipeline_Runner/tools/run_presentation_demo.py --output-root "$DemoRoot"
+
+# Inspect both completed cases and open the parent directory.
+$DemoResult = Get-Content -LiteralPath (Join-Path $DemoRoot 'demo_summary.json') -Encoding UTF8 | ConvertFrom-Json
+$DemoResult.cases | Select-Object category,modules_completed,downloaded_images,reference_texts
+Invoke-Item -LiteralPath $DemoRoot
+
+# Show the historical printed page and its retrieved reference-text bundle.
+$WithReference = $DemoResult.cases | Where-Object { $_.category -eq 'with_reference' }
+Invoke-Item -LiteralPath $WithReference.image_path
+Invoke-Item -LiteralPath $WithReference.bundle_directory
+
+# Show the medieval manuscript and its three linked base JSON files.
+$WithoutReference = $DemoResult.cases | Where-Object { $_.category -eq 'without_reference' }
+Invoke-Item -LiteralPath $WithoutReference.image_path
+Invoke-Item -LiteralPath $WithoutReference.bundle_directory

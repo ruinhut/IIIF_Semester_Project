@@ -1,0 +1,177 @@
+{
+  "provenance": {
+    "date": "2026-11-06",
+    "cohort_size": 100,
+    "scope": "Fixed 100 historically validated census entries; fresh M1-M7 run",
+    "run_directory": "Code_git\\Pipeline_Runner\\data\\midterm_100_20261106_123034",
+    "module_8": "not_run",
+    "max_manifests_per_source": 3
+  },
+  "provider_progress": {
+    "M1": 100,
+    "M2": 88,
+    "M3": 98,
+    "M4": 97,
+    "M5": 97,
+    "M6": 97,
+    "M7": 97
+  },
+  "counts": {
+    "discovered_observations": 280,
+    "valid_records": 275,
+    "m4_images": 44915,
+    "research_records": 275,
+    "reuse_records": 38,
+    "normalized_records": 275,
+    "research_usable_records": 275,
+    "m6_images": 44915,
+    "m6_refs": 7232,
+    "exported_records": 275,
+    "exported_images": 44915,
+    "profiles": 275,
+    "refs": 7232,
+    "research_only_records": 237,
+    "unknown_records": 132,
+    "documents_with_refs": 19,
+    "images_with_refs": 5783,
+    "page_refs": 7217,
+    "template_requests": 153,
+    "template_verified": 143
+  },
+  "unique_manifest_urls_discovered": 274,
+  "unique_manifest_urls_validated": 269,
+  "distinct_image_download_urls": 44252,
+  "distinct_resource_ids": 44391,
+  "endpoint_checks": 139,
+  "supplied_endpoints": 139,
+  "http_successes": 118,
+  "json_sources": 29,
+  "rights_categories": {
+    "unknown": 132,
+    "public_domain": 28,
+    "noncommercial_or_limited": 26,
+    "conflicting": 24,
+    "institutional_terms": 40,
+    "in_copyright": 12,
+    "open_license": 10,
+    "no_known_copyright": 3
+  },
+  "metadata_quality": {
+    "partial": 220,
+    "complete": 55
+  },
+  "metadata_missing_fields": {
+    "date": 142,
+    "place": 188
+  },
+  "field_availability": {
+    "Title": 275,
+    "Date string": 133,
+    "Parsed date": 122,
+    "Place string": 87,
+    "Language": 91,
+    "Rights assessment": 275
+  },
+  "module_8": "not_run",
+  "source_failures": [
+    {
+      "provider_id": "provider-f912979871e7fbf4",
+      "provider_name": "Leipzig University Library",
+      "worker_status": "completed",
+      "input_endpoints": 1,
+      "checked_endpoints": 1,
+      "reachable_endpoints": 0,
+      "json_endpoints": 0,
+      "discovered_urls": 0,
+      "valid_manifests": 0,
+      "research_records": 0,
+      "research_usable_records": 0,
+      "exported_records": 0,
+      "exported_images": 0,
+      "reference_descriptors": 0,
+      "completed_modules": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "provider_id": "provider-0af71df3c01cdd4e",
+      "provider_name": "National Library of Wales",
+      "worker_status": "completed",
+      "input_endpoints": 1,
+      "checked_endpoints": 1,
+      "reachable_endpoints": 0,
+      "json_endpoints": 0,
+      "discovered_urls": 0,
+      "valid_manifests": 0,
+      "research_records": 0,
+      "research_usable_records": 0,
+      "exported_records": 0,
+      "exported_images": 0,
+      "reference_descriptors": 0,
+      "completed_modules": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "provider_id": "provider-d305e1aa116fabbc",
+      "provider_name": "Northwestern University",
+      "worker_status": "completed",
+      "input_endpoints": 1,
+      "checked_endpoints": 1,
+      "reachable_endpoints": 0,
+      "json_endpoints": 0,
+      "discovered_urls": 3,
+      "valid_manifests": 0,
+      "research_records": 0,
+      "research_usable_records": 0,
+      "exported_records": 0,
+      "exported_images": 0,
+      "reference_descriptors": 0,
+      "completed_modules": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "png_files": [
+    "00_Pipeline_Success_and_Retention.png",
+    "01_Module1_Census_and_Selection.png",
+    "02_Module2_Endpoint_Checks.png",
+    "03_Module3_Manifest_Discovery.png",
+    "04_Module4_Manifest_Validation.png",
+    "05_Module5_Rights_and_Retention.png",
+    "06_Module6_Normalization_and_Completeness.png",
+    "07_Module7_Common_Schema_Export.png",
+    "08_Module8_Not_Run.png",
+    "09_100_Source_Cohort_and_Scope.png",
+    "10_Module2_Response_Types.png",
+    "11_Module5_Rights_Categories.png",
+    "12_Image_Yield_by_Source.png",
+    "13_OCR_Reference_Availability.png",
+    "14_Metadata_Field_Availability.png",
+    "15_Source_Stage_Results_01_of_05.png",
+    "15_Source_Stage_Results_02_of_05.png",
+    "15_Source_Stage_Results_03_of_05.png",
+    "15_Source_Stage_Results_04_of_05.png",
+    "15_Source_Stage_Results_05_of_05.png"
+  ],
+  "tests": {
+    "module_6": 40,
+    "module_7": 29,
+    "scope": "Changed normalizer and downstream exporter regression tests; Module 8 not run."
+  }
+}

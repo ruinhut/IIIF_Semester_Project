@@ -1,0 +1,12 @@
+Subject: Weekly progress — IIIF Document Information Extraction — 6 November
+
+Dear Professor Kaplan,
+
+This week, I completed and tested the end-to-end pipeline, covering all eight modules from Manifest input to image download. Each downloaded image is accompanied by linked document metadata and an OCR profile, with page-linked institutional reference texts retrieved when available. I verified historical examples both with and without reference texts, stored in separate output categories.
+
+I also prepared the pipeline for further development by introducing a unified command-line launcher and an optional LLM discovery interface. My next steps are to add a visual interface for configuring runs, monitoring progress and browsing results, and to evaluate LLM-assisted discovery on new sources.
+
+I am not currently blocked.
+
+Best regards,
+Boheng Shang

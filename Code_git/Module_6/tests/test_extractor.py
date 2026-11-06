@@ -1,3 +1,5 @@
+import pytest
+
 from iiif_metadata_normalizer.extractor import (
     classify_label, clean_text, normalize_date, normalize_language,
     normalize_place, text_values,
@@ -23,6 +25,11 @@ def test_classify_label_recognizes_project_fields():
     assert classify_label("Date of origin") == "date"
     assert classify_label("Shelfmark") == "identifier"
     assert classify_label("Place of origin") == "place"
+
+
+@pytest.mark.parametrize("label", ["Erscheinungsdatum", "Datierung", "Erscheinungsjahr", "Dating"])
+def test_date_labels_from_real_institution_metadata(label):
+    assert classify_label(label) == "date"
 
 
 def test_normalize_date_handles_full_iso_date():

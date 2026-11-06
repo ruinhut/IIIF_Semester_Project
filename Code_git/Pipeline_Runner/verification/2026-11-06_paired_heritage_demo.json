@@ -1,0 +1,106 @@
+{
+  "status": "completed",
+  "scope": "Separate paired presentation demo; fixed seeds, two full M1-8 runs; not part of the 100-source M1-7 experiment",
+  "output_root": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Pipeline_Runner\\data\\runs\\paired_heritage_demo_20261106_135548_650945",
+  "cases": [
+    {
+      "category": "with_reference",
+      "modules_completed": 8,
+      "manifest_url": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb12188327/manifest",
+      "record_title": "Wedel, Johann Georg: Aquila Apocalyptica. Das ist: Unter dem Sinn-Bild Des Fliegenden Adlers Schuldige Lob- und Ehren-Rede Von dem heiligen Francisco Salesio Bischoffen zu Genff, und Stiffter des Ordens Von der Heimsuchung Mariae",
+      "date_evidence": [
+        {
+          "approximate": false,
+          "end_year": 1694,
+          "normalized": "1694",
+          "precision": "year",
+          "raw": "1694",
+          "source_label": "Date",
+          "start_year": 1694
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Pipeline_Runner\\data\\runs\\paired_heritage_demo_20261106_135548_650945\\with_reference_case\\module_8\\output\\example\\with_reference\\manifest-03eeb42f9351a236\\000000_resource-c3346c555a28931c1d75\\image.jpg",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Pipeline_Runner\\data\\runs\\paired_heritage_demo_20261106_135548_650945\\with_reference_case\\module_8\\output\\example\\with_reference\\manifest-03eeb42f9351a236\\000000_resource-c3346c555a28931c1d75",
+      "canvas": {
+        "id": "https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb12188327/canvas/1",
+        "label": "(0001)"
+      },
+      "downloaded_images": 1,
+      "reference_texts": 1,
+      "failed_images": 0,
+      "failed_bundles": 0,
+      "reference_text_failures": 0,
+      "decoded_image_size": [
+        1688,
+        2216
+      ],
+      "text_downloads": [
+        {
+          "bytes": 10467,
+          "content_type": "text/vnd.hocr+html",
+          "final_url": "https://api.digitale-sammlungen.de/ocr/bsb12188327/1",
+          "plain_text_file": "institution_reference_001.txt",
+          "requested_url": "https://api.digitale-sammlungen.de/ocr/bsb12188327/1",
+          "response_time_ms": 187,
+          "sha256": "cd6b4bc447de3820b7e4a9a7fdfd557a28a9cfd9ff25cd8851580cc9e7c9627e",
+          "source_file": "institution_reference_001.hocr.html",
+          "status": "downloaded",
+          "status_code": 200
+        }
+      ],
+      "word_count": 93,
+      "hocr_page_bbox": [
+        0,
+        0,
+        1688,
+        2216
+      ],
+      "hocr_word_boxes": 93,
+      "word_boxes_within_image": true
+    },
+    {
+      "category": "without_reference",
+      "modules_completed": 8,
+      "manifest_url": "https://fragmentarium.ms/metadata/iiif/F-u3vo/manifest.json",
+      "record_title": "Tübingen, Konviktsbibliothek Wilhelmsstift, KH 5184",
+      "date_evidence": [
+        {
+          "approximate": false,
+          "end_year": 1325,
+          "normalized": "1275/1325",
+          "precision": "year_range",
+          "raw": "1275 – 1325 CE",
+          "source_label": "Date of origin",
+          "start_year": 1275
+        },
+        {
+          "approximate": true,
+          "end_year": 1400,
+          "normalized": "1301/1400",
+          "precision": "century",
+          "raw": "14th century",
+          "source_label": "Century",
+          "start_year": 1301
+        }
+      ],
+      "image_path": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Pipeline_Runner\\data\\runs\\paired_heritage_demo_20261106_135548_650945\\without_reference_case\\module_8\\output\\example\\without_reference\\manifest-5c57a6b89f846c5f\\000000_resource-9e005357d509c62648f4\\image.jpg",
+      "bundle_directory": "E:\\exchange-epfl\\Semester_Project\\Code_git\\Pipeline_Runner\\data\\runs\\paired_heritage_demo_20261106_135548_650945\\without_reference_case\\module_8\\output\\example\\without_reference\\manifest-5c57a6b89f846c5f\\000000_resource-9e005357d509c62648f4",
+      "canvas": {
+        "id": "https://fragmentarium.ms/metadata/iiif/F-u3vo/canvas/F-u3vo/Wilhelmsstift_KH_5184_IIv_Ir.jp2.json",
+        "label": "Wilhelmsstift_KH_5184_IIv_Ir"
+      },
+      "downloaded_images": 1,
+      "reference_texts": 0,
+      "failed_images": 0,
+      "failed_bundles": 0,
+      "reference_text_failures": 0,
+      "decoded_image_size": [
+        6801,
+        2999
+      ]
+    }
+  ],
+  "date": "2026-11-06",
+  "schema_validated_base_json_files": 6,
+  "images_decoded_and_visually_reviewed": 2
+}

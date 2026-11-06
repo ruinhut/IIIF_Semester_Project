@@ -18,12 +18,23 @@ from .store import hash_file, read_jsonl, write_json, write_jsonl, write_linked_
 MODES = {"download-example", "download-all"}
 
 
-def run_download(config_path: Path, *, mode: str) -> dict[str, Any]:
+def run_download(
+    config_path: Path, *, mode: str,
+    example_per_reference_category: bool | None = None,
+) -> dict[str, Any]:
     if mode not in MODES:
         raise ValueError(f"Unsupported mode: {mode}")
     config_path = config_path.resolve()
     config = json.loads(config_path.read_text(encoding="utf-8-sig"))
     base = config_path.parent
+    sampling = (config.get("example_per_reference_category", False)
+                if example_per_reference_category is None else example_per_reference_category)
+    if not isinstance(sampling, bool):
+        raise ValueError("example_per_reference_category must be a boolean")
+    per_category = mode == "download-example" and sampling
+    require_reference_text = bool(config.get("require_reference_text", False))
+    if per_category and require_reference_text:
+        raise ValueError("Per-category examples cannot also require reference text for every image")
     records_path = _required_path(base, config, "common_records_jsonl")
     media_path = _required_path(base, config, "common_media_jsonl")
     profiles_path = _required_path(base, config, "ocr_document_profiles_jsonl")
@@ -38,7 +49,6 @@ def run_download(config_path: Path, *, mode: str) -> dict[str, Any]:
     media_rows = read_jsonl(media_path)
     profiles = read_jsonl(profiles_path)
     reference_rows = read_jsonl(references_path) if references_path else []
-    require_reference_text = bool(config.get("require_reference_text", False))
     items, skipped = build_download_items(
         records, media_rows, profiles, reference_rows,
         require_academic_analysis_allowed=bool(
@@ -48,6 +58,11 @@ def run_download(config_path: Path, *, mode: str) -> dict[str, Any]:
     )
     if not items:
         raise RuntimeError("No eligible image download URLs were found")
+    target_categories = {
+        "with_reference" if item.reference_texts else "without_reference"
+        for item in items
+    }
+    completed_categories: set[str] = set()
 
     request_config = config.get("request", {})
     if not isinstance(request_config, dict):
@@ -76,6 +91,11 @@ def run_download(config_path: Path, *, mode: str) -> dict[str, Any]:
     reference_text_failures: list[dict[str, Any]] = []
 
     for item in items:
+        # Once one category succeeds, skip its remaining pages before making
+        # any image or OCR requests. Missing text is never relabelled no-text.
+        intended_category = "with_reference" if item.reference_texts else "without_reference"
+        if per_category and intended_category in completed_categories:
+            continue
         relative_directory = item.relative_directory()
         exported_references: list[dict[str, Any]] = []
         if item.reference_texts:
@@ -88,7 +108,7 @@ def run_download(config_path: Path, *, mode: str) -> dict[str, Any]:
                 reference_fetcher,
             )
             reference_text_failures.extend(reference_failures)
-            if not exported_references and require_reference_text:
+            if not exported_references and (require_reference_text or per_category):
                 failures.append({
                     "resource_id": item.resource_id,
                     "record_id": item.record_id,
@@ -189,8 +209,11 @@ def run_download(config_path: Path, *, mode: str) -> dict[str, Any]:
         success_row["reference_texts"] = len(exported_references)
         success_row["output_category"] = category
         successes.append(success_row)
+        completed_categories.add(category)
 
-        if mode == "download-example" and successes:
+        if mode == "download-example" and (
+            not per_category or target_categories <= completed_categories
+        ):
             break
 
     finished = datetime.now().astimezone()
@@ -199,11 +222,18 @@ def run_download(config_path: Path, *, mode: str) -> dict[str, Any]:
         status = "completed_with_reference_failures"
     if not successes:
         status = "failed"
+    missing_categories = sorted(target_categories - completed_categories) if per_category else []
+    if successes and missing_categories:
+        status = "incomplete_examples"
     summary: dict[str, Any] = {
         "module": 8,
         "name": "Linked Image Downloader",
         "schema_version": "module-8-download-0.2",
         "mode": mode,
+        "example_per_reference_category": per_category,
+        "available_reference_categories": sorted(target_categories),
+        "downloaded_reference_categories": sorted(completed_categories),
+        "missing_example_categories": missing_categories,
         "status": status,
         "started_at": started.isoformat(timespec="seconds"),
         "finished_at": finished.isoformat(timespec="seconds"),
@@ -248,6 +278,8 @@ def run_download(config_path: Path, *, mode: str) -> dict[str, Any]:
     write_json(run_output / "download_summary.json", summary)
     if not successes:
         raise RuntimeError(f"No image could be downloaded; see {log_path}")
+    if missing_categories:
+        raise RuntimeError(f"No successful example for {', '.join(missing_categories)}; see {log_path}")
     return summary
 
 

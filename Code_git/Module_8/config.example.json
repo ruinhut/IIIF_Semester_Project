@@ -7,6 +7,7 @@
   "log_directory": "data/log",
   "require_academic_analysis_allowed": true,
   "require_reference_text": false,
+  "example_per_reference_category": false,
   "overwrite_existing": false,
   "request": {
     "timeout_seconds": 30.0,

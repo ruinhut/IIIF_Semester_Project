@@ -24,6 +24,12 @@ It preserves every original IIIF metadata entry and maps recognizable values int
 
 Normalization is conservative. Missing or ambiguous values are retained and marked partial; they are never invented or silently discarded.
 
+Metadata field completeness and research usability are separate. An explicit
+unknown or reuse-excluded rights assessment is present metadata, not a missing
+field. `quality.research_usable` follows Module 5 research retention and academic
+analysis permissions; it does not require public-reuse eligibility. Missing
+dates or places remain recorded without discarding research records or images.
+
 ### Optional public-catalogue reference enrichment
 
 `provider_reference_sources` may point to reviewed provider configuration such

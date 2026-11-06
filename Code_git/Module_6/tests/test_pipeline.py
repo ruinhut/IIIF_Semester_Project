@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import pytest
 
 from iiif_metadata_normalizer.pipeline import run_pipeline
 
@@ -100,7 +101,9 @@ def test_pipeline_normalizes_research_only_record_and_resource(tmp_path):
     record = json.loads(
         (tmp_path / "out" / "normalized_records.jsonl").read_text().splitlines()[0]
     )
-    assert record["quality"]["status"] == "partial"
+    assert record["quality"]["status"] == "complete"
+    assert record["quality"]["research_usable"] is True
+    assert "rights" not in record["quality"]["missing_fields"]
     assert record["normalized_metadata"]["dates"][0]["normalization"]["start_year"] == 1450
     assert record["normalized_metadata"]["places"][0]["normalized"] == "Lausanne"
     assert record["normalized_metadata"]["rights"]["decision"] == "exclude"
@@ -128,3 +131,37 @@ def test_pipeline_ignores_legacy_handoff_checksum(tmp_path):
         .read_text().splitlines()[0]
     )
     assert "raw_manifest_integrity" not in record
+
+
+@pytest.mark.parametrize("category,decision", [
+    ("unknown", "exclude"), ("institutional_terms", "exclude"),
+    ("conflicting", "exclude"), ("in_copyright", "exclude"),
+    ("open_license", "allow"),
+])
+def test_research_rights_never_become_missing_metadata(tmp_path, category, decision):
+    """Restricted/unknown records stay usable without granting public reuse."""
+    path = _prepare(tmp_path, decision=decision)
+    handoff_path = tmp_path / "research.jsonl"
+    handoff = json.loads(handoff_path.read_text())
+    handoff["rights_assessment"]["category"] = category
+    handoff_path.write_text(json.dumps(handoff) + "\n", encoding="utf-8")
+    summary = run_pipeline(path)
+    record = json.loads((tmp_path / "out/normalized_records.jsonl").read_text())
+    assert summary["research_usable_records"] == 1
+    assert record["quality"]["status"] == "complete"
+    assert record["normalized_metadata"]["rights"]["decision"] == decision
+    assert record["normalized_metadata"]["rights"]["category"] == category
+    assert record["normalized_metadata"]["rights"]["public_reuse_eligible"] is (decision == "allow")
+
+
+def test_missing_descriptive_fields_do_not_block_research(tmp_path):
+    path = _prepare(tmp_path)
+    raw = tmp_path / "module4/data/raw_manifests/m1.json"
+    document = json.loads(raw.read_text())
+    document["metadata"] = []
+    raw.write_text(json.dumps(document), encoding="utf-8")
+    summary = run_pipeline(path)
+    record = json.loads((tmp_path / "out/normalized_records.jsonl").read_text())
+    assert summary["research_usable_records"] == 1
+    assert record["quality"]["research_usable"] is True
+    assert record["quality"]["missing_fields"] == ["date", "place"]
